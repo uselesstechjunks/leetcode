@@ -232,3 +232,57 @@ Medium
 
 Hard
 -------------
+
+#. `Binary Tree Maximum Path Sum <https://leetcode.com/problems/binary-tree-maximum-path-sum/>`_
+#. `Serialize and Deserialize Binary Tree <https://leetcode.com/problems/serialize-and-deserialize-binary-tree/>`_
+#. `Alien Dictionary <https://tenderleo.gitbooks.io/leetcode-solutions-/content/GoogleHard/269.html>`_
+#. `Word Ladder <https://leetcode.com/problems/word-ladder/>`_
+#. `Word Ladder II <https://leetcode.com/problems/word-ladder-ii/>`_
+#. `Cut Off Trees for Golf Event <https://leetcode.com/problems/cut-off-trees-for-golf-event/>`_
+#. `Median of Two Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/>`_
+#. `Count of Smaller Numbers After Self <https://leetcode.com/problems/count-of-smaller-numbers-after-self/>`_
+#. `Find Minimum in Rotated Sorted Array II <https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/>`_
+#. `Maximum Gap <https://leetcode.com/problems/maximum-gap/>`_
+#. `Merge k Sorted Lists <https://leetcode.com/problems/merge-k-sorted-lists/>`_
+
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/mergeklists.cpp
+         :language: c++
+         :linenos:
+
+#. `Count of Smaller Numbers After Self <https://leetcode.com/problems/count-of-smaller-numbers-after-self/>`_
+#. `Regular Expression Matching <https://leetcode.com/problems/regular-expression-matching/>`_
+#. `Maximal Rectangle <https://leetcode.com/problems/maximal-rectangle/>`_
+#. `Edit Distance <https://leetcode.com/problems/edit-distance/>`_
+#. `Candy <https://leetcode.com/problems/candy/>`_
+#. `Create Maximum Number <https://leetcode.com/problems/create-maximum-number/>`_
+#. `Patching Array <https://leetcode.com/problems/patching-array/>`_
+#. `Word Break II <https://leetcode.com/problems/word-break-ii/>`_
+
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/wordbreakii.cpp
+         :language: c++
+         :linenos:
+
+#. `Sudoku Solver <https://leetcode.com/problems/sudoku-solver/>`_
+#. `Stickers to Spell Word <https://leetcode.com/problems/stickers-to-spell-word/>`_
+#. `Median of Two Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/>`_
+#. `Reverse Pairs <https://leetcode.com/problems/reverse-pairs/>`_
+#. `Count of Smaller Numbers After Self <https://leetcode.com/problems/count-of-smaller-numbers-after-self/>`_
+#. `Word Search II <https://leetcode.com/problems/word-search-ii/>`_
+
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/wordsearchii.cpp
+         :language: c++
+         :linenos:
+
+#. `Find Median from Data Stream <https://leetcode.com/problems/find-median-from-data-stream/>`_
+
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/findmedian.cpp
+         :language: c++
+         :linenos:
