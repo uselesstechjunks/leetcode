@@ -12,6 +12,15 @@ Contents
 
 .. toctree::
 
+   math
+   stat
+   mltheory
+   rank
+   dsalgo
+   sysdes
+   mldes
+   behave
+   studytips
    dsalgosol
 
 Self Study Guide has its documentation hosted on Read the Docs.
