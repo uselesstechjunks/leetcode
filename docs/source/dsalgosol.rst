@@ -14,6 +14,7 @@ Medium
 .. literalinclude:: code/clonegraph.cpp
    :language: c++
    :linenos:
+
 #. `Number of Islands <https://leetcode.com/problems/number-of-islands/>`_
 
 .. literalinclude:: code/numislands.cpp
