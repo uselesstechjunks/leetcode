@@ -22,5 +22,6 @@ Contents
    behave
    studytips
    dsalgosol
+   python
 
 Self Study Guide has its documentation hosted on Read the Docs.
