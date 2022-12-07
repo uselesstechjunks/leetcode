@@ -19,9 +19,9 @@ Prerequisite: Setting up devenv
 
   mkdir build && cd build && ./configure && make -j 8
 
-Adding a ``pipe`` operator
+Adding ``|>`` Operator
 **********************************************************************************
-The goal here is to implement an operator ``|>`` (similar to Linux ``|``) so that we can chain function calls like the following:
+The goal here is to implement a pipe operator, ``|>``, (similar to Linux ``|``) so that we can chain function calls like the following:
 
 .. code-block:: python
 
@@ -44,7 +44,7 @@ When Python reads a source code, it first builds an abstract syntax tree (AST). 
 Adding tokenizer support
 ==========================================
 
-TL;DR:
+TL;DR
 -------------------------
 * Tokens are defined inside a config file ``Grammar/Tokens``
 * The tokens are given a numeric code (defined in ``token.h``)
@@ -106,7 +106,7 @@ I also see that a bunch of other files have also been changed by this automatica
 
 Let's dig deep into see what changes were made in each of these files and what these files are for.
 
-* Doc/library/token-list.inc
+* ``Doc/library/token-list.inc``
 
     This creates an entry in Python docs for the new token key and value.
 
@@ -131,7 +131,7 @@ Let's dig deep into see what changes were made in each of these files and what t
 
            .. data:: AWAIT
 
-* Lib/token.py
+* ``Lib/token.py``
 
     This one seemingly assigns a numerical code to each of the tokens. Since I added the token in the middle and not at the end, it reassigns the numeric codes for the following tokens as well. ``|>`` gets a code 54. Number of tokens (``N_TOKENS``) has increased from 64 to 65. Also, there is a ``dict`` called ``EXACT_TOKEN_TYPES`` which has the entry for ``|>`` now.
 
@@ -184,7 +184,7 @@ Let's dig deep into see what changes were made in each of these files and what t
                '~': TILDE,
            }
 
-* Include/token.h
+* ``Include/token.h``
 
     Same numeric code in the C header
 
@@ -220,7 +220,7 @@ Let's dig deep into see what changes were made in each of these files and what t
           +#define N_TOKENS        65
            #define NT_OFFSET       256
 
-* Parser/token.c
+* ``Parser/token.c``
 
     This has an array of token names ``_PyParser_TokenNames`` in which it adds the new token. In general, this file defines functions that returns numeric codes (as defined in ``token.h``). The functions are ``int PyToken_OneChar(int c1)``, ``int PyToken_TwoChars(int c1, int c2)`` and ``int PyToken_ThreeChars(int c1, int c2, int c3)``. For our case, it has added a new line of code inside ``PyToken_TwoChars`` in the switch statement to differentiate between ``|=`` (already existing token in Python) and ``|>``. This function is utilised in a giant function ``static int tok_get(struct tok_state *tok, const char **p_start, const char **p_end)`` inside ``Parser/tokenizer.c``.
 
