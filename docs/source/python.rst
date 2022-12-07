@@ -57,21 +57,21 @@ Added a token named ``VBARGREATER`` with the token code to this file ``/cpython/
 
 .. collapse:: code
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    root@008f4044fac9:/cpython# git diff Grammar/Tokens
-    diff --git a/Grammar/Tokens b/Grammar/Tokens
-    index 1f3e3b0991..13aac4c7b6 100644
-    --- a/Grammar/Tokens
-    +++ b/Grammar/Tokens
-    @@ -53,6 +53,7 @@ ATEQUAL                 '@='
-     RARROW                  '->'
-     ELLIPSIS                '...'
-     COLONEQUAL              ':='
-    +VBARGREATER             '|>'
+      root@008f4044fac9:/cpython# git diff Grammar/Tokens
+      diff --git a/Grammar/Tokens b/Grammar/Tokens
+      index 1f3e3b0991..13aac4c7b6 100644
+      --- a/Grammar/Tokens
+      +++ b/Grammar/Tokens
+      @@ -53,6 +53,7 @@ ATEQUAL                 '@='
+       RARROW                  '->'
+       ELLIPSIS                '...'
+       COLONEQUAL              ':='
+      +VBARGREATER             '|>'
 
-     OP
-     AWAIT
+       OP
+       AWAIT
 
 Now I could see a difference in terms of how a source code is tokenized. Created a test file with the same python code as above and ran: ``python -m tokenize test/test.py``. Earlier, ``|`` and ``>`` were identified as separate tokens. Now, each instance of ``|>`` is treated as single token.
 
