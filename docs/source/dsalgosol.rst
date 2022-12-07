@@ -229,6 +229,54 @@ Medium
       .. literalinclude:: code/minmutations.cpp
          :language: c++
          :linenos:
+ 
+#. `Minimum Number of Arrows to Burst Balloons <https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/minarrowshots.cpp
+         :language: c++
+         :linenos:
+
+#. `Sort Characters By Frequency <https://leetcode.com/problems/sort-characters-by-frequency/>`_
+
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/freqsort.cpp
+         :language: c++
+         :linenos:
+         
+#. `Odd Even Linked List <https://leetcode.com/problems/odd-even-linked-list/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/oddevenlist.cpp
+         :language: c++
+         :linenos:
+
+#. `Insert Delete GetRandom O(1) <https://leetcode.com/problems/insert-delete-getrandom-o1/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/insdelgetrand.cpp
+         :language: c++
+         :linenos:
+
+#. `Find Players With Zero or One Losses <https://leetcode.com/problems/find-players-with-zero-or-one-losses/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/insdelgetrand.cpp
+         :language: c++
+         :linenos:
+
+#. `Valid Sudoku <https://leetcode.com/problems/valid-sudoku/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/insdelgetrand.cpp
+         :language: c++
+         :linenos:
 
 Hard
 -------------
