@@ -1,15 +1,19 @@
 Python
 #####################################
 
-How Python works
-******************************
-I am trying to understand how Python works internally. In these notes, I'll capture the insights I find while trying to dive deep following along the talk `Demystifying Python’s Internals <https://www.youtube.com/watch?v=HYKGZunmF50>`_ by Sebastiaan Zeeff at PyCon US. In the talk, Sebastiaan shows step-by-step guide on how to implement a custom operator in python. My plan is to extend this idea and eventually implement a haskell like Monad operator ``>>=`` (see `this <http://learnyouahaskell.com/a-fistful-of-monads>`_).
+How Python Compiles and Executes The Source Code
+************************************************************
+To understand how Python compiles and executes the source code, I'll follow along the talk `Demystifying Python’s Internals <https://www.youtube.com/watch?v=HYKGZunmF50>`_ by Sebastiaan Zeeff at PyCon US and note down any useful insight I find. In the talk, Sebastiaan shows a step-by-step guide on how to implement a custom operator in python. My plan is to eventually implement a haskell like Monad operator ``>>=`` in Python (see `this <http://learnyouahaskell.com/a-fistful-of-monads>`_).
 
-Setting up the system:
+The Big Picture
+============================
+<insert-image>
+
+Setting up devenv:
 ============================
 * Used the base Ubuntu docker image on Linux and installed gcc, python3, make, git and vim.
 * Cloned cpython `git repo <https://github.com/python/cpython.git>`_.
-* Switched to branch 3.11 for my experiments for reproducibility (base commit SHA at current time: ``4a7612fbecbdd81a6e708e29aab0dc4c6555948d``).
+* Switched to branch 3.11 for my experiments for reproducibility (base commit SHA: ``4a7612fbecbdd81a6e708e29aab0dc4c6555948d``).
 * Compiled cpython source which creates a binary named ``python`` inside the build dir.
 
 .. code-block:: bash
@@ -27,8 +31,9 @@ The goal here is to implement an operator ``|>`` (similar to Linux ``|``) so tha
 
     def double(x):
       return x*2
-
-    42 |> sq |> double |> sq |> sq # essentially the same as sq(sq(double(sq(42)))))
+      
+    # usage: functionally the same as sq(sq(double(sq(42)))))
+    42 |> sq |> double |> sq |> sq 
 
 When Python reads a source code, it first builds an abstract syntax tree (AST). This consists of two parts:
 
@@ -225,8 +230,8 @@ Let's dig deep into see what changes were made in each of these files and what t
              }
 
 Summary:
-
+-------------------------
 * Tokens are defined inside a config file ``Grammar/Tokens``
 * The tokens are given a numeric code (defined in ``token.h``)
-* Python uses a C functionality (as provided by ``tokenizer.c`` to tokenize the source code.
+* Python uses a C functionality (as provided by ``tokenizer.c``) to tokenize the source code.
 * The same numeric code and token name is copied inside a python file ``token.py``
