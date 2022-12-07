@@ -270,6 +270,14 @@ Medium
          :language: c++
          :linenos:
 
+#. `Valid Sudoku <https://leetcode.com/problems/valid-sudoku/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/insdelgetrand.cpp
+         :language: c++
+         :linenos:
+
 Hard
 -------------
 
