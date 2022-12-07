@@ -262,6 +262,14 @@ Medium
          :language: c++
          :linenos:
 
+#. `Find Players With Zero or One Losses <https://leetcode.com/problems/find-players-with-zero-or-one-losses/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/insdelgetrand.cpp
+         :language: c++
+         :linenos:
+
 Hard
 -------------
 
