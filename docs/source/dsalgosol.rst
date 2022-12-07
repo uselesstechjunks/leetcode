@@ -229,6 +229,30 @@ Medium
       .. literalinclude:: code/minmutations.cpp
          :language: c++
          :linenos:
+ 
+#. `Minimum Number of Arrows to Burst Balloons <https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/minarrowshots.cpp
+         :language: c++
+         :linenos:
+
+#. `Sort Characters By Frequency <https://leetcode.com/problems/sort-characters-by-frequency/>`_
+
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/freqsort.cpp
+         :language: c++
+         :linenos:
+         
+#. `Odd Even Linked List <https://leetcode.com/problems/odd-even-linked-list/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/oddevenlist.cpp
+         :language: c++
+         :linenos:
 
 Hard
 -------------
