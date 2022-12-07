@@ -90,7 +90,7 @@ Let's dig deep into see what changes were made in each of these files and what t
 
 * Doc/library/token-list.inc
 
-    Some internal file which now has the new token key and value that I just created. TODO: figure out where it is used.
+    This creates an entry in Python documentation for the new token key and value that I just created.
 
     .. code-block:: bash
 
@@ -198,7 +198,7 @@ Let's dig deep into see what changes were made in each of these files and what t
 
 * Parser/token.c
 
-    Has an array of token names ``_PyParser_TokenNames`` in which it adds the new token. Also, in function ``PyToken_TwoChars``, it adds a new line of code in the switch statement to differentiate between ``|=`` (already existing token in Python) and ``|>``. Interesting!
+    This has an array of token names ``_PyParser_TokenNames`` in which it adds the new token. In general, this file defines functions that returns numeric codes (as defined in ``token.h``). The functions are ``int PyToken_OneChar(int c1)``, ``int PyToken_TwoChars(int c1, int c2)`` and ``int PyToken_ThreeChars(int c1, int c2, int c3)``. For our case, it has added a new line of code inside ``PyToken_TwoChars`` in the switch statement to differentiate between ``|=`` (already existing token in Python) and ``|>``. This function is utilised in a giant function ``static int tok_get(struct tok_state *tok, const char **p_start, const char **p_end)`` inside ``Parser/tokenizer.c``.
 
     .. code-block:: bash
 
