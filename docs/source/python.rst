@@ -1,18 +1,15 @@
-Python
-#####################################
-
 How Python Compiles and Executes The Source Code
-************************************************************
+##########################################################################
 To understand how Python compiles and executes the source code, I'll follow along the talk `Demystifying Python’s Internals <https://www.youtube.com/watch?v=HYKGZunmF50>`_ by Sebastiaan Zeeff at PyCon US and note down any useful insight I find. In the talk, Sebastiaan shows a step-by-step guide on how to implement a custom operator in python. My plan is to eventually implement a haskell like Monad operator ``>>=`` in Python (see `this <http://learnyouahaskell.com/a-fistful-of-monads>`_).
 
 The Big Picture
-============================
+*****************************************
 .. image:: img/001pyflow.png
   :width: 800
   :alt: Python Compilation Flow
 
-Setting up devenv:
-============================
+Prerequisite: Setting up devenv
+*****************************************
 * Used the base Ubuntu docker image on Linux and installed gcc, python3, make, git and vim.
 * Cloned cpython `git repo <https://github.com/python/cpython.git>`_.
 * Switched to branch 3.11 for my experiments for reproducibility (base commit SHA: ``4a7612fbecbdd81a6e708e29aab0dc4c6555948d``).
@@ -23,7 +20,7 @@ Setting up devenv:
   mkdir build && cd build && ./configure && make -j 8
 
 Adding support for a ``pipe`` operator for chaining function calls
-====================================================================================
+**********************************************************************************
 The goal here is to implement an operator ``|>`` (similar to Linux ``|``) so that we can chain function calls like the following:
 
 .. code-block:: python
@@ -37,16 +34,28 @@ The goal here is to implement an operator ``|>`` (similar to Linux ``|``) so tha
     # usage: functionally the same as sq(sq(double(sq(42)))))
     42 |> sq |> double |> sq |> sq 
 
+Part 1: From Source Code to Abstract Syntax Tree
+====================================================================================
 When Python reads a source code, it first builds an abstract syntax tree (AST). This consists of two parts:
 
-#. from the source code characters, it creates a sequence of tokens using a ``tokenizer``.
-#. from the tokenized output, it then creates AST using grammar rules that are defined in the parser.
+  #. from the source code characters, it creates a sequence of tokens using a ``tokenizer``.
+  #. from the tokenized output, it then creates AST using grammar rules that are defined in the parser.
 
-Building AST
+Adding tokenizer support
+==========================================
+
+TL;DR:
 -------------------------
-#. Adding tokenizer support: 
+* Tokens are defined inside a config file ``Grammar/Tokens``
+* The tokens are given a numeric code (defined in ``token.h``)
+* Python uses a C functionality (as provided by ``tokenizer.c``) to tokenize the source code.
+* The same numeric code and token name is copied inside a python file ``token.py``
 
+In-Depth
+-----------------------
 Added a token named ``VBARGREATER`` with the token code to this file ``/cpython/Grammar/Tokens`` and ran ``make regen-token`` to regenerate the tokenizer.
+
+.. collapse:: code
 
 .. code-block:: bash
 
@@ -231,9 +240,3 @@ Let's dig deep into see what changes were made in each of these files and what t
                  break;
              }
 
-Summary:
--------------------------
-* Tokens are defined inside a config file ``Grammar/Tokens``
-* The tokens are given a numeric code (defined in ``token.h``)
-* Python uses a C functionality (as provided by ``tokenizer.c``) to tokenize the source code.
-* The same numeric code and token name is copied inside a python file ``token.py``
