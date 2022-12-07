@@ -7,7 +7,9 @@ To understand how Python compiles and executes the source code, I'll follow alon
 
 The Big Picture
 ============================
-<insert-image>
+.. image:: img/001pyflow.png
+  :width: 800
+  :alt: Python Compilation Flow
 
 Setting up devenv:
 ============================
