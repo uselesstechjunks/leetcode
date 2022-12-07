@@ -46,14 +46,15 @@ Adding tokenizer support
 
 TL;DR
 -------------------------
-* Tokens are defined inside a config file ``Grammar/Tokens``
-* The tokens are given a numeric code (defined in ``token.h``)
+* Tokens are defined inside the config file ``Grammar/Tokens``.
+* To Add a new token, we need to specify a ``key`` (e.g. ``MYTOKENIDENTIFIERKEY``) and a ``value`` (``=/=``) in this file and regerate tokens.
+* The tokens are then automatically given a numeric code (defined in ``token.h``).
 * Python uses a C functionality (as provided by ``tokenizer.c``) to tokenize the source code.
-* The same numeric code and token name is copied inside a python file ``token.py``
+* The same numeric code, key and value are copied inside a python file ``token.py``.
 
 In-Depth
 -----------------------
-Added a token named ``VBARGREATER`` with the token code to this file ``/cpython/Grammar/Tokens`` and ran ``make regen-token`` to regenerate the tokenizer.
+Added a token key ``VBARGREATER`` with value ``|>`` in this file ``/cpython/Grammar/Tokens`` and ran ``make regen-token`` to regenerate the tokenizer.
 
 .. collapse:: Expand snippet
 
@@ -73,7 +74,7 @@ Added a token named ``VBARGREATER`` with the token code to this file ``/cpython/
        OP
        AWAIT
 
-Now I could see a difference in terms of how a source code is tokenized. Created a test file with the same python code as above and ran: ``python -m tokenize test/test.py``. Earlier, ``|`` and ``>`` were identified as separate tokens. Now, each instance of ``|>`` is treated as single token.
+I could see a difference in terms of how a source code is tokenized. To see this, I created a test file with the same python code as above and ran: ``python -m tokenize test/test.py``. Earlier, ``|`` and ``>`` were identified as separate tokens. Now, each instance of ``|>`` is treated as single token.
 
 .. collapse:: Expand snippet
 
@@ -94,7 +95,7 @@ Now I could see a difference in terms of how a source code is tokenized. Created
       7,30-7,31:          NEWLINE        '\n'
       8,0-8,0:            ENDMARKER      ''
 
-I also see that a bunch of other files has also been changed automatically after the token-regeneration.
+I could also see that a bunch of other files has also been changed automatically after the token-regeneration.
 
 .. code-block:: bash
 
@@ -108,7 +109,7 @@ Let's dig deep into see what changes were made in each of these files and try to
 
 * ``Doc/library/token-list.inc``
 
-    This created an entry in the docs for the new token key and value.
+    This one is for the Python doc file. It created an entry in the docs for the new token key and value.
 
     .. collapse:: Expand snippet
     
@@ -133,7 +134,7 @@ Let's dig deep into see what changes were made in each of these files and try to
 
 * ``Lib/token.py``
 
-    This one seemingly assigns a numerical code to each of the tokens. Since I added the token in the middle and not at the end, it reassigned the numeric codes for the following tokens as well. ``|>`` gets a code 54. Number of tokens (``N_TOKENS``) has increased from 64 to 65. Also, there is a ``dict`` called ``EXACT_TOKEN_TYPES`` which has the entry for ``|>`` now.
+    This one assigns a numerical code to each of the tokens. Since I added the token in the middle and not at the end, it reassigned the numeric codes for the following tokens as well. Newly added ``VBARGREATER`` gets a code, 54. Number of tokens (``N_TOKENS``) has increased from 64 to 65. Also, there is a dictionary, ``EXACT_TOKEN_TYPES``, which maintains an inverse map from value to key (e.g. ``|>`` to key ``VBARGREATER``).
 
     .. collapse:: Expand snippet
     
