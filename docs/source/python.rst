@@ -94,7 +94,7 @@ Now I could see a difference in terms of how a source code is tokenized. Created
       7,30-7,31:          NEWLINE        '\n'
       8,0-8,0:            ENDMARKER      ''
 
-I also see that a bunch of other files have also been changed by this automatically.
+I also see that a bunch of other files has also been changed automatically after the token-regeneration.
 
 .. code-block:: bash
 
@@ -104,11 +104,11 @@ I also see that a bunch of other files have also been changed by this automatica
     modified:   Lib/token.py
     modified:   Parser/token.c
 
-Let's dig deep into see what changes were made in each of these files and what these files are for.
+Let's dig deep into see what changes were made in each of these files and try to wrap our heads around what these files are for.
 
 * ``Doc/library/token-list.inc``
 
-    This creates an entry in Python docs for the new token key and value.
+    This created an entry in the docs for the new token key and value.
 
     .. collapse:: Expand snippet
     
@@ -133,7 +133,7 @@ Let's dig deep into see what changes were made in each of these files and what t
 
 * ``Lib/token.py``
 
-    This one seemingly assigns a numerical code to each of the tokens. Since I added the token in the middle and not at the end, it reassigns the numeric codes for the following tokens as well. ``|>`` gets a code 54. Number of tokens (``N_TOKENS``) has increased from 64 to 65. Also, there is a ``dict`` called ``EXACT_TOKEN_TYPES`` which has the entry for ``|>`` now.
+    This one seemingly assigns a numerical code to each of the tokens. Since I added the token in the middle and not at the end, it reassigned the numeric codes for the following tokens as well. ``|>`` gets a code 54. Number of tokens (``N_TOKENS``) has increased from 64 to 65. Also, there is a ``dict`` called ``EXACT_TOKEN_TYPES`` which has the entry for ``|>`` now.
 
     .. collapse:: Expand snippet
     
@@ -186,7 +186,7 @@ Let's dig deep into see what changes were made in each of these files and what t
 
 * ``Include/token.h``
 
-    Same numeric code in the C header
+    Added the same numeric code as above but in the C header.
 
     .. collapse:: Expand snippet
     
@@ -222,7 +222,7 @@ Let's dig deep into see what changes were made in each of these files and what t
 
 * ``Parser/token.c``
 
-    This has an array of token names ``_PyParser_TokenNames`` in which it adds the new token. In general, this file defines functions that returns numeric codes (as defined in ``token.h``). The functions are ``int PyToken_OneChar(int c1)``, ``int PyToken_TwoChars(int c1, int c2)`` and ``int PyToken_ThreeChars(int c1, int c2, int c3)``. For our case, it has added a new line of code inside ``PyToken_TwoChars`` in the switch statement to differentiate between ``|=`` (already existing token in Python) and ``|>``. This function is utilised in a giant function ``static int tok_get(struct tok_state *tok, const char **p_start, const char **p_end)`` inside ``Parser/tokenizer.c``.
+    This has an array of token names, ``_PyParser_TokenNames``, in which it added the new token. In general, this file defines functions that returns numeric codes for tokens of different length (as defined in ``token.h``), such as, ``int PyToken_OneChar(int c1)``, ``int PyToken_TwoChars(int c1, int c2)`` and ``int PyToken_ThreeChars(int c1, int c2, int c3)``. In the current change, it added a new line of code inside ``PyToken_TwoChars`` in the switch statement to differentiate between ``|=`` (already existing token in Python) and the newly added ``|>``. This function is utilised in a giant function ``static int tok_get(struct tok_state *tok, const char **p_start, const char **p_end)`` inside ``Parser/tokenizer.c``.
 
     .. collapse:: Expand snippet
     
