@@ -251,3 +251,13 @@ Let's dig deep into see what changes were made in each of these files and try to
                    break;
                }
 
+Adding grammar support
+==========================================
+TL;DR
+-------------------------
+* Current parser for Python uses a Parsing Expression Grammar (PEG) syntax.
+
+
+In-Depth
+-----------------------
+
