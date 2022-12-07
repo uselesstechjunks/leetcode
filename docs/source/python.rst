@@ -19,7 +19,7 @@ Prerequisite: Setting up devenv
 
   mkdir build && cd build && ./configure && make -j 8
 
-Adding support for a ``pipe`` operator for chaining function calls
+Adding a ``pipe`` operator
 **********************************************************************************
 The goal here is to implement an operator ``|>`` (similar to Linux ``|``) so that we can chain function calls like the following:
 
@@ -55,7 +55,7 @@ In-Depth
 -----------------------
 Added a token named ``VBARGREATER`` with the token code to this file ``/cpython/Grammar/Tokens`` and ran ``make regen-token`` to regenerate the tokenizer.
 
-.. collapse:: code
+.. collapse::
 
   .. code-block:: bash
 
