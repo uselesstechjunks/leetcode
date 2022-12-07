@@ -224,4 +224,9 @@ Let's dig deep into see what changes were made in each of these files and what t
                  break;
              }
 
-TODO
+Summary:
+
+* Tokens are defined inside a config file ``Grammar/Tokens``
+* The tokens are given a numeric code (defined in ``token.h``)
+* Python uses a C functionality (as provided by ``tokenizer.c`` to tokenize the source code.
+* The same numeric code and token name is copied inside a python file ``token.py``
