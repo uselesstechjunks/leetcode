@@ -254,6 +254,14 @@ Medium
          :language: c++
          :linenos:
 
+#. `Insert Delete GetRandom O(1) <https://leetcode.com/problems/insert-delete-getrandom-o1/>`_
+ 
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/insdelgetrand.cpp
+         :language: c++
+         :linenos:
+
 Hard
 -------------
 
