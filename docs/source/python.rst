@@ -261,5 +261,5 @@ TL;DR
 In-Depth
 -----------------------
 .. image:: img/002pyast.png
-  :width: 800
+  :width: 400
   :alt: Python Compilation Flow
