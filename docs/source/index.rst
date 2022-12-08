@@ -7,6 +7,12 @@ Self Study Guide!
 
    This project is under active development.
 
+Roadmap
+*****************************************
+.. image:: img/003prep.drawio.png
+  :width: 600
+  :alt: Preparation roadmap
+
 Contents
 --------
 
