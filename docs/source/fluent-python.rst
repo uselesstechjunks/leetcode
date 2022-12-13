@@ -66,7 +66,7 @@ Special Methods for Numeric Objects
 
     .. note::
     
-      #. ``__repr__`` usually encodes a hint about the class as-well (e.g. ``MyClass(a=x, b=y)``).
+      #. ``__repr__`` usually encodes a hint about how to construct an object of the class as-well (e.g. ``MyClass(a=x, b=y)``).
       #. ``__str__`` may represent it as ``[x,y]``. 
       #. In absence of a ``__str__``, it falls back to ``__repr__``.
       #. Delegate the task of representing items in object by using ``item!r`` inside format string.
