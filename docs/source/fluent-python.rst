@@ -77,3 +77,19 @@ Special Methods for Numeric Objects
               def __repr__(self):
                 return f'MyClass(a={self.a!r}, b={self.b!r})'
 
+
+Collections API
+==============================
+
+Refere to image 1.2 in the book for UML diagram. In a nutshell, any collection object should implement:
+
+  #. ``Iterable`` to enable ``for``.
+  #. ``Sized`` to enable ``len``.
+  #. ``Container`` to enable ``in``.
+  
+Specialization of Collection class:
+  
+  #. ``Sequence``
+  #. ``Mapping``
+  #. ``Set``
+  
