@@ -4,9 +4,14 @@ Statistics
 Statistical Inference
 ******************************
 
-We have a sample of size :math:`n` from an unknown distribution :math:`F_X`.
+We have a sample of size :math:`n` from an unknown distribution :math:`F`.
 
 .. math::
-    \mathbf{X}_1,\cdots\mathbf{X}_n \sim F_X
+    X_1,\cdots X_n \sim F
 
-The fundamental task for statistical inference is then to infer :math:`F_X` or some function of :math:`F_X` (also known as statistical functionals, such as :math:`\mathbb{E}_X` or :math:`\text{Var}(X)`).
+The fundamental task for statistical inference is to infer :math:`F` or some function of :math:`F` (also known as statistical functionals, such as density :math:`f\coloneq F^'`, expectation :math:`\mathbb{E}[X]\coloneq \int_{-\infty}^{\infty} x dF` or variance :math:`\text{Var}(X)\coloneqq (\mathbb{E}[X]-X`)^2`) from the sample. If the rv is a tuple, e.g. :math:`(X_i,Y_i)_{i=1}^n`, then inference might also mean infering a *regression function* :math:`r(X)` for the conditional expectation, :math:`\mathbb{E}[Y|X]=r(X)+\eplison`.
+
+Statistical Model
+======================
+
+A statistical model :math:`\mathfrac{F}` is set of distributions (or densities or regression functions).
