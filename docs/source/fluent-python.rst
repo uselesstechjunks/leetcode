@@ -77,3 +77,42 @@ Special Methods for Numeric Objects
               def __repr__(self):
                 return f'MyClass(a={self.a!r}, b={self.b!r})'
 
+
+Collections API
+==============================
+
+Refere to image 1.2 in the book for UML diagram. In a nutshell, any collection object should implement:
+
+  #. ``Iterable`` to enable ``for``.
+  #. ``Sized`` to enable ``len``.
+  #. ``Container`` to enable ``in``.
+  
+Specialization of Collection class:
+  
+  #. ``Sequence``
+  #. ``Mapping``
+  #. ``Set``
+  
+Refer to table 1-1 and 1-2 in the book for a list of special methods for various functionalities.
+
+Chapter 2: An Array of Sequences
+**************************************************
+
+.. note::
+    Each python object contains metadata fields (such as reference counts, type-information).
+
+Sequences provide common functionalities such as iteration, slicing, sorting and concatenation.
+
+Classification of Sequences
+=========================================
+
+  #. Storage:
+  
+    #. Container Sequences: Contains pointers to python objects, potentially heterogeneous. Example: ``list/tuple``.
+    #. Flat Sequences: Contains a contiguous chuck of memory for homogenous python objects. Example: ``str/array``.
+    
+  #. Mulatibility:
+  
+    #. Mutable Sequences: Items can be updated in-place. Example: ``list/array``.
+    #. Immutable Sequences: Items cannot be updated. Creates a new instance instead. Example: ``tuple/str``.
+
