@@ -9,7 +9,7 @@ Fluent Python
 List of Special Methods:
 
 #. ``__getitem__``: Random-access operator.
-#. ``__len__``: Can be used by ``len(object)``.
+#. ``__len__``: Provides a functionality to obtain length, with ``len(object)``.
 
 Together, they allow the framework to do the following:
 
