@@ -42,7 +42,7 @@ Together, they allow the framework to do the following:
   #. Enable querying for existance of an item by performing sequential scanning.
   
       .. note::
-          If we implement a custom __contains__ function, then ``in`` would use that one instead)
+          Implement a ``__contains__`` function, then ``in`` would use that one.
 
   #. If we provice a custom ``item_ranker`` function, then we can also sort the items in the object using ``sorted`` interface.
   
@@ -61,8 +61,18 @@ Special Methods for Numeric Objects
 #. ``__add__(self, other)`` implements ``self + other``.
 #. ``__mul__(self, other)`` implements ``self * other``.
 #. ``__abs__(self)`` implements ``abs(self)``.
-#. ``__repr__(self)`` implements a printable representation (enables ``print(object)``).
-#. ``__str__(self)`` implements a string representation (enables ``str(object)``).
+#. ``__repr__(self)`` implements a printable representation (enables ``print(object)`` and usage in ``%r``).
+#. ``__str__(self)`` implements a string representation (enables ``str(object)`` and usage in ``%s``).
 
     .. note::
-        ``__repr__`` usually encodes a hint about the class as-well (e.g. ``MyClass(item_a=x, item_b=y)``) whereas ``__str__`` may represent it as ``[x,y]``. 
+    
+      #. ``__repr__`` usually encodes a hint about the class as-well (e.g. ``MyClass(a=x, b=y)``).
+      #. ``__str__`` may represent it as ``[x,y]``. 
+      #. In absence of a ``__str__``, it falls back to ``__repr__``.
+      #. Delegate the task of representing items in object by using ``item!r`` inside format string.
+
+          .. code-block:: python
+
+              def __repr__(self):
+                return f'MyClass(a={self.a!r}, b={self.b!r})'
+
