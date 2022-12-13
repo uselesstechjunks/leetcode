@@ -105,9 +105,14 @@ Sequences provide common functionalities such as iteration, slicing, sorting and
 
 Classification of Sequences
 =========================================
+
   #. Storage:
+  
     #. Container Sequences: Contains pointers to python objects, potentially heterogeneous. Example: ``list/tuple``.
     #. Flat Sequences: Contains a contiguous chuck of memory for homogenous python objects. Example: ``str/array``.
+    
   #. Mulatibility:
+  
     #. Mutable Sequences: Items can be updated in-place. Example: ``list/array``.
     #. Immutable Sequences: Items cannot be updated. Creates a new instance instead. Example: ``tuple/str``.
+
