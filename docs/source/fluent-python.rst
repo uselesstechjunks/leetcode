@@ -16,5 +16,16 @@ Together, they allow the framework to do the following:
   #. Access n-th element from last with negative indexing (``object[-index_from_lat]``).
   #. Obtain random element using ``random.choice``.
   #. Slicing (``object[key1:key2]``) (TODO read more about slicing)
-  #. Make the object iterator (``for _ in object:``)
-  #. Generate a reverse iterator (``reverse(object)``)
+  #. Make the object iterator
+
+      .. code-block:: python
+
+      for item in object:
+        do_stuff(item)
+  
+  #. Generate a reverse iterator
+  
+      .. code-block:: python
+
+      for item in reverse(object):
+        do_stuff(item)
