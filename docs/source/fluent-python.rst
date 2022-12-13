@@ -4,7 +4,7 @@ Fluent Python
 Chapter 1: Python data model
 **************************************************
 
-``__special_methods__`` are cool. They are called by the Python framework. You're not supposed to call them directly (except for ``__init__`` to call superclass constructor).
+Special Methods are cool and are written like ``__special_method__``. They are called by the Python framework to enable various functionality. We're not supposed to call them directly (except for ``__init__`` to call superclass constructor maybe).
 
 Special Methods for Collection Objects
 ============================================
@@ -63,6 +63,7 @@ Special Methods for Numeric Objects
 #. ``__abs__(self)`` implements ``abs(self)``.
 #. ``__repr__(self)`` implements a printable representation (enables ``print(object)`` and usage in ``%r``).
 #. ``__str__(self)`` implements a string representation (enables ``str(object)`` and usage in ``%s``).
+#. ``__bool__(self)`` returns ``True/False`` to be used in ``if/else/and/or/not``.
 
     .. note::
     
