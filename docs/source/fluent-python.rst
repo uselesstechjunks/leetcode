@@ -58,11 +58,11 @@ Together, they allow the framework to do the following:
 Special Methods for Numeric Objects
 ============================================
 
-  #. ``__add__(self, other)`` implements ``self + other``.
-  #. ``__mul__(self, other)`` implements ``self * other``.
-  #. ``__abs__(self)`` implements ``abs(self)``.
-  #. ``__repr__(self)`` implements a printable representation (enables ``print(object)``).
-  #. ``__str__(self)`` implements a string representation (enables ``str(object)``).
-  
-      .. note::
-          ``__repr__`` usually encodes a hint about the class as-well (e.g. ``MyClass(item_a=x, item_b=y)``) whereas ``__str__`` may represent it as ``[x,y]``. 
+#. ``__add__(self, other)`` implements ``self + other``.
+#. ``__mul__(self, other)`` implements ``self * other``.
+#. ``__abs__(self)`` implements ``abs(self)``.
+#. ``__repr__(self)`` implements a printable representation (enables ``print(object)``).
+#. ``__str__(self)`` implements a string representation (enables ``str(object)``).
+
+    .. note::
+        ``__repr__`` usually encodes a hint about the class as-well (e.g. ``MyClass(item_a=x, item_b=y)``) whereas ``__str__`` may represent it as ``[x,y]``. 
