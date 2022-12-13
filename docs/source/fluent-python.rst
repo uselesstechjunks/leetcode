@@ -2,6 +2,7 @@ Fluent Python
 ##########################################################################
 
 * Chapter 1: Python data model
+======================================================
 
 ``__special_methods__`` are cool. They are called by the Python framework. You're not supposed to call them directly (except for `__init__` to call superclass constructor).
 
