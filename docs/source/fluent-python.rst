@@ -13,19 +13,26 @@ List of Special Methods:
 Together, they allow the framework to do the following:
 
   #. Access any element with index (``object[key]``).
-  #. Access n-th element from last with negative indexing (``object[-index_from_lat]``).
+  #. Access n-th element from last with negative indexing (``object[-index_from_last]``).
   #. Obtain random element using ``random.choice``.
-  #. Slicing (``object[key1:key2]``) (TODO read more about slicing)
+  
+      .. code-block: python      
+
+          from random import choice
+
+          item = choice(object) # returns a random item from object
+
+  #. Slicing (``object[key1:key2]``) (TODO read more about slicing)      
   #. Make the object iterator
 
       .. code-block:: python
-
-      for item in object:
-        do_stuff(item)
+      
+          for item in object:
+            do_stuff(item)
   
   #. Generate a reverse iterator
   
       .. code-block:: python
-
-      for item in reverse(object):
-        do_stuff(item)
+      
+          for item in reverse(object):
+            do_stuff(item)
