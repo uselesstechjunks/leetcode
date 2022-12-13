@@ -28,6 +28,7 @@ Contents
    behave
    studytips
    dsalgosol
-   python
+   deepdives
+   kurzgesagt
 
 Self Study Guide has its documentation hosted on Read the Docs.
