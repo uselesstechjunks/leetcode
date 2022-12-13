@@ -13,7 +13,7 @@ List of Special Methods:
 Together, they allow the framework to do the following:
 
   #. Access any element with index (``object[key]``).
-  #. Access n-th element from last with negative indexing (``object[-index_from_lat]`).
+  #. Access n-th element from last with negative indexing (``object[-index_from_lat]``).
   #. Obtain random element using ``random.choice``.
   #. Slicing (``object[key1:key2]``) (TODO read more about slicing)
   #. Generate a reverse iterator (``reverse(object)``)
