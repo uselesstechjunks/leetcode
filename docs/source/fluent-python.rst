@@ -2,11 +2,12 @@ Fluent Python
 ##########################################################################
 
 Chapter 1: Python data model
-======================================================
+**************************************************
 
 ``__special_methods__`` are cool. They are called by the Python framework. You're not supposed to call them directly (except for ``__init__`` to call superclass constructor).
 
-List of Special Methods:
+Special Methods for Collection Objects
+============================================
 
 #. ``__getitem__``: Random-access operator.
 #. ``__len__``: Provides a functionality to obtain length, with ``len(object)``.
@@ -54,3 +55,14 @@ Together, they allow the framework to do the following:
             do_stuff(item)
             
             
+Special Methods for Numeric Objects
+============================================
+
+  #. ``__add__(self, other)`` implements ``self + other``.
+  #. ``__mul__(self, other)`` implements ``self * other``.
+  #. ``__abs__(self)`` implements ``abs(self)``.
+  #. ``__repr__(self)`` implements a printable representation (enables ``print(object)``).
+  #. ``__str__(self)`` implements a string representation (enables ``str(object)``).
+  
+      .. note::
+          ``__repr__`` usually encodes a hint about the class as-well (e.g. ``MyClass(item_a=x, item_b=y)``) whereas ``__str__`` may represent it as ``[x,y]``. 
