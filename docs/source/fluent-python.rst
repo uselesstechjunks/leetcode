@@ -93,3 +93,4 @@ Specialization of Collection class:
   #. ``Mapping``
   #. ``Set``
   
+Refer to table 1-1 and 1-2 in the book for a list of special methods for various functionalities.
