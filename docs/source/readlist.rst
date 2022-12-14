@@ -20,35 +20,35 @@ Complex Analysis
 ML Theory
 ***********************************
 
-* [Goodfellow] Deep Learning
-* [Roberts] The Principles of Deep Learning Theory
-* [Kevin Murphy] Probabilistic Machine Learning book1
-* [Kevin Murphy] Probabilistic Machine Learning book2
-* [Bronstein,Bruna,Cohen,Veickovic][2021] Geometric Deep Learning
-* [Shwartz David] Understanding Machine Learning - From Theory to Algorithms
-* [Mohri] Foundations of Machine Learning
+* [Goodfellow] `Deep Learning <https://www.deeplearningbook.org/>`_
+* [Roberts] `The Principles of Deep Learning Theory <https://arxiv.org/abs/2106.10165>`_
+* [Kevin Murphy] `Probabilistic Machine Learning book1 <https://probml.github.io/pml-book/book1.html>`_
+* [Kevin Murphy] `Probabilistic Machine Learning book2 <https://probml.github.io/pml-book/book2.html>`_
+* [Bronstein,Bruna,Cohen,Veickovic][2021] `Geometric Deep Learning <https://geometricdeeplearning.com/>`_
+* [Shwartz David] `Understanding Machine Learning - From Theory to Algorithms <https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf>`_
+* [Mohri] `Foundations of Machine Learning <https://cs.nyu.edu/~mohri/mlbook/>`_
 * [CMU] `11-785 Deep Learning <https://www.youtube.com/playlist?list=PLp-0K3kfddPxRmjgjm0P1WT6H-gTqE8j9>`_
 * `Yet Another Derivation of Backpropagation in Matrix Form <https://sudeepraja.github.io/BackpropAdjoints/>`_
 
 
-ML Practical:
+ML Practical
 ***********************************
 
 * `pytorch-internals <http://blog.ezyang.com/2019/05/pytorch-internals/>`_
 * https://forums.fast.ai/t/diving-deep-into-pytorch/39470
-* [Stevens] Deep Learning with PyTorch
-* [Geron] Hands-on Machine Learning
-* [Howard] Deep Learning for Coders with fastai and PyTorch
+* [Stevens] `Deep Learning with PyTorch <https://www.manning.com/books/deep-learning-with-pytorch>`_
+* [Geron] `Hands-on Machine Learning <https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/>`_
+* [Howard] `Deep Learning for Coders with fastai and PyTorch <https://course.fast.ai/Resources/book.html>`_
 * [Zheng Casari] Feature Engineering for Machine Learning
 * [NYU] `Deep Learning (Spring 2020) <https://atcold.github.io/pytorch-Deep-Learning/>`_
 * [CMU] `Dive into Deep Learning <https://d2l.ai/index.html>`_
 * [MIT] `6.S965 TinyML and Efficient Deep Learning <https://efficientml.ai/>`_
 
 
-ML Design General Principle:
+ML Design General Principle
 ***********************************
 
-* [Andrew Ng] Machine Learning Yearning
+* [Andrew Ng] `Machine Learning Yearning <https://www.mlyearning.org/>`_
 * [Chip Huyen] Designing Machine Learning Systems
 * [Burkov] Machine Learning Engineering
 * [Jeff Smith] Machine Learning Systems
@@ -56,19 +56,19 @@ ML Design General Principle:
 * [UCB] System Design for Large Scale Machine Learning
 
 
-ML Math:
+ML Math
 ***********************************
 
 * [Gutmann] Pen and Paper Exercise in ML
 * `Steve Brunton Playlist <https://www.youtube.com/@Eigensteve/playlists>`_
 
-ML Algorithms:
+ML Algorithms
 ***********************************
 
 * [Naumann] The Art of Differentiating Computer Programs
 
 
-ML Related Theory:
+ML Related Theory
 ***********************************
 
 * [MacKay] Information Throry Inference and Learning Algorithms
@@ -94,7 +94,7 @@ Applied ML
 * [Stanford] `CS25 - Transformers United <https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM>`_
 * [Stanford] `CS330 - Deep Multi-Task and Meta-Learning <https://www.youtube.com/playlist?list=PLoROMvodv4rMIJ-TvblAIkw28Wxi27B36>`_
 
-MLE Papers:
+MLE Papers
 ***********************************
 
 * [ACM] DNN for YouTube Recommendations
@@ -107,12 +107,12 @@ MLE Papers:
 * [RecSys] Recommending What Video to Watch Next
 
 
-ML Interviews:
+ML Interviews
 ***********************************
 
 * [Kashan] Deep Learning Interviews
 
-System Design General Principles:
+System Design General Principles
 ***********************************
 
 * [Kleppmann] Designing Data-Intensive Applications
@@ -122,12 +122,12 @@ System Design General Principles:
 * [Binh Nguyen] `Awesome Scalability <https://github.com/binhnguyennus/awesome-scalability>`_
 * [Educative] `Grokking Modern System Design Interview for Engineers & Managers <https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers>`_
 
-System Design Algorithms:
+System Design Algorithms
 ***********************************
 
 * [Gakhov] Probabilistic Data Structures and Algorithms
 
-Misc:
+Misc
 ***********************
 
 * [Developer-Y] `CS Video Courses <https://github.com/Developer-Y/cs-video-courses>`_
