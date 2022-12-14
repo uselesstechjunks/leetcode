@@ -30,5 +30,6 @@ Contents
    dsalgosol
    deepdives
    kurzgesagt
+   readlist
 
 Self Study Guide has its documentation hosted on Read the Docs.
