@@ -15,7 +15,7 @@ The task for statistical inference is to infer :math:`F` or some function of :ma
 #. expectation :math:`T(F)=\mathbb{E}[X]=\int_{-\infty}^{\infty} x dF`
 #. variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
 
-that best *explains* the data (for some given definition of *best*). 
+that best *explains* the data (for some given definition of *best* chosen beforehand, such as *mean-squared-error*). 
 
 Machine Learning
 ======================
@@ -45,7 +45,9 @@ Example: If a model for regression is restricted to the set of affine functions
 .. math::
     \mathcal{F}=\{r(x)=mx+c; m,c\in\mathbb{R}\}
 
-then it's parametric. If it is for densities, then a parametric model could be 
+then it's parametric. Similarly, if the model is a set of FFN (feed-forward networks) of a given size, then it is also parametric and the parameters of this model is the weights and biases in each layer.
+
+If it is for densities, then a parametric model could be 
 
 .. math::
     \mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
@@ -68,9 +70,11 @@ The estimate :math:`\hat{\theta_n}` depends on data and therefore is a rv (i.e. 
 
 .. note::
     #. Sampling Distribution: The distribution of :math:`\hat{\theta_n}` over different samples.
-    #. Bias: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}[\hat{\theta_n}]-\theta`. If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an *unbiased estimator* of :math:`\theta`.
-    #. Standard Error: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}(\hat{\theta_n})}`.
+    #. Bias: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an *unbiased estimator* of :math:`\theta`.
+    #. Standard Error: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}_{\theta}(\hat{\theta_n})}`.
     #. Consistent Estimator: If :math:`\hat{\theta_n}` converges in probability to true :math:`\theta`.
+    #. Mean-Squared Error: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
+    #. Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
 
 Confidence Interval Estimation
 ---------------------------------------
