@@ -14,6 +14,7 @@ The task for statistical inference is to infer :math:`F` or some function of :ma
 #. density :math:`T(F)=f=F'`
 #. expectation :math:`T(F)=\mathbb{E}[X]=\int_{-\infty}^{\infty} x dF`
 #. variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
+#. median: :math:`T(F)=F^{-1}(1/2)`
 
 that best *explains* the data (for some given definition of *best* chosen beforehand, such as *mean-squared-error*). 
 
@@ -26,7 +27,7 @@ If the rv is a tuple, e.g. :math:`(X_i,Y_i)_{i=1}^n\sim F_{X,Y}`, then inference
 
 where :math:`\mathbb{E}[\epsilon]=0`. This inference is known as *learning* in Machine Learning (achieved via *training* on a given sample set) and *curve estimation* in statistics.
 
-In the above case, an inference might also mean an inferring an unseen :math:`Y=\hat{y}=r(x)` for a given :math:`X=x`. This is known as *inference* in Machine Learning and *prediction* in statistics.
+In the above case, an inference might also mean an inferring an unseen :math:`Y` by :math:`\hat{y}=r(x)` for a given :math:`X=x`. This is known as *inference* in Machine Learning and *prediction* in statistics.
 
 .. note::
     #. Dependent and Independent Variable: :math:`X` is known as the independent variable (*features* in Machine Learning) and :math:`Y` is known as dependent variable (*target* in Machine Learning). Independent variables are usually a multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.
@@ -52,15 +53,29 @@ If it is for densities, then a parametric model could be
 .. math::
     \mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
 
+.. note::
+    The factors that decide the number of parameters, such as choice of function-class, is independent of the inference process and is decided separately. These are often called *hyper-parameters*.
+    
+A non-parametric model for distributions can be the set of all possible cdfs.
+
 Types of Inference
 =========================
 
-#. Point Estimation: A single *best* estimate (i.e. a point) within the model. Example: a single distribution/density function (parameterised/non-parameterised), or a single regression function, a single value for expectation/variance/other moments, a single prediction for a given independent variable. etc. This estimate for a fix, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
+#. Point Estimation: A single *best* estimate (i.e. a point) within the model. 
+
+Example: 
+
+    #. a single distribution/density function (parameterised/non-parameterised)
+    #. a single regression function
+    #. a single value for expectation/variance/other moments
+    #. a single prediction for a dependent variable with a given independent variable. etc. 
+
+This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
 
 .. math::
     \hat{\theta_n}=g(X_1,\cdots,X_n)
 
-#. Confidence Interval Estimation:
+#. Confidence Set Estimation:
 
 #. Hypothesis Testing:
 
@@ -76,7 +91,7 @@ The estimate :math:`\hat{\theta_n}` depends on data and therefore is a rv (i.e. 
     #. Mean-Squared Error: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
     #. Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
 
-Confidence Interval Estimation
+Confidence Set Estimation
 ---------------------------------------
 
 Hypothesis Testing
