@@ -93,7 +93,7 @@ Types of Inference
 .. note::
     #. The statement about the quantity of interest assuming the model is correct is called the *Null hypothesis*.
     #. The statement where the model is incorrect is called *Alternate hypothesis*.
-    #. If we create a :math:`1-\alpha` confidence set for the estimated quantity and the quantity as-per-model doesn't fall within this set, then we *reject* the null hypothesis with significance level :math:`1-\alpha`.  If it does then we *fail to reject* the null hypothesis.
+    #. [TODO:CHECK IF TRUE] If we create a :math:`1-\alpha` confidence set for the estimated quantity and the quantity as-per-model doesn't fall within this set, then we *reject* the null hypothesis with significance level :math:`1-\alpha`.  If it does then we *fail to reject* the null hypothesis.
 
 Non-parametric Models
 ---------------------------
@@ -131,14 +131,16 @@ Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \
     
 Confidence Set Estimation
 ---------------------------------------
-* Pointwise Asymptotic CI: :math:`\forall\theta\in\Theta,\liminf_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
-* Uniform Asymptotic CI: :math:`\liminf_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
+* Pointwise Asymptotic CI: :math:`\forall\theta\in\Theta,\liminf_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha``
+* Uniform Asymptotic CI: :math:`\liminf_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha``
 
 .. note::
+    Uniform Asymptotic CI is stricter.
     
-    Normal-based Confidence Interval: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})`.
+* Normal-based Confidence Interval: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})`.
 
-The above is a pointwise asymptotic CI.
+.. note::
+    The above is a pointwise asymptotic CI.
 
 .. note::
     * Glivenko-Cantelli Theorem: :math:`\sup_{x}|\hat{F_n}(x)-F(x)|` converges in probability to :math:`0`.
