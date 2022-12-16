@@ -33,7 +33,7 @@ A statistical model :math:`\mathcal{F}` is set of distributions (or other statis
 Example: If a model for regression is restricted to the set of affine functions
 
 .. math::
-    \mathcal{F}=\{r(x)=mx+c\; m,c\in\mathbb{R}}
+    \mathcal{F}=\{r(x)=mx+c\; m,c\in\mathbb{R}\}
 
 then it's parametric. If it is for densities, then a parametric model could be 
 
