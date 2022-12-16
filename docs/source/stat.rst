@@ -9,12 +9,13 @@ We have a sample of size :math:`n` from an unknown distribution :math:`F`.
 .. math::
     X_1,\cdots X_n \sim F
 
-The task for statistical inference is to infer :math:`F` or some function of :math:`F`, :math:`T(F)`, (also known as statistical functionals), such as 
+The task for statistical inference is to infer :math:`F`, some function of :math:`F`, :math:`T(F)`, (also known as statistical functionals), or some other quantity that depends on :math:`F`, such as 
 
 #. density :math:`T(F)=f=F'`
 #. expectation :math:`T(F)=\mathbb{E}[X]=\int_{-\infty}^{\infty} x dF`
 #. variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
 #. median: :math:`T(F)=F^{-1}(1/2)`
+#. a confidence interval for a quantity :math:`\theta` that depends on :math:`F`
 
 that best *explains* the data, for some given definition of *best* chosen beforehand. The inferred values are called *estimates* of the true value of the quantities of interest. The expression that computes these estimates from sample is called an *estimator*. Estimates are rv as their values may change subject to a different sample.
 
@@ -98,6 +99,13 @@ Non-parametric Models
 #. Empirical distribution function:
 
     The estimator for :math:`F` is :math:`\hat{F_n}` which assigns a mass :math:`1/n` to every point in sample :math:`\{X_i\}_{i=1}^n`.
+    
+    .. note::
+        
+        For a given :math:`x`,
+        
+        #. :math:`\mathbb{E}[\hat{F_n}(x)]=F(x)`
+        #. :math:`\text{Var}(\hat{F_n}=\frac{F(x)(1-F(x)}{n}`
 
 Point Estimation
 ---------------------------
@@ -112,7 +120,8 @@ The estimate :math:`\hat{\theta_n}` is a rv (i.e. with a different sample, it ev
     #. Mean-Squared Error: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
     #. Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
     #. Asymptotically Normal Estimator: :math:`\hat{\theta_n}\approx\mathcal{N}(\theta,\hat{\text{se}}^2)`.
-
+    #. Empirical distribution function is a consistent estimator for any distribution.
+    
 Confidence Set Estimation
 ---------------------------------------
 .. note::
@@ -120,6 +129,7 @@ Confidence Set Estimation
     #. Uniform Asymptotic CI: :math:`\liminf_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
     #. Normal-based Confidence Interval: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})` is a :math:`1-\alpha` confidence interval.
     #. The above is a pointwise asymptotic CI.
+    #. Glivenko-Cantelli Theorem: :math:`\sup_{x}|\hat{F_n}(x)-F(x)|` converges in probability to :math:`0`.
 
 Hypothesis Testing
 ---------------------------------
