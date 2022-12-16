@@ -148,8 +148,11 @@ Confidence Set Estimation
 .. note::
     * Glivenko-Cantelli Theorem: :math:`\sup_{x}|\hat{F_n}(x)-F(x)|` converges in probability to :math:`0`.
     * Dvoretzsky-Kiefer-Wolfowitz (DKW) Inequality: For any :math:`\epsilon>0`,
+    
         .. math::
             \mathbb{P}(\sup_x|\hat{F_n}(x)-F(x)|>\epsilon) \le 2\exp(-2n\epsilon^2)
+
+    * It can be derived from DKW that for the empirical distribution model, we can form a :math:`1-\alpha` CI of width :math:`2\epsilon_n` around :math:`\hat{F_n}` where :math:`\epsilon_n=\sqrt{\frac{1}{2n}\ln(\frac{2}{\alpha})}`.
 
 Hypothesis Testing
 ---------------------------------
