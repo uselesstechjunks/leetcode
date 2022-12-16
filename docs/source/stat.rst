@@ -15,9 +15,8 @@ The task for statistical inference is to infer :math:`F`, some function of :math
 #. expectation :math:`T(F)=\mathbb{E}[X]=\int_{-\infty}^{\infty} x dF`
 #. variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
 #. median: :math:`T(F)=F^{-1}(1/2)`
-#. a confidence interval for a quantity :math:`\theta` that depends on :math:`F`
 
-that best *explains* the data, for some given definition of *best* chosen beforehand. The inferred values are called *estimates* of the true value of the quantities of interest. The expression that computes these estimates from sample is called an *estimator*. Estimates are rv as their values may change subject to a different sample.
+that best explains the data, for some given definition of *best* chosen beforehand. The inferred values are called *estimates* of the quantities of interest. The expression that computes these estimates from samples is called an *estimator*. Estimates are rv as their values may change subject to a different sample.
 
 Machine Learning
 ======================
@@ -28,11 +27,11 @@ If the rv is a tuple, e.g. :math:`(X_i,Y_i)_{i=1}^n\sim F_{X,Y}`, then inference
 
 where :math:`\mathbb{E}[\epsilon]=0`. This inference is known as *learning* in Machine Learning (achieved via *training* on a given sample set) and *curve estimation* in statistics.
 
-In the above case, an inference might also mean an inferring an unseen :math:`Y` by :math:`\hat{y}=r(x)` for a given :math:`X=x`. This is known as *inference* in Machine Learning and *prediction* in statistics.
+In the above case, an inference might also mean an inferring an unseen :math:`Y|X=x` by :math:`\hat{y}=r(x)` for a given :math:`X=x`. This is known as *inference* in Machine Learning and *prediction* in statistics.
 
 .. note::
-    #. Dependent and Independent Variable: :math:`X` is known as the independent variable (*features* in Machine Learning) and :math:`Y` is known as dependent variable (*target* in Machine Learning). Independent variables are usually a multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.
-    #. It can be proven that it is always possible to write a conditional expectation in the above form if the expected :math:`\epsilon` is :math:`0`.
+    #. Dependent and Independent Variable: :math:`X` is known as the independent variable (*features* in Machine Learning) and :math:`Y` is known as dependent variable (*target* in Machine Learning). Independent variables are often multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.
+    #. It can be proven that it is always possible to write a conditional expectation in the above form such that :math:`\mathbb{E}[\epsilon]=0`.
 
 Statistical Model
 ======================
@@ -42,25 +41,27 @@ A statistical model :math:`\mathcal{F}` is set of distributions (or other statis
 #. Parametric Model: If this set can be spanned by a finitely many parameters.
 #. Non-parametric Model: Otherwise.
 
-Example: If a model for regression is restricted to the set of affine functions
+Example: If a regression model is defined by the set of affine functions
 
 .. math::
     \mathcal{F}=\{r(x)=mx+c; m,c\in\mathbb{R}\}
 
-then it's parametric. Similarly, if the model is a set of FFN (feed-forward networks) of a given size, then it is also parametric and the parameters of this model are the weights and biases in each layer.
+then it's parametric. Similarly, if the regression model is a set of feed-forward networks (FFN) of a given size, then it is also parametric and the parameters of this model are the weights and biases in each layer.
 
-If it is for densities, then a parametric model could be 
+If the task is to estimate densities, then a parametric model could be 
 
 .. math::
     \mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
 
 .. note::
-    #. The factors that decide the number of parameters, such as choice of function-class, is independent of the inference process and is decided separately. These are often called *hyper-parameters*. 
+    #. The process that decides the model, such as choice of function-class or number of parameters, is independent of the inference and is performed separately beforehand. In Machine Learning, these are often called *hyper-parameters*. 
     #. Since there are multiple items to choose before performing inference, it is useful to clarify the sequence:
 
         #. A metric of goodness of an estimator is chosen first.
-        #. A model is chosen (i.e. hyperparameters).
+        #. A model is chosen (such as, hyperparameters).
         #. Inference is performed using computation involving the samples.
+        #. Quality of model is judged by evaluating the model on the inference data.
+        #. (Optional) A different model is chosen and the process repeats.
 
 A non-parametric model for distributions can be the set of all possible cdfs.
 
