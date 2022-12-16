@@ -109,7 +109,7 @@ Non-parametric Models
         #. :math:`\text{Var}(\hat{F_n})=\frac{F(x)(1-F(x))}{n}`
 
     .. note::
-        Plug-in Estimator: We can obtain an estimator for any statistical function :math:`T(F)` by replacing it with :math:`\hat{F_n}` as :math:`T(\hat{F_n})`.
+        Plug-in Estimator: We can obtain an estimator for any statistical functional :math:`T(F)` by replacing it with :math:`\hat{F_n}` as :math:`T(\hat{F_n})`.
 
 Point Estimation
 ---------------------------
@@ -147,7 +147,9 @@ Confidence Set Estimation
 
 .. note::
     * Glivenko-Cantelli Theorem: :math:`\sup_{x}|\hat{F_n}(x)-F(x)|` converges in probability to :math:`0`.
-    * Dvoretzsky-Kiefer-Wolfowitz (DKW) Inequality: For any :math:`\epsilon>0`, :math:`\mathbb{P}(\sup_x|F(x)-\hat{F_n}(x)|>\epsilon) \le 2\exp(-2n\epsilon^2)`
+    * Dvoretzsky-Kiefer-Wolfowitz (DKW) Inequality: For any :math:`\epsilon>0`,
+        .. math::
+            \mathbb{P}(\sup_x|\hat{F_n}(x)-F(x)|>\epsilon) \le 2\exp(-2n\epsilon^2)
 
 Hypothesis Testing
 ---------------------------------
