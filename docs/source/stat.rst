@@ -26,7 +26,7 @@ If the rv is a tuple, e.g. :math:`(X_i,Y_i)_{i=1}^n\sim F_{X,Y}`, then inference
 
 where :math:`\mathbb{E}[\epsilon]=0`. This inference is known as *learning* in Machine Learning (achieved via *training* on a given sample set) and *curve estimation* in statistics.
 
-In the above case, an inference might also mean an inferring an unseen :math:`Y` for a given :math:`X` using the regression function. This is typically known as *inference* in Machine Learning and *prediction* in statistics.
+In the above case, an inference might also mean an inferring an unseen :math:`Y=\hat{y}=r(x)` for a given :math:`X=x`. This is known as *inference* in Machine Learning and *prediction* in statistics.
 
 .. note::
     #. Dependent and Independent Variable: :math:`X` is known as the independent variable (*features* in Machine Learning) and :math:`Y` is known as dependent variable (*target* in Machine Learning). Independent variables are usually a multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.
