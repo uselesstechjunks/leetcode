@@ -46,7 +46,7 @@ Example: If a model for regression is restricted to the set of affine functions
 .. math::
     \mathcal{F}=\{r(x)=mx+c; m,c\in\mathbb{R}\}
 
-then it's parametric. Similarly, if the model is a set of FFN (feed-forward networks) of a given size, then it is also parametric and the parameters of this model is the weights and biases in each layer.
+then it's parametric. Similarly, if the model is a set of FFN (feed-forward networks) of a given size, then it is also parametric and the parameters of this model are the weights and biases in each layer.
 
 If it is for densities, then a parametric model could be 
 
@@ -66,21 +66,27 @@ A non-parametric model for distributions can be the set of all possible cdfs.
 Types of Inference
 =========================
 
-#. Point Estimation: A single *best* estimate (i.e. a point) within the model. 
+#. Point Estimation: An inferred single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. 
 
-Example: 
+    Example: 
 
-    #. a single distribution/density function (parameterised/non-parameterised)
-    #. a single regression function
-    #. a single value for expectation/variance/other moments
-    #. a single prediction for a dependent variable with a given independent variable. etc. 
+        #. a single distribution/density function (parameterised/non-parameterised)
+        #. a single regression function
+        #. a single value for expectation/variance/other moments
+        #. a single prediction for a dependent variable with a given independent variable. etc. 
 
-This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
+    This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
 
-.. math::
-    \hat{\theta_n}=g(X_1,\cdots,X_n)
+    .. math::
+        \hat{\theta_n}=g(X_1,\cdots,X_n)
 
-#. Confidence Set Estimation:
+#. Confidence Set Estimation: An inferred set which traps the fixed, unknown value of our quality of interest with a fixed, pre-determined probability. 
+
+    .. note::
+        #. A :math:`1-\alpha` confidence interval for a scalar qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(\hat{a},\hat{b})` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
+        #. The task is to estimate :math:`\hat{a}=a(X_1,\cdots,X_n)` and :math:`\hat{b}=b(X_1,\cdots,X_n)` such that the above holds. 
+        #. For vector quantities, this is expressed with sets instead of intervals.
+        #. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
 
 #. Hypothesis Testing:
 
@@ -95,9 +101,12 @@ The estimate :math:`\hat{\theta_n}` depends on data and therefore is a rv (i.e. 
     #. Consistent Estimator: If :math:`\hat{\theta_n}` converges in probability to true :math:`\theta`.
     #. Mean-Squared Error: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
     #. Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
+    #. Asymptotically Normal Estimator: :math:`\hat{\theta_n}\approx\mathcal{N}(\theta,\hat{\text{se}}^2)`.
 
 Confidence Set Estimation
 ---------------------------------------
+.. note::
+    #. Normal-based Confidence Interval: If the estimator for :math:`\theta` is aysmptotically normally distributed, then :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})` is a :math:`1-\alpha` confidence interval.
 
 Hypothesis Testing
 ---------------------------------
