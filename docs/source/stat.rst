@@ -9,14 +9,15 @@ We have a sample of size :math:`n` from an unknown distribution :math:`F`.
 .. math::
     X_1,\cdots X_n \sim F
 
-The task for statistical inference is to infer :math:`F` or some function of :math:`F`, :math:`T(F)`, (also known as statistical functionals), such as 
+The task for statistical inference is to infer :math:`F`, some function of :math:`F`, :math:`T(F)`, (also known as statistical functionals), or some other quantity that depends on :math:`F`, such as 
 
 #. density :math:`T(F)=f=F'`
 #. expectation :math:`T(F)=\mathbb{E}[X]=\int_{-\infty}^{\infty} x dF`
 #. variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
 #. median: :math:`T(F)=F^{-1}(1/2)`
+#. a confidence interval for a quantity :math:`\theta` that depends on :math:`F`
 
-that best *explains* the data (for some given definition of *best* chosen beforehand, such as *mean-squared-error*). 
+that best *explains* the data, for some given definition of *best* chosen beforehand. The inferred values are called *estimates* of the true value of the quantities of interest. The expression that computes these estimates from sample is called an *estimator*. Estimates are rv as their values may change subject to a different sample.
 
 Machine Learning
 ======================
@@ -66,7 +67,7 @@ A non-parametric model for distributions can be the set of all possible cdfs.
 Types of Inference
 =========================
 
-#. Point Estimation: An inferred single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
+#. Point Estimation: A single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
 
     .. math::
         \hat{\theta_n}=g(X_1,\cdots,X_n)
@@ -78,33 +79,58 @@ Types of Inference
         #. a single value for expectation/variance/other moments
         #. a single prediction for a dependent variable with a given independent variable. etc. 
 
-#. Confidence Set Estimation: An inferred set which traps the fixed, unknown value of our quality of interest with a pre-determined probability. 
+#. Confidence Set Estimation: An estimated set which traps the fixed, unknown value of our quality of interest with a pre-determined probability. 
 
     .. note::
-        #. A :math:`1-\alpha` confidence interval for a real qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
+        #. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
         #. The task is to estimate :math:`\hat{a}=a(X_1,\cdots,X_n)` and :math:`\hat{b}=b(X_1,\cdots,X_n)` such that the above holds. 
         #. For vector quantities, this is expressed with sets instead of intervals.
         #. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
 
-#. Hypothesis Testing:
+#. Hypothesis Testing: This helps to evaluate how good a statistical model is given samples. Assuming a fixed statistical model, we compute estimates for certain quantities of interest, which can then be compared with the same quantity assuming the model is correct. The task is then to arrive at probabilistic statements about how different these two are.
+
+.. note::
+    #. The statement about the quantity of interest assuming the model is correct is called the *Null hypothesis*.
+    #. The statement where the model is incorrect is called *Alternate hypothesis*.
+    #. If we create a :math:`1-\alpha` confidence set for the estimated quantity and the quantity as-per-model doesn't fall within this set, then we *reject* the null hypothesis with significance level :math:`1-\alpha`.  If it does then we *fail to reject* the null hypothesis.
+
+Non-parametric Models
+---------------------------
+#. Empirical distribution function:
+
+    The estimator for :math:`F` is :math:`\hat{F_n}` which assigns a mass :math:`1/n` to every point in sample :math:`\{X_i\}_{i=1}^n`.
+    
+    .. note::
+        
+        For a given :math:`x`,
+        
+        #. :math:`\mathbb{E}[\hat{F_n}(x)]=F(x)`
+        #. :math:`\text{Var}(\hat{F_n})=\frac{F(x)(1-F(x))}{n}`
 
 Point Estimation
 ---------------------------
-The estimate :math:`\hat{\theta_n}` depends on data and therefore is a rv (i.e. with a different sample, it evaluates to a different value).
+The estimate :math:`\hat{\theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value).
 
 .. note::
     #. Sampling Distribution: The distribution of :math:`\hat{\theta_n}` over different samples.
     #. Bias: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an *unbiased estimator* of :math:`\theta`.
     #. Standard Error: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}_{\theta}(\hat{\theta_n})}`.
+    #. If the variance in above is also an estimate, then we estimate SE as :math:`\hat{\text{se}}=\sqrt{\hat{\text{Var}}_{\theta}(\hat{\theta_n})}`
     #. Consistent Estimator: If :math:`\hat{\theta_n}` converges in probability to true :math:`\theta`.
     #. Mean-Squared Error: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
     #. Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
     #. Asymptotically Normal Estimator: :math:`\hat{\theta_n}\approx\mathcal{N}(\theta,\hat{\text{se}}^2)`.
-
+    #. Empirical distribution function is a consistent estimator for any distribution.
+    
 Confidence Set Estimation
 ---------------------------------------
 .. note::
+    #. Point-wise Asymptotic CI: :math:`\forall\theta\in\Theta,\liminf_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
+    #. Uniform Asymptotic CI: :math:`\liminf_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
     #. Normal-based Confidence Interval: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})` is a :math:`1-\alpha` confidence interval.
+    #. The above is a pointwise asymptotic CI.
+    #. Glivenko-Cantelli Theorem: :math:`\sup_{x}|\hat{F_n}(x)-F(x)|` converges in probability to :math:`0`.
 
 Hypothesis Testing
 ---------------------------------
+
