@@ -9,9 +9,48 @@ We have a sample of size :math:`n` from an unknown distribution :math:`F`.
 .. math::
     X_1,\cdots X_n \sim F
 
-The task for statistical inference is to infer :math:`F` or some function of :math:`F` (also known as statistical functionals, such as density :math:`f=T(F)=F'`, expectation :math:`\mathbb{E}[X]=T(F)=\int_{-\infty}^{\infty} x dF` or variance :math:`\text{Var}(X)=T(F)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`) from the sample. If the rv is a tuple, e.g. :math:`(X_i,Y_i)_{i=1}^n`, then inference might also mean infering a *regression function* :math:`r(X)` for the conditional expectation, :math:`\mathbb{E}[Y|X]=r(X)+\epsilon`.
+The task for statistical inference is to infer :math:`F` or some function of :math:`F`, :math:`T(F)`, (also known as statistical functionals), such as 
+
+#. density :math:`T(F)=f=F'`
+#. expectation :math:`T(F)=\mathbb{E}[X]=\int_{-\infty}^{\infty} x dF`
+#. variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
+
+that best *explains* the data (for some given definition of *best*). If the rv is a tuple, e.g. :math:`(X_i,Y_i)_{i=1}^n\sim F_{X,Y}`, then inference might also mean infering a *regression function* :math:`r(X)` that fits the conditional expectation corresponding to :math:`F_{Y|X}`
+
+.. math::
+    T(F_{Y|X})=\mathbb{E}[Y|X]=r(X)+\epsilon
+
+where :math:`\mathbb{E}[\epsilon]=0`.
 
 Statistical Model
 ======================
 
-A statistical model :math:`\mathcal{F}` is set of distributions (or densities or regression functions).
+A statistical model :math:`\mathcal{F}` is set of distributions (or other statistical functionals of interest). The following categories of models are based on the dimensionality of this set.
+
+#. Parametric Model: If this set can be spanned by a finitely many parameters.
+#. Non-parametric Model: Otherwise.
+
+Example: If a model for regression is restricted to the set of affine functions
+
+.. math::
+    \mathcal{F}=\{r(x)=mx+c\; m,c\in\mathbb{R}}
+
+then it's parametric. If it is for densities, then a parametric model could be 
+
+.. math::
+    \mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
+
+Types of Inference
+=========================
+
+#. Point Estimation: A single *best* estimate (i.e. a point) within the model. Example: a single distribution/density function (parameterised/non-parameterised), or a single regression function, a single value for expectation/variance/other moments, etc. This estimate for an unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
+
+.. math::
+    \hat{\theta_n}=g(X_1,\cdots,X_n)
+
+#. Confidence Interval Estimation:
+
+#. Hypothesis Testing:
+
+Point Estimation
+---------------------------
