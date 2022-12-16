@@ -108,6 +108,9 @@ Non-parametric Models
         #. :math:`\mathbb{E}[\hat{F_n}(x)]=F(x)`
         #. :math:`\text{Var}(\hat{F_n})=\frac{F(x)(1-F(x))}{n}`
 
+    .. note::
+        Plug-in Estimator: We can obtain an estimator for any statistical function :math:`T(F)` by replacing it with :math:`\hat{F_n}` as :math:`T(\hat{F_n})`.
+
 Point Estimation
 ---------------------------
 The estimate :math:`\hat{\theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value).
