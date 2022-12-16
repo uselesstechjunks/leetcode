@@ -113,35 +113,36 @@ Point Estimation
 The estimate :math:`\hat{\theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value).
 
 .. note::
-    #. Sampling Distribution: The distribution of :math:`\hat{\theta_n}` over different samples.
-    #. Bias: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an *unbiased estimator* of :math:`\theta`.
-    #. Standard Error: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}_{\theta}(\hat{\theta_n})}`.
+    * Sampling Distribution: The distribution of :math:`\hat{\theta_n}` over different samples.
+    * Bias: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an *unbiased estimator* of :math:`\theta`.
+    * Standard Error: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}_{\theta}(\hat{\theta_n})}`.
 
-If the variance in above is also an estimate, then we estimate SE as :math:`\hat{\text{se}}=\sqrt{\hat{\text{Var}}_{\theta}(\hat{\theta_n})}`
+If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\hat{\text{se}}=\sqrt{\hat{\text{Var}}_{\theta}(\hat{\theta_n})}`
 
 .. note::
-    #. Consistent Estimator: If :math:`\hat{\theta_n}` converges in probability to true :math:`\theta`.
-    #. Mean-Squared Error: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
+    * Consistent Estimator: If :math:`\hat{\theta_n}` converges in probability to true :math:`\theta`.
+    * Mean-Squared Error: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
 
 Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
 
 .. note::
-    #. Asymptotically Normal Estimator: :math:`\hat{\theta_n}\approx\mathcal{N}(\theta,\hat{\text{se}}^2)`.
-    #. Empirical distribution function is a consistent estimator for any distribution.
+    * Asymptotically Normal Estimator: :math:`\hat{\theta_n}\approx\mathcal{N}(\theta,\hat{\text{se}}^2)`.
+    * Empirical distribution function is a consistent estimator for any distribution.
     
 Confidence Set Estimation
 ---------------------------------------
-Pointwise Asymptotic CI: :math:`\forall\theta\in\Theta,\liminf_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
-Uniform Asymptotic CI: :math:`\liminf_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
+* Pointwise Asymptotic CI: :math:`\forall\theta\in\Theta,\liminf_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
+* Uniform Asymptotic CI: :math:`\liminf_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})`
 
 .. note::
     
-    Normal-based Confidence Interval: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})` is a :math:`1-\alpha` confidence interval.
+    Normal-based Confidence Interval: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})`.
 
 The above is a pointwise asymptotic CI.
 
 .. note::
-    #. Glivenko-Cantelli Theorem: :math:`\sup_{x}|\hat{F_n}(x)-F(x)|` converges in probability to :math:`0`.
+    * Glivenko-Cantelli Theorem: :math:`\sup_{x}|\hat{F_n}(x)-F(x)|` converges in probability to :math:`0`.
+    * Dvoretzsky-Kiefer-Wolfowitz (DKW) Inequality: For any :math:`\epsilon>0`, :math:`\mathbb{P}(\sup_x|F(x)-\hat{F_n}(x)|>\epsilon) \le 2\exp(-2n\epsilon^2)`
 
 Hypothesis Testing
 ---------------------------------
