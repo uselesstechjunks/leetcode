@@ -68,7 +68,7 @@ The estimate :math:`\hat{\theta_n}` depends on data and therefore is a rv (i.e. 
 
 .. note::
     #. Sampling Distribution: The distribution of :math:`\hat{\theta_n}` over different samples.
-    #. Bias: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}[\hat{\theta_n}]-\theta`. If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an *unbiased estimator* of :math:`theta`.
+    #. Bias: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}[\hat{\theta_n}]-\theta`. If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an *unbiased estimator* of :math:`\theta`.
     #. Standard Error: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}(\hat{\theta_n})}`.
     #. Consistent Estimator: If :math:`\hat{\theta_n}` converges in probability to true :math:`\theta`.
 
