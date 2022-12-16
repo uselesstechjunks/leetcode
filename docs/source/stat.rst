@@ -105,7 +105,7 @@ Non-parametric Models
         For a given :math:`x`,
         
         #. :math:`\mathbb{E}[\hat{F_n}(x)]=F(x)`
-        #. :math:`\text{Var}(\hat{F_n}=\frac{F(x)(1-F(x)}{n}`
+        #. :math:`\text{Var}(\hat{F_n})=\frac{F(x)(1-F(x))}{n}`
 
 Point Estimation
 ---------------------------
