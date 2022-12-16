@@ -54,8 +54,12 @@ If it is for densities, then a parametric model could be
     \mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
 
 .. note::
-    The factors that decide the number of parameters, such as choice of function-class, is independent of the inference process and is decided separately. These are often called *hyper-parameters*.
-    
+    #. The factors that decide the number of parameters, such as choice of function-class, is independent of the inference process and is decided separately. These are often called *hyper-parameters*.
+    #. Since there are multiple items to choose before performing inference, it is useful to clarify the sequence:
+        #. A metric of *goodness* os chosen first.
+        #. Then a model is chosen (i.e. hyperparameters).
+        #. Inference is performed using computation involving the samples.
+
 A non-parametric model for distributions can be the set of all possible cdfs.
 
 Types of Inference
