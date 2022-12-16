@@ -16,7 +16,7 @@ The task for statistical inference is to infer :math:`F` or some function of :ma
 #. variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
 #. median: :math:`T(F)=F^{-1}(1/2)`
 
-that best *explains* the data (for some given definition of *best* chosen beforehand, such as *mean-squared-error*). 
+that best *explains* the data, for some given definition of *best* chosen beforehand. The inferred values are called *estimates* of the true value of the quantities of interest. The expression that computes these estimates from sample is called an *estimator*. Estimates are rv as their values may change subject to a different sample.
 
 Machine Learning
 ======================
@@ -66,7 +66,7 @@ A non-parametric model for distributions can be the set of all possible cdfs.
 Types of Inference
 =========================
 
-#. Point Estimation: An inferred single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
+#. Point Estimation: A single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
 
     .. math::
         \hat{\theta_n}=g(X_1,\cdots,X_n)
@@ -78,7 +78,7 @@ Types of Inference
         #. a single value for expectation/variance/other moments
         #. a single prediction for a dependent variable with a given independent variable. etc. 
 
-#. Confidence Set Estimation: An inferred set which traps the fixed, unknown value of our quality of interest with a pre-determined probability. 
+#. Confidence Set Estimation: An estimated set which traps the fixed, unknown value of our quality of interest with a pre-determined probability. 
 
     .. note::
         #. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
@@ -91,7 +91,7 @@ Types of Inference
 .. note::
     #. The statement about the quantity of interest assuming the model is correct is called the *Null hypothesis*.
     #. The statement where the model is incorrect is called *Alternate hypothesis*.
-    #. If we create a :math:`1-\alpha` confidence set around the quantity and the quantity as-per-model doesn't fall within this set, then we *reject* the null hypothesis.  If it does then we *fail to reject* the null hypothesis.
+    #. If we create a :math:`1-\alpha` confidence set for the estimated quantity and the quantity as-per-model doesn't fall within this set, then we *reject* the null hypothesis with significance level :math:`1-\alpha`.  If it does then we *fail to reject* the null hypothesis.
 
 Non-parametric Models
 ---------------------------
@@ -101,7 +101,7 @@ Non-parametric Models
 
 Point Estimation
 ---------------------------
-The estimate :math:`\hat{\theta_n}` depends on data and therefore is a rv (i.e. with a different sample, it evaluates to a different value).
+The estimate :math:`\hat{\theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value).
 
 .. note::
     #. Sampling Distribution: The distribution of :math:`\hat{\theta_n}` over different samples.
