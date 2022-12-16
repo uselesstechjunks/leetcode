@@ -86,7 +86,7 @@ Types of Inference
         #. For vector quantities, this is expressed with sets instead of intervals.
         #. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
 
-#. Hypothesis Testing: This helps to evaluate how good a statistical model is given samples. Assuming a fixed statistical model, we compute point estimates for certain qualtities of interest, which can then be compared with the same qualtity assuming the model is correct. The task is then to arrive at probabilistic statements about how different these two are.
+#. Hypothesis Testing: This helps to evaluate how good a statistical model is given samples. Assuming a fixed statistical model, we compute estimates for certain quantities of interest, which can then be compared with the same quantity assuming the model is correct. The task is then to arrive at probabilistic statements about how different these two are.
 
 .. note::
     #. The statement about the quantity of interest assuming the model is correct is called the *Null hypothesis*.
@@ -96,6 +96,7 @@ Types of Inference
 Non-parametric Models
 ---------------------------
 #. Empirical distribution function:
+
     The estimator for :math:`F` is :math:`\hat{F_n}` which assigns a mass :math:`1/n` to every point in sample :math:`\{X_i\}_{i=1}^n`.
 
 Point Estimation
