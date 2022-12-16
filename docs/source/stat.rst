@@ -66,7 +66,10 @@ A non-parametric model for distributions can be the set of all possible cdfs.
 Types of Inference
 =========================
 
-#. Point Estimation: An inferred single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. 
+#. Point Estimation: An inferred single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
+
+    .. math::
+        \hat{\theta_n}=g(X_1,\cdots,X_n)
 
     Example: 
 
@@ -75,15 +78,10 @@ Types of Inference
         #. a single value for expectation/variance/other moments
         #. a single prediction for a dependent variable with a given independent variable. etc. 
 
-    This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
-
-    .. math::
-        \hat{\theta_n}=g(X_1,\cdots,X_n)
-
-#. Confidence Set Estimation: An inferred set which traps the fixed, unknown value of our quality of interest with a fixed, pre-determined probability. 
+#. Confidence Set Estimation: An inferred set which traps the fixed, unknown value of our quality of interest with a pre-determined probability. 
 
     .. note::
-        #. A :math:`1-\alpha` confidence interval for a scalar qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(\hat{a},\hat{b})` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
+        #. A :math:`1-\alpha` confidence interval for a real qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
         #. The task is to estimate :math:`\hat{a}=a(X_1,\cdots,X_n)` and :math:`\hat{b}=b(X_1,\cdots,X_n)` such that the above holds. 
         #. For vector quantities, this is expressed with sets instead of intervals.
         #. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
@@ -106,7 +104,7 @@ The estimate :math:`\hat{\theta_n}` depends on data and therefore is a rv (i.e. 
 Confidence Set Estimation
 ---------------------------------------
 .. note::
-    #. Normal-based Confidence Interval: If the estimator for :math:`\theta` is aysmptotically normally distributed, then :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})` is a :math:`1-\alpha` confidence interval.
+    #. Normal-based Confidence Interval: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then :math:`(\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})` is a :math:`1-\alpha` confidence interval.
 
 Hypothesis Testing
 ---------------------------------
