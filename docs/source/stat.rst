@@ -18,7 +18,7 @@ The task for statistical inference is to infer :math:`F` or some function of :ma
 that best *explains* the data (for some given definition of *best*). 
 
 Machine Learning
-******************************
+======================
 If the rv is a tuple, e.g. :math:`(X_i,Y_i)_{i=1}^n\sim F_{X,Y}`, then inference might mean infering a *regression function* :math:`r(X)` that fits the conditional expectation corresponding to :math:`F_{Y|X}`
 
 .. math::
