@@ -4,7 +4,15 @@ Reading List
 Linear Algebra
 ***********************************
 
+* [3Blue1Brown] `Essence of linear algebra <https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab>`_
 * [MIT] `18.065 - Matrix Methods for Data Analysis <https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k>`_
+
+Calculus
+***********************************
+
+* [3Blue1Brown] `Essence of calculus <https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr>`_
+* [Khan Academy] `Multivariable calculus <https://www.khanacademy.org/math/multivariable-calculus>`_
+* [University of Victoria] `MATH200: Calculus III: Multivariable Calculus <https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc_CvEy7xBKRQr6I214QJcd>`_
 
 Probability & Statistics
 ***********************************
