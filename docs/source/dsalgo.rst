@@ -12,12 +12,10 @@ Intervals
 #. `Non-overlapping Intervals <https://leetcode.com/problems/non-overlapping-intervals/>`_
 #. `Minimum Number of Arrows to Burst Balloons <https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/>`_
 
-   .. collapse:: Solution
-   
+   .. collapse:: Solution   
       .. literalinclude:: code/minarrowshot.cpp
          :language: c++
          :linenos:
-
 #. `Car Pooling <https://leetcode.com/problems/car-pooling/>`_
 #. `Total Cost to Hire K Workers <https://leetcode.com/problems/total-cost-to-hire-k-workers/>`_
 #. `Meeting Rooms II <https://leetcode.com/problems/meeting-rooms-ii/>`_
