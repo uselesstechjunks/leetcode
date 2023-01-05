@@ -10,6 +10,13 @@ Intervals
 #. `Meeting Rooms <https://leetcode.com/problems/meeting-rooms/>`_
 #. `Merge Intervals <https://leetcode.com/problems/merge-intervals/>`_
 #. `Non-overlapping Intervals <https://leetcode.com/problems/non-overlapping-intervals/>`_
+
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/nonoverlappingintervals.cpp
+         :language: c++
+         :linenos:
+         
 #. `Minimum Number of Arrows to Burst Balloons <https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/>`_
 
    .. collapse:: Solution
