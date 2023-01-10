@@ -1,7 +1,7 @@
 Learning Tricks
 #################################
 
-(Summary from `this video by <https://www.youtube.com/watch?v=vd2dtkMINIw>` Barbara Oakley)
+(Summary from `this video by <https://www.youtube.com/watch?v=vd2dtkMINIw>`_ Barbara Oakley)
 
 * `9:00 <https://www.youtube.com/watch?v=vd2dtkMINIw&t=540s>`_ Focused mode vs diffuse mode
 * `17:30 <https://www.youtube.com/watch?v=vd2dtkMINIw&t=1050s>`_ Procrastination and Pomodoro technique 
