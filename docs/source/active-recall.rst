@@ -30,7 +30,7 @@ Summary from `this video <https://www.youtube.com/watch?v=--Hu2w0s72Y>`_ by Just
 * Active recall and spaced repetition work through adjusting the forgetting curve only through repetition
 
     .. image:: img/004activerecall03.png
-      :width: 800
+      :width: 600
       :alt: Active-Recall 03
 
     .. image:: img/004activerecall04.png
@@ -80,5 +80,5 @@ Summary from `this video <https://www.youtube.com/watch?v=--Hu2w0s72Y>`_ by Just
 Overall Picture
 =============================================
 .. image:: img/004activerecall07.png
-  :width: 600
+  :width: 800
   :alt: Active-Recall 07
