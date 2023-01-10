@@ -1,7 +1,9 @@
 Active-Recall and Spaced-Repetition
 ##########################################
 
-Summary from `this video <https://www.youtube.com/watch?v=--Hu2w0s72Y>`_ by Justin Sung.
+(Summary from `this video <https://www.youtube.com/watch?v=--Hu2w0s72Y>`_ by Justin Sung).
+
+**DISCLAIMER: I do not own any of the images used in here. They are taken from the video that Justin doodled.**
 
 * Studying is not the same as learning
 
