@@ -21,7 +21,7 @@ Takeaways
 #. Part 2: (`14:50 <https://www.youtube.com/watch?v=VcT8puLpNKA&t=890s>`_) Train cognitive load tolerance
 
     .. image:: img/007encoding03.png
-      :width: 300
+      :width: 260
       :alt: Encoding 03
       
 Details
@@ -41,13 +41,13 @@ For example, while watching a lecture video, don't just move on as you feel you 
   :width: 400
   :alt: Encoding 04
   
-Inputs from thinking in systems: 
---------------------------------------------
+Thinking in systems
+========================
 
-A. Understanding the inner working of the parts (individual components)
-B. Understanding the relations/connections/paths between different individual components
+* Understanding the inner working of the parts (individual components)
+* Understanding the relations/connections/paths between different individual components
 
-(B) is more important than (A).
+Second is more important than first.
 
 .. image:: img/007encoding05.png
   :width: 800
@@ -56,11 +56,11 @@ B. Understanding the relations/connections/paths between different individual co
 Recipe
 =====================================
 .. image:: img/007encoding06.png
-  :width: 400
+  :width: 300
   :alt: Encoding 06
 
 .. image:: img/007encoding07.png
-  :width: 400
+  :width: 300
   :alt: Encoding 07
 
 .. image:: img/007encoding08.png
