@@ -3,7 +3,7 @@ How to math
 
 (From the book `How To Think Like a Mathematician - Kevin Houston <https://www.amazon.com/How-Think-Like-Mathematician-Undergraduate/dp/052171978X>`_)
 
-Basic reading suggestions:
+Basic reading suggestions
 ============================================
 
 #. **Read with a purpose:**	Before reading, decide what you want from the text - consolidate, clarify, find an overview - or something else - from the material.
@@ -16,7 +16,7 @@ Basic reading suggestions:
 #. **Don't read it in a linear fashion:** It is perfectly acceptable to dip in and out, take what is relevant to your situation, and to jump from page to page.
 	
 
-A systematic method:
+A systematic method
 ============================================
 We now outline a five-point method for systematically tackling long pieces:
 
@@ -52,7 +52,7 @@ We now outline a five-point method for systematically tackling long pieces:
     * When you meet a topic ask **"What does it allow me to do?"**
 	
 
-What to do afterwards:
+What to do afterwards
 ============================================
 
 	#. Don’t reread and reread – move on: If you are rereading, then it is probably a sign that you are not active – so do some exercises, ask some questions and so on. Ultimately, it is acceptable to give up and move on to the next part; you can always come back. Requires time to be absorbed by the brain; ideas need to percolate and have time to grow and develop.
@@ -60,7 +60,7 @@ What to do afterwards:
 	#. Write a summary: Will the material be obvious at a later date? It is a good time to make a summary – written in your own words.
 
 
-How to read a definition:
+How to read a definition
 ============================================
 	
 #. Observe:	We are not allowed to read in anything extra. Note that in an example all the conditions need to be true. Not just some.
@@ -82,7 +82,7 @@ How to read a definition:
 #. Create new objects from old ones
 
 
-Analyzing theorems:
+Analyzing theorems
 ============================================
 
 #. Find the assumptions and conclusions
