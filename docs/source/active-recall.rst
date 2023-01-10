@@ -5,6 +5,9 @@ Active-Recall and Spaced-Repetition
 
 **DISCLAIMER: I do not own any of the images used in here. They are taken from the video that Justin doodled.**
 
+Takeaways
+======================================
+
 * Studying is not the same as learning
 
 * Studying is physical while learning is a cognitive process
