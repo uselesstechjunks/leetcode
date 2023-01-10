@@ -4,6 +4,7 @@ Meta-Learning
 .. toctree::
 
    active-recall
+   encoding
    mindmap
    successful-students-technique
    learning-tricks
