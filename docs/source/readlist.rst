@@ -21,6 +21,11 @@ Probability & Statistics
 * [CMU] `36-705 - Intermediate Statistics <https://www.youtube.com/playlist?list=PLt2Pd5kunvJ6-wpJG9hlWlk47c76bm9L6>`_
 * [statisticsmatt] `Introduction to Mathematical Statistics with Illustrations using R <https://www.youtube.com/playlist?list=PLmM_3MA2HWpan-KlYp-QCbPHxMj5FK0TB>`_
 
+Analysis
+***********************************
+
+* [SO] `Pointwise vs. Uniform Convergence <https://math.stackexchange.com/questions/597765/pointwise-vs-uniform-convergence#915867>`_
+
 Complex Analysis
 ***********************************
 
@@ -103,6 +108,11 @@ Applied ML
 * [Stanford] `CS25 - Transformers United <https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM>`_
 * [Stanford] `CS330 - Deep Multi-Task and Meta-Learning <https://www.youtube.com/playlist?list=PLoROMvodv4rMIJ-TvblAIkw28Wxi27B36>`_
 
+ML Papers
+***********************************
+
+* [dair-ai] `ML-Papers-Explained <https://github.com/dair-ai/ML-Papers-Explained>`_
+
 MLE Papers
 ***********************************
 
@@ -135,6 +145,7 @@ System Design Algorithms
 ***********************************
 
 * [Gakhov] Probabilistic Data Structures and Algorithms
+* [Tyler Neylon] `Introduction to Locality-Sensitive Hashing <https://tylerneylon.com/a/lsh1/lsh_post1.html>`_
 
 Misc
 ***********************
@@ -148,3 +159,8 @@ Misc
 * [HN] `Vectors are over, hashes are the future <https://news.ycombinator.com/item?id=33123972>`_
 * `Tensor Search <https://www.reddit.com/r/MachineLearning/comments/xk31n8/p_my_cofounder_and_i_quit_our_engineering_jobs_at/>`_
 * `Philosophy of Mathematics - A Readinng List <https://www.logicmatters.net/2020/11/16/philosophy-of-mathematics-a-reading-list/>`_
+* `The faker's guide to reading (x86) assembly language <https://www.timdbg.com/posts/fakers-guide-to-assembly/>`_
+* `Learn C++ <https://www.learncpp.com/>`_
+* `Introducing Austral: A Systems Language with Linear Types and Capabilities <https://borretti.me/article/introducing-austral>`_
+* `A Beautiful Mathematical Reading List for 2023 <https://abakcus.com/a-beautiful-mathematical-reading-list-for-2023/>`_
+* `Vector Animations With Python <https://zulko.github.io/blog/2014/09/20/vector-animations-with-python/>`_
