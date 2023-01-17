@@ -103,6 +103,11 @@ Applied ML
 * [Stanford] `CS25 - Transformers United <https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM>`_
 * [Stanford] `CS330 - Deep Multi-Task and Meta-Learning <https://www.youtube.com/playlist?list=PLoROMvodv4rMIJ-TvblAIkw28Wxi27B36>`_
 
+ML Papers
+***********************************
+
+* [dair-ai] `ML-Papers-Explained <https://github.com/dair-ai/ML-Papers-Explained>`_
+
 MLE Papers
 ***********************************
 
