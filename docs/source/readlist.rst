@@ -113,6 +113,7 @@ ML Papers
 
 * [dair-ai] `ML-Papers-Explained <https://github.com/dair-ai/ML-Papers-Explained>`_
 * `Transformer models: an introduction and catalog — 2023 Edition <https://amatriain.net/blog/transformer-models-an-introduction-and-catalog-2d1e9039f376/>`_
+* [Meta AI] `Teaching AI advanced mathematical reasoning <https://ai.facebook.com/blog/ai-math-theorem-proving/?utm_campaign=evergreen&utm_source=linkedin&utm_medium=organic_social&utm_content=blog>`_
 
 MLE Papers
 ***********************************
