@@ -1,5 +1,7 @@
-68 Advices from a 68 Year Old
+68 Bits of Unsolicited Advice
 ############################################
+
+(Summary from `this video <https://www.youtube.com/watch?v=Zz70rcguxwk>`_ by Kevin Kelly).
 
 #. Learn how to learn from those who disagree with you or even offend you. See if you can find truth in what they believe.
 #. Being enthusiastic is worth 25 IQ points.
