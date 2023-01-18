@@ -112,6 +112,7 @@ ML Papers
 ***********************************
 
 * [dair-ai] `ML-Papers-Explained <https://github.com/dair-ai/ML-Papers-Explained>`_
+* `Transformer models: an introduction and catalog — 2023 Edition <https://amatriain.net/blog/transformer-models-an-introduction-and-catalog-2d1e9039f376/>`_
 
 MLE Papers
 ***********************************
