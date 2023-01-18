@@ -48,6 +48,7 @@ ML Theory
 ML Practical
 ***********************************
 
+* [Andrej Karpathy] `Neural Networks: Zero to Hero <https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ>`_
 * `pytorch-internals <http://blog.ezyang.com/2019/05/pytorch-internals/>`_
 * https://forums.fast.ai/t/diving-deep-into-pytorch/39470
 * [Stevens] `Deep Learning with PyTorch <https://www.manning.com/books/deep-learning-with-pytorch>`_
