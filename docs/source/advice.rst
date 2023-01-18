@@ -11,8 +11,7 @@
 #. Treating a person to a meal never fails and is so easy to do. It’s powerful with old friends, and it's a great way to make new friends.
 #. Don't trust all-purpose glue.
 #. Reading to your children regularly will bond you together and kick-start their imaginations.
-#. Never use a credit card for credit. The only kind of credit or debt that's acceptable is debt to acquire something whose value will increase over time, like a house.
-#. The exchange value of most things diminishes or vanishes the moment you purchase them, so don't be in debt to losers.
+#. Never use a credit card for credit. The only kind of credit or debt that's acceptable is debt to acquire something whose value will increase over time, like a house. The exchange value of most things diminishes or vanishes the moment you purchase them, so don't be in debt to losers.
 #. The pros are just amateurs who know how to gracefully recover from their mistakes.
 #. Extraordinary claims require extraordinary evidence to be believed.
 #. Don't be the smartest person in the room. Hang out with and learn from people smarter than yourself. Even better, find smart people who will disagree with you.
