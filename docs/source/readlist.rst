@@ -119,6 +119,7 @@ ML Papers
 * [Meta AI] `Teaching AI advanced mathematical reasoning <https://ai.facebook.com/blog/ai-math-theorem-proving/?utm_campaign=evergreen&utm_source=linkedin&utm_medium=organic_social&utm_content=blog>`_
 * [Microsoft Research] `Why Can GPT Learn In-Context? <https://arxiv.org/pdf/2212.10559v2.pdf>`_
 * [HM] `ML papers to implement <https://news.ycombinator.com/item?id=34503362>`_
+* [ICLR2023] `Diffusion Models already have a Semantic Latent Space <https://arxiv.org/pdf/2210.10960.pdf>`_
 
 MLE Papers
 ***********************************
