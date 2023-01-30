@@ -48,7 +48,7 @@ ML Theory
 ML Practical
 ***********************************
 
-* [Andrej Karpathy] `Neural Networks: Zero to Hero <https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ>`_
+* [Andrej Karpathy] `Neural Networks: Zero to Hero <https://karpathy.ai/zero-to-hero.html>`_
 * `pytorch-internals <http://blog.ezyang.com/2019/05/pytorch-internals/>`_
 * https://forums.fast.ai/t/diving-deep-into-pytorch/39470
 * [Stevens] `Deep Learning with PyTorch <https://www.manning.com/books/deep-learning-with-pytorch>`_
@@ -118,6 +118,7 @@ ML Papers
 * `Transformer models: an introduction and catalog — 2023 Edition <https://amatriain.net/blog/transformer-models-an-introduction-and-catalog-2d1e9039f376/>`_
 * [Meta AI] `Teaching AI advanced mathematical reasoning <https://ai.facebook.com/blog/ai-math-theorem-proving/?utm_campaign=evergreen&utm_source=linkedin&utm_medium=organic_social&utm_content=blog>`_
 * [Microsoft Research] `Why Can GPT Learn In-Context? <https://arxiv.org/pdf/2212.10559v2.pdf>`_
+* [HM] `ML papers to implement <https://news.ycombinator.com/item?id=34503362>`_
 
 MLE Papers
 ***********************************
