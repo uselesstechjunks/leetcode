@@ -48,7 +48,7 @@ ML Theory
 ML Practical
 ***********************************
 
-* [Andrej Karpathy] `Neural Networks: Zero to Hero <https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ>`_
+* [Andrej Karpathy] `Neural Networks: Zero to Hero <https://karpathy.ai/zero-to-hero.html>`_
 * `pytorch-internals <http://blog.ezyang.com/2019/05/pytorch-internals/>`_
 * https://forums.fast.ai/t/diving-deep-into-pytorch/39470
 * [Stevens] `Deep Learning with PyTorch <https://www.manning.com/books/deep-learning-with-pytorch>`_
@@ -58,6 +58,7 @@ ML Practical
 * [NYU] `Deep Learning (Spring 2020) <https://atcold.github.io/pytorch-Deep-Learning/>`_
 * [CMU] `Dive into Deep Learning <https://d2l.ai/index.html>`_
 * [MIT] `6.S965 TinyML and Efficient Deep Learning <https://efficientml.ai/>`_
+* [Microsoft Research] `LMOps <https://github.com/microsoft/LMOps>`_
 
 
 ML Design General Principle
@@ -101,6 +102,7 @@ Applied ML
 * [Ravichandiran] Getting Started with Google BERT
 * [Rothman] Transformers for Natural Language Processing
 * [Tunstall] Natural Language Processing with Transformers
+* [lilianweng] `The Transformer Family Version 2.0 <https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/>`_
 * [Lakshmanan] Practical Machine Learning for Computer Vision
 * Recent Advances and Trends in Multimodal Deep Learning
 * Recommender Systems
@@ -115,6 +117,9 @@ ML Papers
 * [dair-ai] `ML-Papers-Explained <https://github.com/dair-ai/ML-Papers-Explained>`_
 * `Transformer models: an introduction and catalog — 2023 Edition <https://amatriain.net/blog/transformer-models-an-introduction-and-catalog-2d1e9039f376/>`_
 * [Meta AI] `Teaching AI advanced mathematical reasoning <https://ai.facebook.com/blog/ai-math-theorem-proving/?utm_campaign=evergreen&utm_source=linkedin&utm_medium=organic_social&utm_content=blog>`_
+* [Microsoft Research] `Why Can GPT Learn In-Context? <https://arxiv.org/pdf/2212.10559v2.pdf>`_
+* [HM] `ML papers to implement <https://news.ycombinator.com/item?id=34503362>`_
+* [ICLR2023] `Diffusion Models already have a Semantic Latent Space <https://arxiv.org/pdf/2210.10960.pdf>`_
 
 MLE Papers
 ***********************************
@@ -127,7 +132,6 @@ MLE Papers
 * [NeurIPS] DiskANN
 * [KDD] Predicting Clicks on Ads at Facebook
 * [RecSys] Recommending What Video to Watch Next
-
 
 ML Interviews
 ***********************************
@@ -149,6 +153,11 @@ System Design Algorithms
 
 * [Gakhov] Probabilistic Data Structures and Algorithms
 * [Tyler Neylon] `Introduction to Locality-Sensitive Hashing <https://tylerneylon.com/a/lsh1/lsh_post1.html>`_
+
+System Design Practical
+***********************************
+
+* `Build Your Own Redis with C/C++ <https://build-your-own.org/redis/>`_
 
 Misc
 ***********************
