@@ -58,6 +58,7 @@ ML Practical
 * [NYU] `Deep Learning (Spring 2020) <https://atcold.github.io/pytorch-Deep-Learning/>`_
 * [CMU] `Dive into Deep Learning <https://d2l.ai/index.html>`_
 * [MIT] `6.S965 TinyML and Efficient Deep Learning <https://efficientml.ai/>`_
+* [Microsoft Research] `LMOps <https://github.com/microsoft/LMOps>`_
 
 
 ML Design General Principle
@@ -101,6 +102,7 @@ Applied ML
 * [Ravichandiran] Getting Started with Google BERT
 * [Rothman] Transformers for Natural Language Processing
 * [Tunstall] Natural Language Processing with Transformers
+* [lilianweng] `The Transformer Family Version 2.0 <https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/>`_
 * [Lakshmanan] Practical Machine Learning for Computer Vision
 * Recent Advances and Trends in Multimodal Deep Learning
 * Recommender Systems
@@ -115,6 +117,7 @@ ML Papers
 * [dair-ai] `ML-Papers-Explained <https://github.com/dair-ai/ML-Papers-Explained>`_
 * `Transformer models: an introduction and catalog — 2023 Edition <https://amatriain.net/blog/transformer-models-an-introduction-and-catalog-2d1e9039f376/>`_
 * [Meta AI] `Teaching AI advanced mathematical reasoning <https://ai.facebook.com/blog/ai-math-theorem-proving/?utm_campaign=evergreen&utm_source=linkedin&utm_medium=organic_social&utm_content=blog>`_
+* [Microsoft Research] `Why Can GPT Learn In-Context? <https://arxiv.org/pdf/2212.10559v2.pdf>`_
 
 MLE Papers
 ***********************************
@@ -127,7 +130,6 @@ MLE Papers
 * [NeurIPS] DiskANN
 * [KDD] Predicting Clicks on Ads at Facebook
 * [RecSys] Recommending What Video to Watch Next
-
 
 ML Interviews
 ***********************************
