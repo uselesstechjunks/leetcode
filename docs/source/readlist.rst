@@ -152,6 +152,11 @@ System Design Algorithms
 * [Gakhov] Probabilistic Data Structures and Algorithms
 * [Tyler Neylon] `Introduction to Locality-Sensitive Hashing <https://tylerneylon.com/a/lsh1/lsh_post1.html>`_
 
+System Design Practical
+***********************************
+
+* `Build Your Own Redis with C/C++ <https://build-your-own.org/redis/>`_
+
 Misc
 ***********************
 
