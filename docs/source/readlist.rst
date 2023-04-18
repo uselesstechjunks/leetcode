@@ -43,6 +43,7 @@ ML Theory
 * [Mohri] `Foundations of Machine Learning <https://cs.nyu.edu/~mohri/mlbook/>`_
 * [CMU] `11-785 Deep Learning <https://www.youtube.com/playlist?list=PLp-0K3kfddPxRmjgjm0P1WT6H-gTqE8j9>`_
 * `Yet Another Derivation of Backpropagation in Matrix Form <https://sudeepraja.github.io/BackpropAdjoints/>`_
+* `The Decade of Deep Learning <https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/>`_
 
 
 ML Practical
@@ -59,6 +60,7 @@ ML Practical
 * [CMU] `Dive into Deep Learning <https://d2l.ai/index.html>`_
 * [MIT] `6.S965 TinyML and Efficient Deep Learning <https://efficientml.ai/>`_
 * [Microsoft Research] `LMOps <https://github.com/microsoft/LMOps>`_
+* `Data Centric AI Cource <https://github.com/dcai-course/dcai-course>`_
 
 
 ML Design General Principle
@@ -77,6 +79,8 @@ ML Math
 
 * [Gutmann] Pen and Paper Exercise in ML
 * `Steve Brunton Playlist <https://www.youtube.com/@Eigensteve/playlists>`_
+* `Matrix Calculus <https://www.matrixcalculus.org/>`_
+
 
 ML Algorithms
 ***********************************
@@ -100,6 +104,7 @@ Applied ML
 * [MSR] A Short Introduction to Learning to Rank
 * [MSR] LambdaMART
 * [Ravichandiran] Getting Started with Google BERT
+* [101ai.net] `BERT Explorer <https://www.101ai.net/text/bert>`_
 * [Rothman] Transformers for Natural Language Processing
 * [Tunstall] Natural Language Processing with Transformers
 * [lilianweng] `The Transformer Family Version 2.0 <https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/>`_
@@ -110,6 +115,32 @@ Applied ML
 * [Stanford] `CS224U - Natural Language Understanding <https://www.youtube.com/playlist?list=PLoROMvodv4rPt5D0zs3YhbWSZA8Q_DyiJ>`_
 * [Stanford] `CS25 - Transformers United <https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM>`_
 * [Stanford] `CS330 - Deep Multi-Task and Meta-Learning <https://www.youtube.com/playlist?list=PLoROMvodv4rMIJ-TvblAIkw28Wxi27B36>`_
+* `From Deep to Long Learning? <https://hazyresearch.stanford.edu/blog/2023-03-27-long-learning>`_
+* [CMU] `Graham Neubig's Teaching <https://www.phontron.com/teaching.php>`_
+* [Princeton] `Against Predictive Optimization <https://predictive-optimization.cs.princeton.edu/>`_
+
+
+LLMs
+***********************************
+
+* `Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
+* `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
+* `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
+* `Jarvis/HuggingGPT <https://github.com/microsoft/JARVIS>`_
+* `Sparks of Artificial General Intelligence <https://arxiv.org/pdf/2303.12712.pdf>`_
+* `Reflexion: an autonomous agent with dynamic memory and self-reflection <https://arxiv.org/pdf/2303.11366.pdf>`_
+* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
+* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
+
+
+Applied LLMs
+***********************************
+
+* `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
+* `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
+* `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
+* `Man and machine: GPT for second brains <https://reasonabledeviations.com/2023/02/05/gpt-for-second-brain/>`_
+
 
 ML Papers
 ***********************************
@@ -120,6 +151,7 @@ ML Papers
 * [Microsoft Research] `Why Can GPT Learn In-Context? <https://arxiv.org/pdf/2212.10559v2.pdf>`_
 * [HM] `ML papers to implement <https://news.ycombinator.com/item?id=34503362>`_
 * [ICLR2023] `Diffusion Models already have a Semantic Latent Space <https://arxiv.org/pdf/2210.10960.pdf>`_
+
 
 MLE Papers
 ***********************************
@@ -132,6 +164,8 @@ MLE Papers
 * [NeurIPS] DiskANN
 * [KDD] Predicting Clicks on Ads at Facebook
 * [RecSys] Recommending What Video to Watch Next
+* `91% of ML Models Degrade in Time <https://www.nannyml.com/blog/91-of-ml-perfomance-degrade-in-time>`_
+
 
 ML Interviews
 ***********************************
@@ -147,6 +181,8 @@ System Design General Principles
 * [Donne Matrin] `System Design Primer <https://github.com/donnemartin/system-design-primer>`_
 * [Binh Nguyen] `Awesome Scalability <https://github.com/binhnguyennus/awesome-scalability>`_
 * [Educative] `Grokking Modern System Design Interview for Engineers & Managers <https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers>`_
+* `A Senior Engineer's Guide to System Design Interview <https://interviewing.io/guides/system-design-interview>`_
+
 
 System Design Algorithms
 ***********************************
@@ -154,14 +190,17 @@ System Design Algorithms
 * [Gakhov] Probabilistic Data Structures and Algorithms
 * [Tyler Neylon] `Introduction to Locality-Sensitive Hashing <https://tylerneylon.com/a/lsh1/lsh_post1.html>`_
 
+
 System Design Practical
 ***********************************
 
 * `Build Your Own Redis with C/C++ <https://build-your-own.org/redis/>`_
 
+
 Misc
 ***********************
 
+* `Sampling - Interesting post on LinkedIn <https://www.linkedin.com/posts/sahil0094_sampling-trainingdata-machinelearnig-activity-7043559310324285440-58h2>`_
 * [Developer-Y] `CS Video Courses <https://github.com/Developer-Y/cs-video-courses>`_
 * `Openintro Statistics <https://www.openintro.org/book/os/>`_
 * `Demystifying Fourier analysis <https://dsego.github.io/demystifying-fourier/>`_
@@ -176,3 +215,14 @@ Misc
 * `Introducing Austral: A Systems Language with Linear Types and Capabilities <https://borretti.me/article/introducing-austral>`_
 * `A Beautiful Mathematical Reading List for 2023 <https://abakcus.com/a-beautiful-mathematical-reading-list-for-2023/>`_
 * `Vector Animations With Python <https://zulko.github.io/blog/2014/09/20/vector-animations-with-python/>`_
+* `Systems design 2: What we hope we know <https://apenwarr.ca/log/20230415>`_
+* `Irregular Expressions <https://tavianator.com/2023/irregex.html>`_
+* `The Prospect of an AI Winter <https://www.erichgrunewald.com/posts/the-prospect-of-an-ai-winter/>`_
+* `When Will AI Take Your Job? <https://unchartedterritories.tomaspueyo.com/p/when-will-ai-take-your-job>`_
+* `What Is Disruptive Innovation? <https://hbr.org/2015/12/what-is-disruptive-innovation>`_
+* `Category Theory ∩ Machine Learning <https://github.com/bgavran/Category_Theory_Machine_Learning>`_
+* `Building a Better World without Jobs <https://workforcefuturist.substack.com/p/building-a-better-world-without-jobs-video>`_
+* `The Joy of Abstraction - An Introduction to Category Theory <https://johncarlosbaez.wordpress.com/2023/02/11/the-joy-of-abstraction/>`_
+* `Clean Code - Horrible Performance <https://www.computerenhance.com/p/clean-code-horrible-performance>`_
+* `Reverse Engineering a Mysterious UDP stream in my hotel <https://www.gkbrk.com/2016/05/hotel-music/>`_
+* `Procrastinating is linked to health and career problems <https://theconversation.com/procrastinating-is-linked-to-health-and-career-problems-but-there-are-things-you-can-do-to-stop-188322>`_
