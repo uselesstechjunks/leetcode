@@ -118,6 +118,7 @@ Applied ML
 * `From Deep to Long Learning? <https://hazyresearch.stanford.edu/blog/2023-03-27-long-learning>`_
 * [CMU] `Graham Neubig's Teaching <https://www.phontron.com/teaching.php>`_
 * [Princeton] `Against Predictive Optimization <https://predictive-optimization.cs.princeton.edu/>`_
+* `NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers <https://speechresearch.github.io/naturalspeech2/>`_
 
 
 LLMs
@@ -131,6 +132,8 @@ LLMs
 * `Reflexion: an autonomous agent with dynamic memory and self-reflection <https://arxiv.org/pdf/2303.11366.pdf>`_
 * [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
 * [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
+* `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
+* `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
 
 
 Applied LLMs
@@ -140,6 +143,10 @@ Applied LLMs
 * `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
 * `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
 * `Man and machine: GPT for second brains <https://reasonabledeviations.com/2023/02/05/gpt-for-second-brain/>`_
+* `Learn Prompting <https://learnprompting.org/>`_
+* `An example of LLM prompting for programming <https://martinfowler.com/articles/2023-chatgpt-xu-hao.html>`_
+* `Chat with any PDF <https://www.chatpdf.com/>`_
+* `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
 
 
 ML Papers
@@ -167,10 +174,17 @@ MLE Papers
 * `91% of ML Models Degrade in Time <https://www.nannyml.com/blog/91-of-ml-perfomance-degrade-in-time>`_
 
 
+MLOps
+***********************************
+
+* `The big dictionary of MLOps <https://www.hopsworks.ai/mlops-dictionary>`_
+
+
 ML Interviews
 ***********************************
 
 * [Kashan] Deep Learning Interviews
+
 
 System Design General Principles
 ***********************************
@@ -195,6 +209,7 @@ System Design Practical
 ***********************************
 
 * `Build Your Own Redis with C/C++ <https://build-your-own.org/redis/>`_
+* `The Inner Workings of Distributed Databases <https://questdb.io/blog/inner-workings-distributed-databases/>`_
 
 
 Misc
@@ -226,3 +241,5 @@ Misc
 * `Clean Code - Horrible Performance <https://www.computerenhance.com/p/clean-code-horrible-performance>`_
 * `Reverse Engineering a Mysterious UDP stream in my hotel <https://www.gkbrk.com/2016/05/hotel-music/>`_
 * `Procrastinating is linked to health and career problems <https://theconversation.com/procrastinating-is-linked-to-health-and-career-problems-but-there-are-things-you-can-do-to-stop-188322>`_
+* `Map of Reddit <https://anvaka.github.io/map-of-reddit/?v=2>`_
+* `The Embedding Archives: Millions of Wikipedia Article Embeddings in Many Languages <https://txt.cohere.com/embedding-archives-wikipedia/>`_
