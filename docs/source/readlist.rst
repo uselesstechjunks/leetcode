@@ -147,6 +147,7 @@ Applied LLMs
 * `An example of LLM prompting for programming <https://martinfowler.com/articles/2023-chatgpt-xu-hao.html>`_
 * `Chat with any PDF <https://www.chatpdf.com/>`_
 * `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
+* `Hyena Hierarchy: Towards Larger Convolutional Language Models <https://arxiv.org/pdf/2302.10866.pdf>`_
 
 
 ML Papers
