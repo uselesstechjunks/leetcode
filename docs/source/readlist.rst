@@ -20,6 +20,8 @@ Probability & Statistics
 * [MIT] `RES.6-012 Introduction to Probability <https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6>`_
 * [CMU] `36-705 - Intermediate Statistics <https://www.youtube.com/playlist?list=PLt2Pd5kunvJ6-wpJG9hlWlk47c76bm9L6>`_
 * [statisticsmatt] `Introduction to Mathematical Statistics with Illustrations using R <https://www.youtube.com/playlist?list=PLmM_3MA2HWpan-KlYp-QCbPHxMj5FK0TB>`_
+* `Mathematician uncovers methods to shrink sampling errors in large-dimensional data sets <https://phys.org/news/2023-03-mathematician-uncovers-methods-sampling-errors.html>`_
+
 
 Analysis
 ***********************************
@@ -43,7 +45,9 @@ ML Theory
 * [Mohri] `Foundations of Machine Learning <https://cs.nyu.edu/~mohri/mlbook/>`_
 * [CMU] `11-785 Deep Learning <https://www.youtube.com/playlist?list=PLp-0K3kfddPxRmjgjm0P1WT6H-gTqE8j9>`_
 * `Yet Another Derivation of Backpropagation in Matrix Form <https://sudeepraja.github.io/BackpropAdjoints/>`_
+* `Gradients are Not All You Need <https://arxiv.org/pdf/2111.05803.pdf>`_
 * `The Decade of Deep Learning <https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/>`_
+* `Long-Tailed Learning Requires Feature Learning <https://openreview.net/pdf?id=S-h1oFv-mq>`_
 
 
 ML Practical
@@ -135,6 +139,9 @@ LLMs
 * `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
 * `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
 * `Hyena Hierarchy: Towards Larger Convolutional Language Models <https://arxiv.org/pdf/2302.10866.pdf>`_
+* `Scaling Transformer to 1M tokens and beyond with RMT <https://arxiv.org/pdf/2304.11062.pdf>`_
+* `AI/ML/LLM/Transformer Models Timeline and List <https://ai.v-gar.de/ml/transformer/timeline/>`_
+* `Think Before You Act: Unified Policy for Interleaving Language Reasoning with Actions <https://arxiv.org/pdf/2304.11063.pdf>`_
 
 
 Applied LLMs
@@ -145,9 +152,12 @@ Applied LLMs
 * `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
 * `Man and machine: GPT for second brains <https://reasonabledeviations.com/2023/02/05/gpt-for-second-brain/>`_
 * `Learn Prompting <https://learnprompting.org/>`_
+* `Prompt Engineering vs. Blind Prompting <https://mitchellh.com/writing/prompt-engineering-vs-blind-prompting>`_
 * `An example of LLM prompting for programming <https://martinfowler.com/articles/2023-chatgpt-xu-hao.html>`_
 * `Chat with any PDF <https://www.chatpdf.com/>`_
 * `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
+* `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
+* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
 
 
 ML Papers
@@ -210,7 +220,14 @@ System Design Practical
 ***********************************
 
 * `Build Your Own Redis with C/C++ <https://build-your-own.org/redis/>`_
+* `Build Your Own Database <https://build-your-own.org/blog/20230420_byodb_done/>`_
 * `The Inner Workings of Distributed Databases <https://questdb.io/blog/inner-workings-distributed-databases/>`_
+
+
+Layoffs
+***********************************
+
+* `Effective Immediately <https://github.com/Effective-Immediately/effective-immediately>`_
 
 
 Misc
@@ -244,3 +261,6 @@ Misc
 * `Procrastinating is linked to health and career problems <https://theconversation.com/procrastinating-is-linked-to-health-and-career-problems-but-there-are-things-you-can-do-to-stop-188322>`_
 * `Map of Reddit <https://anvaka.github.io/map-of-reddit/?v=2>`_
 * `The Embedding Archives: Millions of Wikipedia Article Embeddings in Many Languages <https://txt.cohere.com/embedding-archives-wikipedia/>`_
+* `Why Oatmeal is Cheap: Kolmogorov Complexity and Procedural Generation <https://knivesandpaintbrushes.org/projects/why-oatmeal-is-cheap/why_oatmeal_is_cheap_fdg2023.pdf>`_
+* `Blog: Haskell in Production <https://serokell.io/blog/haskell-in-production>`_
+* `How Does an FPGA Work? <https://learn.sparkfun.com/tutorials/how-does-an-fpga-work/all>`_
