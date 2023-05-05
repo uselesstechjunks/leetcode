@@ -158,6 +158,7 @@ Applied LLMs
 * `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
 * `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
 * `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
+* [Harvard] CS50 Tech Talk: GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
 
 
 ML Papers
