@@ -29,6 +29,7 @@ Contents
    studytips
    dsalgosol
    deepdives
+   rtfm
    kurzgesagt
    readlist
 
