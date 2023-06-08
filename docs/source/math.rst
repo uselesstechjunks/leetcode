@@ -5,7 +5,7 @@ Mathematics
   :width: 300
   :alt: How I see Math
 
-Mathematics provides a precise description of some of the concepts we find useful in the real world. However, once expressed in a formal language, the treatment of mathematical principles on mathematical objects is completely divorced from the practicality that gave rise to it. This power of abstraction allows the concepts to be organised in a layered fashion, with each layer adding a concisely defined notion of how the objects could behave. 
+Mathematics provides a precise description of some of the concepts we find useful. However, once expressed in a formal language, the treatment of mathematical principles on mathematical objects is completely divorced from the practicality that gave rise to it. This power of abstraction allows the concepts to be organised in a layered fashion, with each layer adding a concisely defined notion of how the objects could behave. 
 
 While mathematical principles often find their origins in *specific* problems, where it truly succeeds is when it finds certain *generic* patterns that are prevalent across problems of different domains, related or unrelated. These often show up as a recurring theme across various disciplines of Mathematics. To preserve this spirit, I will try to capture my understanding of this subject in the following fashion:
 
