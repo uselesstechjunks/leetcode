@@ -17,7 +17,10 @@ These are meant to capture the underlying theme of certain recurring concepts in
 - Concept of operator
 - Concept of a basis
 - Concept of convergence
-- `Deep Dives <math/index.rst>`__
+
+.. toctree::
+
+   math/index
 
 Techniques
 ========================================
