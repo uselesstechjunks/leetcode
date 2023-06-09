@@ -14,8 +14,10 @@ While mathematical principles often find their origins in *specific* problems, w
 - Applied: The techniques that we use to explore a core concept are often useful for some other *mathematical* problem. For example, we can use Eigendecomposition to compute matrix power or matrix exponentiation.
 - Engineering: This refers to the application to *real-world* problems. For example, we can compute PageRank using matrix exponentiation.
 
-Core Concepts
+Foundations & Core Concepts
 ========================================
+- Concept of set
+- Concept of operator
 - Concept of a basis
 - Concept of convergence
 
