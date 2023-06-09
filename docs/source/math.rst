@@ -23,8 +23,8 @@ Here are some of the topics which are useful for me.
 
 .. toctree::
 
+   math/analysis
    math/linalg
    math/calc3
-   math/analysis
    math/prob
    math/conv
