@@ -136,7 +136,7 @@ Discrete = values are from a finite/countably infinite set.
 	Expectation and variance for independent rvs:
 
 	* :math:`\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]`
-	* :math:`\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]`
+	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)`
 	* Extends naturally to more than 2 rvs.
 
 Continuous Random Variable
