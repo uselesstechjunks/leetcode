@@ -57,7 +57,7 @@ Discrete = values are from a finite/countably infinite set.
 	* :math:`\mathbb{E}[aX+b]=a\mathbb{E}[X]+b`.
 	* :math:`\mathrm{Var}(aX+b)=a^2\mathrm{Var}(X)`.
 
-	For non-linear functions, it is generally **not** true that :math:\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
+	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
 
 Continuous Random Variable
 ----------------------------------------
