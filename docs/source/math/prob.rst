@@ -37,7 +37,7 @@ Discrete = values are from a finite/countably infinite set.
 	Expectation and Variance:
 
 	* We can define **Expectation** of :math:`X` as :math:`\mathbb{E}[X]=\sum_x x p_X(x)`.
-	* We can define **Variance** of :math:`X` as :math:`\Var(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
+	* We can define **Variance** of :math:`X` as :math:`\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
 
 .. note::
 	Law of The Unconscious Statistician (LOTUS):
@@ -45,11 +45,11 @@ Discrete = values are from a finite/countably infinite set.
 	* For expectation of :math:`Y=g(X)`, we can get away without having to compute PMF explicitly for :math:`Y`, as it can be shown that
 		.. math::
 			\mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
-	* With the help of LOTUS, :math:`Var(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
+	* With the help of LOTUS, :math:`\mathrm{Var}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
 .. note::
 	* The *n-th moment* of :math:`X` is defined as :math:`\mathbb{E}[X^n]`.
-	* Variance in terms of moments: :math:`Var(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2`.
+	* Variance in terms of moments: :math:`\mathrm{Var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2`.
 
 Continuous Random Variable
 ----------------------------------------
