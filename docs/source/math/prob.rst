@@ -14,9 +14,9 @@ Random variables (rvs) are real-valued functions of the outcome of an experiment
 
 .. note::
 	* A function of a rv is another rv.
-	* We can associate certain *central measures*/*averages* with each rv, subject to certain condition on their existence.
-	* We can *condition* an rv on another rv or an event (this allows us to work with rvs of different numeric types).
-	* We can define the notion of *independence* of an rv w.r.t another rv or an event.
+	* We can associate certain *central measures*/*averages* (such as **mean**, **variance**) with each rv, subject to certain condition on their existence.
+	* We can *condition* an rv on an event or another rv.
+	* We can define the notion of *independence* of an rv w.r.t an event or another rv.
 
 Discrete Random Variable
 ------------------------------
@@ -24,8 +24,8 @@ Discrete Random Variable
 Discrete - values are from a finite/countably infinite set
 
 .. note::
-	* We can define a probability mass function (PMF), :math:`p_X(x)`, associated with a discrete rv, :math:`X`, as follows: For each value :math:`x` of :math:`X`,
-		#. Collect all possible outcomes that give rise to the event :math:`{X=x}`.
+	* We can define a probability mass function (PMF), :math:`p_X(x)`, associated with a discrete rv, :math:`X`, as follows: For each value :math:`x` of :math:`X`
+		#. Collect all possible outcomes that give rise to the event :math:`\{X=x\}`.
 		#. Add their probabilibities to obtain the mass :math:`p_X(x)`.
 	* A function of a discrete rv is another rv, whose PMF can be obtained as follows:
 
