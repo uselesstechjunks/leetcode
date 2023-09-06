@@ -21,13 +21,15 @@ Random variables (rvs) are real-valued functions of the outcome of an experiment
 Discrete Random Variable
 ------------------------------
 
-Discrete - values are from a finite/countably infinite set
+Discrete = values are from a finite/countably infinite set
 
 .. note::
-	* We can define a probability mass function (PMF), :math:`p_X(x)`, associated with a discrete rv, :math:`X`, as follows: For each value :math:`x` of :math:`X`
+	* We can define a *probability mass function* (PMF), :math:`p_X(x)`, associated with a discrete rv, :math:`X`, as follows: For each value :math:`x` of :math:`X`
 		#. Collect all possible outcomes that give rise to the event :math:`\{X=x\}`.
 		#. Add their probabilibities to obtain the mass :math:`p_X(x)`.
-	* A function of a discrete rv is another rv, whose PMF can be obtained as follows:
+	* A function :math:`g(X)` of a discrete rv :math:`X` is another rv, :math:`Y=g(X)`, whose PMF can be obtained as follows:
+		#. Collect all possible values for which :math:`\{x | g(x)=y\}`
+		#. Define :math:`p_Y(y)=\sum_{x | g(x)=y} p_X(x)`
 
 Continuous Random Variable
 ----------------------------------------
