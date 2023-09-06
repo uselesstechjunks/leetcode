@@ -148,7 +148,7 @@ Confidence Set Estimation
 For the empirical distribution model, following are some interesting results.
 
 .. note::
-    * Glivenko-Cantelli Theorem: :math:`||\hat{F_n}(x)-F(x)||_\infty=\sup_{x}|\hat{F_n}(x)-F(x)|\xrightarrow[]{P} 0` (converges to :math:`0` almost surely).
+    * Glivenko-Cantelli Theorem: :math:`||\hat{F_n}(x)-F(x)||_\infty=\sup_{x}|\hat{F_n}(x)-F(x)|\xrightarrow[]{as} 0`.
     * Dvoretzsky-Kiefer-Wolfowitz (DKW) Inequality: For any :math:`\epsilon>0`,
     
         .. math::
