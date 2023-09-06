@@ -1,5 +1,17 @@
 Probability
 ------------------------------
+(Adapted from Bertsekas and Tsitsiklis - Introduction to Probability)
+
+#. Probability Axioms (Kolvogorov Axioms)
+	#. TODO
+
+#. Random Variable
+	#. Random variables (rvs) are real-valued functions of the outcome of an experiment.
+	#. A function of a rv is another rv.
+	#. We can associate certain *central measures*/*averages* with each rv, subject to certain condition on their existence.
+	#. We can *condition* an rv on another rv or an event (this allows us to work with rvs of different numeric types).
+	#. We can define the notion of *independence* of an rv w.r.t another rv or an event.
+
 #. Functions of Random Variable
 	#. Expectation
 	#. Variance
