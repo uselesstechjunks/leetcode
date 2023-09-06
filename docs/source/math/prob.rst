@@ -52,7 +52,7 @@ Discrete = values are from a finite/countably infinite set.
 	* We can define **Expectation** of :math:`X` as :math:`\mathbb{E}[X]=\sum_x x p_X(x)` (assuming that the sum exists).
 	* We can define **Variance** of :math:`X` as :math:`\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
 
-.. note::
+.. tip::
 	Law of The Unconscious Statistician (LOTUS):
 
 	* For expectation of :math:`Y=g(X)`, we can get away without having to compute PMF explicitly for :math:`Y`, as it can be shown that
@@ -72,6 +72,7 @@ Discrete = values are from a finite/countably infinite set.
 	* :math:`\mathbb{E}[aX+b]=a\mathbb{E}[X]+b`.
 	* :math:`\mathrm{Var}(aX+b)=a^2\mathrm{Var}(X)`.
 
+..  warning::
 	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
 
 .. note::
