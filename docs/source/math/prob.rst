@@ -43,8 +43,8 @@ Discrete = values are from a finite/countably infinite set.
 	Law of The Unconscious Statistician (LOTUS):
 
 	* For expectation of :math:`Y=g(X)`, we can get away without having to compute PMF explicitly for :math:`Y`, as it can be shown that
-	.. math::
-		\mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
+		.. math::
+			\mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
 	* With the help of LOTUS, :math:`Var(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
 .. note::
