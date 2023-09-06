@@ -72,6 +72,21 @@ Discrete = values are from a finite/countably infinite set.
 
 	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
 
+.. note::
+	Multiple random variables:
+
+	* We can define the joint-probability mass function for 2 rvs as :math:`p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y)`.
+	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)`.
+	* LOTUS holds, i.e. for :math:`g(X,Y)`, :math:`\mathbb{E}[g(X,Y)]=\sum_{x,y} g(x,y) p_{X,Y}(x,y)`.
+	* Linearity of expectation holds, i.e. :math:`\mathbb{E}[aX+bY+c]=a\mathbb{E}[X]+b\mathbb{E}[Y]+c`.
+	* Extends naturally for more than 2 rvs.
+
+.. note::
+	Conditioning:
+
+	* An rv can be conditioned on an event :math:`A` and its conditional PMF is defined as :math:`p_{X|A}(x)=\mathbb{P}(X=x|A)`.
+	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}`.
+
 Continuous Random Variable
 ----------------------------------------
 
@@ -80,15 +95,8 @@ Continuous = values are from an uncountably infinite set.
 Functions of Random Variable
 --------------------------------------
 
-Expectation
+Moment Generating Functions
 ----------------------------------------------
-
-Variance
-----------------------------------------------
-
-	#. Law Of The Unconscious Statistician (LOTUS)
-	#. Covariance
-	#. Moment Generating Functions
 
 #. Distributions
 	#. Bernoulli
