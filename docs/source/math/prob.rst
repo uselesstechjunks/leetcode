@@ -126,6 +126,19 @@ Discrete = values are from a finite/countably infinite set.
 
 	* **Law of iterated expectation:** :math:`\mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y]=\mathbb{E}[\mathbb{E}[X|Y]]`
 
+.. note::
+	Notion of Independence:
+
+	* :math:`X` is independent of an event :math:`A` iff :math:`p_{X|A}(x)=p_X(x)` for all :math:`x`.
+	* For two independent rvs, :math:`p_{X,Y}(x,y)=p_X(x)p_Y(y)` for all :math:`x` and :math:`y`.
+
+.. note::
+	Expectation and variance for independent rvs:
+
+	* :math:`\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]`
+	* :math:`\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]`
+	* Extends naturally to more than 2 rvs.
+
 Continuous Random Variable
 ----------------------------------------
 
