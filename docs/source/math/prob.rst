@@ -3,7 +3,7 @@ Probability
 (Adapted from Bertsekas and Tsitsiklis - Introduction to Probability)
 
 Probability Axioms (Kolmogorov Axioms)
-------------------------------
+----------------------------------------------
 
 #. TODO
 
@@ -29,8 +29,12 @@ Discrete - values are from a finite/countably infinite set
 		#. Add their probabilibities to obtain the mass :math:`p_X(x)`.
 	* A function of a discrete rv is another rv, whose PMF can be obtained as follows:
 
+Continuous Random Variable
+----------------------------------------
 
-#. Functions of Random Variable
+Functions of Random Variable
+--------------------------------------
+
 	#. Expectation
 	#. Variance
 	#. Law Of The Unconscious Statistician (LOTUS)
