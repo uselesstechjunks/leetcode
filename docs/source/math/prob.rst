@@ -51,6 +51,14 @@ Discrete = values are from a finite/countably infinite set.
 	* The *n-th moment* of :math:`X` is defined as :math:`\mathbb{E}[X^n]`.
 	* Variance in terms of moments: :math:`\mathrm{Var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2`.
 
+.. note::
+	For linear functions of :math:`X`, :math:`g(X)=aX+b`
+
+	* :math:`\mathbb{E}[aX+b]=a\mathbb{E}[X]+b`.
+	* :math:`\mathrm{Var}(aX+b)=a^2\mathrm{Var}(X)`.
+
+	For non-linear functions, it is generally **not** true that :math:\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
+
 Continuous Random Variable
 ----------------------------------------
 
