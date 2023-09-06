@@ -10,8 +10,12 @@ Let the set of all possible outcomes of an experiment be :math:`\Omega`, and let
 #. :math:`\mu(\emptyset)=0`.
 #. :math:`\mu(\Omega)=1`.
 #. For :math:`A_1,A_2,\cdots\subset\Omega` such that :math:`A_i\cap A_j=\emptyset` for :math:`i\neq j`
-	.. math::
-		\mu(A_1\cup A_2\cup\cdots)=\sum_{i=1}^\infty \mu(A_i).
+
+.. math::
+	\mu(A_1\cup A_2\cup\cdots)=\sum_{i=1}^\infty \mu(A_i).
+
+.. tip::
+	It is customary to represent probability measure as :math:`\mathbb{P}`.
 
 Random Variable
 ===================================================================
@@ -33,24 +37,27 @@ Discrete = values are from a finite/countably infinite set.
 	For a discrete rv, :math:`X`:
 
 	* We can define a probability mass function (PMF), :math:`p_X(x)`, associated with :math:`X`, as follows: For each value :math:`x` of :math:`X`
+
 		#. Collect all possible outcomes that give rise to the event :math:`\{X=x\}`.
 		#. Add their probabilities to obtain the mass :math:`p_X(x)=\mathbb{P}(\{X=x\})`.
+
 	* A function :math:`g(X)` of :math:`X` is another rv, :math:`Y`, whose PMF can be obtained as follows: For each value :math:`y` of :math:`Y`
+
 		#. Collect all possible values for which :math:`\{x | g(x)=y\}`
 		#. Utilize axiom 3 :math:`p_Y(y)=\sum_{\{x | g(x)=y\}} p_X(x)`
 
 .. note::
 	Expectation and Variance:
 
-	* We can define **Expectation** of :math:`X` as :math:`\mathbb{E}[X]=\sum_x x p_X(x)`.
+	* We can define **Expectation** of :math:`X` as :math:`\mathbb{E}[X]=\sum_x x p_X(x)` (assuming that the sum exists).
 	* We can define **Variance** of :math:`X` as :math:`\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
 
 .. note::
 	Law of The Unconscious Statistician (LOTUS):
 
 	* For expectation of :math:`Y=g(X)`, we can get away without having to compute PMF explicitly for :math:`Y`, as it can be shown that
-		.. math::
-			\mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
+	.. math::
+		\mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
 	* With the help of LOTUS, :math:`\mathrm{Var}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
 .. note::
