@@ -117,7 +117,7 @@ Discrete = values are from a finite/countably infinite set.
 	* For partitions :math:`A_1,A_2,\cdots,A_n`
 
 		.. math::
-			\mathbb{E}[X]=\sum_x x p_X(x)=\sum_x x\sum_{i=1}^n \mathbb{P}(A_i)p_{X|A_i}(x)=\sum_{i=1}^n \mathbb{P}(A_i)\sum_x x p_{X|A_i}(x)=\sum_{i=1}^n \mathbb{P}(A_i)\mathbb{E}[X|A_i]
+			\mathbb{E}[X]=\sum_x x p_X(x)=\sum_{i=1}^n \mathbb{P}(A_i)\sum_x x p_{X|A_i}(x)=\sum_{i=1}^n \mathbb{P}(A_i)\mathbb{E}[X|A_i]
 
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
