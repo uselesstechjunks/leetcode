@@ -11,8 +11,8 @@ Let the set of all possible outcomes of an experiment be :math:`\Omega`, and let
 #. :math:`\mu(\Omega)=1`.
 #. For :math:`A_1,A_2,\cdots\subset\Omega` such that :math:`A_i\cap A_j=\emptyset` for :math:`i\neq j`
 
-.. math::
-	\mu(A_1\cup A_2\cup\cdots)=\sum_{i=1}^\infty \mu(A_i).
+	.. math::
+		\mu(A_1\cup A_2\cup\cdots)=\sum_{i=1}^\infty \mu(A_i).
 
 .. tip::
 	It is customary to represent probability measure as :math:`\mathbb{P}`.
@@ -56,8 +56,10 @@ Discrete = values are from a finite/countably infinite set.
 	Law of The Unconscious Statistician (LOTUS):
 
 	* For expectation of :math:`Y=g(X)`, we can get away without having to compute PMF explicitly for :math:`Y`, as it can be shown that
-	.. math::
-		\mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
+
+		.. math::
+			\mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
+
 	* With the help of LOTUS, :math:`\mathrm{Var}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
 .. note::
