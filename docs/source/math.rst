@@ -18,10 +18,6 @@ These are meant to capture the underlying theme of certain recurring concepts in
 - Concept of a basis
 - Concept of convergence
 
-.. toctree::
-
-   math/index
-
 Techniques
 ========================================
 The core concepts, when described for a particular type of mathematical object, often require specific techniques to realise. For example, basis in vector spaces are realised via the technique of Eigendecomposition.

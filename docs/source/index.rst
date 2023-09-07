@@ -19,6 +19,7 @@ Contents
 .. toctree::
 
    math
+   math/index
    stat
    mltheory
    rank

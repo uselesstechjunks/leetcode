@@ -9,7 +9,7 @@ Let the set of all possible outcomes of an experiment be :math:`\Omega`, and let
 
 #. **Non-negativity**: :math:`\mu(\omega)\ge 0` for any :math:`\omega\subset\Omega`.
 #. **Unitarity**: :math:`\mu(\Omega)=1`.
-#. **:math:`\sigma`-additivity**: For :math:`A_1,A_2,\cdots\subset\Omega` such that :math:`A_i\cap A_j=\emptyset` for :math:`i\neq j`
+#. :math:`\sigma`-**Additivity**: For :math:`A_1,A_2,\cdots\subset\Omega` such that :math:`A_i\cap A_j=\emptyset` for :math:`i\neq j`
 
 	.. math::
 		\mu(\bigcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty \mu(A_i).
@@ -78,7 +78,11 @@ Discrete = values are from a finite/countably infinite set.
 .. note::
 	Multiple random variables:
 
-	* We can define the joint-probability mass function for 2 rvs as :math:`p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y)`.
+	* We can define the joint-probability mass function for 2 rvs as 
+
+		.. math::
+			p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y).
+
 	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)`.
 	* LOTUS holds, i.e. for :math:`g(X,Y)`, :math:`\mathbb{E}[g(X,Y)]=\sum_{x,y} g(x,y) p_{X,Y}(x,y)`.
 	* Linearity of expectation holds, i.e. :math:`\mathbb{E}[aX+bY+c]=a\mathbb{E}[X]+b\mathbb{E}[Y]+c`.
@@ -87,15 +91,29 @@ Discrete = values are from a finite/countably infinite set.
 .. note::
 	Conditioning:
 
-	* An rv can be conditioned on an event :math:`A` and its conditional PMF is defined as :math:`p_{X|A}(x)=\mathbb{P}(X=x|A)`.
-	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}`.
+	* An rv can be conditioned on an event :math:`A` (when :math:`\mathbb{P}(A)>0`) and its conditional PMF is defined as 
+
+		.. math::
+			p_{X|A}(x)=\mathbb{P}(X=x|A).
+
+	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` and is written as
+
+		.. math::
+			p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)
+
 	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`
 	* Connects to marginal PMF as :math:`p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)`
 
 .. tip::
-	Utilise total law of probability.
+	* **Bayes theorem**: For :math:`p_Y(y)>0`, :math:`p_{Y|X}(y|x)=\frac{p_Y(y)p_{X|Y}(x|y)}{\sum_y p_Y(y)p_{X|Y}(x|y)}`
+	* :math:`p_Y(y)` is known as **prior**, :math:`p_{Y|X}(y|x)` is called **posterior**, and :math:`p_{X|Y}(x|y)` is known as **likelihood**. 
+	* The demoninator :math:`Z=\sum_y p_Y(y)p_{X|Y}(x|y)` is the probability normalisation factor (i.e. it ensures that the sum is 1).
+	* We can often work with unnormalised probabilities when exact values are not required, as :math:`p_{Y|X}(y|x)\propto p_Y(y)p_{X|Y}(x|y)`.
 
-	* Let :math:`A_1,A_2,\cdots,A_n` be disjoints events such that :math:`\bigcup_{i=1}^n A_i=\Omega` (partition) and :math:`\mathbb{P}(A_i)>0` for all :math:`i`. Then 
+.. tip::
+	**Total law of probability:** Let :math:`A_1,A_2,\cdots,A_n` be disjoints events such that :math:`\bigcup_{i=1}^n A_i=\Omega` (i.e. they define a partition).
+
+	*  If :math:`\mathbb{P}(A_i)>0` for all :math:`i`, then 
 	
 		.. math::
 			p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
