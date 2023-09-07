@@ -80,7 +80,7 @@ Discrete = values are from a finite/countably infinite set.
 
 	* We can define the joint-probability mass function for 2 rvs as 
 
-		..math::
+		.. math::
 			p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y).
 
 	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)`.
@@ -93,12 +93,12 @@ Discrete = values are from a finite/countably infinite set.
 
 	* An rv can be conditioned on an event :math:`A` and its conditional PMF is defined as 
 
-		..math::
+		.. math::
 			p_{X|A}(x)=\mathbb{P}(X=x|A).
 
 	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` and is written as
 
-		..math::
+		.. math::
 			p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)
 
 	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`
