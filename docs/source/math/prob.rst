@@ -78,7 +78,11 @@ Discrete = values are from a finite/countably infinite set.
 .. note::
 	Multiple random variables:
 
-	* We can define the joint-probability mass function for 2 rvs as :math:`p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y)`.
+	* We can define the joint-probability mass function for 2 rvs as 
+
+		..math::
+			p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y).
+
 	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)`.
 	* LOTUS holds, i.e. for :math:`g(X,Y)`, :math:`\mathbb{E}[g(X,Y)]=\sum_{x,y} g(x,y) p_{X,Y}(x,y)`.
 	* Linearity of expectation holds, i.e. :math:`\mathbb{E}[aX+bY+c]=a\mathbb{E}[X]+b\mathbb{E}[Y]+c`.
@@ -87,15 +91,23 @@ Discrete = values are from a finite/countably infinite set.
 .. note::
 	Conditioning:
 
-	* An rv can be conditioned on an event :math:`A` and its conditional PMF is defined as :math:`p_{X|A}(x)=\mathbb{P}(X=x|A)`.
-	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}`.
+	* An rv can be conditioned on an event :math:`A` and its conditional PMF is defined as 
+
+		..math::
+			p_{X|A}(x)=\mathbb{P}(X=x|A).
+
+	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` and is written as
+
+		..math::
+			p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)
+
 	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`
 	* Connects to marginal PMF as :math:`p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)`
 
 .. tip::
-	Utilise total law of probability.
+	**Total law of probability:** Let :math:`A_1,A_2,\cdots,A_n` be disjoints events such that :math:`\bigcup_{i=1}^n A_i=\Omega` (i.e. they define a partition).
 
-	* Let :math:`A_1,A_2,\cdots,A_n` be disjoints events such that :math:`\bigcup_{i=1}^n A_i=\Omega` (partition) and :math:`\mathbb{P}(A_i)>0` for all :math:`i`. Then 
+	*  If :math:`\mathbb{P}(A_i)>0` for all :math:`i`, then 
 	
 		.. math::
 			p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
