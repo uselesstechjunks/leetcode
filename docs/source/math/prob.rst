@@ -156,7 +156,7 @@ Discrete = values are from a finite/countably infinite set.
 	* Let :math:`X\sim p_X` and :math:`Y\sim p_Y` be two independent discrete rvs. Then their sum :math:`Z=X+Y` has the distribution
 
 		.. math::
-			p_Z(z)=\sum_{x=-\infty}^\infty p_X(X=x) p_Y(Y=z-x)=(p_X \ast p_Y)[z]
+			p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z]
 
 .. note::
 	Expectation and variance for independent rvs:
