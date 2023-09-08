@@ -150,6 +150,14 @@ Discrete = values are from a finite/countably infinite set.
 	* :math:`X` is independent of an event :math:`A` iff :math:`p_{X|A}(x)=p_X(x)` for all :math:`x`.
 	* For two independent rvs, :math:`p_{X,Y}(x,y)=p_X(x)p_Y(y)` for all :math:`x` and :math:`y`.
 
+.. tip::
+	Sum of independent rvs - Convolution:
+
+	* Let :math:`X\sim p_X` and :math:`Y\sim p_Y` be two independent discrete rvs. Then their sum :math:`Z=X+Y` has the distribution
+
+		.. math::
+			p_Z(z)=\sum_{x=-\infty}^\infty p_X(X=x) p_Y(Y=z-x)=(p_X \ast p_Y)[z]
+
 .. note::
 	Expectation and variance for independent rvs:
 
