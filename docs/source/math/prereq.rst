@@ -17,7 +17,7 @@ Binomial theorem:
 -------------------------------
 * For evaluating the expression :math:`(x+y)^n=(x+y)\cdots(x+y)` (:math:`n`-times), the process involves choosing either :math:`x` or :math:`y` from each of the :math:`n`-terms. 
 * We can choose :math:`x` from 0 terms to :math:`n` terms. Every time we choose :math:`x` from :math:`k` such terms, we're left with no choice but to take :math:`y` from  the remaining :math:`(n-k)` terms.
-* The number of ways we can choose :math:`x` :math:`k`-times is :math:`{n\choose k}`. This is how many times we have :math:`x^k y^{n-k}`.
+* The number of ways we can choose :math:`x` from any :math:`k` of such terms is :math:`{n\choose k}`. This is how many times we have :math:`x^k y^{n-k}`.
 * Therefore, :math:`(x+y)^n=\sum_{k=0}^n {n\choose k} x^k y^{n-k}`.
 
 .. tip::
