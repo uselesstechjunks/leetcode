@@ -18,7 +18,10 @@ Binomial theorem:
 * For evaluating the expression :math:`(x+y)^n=(x+y)\cdots(x+y)` (:math:`n`-times), the process involves choosing either :math:`x` or :math:`y` from each of the :math:`n`-terms. 
 * We can choose :math:`x` from 0 terms to :math:`n` terms. Every time we choose :math:`x` from :math:`k` such terms, we're left with no choice but to take :math:`y` from  the remaining :math:`(n-k)` terms.
 * The number of ways we can choose :math:`x` from any :math:`k` of such terms is :math:`{n\choose k}`. This is how many times we have :math:`x^k y^{n-k}`.
-* Therefore, :math:`(x+y)^n=\sum_{k=0}^n {n\choose k} x^k y^{n-k}`.
+* Therefore
+
+  .. math::
+   (x+y)^n=\sum_{k=0}^n {n\choose k} x^k y^{n-k}
 
 .. tip::
   * :math:`\sum_{k=0}^n {n\choose k}=2^n` (setting :math:`x=1` and :math:`y=1`).
@@ -29,6 +32,9 @@ Binomial theorem:
 Multinomial theorem:
 -------------------------------
 * For evaluating the expression :math:`(x_1+x_2+\cdots+x_r)^n=(x_1+x_2+\cdots+x_r)\cdots(x_1+x_2+\cdots+x_r)` (:math:`n`-times), the process involves choosing :math:`x_1` from :math:`k_1` such terms, :math:`x_2` from :math:`k_2` such terms, and so on.
-* For each values of :math:`0\leq k_1,k_2,\cdots k_r\leq n`, this correspond to the to term :math:`x_1^{k_1}\cdots x_r^{k_r}`.
 * Regardless of how we choose, the :math:`\sum_{i=1}^r k_i=n`.
-* Therefore, :math:`(x_1+x_2+\cdots+x_r)^n=\sum_{\sum_{i=1}^r k_i=n} {n\choose k_1\cdots k_r} x_1^{k_1}\cdots x_r^{k_r}`.
+* For each values of :math:`0\leq k_1,k_2,\cdots k_r\leq n`, this correspond to the to term :math:`x_1^{k_1}\cdots x_r^{k_r}`.
+* Therefore
+
+  .. math::
+   (x_1+x_2+\cdots+x_r)^n=\sum_{\sum_{i=1}^r k_i=n} {n\choose k_1\cdots k_r} x_1^{k_1}\cdots x_r^{k_r}
