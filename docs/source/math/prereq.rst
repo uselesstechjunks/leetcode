@@ -8,7 +8,7 @@ Binomial and Multinomial Theorem
 (MISSISSIPPI problem): Number of ways to arrange the letters is :math:`\frac{11!}{1!4!4!2!}` (M=1,I=4,S=4,P=2).
 
 .. note::
-  * There are items of :math:`r` kinds, and within each kind they are indistinguishable. Say, we have :math:`k_i` items of :math:`x_i` kind, and so on. The number of ways of arranging a total of :math:`n` such items (i.e. :math:`sum_{i=1}^r k_i=n`)
+  * There are items of :math:`r` kinds, and within each kind they are indistinguishable. Say, we have :math:`k_i` items of :math:`x_i` kind, and so on. The number of ways of arranging a total of :math:`n` such items (i.e. :math:`\sum_{i=1}^r k_i=n`)
 
     .. math::
       {n\choose k_1\cdots k_r}=\frac{n!}{k_1!\cdots k_r!}
