@@ -28,4 +28,7 @@ Binomial theorem:
 
 Multinomial theorem:
 -------------------------------
-* For evaluating the expression :math:`(x_1+x_2+\cdots+x_r)^n=(x_1+x_2+\cdots+x_r)\cdots(x_1+x_2+\cdots+x_r)` (:math:`n`-times), the process involves choosing either :math:`x` or :math:`y` from each of the :math:`n`-terms. 
+* For evaluating the expression :math:`(x_1+x_2+\cdots+x_r)^n=(x_1+x_2+\cdots+x_r)\cdots(x_1+x_2+\cdots+x_r)` (:math:`n`-times), the process involves choosing :math:`x_1` from :math:`k_1` such terms, :math:`x_2` from :math:`k_2` such terms, and so on.
+* For each values of :math:`0\leq k_1,k_2,\cdots k_r\leq n`, this correspond to the to term :math:`x_1^{k_1}\cdots x_r^{k_r}`.
+* Regardless of how we choose, the :math:`\sum_{i=1}^r k_i=n`.
+* Therefore, :math:`(x_1+x_2+\cdots+x_r)^n=\sum_{\sum_{i=1}^r k_i=n} {n\choose k_1\cdots k_r} x_1^{k_1}\cdots x_r^{k_r}`.
