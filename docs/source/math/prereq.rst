@@ -27,4 +27,5 @@ Binomial theorem:
   * :math:`{n\choose k}={n-1\choose k-1}+{n-1\choose k}`.
 
 Multinomial theorem:
+-------------------------------
 * For evaluating the expression :math:`(x_1+x_2+\cdots+x_r)^n=(x_1+x_2+\cdots+x_r)\cdots(x_1+x_2+\cdots+x_r)` (:math:`n`-times), the process involves choosing either :math:`x` or :math:`y` from each of the :math:`n`-terms. 
