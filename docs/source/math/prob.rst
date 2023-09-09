@@ -50,6 +50,11 @@ Discrete = values are from a finite/countably infinite set.
 	Expectation and Variance:
 
 	* We can define **Expectation** of :math:`X` as :math:`\mathbb{E}[X]=\sum_x x p_X(x)` (assuming that the sum exists).
+	* Elementary properties of expectation:
+
+		* If :math:`X>0`, then :math:`\mathbf{E}[X]>0`.
+		* If :math:`a\leq X\leq b`, then :math:`a\leq \mathbf{E}[X]\leq b`.
+		* If :math:`X=c`, then :math:`\mathbf{E}[X]=c`.
 	* We can define **Variance** of :math:`X` as :math:`\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
 
 .. tip::
