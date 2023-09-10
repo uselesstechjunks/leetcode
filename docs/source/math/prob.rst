@@ -125,9 +125,9 @@ Conditioning:
 		.. math::
 			p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
 
-	* This also works if :math:`A` is defined in terms of a rv (i.e. :math:`A=\{X=x\}`), **even when the cardinality of :math:`X` is countably infinite**.
+	* This also works if :math:`A` is defined in terms of a rv (i.e. :math:`A=\{X=x\}`), even when the cardinality of :math:`X` is countably infinite.
 
-		..math::
+		.. math::
 			p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)
 
 	* This allows us to compute the probability of events in a complicated probability model by utilising events from a simpler model, i.e. let's us use the divide-and-conquer technique. We just need to ensure that the events from the simpler model in fact exhausts the entirety of sample space of the original probability model.
