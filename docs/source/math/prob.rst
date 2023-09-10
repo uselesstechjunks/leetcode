@@ -1,9 +1,11 @@
+#######################################################################################
 Probability
 #######################################################################################
 (Adapted from Bertsekas and Tsitsiklis - Introduction to Probability)
 
+******************************************************
 Probability Axioms (Kolmogorov Axioms)
-===================================================================
+******************************************************
 
 Let the set of all possible outcomes of an experiment be :math:`\Omega`, and let **events** be defined as subsets, :math:`\omega\subset\Omega`. Then a measure :math:`\mu:2^{|\Omega|}\mapsto\mathbb{R}` is called a **probability measure** iff
 
@@ -17,8 +19,9 @@ Let the set of all possible outcomes of an experiment be :math:`\Omega`, and let
 .. tip::
 	It is customary to represent probability measure as :math:`\mathbb{P}`.
 
+*********************************************
 Random Variable
-===================================================================
+*********************************************
 
 Random variables (rvs) are real-valued functions of the outcome of an experiment.
 
@@ -29,7 +32,7 @@ Random variables (rvs) are real-valued functions of the outcome of an experiment
 	* We can define the notion of *independence* of an rv w.r.t an event or another rv.
 
 Discrete Random Variable
-------------------------------
+====================================
 
 Discrete = values are from a finite/countably infinite set.
 
@@ -46,10 +49,15 @@ Discrete = values are from a finite/countably infinite set.
 		#. Collect all possible values for which :math:`\{x | g(x)=y\}`
 		#. Utilize axiom 3 to obtain :math:`p_Y(y)=\sum_{\{x | g(x)=y\}} p_X(x)`
 
+Expectation and Variance:
+------------------------------------
 .. note::
-	Expectation and Variance:
-
 	* We can define **Expectation** of :math:`X` as :math:`\mathbb{E}[X]=\sum_x x p_X(x)` (assuming that the sum exists).
+	* Elementary properties of expectation:
+
+		* If :math:`X>0`, then :math:`\mathbf{E}[X]>0`.
+		* If :math:`a\leq X\leq b`, then :math:`a\leq \mathbf{E}[X]\leq b`.
+		* If :math:`X=c`, then :math:`\mathbf{E}[X]=c`.
 	* We can define **Variance** of :math:`X` as :math:`\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
 
 .. tip::
@@ -75,9 +83,9 @@ Discrete = values are from a finite/countably infinite set.
 ..  warning::
 	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
 
+Multiple random variables:
+------------------------------------
 .. note::
-	Multiple random variables:
-
 	* We can define the joint-probability mass function for 2 rvs as 
 
 		.. math::
@@ -88,21 +96,20 @@ Discrete = values are from a finite/countably infinite set.
 	* Linearity of expectation holds, i.e. :math:`\mathbb{E}[aX+bY+c]=a\mathbb{E}[X]+b\mathbb{E}[Y]+c`.
 	* Extends naturally for more than 2 rvs.
 
+Conditioning:
+------------------------------------
 .. note::
-	Conditioning:
-
 	* An rv can be conditioned on an event :math:`A` (when :math:`\mathbb{P}(A)>0`) and its conditional PMF is defined as 
 
 		.. math::
 			p_{X|A}(x)=\mathbb{P}(X=x|A).
 
-	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` and is written as
+	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` (:math:`p_Y(y)>0`) and is written as
 
 		.. math::
-			p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)
+			p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}
 
-	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`
-	* Connects to marginal PMF as :math:`p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)`
+	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`	
 
 .. tip::
 	* **Bayes theorem**: For :math:`p_Y(y)>0`, :math:`p_{Y|X}(y|x)=\frac{p_Y(y)p_{X|Y}(x|y)}{\sum_y p_Y(y)p_{X|Y}(x|y)}`
@@ -118,6 +125,12 @@ Discrete = values are from a finite/countably infinite set.
 		.. math::
 			p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
 
+	* This also works if :math:`A` is defined in terms of a rv (i.e. :math:`A=\{X=x\}`), even when the cardinality of :math:`X` is countably infinite.
+
+		.. math::
+			p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)
+
+	* This allows us to compute the probability of events in a complicated probability model by utilising events from a simpler model, i.e. let's us use the divide-and-conquer technique. We just need to ensure that the events from the simpler model in fact exhausts the entirety of sample space of the original probability model.
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
 		.. math::
@@ -136,27 +149,19 @@ Discrete = values are from a finite/countably infinite set.
 
 		.. math::
 			\mathbb{E}[X]=\sum_x x p_X(x)=\sum_{i=1}^n \mathbb{P}(A_i)\sum_x x p_{X|A_i}(x)=\sum_{i=1}^n \mathbb{P}(A_i)\mathbb{E}[X|A_i]
-
+	
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
 		.. math::
 			\mathbb{E}[X|B]=\sum_{i=1}^n \mathbb{P}(A_i|B)\mathbb{E}[X|A_i\cap B]
 
-	* **Law of iterated expectation:** :math:`\mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y]=\mathbb{E}[\mathbb{E}[X|Y]]`
+	* **Law of iterated expectation:** For the rv version of the first, :math:`\mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y]=\mathbb{E}[\mathbb{E}[X|Y]]`
 
+Notion of Independence:
+------------------------------------
 .. note::
-	Notion of Independence:
-
 	* :math:`X` is independent of an event :math:`A` iff :math:`p_{X|A}(x)=p_X(x)` for all :math:`x`.
 	* For two independent rvs, :math:`p_{X,Y}(x,y)=p_X(x)p_Y(y)` for all :math:`x` and :math:`y`.
-
-.. tip::
-	Sum of independent rvs - Convolution:
-
-	* Let :math:`X\sim p_X` and :math:`Y\sim p_Y` be two independent discrete rvs. Then their sum :math:`Z=X+Y` has the distribution
-
-		.. math::
-			p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z]
 
 .. note::
 	Expectation and variance for independent rvs:
@@ -165,24 +170,45 @@ Discrete = values are from a finite/countably infinite set.
 	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)`
 	* Extends naturally to more than 2 rvs.
 
+Some discrete random variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Simple rvs:
+""""""""""""""""""""""""""""""""""""
+* Bernoulli:
+* Uniform:
+
+Composite rvs:
+""""""""""""""""""""""""""""""""""""
+* Binomial
+* Geometric
+* Multinomial
+
+Limiting rvs:
+""""""""""""""""""""""""""""""""""""
+* Poisson
+
 Continuous Random Variable
-----------------------------------------
+======================================================
 
 Continuous = values are from an uncountably infinite set.
 
 Functions of Random Variable
---------------------------------------
+=============================================
+.. tip::
+	Sum of independent rvs - Convolution:
+
+	* Let :math:`X\sim p_X` and :math:`Y\sim p_Y` be two independent discrete rvs. Then their sum :math:`Z=X+Y` has the distribution
+
+		.. math::
+			p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z]
+
 
 Moment Generating Functions
-----------------------------------------------
+=============================================
 
 #. Distributions
-	#. Bernoulli
-	#. Binomial
-	#. Poisson
-	#. Geometric
 	#. Multinoulli
-	#. Multinomial
 	#. Gaussian
 	#. Multivariate Gaussian
 	#. Exponential

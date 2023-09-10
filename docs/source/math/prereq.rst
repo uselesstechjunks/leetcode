@@ -12,6 +12,7 @@ Binomial and Multinomial Theorem
 
     .. math::
       {n\choose k_1\cdots k_r}=\frac{n!}{k_1!\cdots k_r!}
+  * This is also the number of ways a set of :math:`n` indistinguishable items can be partitioned into :math:`r` subsets. To see why, think about the process where we do the partitioning first (say, :math:`C` is the number of ways we can partition) and then we rearrange each subset (:math:`k_i!` ways for subset :math:`i`) put the items in a sequence. The result is just a rearrangement of the entire sequence of :math:`n` items.
 
 Binomial theorem: 
 -------------------------------
