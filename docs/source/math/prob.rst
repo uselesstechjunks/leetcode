@@ -109,8 +109,7 @@ Conditioning:
 		.. math::
 			p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}
 
-	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`
-	* Connects to marginal PMF as :math:`p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)`
+	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`	
 
 .. tip::
 	* **Bayes theorem**: For :math:`p_Y(y)>0`, :math:`p_{Y|X}(y|x)=\frac{p_Y(y)p_{X|Y}(x|y)}{\sum_y p_Y(y)p_{X|Y}(x|y)}`
@@ -125,6 +124,11 @@ Conditioning:
 	
 		.. math::
 			p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
+
+	* This also works if :math:`A` is defined in terms of a rv (i.e. :math:`A=\{X=x\}`), **even when the cardinality of :math:`X` is countably infinite**.
+
+		..math::
+			p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)
 
 	* This allows us to compute the probability of events in a complicated probability model by utilising events from a simpler model, i.e. let's us use the divide-and-conquer technique. We just need to ensure that the events from the simpler model in fact exhausts the entirety of sample space of the original probability model.
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
@@ -151,7 +155,7 @@ Conditioning:
 		.. math::
 			\mathbb{E}[X|B]=\sum_{i=1}^n \mathbb{P}(A_i|B)\mathbb{E}[X|A_i\cap B]
 
-	* **Law of iterated expectation:** :math:`\mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y]=\mathbb{E}[\mathbb{E}[X|Y]]`
+	* **Law of iterated expectation:** For the rv version of the first, :math:`\mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y]=\mathbb{E}[\mathbb{E}[X|Y]]`
 
 Notion of Independence:
 ------------------------------------
