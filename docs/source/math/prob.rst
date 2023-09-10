@@ -168,15 +168,21 @@ Notion of Independence:
 
 Some discrete random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Simple rvs:
 """"""""""""""""""""""""""""""""""""
 * Bernoulli:
 * Uniform:
+
 Composite rvs:
 """"""""""""""""""""""""""""""""""""
 * Binomial
 * Geometric
 * Multinomial
+
+Limiting rvs:
+""""""""""""""""""""""""""""""""""""
+* Poisson
 
 Continuous Random Variable
 ======================================================
@@ -198,12 +204,7 @@ Moment Generating Functions
 =============================================
 
 #. Distributions
-	#. Bernoulli
-	#. Binomial
-	#. Poisson
-	#. Geometric
 	#. Multinoulli
-	#. Multinomial
 	#. Gaussian
 	#. Multivariate Gaussian
 	#. Exponential
