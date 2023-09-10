@@ -101,7 +101,7 @@ Discrete = values are from a finite/countably infinite set.
 		.. math::
 			p_{X|A}(x)=\mathbb{P}(X=x|A).
 
-	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` (:math:`p_Y(y)>0) and is written as
+	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` (:math:`p_Y(y)>0`) and is written as
 
 		.. math::
 			p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}
