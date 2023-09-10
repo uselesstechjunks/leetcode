@@ -123,6 +123,7 @@ Discrete = values are from a finite/countably infinite set.
 		.. math::
 			p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
 
+	* This allows us to compute the probability of events in a complicated probability model by utilising events from a simpler model, i.e. let's us use the divide-and-conquer technique. We just need to ensure that the events from the simpler model in fact exhausts the entirety of sample space of the original probability model.
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
 		.. math::
@@ -141,7 +142,7 @@ Discrete = values are from a finite/countably infinite set.
 
 		.. math::
 			\mathbb{E}[X]=\sum_x x p_X(x)=\sum_{i=1}^n \mathbb{P}(A_i)\sum_x x p_{X|A_i}(x)=\sum_{i=1}^n \mathbb{P}(A_i)\mathbb{E}[X|A_i]
-
+	
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
 		.. math::
