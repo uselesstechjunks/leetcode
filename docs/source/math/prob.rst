@@ -247,7 +247,7 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 		* Let the remaining number of trials until first success is represented by :math:`Y`. Clearly, :math:`X|X>1=Y+1` and :math:`\mathbb{E}[X|X>1]=\mathbb{E}[Y]+1`.
 		* By the memorylessless property, :math:`Y\sim\mathrm{Geom}(p)` as well. Therefore, :math:`\mathbb{E}[Y]=\mathbb{E}[X]`.
 		* We use the fact to compute the conditional expectation, :math:`\mathbb{E}[X|X>1]=1+\mathbb{E}[X]`.
-	* [Derive] For :math:`X\sim\mathrm{Geom}(p)`, :math:`\mathbb{E}[X]=\frac{1}{p}` and :math:\mathrm{Var}(X)=\frac{1-p}{p^2}`.
+	* [Derive] For :math:`X\sim\mathrm{Geom}(p)`, :math:`\mathbb{E}[X]=\frac{1}{p}` and :math:`\mathrm{Var}(X)=\frac{1-p}{p^2}`.
 	* Hint:
 
 		* Use divide-and-conquer by splitting the case where :math:`X=1` and :math:`X>1`.
