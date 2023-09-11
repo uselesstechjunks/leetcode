@@ -227,18 +227,30 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 	* Total number of successes represents the total number of people who share their birthday with me.
 
 .. attention::
-	[The Hat Problem] There are :math:`n` people with numbered hats. They throw all their hats into a basket and then picks up one hat one by one. What is the expected number of people who get their own hat back? What is the variance of this?
+	[The Hat Problem] There are :math:`n` people with numbered hats. They throw all their hats into a basket and then pick up one hat one by one. What is the expected number of people who get their own hat back? What is the variance of this?
 
 	* Let :math:`X_i=1` if :math:`i`-th person get their hat back in the process, and :math:`X_i=0` otherwise.
 	* Total number of people who get their own hat back is given by :math:`Y=X_1+X_2+\cdots+X_n`.
 	* This looks like the case for Binomial distribution but it's not.
-	* [IMPORTANT] In this case, the rvs are not independent. For :math:`n=2`, if :math:`X_1=1`, then :math:`\mathbb{P}(X_2=1|X_1=1)=1`. If :math:`X_1=0`, then :math:`\mathbb{P}(X_2=1|X_1=0)=0`.
+	* [IMPORTANT] In this case, the rvs are not independent. For :math:`n=2`, the unconditional probabilities :math:`\mathbb{P}(X_1=1)=\mathbb{P}(X_2=1)=\frac{1}{2}. But, if :math:`X_1=1`, then :math:`\mathbb{P}(X_2=1|X_1=1)=1`. If :math:`X_1=0`, then :math:`\mathbb{P}(X_2=1|X_1=0)=0`.
 	* However, each person is equally likely to get their own hat back if they're the first to pick.
 	* [IMPORTANT] Therefore, for the unconditional probability, for any :math:`i`, :math:`\mathbb{P}(X_i=1)=\mathbb{P}(X_1=1)=\frac{1}{n}`.
 	* The expectation can therefore be calculated by
 
-		.. math:: \mathbf{E}[Y]=\mathbf{E}[X_1+\cdots+X_n]=\sum_{i=1}^n\mathbf{E}[X_i]=\sum_{i=1}^n\mathbf{E}[X_1]=n\cdot\frac{1}{n}=1
-	* The variance is calculated as
+		.. math:: \mathbb{E}[Y]=\mathbb{E}[X_1+\cdots+X_n]=\sum_{i=1}^n\mathbb{E}[X_i]=\sum_{i=1}^n\mathbb{E}[X_1]=n\cdot\frac{1}{n}=1
+	* For the variance, we calculate :math:`\mathbb{E}[Y^2]` as follows:
+
+		.. math::
+
+			\begin{eqnarray}
+			\mathbf{E}[Y^2] & = & \mathbf{E}[(X_1+\cdots+X_n)^2] \\
+ 			& = & \underbrace{\sum_{i=1}^n\mathbf{E}[X_i^2]}_\text{$n$ terms} + \underbrace{\sum_{i=1}^n\sum_{j=1|i\neq j}^n\mathbf{E}[X_i X_j]}_\text{$n^2-n$ terms} \\
+			& = & \sum_{i=1}^n X_i^2\mathbb{P}(X_i)+\sum_{i=1}^n\sum_{j=1|i\neq j}^n X_i X_j\mathbb{P}(X_i,X_j)
+			\end{eqnarray}
+	* Since :math:`X_i^2=1` when :math:`X_i=1` and :math:`X_i^2=0` when :math:`X_i=0`, the first term becomes :math:`\sum_{i=1}^n 1\mathbb{P}(X_1=1)=n\cdot\frac{1}{n}=1`.
+	* [IMPORTANT] For the second term, by symmetry argument similar to above, we can conclude that for any :math:`i\neq j`
+
+		.. math:: \mathbb{P}(X_i,X_j)=\mathbb{P}(X_1,X_2)=\mathbb{P}(X_1)\mathbb{P}(X_2|X_1)=\frac{1}{n}\cdot\frac{1}{n-1}
 
 * Geometric
 
