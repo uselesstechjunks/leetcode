@@ -260,11 +260,10 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 	* For the variance, we calculate :math:`\mathbb{E}[Y^2]` as follows:
 
 		.. math::
-
 			\begin{eqnarray}
-			\mathbf{E}[Y^2] & = & \mathbf{E}[(X_1+\cdots+X_n)^2] \\
- 			& = & \underbrace{\sum_{i=1}^n\mathbf{E}[X_i^2]}_\text{$n$ terms} + \underbrace{\sum_{i=1}^n\sum_{j=1|i\neq j}^n\mathbf{E}[X_i X_j]}_\text{$n^2-n$ terms} \\
-			& = & \sum_{i=1}^n X_i^2\mathbb{P}(X_i)+\sum_{i=1}^n\sum_{j=1|i\neq j}^n X_i X_j\mathbb{P}(X_i,X_j)
+				\mathbf{E}[Y^2] & = & \mathbf{E}[(X_1+\cdots+X_n)^2] \\
+ 				& = & \underbrace{\sum_{i=1}^n\mathbf{E}[X_i^2]}_\text{$n$ terms} + \underbrace{\sum_{i=1}^n\sum_{j=1|i\neq j}^n\mathbf{E}[X_i X_j]}_\text{$n^2-n$ terms} \\
+				& = & \sum_{i=1}^n X_i^2\mathbb{P}(X_i)+\sum_{i=1}^n\sum_{j=1|i\neq j}^n X_i X_j\mathbb{P}(X_i,X_j)
 			\end{eqnarray}
 	* For the first term:
 	
