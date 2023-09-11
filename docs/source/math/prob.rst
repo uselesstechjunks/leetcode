@@ -13,8 +13,7 @@ Let the set of all possible outcomes of an experiment be :math:`\Omega`, and let
 #. **Unitarity**: :math:`\mu(\Omega)=1`.
 #. :math:`\sigma`-**Additivity**: For :math:`A_1,A_2,\cdots\subset\Omega` such that :math:`A_i\cap A_j=\emptyset` for :math:`i\neq j`
 
-	.. math::
-		\mu(\bigcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty \mu(A_i).
+	.. math:: \mu(\bigcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty \mu(A_i).
 
 .. tip::
 	It is customary to represent probability measure as :math:`\mathbb{P}`.
@@ -65,8 +64,7 @@ Expectation and Variance:
 
 	* For expectation of :math:`Y=g(X)`, we can get away without having to compute PMF explicitly for :math:`Y`, as it can be shown that
 
-		.. math::
-			\mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
+		.. math:: \mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
 
 	* With the help of LOTUS, :math:`\mathrm{Var}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
@@ -88,8 +86,7 @@ Multiple random variables:
 .. note::
 	* We can define the joint-probability mass function for 2 rvs as 
 
-		.. math::
-			p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y).
+		.. math:: p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y).
 
 	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)`.
 	* LOTUS holds, i.e. for :math:`g(X,Y)`, :math:`\mathbb{E}[g(X,Y)]=\sum_{x,y} g(x,y) p_{X,Y}(x,y)`.
@@ -101,13 +98,11 @@ Conditioning:
 .. note::
 	* An rv can be conditioned on an event :math:`A` (when :math:`\mathbb{P}(A)>0`) and its conditional PMF is defined as 
 
-		.. math::
-			p_{X|A}(x)=\mathbb{P}(X=x|A).
+		.. math:: p_{X|A}(x)=\mathbb{P}(X=x|A).
 
 	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` (:math:`p_Y(y)>0`) and is written as
 
-		.. math::
-			p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}
+		.. math:: p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}
 
 	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`	
 
@@ -122,19 +117,16 @@ Conditioning:
 
 	*  If :math:`\mathbb{P}(A_i)>0` for all :math:`i`, then 
 	
-		.. math::
-			p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
+		.. math:: p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
 
 	* This also works if :math:`A` is defined in terms of a rv (i.e. :math:`A=\{X=x\}`), even when the cardinality of :math:`X` is countably infinite.
 
-		.. math::
-			p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)
+		.. math:: p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)
 
 	* This allows us to compute the probability of events in a complicated probability model by utilising events from a simpler model, i.e. let's us use the divide-and-conquer technique. We just need to ensure that the events from the simpler model in fact exhausts the entirety of sample space of the original probability model.
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
-		.. math::
-			p_{X|B}(x)=\sum_{i=1}^n\mathbb{P}(A_i|B)p_{X|A_i\cap B}(x)
+		.. math:: p_{X|B}(x)=\sum_{i=1}^n\mathbb{P}(A_i|B)p_{X|A_i\cap B}(x)
 
 .. note::
 	Conditional expectation:
@@ -147,13 +139,11 @@ Conditioning:
 
 	* For partitions :math:`A_1,A_2,\cdots,A_n`
 
-		.. math::
-			\mathbb{E}[X]=\sum_x x p_X(x)=\sum_{i=1}^n \mathbb{P}(A_i)\sum_x x p_{X|A_i}(x)=\sum_{i=1}^n \mathbb{P}(A_i)\mathbb{E}[X|A_i]
+		.. math:: \mathbb{E}[X]=\sum_x x p_X(x)=\sum_{i=1}^n \mathbb{P}(A_i)\sum_x x p_{X|A_i}(x)=\sum_{i=1}^n \mathbb{P}(A_i)\mathbb{E}[X|A_i]
 	
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
-		.. math::
-			\mathbb{E}[X|B]=\sum_{i=1}^n \mathbb{P}(A_i|B)\mathbb{E}[X|A_i\cap B]
+		.. math:: \mathbb{E}[X|B]=\sum_{i=1}^n \mathbb{P}(A_i|B)\mathbb{E}[X|A_i\cap B]
 
 	* **Law of iterated expectation:** For the rv version of the first, :math:`\mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y]=\mathbb{E}[\mathbb{E}[X|Y]]`
 
@@ -192,7 +182,7 @@ Any experiment that deals with a binary outcome (e.g. **success** or **failure**
 Any experiment that deals with a categorical outcome can be represented by a Multinoulli rv.
 
 .. note::
-	* If the rv :math:`X` takes the values from the set :math:`\{x_1,\cdots,x_k\}`, then :math:`X\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)`.
+	* If the rv :math:`X` takes the values from the set :math:`\{1,\cdots,k\}`, then :math:`X\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)`.
 	* We can do away with :math:`k-1` parameters instead of :math:`k`, as :math:`\sum_{i=1}^k p_i=1`.
 
 * Uniform:
@@ -236,12 +226,25 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 
 	* Total number of successes represents the total number of people who share their birthday with me.
 
+.. attention::
+	[The Hat Problem] There are :math:`n` people with numbered hats. They throw all their hats into a basket and then picks up one hat one by one. What is the expected number of people who get their own hat back? What is the variance of this?
+
+	* Let :math:`X_i=1` if :math:`i`-th person get their hat back in the process, and :math:`X_i=0` otherwise.
+	* Total number of people who get their own hat back is given by :math:`Y=X_1+X_2+\cdots+X_n`.
+	* This looks like the case for Binomial distribution but it's not.
+	* [IMPORTANT] In this case, the rvs are not independent. For :math:`n=2`, if :math:`X_1=1`, then :math:`\mathbb{P}(X_2=1|X_1=1)=1`. If :math:`X_1=0`, then :math:`\mathbb{P}(X_2=1|X_1=0)=0`.
+	* However, each person is equally likely to get their own hat back if they're the first to pick.
+	* [IMPORTANT] Therefore, for the unconditional probability, for any :math:`i`, :math:`\mathbb{P}(X_i=1)=\mathbb{P}(X_1=1)=\frac{1}{n}`.
+	* The expectation can therefore be calculated by
+
+		.. math:: \mathbf{E}[Y]=\mathbf{E}[X_1+\cdots+X_n]=\sum_{i=1}^n\mathbf{E}[X_i]=\sum_{i=1}^n\mathbf{E}[X_1]=n\cdot\frac{1}{n}=1
+	* The variance is calculated as
+
 * Geometric
 
 The number of repeated Bernoulli trials we need until we get a success can be modelled using a Geometric distribution. Let the Bernoulli trails have parameter :math:`p`. Then :math:`X\sim\mathrm{Geom}(p)` and the PMF for :math:`X=1,\cdots` is given by
 
-.. math::
-	p_X(x)=(1-p)^x p
+.. math:: p_X(x)=(1-p)^x p
 
 .. attention::
 	Prove that :math:`\sum_{x=1}^\infty p_X(x)=1`.
@@ -269,8 +272,7 @@ Limiting rvs:
 
 If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate it using another rv with an easier-to-manipulate distribution. For :math:`\lambda=n\cdot p`, :math:`X\sim\mathrm{Poisson}(\lambda)` (:math:`\lambda>0`), the PMF is given by 
 
-.. math::
-	p_X(x)=e^{-\lambda}\frac{\lambda^x}{x!}
+.. math:: p_X(x)=e^{-\lambda}\frac{\lambda^x}{x!}
 
 .. attention::
 	Prove that :math:`\sum_{x=0}^\infty p_X(x)=1`.
@@ -298,15 +300,13 @@ Functions of Random Variable
 
 	* Let :math:`X\sim p_X` and :math:`Y\sim p_Y` be two independent discrete rvs. Then their sum :math:`Z=X+Y` has the distribution
 
-		.. math::
-			p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z]
+		.. math:: p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z]
 
 
 Moment Generating Functions
 =============================================
 
 #. Distributions
-	#. Multinoulli
 	#. Gaussian
 	#. Multivariate Gaussian
 	#. Exponential
