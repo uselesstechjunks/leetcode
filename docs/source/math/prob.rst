@@ -205,6 +205,10 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 	* Let's denote each of the trials with a different Bernoulli rv, :math:`X_i\sim\mathrm{Ber}(p)` for :math:`i`-th trial. 
 	* Then :math:`Y=X_1+\cdots+X_n` is the total number of successes, :math:`X_i\perp\!\!\!\perp X_j` for :math:`i\neq j`.
 	* [Derive] For :math:`X\sim\mathrm{Bin}(n,p)`, :math:`\mathbb{E}[X]=np` and :math:`\mathrm{Var}(X)=np(1-p)`.
+	* Hint:
+
+		* For mean, utilise the linearity of expectation (does not require independence).
+		* For variance, utilise independence in the sum of rvs.
 
 ..  tip::
 	Solving a problem with an exisitng framework often requires us to think of a process with which the experiment takes place. With the right process description, seemingly difficult problems often become easy.
@@ -238,7 +242,12 @@ If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate i
 	Prove that :math:`\sum_{x=0}^\infty p_X(x)=1`.
 
 .. tip::
-	It is useful to model a specific, time-dependent outcome given just the average.
+	* It is useful to model a specific, time-dependent outcome given just the average.
+	* [Derive] :math:`\mathbb{E}[X]=\lambda` and :math:`\mathrm{Var}(X)=\lambda`.
+	* Hint: 
+
+		* For mean, reindex the terms with :math:`y=x-1`. 
+		* For the variance, reindex :math:`\mathbb{E}[X^2]` terms to represent :math:`\mathbb{E}[Y+1]`.
 
 .. attention::
 	[The Birthday Problem] As the value of :math:`p` is quite low and :math:`n` is quite high, we can model this as a Poisson rv as well.
