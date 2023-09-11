@@ -199,8 +199,8 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 .. note::
 	We can write a Binomially distributed rv as a sum of independent, Bernoulli rvs. 
 
-	* Let's denote each of the trials with a different Bernoulli rv with parameter :math:`p`. Then :math:`Y=X_1+\cdots+X_n` represents the total number of successes.
-	* This allows us to calculate the mean and variance of Binomial easily.
+	* Let's denote each of the trials with a different Bernoulli rv, :math:`X_i\sim\mathbm{Ber}(p)` for :math:`i`-th trial. 
+	* Then :math:`Y=X_1+\cdots+X_n` represents the total number of successes where :math:`X_i\bot X_j` for :math:`i\neq j`.
 	* [Derive] For :math:`X\sim\mathbm{Bin}(n,p)`, :math:`\mathbf{E}[X]=np` and :math:`\mathbm{Var}(X)=np(1-p)`.
 
 ..  tip::
