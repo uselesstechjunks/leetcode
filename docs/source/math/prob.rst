@@ -259,12 +259,7 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 		.. math:: \mathbb{E}[Y]=\mathbb{E}[X_1+\cdots+X_n]=\sum_{i=1}^n\mathbb{E}[X_i]=\sum_{i=1}^n\mathbb{E}[X_1]=n\cdot\frac{1}{n}=1
 	* For the variance, we calculate :math:`\mathbb{E}[Y^2]` as follows:
 
-		.. math::
-			\begin{eqnarray}
-				\mathbf{E}[Y^2] & = & \mathbf{E}[(X_1+\cdots+X_n)^2] \\
- 				& = & \underbrace{\sum_{i=1}^n\mathbf{E}[X_i^2]}_\text{$n$ terms} + \underbrace{\sum_{i=1}^n\sum_{j=1|i\neq j}^n\mathbf{E}[X_i X_j]}_\text{$n^2-n$ terms} \\
-				& = & \sum_{i=1}^n X_i^2\mathbb{P}(X_i)+\sum_{i=1}^n\sum_{j=1|i\neq j}^n X_i X_j\mathbb{P}(X_i,X_j)
-			\end{eqnarray}
+		.. math:: \mathbf{E}[Y^2]=\mathbf{E}[(X_1+\cdots+X_n)^2]=\underbrace{\sum_{i=1}^n\mathbf{E}[X_i^2]}_\text{$n$ terms} + \underbrace{\sum_{i=1}^n\sum_{j=1|i\neq j}^n\mathbf{E}[X_i X_j]}_\text{$n^2-n$ terms}=\sum_{i=1}^n X_i^2\mathbb{P}(X_i)+\sum_{i=1}^n\sum_{j=1|i\neq j}^n X_i X_j\mathbb{P}(X_i,X_j)
 	* For the first term:
 	
 		* We can ignore the case where :math:`X_i=1` as :math:`X_i^2=0` as well.
