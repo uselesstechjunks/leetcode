@@ -151,7 +151,7 @@ Notion of Independence:
 ------------------------------------
 .. note::
 	* :math:`X` is independent of an event :math:`A` iff :math:`p_{X|A}(x)=p_X(x)` for all :math:`x`.
-	* Two rvs are independent when :math:`p_X(x)=p_{X|Y}(x|y)` and :math:`p_Y(y)=p_{Y|X}(y|x)` holds for all values of :math:`x` and :math:`y`.
+	* Two rvs are independent when :math:`p_X(x)=p_{X|Y}(x|y)` and :math:`p_Y(y)=p_{Y|X}(y|x)` hold for all values of :math:`x` and :math:`y`.
 	* Two independent rvs are written with the notation :math:`X\perp\!\!\!\perp Y`.
 	* If :math:`X\perp\!\!\!\perp Y`, :math:`p_{X,Y}(x,y)=p_X(x)p_Y(y)` for all :math:`x` and :math:`y`.
 
@@ -232,9 +232,13 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 	* Let :math:`X_i=1` if :math:`i`-th person get their hat back in the process, and :math:`X_i=0` otherwise.
 	* Total number of people who get their own hat back is given by :math:`Y=X_1+X_2+\cdots+X_n`.
 	* This looks like the case for Binomial distribution but it's not.
-	* [IMPORTANT] In this case, the rvs are not independent. For :math:`n=2`, the unconditional probabilities :math:`\mathbb{P}(X_1=1)=\mathbb{P}(X_2=1)=\frac{1}{2}. But, if :math:`X_1=1`, then :math:`\mathbb{P}(X_2=1|X_1=1)=1`. If :math:`X_1=0`, then :math:`\mathbb{P}(X_2=1|X_1=0)=0`.
+	* **[IMPORTANT]** In this case, the rvs are not independent. 
+	
+		* To see why, let's take :math:`n=2`.
+		* The unconditional probabilities :math:`\mathbb{P}(X_1=1)=\mathbb{P}(X_2=1)=\frac{1}{2}`. 
+		* But, if :math:`X_1=1`, then :math:`\mathbb{P}(X_2=1|X_1=1)=1`. If :math:`X_1=0`, then :math:`\mathbb{P}(X_2=1|X_1=0)=0`.
 	* However, each person is equally likely to get their own hat back if they're the first to pick.
-	* [IMPORTANT] Therefore, for the unconditional probability, for any :math:`i`, :math:`\mathbb{P}(X_i=1)=\mathbb{P}(X_1=1)=\frac{1}{n}`.
+	* **[IMPORTANT]** Therefore, for the unconditional probability, for any :math:`i`, :math:`\mathbb{P}(X_i=1)=\mathbb{P}(X_1=1)=\frac{1}{n}`.
 	* The expectation can therefore be calculated by
 
 		.. math:: \mathbb{E}[Y]=\mathbb{E}[X_1+\cdots+X_n]=\sum_{i=1}^n\mathbb{E}[X_i]=\sum_{i=1}^n\mathbb{E}[X_1]=n\cdot\frac{1}{n}=1
@@ -247,10 +251,17 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
  			& = & \underbrace{\sum_{i=1}^n\mathbf{E}[X_i^2]}_\text{$n$ terms} + \underbrace{\sum_{i=1}^n\sum_{j=1|i\neq j}^n\mathbf{E}[X_i X_j]}_\text{$n^2-n$ terms} \\
 			& = & \sum_{i=1}^n X_i^2\mathbb{P}(X_i)+\sum_{i=1}^n\sum_{j=1|i\neq j}^n X_i X_j\mathbb{P}(X_i,X_j)
 			\end{eqnarray}
-	* Since :math:`X_i^2=1` when :math:`X_i=1` and :math:`X_i^2=0` when :math:`X_i=0`, the first term becomes :math:`\sum_{i=1}^n 1\mathbb{P}(X_1=1)=n\cdot\frac{1}{n}=1`.
-	* [IMPORTANT] For the second term, by symmetry argument similar to above, we can conclude that for any :math:`i\neq j`
+	* For the first term
+	
+		* We can ignore the case where :math:`X_i=1` as :math:`X_i^2=0` as well.
+		* For :math:`X_i^2=1` when :math:`X_i=1`.
+		* The first term becomes :math:`\sum_{i=1}^n 1\cdot\mathbb{P}(X_1=1)=n\cdot\frac{1}{n}=1`.
+	* For the second term
 
-		.. math:: \mathbb{P}(X_i,X_j)=\mathbb{P}(X_1,X_2)=\mathbb{P}(X_1)\mathbb{P}(X_2|X_1)=\frac{1}{n}\cdot\frac{1}{n-1}
+		* We ignore the cases when either of :math:`X_i` or :math:`X_j` are 0.
+		* For :math:1X_i=1,X_j=1`, by symmetry argument similar to above, we can conclude that for any :math:`i\neq j`
+
+		.. math:: \mathbb{P}(X_i=1,X_j=1)=\mathbb{P}(X_1=1,X_2=1)=\mathbb{P}(X_1=1)\mathbb{P}(X_2=1|X_1=1)=\frac{1}{n}\cdot\frac{1}{n-1}
 
 * Geometric
 
