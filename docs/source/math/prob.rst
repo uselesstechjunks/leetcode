@@ -181,9 +181,9 @@ Any experiment that deals with a binary outcome (e.g. **success** or **failure**
 
 .. note::
 	* We can define a rv :math:`X=1` which represents success and :math:`X=0` which represents failure.
-	* We only need to know about one of the probability values, :math:`\mathbf{P}(X=1)=p`, as :math:`\mathbf{P}(X=0)=1-p`.
+	* We only need to know about one of the probability values, :math:`\mathbb{P}(X=1)=p`, as :math:`\mathbb{P}(X=0)=1-p`.
 	* Therefore, a Bernoulli rv is parameterised with just 1 parameter, :math:`p`.
-	* [Derive] For :math:`X\sim\mathrm{Ber}(p)`, :math:`\mathbf{E}[X]=p` and :math:`\mathrm{Var}(X)=p(1-p)`.
+	* [Derive] For :math:`X\sim\mathrm{Ber}(p)`, :math:`\mathbb{E}[X]=p` and :math:`\mathrm{Var}(X)=p(1-p)`.
 
 * Uniform:
 
@@ -201,7 +201,7 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 
 	* Let's denote each of the trials with a different Bernoulli rv, :math:`X_i\sim\mathrm{Ber}(p)` for :math:`i`-th trial. 
 	* Then :math:`Y=X_1+\cdots+X_n` represents the total number of successes where :math:`X_i\bot X_j` for :math:`i\neq j`.
-	* [Derive] For :math:`X\sim\mathrm{Bin}(n,p)`, :math:`\mathbf{E}[X]=np` and :math:`\mathrm{Var}(X)=np(1-p)`.
+	* [Derive] For :math:`X\sim\mathrm{Bin}(n,p)`, :math:`\mathbb{E}[X]=np` and :math:`\mathrm{Var}(X)=np(1-p)`.
 
 ..  tip::
 	Solving a problem with an exisitng framework often requires us to think of a process with which the experiment takes place. With the right process description, seemingly difficult problems often become easy.
