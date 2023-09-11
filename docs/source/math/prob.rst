@@ -176,11 +176,39 @@ Some discrete random variables
 Simple rvs:
 """"""""""""""""""""""""""""""""""""
 * Bernoulli:
+
+Any experiment that deals with a binary outcome (e.g. **success** or **failure**) can be represented by a Bernoulli rv. 
+
+.. note::
+	* We can define a rv :math:`X=1` which represents success and :math:`X=0` which represents failure.
+	* We only need to know about one of the probability values, :math:`\mathbf{P}(X=1)=p`, as :math:`\mathbf{P}(X=0)=1-p`.
+	* Therefore, a Bernoulli rv is parameterised with just 1 parameter, :math:`p`.
+	* [Derive] For :math:`X\sim\mathbm{Ber}(p)`, :math:`\mathbf{E}[X]=p` and :math:`\mathbm{Var}(X)=p(1-p)`.
+
 * Uniform:
 
 Composite rvs:
 """"""""""""""""""""""""""""""""""""
 * Binomial
+
+In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :math:`X` denote the total number of **successes**. Then :math:`X\sim\mathbm{Bin}(n,p)`.
+
+.. math::
+	p_X(x)={n \choose x} p^x(1-p)^{n-x}
+
+.. note::
+	We can write a Binomially distributed rv as a sum of independent, Bernoulli rvs. 
+
+	* Let's denote each of the trials with a different Bernoulli rv with parameter :math:`p`. Then :math:`Y=X_1+\cdots+X_n` represents the total number of successes.
+	* This allows us to calculate the mean and variance of Binomial easily.
+	* [Derive] For :math:`X\sim\mathbm{Bin}(n,p)`, :math:`\mathbf{E}[X]=np` and :math:`\mathbm{Var}(X)=np(1-p)`.
+
+..  tip::
+    Solving a problem with an exisitng framework often requires us to think of a process with which the experiment takes place. With the right process description, seemingly difficult problems often become easy.
+
+..  attention::
+    [The Birthday Problem] In a party of :math:`500` guests, what is the probability that you share your birthday with :math:`5` other people?
+
 * Geometric
 * Multinomial
 
