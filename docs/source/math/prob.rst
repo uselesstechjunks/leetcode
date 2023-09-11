@@ -191,10 +191,13 @@ Composite rvs:
 """"""""""""""""""""""""""""""""""""
 * Binomial
 
-In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :math:`X` denote the total number of **successes**. Then :math:`X\sim\mathrm{Bin}(n,p)`.
+In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :math:`X` denote the total number of **successes**. Then :math:`X\sim\mathrm{Bin}(n,p)` and the PMF is given by
 
 .. math::
 	p_X(x)={n \choose x} p^x(1-p)^{n-x}
+
+.. attention::
+	Prove that :math:`\sum_{x=0}^n p_X(x)=1`.
 
 .. note::
 	We can write a Binomially distributed rv as a sum of independent, Bernoulli rvs. 
@@ -211,10 +214,12 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 
 	* All birthdays are equally likely (assumption of the underlying probability model).
 	* Person A's birthday is independent of person B's birthday.
-	* To find out the number of people who share their birthday with me I can
+	* [The process] To find out the number of people who share their birthday with me, I can
+
 		* pick a person in random and ask their birthday
 		* I consider it a success if their birthday is the same as mine, failure otherwise
 		* repeat for all :math:`n`
+
 	* Total number of successes represents the total number of people who share their birthday with me.
 
 * Geometric
@@ -223,6 +228,20 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 Limiting rvs:
 """"""""""""""""""""""""""""""""""""
 * Poisson
+
+If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate it using another rv with an easier-to-manipulate distribution. For :math:`\lambda=n\cdot p`, :math:`X\sim\mathrm{Poisson}(\lambda)` (:math:`\lambda>0`), the PMF is given by 
+
+.. math::
+	p_X(x)=e^{-\lambda)\frac{\lambda^x}{x!}
+
+.. attention::
+	Prove that :math:`\sum_{x=0}^\infty p_X(x)=1`.
+
+.. tip::
+	It is useful to model a specific, time-dependent outcome given just the average.
+
+.. attention::
+	[The Birthday Problem] As the value of :math:`p` is quite low and :math:`n` is quite high, we can model this as a Poisson rv as well.
 
 Continuous Random Variable
 ======================================================
