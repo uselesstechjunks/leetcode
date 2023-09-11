@@ -243,11 +243,11 @@ If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate i
 
 .. tip::
 	* It is useful to model a specific, time-dependent outcome given just the average.
-	* [Derive] :math:`\mathbb{E}[X]=\lambda` and :math:`\mathrm{Var}(X)=\lambda`.
+	* [Derive] For :math:`X\sim\mathrm{Poisson}(\lambda)`, :math:`\mathbb{E}[X]=\lambda` and :math:`\mathrm{Var}(X)=\lambda`.
 	* Hint: 
 
-		* For mean, reindex the terms with :math:`y=x-1`. 
-		* For the variance, reindex :math:`\mathbb{E}[X^2]` terms to represent :math:`\mathbb{E}[Y+1]`.
+		* For mean, reindex the terms in the sum.
+		* For the variance, reindex terms in :math:`\mathbb{E}[X^2]` to represent :math:`\lambda\mathbb{E}[Y+1]`.
 
 .. attention::
 	[The Birthday Problem] As the value of :math:`p` is quite low and :math:`n` is quite high, we can model this as a Poisson rv as well.
