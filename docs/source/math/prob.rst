@@ -244,7 +244,7 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 	p_X(x)=(1-p)^x p
 
 .. attention::
-	Prove that :math:`\sum_{x=0}^n p_X(x)=1`.
+	Prove that :math:`\sum_{x=1}^\infty p_X(x)=1`.
 
 .. note::
 	* Geometric rvs have a memorylessness property. Even if we know that the first trial was a failure, it doesn't tell us anything about the remaining number of trials required to get a success. 
