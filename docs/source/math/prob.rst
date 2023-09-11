@@ -227,6 +227,25 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 	* Total number of successes represents the total number of people who share their birthday with me.
 
 * Geometric
+
+The number of repeated Bernoulli trials we need until we get a success can be modelled using a Geometric distribution. Let the Bernoulli trails have parameter :math:`p`. Then :math:`X\sim\mathrm{Geom}(p)` and the PMF for :math:`X=1,\cdots` is given by
+
+.. math::
+	p_X(x)=(1-p)^x p
+
+.. attention::
+	Prove that :math:`\sum_{x=0}^n p_X(x)=1`.
+
+.. note::
+	* Geometric rvs have a memorylessness property. Even if we know that the first trial was a failure, it doesn't tell us anything about the remaining number of trials required to get a success. 
+	* The remaining number of trials follows the same geometric distribution.
+	* This fact is useful for obtaining the mean and variance of geometric rvs, where we use the fact that :math:`\mathbb{E}[X|X>1]=1+\mathbb{E}[X]`
+	* [Derive] For :math:`X\sim\mathrm{Geom}(p)`, :math:`\mathbb{E}[X]=\frac{1}{p}` and :math:\mathrm{Var}(X)=\frac{1-p}{p^2}`.
+	* Hint:
+
+		* Use divide-and-conquer by splitting the case where :math:`X=1` and :math:`X>1`.
+		* Utilise the total expectation law as :math:`\mathbb{E}[X]=\mathbb{P}(X=1)\mathbb{E}[X|X=1]+\mathbb{P}(X>1)\mathbb{E}[X|X>1]`
+
 * Multinomial
 
 Limiting rvs:
