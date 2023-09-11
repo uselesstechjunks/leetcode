@@ -161,7 +161,9 @@ Notion of Independence:
 ------------------------------------
 .. note::
 	* :math:`X` is independent of an event :math:`A` iff :math:`p_{X|A}(x)=p_X(x)` for all :math:`x`.
-	* For two independent rvs, :math:`p_{X,Y}(x,y)=p_X(x)p_Y(y)` for all :math:`x` and :math:`y`.
+	* Two rvs are independent when :math:`p_X(x)=p_X|Y(x|y)` and :math:`p_Y(y)=p_Y|X(y|x)` holds for all values of :math:`x` and :math:`y`.
+	* Two independent rvs are written with the notation :math:`X\perp\!\!\!\perp Y`.
+	* If :math:`X\perp\!\!\!\perp Y`, :math:`p_{X,Y}(x,y)=p_X(x)p_Y(y)` for all :math:`x` and :math:`y`.
 
 .. note::
 	Expectation and variance for independent rvs:
@@ -239,7 +241,12 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 .. note::
 	* Geometric rvs have a memorylessness property. Even if we know that the first trial was a failure, it doesn't tell us anything about the remaining number of trials required to get a success. 
 	* The remaining number of trials follows the same geometric distribution.
-	* This fact is useful for obtaining the mean and variance of geometric rvs, where we use the fact that :math:`\mathbb{E}[X|X>1]=1+\mathbb{E}[X]`
+	* This fact is useful for obtaining the mean and variance of geometric rvs.
+
+		* Suppose the first trial was a failure. This is represented with the fact that :math:`X>1`.
+		* Let the remaining number of trials until first success is represented by :math:`Y`. Clearly, :math:`X|X>1=Y+1` and :math:`\mathbb{E}[X|X>1]=\mathbb{E}[Y]+1`.
+		* By the memorylessless property, :math:`Y\sim\mathrm{Geom}(p)` as well. Therefore, :math:`\mathbb{E}[Y]=\mathbb{E}[X]`.
+		* We use the fact to compute the conditional expectation, :math:`\mathbb{E}[X|X>1]=1+\mathbb{E}[X]`.
 	* [Derive] For :math:`X\sim\mathrm{Geom}(p)`, :math:`\mathbb{E}[X]=\frac{1}{p}` and :math:\mathrm{Var}(X)=\frac{1-p}{p^2}`.
 	* Hint:
 
