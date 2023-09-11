@@ -203,7 +203,7 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 	We can write a Binomially distributed rv as a sum of independent, Bernoulli rvs. 
 
 	* Let's denote each of the trials with a different Bernoulli rv, :math:`X_i\sim\mathrm{Ber}(p)` for :math:`i`-th trial. 
-	* Then :math:`Y=X_1+\cdots+X_n` represents the total number of successes where :math:`X_i\bot X_j` for :math:`i\neq j`.
+	* Then :math:`Y=X_1+\cdots+X_n` is the total number of successes, :math:`X_i\perp\!\!\!\perp X_j` for :math:`i\neq j`.
 	* [Derive] For :math:`X\sim\mathrm{Bin}(n,p)`, :math:`\mathbb{E}[X]=np` and :math:`\mathrm{Var}(X)=np(1-p)`.
 
 ..  tip::
@@ -232,7 +232,7 @@ Limiting rvs:
 If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate it using another rv with an easier-to-manipulate distribution. For :math:`\lambda=n\cdot p`, :math:`X\sim\mathrm{Poisson}(\lambda)` (:math:`\lambda>0`), the PMF is given by 
 
 .. math::
-	p_X(x)=e^{-\lambda)\frac{\lambda^x}{x!}
+	p_X(x)=e^{-\lambda}\frac{\lambda^x}{x!}
 
 .. attention::
 	Prove that :math:`\sum_{x=0}^\infty p_X(x)=1`.
