@@ -204,10 +204,18 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 	* [Derive] For :math:`X\sim\mathrm{Bin}(n,p)`, :math:`\mathbf{E}[X]=np` and :math:`\mathrm{Var}(X)=np(1-p)`.
 
 ..  tip::
-    Solving a problem with an exisitng framework often requires us to think of a process with which the experiment takes place. With the right process description, seemingly difficult problems often become easy.
+	Solving a problem with an exisitng framework often requires us to think of a process with which the experiment takes place. With the right process description, seemingly difficult problems often become easy.
 
 ..  attention::
-    [The Birthday Problem] In a party of :math:`500` guests, what is the probability that you share your birthday with :math:`5` other people?
+	[The Birthday Problem] In a party of :math:`500` guests, what is the probability that you share your birthday with :math:`5` other people?
+
+	* All birthdays are equally likely (assumption of the underlying probability model).
+	* Person A's birthday is independent of person B's birthday.
+	* To find out the number of people who share their birthday with me I can
+		* pick a person in random and ask their birthday
+		* I consider it a success if their birthday is the same as mine, failure otherwise
+		* repeat for all :math:`n`
+	* Total number of successes represents the total number of people who share their birthday with me.
 
 * Geometric
 * Multinomial
