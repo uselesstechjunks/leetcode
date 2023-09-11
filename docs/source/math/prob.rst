@@ -251,15 +251,15 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
  			& = & \underbrace{\sum_{i=1}^n\mathbf{E}[X_i^2]}_\text{$n$ terms} + \underbrace{\sum_{i=1}^n\sum_{j=1|i\neq j}^n\mathbf{E}[X_i X_j]}_\text{$n^2-n$ terms} \\
 			& = & \sum_{i=1}^n X_i^2\mathbb{P}(X_i)+\sum_{i=1}^n\sum_{j=1|i\neq j}^n X_i X_j\mathbb{P}(X_i,X_j)
 			\end{eqnarray}
-	* For the first term
+	* For the first term:
 	
 		* We can ignore the case where :math:`X_i=1` as :math:`X_i^2=0` as well.
 		* For :math:`X_i^2=1` when :math:`X_i=1`.
 		* The first term becomes :math:`\sum_{i=1}^n 1\cdot\mathbb{P}(X_1=1)=n\cdot\frac{1}{n}=1`.
-	* For the second term
+	* For the second term:
 
 		* We ignore the cases when either of :math:`X_i` or :math:`X_j` are 0.
-		* For :math:1X_i=1,X_j=1`, by symmetry argument similar to above, we can conclude that for any :math:`i\neq j`
+		* **[IMPORTANT]** For :math:1X_i=1,X_j=1`, by symmetry argument similar to above, we can conclude that for any :math:`i\neq j`
 
 		.. math:: \mathbb{P}(X_i=1,X_j=1)=\mathbb{P}(X_1=1,X_2=1)=\mathbb{P}(X_1=1)\mathbb{P}(X_2=1|X_1=1)=\frac{1}{n}\cdot\frac{1}{n-1}
 
