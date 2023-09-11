@@ -161,7 +161,7 @@ Notion of Independence:
 ------------------------------------
 .. note::
 	* :math:`X` is independent of an event :math:`A` iff :math:`p_{X|A}(x)=p_X(x)` for all :math:`x`.
-	* Two rvs are independent when :math:`p_X(x)=p_X|Y(x|y)` and :math:`p_Y(y)=p_Y|X(y|x)` holds for all values of :math:`x` and :math:`y`.
+	* Two rvs are independent when :math:`p_X(x)=p_{X|Y}(x|y)` and :math:`p_Y(y)=p_{Y|X}(y|x)` holds for all values of :math:`x` and :math:`y`.
 	* Two independent rvs are written with the notation :math:`X\perp\!\!\!\perp Y`.
 	* If :math:`X\perp\!\!\!\perp Y`, :math:`p_{X,Y}(x,y)=p_X(x)p_Y(y)` for all :math:`x` and :math:`y`.
 
@@ -186,6 +186,14 @@ Any experiment that deals with a binary outcome (e.g. **success** or **failure**
 	* We only need to know about one of the probability values, :math:`\mathbb{P}(X=1)=p`, as :math:`\mathbb{P}(X=0)=1-p`.
 	* Therefore, a Bernoulli rv is parameterised with just 1 parameter, :math:`p`.
 	* [Derive] For :math:`X\sim\mathrm{Ber}(p)`, :math:`\mathbb{E}[X]=p` and :math:`\mathrm{Var}(X)=p(1-p)`.
+
+* Multinoulli:
+
+Any experiment that deals with a categorical outcome can be represented by a Multinoulli rv.
+
+.. note::
+	* If the rv :math:`X` takes the values from the set :math:`\{x_1,\cdots,x_k\}`, then :math:`X\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)`.
+	* We can do away with :math:`k-1` parameters instead of :math:`k`, as :math:`\sum_{i=1}^k p_i=1`.
 
 * Uniform:
 
