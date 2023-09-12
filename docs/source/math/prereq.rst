@@ -49,6 +49,12 @@ Let :math:`u(x)` and :math:`v(x)` be two functions. Then
 
  .. math:: \int u(x)v(x) dx = u(x)\int v(x) dx −\int u'(x) \left(\int v(x) dx\right) dx
 
+Fubini's Theorem:
+-------------------------------
+For double integral of a function :math:`f(x,y)` in a rectangular region :math:`R=\[a,b\]\times \[c,d\]` and \iint\limits_{R} \left|f(x,y)\right|dx dy<\infty, we can write
+
+ .. math:: \iint\limits_{R} f(x,y)dx dy=\int\limits_a^b \left(\int\limits_c^d f(x,y)dy\right)dx=\int\limits_c^d \left(\int\limits_a^b f(x,y)dx\right)dy
+
 .. seealso::
  * Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_
  * Calculating the Gaussian integral: `YouTube video playlist <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_
