@@ -217,7 +217,7 @@ Multinoulli:
 Any experiment that deals with a categorical outcome can be represented by a Multinoulli rv.
 
 .. note::
-	* If the rv :math:`X` takes the values from the set :math:`\{1,\cdots,k\}`, then :math:`X\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)`.
+	* If the rv :math:`X` takes the values from the set :math:`\{x_1,\cdots,x_k\}`, then :math:`X\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)`.
 	* We can do away with :math:`k-1` parameters instead of :math:`k`, as :math:`\sum_{i=1}^k p_i=1`.
 	* Bernoulli is a special case of Multinoulli where :math:`k=2`.
 
