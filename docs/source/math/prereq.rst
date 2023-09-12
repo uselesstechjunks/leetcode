@@ -49,6 +49,7 @@ Let :math:`u(x)` and :math:`v(x)` be two functions. Then
 
  .. math:: \int u(x)v(x) dx = u(x)\int v(x) dx −\int u'(x) \left(\int v(x) dx\right) dx
 
-.. note::
+.. seealso::
  * Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_
+ * Calculating the Gaussian integral: `YouTube video playlist <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_
 
