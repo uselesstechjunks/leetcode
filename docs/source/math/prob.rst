@@ -175,6 +175,16 @@ Entropy and Mutual Information:
 
 		.. math:: I(X,Y)=H(X)-H(X|Y)
 
+.. tip::
+	* The term :math:`I(X,Y)` can be thought of as the reduction in entropy (from :math:`H(X)`) once we observe :math:`Y`. It is therefore the information about :math:`X` conveyed by :math:`Y`.
+	* [Prove] If :math:`X\perp\!\!\!\perp Y`, what is the mutual information?
+
+.. attention::
+	* [Prove] Let the PMF of :math:`X=\{x_1,\cdots,x_n\}` is defined by the masses :math:`p_1,\cdots,p_n` such that :math:`\sum_{i=1}^n p_i=1`. Let us define another PMF :math:`q_1,\cdots,q_n` such that :math:`\sum_{i=1}^n q_i=1`. Then :math:`H(X)\leq-\sum_{i=1}^n p_i\lg(q_i)` and the equality holds only when :math:`p_i=q_i` for all :math:`i`.
+
+		* [Hint] Use the inequality :math:`\ln(\alpha)=\alpha-1` for :math:`\alpha>0`.
+	* As a special case of the above, :math:`H(X)\leq\lg(n)` and the equality holds when :math:`p_i=\frac{1}{n}` for all :math:`i`.
+
 Some discrete random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
