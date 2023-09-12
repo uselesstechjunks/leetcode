@@ -166,8 +166,14 @@ Entropy and Mutual Information:
 ------------------------------------------
 
 .. note::
-	* For a rv with PMF :math:`X\sim p_X`, the term :math:`H(X)=\sum_x p_X(x)\log(p_X(x))` defines entropy.
-	* TODO
+	* For a rv with PMF :math:`X\sim p_X`, the term :math:`H(X)=-\sum_x p_X(x)\lg(p_X(x))` defines entropy which is a measure of uncertainty.
+	* For 2 rvs with a joint distribution :math:`p_{X,Y}(x,y)`, the term :math:`I(X,Y)=\sum_x\sum_y p_{X,Y}(x,y)\lg\left(\frac{p_{X,Y}(x,y)}{p_X(x)p_Y(y)}\right)` defines **mutual information**.
+	* [Prove] Let :math:`H(X,Y)=-\sum_x\sum_y p_{X,Y}(x,y)\lg(p_{X,Y}(x,y))`. Then
+
+		.. math:: I(X,Y)=H(X)+H(Y)-H(X,Y)
+	* [Prove] Let :math:`H(X|Y)=-\sum_y p_Y(y)\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))=\mathbb{E}\left[\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))\right]`. This can be thought of as the expected conditional entropy. Then
+
+		.. math:: I(X,Y)=H(X)-H(X|Y)
 
 Some discrete random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
