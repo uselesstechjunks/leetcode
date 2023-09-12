@@ -308,7 +308,7 @@ Multinomial:
 Like Binomial, Multinomial describes the joint distribution of counts of different possible values for of :math:`n` repeated Multinoulli trials. 
 
 .. note::
-	* Let :math:`Y\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)` where :math:`Y=y_1,\cots,y_k`. 
+	* Let :math:`Y\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)` where :math:`Y=\{y_1,\cdots,y_k\}`. 
 	* Let :math:`X_i` be rv represending the number of times :math:`y_i` occurs.
 	* There rvs are not independent.
 	* The joint PMF for all such rvs is given by the Multinomial distribution (i.e. :math:`X_1,\cdots,X_k\sim\mathrm{Multinomial}(p1,\cdots,p_k)`
