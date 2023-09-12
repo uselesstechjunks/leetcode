@@ -39,3 +39,13 @@ Multinomial theorem:
 
   .. math::
    (x_1+x_2+\cdots+x_r)^n=\sum_{\sum_{i=1}^r k_i=n} {n\choose k_1\cdots k_r} x_1^{k_1}\cdots x_r^{k_r}
+
+Calculus
+==============================================
+
+Integration by parts:
+-------------------------------
+Let :math:`u(x)` and :math:`v(x)` be two functions. Then
+
+ .. math:: \int u(x)v(x) dx = u(x)\int v(x) dx −\int u'(x) (\int v(x) dx) dx
+
