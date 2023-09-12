@@ -51,7 +51,7 @@ Let :math:`u(x)` and :math:`v(x)` be two functions. Then
 
 Fubini's Theorem:
 -------------------------------
-For double integral of a function :math:`f(x,y)` in a rectangular region :math:`R=\[a,b\]\times \[c,d\]` and \iint\limits_{R} \left|f(x,y)\right|dx dy<\infty, we can write
+For double integral of a function :math:`f(x,y)` in a rectangular region :math:`R=[a,b]\times [c,d]` and :math:`\iint\limits_{R} \left|f(x,y)\right|dx dy<\infty`, we can compute it using iterated integrals as follows:
 
  .. math:: \iint\limits_{R} f(x,y)dx dy=\int\limits_a^b \left(\int\limits_c^d f(x,y)dy\right)dx=\int\limits_c^d \left(\int\limits_a^b f(x,y)dx\right)dy
 
