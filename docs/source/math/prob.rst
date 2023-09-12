@@ -310,7 +310,7 @@ Like Binomial, Multinomial describes the joint distribution of counts of differe
 .. note::
 	* Let :math:`Y\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)` where :math:`Y=\{y_1,\cdots,y_k\}`. 
 	* Let :math:`X_i` be rv represending the number of times :math:`y_i` occurs.
-	* There rvs are not independent.
+	* These rvs are not independent.
 	* The joint PMF for all such rvs is given by the Multinomial distribution (i.e. :math:`X_1,\cdots,X_k\sim\mathrm{Multinomial}(p1,\cdots,p_k)`
 
 		.. math:: p_{X1,\cdots,X_k}(x_1,\cdots,x_k)={n \choose {x1,\cdots,x_k} p_1^{x_1}\cdots p_k^{x_k}
