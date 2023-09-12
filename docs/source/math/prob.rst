@@ -171,7 +171,10 @@ Entropy and Mutual Information:
 	* [Prove] Let :math:`H(X,Y)=-\sum_x\sum_y p_{X,Y}(x,y)\lg(p_{X,Y}(x,y))`. Then
 
 		.. math:: I(X,Y)=H(X)+H(Y)-H(X,Y)
-	* [Prove] Let :math:`H(X|Y)=-\sum_y p_Y(y)\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))=\mathbb{E}\left[\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))\right]`. This can be thought of as the expected conditional entropy. Then
+	* [Prove] Let 
+
+		.. math:: H(X|Y)=-\sum_y p_Y(y)\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))=\mathbb{E}_Y\left[\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))\right]
+	   This can be thought of as the expected conditional entropy. Then
 
 		.. math:: I(X,Y)=H(X)-H(X|Y)
 
