@@ -162,6 +162,13 @@ Notion of Independence:
 	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)`
 	* Extends naturally to more than 2 rvs.
 
+Entropy and Mutual Information:
+------------------------------------------
+
+.. note::
+	* For a rv with PMF math:`X\sim p_X`, the term :math:`H(X)=\sum_x p_X(x)\log(p_X(x))` defines entropy.
+	* TODO
+
 Some discrete random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -235,7 +242,7 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 	* Person A's birthday is independent of person B's birthday.
 	* [The process] To find out the number of people who share their birthday with me, I can
 
-		* pick a person in random and ask their birthday
+		* pick a person at random and ask their birthday
 		* I consider it a success if their birthday is the same as mine, failure otherwise
 		* repeat for all :math:`n`
 
@@ -286,7 +293,7 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 	* The remaining number of trials follows the same geometric distribution.
 	* This fact is useful for obtaining the mean and variance of geometric rvs.
 
-		* Suppose the first trial was a failure. This is represented with the fact that :math:`X>1`.
+		* Suppose the first trial was a failure. This is represented by the conditional rv :math:`X|X>1`.
 		* Let the remaining number of trials until first success is represented by :math:`Y`. Clearly, :math:`X|X>1=Y+1` and :math:`\mathbb{E}[X|X>1]=\mathbb{E}[Y]+1`.
 		* By the memorylessless property, :math:`Y\sim\mathrm{Geom}(p)` as well. Therefore, :math:`\mathbb{E}[Y]=\mathbb{E}[X]`.
 		* We use the fact to compute the conditional expectation, :math:`\mathbb{E}[X|X>1]=1+\mathbb{E}[X]`.
@@ -297,6 +304,17 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 		* Utilise the total expectation law as :math:`\mathbb{E}[X]=\mathbb{P}(X=1)\mathbb{E}[X|X=1]+\mathbb{P}(X>1)\mathbb{E}[X|X>1]`
 
 Multinomial:
+
+Like Binomial, Multinomial describes the joint distribution of counts of different possible values for of :math:`n` repeated Multinoulli trials. 
+
+.. note::
+	* Let :math:`Y\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)` where :math:`Y=y_1,\cots,y_k`. 
+	* Let :math:`X_i` be rv represending the number of times :math:`y_i` occurs.
+	* There rvs are not independent.
+	* The joint PMF for all such rvs is given by the Multinomial distribution (i.e. :math:`X_1,\cdots,X_k\sim\mathrm{Multinomial}(p1,\cdots,p_k)`
+
+		.. math:: p_{X1,\cdots,X_k}(x_1,\cdots,x_k)={n \choose {x1,\cdots,x_k} p_1^{x_1}\cdots p_k^{x_k}
+	* Note that the individual rvs have a Binomial distribution, :math:`X_i\sim\mathrm{Bin}(n, p_i)`.
 
 Limiting rvs:
 """"""""""""""""""""""""""""""""""""
