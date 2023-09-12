@@ -49,3 +49,6 @@ Let :math:`u(x)` and :math:`v(x)` be two functions. Then
 
  .. math:: \int u(x)v(x) dx = u(x)\int v(x) dx −\int u'(x) (\int v(x) dx) dx
 
+.. note::
+ * Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_
+
