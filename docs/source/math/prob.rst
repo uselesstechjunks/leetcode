@@ -166,7 +166,7 @@ Entropy and Mutual Information:
 ------------------------------------------
 
 .. note::
-	* For a rv with PMF math:`X\sim p_X`, the term :math:`H(X)=\sum_x p_X(x)\log(p_X(x))` defines entropy.
+	* For a rv with PMF :math:`X\sim p_X`, the term :math:`H(X)=\sum_x p_X(x)\log(p_X(x))` defines entropy.
 	* TODO
 
 Some discrete random variables
