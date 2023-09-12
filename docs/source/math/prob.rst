@@ -313,7 +313,7 @@ Like Binomial, Multinomial describes the joint distribution of counts of differe
 	* These rvs are not independent.
 	* The joint PMF for all such rvs is given by the Multinomial distribution (i.e. :math:`X_1,\cdots,X_k\sim\mathrm{Multinomial}(p1,\cdots,p_k)`
 
-		.. math:: p_{X1,\cdots,X_k}(x_1,\cdots,x_k)={n \choose {x1,\cdots,x_k} p_1^{x_1}\cdots p_k^{x_k}
+		.. math:: p_{X1,\cdots,X_k}(x_1,\cdots,x_k)={n \choose {x_1,\cdots,x_k}} p_1^{x_1}\cdots p_k^{x_k}
 	* Note that the individual rvs have a Binomial distribution, :math:`X_i\sim\mathrm{Bin}(n, p_i)`.
 
 Limiting rvs:
