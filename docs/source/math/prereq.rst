@@ -39,3 +39,25 @@ Multinomial theorem:
 
   .. math::
    (x_1+x_2+\cdots+x_r)^n=\sum_{\sum_{i=1}^r k_i=n} {n\choose k_1\cdots k_r} x_1^{k_1}\cdots x_r^{k_r}
+
+Calculus
+==============================================
+
+Integration by parts:
+-------------------------------
+Let :math:`u(x)` and :math:`v(x)` be two functions. Then
+
+ .. math:: \int u(x)v(x) dx = u(x)\int v(x) dx −\int u'(x) \left(\int v(x) dx\right) dx
+
+Fubini's Theorem:
+-------------------------------
+For double integral of a function :math:`f(x,y)` in a rectangular region :math:`R=[a,b]\times [c,d]` and :math:`\iint\limits_{R} \left|f(x,y)\right|dx dy<\infty`, we can compute it using iterated integrals as follows:
+
+ .. math:: \iint\limits_{R} f(x,y)dx dy=\int\limits_a^b \left(\int\limits_c^d f(x,y)dy\right)dx=\int\limits_c^d \left(\int\limits_a^b f(x,y)dx\right)dy
+
+.. seealso::
+ * Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_
+ * Different ways for evaluating the Gaussian integral: `YouTube video playlist by Dr Peyam <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_
+
+  * Hints (one way): Let :math:`I=\int\limits_{-\infty}^\infty e^{x^2}dx`. Try to compute :math:`I^2`, convert this into a double integral using Fubini's theorem, and then use polar co-ordinate transform.
+
