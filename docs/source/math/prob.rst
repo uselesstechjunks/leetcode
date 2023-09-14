@@ -33,7 +33,7 @@ Random variables (rvs) are real-valued functions of the outcome of an experiment
 Discrete Random Variable
 ====================================
 
-Discrete = values are from a finite/countably infinite set.
+Discrete = values are from a finite/countably infinite subset of :math:`\mathbb{R}`.
 
 .. note::
 	For a discrete rv, :math:`X`:
@@ -361,7 +361,22 @@ If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate i
 Continuous Random Variable
 ======================================================
 
-Continuous = values are from an uncountably infinite set.
+Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
+
+.. note::
+	* When the set is uncountable, the probability :math:`\mathbb{P}(X=x)` of each individual such values :math:`x` is 0. 
+	* Therefore, the probabilistic interpreration has to work with a subset of the real line :math:`B\subset\mathbb{R}`.
+	* We define a probability density function (PDF), :math:`f_X(x)`, such that
+
+		.. math:: \mathbb{P}(X\in B)=\int\limits_{B} f_X(x)dx.
+	* This term is well defined when
+
+		* :math:`B` can be represented as the union of a countable collection of intervals.
+		* :math:`f_X` is a continuous/piecewise continuous function with at most countable number of points of discontinuity.
+	* We say a rv is continuous for which such PDF can be defined.
+
+.. tip::
+	* For the simplest case when :math:`B` is an interval, :math:`[a,b]`, then :math:`\mathbb{P}(a\leq X\leq b)=\int\limits_a^b f_X(x)dx`.
 
 Functions of Random Variable
 =============================================
@@ -371,7 +386,6 @@ Functions of Random Variable
 	* Let :math:`X\sim p_X` and :math:`Y\sim p_Y` be two independent discrete rvs. Then their sum :math:`Z=X+Y` has the distribution
 
 		.. math:: p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z]
-
 
 Moment Generating Functions
 =============================================
