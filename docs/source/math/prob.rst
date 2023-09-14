@@ -408,6 +408,7 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 	* Example where the expectation isn't defined
 
 		.. math:: f_X(x)=\frac{c}{1+x^2}
+
 	  where :math:`c` is a normalisation constant to make it a valid PDF.
 
 .. tip::
