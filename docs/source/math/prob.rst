@@ -382,7 +382,7 @@ Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 		.. math:: \mathbb{P}(a\leq X\leq b)=\mathbb{P}(a\leq X< b)=\mathbb{P}(a< X\leq b)=\mathbb{P}(a< X< b).
 	* Normalisation property holds, i.e.
 
-		.. math:: \mathbb{P}(-\infty< X<\infty)=\int\limits_{-\infty}^\infty f_X(x)=1.
+		.. math:: \mathbb{P}(-\infty< X<\infty)=\int\limits_{-\infty}^\infty f_X(x)dx=1.
 	* To understand why it is called a density
 
 		* We can think of a small interval :math:`[x,x+\delta]`, for some :math:`\delta>0` as :math:`\delta\to 0`. 
@@ -401,6 +401,22 @@ Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 
 Expectation and Variance:
 ------------------------------------------
+We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx` (assuming that the integral exists and is bounded).
+
+.. attention::
+	* Expectation is well-defined when :math:`\int\limits_{-\infty}^\infty \left|x \right| f_X(x) dx < \infty`.
+	* Example where the expectation isn't defined
+
+		.. math:: f_X(x)=\frac{c}{1+x^2}
+	  where :math:`c` is a normalisation constant to make it a valid PDF.
+
+.. tip::
+	* LOTUS holds, even when :math:`g(X)` is a discrete-valued function.
+	* Variance can be defined as usual.
+
+Cumulative distribution function:
+------------------------------------------
+
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
