@@ -399,6 +399,9 @@ Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 			    0 & \text{otherwise}
 			  \end{cases}
 
+Expectation and Variance:
+------------------------------------------
+
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
