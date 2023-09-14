@@ -382,7 +382,7 @@ Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 		.. math:: \mathbb{P}(a\leq X\leq b)=\mathbb{P}(a\leq X< b)=\mathbb{P}(a< X\leq b)=\mathbb{P}(a< X< b).
 	* Normalisation property holds, i.e.
 
-		..math:: \mathbb{P}(-\infty< X<\infty)=\int\limits_{-\infty}^\infty f_X(x)=1.
+		.. math:: \mathbb{P}(-\infty< X<\infty)=\int\limits_{-\infty}^\infty f_X(x)=1.
 	* To understand why it is called a density
 
 		* We can think of a small interval :math:`[x,x+\delta]`, for some :math:`\delta>0` as :math:`\delta\to 0`. 
