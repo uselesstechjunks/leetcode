@@ -56,8 +56,13 @@ For double integral of a function :math:`f(x,y)` in a rectangular region :math:`
  .. math:: \iint\limits_{R} f(x,y)dx dy=\int\limits_a^b \left(\int\limits_c^d f(x,y)dy\right)dx=\int\limits_c^d \left(\int\limits_a^b f(x,y)dx\right)dy
 
 .. seealso::
- * Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_
- * Different ways for evaluating the Gaussian integral: `YouTube video playlist by Dr Peyam <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_
+ * Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
+ * Different ways for evaluating the Gaussian integral: `YouTube video playlist by Dr Peyam <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_.
 
   * Hints (one way): Let :math:`I=\int\limits_{-\infty}^\infty e^{x^2}dx`. Try to compute :math:`I^2`, convert this into a double integral using Fubini's theorem, and then use polar co-ordinate transform.
 
+Geometry
+=========================================
+
+.. seealso::
+ * On the general equation of second degree: `Notes at IMSc <https://www.imsc.res.in/~svis/eme13/kesavan-new.pdf>`_.
