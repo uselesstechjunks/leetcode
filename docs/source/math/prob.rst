@@ -568,7 +568,7 @@ Conditioning on a random variables
 Notion of Independence:
 ------------------------------------
 .. note::
-	* Two jointly continuous rvs are considered independent (:math:`X\perp\!\!\!\perp Y`) if :math:`f_{X|Y}=f_X(x)`.
+	* Two jointly continuous rvs are considered independent (:math:`X\perp\!\!\!\perp Y`) if :math:`f_{X|Y}(x|y)=f_X(x)` for all :math:`x` for all :math:`y` where :math:`f_Y(y)>0`.
 	* If :math:`X\perp\!\!\!\perp Y`, :math:`f_{X,Y}(x,y)=f_X(x)f_Y(y)` and :math:`F_{X,Y}(x,y)=F_X(x)F_Y(y)` for all :math:`x` and :math:`y`.
 
 Some continuous random variables
