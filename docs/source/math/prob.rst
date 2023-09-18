@@ -536,10 +536,28 @@ Conditioning on a random variables
 
 			.. math:: \mathbb{P}(x\leq X\leq x+\delta|y\leq Y\leq y+\epsilon)=\frac{\mathbb{P}(x\leq X\leq x+\delta,y\leq Y\leq y+\epsilon)}{\mathbb{P}(y\leq Y\leq y+\epsilon)}\approx\frac{f_{X,Y}(x,y)\cdot\delta\cdot\epsilon}{f_Y(y)\cdot\epsilon}=\frac{f_{X,Y}(x,y)}{f_Y(y)}\cdot\delta=f_{X|Y}(x|y)\cdot\delta
 
+	* If we have a mixed distribution with one discrete rv, :math:`K` and one continuous rv :math:`Y`, then we can define conditional PMF :math:`p_{K|Y}(k|y)` and conditional PDF :math:`f_{Y|K}(y|k)`.
+
+		* Probabilistic interpretation for this works as follows:
+
+			.. math:: p_{K|Y}(k|y)=\frac{\mathbb{P}(K=k,y\leq Y\leq y+\delta)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{\mathbb{P}(K=k)\mathbb{P}(y\leq Y\leq y+\delta|K=k)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{p_K(k)f_{Y|K}(y|k)\cdot\delta}{f_Y(y)\cdot\delta}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}
+		* We have :math:`f_Y(y)=\sum_{k}p_K(k)f_{Y|K}(y|k)` and :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(t)p_{K|Y}(k|t) dt`.
+
 .. tip::
 	Definition of probability conditioned on an event with 0 probability:
 
 	* Using above, we can define the conditional probability as :math:`\mathbb{P}(X\in B|Y=y)=\int\limits_B f_{X|Y}(x|y) dx` for any (measurable) subset :math:`B\in\mathbb{R}`.
+
+.. tip::
+	Bayes theorem: There are 4 versions of Bayes theorem.
+
+	* Discrete-discrete: Already discussed in the context of discrete rv.
+	* Discrete-continuous: :math:`p_{K|Y}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}`.
+	* Continuous-discrete: :math:`f_{X|K}=\frac{f_X(x)p_{X|K}(x|k)}{p_K(k)}`.
+	* Continuous-continuous: :math:`f_{X|K}=\frac{f_X(x)f_{X|Y}(x|y)}{f_Y(y)}`.
+
+Notion of Independence:
+------------------------------------
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
