@@ -448,7 +448,7 @@ Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq
 	* If :math:`X` is discrete and takes integer values, then :math:`F_X(k)=\sum_{-\infty}^k p_X(k)` and :math:`p_X(k)=F_X(k)-F_X(k-1)`.
 	* If :math:`X` is continuous, then :math:`F_X(x)=\int\limits_{-\infty}^x f_X(x) dx` and :math:`f_X(x)=\frac{dF_X}{dx}(x)`.
 
-.. tips::
+.. tip::
 	We can work with a **mixed** rv that takes discrete values for some and continuous values for others if we work with the CDF.
 
 Some continuous random variables
