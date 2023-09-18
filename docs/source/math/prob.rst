@@ -418,6 +418,16 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 Cumulative distribution function:
 ------------------------------------------
 
+Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq x\}` has well defined probability.
+
+.. note::
+	We can define a **cumulative distribution function** for any rv as 
+
+		.. math::
+			F_X(x)=\mathbb{P}(X\leq x)=\begin{cases}
+			    \sum_{k\leq x} p_X(k), & \text{if $X$ is discrete} \\
+			    \int\limits_{-\infty}^x f_X(x) dx, & \text{if $X$ is continuous}
+			  \end{cases}
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
