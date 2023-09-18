@@ -540,7 +540,7 @@ Conditioning on a random variables
 
 		* Probabilistic interpretation for this works as follows:
 
-			.. math:: p_{K|Y}(k|y)=\frac{\mathbb{P}(K=k,y\leq Y\leq y+\delta)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{\mathbb{P}(K=k)\mathbb{P}(y\leq Y\leq y+\delta|K=k)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{p_K(k)f_{Y|K}(y|k)\cdot\delta}{f_Y(y)\cdot\delta}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}
+			.. math:: p_{K|Y}(k|y)=\frac{\mathbb{P}(K=k,y\leq Y\leq y+\delta)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{\mathbb{P}(K=k)\mathbb{P}(y\leq Y\leq y+\delta|K=k)}{\mathbb{P}(y\leq Y\leq y+\delta)}\approx\frac{p_K(k)f_{Y|K}(y|k)\cdot\delta}{f_Y(y)\cdot\delta}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}
 		* We have :math:`f_Y(y)=\sum_{k}p_K(k)f_{Y|K}(y|k)` and :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(t)p_{K|Y}(k|t) dt`.
 
 .. tip::
@@ -553,11 +553,23 @@ Conditioning on a random variables
 
 	* Discrete-discrete: Already discussed in the context of discrete rv.
 	* Discrete-continuous: :math:`p_{K|Y}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}`.
+
+		* Example: detection of digital signal transmission with noise
+
 	* Continuous-discrete: :math:`f_{X|K}=\frac{f_X(x)p_{X|K}(x|k)}{p_K(k)}`.
+
+		* Example: inference about bernoulli parameter
+
 	* Continuous-continuous: :math:`f_{X|K}=\frac{f_X(x)f_{X|Y}(x|y)}{f_Y(y)}`.
+
+.. note::
+	Conditional expectation and LOTUS with conditional PDFs work the same as the discrete case.
 
 Notion of Independence:
 ------------------------------------
+.. note::
+	* Two jointly continuous rvs are considered independent (:math:`X\perp\!\!\!\perp Y`) if :math:`f_{X|Y}=f_X(x)`.
+	* If :math:`X\perp\!\!\!\perp Y`, :math:`f_{X,Y}(x,y)=f_X(x)f_Y(y)` and :math:`F_{X,Y}(x,y)=F_X(x)F_Y(y)` for all :math:`x` and :math:`y`.
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
