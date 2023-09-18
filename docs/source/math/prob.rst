@@ -497,6 +497,7 @@ Conditioning on an event
 	* A continuous rv can be conditioned on an event :math:`A` with :math:`\mathbb{P}(A)>0` and we can define a conditional PDF :math:`f_{X|A}(x)` such that for any (measurable) subset :math:`B\in\mathbb{R}`
 
 		.. math:: \mathbb{P}(X\in B|A)=\int\limits_B f_{X|A}(x) dx
+
 		* Normalisation property holds like normal PDFs, i.e. :math:`\int\limits_{-\infty}^\infty f_{X|A}(x) dx=1`.
 		* When the event is defined with the same rv such as :math:`X\in A`, then 
 
@@ -506,8 +507,13 @@ Conditioning on an event
 				0, & \text{otherwise}
 				\end{cases}
 	* Probabilistic interpretation:
+
 		* We can think of a small interval around :math:`X=x` of width :math:`\delta`, so that :math:`X\approx x`.
-		* We can then define :math:`f_{X|A}(x)=\mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}`
+		* Assuming that :math:`f_{X|A}(x)` stays the same within this interval
+
+			.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}=\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_{\{x\leq t\leq x+\delta\}\cap A} dt\approx f_{X|A}(x)\cdot\delta
+
+		* Therefore, the conditional CDF represents conditional probability given an event per unit length.
 	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) dx`.
 	* Jointly continuous rvs can be conditioned on an event :math:`C=\{x,y\}\in A` with :math:`\mathbb{P}(C)>0` as exactly like above.
 
@@ -523,9 +529,17 @@ Conditioning on a random variables
 	* A continuous rv :math:`X` can be conditioned on another continuous rv :math:`Y`, assuming that they are jointly continuous with CDF :math:`f_{X,Y}(x,y)` as long as :math:`f_Y(y)>0`.
 	* The conditional PDF is defined as :math:`f_{X|Y}(x|y)=\frac{f_{X,Y}(x,y)}{f_Y(y)}`.
 	* Technicalities:
+
 		* To interpret this, we cannot take the conditioning event as :math:`Y=y` as it has 0 probability.
 		* Therefore, we must consider a small interval around :math:`Y=y` of width :math:`\epsilon` such that :math:`Y\approx y`.
-		* 
+		* Assuming that the joint and the marginal PDFs stay the same within this rectangular region, we have
+
+			.. math:: \mathbb{P}(x\leq X\leq x+\delta|y\leq Y\leq y+\epsilon)=\frac{\mathbb{P}(x\leq X\leq x+\delta,y\leq Y\leq y+\epsilon)}{\mathbb{P}(y\leq Y\leq y+\epsilon)}\approx\frac{f_{X,Y}(x,y)\cdot\delta\cdot\epsilon}{f_Y(y)\cdot\epsilon}=\frac{f_{X,Y}(x,y)}{f_Y(y)}\cdot\delta=f_{X|Y}(x|y)\cdot\delta
+
+.. tip::
+	Definition of probability conditioned on an event with 0 probability:
+
+	* Using above, we can define the conditional probability as :math:`\mathbb{P}(X\in B|Y=y)=\int\limits_B f_{X|Y}(x|y) dx` for any (measurable) subset :math:`B\in\mathbb{R}`.
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
