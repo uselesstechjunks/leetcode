@@ -82,7 +82,7 @@ Expectation and Variance:
 	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
 
 Multiple discrete random variables:
-------------------------------------
+--------------------------------------
 .. note::
 	* We can define the joint-probability mass function for 2 rvs as 
 
@@ -452,7 +452,7 @@ Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq
 	We can work with a **mixed** rv that takes discrete values for some and continuous values for others if we work with the CDF.
 
 Multiple continuous random variables:
-------------------------------------
+-----------------------------------------
 Similar to the single continuous variable case, we say that two rvs, :math:`X` and :math:`Y` are **jointly continuous** if we can define an associated joint PDF :math:`f_{X,Y}(x,y)\geq 0` for any subset :math:`B\subset\mathbb{R}^2`, such that :math:`\mathbb{P}((x,y)\in B)=\iint\limits_{(x,y)\in B} f_{X,Y}(x,y) d(x,y)`.
 
 .. tip::
