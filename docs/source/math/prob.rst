@@ -576,8 +576,15 @@ Some continuous random variables
 
 * Uniform:
 * Exponential
+
+- explain the memorylessness property of the exponential and connection with geometric
+
 * Gaussian
 * Multivariate Gaussian
+
+- explain the shape of 2d normal density 
+- independent case - circles in contours
+- dependent case - parabolas in contours
 
 TODO
 
