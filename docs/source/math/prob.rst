@@ -81,14 +81,14 @@ Expectation and Variance:
 ..  warning::
 	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
 
-Multiple random variables:
-------------------------------------
+Multiple discrete random variables:
+--------------------------------------
 .. note::
 	* We can define the joint-probability mass function for 2 rvs as 
 
 		.. math:: p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y).
 
-	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)`.
+	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)` (similarly for :math:`p_Y(y)`.).
 	* LOTUS holds, i.e. for :math:`g(X,Y)`, :math:`\mathbb{E}[g(X,Y)]=\sum_{x,y} g(x,y) p_{X,Y}(x,y)`.
 	* Linearity of expectation holds, i.e. :math:`\mathbb{E}[aX+bY+c]=a\mathbb{E}[X]+b\mathbb{E}[Y]+c`.
 	* Extends naturally for more than 2 rvs.
@@ -418,16 +418,97 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 Cumulative distribution function:
 ------------------------------------------
 
+Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq x\}` has well defined probability.
+
+.. note::
+	We can define a **cumulative distribution function** (CDF) for any rv as 
+
+		.. math::
+			F_X(x)=\mathbb{P}(X\leq x)=\begin{cases}
+			    \sum_{k\leq x} p_X(k), & \text{if $X$ is discrete} \\
+			    \int\limits_{-\infty}^x f_X(x) dx, & \text{if $X$ is continuous}
+			  \end{cases}
+
+.. attention::
+	* Monotonic: The CDF :math:`F_X(x)` is non-decreasing. If :math:`x_1<x_2`, then :math:`F_X(x_1)\leq F_X(x_2)`.
+	* Normalised: We have :math:`\lim\limits_{x\to -\infty} F_X(x)=0` and :math:`\lim\limits_{x\to \infty} F_X(x)=1`.
+	* Right-continuous: We have :math:`F_X(x)=F_X(x^+)` for all :math:`x`, where
+
+		.. math:: F_X(x^+)=\lim\limits_{y\to x, y > x} F_X(y)
+
+	* Let :math:`X\sim F_X` and :math:`Y\sim G_Y`. We have
+
+		.. math:: \forall x\in\mathbb{R}. F_X(x)=G_Y(x)\implies \forall \omega\in\Omega. \mathbb{P}(X\in \omega)=\mathbb{P}(Y\in \omega)
+
+.. seealso::
+	* :math:`F_X` is
+		* piecewise continuous, if :math:`X` is discrete.
+		* continuous, if :math:`X` is continuous.
+		* This explains why, in general, :math:`F_X` can only have countable points of discontinuity.
+	* If :math:`X` is discrete and takes integer values, then :math:`F_X(k)=\sum_{-\infty}^k p_X(k)` and :math:`p_X(k)=F_X(k)-F_X(k-1)`.
+	* If :math:`X` is continuous, then :math:`F_X(x)=\int\limits_{-\infty}^x f_X(x) dx` and :math:`f_X(x)=\frac{dF_X}{dx}(x)`.
+
+.. tip::
+	We can work with a **mixed** rv that takes discrete values for some and continuous values for others if we work with the CDF.
+
+Multiple continuous random variables:
+-----------------------------------------
+Similar to the single continuous variable case, we say that two rvs, :math:`X` and :math:`Y` are **jointly continuous** if we can define an associated joint PDF :math:`f_{X,Y}(x,y)\geq 0` for any subset :math:`B\subset\mathbb{R}^2`, such that :math:`\mathbb{P}((x,y)\in B)=\iint\limits_{(x,y)\in B} f_{X,Y}(x,y) d(x,y)`.
+
+.. tip::
+	* For the simple case when :math:`B=[a,b]\times [c,d]`, and when Fubini's theorem applies, then
+
+		.. math:: \mathbb{P}(a\leq X\leq b, c\leq Y\leq d)=\int\limits_a^b\int\limits_c^d f_{X,Y}(x,y) dx dy=\int\limits_c^d\int\limits_a^b f_{X,Y}(x,y) dy dx
+	* Normalisation property holds.
+
+		.. math:: \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty f_{X,Y}(x,y)dx dy=1
+	* To understand when it would truly be a jointly continuous rv
+
+		* For some small :math:`\delta>0` and :math:`\delta\to 0`, we can think of a small rectangular segment :math:`[x,x+\delta]\times[y,y+\delta]`.
+		* Assuming that :math:`f_{X,Y}` is "well behaved (its values doesn’t jump around fanatically), we can assume that it stays (almost) constant for this entire interval.
+		* Therefore
+	
+			.. math:: \mathbb{P}(x\leq X\leq x+\delta, y\leq Y\leq y+\delta)=\int\limits_x^{x+\delta}\int\limits_y^{y+\delta}f_{X,Y}(t,v)dt dv\approx f_{X,Y}(x,y)\cdot\delta^2.
+		* Hence :math:`f_{X,Y}(x,y)` can be thought of as probability per unit area.
+
+.. warning::
+	If :math:`X=g(Y)`, then the entire function :math:`f_{X,Y}` has an area of 0 in the :math:`\mathbb{R}^2` plane. Therefore, we cannot define a PDF which can represent probability per unit area. So :math:`X` and :math:`Y` cannot be **jointly** continuous even if the marginal PDFs are well defined.
+
+.. note::
+	* The marginal probability is defined as :math:`f_X(x)=\int\limits_{-\infty}^\infty f_{X,Y}(x,y)dy` (similarly for :math:`f_Y(y)`).
+	* We can define **joint CDF** as 
+
+		.. math:: F_{X,Y}(x,y)=\mathbb{P}(X\leq x, Y\leq y)=\int\limits_{-\infty}^x \int\limits_{-\infty}^y f_{X,Y}(x,y) dx dy
+
+		* PDF can be recovered from CDF as 
+
+			.. math:: f_{X,Y}(x,y)=\frac{\partial^2 F_{X,Y}}{\partial x\partial x}(x,y).
+	* Extends naturally for more than 2 rvs.
+	* All the properties for expectation holds as usual.
+
+
+Conditioning:
+------------------------------------
+
+Conditioning on an event
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Conditioning on a random variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Uniform:
+* Exponential
+* Gaussian
+* Multivariate Gaussian
 
 TODO
 
+*********************************************
 Functions of Random Variable
-=============================================
+*********************************************
 .. tip::
 	Sum of independent rvs - Convolution:
 
@@ -436,12 +517,9 @@ Functions of Random Variable
 		.. math:: p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z].
 
 Moment Generating Functions
-=============================================
+====================================
 
 #. Distributions
-	#. Gaussian
-	#. Multivariate Gaussian
-	#. Exponential
 	#. Laplace
 	#. Beta
 	#. Dirichlet
@@ -449,23 +527,58 @@ Moment Generating Functions
 	#. Empirical
 	#. Mixture
 
-#. Inequalities
-	#. Markov
-	#. Chebyshev
-	#. Hoeffding
-	#. Mill (Gaussian)
-	#. Cauchy-Schwarz
+*********************************************
+Inequalities
+*********************************************
 
-#. Convergence
-	#. Convergence in probability
-	#. Convergence in distribution
-	#. Convergence in quadratic mean
+Markov
+====================================
 
-#. Information Theory
+Chebyshev
+====================================
+
+Hoeffding
+====================================
+
+Mill (Gaussian)
+====================================
+
+Cauchy-Schwarz
+====================================
+
+*********************************************
+Convergence
+*********************************************
+
+Convergence in probability
+====================================
+
+Convergence in distribution
+====================================
+
+Convergence in quadratic mean
+====================================
+
+Weak Law of Large Number
+====================================
+
+Strong Law of Large Number
+====================================
+
+Central Limit Theorem
+====================================
+
+*********************************************
+Information Theory
+*********************************************
+
 	#. Shanon Entropy
 	#. KL Divergence
 	#. Cross Entropy
 
-#. Graphical Models
+*********************************************
+Graphical Models
+*********************************************
+
 	#. Bayes Net
 	#. Markov Random Factor Model
