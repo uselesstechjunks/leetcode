@@ -517,7 +517,7 @@ Functions of Random Variable
 		.. math:: p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z].
 
 Moment Generating Functions
------------------------------------
+====================================
 
 #. Distributions
 	#. Laplace
