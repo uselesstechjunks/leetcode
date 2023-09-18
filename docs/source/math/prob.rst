@@ -88,7 +88,7 @@ Multiple discrete random variables:
 
 		.. math:: p_{X,Y}(x,y)=\mathbb{P}(\{X=x\}\cap\{Y=y\})=\mathbb{P}(X=x,Y=y).
 
-	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)`.
+	* The **marginal probability** is defined as :math:`p_X(x)=\sum_y p_{X,Y}(x,y)` (similarly for :math:`p_Y(y)`.).
 	* LOTUS holds, i.e. for :math:`g(X,Y)`, :math:`\mathbb{E}[g(X,Y)]=\sum_{x,y} g(x,y) p_{X,Y}(x,y)`.
 	* Linearity of expectation holds, i.e. :math:`\mathbb{E}[aX+bY+c]=a\mathbb{E}[X]+b\mathbb{E}[Y]+c`.
 	* Extends naturally for more than 2 rvs.
@@ -408,7 +408,6 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 	* Example where the expectation isn't defined
 
 		.. math:: f_X(x)=\frac{c}{1+x^2}
-
 	  where :math:`c` is a normalisation constant to make it a valid PDF.
 
 .. tip::
@@ -474,15 +473,41 @@ Similar to the single continuous variable case, we say that two rvs, :math:`X` a
 .. warning::
 	If :math:`X=g(Y)`, then the entire function :math:`f_{X,Y}` has an area of 0 in the :math:`\mathbb{R}^2` plane. Therefore, we cannot define a PDF which can represent probability per unit area. So :math:`X` and :math:`Y` cannot be **jointly** continuous even if the marginal PDFs are well defined.
 
+.. note::
+	* The marginal probability is defined as :math:`f_X(x)=\int\limits_{-\infty}^\infty f_{X,Y}(x,y)dy` (similarly for :math:`f_Y(y)`).
+	* We can define **joint CDF** as 
+
+		.. math:: F_{X,Y}(x,y)=\mathbb{P}(X\leq x, Y\leq y)=\int\limits_{-\infty}^x \int\limits_{-\infty}^y f_{X,Y}(x,y) dx dy
+
+		* PDF can be recovered from CDF as 
+
+			.. math:: f_{X,Y}(x,y)=\frac{\partial^2 F_{X,Y}}{\partial x\partial x}(x,y).
+	* Extends naturally for more than 2 rvs.
+	* All the properties for expectation holds as usual.
+
+
+Conditioning:
+------------------------------------
+
+Conditioning on an event
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Conditioning on a random variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Uniform:
+* Exponential
+* Gaussian
+* Multivariate Gaussian
 
 TODO
 
+*********************************************
 Functions of Random Variable
-=============================================
+*********************************************
 .. tip::
 	Sum of independent rvs - Convolution:
 
@@ -491,12 +516,9 @@ Functions of Random Variable
 		.. math:: p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z].
 
 Moment Generating Functions
-=============================================
+-----------------------------------
 
 #. Distributions
-	#. Gaussian
-	#. Multivariate Gaussian
-	#. Exponential
 	#. Laplace
 	#. Beta
 	#. Dirichlet
@@ -504,23 +526,58 @@ Moment Generating Functions
 	#. Empirical
 	#. Mixture
 
-#. Inequalities
-	#. Markov
-	#. Chebyshev
-	#. Hoeffding
-	#. Mill (Gaussian)
-	#. Cauchy-Schwarz
+*********************************************
+Inequalities
+*********************************************
 
-#. Convergence
-	#. Convergence in probability
-	#. Convergence in distribution
-	#. Convergence in quadratic mean
+Markov
+------------------------------------
 
-#. Information Theory
+Chebyshev
+------------------------------------
+
+Hoeffding
+------------------------------------
+
+Mill (Gaussian)
+------------------------------------
+
+Cauchy-Schwarz
+------------------------------------
+
+*********************************************
+Convergence
+*********************************************
+
+Convergence in probability
+------------------------------------
+
+Convergence in distribution
+------------------------------------
+
+Convergence in quadratic mean
+------------------------------------
+
+Weak Law of Large Number
+------------------------------------
+
+Strong Law of Large Number
+------------------------------------
+
+Central Limit Theorem
+------------------------------------
+
+*********************************************
+Information Theory
+*********************************************
+
 	#. Shanon Entropy
 	#. KL Divergence
 	#. Cross Entropy
 
-#. Graphical Models
+*********************************************
+Graphical Models
+*********************************************
+
 	#. Bayes Net
 	#. Markov Random Factor Model
