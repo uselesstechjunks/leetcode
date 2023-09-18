@@ -456,9 +456,23 @@ Multiple continuous random variables:
 Similar to the single continuous variable case, we say that two rvs, :math:`X` and :math:`Y` are **jointly continuous** if we can define an associated joint PDF :math:`f_{X,Y}(x,y)\geq 0` for any subset :math:`B\subset\mathbb{R}^2`, such that :math:`\mathbb{P}((x,y)\in B)=\iint\limits_{(x,y)\in B} f_{X,Y}(x,y) d(x,y)`.
 
 .. tip::
-	For the simple case when :math:`B` is a rectangular region :math:`[[a,b]\times [c,d]]`, and when Fubini's theorem applies, then
+	* For the simple case when :math:`B=[a,b]\times [c,d]`, and when Fubini's theorem applies, then
 
 		.. math:: \mathbb{P}(a\leq X\leq b, c\leq Y\leq d)=\int\limits_a^b\int\limits_c^d f_{X,Y}(x,y) dx dy=\int\limits_c^d\int\limits_a^b f_{X,Y}(x,y) dy dx
+	* Normalisation property holds.
+
+		.. math:: \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty f_{X,Y}(x,y)dx dy=1
+	* To understand when it would truly be a jointly continuous rv
+
+		* For some small :math:`\delta>0` and :math:`\delta\to 0`, we can think of a small rectangular segment :math:`[x,x+\delta]\times[y,y+\delta]`.
+		* Assuming that :math:`f_{X,Y}` is "well behaved (its values doesn’t jump around fanatically), we can assume that it stays (almost) constant for this entire interval.
+		* Therefore
+	
+			.. math:: \mathbb{P}(x\leq X\leq x+\delta, y\leq Y\leq y+\delta)=\int\limits_x^{x+\delta}\int\limits_y^{y+\delta}f_{X,Y}(t,v)dt dv\approx f_{X,Y}(x,y)\cdot\delta^2.
+		* Hence :math:`f_{X,Y}(x,y)` can be thought of as probability per unit area.
+
+.. warning::
+	If :math:`X=g(Y)`, then the entire function :math:`f_{X,Y}` has an area of 0 in the :math:`\mathbb{R}^2` plane. Therefore, we cannot define a PDF which can represent probability per unit area. So :math:`X` and :math:`Y` cannot be **jointly** continuous even if the marginal PDFs are well defined.
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
