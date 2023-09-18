@@ -421,13 +421,35 @@ Cumulative distribution function:
 Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq x\}` has well defined probability.
 
 .. note::
-	We can define a **cumulative distribution function** for any rv as 
+	We can define a **cumulative distribution function** (CDF) for any rv as 
 
 		.. math::
 			F_X(x)=\mathbb{P}(X\leq x)=\begin{cases}
 			    \sum_{k\leq x} p_X(k), & \text{if $X$ is discrete} \\
 			    \int\limits_{-\infty}^x f_X(x) dx, & \text{if $X$ is continuous}
 			  \end{cases}
+
+.. attention::
+	* Monotonic: The CDF :math:`F_X(x)` is non-decreasing. If :math:`x_1<x_2`, then :math:`F_X(x_1)\leq F_X(x_2)`.
+	* Normalised: We have :math:`\lim\limits_{x\to -\infty} F_X(x)=0` and :math:`\lim\limits_{x\to \infty} F_X(x)=1`.
+	* Right-continuous: We have :math:`F_X(x)=F_X(x^+)` for all :math:`x`, where
+
+		.. math:: F_X(x^+)=\lim\limits_{y\to x, y > x} F_X(y)
+
+	* Let :math:`X\sim F_X` and :math:`Y\sim G_Y`. We have
+
+		.. math:: \forall x\in\mathbb{R}. F_X(x)=G_Y(x)\implies \forall \omega\in\Omega. \mathbb{P}(X\in \omega)=\mathbb{P}(Y\in \omega)
+
+.. seealso::
+	* :math:`F_X` is
+		* piecewise continuous, if :math:`X` is discrete.
+		* continuous, if :math:`X` is continuous.
+		* This explains why, in general, :math:`F_X` can only have countable points of discontinuity.
+	* If :math:`X` is discrete and takes integer values, then :math:`F_X(k)=\sum_{-\infty}^k p_X(k)` and :math:`p_X(k)=F_X(k)-F_X(k-1)`.
+	* If :math:`X` is continuous, then :math:`F_X(x)=\int\limits_{-\infty}^x f_X(x) dx` and :math:`f_X(x)=\frac{dF_X}{dx}(x)`.
+
+.. tips::
+	We can work with a **mixed** rv that takes discrete values for some and continuous values for others if we work with the CDF.
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
