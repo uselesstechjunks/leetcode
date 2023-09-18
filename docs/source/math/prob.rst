@@ -96,11 +96,11 @@ Multiple discrete random variables:
 Conditioning:
 ------------------------------------
 .. note::
-	* An rv can be conditioned on an event :math:`A` (when :math:`\mathbb{P}(A)>0`) and its conditional PMF is defined as 
+	* A discrete rv can be conditioned on an event :math:`A` (when :math:`\mathbb{P}(A)>0`) and its conditional PMF is defined as 
 
 		.. math:: p_{X|A}(x)=\mathbb{P}(X=x|A).
 
-	* Extends to the case when the event is defined in terms of another rv, i.e. :math:`A=\{Y=y\}` (:math:`p_Y(y)>0`) and is written as
+	* Extends to the case when the event is defined in terms of another discrete rv, i.e. :math:`A=\{Y=y\}` with :math:`p_Y(y)>0` and is written as
 
 		.. math:: p_{X|Y}(x|y)=\mathbb{P}(X=x|Y=y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}
 
@@ -489,12 +489,43 @@ Similar to the single continuous variable case, we say that two rvs, :math:`X` a
 
 Conditioning:
 ------------------------------------
+A continuous rv can be conditioned on an event, or another rv, discrete or continuous.
 
 Conditioning on an event
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* A continuous rv can be conditioned on an event :math:`A` with :math:`\mathbb{P}(A)>0` and we can define a conditional PDF :math:`f_{X|A}(x)` such that for any (measurable) subset :math:`B\in\mathbb{R}`
+
+		.. math:: \mathbb{P}(X\in B|A)=\int\limits_B f_{X|A}(x) dx
+		* Normalisation property holds like normal PDFs, i.e. :math:`\int\limits_{-\infty}^\infty f_{X|A}(x) dx=1`.
+		* When the event is defined with the same rv such as :math:`X\in A`, then 
+
+			.. math:: 
+				f_{X|X\in A}(x)=\begin{cases}
+				\frac{f_{X}(x)}{\mathbb{P}(X\in A)}, & \text{if $X\in A$} \\
+				0, & \text{otherwise}
+				\end{cases}
+	* Probabilistic interpretation:
+		* We can think of a small interval around :math:`X=x` of width :math:`\delta`, so that :math:`X\approx x`.
+		* We can then define :math:`f_{X|A}(x)=\mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}`
+	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) dx`.
+	* Jointly continuous rvs can be conditioned on an event :math:`C=\{x,y\}\in A` with :math:`\mathbb{P}(C)>0` as exactly like above.
+
+.. tip::
+	* Total probability theorem: For a partition of the sample space :math:`A_1,\cdots,A_n`, with :math:`\mathbb{P}(A_i)>0` for all :math:`i`
+
+		.. math:: F_X(x)=\sum_{i=1}^n \mathbb{P}(A_i) F_{X|A}(x)
+	* Differentiating both sides, we can recover a formula involving PDFs as :math:`f_X(x)=\sum_{i=1}^n \mathbb{P}(A_i) f_{X|A}(x)`.
 
 Conditioning on a random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* A continuous rv :math:`X` can be conditioned on another continuous rv :math:`Y`, assuming that they are jointly continuous with CDF :math:`f_{X,Y}(x,y)` as long as :math:`f_Y(y)>0`.
+	* The conditional PDF is defined as :math:`f_{X|Y}(x|y)=\frac{f_{X,Y}(x,y)}{f_Y(y)}`.
+	* Technicalities:
+		* To interpret this, we cannot take the conditioning event as :math:`Y=y` as it has 0 probability.
+		* Therefore, we must consider a small interval around :math:`Y=y` of width :math:`\epsilon` such that :math:`Y\approx y`.
+		* 
 
 Some continuous random variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
