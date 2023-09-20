@@ -415,6 +415,31 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 	* LOTUS holds, even when :math:`g(X)` is a discrete-valued function.
 	* Variance can be defined as usual.
 
+.. attention::
+	* We denote :math:`\tilde{X}=X-\mathbb{E}[X]` as the **centralised** version of :math:`X`.
+	
+		* We also have :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[X-\mathbb{E}[X]]=0`.
+
+	* Variance is the 2nd moment of centralised rv :math:`\mathrm{Var}(X)=\mathbb{E}[\tilde{X}^2]`.
+	* We denote :math:`Z=\frac{X-\mathbb{E}[X]}{\sqrt{\mathrm{Var}(X)}}=\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}` as the **standardised** version of :math:`X`.
+
+		* We note that :math:`\mathbb{E}[Z^2]=\mathbb{E}\left[\left(\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}\right)^2\right]=\frac{\mathbb{E}[\tilde{X}^2]}{\mathbb{E}[\tilde{X}^2]}=1`.
+	* Skewness is the 3rd moment of **standardised** rv, :math:`\mathrm{skew}(X)=\mathbb{E}[\tilde{Z}^3]`.
+
+		* Skewness is a statistical measure that assesses the asymmetry of a probability distribution. 
+		* It quantifies the extent to which the data is skewed or shifted to one side. 
+		* Positive skewness indicates a longer tail on the right side of the distribution, while negative skewness indicates a longer tail on the left side.
+	* Kurtosis is the 4th moment of **standardised** rv, :math:`\mathrm{kurt}(X)=\mathbb{E}[\tilde{Z}^4]`.
+
+		* Kurtosis comes from the Greek word for bulging.
+		* Kurtosis is always positive.
+		* Kurtosis is a statistical measure that quantifies the shape of a probability distribution. 
+		* It provides information about the tails and peakedness of the distribution compared to a normal distribution.
+		* Positive kurtosis indicates heavier tails and a more peaked distribution, while negative kurtosis suggests lighter tails and a flatter distribution.
+
+.. tip::
+	* Note that :math:`\mathbb{E}[X^2]=0` signifies that :math:`X=0` with probability 1. This is a useful trick in many calculations.
+
 Cumulative distribution function:
 ------------------------------------------
 
