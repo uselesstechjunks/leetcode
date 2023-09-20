@@ -7,5 +7,5 @@ Deep-Dives
    analysis
    linalg
    calc3
-   prob
+   prob/index
    conv
