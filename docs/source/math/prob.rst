@@ -445,9 +445,9 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 
 			* TODO: Understand why this is a valid definition for an inner product.
 		* We can define the norm induced by this inner product as :math:`\left\| \cdot \right\|_{\text{norm}}`, such that :math:`\langle X,X\rangle=\left\| X \right\|_{\text{norm}}^2=\mathbb{E}[X^2]`.
-		* Then Cauchy-Schwarz inequality becomes :math:`|\langle X,Y\rangle|^2\leq \left\| X \right\|_{\text{norm}}^2\cdot\left\| Y \right\|_{\text{norm}}^2`
+		* Then Cauchy-Schwarz inequality becomes
 
-			.. math:: \left(\mathbb{E}[XY]\right)^2\leq\mathbb{E}[X^2]\cdot\mathbb{E}[Y^2]
+			.. math:: |\langle X,Y\rangle|^2\leq \left\| X \right\|_{\text{norm}}^2\cdot\left\| Y \right\|_{\text{norm}}^2\implies \left(\mathbb{E}[XY]\right)^2\leq\mathbb{E}[X^2]\cdot\mathbb{E}[Y^2]
 
 		* Direct proof without involving Cauchy-Schwarz:
 
