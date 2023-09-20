@@ -415,6 +415,32 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 	* LOTUS holds, even when :math:`g(X)` is a discrete-valued function.
 	* Variance can be defined as usual.
 
+.. attention::
+	* We denote :math:`\tilde{X}=X-\mathbb{E}[X]` as the **centralised** version of :math:`X`.
+	
+		* We also have :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[X-\mathbb{E}[X]]=0`.
+
+	* Variance is the 2nd moment of centralised rv :math:`\mathrm{Var}(X)=\mathbb{E}[\tilde{X}^2]`.
+	* We denote :math:`Z=\frac{X-\mathbb{E}[X]}{\sqrt{\mathrm{Var}(X)}}=\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}` as the **standardised** version of :math:`X`.
+
+		* We note that :math:`\mathbb{E}[Z]=0` and :math:`\mathbb{E}[Z^2]=\mathbb{E}\left[\left(\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}\right)^2\right]=\frac{\mathbb{E}[\tilde{X}^2]}{\mathbb{E}[\tilde{X}^2]}=1`.
+	* Skewness is the 3rd moment of **standardised** rv, :math:`\mathrm{skew}(X)=\mathbb{E}[Z^3]`.
+
+		* Skewness is a way to describe the shape of a probability distribution. It tells us if the distribution is lopsided. 
+	
+			* If the skewness is positive, the distribution has a longer tail on the right. 
+			* If it’s negative, the distribution has a longer tail on the left.
+	* Kurtosis is the 4th moment of **standardised** rv, :math:`\mathrm{kurt}(X)=\mathbb{E}[Z^4]`.
+
+		* Kurtosis comes from the Greek word for bulging.
+		* Kurtosis describes how a probability distribution is shaped. It tells us about the distribution’s tails and its peak. 
+
+			* If kurtosis is positive, the distribution has heavy tails and a sharp peak. 
+			* If it’s negative, the distribution has light tails and a flat peak.
+
+.. tip::
+	* Note that :math:`\mathbb{E}[X^2]=0` signifies that :math:`X=0` with probability 1. This is a useful trick in many calculations.
+
 Cumulative distribution function:
 ------------------------------------------
 
