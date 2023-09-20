@@ -11,3 +11,4 @@ Probability
     ineq
     stochastic
     info
+    graphical
