@@ -9,6 +9,5 @@ Probability
     rv
     func
     ineq
-    bayes
-    classical
     stochastic
+    info
