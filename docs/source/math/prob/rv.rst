@@ -38,19 +38,23 @@ Expectation and Variance
 		* If :math:`X=c`, then :math:`\mathbf{E}[X]=c`.
 	* We can define **Variance** of :math:`X` as :math:`\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
 
+Law of The Unconscious Statistician (LOTUS)
+-----------------------------------------------------
 .. tip::
-	Law of The Unconscious Statistician (LOTUS):
-
 	* For expectation of :math:`Y=g(X)`, we can get away without having to compute PMF explicitly for :math:`Y`, as it can be shown that
 
 		.. math:: \mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
 
 	* With the help of LOTUS, :math:`\mathrm{Var}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
+Moment
+---------------------------
 .. note::
 	* The *n-th moment* of :math:`X` is defined as :math:`\mathbb{E}[X^n]`.
 	* Variance in terms of moments: :math:`\mathrm{Var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2`.
 
+Expectations of linear functions of rv
+--------------------------------------------------------
 .. note::
 	For linear functions of :math:`X`, :math:`g(X)=aX+b`
 
@@ -215,8 +219,10 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 ..  tip::
 	Solving a problem with an exisitng framework often requires us to think of a process with which the experiment takes place. With the right process description, seemingly difficult problems often become easy.
 
+The Birthday Problem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ..  attention::
-	[The Birthday Problem] In a party of :math:`500` guests, what is the probability that you share your birthday with :math:`5` other people?
+	In a party of :math:`500` guests, what is the probability that you share your birthday with :math:`5` other people?
 
 	* All birthdays are equally likely (assumption of the underlying probability model).
 	* Person A's birthday is independent of person B's birthday.
@@ -228,8 +234,10 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 
 	* Total number of successes represents the total number of people who share their birthday with me.
 
+The Hat Problem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. attention::
-	[The Hat Problem] There are :math:`n` people with numbered hats. They throw all their hats into a basket and then pick up one hat one by one. What is the expected number of people who get their own hat back? What is the variance of this?
+	There are :math:`n` people with numbered hats. They throw all their hats into a basket and then pick up one hat one by one. What is the expected number of people who get their own hat back? What is the variance of this?
 
 	* Let :math:`X_i=1` if :math:`i`-th person get their hat back in the process, and :math:`X_i=0` otherwise.
 	* Total number of people who get their own hat back is given by :math:`Y=X_1+X_2+\cdots+X_n`.
@@ -374,6 +382,8 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 	* LOTUS holds, even when :math:`g(X)` is a discrete-valued function.
 	* Variance can be defined as usual.
 
+Centerisation, standardisation, skewness and kurtosis
+------------------------------------------------------------------
 .. attention::
 	* We denote :math:`\tilde{X}=X-\mathbb{E}[X]` as the **centralised** version of :math:`X`.
 	
