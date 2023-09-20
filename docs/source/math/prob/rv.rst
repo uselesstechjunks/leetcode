@@ -47,7 +47,7 @@ Law of The Unconscious Statistician (LOTUS)
 
 	* With the help of LOTUS, :math:`\mathrm{Var}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
-Moment
+Moments of a rv
 ---------------------------
 .. note::
 	* The *n-th moment* of :math:`X` is defined as :math:`\mathbb{E}[X^n]`.
@@ -385,11 +385,11 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 Centerisation, standardisation, skewness and kurtosis
 ------------------------------------------------------------------
 .. attention::
-	* We denote :math:`\tilde{X}=X-\mathbb{E}[X]` as the **centralised** version of :math:`X`.
+	* We denote :math:`\tilde{X}=X-\mathbb{E}[X]` as the **centered** version of :math:`X`.
 	
 		* We also have :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[X-\mathbb{E}[X]]=0`.
 
-	* Variance is the 2nd moment of centralised rv :math:`\mathrm{Var}(X)=\mathbb{E}[\tilde{X}^2]`.
+	* Variance is the 2nd moment of centered rv :math:`\mathrm{Var}(X)=\mathbb{E}[\tilde{X}^2]`.
 	* We denote :math:`Z=\frac{X-\mathbb{E}[X]}{\sqrt{\mathrm{Var}(X)}}=\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}` as the **standardised** version of :math:`X`.
 
 		* We note that :math:`\mathbb{E}[Z]=0` and :math:`\mathbb{E}[Z^2]=\mathbb{E}\left[\left(\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}\right)^2\right]=\frac{\mathbb{E}[\tilde{X}^2]}{\mathbb{E}[\tilde{X}^2]}=1`.
