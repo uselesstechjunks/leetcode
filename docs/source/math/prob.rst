@@ -109,7 +109,7 @@ Conditioning:
 .. tip::
 	* **Bayes theorem**: For :math:`p_Y(y)>0`, :math:`p_{Y|X}(y|x)=\frac{p_Y(y)p_{X|Y}(x|y)}{\sum_y p_Y(y)p_{X|Y}(x|y)}`
 	* :math:`p_Y(y)` is known as **prior**, :math:`p_{Y|X}(y|x)` is called **posterior**, and :math:`p_{X|Y}(x|y)` is known as **likelihood**. 
-	* The demoninator :math:`Z=\sum_y p_Y(y)p_{X|Y}(x|y)` is the probability normalisation factor (i.e. it ensures that the sum is 1).
+	* The denominator :math:`Z=\sum_y p_Y(y)p_{X|Y}(x|y)` is the probability normalisation factor (i.e. it ensures that the sum is 1).
 	* We can often work with unnormalised probabilities when exact values are not required, as :math:`p_{Y|X}(y|x)\propto p_Y(y)p_{X|Y}(x|y)`.
 
 .. tip::
@@ -438,13 +438,18 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 			* If kurtosis is positive, the distribution has heavy tails and a sharp peak. 
 			* If it’s negative, the distribution has light tails and a flat peak.
 
+.. tip::
+	* Note that :math:`\mathbb{E}[X^2]=0` signifies that :math:`X=0` with probability 1. This is a useful trick in many calculations.
+
 .. note::
 	* Cauchy-Schwarz inequality: 
 
 		* We define the inner product between two rvs :math:`X` and :math:`Y` as :math:`\langle X,Y\rangle=\mathbb{E}[XY]`.
 
 			* TODO: Understand why this is a valid definition for an inner product.
-		* We can define the norm induced by this inner product as :math:`\left\| \cdot \right\|_{\text{norm}}`, such that :math:`\langle X,X\rangle=\left\| X \right\|_{\text{norm}}^2=\mathbb{E}[X^2]`.
+		* We can define the norm induced by this inner product as :math:`\left\| \cdot \right\|_{\text{norm}}`, such that
+
+			.. math:: \langle X,X\rangle=\left\| X \right\|_{\text{norm}}^2=\mathbb{E}[X^2]
 		* Then Cauchy-Schwarz inequality becomes
 
 			.. math:: |\langle X,Y\rangle|^2\leq \left\| X \right\|_{\text{norm}}^2\cdot\left\| Y \right\|_{\text{norm}}^2\implies \left(\mathbb{E}[XY]\right)^2\leq\mathbb{E}[X^2]\cdot\mathbb{E}[Y^2]
@@ -455,9 +460,6 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 			* For :math:`\mathbb{E}[Y^2]\neq 0`, the proof follows from the observation that
 		
 				.. math:: \mathbb{E}\left[\left(X-\frac{\mathbb{E}[XY]}{\mathbb{E}[Y^2]}Y\right)^2\right]\geq 0
-
-.. tip::
-	* Note that :math:`\mathbb{E}[X^2]=0` signifies that :math:`X=0` with probability 1. This is a useful trick in many calculations.
 
 Cumulative distribution function:
 ------------------------------------------
