@@ -123,7 +123,7 @@ Conditioning:
 
 		.. math:: p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)
 
-		* Note: This extends it to the countable infinite case from the finite case from the first one.
+		* Note: This extends it to the countable infinite case from the finite case.
 
 	* This allows us to compute the probability of events in a complicated probability model by utilising events from a simpler model, i.e. let's us use the divide-and-conquer technique. We just need to ensure that the events from the simpler model in fact exhausts the entirety of sample space of the original probability model.
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
@@ -152,9 +152,7 @@ Conditioning:
 
 	* **Law of iterated expectation:** If the events, :math:`A_i`, are represented by another discrete rv such that :math:`A_i=\{Y=y\}`
 
-		.. math:: \mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y=y]=\mathbb{E}[\mathbb{E}[X|Y]]
-
-		* The above works because 
+		.. math:: \mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y=y]=\sum_y g(y)p_Y(y)=\mathbb{E}[g(Y)]=\mathbb{E}\left[\mathbb{E}[X|Y]\right] \text{, where $g(Y)=\mathbb{E}[X|Y]$.}
 
 Notion of Independence:
 ------------------------------------
