@@ -1,6 +1,6 @@
-*********************************************
+#######################################################################################
 Random Variable
-*********************************************
+#######################################################################################
 
 Random variables (rvs) are real-valued functions of the outcome of an experiment.
 
@@ -10,8 +10,9 @@ Random variables (rvs) are real-valued functions of the outcome of an experiment
 	* We can *condition* an rv on an event or another rv.
 	* We can define the notion of *independence* of an rv w.r.t an event or another rv.
 
+*********************************************
 Discrete Random Variable
-====================================
+*********************************************
 
 Discrete = values are from a finite/countably infinite subset of :math:`\mathbb{R}`.
 
@@ -29,7 +30,7 @@ Discrete = values are from a finite/countably infinite subset of :math:`\mathbb{
 		#. Utilize axiom 3 to obtain :math:`p_Y(y)=\sum_{\{x | g(x)=y\}} p_X(x)`
 
 Expectation and Variance:
-------------------------------------
+======================================================
 .. note::
 	* We can define **Expectation** of :math:`X` as :math:`\mathbb{E}[X]=\sum_x x p_X(x)` (assuming that the sum exists).
 	* Elementary properties of expectation:
@@ -62,7 +63,7 @@ Expectation and Variance:
 	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
 
 Multiple discrete random variables:
---------------------------------------
+c
 .. note::
 	* We can define the joint-probability mass function for 2 rvs as 
 
@@ -74,7 +75,7 @@ Multiple discrete random variables:
 	* Extends naturally for more than 2 rvs.
 
 Conditioning:
-------------------------------------
+======================================================
 .. note::
 	* A discrete rv can be conditioned on an event :math:`A` (when :math:`\mathbb{P}(A)>0`) and its conditional PMF is defined as 
 
@@ -135,7 +136,7 @@ Conditioning:
 		.. math:: \mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y=y]=\sum_y g(y)p_Y(y)=\mathbb{E}[g(Y)]=\mathbb{E}\left[\mathbb{E}[X|Y]\right] \text{, where $g(Y)=\mathbb{E}[X|Y]$.}
 
 Notion of Independence:
-------------------------------------
+======================================================
 .. note::
 	* :math:`X` is independent of an event :math:`A` iff :math:`p_{X|A}(x)=p_X(x)` for all :math:`x`.
 	* Two rvs are independent when :math:`p_X(x)=p_{X|Y}(x|y)` and :math:`p_Y(y)=p_{Y|X}(y|x)` hold for all values of :math:`x` and :math:`y`.
@@ -150,7 +151,7 @@ Notion of Independence:
 	* Extends naturally to more than 2 rvs.
 
 Entropy and Mutual Information:
-------------------------------------------
+======================================================
 
 .. note::
 	* For a rv with PMF :math:`X\sim p_X`, the term :math:`H(X)=-\sum_x p_X(x)\lg(p_X(x))` defines entropy which is a measure of uncertainty.
@@ -177,11 +178,12 @@ Entropy and Mutual Information:
 	* As a special case of the above, :math:`H(X)\leq\lg(n)` and the equality holds when :math:`p_i=\frac{1}{n}` for all :math:`i`.
 
 Some discrete random variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+======================================================
 
-Simple rvs:
+Simple rvs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bernoulli
 """"""""""""""""""""""""""""""""""""
-Bernoulli:
 
 Any experiment that deals with a binary outcome (e.g. **success** or **failure**) can be represented by a Bernoulli rv. 
 
@@ -203,7 +205,8 @@ Any experiment that deals with a binary outcome (e.g. **success** or **failure**
 			  \end{cases}
 	* Under this setup, :math:`\mathbb{P}(A_i)=\mathbb{E}[X_i]`.	
 
-Multinoulli:
+Multinoulli
+""""""""""""""""""""""""""""""""""""
 
 Any experiment that deals with a categorical outcome can be represented by a Multinoulli rv.
 
@@ -212,13 +215,15 @@ Any experiment that deals with a categorical outcome can be represented by a Mul
 	* We can do away with :math:`k-1` parameters instead of :math:`k`, as :math:`\sum_{i=1}^k p_i=1`.
 	* Bernoulli is a special case of Multinoulli where :math:`k=2`.
 
-* Uniform:
+* Uniform
+""""""""""""""""""""""""""""""""""""
 
 TODO
 
-Composite rvs:
+Composite rvs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Binomial
 """"""""""""""""""""""""""""""""""""
-Binomial:
 
 In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :math:`X` denote the total number of **successes**. Then :math:`X\sim\mathrm{Bin}(n,p)` and the PMF is given by
 
@@ -286,7 +291,8 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 
 		.. math:: \mathbb{P}(X_i=1,X_j=1)=\mathbb{P}(X_1=1,X_2=1)=\mathbb{P}(X_1=1)\mathbb{P}(X_2=1|X_1=1)=\frac{1}{n}\cdot\frac{1}{n-1}
 
-Geometric:
+Geometric
+""""""""""""""""""""""""""""""""""""
 
 The number of repeated Bernoulli trials we need until we get a success can be modelled using a Geometric distribution. Let the Bernoulli trails have parameter :math:`p`. Then :math:`X\sim\mathrm{Geom}(p)` and the PMF for :math:`X=1,\cdots` is given by
 
@@ -310,7 +316,8 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 		* Use divide-and-conquer by splitting the case where :math:`X=1` and :math:`X>1`.
 		* Utilise the total expectation law as :math:`\mathbb{E}[X]=\mathbb{P}(X=1)\mathbb{E}[X|X=1]+\mathbb{P}(X>1)\mathbb{E}[X|X>1]`
 
-Multinomial:
+Multinomial
+""""""""""""""""""""""""""""""""""""
 
 Like Binomial, Multinomial describes the joint distribution of counts of different possible values for of :math:`n` repeated Multinoulli trials. 
 
@@ -323,9 +330,11 @@ Like Binomial, Multinomial describes the joint distribution of counts of differe
 		.. math:: p_{X1,\cdots,X_k}(x_1,\cdots,x_k)={n \choose {x_1,\cdots,x_k}} p_1^{x_1}\cdots p_k^{x_k}
 	* Note that the individual rvs have a Binomial distribution, :math:`X_i\sim\mathrm{Bin}(n, p_i)`.
 
-Limiting rvs:
+Limiting rvs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Poisson
 """"""""""""""""""""""""""""""""""""
-Poisson:
 
 If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate it using another rv with an easier-to-manipulate distribution. For :math:`\lambda=n\cdot p`, :math:`X\sim\mathrm{Poisson}(\lambda)` (:math:`\lambda>0`), the PMF is given by 
 
@@ -345,8 +354,9 @@ If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate i
 .. attention::
 	[The Birthday Problem] As the value of :math:`p` is quite low and :math:`n` is quite high, we can model this as a Poisson rv as well.
 
+*********************************************
 Continuous Random Variable
-======================================================
+*********************************************
 
 Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 
@@ -386,8 +396,8 @@ Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 			    0 & \text{otherwise}
 			  \end{cases}
 
-Expectation and Variance:
-------------------------------------------
+Expectation and Variance
+=========================================================
 We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx` (assuming that the integral exists and is bounded).
 
 .. attention::
@@ -448,8 +458,8 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 		
 				.. math:: \mathbb{E}\left[\left(X-\frac{\mathbb{E}[XY]}{\mathbb{E}[Y^2]}Y\right)^2\right]\geq 0
 
-Cumulative distribution function:
-------------------------------------------
+Cumulative distribution function
+=========================================================
 
 Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq x\}` has well defined probability.
 
@@ -484,8 +494,8 @@ Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq
 .. tip::
 	We can work with a **mixed** rv that takes discrete values for some and continuous values for others if we work with the CDF.
 
-Multiple continuous random variables:
------------------------------------------
+Multiple continuous random variables
+=========================================================
 Similar to the single continuous variable case, we say that two rvs, :math:`X` and :math:`Y` are **jointly continuous** if we can define an associated joint PDF :math:`f_{X,Y}(x,y)\geq 0` for any subset :math:`B\subset\mathbb{R}^2`, such that :math:`\mathbb{P}((x,y)\in B)=\iint\limits_{(x,y)\in B} f_{X,Y}(x,y) d(x,y)`.
 
 .. tip::
@@ -520,12 +530,12 @@ Similar to the single continuous variable case, we say that two rvs, :math:`X` a
 	* All the properties for expectation holds as usual.
 
 
-Conditioning:
-------------------------------------
+Conditioning
+=========================================================
 A continuous rv can be conditioned on an event, or another rv, discrete or continuous.
 
 Conditioning on an event
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------------
 .. note::
 	* A continuous rv can be conditioned on an event :math:`A` with :math:`\mathbb{P}(A)>0` and we can define a conditional PDF :math:`f_{X|A}(x)` such that for any (measurable) subset :math:`B\in\mathbb{R}`
 
@@ -557,7 +567,7 @@ Conditioning on an event
 	* Differentiating both sides, we can recover a formula involving PDFs as :math:`f_X(x)=\sum_{i=1}^n \mathbb{P}(A_i) f_{X|A}(x)`.
 
 Conditioning on a random variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------------
 .. note::
 	* A continuous rv :math:`X` can be conditioned on another continuous rv :math:`Y`, assuming that they are jointly continuous with CDF :math:`f_{X,Y}(x,y)` as long as :math:`f_Y(y)>0`.
 	* The conditional PDF is defined as :math:`f_{X|Y}(x|y)=\frac{f_{X,Y}(x,y)}{f_Y(y)}`.
@@ -598,14 +608,14 @@ Conditioning on a random variables
 .. note::
 	Conditional expectation and LOTUS with conditional PDFs work the same as the discrete case.
 
-Notion of Independence:
-------------------------------------
+Notion of Independence
+=========================================================
 .. note::
 	* Two jointly continuous rvs are considered independent (:math:`X\perp\!\!\!\perp Y`) if :math:`f_{X|Y}(x|y)=f_X(x)` for all :math:`x` for all :math:`y` where :math:`f_Y(y)>0`.
 	* If :math:`X\perp\!\!\!\perp Y`, :math:`f_{X,Y}(x,y)=f_X(x)f_Y(y)` and :math:`F_{X,Y}(x,y)=F_X(x)F_Y(y)` for all :math:`x` and :math:`y`.
 
 Some continuous random variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=========================================================
 
 * Uniform:
 * Exponential
