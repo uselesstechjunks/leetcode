@@ -1,6 +1,6 @@
-******************************************************
+#######################################################################################
 Probability Axioms (Kolmogorov Axioms)
-******************************************************
+#######################################################################################
 
 Let the set of all possible outcomes of an experiment be :math:`\Omega`, and let **events** be defined as measurable subsets, :math:`\omega\subset\Omega`. Then a measure :math:`\mu:2^{|\Omega|}\mapsto\mathbb{R}` is called a **probability measure** iff
 
