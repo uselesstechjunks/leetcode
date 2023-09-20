@@ -176,10 +176,8 @@ Entropy and Mutual Information
 
 Some discrete random variables
 ======================================================
-Simple discrete rvs
--------------------------------------
 Bernoulli
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 Any experiment that deals with a binary outcome (e.g. **success** or **failure**) can be represented by a Bernoulli rv. 
 
 .. note::
@@ -201,7 +199,7 @@ Any experiment that deals with a binary outcome (e.g. **success** or **failure**
 	* Under this setup, :math:`\mathbb{P}(A_i)=\mathbb{E}[X_i]`.	
 
 Multinoulli
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 Any experiment that deals with a categorical outcome can be represented by a Multinoulli rv.
 
 .. note::
@@ -210,13 +208,11 @@ Any experiment that deals with a categorical outcome can be represented by a Mul
 	* Bernoulli is a special case of Multinoulli where :math:`k=2`.
 
 Uniform
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 TODO
 
-Composite discrete rvs
--------------------------------------
 Binomial
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :math:`X` denote the total number of **successes**. Then :math:`X\sim\mathrm{Bin}(n,p)` and the PMF is given by
 
 .. math::
@@ -284,7 +280,7 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 		.. math:: \mathbb{P}(X_i=1,X_j=1)=\mathbb{P}(X_1=1,X_2=1)=\mathbb{P}(X_1=1)\mathbb{P}(X_2=1|X_1=1)=\frac{1}{n}\cdot\frac{1}{n-1}
 
 Geometric
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 The number of repeated Bernoulli trials we need until we get a success can be modelled using a Geometric distribution. Let the Bernoulli trails have parameter :math:`p`. Then :math:`X\sim\mathrm{Geom}(p)` and the PMF for :math:`X=1,\cdots` is given by
 
 .. math:: p_X(x)=(1-p)^x p
@@ -308,7 +304,7 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 		* Utilise the total expectation law as :math:`\mathbb{E}[X]=\mathbb{P}(X=1)\mathbb{E}[X|X=1]+\mathbb{P}(X>1)\mathbb{E}[X|X>1]`
 
 Multinomial
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 Like Binomial, Multinomial describes the joint distribution of counts of different possible values for of :math:`n` repeated Multinoulli trials. 
 
 .. note::
@@ -320,11 +316,8 @@ Like Binomial, Multinomial describes the joint distribution of counts of differe
 		.. math:: p_{X1,\cdots,X_k}(x_1,\cdots,x_k)={n \choose {x_1,\cdots,x_k}} p_1^{x_1}\cdots p_k^{x_k}
 	* Note that the individual rvs have a Binomial distribution, :math:`X_i\sim\mathrm{Bin}(n, p_i)`.
 
-Limiting discrete rvs
--------------------------------------
 Poisson
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+-------------------------------------
 If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate it using another rv with an easier-to-manipulate distribution. For :math:`\lambda=n\cdot p`, :math:`X\sim\mathrm{Poisson}(\lambda)` (:math:`\lambda>0`), the PMF is given by 
 
 .. math:: p_X(x)=e^{-\lambda}\frac{\lambda^x}{x!}
@@ -609,16 +602,27 @@ Notion of Independence
 Some continuous random variables
 =========================================================
 
-* Uniform:
-* Exponential
+Uniform
+-------------------------------------
 
-- explain the memorylessness property of the exponential and connection with geometric
+Exponential
+-------------------------------------
+TOD: explain the memorylessness property of the exponential and connection with geometric
 
-* Gaussian
-* Multivariate Gaussian
+Laplace
+-------------------------------------
+TOD: explain the memorylessness property of the exponential and connection with geometric
 
-- explain the shape of 2d normal density 
-- independent case - circles in contours
-- dependent case - parabolas in contours
+Gaussian
+-------------------------------------
+
+Multivariate Gaussian
+-------------------------------------
+TODO
+
+.. note::
+	* explain the shape of 2d normal density 
+	* independent case - circles in contours
+	* dependent case - parabolas in contours
 
 TODO
