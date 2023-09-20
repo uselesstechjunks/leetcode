@@ -451,7 +451,7 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 
 		* Direct proof without involving Cauchy-Schwarz:
 
-			* For :math:`\mathbb{E}[Y^2]=0`, we have :math:`Y=0` with probability 1. In that case the above is satisfied.
+			* For :math:`\mathbb{E}[Y^2]=0`, we have :math:`\mathbb{P}(Y=0)=1`. In that case the above is satisfied.
 			* For :math:`\mathbb{E}[Y^2]\neq 0`, the proof follows from the observation that
 		
 				.. math:: \mathbb{E}\left[\left(X-\frac{\mathbb{E}[XY]}{\mathbb{E}[Y^2]}Y\right)^2\right]\geq 0
