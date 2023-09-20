@@ -1,27 +1,6 @@
 #######################################################################################
-Probability
-#######################################################################################
-(Adapted from Bertsekas and Tsitsiklis - Introduction to Probability)
-
-******************************************************
-Probability Axioms (Kolmogorov Axioms)
-******************************************************
-
-Let the set of all possible outcomes of an experiment be :math:`\Omega`, and let **events** be defined as subsets, :math:`\omega\subset\Omega`. Then a measure :math:`\mu:2^{|\Omega|}\mapsto\mathbb{R}` is called a **probability measure** iff
-
-#. **Non-negativity**: :math:`\mu(\omega)\ge 0` for any :math:`\omega\subset\Omega`.
-#. **Unitarity**: :math:`\mu(\Omega)=1`.
-#. :math:`\sigma`-**Additivity**: For :math:`A_1,A_2,\cdots\subset\Omega` such that :math:`A_i\cap A_j=\emptyset` for :math:`i\neq j`
-
-	.. math:: \mu(\bigcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty \mu(A_i).
-
-.. tip::
-	It is customary to represent probability measure as :math:`\mathbb{P}`.
-
-*********************************************
 Random Variable
-*********************************************
-
+#######################################################################################
 Random variables (rvs) are real-valued functions of the outcome of an experiment.
 
 .. note::
@@ -30,9 +9,9 @@ Random variables (rvs) are real-valued functions of the outcome of an experiment
 	* We can *condition* an rv on an event or another rv.
 	* We can define the notion of *independence* of an rv w.r.t an event or another rv.
 
+*********************************************
 Discrete Random Variable
-====================================
-
+*********************************************
 Discrete = values are from a finite/countably infinite subset of :math:`\mathbb{R}`.
 
 .. note::
@@ -48,8 +27,8 @@ Discrete = values are from a finite/countably infinite subset of :math:`\mathbb{
 		#. Collect all possible values for which :math:`\{x | g(x)=y\}`
 		#. Utilize axiom 3 to obtain :math:`p_Y(y)=\sum_{\{x | g(x)=y\}} p_X(x)`
 
-Expectation and Variance:
-------------------------------------
+Expectation and Variance
+======================================================
 .. note::
 	* We can define **Expectation** of :math:`X` as :math:`\mathbb{E}[X]=\sum_x x p_X(x)` (assuming that the sum exists).
 	* Elementary properties of expectation:
@@ -59,19 +38,23 @@ Expectation and Variance:
 		* If :math:`X=c`, then :math:`\mathbf{E}[X]=c`.
 	* We can define **Variance** of :math:`X` as :math:`\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
 
+Law of The Unconscious Statistician (LOTUS)
+-----------------------------------------------------
 .. tip::
-	Law of The Unconscious Statistician (LOTUS):
-
 	* For expectation of :math:`Y=g(X)`, we can get away without having to compute PMF explicitly for :math:`Y`, as it can be shown that
 
 		.. math:: \mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
 
 	* With the help of LOTUS, :math:`\mathrm{Var}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
+Moments of a rv
+---------------------------
 .. note::
 	* The *n-th moment* of :math:`X` is defined as :math:`\mathbb{E}[X^n]`.
 	* Variance in terms of moments: :math:`\mathrm{Var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2`.
 
+Expectations of linear functions of rv
+--------------------------------------------------------
 .. note::
 	For linear functions of :math:`X`, :math:`g(X)=aX+b`
 
@@ -81,8 +64,8 @@ Expectation and Variance:
 ..  warning::
 	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
 
-Multiple discrete random variables:
---------------------------------------
+Multiple discrete random variables
+======================================================
 .. note::
 	* We can define the joint-probability mass function for 2 rvs as 
 
@@ -93,8 +76,8 @@ Multiple discrete random variables:
 	* Linearity of expectation holds, i.e. :math:`\mathbb{E}[aX+bY+c]=a\mathbb{E}[X]+b\mathbb{E}[Y]+c`.
 	* Extends naturally for more than 2 rvs.
 
-Conditioning:
-------------------------------------
+Conditioning
+======================================================
 .. note::
 	* A discrete rv can be conditioned on an event :math:`A` (when :math:`\mathbb{P}(A)>0`) and its conditional PMF is defined as 
 
@@ -106,33 +89,41 @@ Conditioning:
 
 	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`	
 
+Bayes theorem
+--------------------------------------------
 .. tip::
-	* **Bayes theorem**: For :math:`p_Y(y)>0`, :math:`p_{Y|X}(y|x)=\frac{p_Y(y)p_{X|Y}(x|y)}{\sum_y p_Y(y)p_{X|Y}(x|y)}`
+	* For :math:`p_Y(y)>0`, :math:`p_{Y|X}(y|x)=\frac{p_Y(y)p_{X|Y}(x|y)}{\sum_y p_Y(y)p_{X|Y}(x|y)}`
 	* :math:`p_Y(y)` is known as **prior**, :math:`p_{Y|X}(y|x)` is called **posterior**, and :math:`p_{X|Y}(x|y)` is known as **likelihood**. 
-	* The demoninator :math:`Z=\sum_y p_Y(y)p_{X|Y}(x|y)` is the probability normalisation factor (i.e. it ensures that the sum is 1).
+	* The denominator :math:`Z=\sum_y p_Y(y)p_{X|Y}(x|y)` is the probability normalisation factor (i.e. it ensures that the sum is 1).
 	* We can often work with unnormalised probabilities when exact values are not required, as :math:`p_{Y|X}(y|x)\propto p_Y(y)p_{X|Y}(x|y)`.
 
+Total law of probability
+--------------------------------------------
 .. tip::
-	**Total law of probability:** Let :math:`A_1,A_2,\cdots,A_n` be disjoints events such that :math:`\bigcup_{i=1}^n A_i=\Omega` (i.e. they define a partition).
-
-	*  If :math:`\mathbb{P}(A_i)>0` for all :math:`i`, then 
+	* Let :math:`A_1,A_2,\cdots,A_n` be disjoints events such that :math:`\bigcup_{i=1}^n A_i=\Omega` (i.e. they define a partition).
+	* If :math:`\mathbb{P}(A_i)>0` for all :math:`i`, then 
 	
 		.. math:: p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
 
-	* This also works if :math:`A` is defined in terms of a rv (i.e. :math:`A=\{X=x\}`), even when the cardinality of :math:`X` is countably infinite.
+	* This also works if the events :math:`A_i` are defined in terms of another discrete rv (i.e. :math:`A_i=\{Y=y\}`)
 
 		.. math:: p_{X}(x)=\sum_y p_Y(y)p_{X|Y}(x|y)
+
+		* Note: This extends it to the countable infinite case from the finite case.
 
 	* This allows us to compute the probability of events in a complicated probability model by utilising events from a simpler model, i.e. let's us use the divide-and-conquer technique. We just need to ensure that the events from the simpler model in fact exhausts the entirety of sample space of the original probability model.
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
 		.. math:: p_{X|B}(x)=\sum_{i=1}^n\mathbb{P}(A_i|B)p_{X|A_i\cap B}(x)
 
+Conditional expectation
+--------------------------------------------
 .. note::
-	Conditional expectation:
-
 	* Defined in terms of the conditional PMF, such as :math:`\mathbb{E}[X|A]=\sum_x x p_{X|A}(x)` and :math:`\mathbb{E}[X|Y=y]=\sum_x x p_{X|Y}(x|y)`.
 	* LOTUS holds, i.e. :math:`\mathbb{E}[g(X)|A]=\sum_x g(x)p_{X|A}(x)`.
+
+.. attention::
+	* While :math:`\mathbb{E}[X]` is a constant, the conditional expectation :math:`\mathbb{E}[X|Y]` is another rv and it has the same PMF as :math:`Y`.
 
 .. tip::
 	From total law of probability:
@@ -145,57 +136,32 @@ Conditioning:
 
 		.. math:: \mathbb{E}[X|B]=\sum_{i=1}^n \mathbb{P}(A_i|B)\mathbb{E}[X|A_i\cap B]
 
-	* **Law of iterated expectation:** For the rv version of the first, :math:`\mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y]=\mathbb{E}[\mathbb{E}[X|Y]]`
+Law of iterated expectation
+----------------------------------------
+.. attention::
+	* If the events, :math:`A_i`, are represented by another discrete rv such that :math:`A_i=\{Y=y\}`
 
-Notion of Independence:
-------------------------------------
+		.. math:: \mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y=y]=\sum_y g(y)p_Y(y)=\mathbb{E}[g(Y)]=\mathbb{E}\left[\mathbb{E}[X|Y]\right] \text{, where $g(Y)=\mathbb{E}[X|Y]$.}
+
+Notion of Independence
+======================================================
 .. note::
 	* :math:`X` is independent of an event :math:`A` iff :math:`p_{X|A}(x)=p_X(x)` for all :math:`x`.
 	* Two rvs are independent when :math:`p_X(x)=p_{X|Y}(x|y)` and :math:`p_Y(y)=p_{Y|X}(y|x)` hold for all values of :math:`x` and :math:`y`.
 	* Two independent rvs are written with the notation :math:`X\perp\!\!\!\perp Y`.
 	* If :math:`X\perp\!\!\!\perp Y`, :math:`p_{X,Y}(x,y)=p_X(x)p_Y(y)` for all :math:`x` and :math:`y`.
 
+Expectation and variance for independent rvs
+------------------------------------------------------
 .. note::
-	Expectation and variance for independent rvs:
-
 	* :math:`\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]`
 	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)`
 	* Extends naturally to more than 2 rvs.
 
-Entropy and Mutual Information:
-------------------------------------------
-
-.. note::
-	* For a rv with PMF :math:`X\sim p_X`, the term :math:`H(X)=-\sum_x p_X(x)\lg(p_X(x))` defines entropy which is a measure of uncertainty.
-	* For 2 rvs with a joint distribution :math:`p_{X,Y}(x,y)`, the term :math:`I(X,Y)=\sum_x\sum_y p_{X,Y}(x,y)\lg\left(\frac{p_{X,Y}(x,y)}{p_X(x)p_Y(y)}\right)` defines **mutual information**.
-	* [Prove] Let :math:`H(X,Y)=-\sum_x\sum_y p_{X,Y}(x,y)\lg(p_{X,Y}(x,y))`. Then
-
-		.. math:: I(X,Y)=H(X)+H(Y)-H(X,Y)
-	* [Prove] Let 
-
-		.. math:: H(X|Y)=-\sum_y p_Y(y)\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))=\mathbb{E}_Y\left[\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))\right]
-
-	   This can be thought of as the expected conditional entropy. Then
-
-		.. math:: I(X,Y)=H(X)-H(X|Y)
-
-.. tip::
-	* The term :math:`I(X,Y)` can be thought of as the reduction in entropy (from :math:`H(X)`) once we observe :math:`Y`. It is therefore the information about :math:`X` conveyed by :math:`Y`.
-	* [Prove] If :math:`X\perp\!\!\!\perp Y`, what is the mutual information?
-
-.. attention::
-	* [Prove] Let the PMF of :math:`X=\{x_1,\cdots,x_n\}` is defined by the masses :math:`p_1,\cdots,p_n` such that :math:`\sum_{i=1}^n p_i=1`. Let us define another PMF :math:`q_1,\cdots,q_n` such that :math:`\sum_{i=1}^n q_i=1`. Then :math:`H(X)\leq-\sum_{i=1}^n p_i\lg(q_i)` and the equality holds only when :math:`p_i=q_i` for all :math:`i`.
-
-		* [Hint] Use the inequality :math:`\ln(\alpha)=\alpha-1` for :math:`\alpha>0`.
-	* As a special case of the above, :math:`H(X)\leq\lg(n)` and the equality holds when :math:`p_i=\frac{1}{n}` for all :math:`i`.
-
 Some discrete random variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Simple rvs:
-""""""""""""""""""""""""""""""""""""
-Bernoulli:
-
+======================================================
+Bernoulli
+-------------------------------------
 Any experiment that deals with a binary outcome (e.g. **success** or **failure**) can be represented by a Bernoulli rv. 
 
 .. note::
@@ -216,8 +182,8 @@ Any experiment that deals with a binary outcome (e.g. **success** or **failure**
 			  \end{cases}
 	* Under this setup, :math:`\mathbb{P}(A_i)=\mathbb{E}[X_i]`.	
 
-Multinoulli:
-
+Multinoulli
+-------------------------------------
 Any experiment that deals with a categorical outcome can be represented by a Multinoulli rv.
 
 .. note::
@@ -225,14 +191,12 @@ Any experiment that deals with a categorical outcome can be represented by a Mul
 	* We can do away with :math:`k-1` parameters instead of :math:`k`, as :math:`\sum_{i=1}^k p_i=1`.
 	* Bernoulli is a special case of Multinoulli where :math:`k=2`.
 
-* Uniform:
-
+Uniform
+-------------------------------------
 TODO
 
-Composite rvs:
-""""""""""""""""""""""""""""""""""""
-Binomial:
-
+Binomial
+-------------------------------------
 In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :math:`X` denote the total number of **successes**. Then :math:`X\sim\mathrm{Bin}(n,p)` and the PMF is given by
 
 .. math::
@@ -255,8 +219,10 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 ..  tip::
 	Solving a problem with an exisitng framework often requires us to think of a process with which the experiment takes place. With the right process description, seemingly difficult problems often become easy.
 
+The Birthday Problem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ..  attention::
-	[The Birthday Problem] In a party of :math:`500` guests, what is the probability that you share your birthday with :math:`5` other people?
+	In a party of :math:`500` guests, what is the probability that you share your birthday with :math:`5` other people?
 
 	* All birthdays are equally likely (assumption of the underlying probability model).
 	* Person A's birthday is independent of person B's birthday.
@@ -268,8 +234,10 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 
 	* Total number of successes represents the total number of people who share their birthday with me.
 
+The Hat Problem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. attention::
-	[The Hat Problem] There are :math:`n` people with numbered hats. They throw all their hats into a basket and then pick up one hat one by one. What is the expected number of people who get their own hat back? What is the variance of this?
+	There are :math:`n` people with numbered hats. They throw all their hats into a basket and then pick up one hat one by one. What is the expected number of people who get their own hat back? What is the variance of this?
 
 	* Let :math:`X_i=1` if :math:`i`-th person get their hat back in the process, and :math:`X_i=0` otherwise.
 	* Total number of people who get their own hat back is given by :math:`Y=X_1+X_2+\cdots+X_n`.
@@ -299,8 +267,8 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 
 		.. math:: \mathbb{P}(X_i=1,X_j=1)=\mathbb{P}(X_1=1,X_2=1)=\mathbb{P}(X_1=1)\mathbb{P}(X_2=1|X_1=1)=\frac{1}{n}\cdot\frac{1}{n-1}
 
-Geometric:
-
+Geometric
+-------------------------------------
 The number of repeated Bernoulli trials we need until we get a success can be modelled using a Geometric distribution. Let the Bernoulli trails have parameter :math:`p`. Then :math:`X\sim\mathrm{Geom}(p)` and the PMF for :math:`X=1,\cdots` is given by
 
 .. math:: p_X(x)=(1-p)^x p
@@ -323,8 +291,8 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 		* Use divide-and-conquer by splitting the case where :math:`X=1` and :math:`X>1`.
 		* Utilise the total expectation law as :math:`\mathbb{E}[X]=\mathbb{P}(X=1)\mathbb{E}[X|X=1]+\mathbb{P}(X>1)\mathbb{E}[X|X>1]`
 
-Multinomial:
-
+Multinomial
+-------------------------------------
 Like Binomial, Multinomial describes the joint distribution of counts of different possible values for of :math:`n` repeated Multinoulli trials. 
 
 .. note::
@@ -336,10 +304,8 @@ Like Binomial, Multinomial describes the joint distribution of counts of differe
 		.. math:: p_{X1,\cdots,X_k}(x_1,\cdots,x_k)={n \choose {x_1,\cdots,x_k}} p_1^{x_1}\cdots p_k^{x_k}
 	* Note that the individual rvs have a Binomial distribution, :math:`X_i\sim\mathrm{Bin}(n, p_i)`.
 
-Limiting rvs:
-""""""""""""""""""""""""""""""""""""
-Poisson:
-
+Poisson
+-------------------------------------
 If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate it using another rv with an easier-to-manipulate distribution. For :math:`\lambda=n\cdot p`, :math:`X\sim\mathrm{Poisson}(\lambda)` (:math:`\lambda>0`), the PMF is given by 
 
 .. math:: p_X(x)=e^{-\lambda}\frac{\lambda^x}{x!}
@@ -358,8 +324,9 @@ If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate i
 .. attention::
 	[The Birthday Problem] As the value of :math:`p` is quite low and :math:`n` is quite high, we can model this as a Poisson rv as well.
 
+*********************************************
 Continuous Random Variable
-======================================================
+*********************************************
 
 Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 
@@ -399,8 +366,8 @@ Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 			    0 & \text{otherwise}
 			  \end{cases}
 
-Expectation and Variance:
-------------------------------------------
+Expectation and Variance
+=========================================================
 We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx` (assuming that the integral exists and is bounded).
 
 .. attention::
@@ -415,12 +382,14 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 	* LOTUS holds, even when :math:`g(X)` is a discrete-valued function.
 	* Variance can be defined as usual.
 
+Centerisation, standardisation, skewness and kurtosis
+------------------------------------------------------------------
 .. attention::
-	* We denote :math:`\tilde{X}=X-\mathbb{E}[X]` as the **centralised** version of :math:`X`.
+	* We denote :math:`\tilde{X}=X-\mathbb{E}[X]` as the **centered** version of :math:`X`.
 	
 		* We also have :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[X-\mathbb{E}[X]]=0`.
 
-	* Variance is the 2nd moment of centralised rv :math:`\mathrm{Var}(X)=\mathbb{E}[\tilde{X}^2]`.
+	* Variance is the 2nd moment of centered rv :math:`\mathrm{Var}(X)=\mathbb{E}[\tilde{X}^2]`.
 	* We denote :math:`Z=\frac{X-\mathbb{E}[X]}{\sqrt{\mathrm{Var}(X)}}=\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}` as the **standardised** version of :math:`X`.
 
 		* We note that :math:`\mathbb{E}[Z]=0` and :math:`\mathbb{E}[Z^2]=\mathbb{E}\left[\left(\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}\right)^2\right]=\frac{\mathbb{E}[\tilde{X}^2]}{\mathbb{E}[\tilde{X}^2]}=1`.
@@ -438,30 +407,31 @@ We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx`
 			* If kurtosis is positive, the distribution has heavy tails and a sharp peak. 
 			* If it’s negative, the distribution has light tails and a flat peak.
 
-.. note::
-	* Cauchy-Schwarz inequality: 
-
-		* We define the inner product between two rvs :math:`X` and :math:`Y` as :math:`\langle X,Y\rangle=\mathbb{E}[XY]`.
-
-			* TODO: Understand why this is a valid definition for an inner product.
-		* We can define the norm induced by this inner product as :math:`\left\| \cdot \right\|_{\text{norm}}`, such that :math:`\langle X,X\rangle=\left\| X \right\|_{\text{norm}}^2=\mathbb{E}[X^2]`.
-		* Then Cauchy-Schwarz inequality becomes
-
-			.. math:: |\langle X,Y\rangle|^2\leq \left\| X \right\|_{\text{norm}}^2\cdot\left\| Y \right\|_{\text{norm}}^2\implies \left(\mathbb{E}[XY]\right)^2\leq\mathbb{E}[X^2]\cdot\mathbb{E}[Y^2]
-
-		* Direct proof without involving Cauchy-Schwarz:
-
-			* For :math:`\mathbb{E}[Y^2]=0`, we have :math:`\mathbb{P}(Y=0)=1`. In that case the above is satisfied.
-			* For :math:`\mathbb{E}[Y^2]\neq 0`, the proof follows from the observation that
-		
-				.. math:: \mathbb{E}\left[\left(X-\frac{\mathbb{E}[XY]}{\mathbb{E}[Y^2]}Y\right)^2\right]\geq 0
-
 .. tip::
 	* Note that :math:`\mathbb{E}[X^2]=0` signifies that :math:`X=0` with probability 1. This is a useful trick in many calculations.
 
-Cumulative distribution function:
-------------------------------------------
+Cauchy-Schwarz inequality
+---------------------------------------
+.. note::
+	* We define the inner product between two rvs :math:`X` and :math:`Y` as :math:`\langle X,Y\rangle=\mathbb{E}[XY]`.
 
+		* TODO: Understand why this is a valid definition for an inner product.
+	* We can define the norm induced by this inner product as :math:`\left\| \cdot \right\|_{\text{norm}}`, such that
+
+		.. math:: \langle X,X\rangle=\left\| X \right\|_{\text{norm}}^2=\mathbb{E}[X^2]
+	* Then Cauchy-Schwarz inequality becomes
+
+		.. math:: |\langle X,Y\rangle|^2\leq \left\| X \right\|_{\text{norm}}^2\cdot\left\| Y \right\|_{\text{norm}}^2\implies \left(\mathbb{E}[XY]\right)^2\leq\mathbb{E}[X^2]\cdot\mathbb{E}[Y^2]
+
+	* Direct proof without involving Cauchy-Schwarz:
+
+		* For :math:`\mathbb{E}[Y^2]=0`, we have :math:`\mathbb{P}(Y=0)=1`. In that case the above is satisfied.
+		* For :math:`\mathbb{E}[Y^2]\neq 0`, the proof follows from the observation that
+		
+			.. math:: \mathbb{E}\left[\left(X-\frac{\mathbb{E}[XY]}{\mathbb{E}[Y^2]}Y\right)^2\right]\geq 0
+
+Cumulative distribution function
+=========================================================
 Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq x\}` has well defined probability.
 
 .. note::
@@ -495,8 +465,8 @@ Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq
 .. tip::
 	We can work with a **mixed** rv that takes discrete values for some and continuous values for others if we work with the CDF.
 
-Multiple continuous random variables:
------------------------------------------
+Multiple continuous random variables
+=========================================================
 Similar to the single continuous variable case, we say that two rvs, :math:`X` and :math:`Y` are **jointly continuous** if we can define an associated joint PDF :math:`f_{X,Y}(x,y)\geq 0` for any subset :math:`B\subset\mathbb{R}^2`, such that :math:`\mathbb{P}((x,y)\in B)=\iint\limits_{(x,y)\in B} f_{X,Y}(x,y) d(x,y)`.
 
 .. tip::
@@ -531,12 +501,12 @@ Similar to the single continuous variable case, we say that two rvs, :math:`X` a
 	* All the properties for expectation holds as usual.
 
 
-Conditioning:
-------------------------------------
+Conditioning
+=========================================================
 A continuous rv can be conditioned on an event, or another rv, discrete or continuous.
 
 Conditioning on an event
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------------
 .. note::
 	* A continuous rv can be conditioned on an event :math:`A` with :math:`\mathbb{P}(A)>0` and we can define a conditional PDF :math:`f_{X|A}(x)` such that for any (measurable) subset :math:`B\in\mathbb{R}`
 
@@ -550,25 +520,29 @@ Conditioning on an event
 				\frac{f_{X}(x)}{\mathbb{P}(X\in A)}, & \text{if $X\in A$} \\
 				0, & \text{otherwise}
 				\end{cases}
-	* Probabilistic interpretation:
 
-		* We can think of a small interval around :math:`X=x` of width :math:`\delta`, so that :math:`X\approx x`.
-		* Assuming that :math:`f_{X|A}(x)` stays the same within this interval
+Probabilistic interpretation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* We can think of a small interval around :math:`X=x` of width :math:`\delta`, so that :math:`X\approx x`.
+	* Assuming that :math:`f_{X|A}(x)` stays the same within this interval
 
-			.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}=\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_{\{x\leq t\leq x+\delta\}\cap A} dt\approx f_{X|A}(x)\cdot\delta
+		.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}=\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_{\{x\leq t\leq x+\delta\}\cap A} dt\approx f_{X|A}(x)\cdot\delta
 
-		* Therefore, the conditional CDF represents conditional probability given an event per unit length.
+	* Therefore, the conditional CDF represents conditional probability given an event per unit length.
 	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) dx`.
 	* Jointly continuous rvs can be conditioned on an event :math:`C=\{x,y\}\in A` with :math:`\mathbb{P}(C)>0` as exactly like above.
 
+Total probability theorem
+---------------------------------------------------
 .. tip::
-	* Total probability theorem: For a partition of the sample space :math:`A_1,\cdots,A_n`, with :math:`\mathbb{P}(A_i)>0` for all :math:`i`
+	* For a partition of the sample space :math:`A_1,\cdots,A_n`, with :math:`\mathbb{P}(A_i)>0` for all :math:`i`
 
 		.. math:: F_X(x)=\sum_{i=1}^n \mathbb{P}(A_i) F_{X|A}(x)
 	* Differentiating both sides, we can recover a formula involving PDFs as :math:`f_X(x)=\sum_{i=1}^n \mathbb{P}(A_i) f_{X|A}(x)`.
 
 Conditioning on a random variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------------
 .. note::
 	* A continuous rv :math:`X` can be conditioned on another continuous rv :math:`Y`, assuming that they are jointly continuous with CDF :math:`f_{X,Y}(x,y)` as long as :math:`f_Y(y)>0`.
 	* The conditional PDF is defined as :math:`f_{X|Y}(x|y)=\frac{f_{X,Y}(x,y)}{f_Y(y)}`.
@@ -582,18 +556,24 @@ Conditioning on a random variables
 
 	* If we have a mixed distribution with one discrete rv, :math:`K` and one continuous rv :math:`Y`, then we can define conditional PMF :math:`p_{K|Y}(k|y)` and conditional PDF :math:`f_{Y|K}(y|k)`.
 
-		* Probabilistic interpretation for this works as follows:
+Probabilistic interpretation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* We can think of a small interval around :math:`Y=y` of width :math:`\delta`, so that :math:`Y\approx y`.
+	* Assuming that :math:`f_Y(y)` and :math:`f_{K|Y}(y)` stays the same within this interval
 
-			.. math:: p_{K|Y}(k|y)=\frac{\mathbb{P}(K=k,y\leq Y\leq y+\delta)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{\mathbb{P}(K=k)\mathbb{P}(y\leq Y\leq y+\delta|K=k)}{\mathbb{P}(y\leq Y\leq y+\delta)}\approx\frac{p_K(k)f_{Y|K}(y|k)\cdot\delta}{f_Y(y)\cdot\delta}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}
-		* We have :math:`f_Y(y)=\sum_{k}p_K(k)f_{Y|K}(y|k)` and :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(t)p_{K|Y}(k|t) dt`.
+		.. math:: p_{K|Y}(k|y)=\frac{\mathbb{P}(K=k,y\leq Y\leq y+\delta)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{\mathbb{P}(K=k)\mathbb{P}(y\leq Y\leq y+\delta|K=k)}{\mathbb{P}(y\leq Y\leq y+\delta)}\approx\frac{p_K(k)f_{Y|K}(y|k)\cdot\delta}{f_Y(y)\cdot\delta}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}
+	* We have :math:`f_Y(y)=\sum_{k}p_K(k)f_{Y|K}(y|k)` and :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(t)p_{K|Y}(k|t) dt`.
 
 .. tip::
 	Definition of probability conditioned on an event with 0 probability:
 
 	* Using above, we can define the conditional probability as :math:`\mathbb{P}(X\in B|Y=y)=\int\limits_B f_{X|Y}(x|y) dx` for any (measurable) subset :math:`B\in\mathbb{R}`.
 
+Bayes theorem
+---------------------------------------------------
 .. tip::
-	Bayes theorem: There are 4 versions of Bayes theorem.
+	There are 4 versions of Bayes theorem.
 
 	* Discrete-discrete: Already discussed in the context of discrete rv.
 	* Discrete-continuous: :math:`p_{K|Y}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}`.
@@ -606,105 +586,41 @@ Conditioning on a random variables
 
 	* Continuous-continuous: :math:`f_{X|K}=\frac{f_X(x)f_{X|Y}(x|y)}{f_Y(y)}`.
 
+Conditional expectation
+--------------------------------------------
 .. note::
 	Conditional expectation and LOTUS with conditional PDFs work the same as the discrete case.
 
-Notion of Independence:
-------------------------------------
+Notion of Independence
+=========================================================
 .. note::
 	* Two jointly continuous rvs are considered independent (:math:`X\perp\!\!\!\perp Y`) if :math:`f_{X|Y}(x|y)=f_X(x)` for all :math:`x` for all :math:`y` where :math:`f_Y(y)>0`.
 	* If :math:`X\perp\!\!\!\perp Y`, :math:`f_{X,Y}(x,y)=f_X(x)f_Y(y)` and :math:`F_{X,Y}(x,y)=F_X(x)F_Y(y)` for all :math:`x` and :math:`y`.
 
 Some continuous random variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=========================================================
 
-* Uniform:
-* Exponential
+Uniform
+-------------------------------------
 
-- explain the memorylessness property of the exponential and connection with geometric
+Exponential
+-------------------------------------
+TOD: explain the memorylessness property of the exponential and connection with geometric
 
-* Gaussian
-* Multivariate Gaussian
+Laplace
+-------------------------------------
+TOD: explain the memorylessness property of the exponential and connection with geometric
 
-- explain the shape of 2d normal density 
-- independent case - circles in contours
-- dependent case - parabolas in contours
+Gaussian
+-------------------------------------
 
+Multivariate Gaussian
+-------------------------------------
 TODO
 
-*********************************************
-Functions of Random Variable
-*********************************************
-.. tip::
-	Sum of independent rvs - Convolution:
+.. note::
+	* explain the shape of 2d normal density 
+	* independent case - circles in contours
+	* dependent case - parabolas in contours
 
-	* Let :math:`X\sim p_X` and :math:`Y\sim p_Y` be two independent discrete rvs. Then their sum :math:`Z=X+Y` has the distribution
-
-		.. math:: p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z].
-
-Moment Generating Functions
-====================================
-
-#. Distributions
-	#. Laplace
-	#. Beta
-	#. Dirichlet
-	#. Dirac
-	#. Empirical
-	#. Mixture
-
-*********************************************
-Inequalities
-*********************************************
-
-Markov
-====================================
-
-Chebyshev
-====================================
-
-Hoeffding
-====================================
-
-Mill (Gaussian)
-====================================
-
-Cauchy-Schwarz
-====================================
-
-*********************************************
-Convergence
-*********************************************
-
-Convergence in probability
-====================================
-
-Convergence in distribution
-====================================
-
-Convergence in quadratic mean
-====================================
-
-Weak Law of Large Number
-====================================
-
-Strong Law of Large Number
-====================================
-
-Central Limit Theorem
-====================================
-
-*********************************************
-Information Theory
-*********************************************
-
-	#. Shanon Entropy
-	#. KL Divergence
-	#. Cross Entropy
-
-*********************************************
-Graphical Models
-*********************************************
-
-	#. Bayes Net
-	#. Markov Random Factor Model
+TODO
