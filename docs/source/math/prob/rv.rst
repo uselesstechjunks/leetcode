@@ -85,16 +85,19 @@ Conditioning
 
 	* Connects to the joint PMF as :math:`p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)`	
 
+Bayes theorem
+--------------------------------------------
 .. tip::
-	* **Bayes theorem**: For :math:`p_Y(y)>0`, :math:`p_{Y|X}(y|x)=\frac{p_Y(y)p_{X|Y}(x|y)}{\sum_y p_Y(y)p_{X|Y}(x|y)}`
+	* For :math:`p_Y(y)>0`, :math:`p_{Y|X}(y|x)=\frac{p_Y(y)p_{X|Y}(x|y)}{\sum_y p_Y(y)p_{X|Y}(x|y)}`
 	* :math:`p_Y(y)` is known as **prior**, :math:`p_{Y|X}(y|x)` is called **posterior**, and :math:`p_{X|Y}(x|y)` is known as **likelihood**. 
 	* The denominator :math:`Z=\sum_y p_Y(y)p_{X|Y}(x|y)` is the probability normalisation factor (i.e. it ensures that the sum is 1).
 	* We can often work with unnormalised probabilities when exact values are not required, as :math:`p_{Y|X}(y|x)\propto p_Y(y)p_{X|Y}(x|y)`.
 
+Total law of probability
+--------------------------------------------
 .. tip::
-	**Total law of probability:** Let :math:`A_1,A_2,\cdots,A_n` be disjoints events such that :math:`\bigcup_{i=1}^n A_i=\Omega` (i.e. they define a partition).
-
-	*  If :math:`\mathbb{P}(A_i)>0` for all :math:`i`, then 
+	* Let :math:`A_1,A_2,\cdots,A_n` be disjoints events such that :math:`\bigcup_{i=1}^n A_i=\Omega` (i.e. they define a partition).
+	* If :math:`\mathbb{P}(A_i)>0` for all :math:`i`, then 
 	
 		.. math:: p_X(x)=\sum_{i=1}^n\mathbb{P}(A_i)p_{X|A_i}(x)
 
@@ -129,7 +132,10 @@ Conditional expectation
 
 		.. math:: \mathbb{E}[X|B]=\sum_{i=1}^n \mathbb{P}(A_i|B)\mathbb{E}[X|A_i\cap B]
 
-	* **Law of iterated expectation:** If the events, :math:`A_i`, are represented by another discrete rv such that :math:`A_i=\{Y=y\}`
+Law of iterated expectation
+----------------------------------------
+.. attention::
+	* If the events, :math:`A_i`, are represented by another discrete rv such that :math:`A_i=\{Y=y\}`
 
 		.. math:: \mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y=y]=\sum_y g(y)p_Y(y)=\mathbb{E}[g(Y)]=\mathbb{E}\left[\mathbb{E}[X|Y]\right] \text{, where $g(Y)=\mathbb{E}[X|Y]$.}
 
@@ -147,32 +153,6 @@ Expectation and variance for independent rvs
 	* :math:`\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]`
 	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)`
 	* Extends naturally to more than 2 rvs.
-
-Entropy and Mutual Information
-======================================================
-.. note::
-	* For a rv with PMF :math:`X\sim p_X`, the term :math:`H(X)=-\sum_x p_X(x)\lg(p_X(x))` defines entropy which is a measure of uncertainty.
-	* For 2 rvs with a joint distribution :math:`p_{X,Y}(x,y)`, the term :math:`I(X,Y)=\sum_x\sum_y p_{X,Y}(x,y)\lg\left(\frac{p_{X,Y}(x,y)}{p_X(x)p_Y(y)}\right)` defines **mutual information**.
-	* [Prove] Let :math:`H(X,Y)=-\sum_x\sum_y p_{X,Y}(x,y)\lg(p_{X,Y}(x,y))`. Then
-
-		.. math:: I(X,Y)=H(X)+H(Y)-H(X,Y)
-	* [Prove] Let 
-
-		.. math:: H(X|Y)=-\sum_y p_Y(y)\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))=\mathbb{E}_Y\left[\sum_x p_{X|Y}(x|y)\lg(p_{X|Y}(x|y))\right]
-
-	   This can be thought of as the expected conditional entropy. Then
-
-		.. math:: I(X,Y)=H(X)-H(X|Y)
-
-.. tip::
-	* The term :math:`I(X,Y)` can be thought of as the reduction in entropy (from :math:`H(X)`) once we observe :math:`Y`. It is therefore the information about :math:`X` conveyed by :math:`Y`.
-	* [Prove] If :math:`X\perp\!\!\!\perp Y`, what is the mutual information?
-
-.. attention::
-	* [Prove] Let the PMF of :math:`X=\{x_1,\cdots,x_n\}` is defined by the masses :math:`p_1,\cdots,p_n` such that :math:`\sum_{i=1}^n p_i=1`. Let us define another PMF :math:`q_1,\cdots,q_n` such that :math:`\sum_{i=1}^n q_i=1`. Then :math:`H(X)\leq-\sum_{i=1}^n p_i\lg(q_i)` and the equality holds only when :math:`p_i=q_i` for all :math:`i`.
-
-		* [Hint] Use the inequality :math:`\ln(\alpha)=\alpha-1` for :math:`\alpha>0`.
-	* As a special case of the above, :math:`H(X)\leq\lg(n)` and the equality holds when :math:`p_i=\frac{1}{n}` for all :math:`i`.
 
 Some discrete random variables
 ======================================================
@@ -543,8 +523,10 @@ Probabilistic interpretation
 	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) dx`.
 	* Jointly continuous rvs can be conditioned on an event :math:`C=\{x,y\}\in A` with :math:`\mathbb{P}(C)>0` as exactly like above.
 
+Total probability theorem
+---------------------------------------------------
 .. tip::
-	* Total probability theorem: For a partition of the sample space :math:`A_1,\cdots,A_n`, with :math:`\mathbb{P}(A_i)>0` for all :math:`i`
+	* For a partition of the sample space :math:`A_1,\cdots,A_n`, with :math:`\mathbb{P}(A_i)>0` for all :math:`i`
 
 		.. math:: F_X(x)=\sum_{i=1}^n \mathbb{P}(A_i) F_{X|A}(x)
 	* Differentiating both sides, we can recover a formula involving PDFs as :math:`f_X(x)=\sum_{i=1}^n \mathbb{P}(A_i) f_{X|A}(x)`.
@@ -567,7 +549,9 @@ Conditioning on a random variables
 Probabilistic interpretation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* Probabilistic interpretation for this works as follows.
+	* We can think of a small interval around :math:`Y=y` of width :math:`\delta`, so that :math:`Y\approx y`.
+	* Assuming that :math:`f_Y(y)` and :math:`f_{K|Y}(y)` stays the same within this interval
+
 		.. math:: p_{K|Y}(k|y)=\frac{\mathbb{P}(K=k,y\leq Y\leq y+\delta)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{\mathbb{P}(K=k)\mathbb{P}(y\leq Y\leq y+\delta|K=k)}{\mathbb{P}(y\leq Y\leq y+\delta)}\approx\frac{p_K(k)f_{Y|K}(y|k)\cdot\delta}{f_Y(y)\cdot\delta}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}
 	* We have :math:`f_Y(y)=\sum_{k}p_K(k)f_{Y|K}(y|k)` and :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(t)p_{K|Y}(k|t) dt`.
 
@@ -576,8 +560,10 @@ Probabilistic interpretation
 
 	* Using above, we can define the conditional probability as :math:`\mathbb{P}(X\in B|Y=y)=\int\limits_B f_{X|Y}(x|y) dx` for any (measurable) subset :math:`B\in\mathbb{R}`.
 
+Bayes theorem
+---------------------------------------------------
 .. tip::
-	Bayes theorem: There are 4 versions of Bayes theorem.
+	There are 4 versions of Bayes theorem.
 
 	* Discrete-discrete: Already discussed in the context of discrete rv.
 	* Discrete-continuous: :math:`p_{K|Y}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}`.
@@ -590,6 +576,8 @@ Probabilistic interpretation
 
 	* Continuous-continuous: :math:`f_{X|K}=\frac{f_X(x)f_{X|Y}(x|y)}{f_Y(y)}`.
 
+Conditional expectation
+--------------------------------------------
 .. note::
 	Conditional expectation and LOTUS with conditional PDFs work the same as the discrete case.
 
