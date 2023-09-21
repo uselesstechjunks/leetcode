@@ -55,6 +55,7 @@ Let :math:`Z=g(X,Y)` be a function of 2 jointly distributed rvs, :math:`X` and :
 
 		.. math:: F_Z(z)=\mathbb{P}(Z\leq z)=\mathbb{P}(g(X,Y)\leq z)=\iint\limits_{\{(x,y)|g(x,y)\leq z\}}f_{X,Y}(x,y)dxdy
 	* Compute the PDF as :math:`f_Z(z)=F'_Z(z)`.
+	* Extends naturally for more than 2 rvs.
 
 Special cases
 ========================================================================
