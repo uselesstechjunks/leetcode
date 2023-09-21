@@ -14,6 +14,9 @@ Discrete Random Variable
 *********************************************
 Discrete = values are from a finite/countably infinite subset of :math:`\mathbb{R}`.
 
+
+Probability mass function
+=========================================
 .. note::
 	For a discrete rv, :math:`X`:
 
@@ -330,6 +333,8 @@ Continuous Random Variable
 
 Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 
+Probability density function
+=========================================
 .. note::
 	* When the set is uncountable, the probability :math:`\mathbb{P}(X=x)` of each individual such values :math:`x` is 0. 
 	* Therefore, the probabilistic interpreration has to work with a subset of the real line :math:`B\subset\mathbb{R}`.
@@ -537,12 +542,12 @@ Probabilistic interpretation
 
 		.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}=\begin{cases}\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_x^{x+\delta} dt\approx f_{X|A}(x)\cdot\delta & \text{if $[x,x+\delta]\in A$}\\ 0 & \text{otherwise}\end{cases}
 
-	* Therefore, the conditional CDF represents conditional probability given an event per unit length.
+	* So, the conditional PDF represents conditional probability per unit length.
 	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) dx`.
 	* Jointly continuous rvs can be conditioned on an event :math:`C=\{x,y\}\in A` with :math:`\mathbb{P}(C)>0` as exactly like above.
 
 Total probability theorem
----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. tip::
 	* For a partition of the sample space :math:`A_1,\cdots,A_n`, with :math:`\mathbb{P}(A_i)>0` for all :math:`i`
 
@@ -590,7 +595,7 @@ Probabilistic interpretation
 		.. math:: p_{K|Y}(k|y)=\frac{\mathbb{P}(K=k,y\leq Y\leq y+\delta)}{\mathbb{P}(y\leq Y\leq y+\delta)}=\frac{\mathbb{P}(K=k)\mathbb{P}(y\leq Y\leq y+\delta|K=k)}{\mathbb{P}(y\leq Y\leq y+\delta)}\approx\frac{p_K(k)f_{Y|K}(y|k)\cdot\delta}{f_Y(y)\cdot\delta}=\frac{p_K(k)f_{Y|K}(y|k)}{f_Y(y)}
 
 Total probability theorem
----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* We recover the marginals as
 
@@ -616,7 +621,7 @@ There are 4 versions of Bayes theorem.
 Conditional expectation
 --------------------------------------------
 .. note::
-	* Conditional expectation and LOTUS with conditional PDFs work the same as the discrete case.
+	Conditional expectation and LOTUS with conditional PDFs work the same as the discrete case.
 
 Notion of Independence
 =========================================================
