@@ -51,7 +51,7 @@ Density of a function of multiple jointly distributed rvs
 Let :math:`Z=g(X,Y)` be a function of 2 jointly distributed rvs, :math:`X` and :math:`Y`. In this case, we follow the same process as before.
 
 .. tip::
-	* Compuute the CDF as
+	* Compute the CDF as
 
 		.. math:: F_Z(z)=\mathbb{P}(Z\leq z)=\mathbb{P}(g(X,Y)\leq z)=\iint\limits_{\{(x,y)|g(x,y)\leq z\}}f_{X,Y}(x,y)dxdy
 	* Compute the PDF as :math:`f_Z(z)=F'_Z(z)`.
@@ -65,7 +65,9 @@ We want the PDF (or PMF) of the sum of two rvs, :math:`X` and :math:`Y`, :math:`
 Discrete case
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. tip::
-	* We note that :math:`p_{Z|X}(z|x)=\mathbb{P}(Z=z|X=x)=\mathbb{P}(X+Y=z|X=x)=\mathbb{P}(x+Y=z)=\mathbb{P}(Y=z-x)=p_{Y}(z-x)`
+	* We note that
+
+		.. math:: p_{Z|X}(z|x)=\mathbb{P}(Z=z|X=x)=\mathbb{P}(X+Y=z|X=x)=\mathbb{P}(x+Y=z)=\mathbb{P}(Y=z-x)=p_{Y}(z-x)
 	* Therefore, the joint mass between :math:`X` and :math:`Z` factorises
 
 		.. math:: f_{X,Z}(x,z)=f_X(x)f_{Z|X}(z|x)=f_X(x)f_{Y}(z-x)
@@ -79,7 +81,9 @@ Discrete case
 Continuous case
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. tip::
-	* We note that :math:`F_{Z|X}(z|x)=\mathbb{P}(Z\leq z|X=x)=\mathbb{P}(X+Y\leq z|X=x)=\mathbb{P}(x+Y\leq z)=\mathbb{P}(Y\leq z-x)=F_{Y}(z-x)`.
+	* We note that
+
+		.. math:: F_{Z|X}(z|x)=\mathbb{P}(Z\leq z|X=x)=\mathbb{P}(X+Y\leq z|X=x)=\mathbb{P}(x+Y\leq z)=\mathbb{P}(Y\leq z-x)=F_{Y}(z-x)
 	* Differentiating both sides, :math:`f_{Z|X}(z|x)=f_{Y}(z-x)`.
 	* Therefore, the joint density between :math:`X` and :math:`Z` factorises
 
