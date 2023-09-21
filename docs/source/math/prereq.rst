@@ -45,9 +45,18 @@ Calculus
 
 Integration by parts:
 -------------------------------
-Let :math:`u(x)` and :math:`v(x)` be two functions. Then
+Let :math:`u(x)` and :math:`v(x)` be two functions. We want to find out the integral of the product, :math:`\int u(x)\cdot v(x) dx`.
 
- .. math:: \int u(x)v(x) dx = u(x)\int v(x) dx −\int u'(x) \left(\int v(x) dx\right) dx
+.. tip::
+ * To derive this formula, it becomes easier if we consider :math:`w(x)=\int v(x) dx` (:math:`w'(x)=v(x)`) and consider :math:`g(x)=u(x)\cdot w(x)`.
+ * Taking derivatives on both sides :math:`g'(x)=u'(x)\cdot w(x)+u(x)\cdot w'(x)` which gives
+
+  .. math:: u(x)\cdot w'(x)=g'(x)-u'(x)\cdot w(x)
+ * Taking integration on both sides and ignoring the constant
+
+  .. math:: \int u(x)\cdot w'(x)dx=\int g'(x)dx-\int u'(x)\cdot w(x)dx=u(x)\cdot w(x)-\int u'(x)\cdot w(x)dx
+ * Replacing :math:`w(x)`
+  .. math:: \int u(x)\cdot v(x)dx=u(x)\cdot \int v(x)dx-\int u'(x)\left(\int v(x)dx) \right)dx
 
 Fubini's Theorem:
 -------------------------------
