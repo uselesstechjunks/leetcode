@@ -94,6 +94,24 @@ Continuous case
 ******************************************************************************************
 Covariance and correlation
 ******************************************************************************************
+Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]`.
+
+.. note::
+	* :math:`\mathrm{Cov}(X,X)=\mathrm{Var}(X)`.
+	* :math:`\mathrm{Cov}(X,aY+b)=a\cdot\mathrm{Cov}(X,Y)`.
+	* :math:`\mathrm{Cov}(X,Y+Z)=\mathrm{Cov}(X,Y)+\mathrm{Cov}(X,Z)`.
+
+.. note::
+	* Correlation is defined as the normalised version of covariance
+
+		.. math:: \rho(X,Y)=\frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathrm{Var}(X)\mathrm{Var}(Y)}}.
+	* We have :math:`|\rho(X,Y)|\leq 1`.
+
+		* Let :math:`\tilde{X}=X-\mathbb{E}[X]` and :math:`\tilde{Y}=Y-\mathbb{E}[Y]` be the centered rvs.
+		* The correlation coefficient then becomes
+
+			.. math:: \rho(X,Y)=\frac{\mathbb{E}[\tilde{X}\tilde{Y}]}{\sqrt{\mathbb{E}[\tilde{X}]\cdot \mathbb{E}[\tilde{Y}]}}
+		* The proof follows from Cauchy-Schwarz inequality.
 
 ******************************************************************************************
 Fundamentals of estimations using conditional expectation
