@@ -104,6 +104,9 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 	* :math:`\mathrm{Cov}(X,aY+b)=a\cdot\mathrm{Cov}(X,Y)`.
 	* :math:`\mathrm{Cov}(X,Y+Z)=\mathrm{Cov}(X,Y)+\mathrm{Cov}(X,Z)`.
 	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)+\mathrm{Cov}(X,Y)`.
+	* In general
+
+		.. math:: \mathrm{Var}\left(\sum_{i=1}^n X_i\right)=\sum_{i=1}^n \mathrm{Var}(X_i)+\sum_{i=1}^n\sum_{j=1, i\neq j}^n\mathrm{Cov}(X_i,Y_j)
 
 .. note::
 	* Correlation is defined as the normalised version of covariance
@@ -116,6 +119,7 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 
 			.. math:: \rho(X,Y)=\frac{\mathbb{E}[\tilde{X}\tilde{Y}]}{\sqrt{\mathbb{E}[\tilde{X}^2]\cdot \mathbb{E}[\tilde{Y}^2]}}
 		* The proof follows from Cauchy-Schwarz inequality.
+	* The equality holds only when :math:`\tilde{X}=c\cdot \tilde{Y}` for some :math:`c`.
 
 ******************************************************************************************
 Estimation using conditional expectation
@@ -155,8 +159,22 @@ Estimation using conditional expectation
 Conditional variance
 ========================================================================
 
+.. note::
+	We can define conditional variance as :math:`\mathrm{Var}(X|Y)=\mathbb{E}[(X-\mathbb{E}[X|Y])^2|Y]` such that
+	
+		.. math:: \mathbb{E}[\mathrm{Var}(X|Y)]=\mathbb{E}[\mathbb{E}[(X-\mathbb{E}[X|Y])^2|Y]]=\mathbb{E}[(X-\mathbb{E}[X|Y])^2]=\mathrm{E}[\tilde{X}^2]=\mathrm{Var}(\tilde{X})
+
 Law of iterated variance
 ========================================================================
+
+.. note::
+	We can rewrite the variance relation using this new notation
+
+		.. math:: \mathrm{Var}(X)=\mathrm{Var}(\mathbb{E}[X|Y])+\mathbb{E}[\mathrm{Var}(X|Y)]
+
+.. tip::
+	* The iterated law of expectation and variance allows us to tackle complicated cases by taking help in conditioning.
+	* Example: A coin with unknown probability of head is tossed :math:`n` times. The probability is known to be uniform in :math:`[0,1]`. Let :math:`X` is the total number of heads. Find :math:`\mathbb{E}[X]` and :math:`\mathrm{Var}(X)`.
 
 ******************************************************************************************
 Transforms of rv
