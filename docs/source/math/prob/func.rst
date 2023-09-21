@@ -189,6 +189,7 @@ Moment Generating Function
 	* We note that
 
 		.. math:: M_X(s)=\mathbb{E}[e^{sX}]=\int\left(1+sx+\frac{s^2x^2}{2!}+\cdots\right)\mathop{dx}=1+s\cdot\mathbb{E}[X]+\frac{s^2}{2!}\cdot\mathbb{E}[X^2]+\cdots
+
 		* From this, we establish that :math:`\frac{\mathop{d}^n}{\mathop{ds}^n}\left(M_X(s)\right)|_{s=0}=\mathbb{E}[X^n]`.
 	* Extends to the multivariate case as
 
