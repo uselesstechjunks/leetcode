@@ -122,10 +122,16 @@ Estimation using conditional expectation
 ******************************************************************************************
 .. note::
 	* We assume that knowing :math:`Y`, we can estimate :math:`X`.
+	* We have access to the conditional density :math:`f_{X|Y}(x|y)`.
+
+		* Alternatively, we have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem.
 	* From law of iterated expectation, we have :math:`\mathbb{E}[X]=\mathbb{E}[\mathbb{E}[X|Y]]`
 	* Therefore
 
 		* Estimator: :math:`\hat{X}=\mathbb{E}[X|Y]` can be thought of as an estimator of :math:`X` as their expected values are the same.
+
+			* In particular, for a given value of :math:`Y=y`, our estimation :math:\hat{x}=\mathbb{E}[X|Y=y]=r(y)`.
+			* The conditional expectation is also known as a regression function.
 		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
 
 			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
