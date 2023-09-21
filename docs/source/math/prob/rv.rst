@@ -340,7 +340,7 @@ Probability density function
 	* Therefore, the probabilistic interpreration has to work with a subset of the real line :math:`B\subset\mathbb{R}`.
 	* We define a probability density function (PDF), :math:`f_X(x)\geq 0`, such that
 
-		.. math:: \mathbb{P}(X\in B)=\int\limits_{B} f_X(x)dx.
+		.. math:: \mathbb{P}(X\in B)=\int\limits_{B} f_X(x)\mathop{dx}.
 	* This term is well defined when
 
 		* :math:`B` can be represented as the union of a countable collection of intervals.
@@ -348,13 +348,13 @@ Probability density function
 	* We say a rv is continuous for which such PDF can be defined.
 
 .. tip::
-	* For the simplest case when :math:`B` is an interval, :math:`[a,b]`, then :math:`\mathbb{P}(a\leq X\leq b)=\int\limits_a^b f_X(x)dx`.	
+	* For the simplest case when :math:`B` is an interval, :math:`[a,b]`, then :math:`\mathbb{P}(a\leq X\leq b)=\int\limits_a^b f_X(x)\mathop{dx}`.	
 	* Since individual points have 0 probability
 
 		.. math:: \mathbb{P}(a\leq X\leq b)=\mathbb{P}(a\leq X< b)=\mathbb{P}(a< X\leq b)=\mathbb{P}(a< X< b).
 	* Normalisation property holds, i.e.
 
-		.. math:: \mathbb{P}(-\infty< X<\infty)=\int\limits_{-\infty}^\infty f_X(x)dx=1.
+		.. math:: \mathbb{P}(-\infty< X<\infty)=\int\limits_{-\infty}^\infty f_X(x)\mathop{dx}=1.
 
 Probabilistic interpretation
 ---------------------------------------------------
@@ -378,10 +378,10 @@ Probabilistic interpretation
 
 Expectation and Variance
 =========================================================
-We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) dx` (assuming that the integral exists and is bounded).
+We can define Expectation of as :math:`\int\limits_{-\infty}^\infty x f_X(x) \mathop{dx}` (assuming that the integral exists and is bounded).
 
 .. attention::
-	* Expectation is well-defined when :math:`\int\limits_{-\infty}^\infty \left|x \right| f_X(x) dx < \infty`.
+	* Expectation is well-defined when :math:`\int\limits_{-\infty}^\infty \left|x \right| f_X(x) \mathop{dx} < \infty`.
 	* Example where the expectation isn't defined
 
 		.. math:: f_X(x)=\frac{c}{1+x^2}
@@ -450,7 +450,7 @@ Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq
 		.. math::
 			F_X(x)=\mathbb{P}(X\leq x)=\begin{cases}
 			    \sum_{k\leq x} p_X(k), & \text{if $X$ is discrete} \\
-			    \int\limits_{-\infty}^x f_X(x) dx, & \text{if $X$ is continuous}
+			    \int\limits_{-\infty}^x f_X(x) \mathop{dx}, & \text{if $X$ is continuous}
 			  \end{cases}
 
 Properties of CDF
@@ -472,7 +472,7 @@ Properties of CDF
 		* continuous, if :math:`X` is continuous.
 		* This explains why, in general, :math:`F_X` can only have countable points of discontinuity.
 	* If :math:`X` is discrete and takes integer values, then :math:`F_X(k)=\sum_{-\infty}^k p_X(k)` and :math:`p_X(k)=F_X(k)-F_X(k-1)`.
-	* If :math:`X` is continuous, then :math:`F_X(x)=\int\limits_{-\infty}^x f_X(x) dx` and :math:`f_X(x)=\frac{dF_X}{dx}(x)`.
+	* If :math:`X` is continuous, then :math:`F_X(x)=\int\limits_{-\infty}^x f_X(x) \mathop{dx}` and :math:`f_X(x)=\frac{dF_X}{\mathop{dx}}(x)`.
 
 .. tip::
 	We can work with a **mixed** rv that takes discrete values for some and continuous values for others if we work with the CDF.
@@ -484,10 +484,10 @@ Similar to the single continuous variable case, we say that two rvs, :math:`X` a
 .. tip::
 	* For the simple case when :math:`B=[a,b]\times [c,d]`, and when Fubini's theorem applies, then
 
-		.. math:: \mathbb{P}(a\leq X\leq b, c\leq Y\leq d)=\int\limits_a^b\int\limits_c^d f_{X,Y}(x,y) dx dy=\int\limits_c^d\int\limits_a^b f_{X,Y}(x,y) dy dx
+		.. math:: \mathbb{P}(a\leq X\leq b, c\leq Y\leq d)=\int\limits_a^b\int\limits_c^d f_{X,Y}(x,y) \mathop{dx} \mathop{dy}=\int\limits_c^d\int\limits_a^b f_{X,Y}(x,y) \mathop{dy} \mathop{dx}
 	* Normalisation property holds.
 
-		.. math:: \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty f_{X,Y}(x,y)dx dy=1
+		.. math:: \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty f_{X,Y}(x,y)\mathop{dx} \mathop{dy}=1
 
 Probabilistic interpretation
 ---------------------------------------------------
@@ -503,10 +503,10 @@ Probabilistic interpretation
 	If :math:`X=g(Y)`, then the entire function :math:`f_{X,Y}` has an area of 0 in the :math:`\mathbb{R}^2` plane. Therefore, we cannot define a PDF which can represent probability per unit area. So :math:`X` and :math:`Y` cannot be **jointly** continuous even if they are **marginally** continuous (i.e. their marginal PDFs are well defined).
 
 .. note::
-	* The marginal probability is defined as :math:`f_X(x)=\int\limits_{-\infty}^\infty f_{X,Y}(x,y)dy` (similarly for :math:`f_Y(y)`).
+	* The marginal probability is defined as :math:`f_X(x)=\int\limits_{-\infty}^\infty f_{X,Y}(x,y)\mathop{dy}` (similarly for :math:`f_Y(y)`).
 	* We can define **joint CDF** as 
 
-		.. math:: F_{X,Y}(x,y)=\mathbb{P}(X\leq x, Y\leq y)=\int\limits_{-\infty}^x \int\limits_{-\infty}^y f_{X,Y}(x,y) dx dy
+		.. math:: F_{X,Y}(x,y)=\mathbb{P}(X\leq x, Y\leq y)=\int\limits_{-\infty}^x \int\limits_{-\infty}^y f_{X,Y}(x,y) \mathop{dx} \mathop{dy}
 
 		* PDF can be recovered from CDF as 
 
@@ -522,10 +522,10 @@ Conditioning on an event
 ---------------------------------------------------
 A continuous rv can be conditioned on an event :math:`A` with :math:`\mathbb{P}(A)>0` and we can define a conditional PDF :math:`f_{X|A}(x)` such that for any (measurable) subset :math:`B\in\mathbb{R}`
 
-	.. math:: \mathbb{P}(X\in B|A)=\int\limits_B f_{X|A}(x) dx
+	.. math:: \mathbb{P}(X\in B|A)=\int\limits_B f_{X|A}(x) \mathop{dx}
 
 .. note::
-	* Normalisation property holds like normal PDFs, i.e. :math:`\int\limits_{-\infty}^\infty f_{X|A}(x) dx=1`.
+	* Normalisation property holds like normal PDFs, i.e. :math:`\int\limits_{-\infty}^\infty f_{X|A}(x) \mathop{dx}=1`.
 	* When the event is defined with the same rv such as :math:`X\in A`, then 
 
 		.. math:: 
@@ -543,7 +543,7 @@ Probabilistic interpretation
 		.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}=\begin{cases}\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_x^{x+\delta} dt\approx f_{X|A}(x)\cdot\delta & \text{if $[x,x+\delta]\in A$}\\ 0 & \text{otherwise}\end{cases}
 
 	* So, the conditional PDF represents conditional probability per unit length.
-	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) dx`.
+	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) \mathop{dx}`.
 	* Jointly continuous rvs can be conditioned on an event :math:`C=\{x,y\}\in A` with :math:`\mathbb{P}(C)>0` as exactly like above.
 
 Total probability theorem
@@ -580,7 +580,7 @@ Definition of probability conditioned on an event with 0 probability
 .. tip::
 	Using above, we can define the conditional probability for any (measurable) subset :math:`B\in\mathbb{R}` as
 
-		.. math:: \mathbb{P}(X\in B|Y=y)=\int\limits_B f_{X|Y}(x|y) dx
+		.. math:: \mathbb{P}(X\in B|Y=y)=\int\limits_B f_{X|Y}(x|y) \mathop{dx}
 
 Conditioning on a discrete rv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -600,7 +600,7 @@ Total probability theorem
 	* We recover the marginals as
 
 		* :math:`f_Y(y)=\sum_{k}p_K(k)f_{Y|K}(y|k)` and 
-		* :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(y)p_{K|Y}(k|t) dy`.
+		* :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(y)p_{K|Y}(k|t) \mathop{dy}`.
 
 Bayes theorem
 ---------------------------------------------------
