@@ -44,7 +44,7 @@ Monotonic functions
 		.. math:: f_Y(y)=\left| f_X(g^{-1}(y)) \right|\cdot\frac{d}{dy}\left[g^{-1}(y)\right]
 
 ******************************************************************************************
-Mass/density of a function of multiply jointly distributed rvs
+Mass/density of a function of multiple jointly distributed rvs
 ******************************************************************************************
 
 Special cases
