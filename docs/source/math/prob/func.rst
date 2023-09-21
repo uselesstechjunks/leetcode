@@ -23,11 +23,12 @@ Linear functions
 ------------------------------------------------------------------------
 Let :math:`Y=g(X)=aX+b` with :math:`a\neq 0`. Therefore we have 
 
-.. math::
-	F_Y(y)=\mathbb{P}(Y\leq y)=\mathbb{P}(g(X)\leq y)=\mathbb{P}(aX+b\leq y)=\begin{cases}\mathbb{P}\left(X\leq\frac{y-b}{a}\right) & \text{if $a>0$} \\ \mathbb{P}\left(X\geq\frac{y-b}{a}\right) & \text{if $a<0$}\end{cases}=\begin{cases}f_X(\frac{y-b}{a}) & \text{if $a>0$} \\ 1-f_X(\frac{y-b}{a}) & \text{if $a<0$}\end{cases}
-
 .. tip::
-	The PDF in this case has the format
+	* If :math:`a=0`, then :math:`Y=b` with probability 1 and it's no longer a continuous rv.
+	* If :math:`a\neq 0`, then we have
+
+		.. math:: F_Y(y)=\mathbb{P}(Y\leq y)=\mathbb{P}(g(X)\leq y)=\mathbb{P}(aX+b\leq y)=\begin{cases}\mathbb{P}\left(X\leq\frac{y-b}{a}\right) & \text{if $a>0$} \\ \mathbb{P}\left(X\geq\frac{y-b}{a}\right) & \text{if $a<0$}\end{cases}=\begin{cases}f_X(\frac{y-b}{a}) & \text{if $a>0$} \\ 1-f_X(\frac{y-b}{a}) & \text{if $a<0$}\end{cases}
+	* The PDF in this case has the format
 
 		.. math:: f_Y(y)=\begin{cases}\frac{1}{a}f_X(\frac{y-b}{a}) & \text{if $a>0$} \\ -\frac{1}{a}f_X(\frac{y-b}{a}) & \text{if $a<0$}\end{cases}=\frac{1}{\left| a \right|}f_X(\frac{y-b}{a})
 
