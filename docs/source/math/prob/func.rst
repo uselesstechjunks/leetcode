@@ -68,9 +68,9 @@ Discrete case
 	* We note that
 
 		.. math:: p_{Z|X}(z|x)=\mathbb{P}(Z=z|X=x)=\mathbb{P}(X+Y=z|X=x)=\mathbb{P}(x+Y=z)=\mathbb{P}(Y=z-x)=p_{Y}(z-x)
-	* Therefore, the joint mass between :math:`X` and :math:`Z` factorises
+	* Therefore, the joint mass between :math:`X` and :math:`Z` factorises as
 
-		.. math:: f_{X,Z}(x,z)=f_X(x)f_{Z|X}(z|x)=f_X(x)f_{Y}(z-x)
+		.. math:: p_{X,Z}(x,z)=p_X(x)p_{Z|X}(z|x)=p_X(x)p_{Y}(z-x)
 	* Let the joint density be :math:`f_{X,Y}(x,y)` (alternatively, joint mass :math:`p_{X,Y}(x,y)`).
 
 		.. math:: p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z]
@@ -85,7 +85,7 @@ Continuous case
 
 		.. math:: F_{Z|X}(z|x)=\mathbb{P}(Z\leq z|X=x)=\mathbb{P}(X+Y\leq z|X=x)=\mathbb{P}(x+Y\leq z)=\mathbb{P}(Y\leq z-x)=F_{Y}(z-x)
 	* Differentiating both sides, :math:`f_{Z|X}(z|x)=f_{Y}(z-x)`.
-	* Therefore, the joint density between :math:`X` and :math:`Z` factorises
+	* Therefore, the joint density between :math:`X` and :math:`Z` factorises as
 
 		.. math:: p_{X,Z}(x,z)=p_X(x)p_{Z|X}(z|x)=p_X(x)p_{Y}(z-x)
 	* Marginalising, we obtain
