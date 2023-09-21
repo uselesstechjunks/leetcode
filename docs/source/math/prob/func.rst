@@ -17,7 +17,8 @@ Let :math:`Y=g(X)` be a function of an rv :math:`X`.
 		* Compute the PDF as :math:`f_Y(y)=F'_Y(y)`.
 
 .. tip::
-	Some effort is required to compute the set :math:`\{x|g(x)\leq y\}`.
+	* Some effort is required to compute the set :math:`\{x|g(x)\leq y\}`.
+	* Find :math:`f_Y(y)` where :math:`Y=X^2`.
 
 Special cases
 ========================================================================
@@ -58,11 +59,15 @@ Let :math:`Z=g(X,Y)` be a function of 2 jointly distributed rvs, :math:`X` and :
 	* Compute the PDF as :math:`f_Z(z)=F'_Z(z)`.
 	* Extends naturally for more than 2 rvs.
 
+.. seealso::
+	* Find the PDF of :math:`Z=X/Y`, where :math:`X` and :math:`Y` are independent and uniformly distributed in :math:`[0,1]`.
+	* Two people join a call but they are late by an amount, independent of the other, that follows an exponential distribution with parameter :math:`\lambda`. Find the PDF of the difference in their joining time.	
+
 Special cases
 ========================================================================
-Sum of rvs: Convolution
+Sum of independent rvs: Convolution
 ------------------------------------------------------------------------
-We want the PDF (or PMF) of the sum of two rvs, :math:`X` and :math:`Y`, :math:`Z=X+Y`.
+We want the PDF (or PMF) of the sum of two independent rvs, :math:`X` and :math:`Y`, :math:`Z=X+Y`.
 
 Discrete case
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -90,6 +95,9 @@ Continuous case
 	* Marginalising, we obtain
 
 		.. math:: f_Z(z)=\int\limits_{-\infty}^\infty f_{X,Z}(x,z)\mathop{dx}=\int\limits_{-\infty}^\infty f_X(x)f_{Y}(z-x)\mathop{dx}=(f_X \ast f_Y)[z]
+
+.. seealso::
+	* Find the PDF of the sum of two independent normals.
 
 ******************************************************************************************
 Covariance and correlation
@@ -120,6 +128,9 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 			.. math:: \rho(X,Y)=\frac{\mathbb{E}[\tilde{X}\tilde{Y}]}{\sqrt{\mathbb{E}[\tilde{X}^2]\cdot \mathbb{E}[\tilde{Y}^2]}}
 		* The proof follows from Cauchy-Schwarz inequality.
 	* The equality holds only when :math:`\tilde{X}=c\cdot \tilde{Y}` for some :math:`c`.
+
+.. seealso::
+	* We can solve the hat problem using covariance.
 
 ******************************************************************************************
 Estimation using conditional expectation
@@ -173,8 +184,10 @@ Law of iterated variance
 		.. math:: \mathrm{Var}(X)=\mathrm{Var}(\mathbb{E}[X|Y])+\mathbb{E}[\mathrm{Var}(X|Y)]
 
 .. tip::
-	* The iterated law of expectation and variance allows us to tackle complicated cases by taking help in conditioning.
-	* Example: A coin with unknown probability of head is tossed :math:`n` times. The probability is known to be uniform in :math:`[0,1]`. Let :math:`X` is the total number of heads. Find :math:`\mathbb{E}[X]` and :math:`\mathrm{Var}(X)`.
+	The iterated law of expectation and variance allows us to tackle complicated cases by taking help in conditioning.
+
+.. seealso::
+	* A coin with unknown probability of head is tossed :math:`n` times. The probability is known to be uniform in :math:`[0,1]`. Let :math:`X` is the total number of heads. Find :math:`\mathbb{E}[X]` and :math:`\mathrm{Var}(X)`.
 
 ******************************************************************************************
 Transforms of rv
@@ -205,3 +218,6 @@ Moment Generating Function
 .. tip::
 	* Knowing MGF often helps us find the moments easier than direct approach.
 	* Find the expectation and variance of exponential distribution in normal way and using MGF.
+
+.. seealso::
+	Find the expectation, variance and the transform of the sum of independent rvs where the number of terms is also a rv.
