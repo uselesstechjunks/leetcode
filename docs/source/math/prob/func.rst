@@ -124,8 +124,8 @@ Estimation using conditional expectation
 	* We assume that knowing :math:`Y`, we can estimate :math:`X`.
 	* We assume that conditional density :math:`f_{X|Y}(x|y)` is known.
 
-		* [Generative] We might have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem. 
 		* [Discriminative] We might have access to the conditional density directly.
+		* [Generative] We might have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem. 
 	* From law of iterated expectation, we have :math:`\mathbb{E}[X]=\mathbb{E}[\mathbb{E}[X|Y]]`
 	* Therefore
 
