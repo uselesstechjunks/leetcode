@@ -131,7 +131,7 @@ Estimation using conditional expectation
 
 		* Estimator: :math:`\hat{X}=\mathbb{E}[X|Y]` can be thought of as an estimator of :math:`X` as their expected values are the same.
 
-			* In particular, for a given value of :math:`Y=y`, our estimation :math:\hat{x}=\mathbb{E}[X|Y=y]=r(y)`.
+			* In particular, for a given value of :math:`Y=y`, our estimation :math:`\hat{x}=\mathbb{E}[X|Y=y]=r(y)`.
 			* The conditional expectation is also known as a regression function.
 		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
 
