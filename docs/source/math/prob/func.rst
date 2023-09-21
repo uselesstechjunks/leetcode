@@ -23,7 +23,7 @@ Special cases
 ========================================================================
 Linear functions
 ------------------------------------------------------------------------
-Let :math:`Y=g(X)=aX+b` with :math:`a\neq 0`. Therefore we have 
+Let :math:`Y=g(X)=aX+b`.
 
 .. tip::
 	* If :math:`a=0`, then :math:`Y=b` with probability 1 and it's no longer a continuous rv.
