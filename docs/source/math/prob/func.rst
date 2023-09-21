@@ -17,7 +17,8 @@ Let :math:`Y=g(X)` be a function of an rv :math:`X`.
 		* Compute the PDF as :math:`f_Y(y)=F'_Y(y)`.
 
 .. tip::
-	Some effort is required to compute the set :math:`\{x|g(x)\leq y\}`.
+	* Some effort is required to compute the set :math:`\{x|g(x)\leq y\}`.
+	* Find :math:`f_Y(y)` where :math:`Y=X^2`.
 
 Special cases
 ========================================================================
@@ -58,11 +59,15 @@ Let :math:`Z=g(X,Y)` be a function of 2 jointly distributed rvs, :math:`X` and :
 	* Compute the PDF as :math:`f_Z(z)=F'_Z(z)`.
 	* Extends naturally for more than 2 rvs.
 
+.. seealso::
+	* Find the PDF of :math:`Z=X/Y`, where :math:`X` and :math:`Y` are independent and uniformly distributed in :math:`[0,1]`.
+	* Two people join a call but they are late by an amount, independent of the other, that follows an exponential distribution with parameter :math:`\lambda`. Find the PDF of the difference in their joining time.	
+
 Special cases
 ========================================================================
-Sum of rvs: Convolution
+Sum of independent rvs: Convolution
 ------------------------------------------------------------------------
-We want the PDF (or PMF) of the sum of two rvs, :math:`X` and :math:`Y`, :math:`Z=X+Y`.
+We want the PDF (or PMF) of the sum of two independent rvs, :math:`X` and :math:`Y`, :math:`Z=X+Y`.
 
 Discrete case
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -90,6 +95,9 @@ Continuous case
 	* Marginalising, we obtain
 
 		.. math:: f_Z(z)=\int\limits_{-\infty}^\infty f_{X,Z}(x,z)\mathop{dx}=\int\limits_{-\infty}^\infty f_X(x)f_{Y}(z-x)\mathop{dx}=(f_X \ast f_Y)[z]
+
+.. seealso::
+	* Find the PDF of the sum of two independent normals.
 
 ******************************************************************************************
 Covariance and correlation
@@ -120,6 +128,9 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 			.. math:: \rho(X,Y)=\frac{\mathbb{E}[\tilde{X}\tilde{Y}]}{\sqrt{\mathbb{E}[\tilde{X}^2]\cdot \mathbb{E}[\tilde{Y}^2]}}
 		* The proof follows from Cauchy-Schwarz inequality.
 	* The equality holds only when :math:`\tilde{X}=c\cdot \tilde{Y}` for some :math:`c`.
+
+.. seealso::
+	* We can solve the hat problem using covariance.
 
 ******************************************************************************************
 Estimation using conditional expectation
@@ -173,14 +184,40 @@ Law of iterated variance
 		.. math:: \mathrm{Var}(X)=\mathrm{Var}(\mathbb{E}[X|Y])+\mathbb{E}[\mathrm{Var}(X|Y)]
 
 .. tip::
-	* The iterated law of expectation and variance allows us to tackle complicated cases by taking help in conditioning.
-	* Example: A coin with unknown probability of head is tossed :math:`n` times. The probability is known to be uniform in :math:`[0,1]`. Let :math:`X` is the total number of heads. Find :math:`\mathbb{E}[X]` and :math:`\mathrm{Var}(X)`.
+	The iterated law of expectation and variance allows us to tackle complicated cases by taking help in conditioning.
+
+.. seealso::
+	* A coin with unknown probability of head is tossed :math:`n` times. The probability is known to be uniform in :math:`[0,1]`. Let :math:`X` is the total number of heads. Find :math:`\mathbb{E}[X]` and :math:`\mathrm{Var}(X)`.
 
 ******************************************************************************************
 Transforms of rv
 ******************************************************************************************
-
-Moment Generating Functions
+Moment Generating Function
 ========================================================================
+.. note::
+	* Moment generating function (MGF) of a rv is defined as a function of another parameter :math:`s`
 
+		.. math:: M_X(s)=\mathbb{E}[e^{sX}]
+	* This closely relates to the **Laplace Transform** (see stat stackexchange post `here <https://stats.stackexchange.com/questions/238776/how-would-you-explain-moment-generating-functionmgf-in-laymans-terms>`_)
+	* We note that
 
+		.. math:: M_X(s)=\mathbb{E}[e^{sX}]=\int\left(1+sx+\frac{s^2x^2}{2!}+\cdots\right)\mathop{dx}=1+s\cdot\mathbb{E}[X]+\frac{s^2}{2!}\cdot\mathbb{E}[X^2]+\cdots
+
+		* From this, we establish that :math:`\frac{\mathop{d}^n}{\mathop{ds}^n}\left(M_X(s)\right)|_{s=0}=\mathbb{E}[X^n]`.
+	* Extends to the multivariate case as
+
+		.. math:: M_{X_1,X_2,\cdots,X_n}(s_1,s_2,\cdots,s_n)=\mathbb{E}[e^{\sum_{i=1}^n s_i X_i}]
+	* For two independent rvs :math:`X` and :math:`Y`, the MGF of their sum :math:`Z=X+Y` is given by 
+
+		.. math:: M_{Z}(s)=\mathbb{E}[e^{sX+sY}]=\mathbb{E}[e^{sX}e^{sY}]=\mathbb{E}[e^{sX}]\mathbb{E}[e^{sY}]=M_{X}(s)\cdot M_{Y}(s)
+	* The above extends for multiple independent rvs.
+
+.. attention::
+	MGFs completely determines the CDFs and densities/mass functions.
+
+.. tip::
+	* Knowing MGF often helps us find the moments easier than direct approach.
+	* Find the expectation and variance of exponential distribution in normal way and using MGF.
+
+.. seealso::
+	Find the expectation, variance and the transform of the sum of independent rvs where the number of terms is also a rv.
