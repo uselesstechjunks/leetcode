@@ -97,9 +97,13 @@ Covariance and correlation
 Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]`.
 
 .. note::
+	* :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]`.
+
+		* Proof follows from expanding the expression in definition.
 	* :math:`\mathrm{Cov}(X,X)=\mathrm{Var}(X)`.
 	* :math:`\mathrm{Cov}(X,aY+b)=a\cdot\mathrm{Cov}(X,Y)`.
 	* :math:`\mathrm{Cov}(X,Y+Z)=\mathrm{Cov}(X,Y)+\mathrm{Cov}(X,Z)`.
+	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)+\mathrm{Cov}(X,Y)`.
 
 .. note::
 	* Correlation is defined as the normalised version of covariance
@@ -110,15 +114,30 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 		* Let :math:`\tilde{X}=X-\mathbb{E}[X]` and :math:`\tilde{Y}=Y-\mathbb{E}[Y]` be the centered rvs.
 		* The correlation coefficient then becomes
 
-			.. math:: \rho(X,Y)=\frac{\mathbb{E}[\tilde{X}\tilde{Y}]}{\sqrt{\mathbb{E}[\tilde{X}]\cdot \mathbb{E}[\tilde{Y}]}}
+			.. math:: \rho(X,Y)=\frac{\mathbb{E}[\tilde{X}\tilde{Y}]}{\sqrt{\mathbb{E}[\tilde{X}^2]\cdot \mathbb{E}[\tilde{Y}^2]}}
 		* The proof follows from Cauchy-Schwarz inequality.
 
 ******************************************************************************************
-Fundamentals of estimations using conditional expectation
+Estimation using conditional expectation
 ******************************************************************************************
+.. note::
+	* We assume that knowing :math:`Y`, we can estimate :math:`X`.
+	* From law of iterated expectation, we have :math:`\mathbb{E}[X]=\mathbb{E}[\mathbb{E}[X|Y]]`
+	* Therefore
 
-Law of iterated expectation
-========================================================================
+		* Estimator: :math:`\hat{X}=\mathbb{E}[X|Y]` can be thought of as an estimator of :math:`X` as their expected values are the same.
+		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
+
+			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
+			* This error is uncorrelated with the estimator.
+
+				* We note that :math:`\mathrm{Cov}(\hat{X},\tilde{X})=\mathbb{E}[\hat{X}\tilde{X}]-\mathbb{E}[\hat{X}]\mathbb{E}[\tilde{X}]=\mathbb{E}[\hat{X}\tilde{X}]`.
+				* Invoking law of iterated expectation
+
+					.. math:: \mathbb{E}[\hat{X}\tilde{X}]=\mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]
+				* Given :math:`Y`, :math:`\hat{X}` is constant.
+
+					.. math:: \mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[(\hat{X}-X)|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\hat{X}|Y]]-\mathbb{E}[\hat{X}\cdot\mathbb{E}[X|Y]]=\mathbb{E}[\hat{X}^2]-\mathbb{E}[\hat{X}^2]]=0
 
 Conditional variance
 ========================================================================
