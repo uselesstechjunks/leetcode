@@ -37,13 +37,14 @@ Let :math:`Y=g(X)=aX+b` with :math:`a\neq 0`. Therefore we have
 Monotonic functions
 ------------------------------------------------------------------------
 .. note::
-	* If :math:`g(Y)=X` is a monotonic function, then it has an inverse, :math:`g^{-1}(Y)`.
+	* If :math:`g(y)=x` is a monotonic function, then it has an inverse, :math:`x=g^{-1}(y)`.
 	* Therefore, we have
 
 		.. math:: F_Y(y)=\mathbb{P}(Y\leq y)=\mathbb{P}(g(X)\leq y)=\begin{cases}\mathbb{P}(X\leq g^{-1}(y)) & \text{if $g(X)$ is monotonic increasing}\\\mathbb{P}(X\geq g^{-1}(y)) & \text{if $g(X)$ is monotonic decreasing}\end{cases}=\begin{cases}F_X(g^{-1}(y)) & \text{if $g(X)$ is monotonic increasing}\\1-F_X(g^{-1}(y)) & \text{if $g(X)$ is monotonic decreasing}\end{cases}
 	* We can recover the PDF in both cases as
 
 		.. math:: f_Y(y)=\left| f_X(g^{-1}(y)) \right|\cdot\frac{d}{dy}\left[g^{-1}(y)\right]
+	* We note that the linear case is a special case of monotonic functions.
 
 ******************************************************************************************
 Density of a function of multiple jointly distributed rvs
