@@ -122,9 +122,10 @@ Estimation using conditional expectation
 ******************************************************************************************
 .. note::
 	* We assume that knowing :math:`Y`, we can estimate :math:`X`.
-	* We have access to the conditional density :math:`f_{X|Y}(x|y)`.
+	* We assume that conditional density :math:`f_{X|Y}(x|y)` is known.
 
-		* Alternatively, we have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem.
+		* [Generative] We might have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem. 
+		* [Discriminative] We might have access to the conditional density directly.
 	* From law of iterated expectation, we have :math:`\mathbb{E}[X]=\mathbb{E}[\mathbb{E}[X|Y]]`
 	* Therefore
 
@@ -135,7 +136,7 @@ Estimation using conditional expectation
 		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
 
 			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
-			* Variance of this error is the same as "Mean-squared error" (MSE).
+			* Variance of this error is the same as "Mean-Squared Error" (MSE).
 
 				.. math:: \mathrm{Var}(\tilde{X})=\mathbb{E}[\tilde{X}^2]-\left(\mathbb{E}[\tilde{X}]\right)^2=\mathbb{E}[\tilde{X}^2]=\mathbb{E}[(\hat{X}-X)^2]
 			* This error is uncorrelated with the estimator.
@@ -149,6 +150,7 @@ Estimation using conditional expectation
 				* Given :math:`Y`, :math:`\hat{X}` is constant.
 
 					.. math:: \mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[(\hat{X}-X)|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\hat{X}|Y]]-\mathbb{E}[\hat{X}\cdot\mathbb{E}[X|Y]]=\mathbb{E}[\hat{X}^2]-\mathbb{E}[\hat{X}^2]]=0
+			* Therefore, we have :math:`\mathrm{Var}(X)=\mathrm{Var}(\hat{X})+\mathrm{Var}(\tilde{X})`.
 
 Conditional variance
 ========================================================================
