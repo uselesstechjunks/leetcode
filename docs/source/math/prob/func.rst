@@ -71,9 +71,6 @@ Discrete case
 	* Therefore, the joint mass between :math:`X` and :math:`Z` factorises as
 
 		.. math:: p_{X,Z}(x,z)=p_X(x)p_{Z|X}(z|x)=p_X(x)p_{Y}(z-x)
-	* Let the joint density be :math:`f_{X,Y}(x,y)` (alternatively, joint mass :math:`p_{X,Y}(x,y)`).
-
-		.. math:: p_Z(z)=\sum_{x=-\infty}^\infty p_X(x) p_Y(z-x)=(p_X \ast p_Y)[z]
 	* Marginalising, we obtain
 
 		.. math:: p_Z(z)=\sum_x p_{X,Z}(x,z)=\sum_x p_X(x)p_{Y}(z-x)dx=(p_X \ast p_Y)[z]
