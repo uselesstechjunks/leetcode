@@ -131,7 +131,9 @@ Estimation using conditional expectation
 			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
 			* This error is uncorrelated with the estimator.
 
-				* We note that :math:`\mathrm{Cov}(\hat{X},\tilde{X})=\mathbb{E}[\hat{X}\tilde{X}]-\mathbb{E}[\hat{X}]\mathbb{E}[\tilde{X}]=\mathbb{E}[\hat{X}\tilde{X}]`.
+				* We note that
+
+					.. math:: \mathrm{Cov}(\hat{X},\tilde{X})=\mathbb{E}[\hat{X}\tilde{X}]-\mathbb{E}[\hat{X}]\mathbb{E}[\tilde{X}]=\mathbb{E}[\hat{X}\tilde{X}]
 				* Invoking law of iterated expectation
 
 					.. math:: \mathbb{E}[\hat{X}\tilde{X}]=\mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]
