@@ -43,8 +43,14 @@ Monotonic functions
 
 		.. math:: f_Y(y)=\left| f_X(g^{-1}(y)) \right|\cdot\frac{d}{dy}\left[g^{-1}(y)\right]
 
-Sum of rvs: Convolution
+******************************************************************************************
+Mass/density of a function of multiply jointly distributed rvs
+******************************************************************************************
+
+Special cases
 ========================================================================
+Sum of rvs: Convolution
+------------------------------------------------------------------------
 .. tip::
 	* We want the PDF (or PMF) of the sum of two rvs, :math:`X` and :math:`Y`, :math:`Z=X+Y`.
 	* Let the joint density be :math:`f_{X,Y}(x,y)` (alternatively, joint mass :math:`p_{X,Y}(x,y)`).
