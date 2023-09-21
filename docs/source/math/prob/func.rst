@@ -129,6 +129,9 @@ Estimation using conditional expectation
 		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
 
 			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
+			* Variance of the estimator is the same as "Mean-squared error" (MSE).
+
+				.. math:: \mathrm{Var}(\tilde{X})=\mathbb{E}[\tilde{X}^2]-\left(\mathbb{E}[\tilde{X}]\right)^2=\mathbb{E}[\tilde{X}^2]=\mathbb{E}[(\hat{X}-X)^2]
 			* This error is uncorrelated with the estimator.
 
 				* We note that
