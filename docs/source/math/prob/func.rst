@@ -194,9 +194,6 @@ Moment Generating Function
 	* Extends to the multivariate case as
 
 		.. math:: M_{X_1,X_2,\cdots,X_n}(s_1,s_2,\cdots,s_n)=\mathbb{E}[e^{\sum_{i=1}^n s_i X_i}]
-	* If :math:`X_i` and :math:`X_j` are independent, then
-
-		.. math:: M_{X_i,X_j}(s_i,s_j)=\mathbb{E}[e^{s_iX_i+s_jX_j}]=\mathbb{E}[e^{s_iX_i}e^{s_jX_j}]=\mathbb{E}[e^{s_iX_i}]\mathbb{E}[e^{s_jX_j}]=M_{X_i}(s_i)\cdot M_{X_j}(s_j)
 	* For two independent rvs :math:`X` and :math:`Y`, the MGF of their sum :math:`Z=X+Y` is given by 
 
 		.. math:: M_{Z}(s)=\mathbb{E}[e^{sX+sY}]=\mathbb{E}[e^{sX}e^{sY}]=\mathbb{E}[e^{sX}]\mathbb{E}[e^{sY}]=M_{X}(s)\cdot M_{Y}(s)
