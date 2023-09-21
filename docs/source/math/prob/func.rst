@@ -179,8 +179,31 @@ Law of iterated variance
 ******************************************************************************************
 Transforms of rv
 ******************************************************************************************
-
-Moment Generating Functions
+Moment Generating Function
 ========================================================================
+.. note::
+	* Moment generating function (MGF) of a rv is defined as a function of another parameter :math:`s`
 
+		.. math:: M_X(s)=\mathbb{E}[e^{sX}]
+	* This closely relates to the **Laplace Transform** (see stat stackexchange post `here <https://stats.stackexchange.com/questions/238776/how-would-you-explain-moment-generating-functionmgf-in-laymans-terms`>_)
+	* We note that
 
+		.. math:: M_X(s)=\mathbb{E}[e^{sX}]=\int\left(1+sx+\frac{s^2x^2}{2!}+\cdots\right)\mathop{dx}=1+s\cdot\mathbb{E}[X]+\frac{s^2}{2!}\cdot\mathbb{E}[X^2]+\cdots
+		* From this, we establish that :math:`\frac{\mathop{d}^n}{\mathop{ds}^n}\left(M_X(s)\right)|_{s=0}=\mathbb{E}[X^n]`.
+	* Extends to the multivariate case as
+
+		.. math:: M_{X_1,X_2,\cdots,X_n}(s_1,s_2,\cdots,s_n)=\mathbb{E}[e^{\sum_{i=1}^n s_i X_i}]
+	* If :math:`X_i` and :math:`X_j` are independent, then
+
+		.. math:: M_{X_i,X_j}(s_i,s_j)=\mathbb{E}[e^{s_iX_i+s_jX_j}]=\mathbb{E}[e^{s_iX_i}e^{s_jX_j}]=\mathbb{E}[e^{s_iX_i}]\mathbb{E}[e^{s_jX_j}]=M_{X_i}(s_i)\cdot M_{X_j}(s_j)
+	* For two independent rvs :math:`X` and :math:`Y`, the MGF of their sum :math:`Z=X+Y` is given by 
+
+		.. math:: M_{Z}(s)=\mathbb{E}[e^{sX+sY}]=\mathbb{E}[e^{sX}e^{sY}]=\mathbb{E}[e^{sX}]\mathbb{E}[e^{sY}]=M_{X}(s)\cdot M_{Y}(s)
+	* The above extends for multiple independent rvs.
+
+.. attention::
+	MGFs completely determines the CDFs and densities/mass functions.
+
+.. tip::
+	* Knowing MGF often helps us find the moments easier than direct approach.
+	* Find the expectation and variance of exponential distribution in normal way and using MGF.
