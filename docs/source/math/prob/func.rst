@@ -13,7 +13,7 @@ Let :math:`Y=g(X)` be a function of an rv :math:`X`.
 
 		* Compute the CDF as
 
-			.. math:: F_Y(y)=\mathbb{P}(Y\leq y)=\mathbb{P}(g(X)\leq y)=\int\limits_{\{x|g(x)\leq y\}}f_X(x) dx
+			.. math:: F_Y(y)=\mathbb{P}(Y\leq y)=\mathbb{P}(g(X)\leq y)=\int\limits_{\{x|g(x)\leq y\}}f_X(x) \mathop{dx}
 		* Compute the PDF as :math:`f_Y(y)=F'_Y(y)`.
 
 .. tip::
@@ -89,7 +89,7 @@ Continuous case
 		.. math:: f_{X,Z}(x,z)=f_X(x)f_{Z|X}(z|x)=f_X(x)f_{Y}(z-x)
 	* Marginalising, we obtain
 
-		.. math:: f_Z(z)=\int\limits_{-\infty}^\infty f_{X,Z}(x,z)dx=\int\limits_{-\infty}^\infty f_X(x)f_{Y}(z-x)dx=(f_X \ast f_Y)[z]
+		.. math:: f_Z(z)=\int\limits_{-\infty}^\infty f_{X,Z}(x,z)\mathop{dx}=\int\limits_{-\infty}^\infty f_X(x)f_{Y}(z-x)\mathop{dx}=(f_X \ast f_Y)[z]
 
 ******************************************************************************************
 Covariance and correlation
