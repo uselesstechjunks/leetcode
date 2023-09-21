@@ -14,7 +14,6 @@ Discrete Random Variable
 *********************************************
 Discrete = values are from a finite/countably infinite subset of :math:`\mathbb{R}`.
 
-
 Probability mass function
 =========================================
 .. note::
@@ -363,7 +362,7 @@ Probabilistic interpretation
 
 		* We consider an interval :math:`[x,x+\delta]`, for some small :math:`\delta>0`. 
 		* Assuming that :math:`f_X(x)` is "well behaved" (its values doesn't jump around fanatically), we assume that it stays (almost) constant for this entire interval.
-		* Therefore, :math:`\mathbb{P}(X\in[x,x+\delta])=\int\limits_x^{x+\delta} f_X(t)dt\approx f_X(x)\cdot\delta`.
+		* Therefore, :math:`\mathbb{P}(X\in[x,x+\delta])=\int\limits_x^{x+\delta} f_X(t)\mathop{dt}\approx f_X(x)\cdot\delta`.
 		* Hence, :math:`f_X(x)` can be thought of "probability per unit length".
 
 .. attention::
@@ -496,7 +495,7 @@ Probabilistic interpretation
 	* Assuming that :math:`f_{X,Y}` is "well behaved", we can assume that it stays (almost) constant within this small rectangular region.
 	* Therefore
 	
-		.. math:: \mathbb{P}(x\leq X\leq x+\delta, y\leq Y\leq y+\epsilon)=\int\limits_x^{x+\delta}\int\limits_y^{y+\epsilon}f_{X,Y}(t,v)dt dv\approx f_{X,Y}(x,y)\cdot\delta\cdot \epsilon.
+		.. math:: \mathbb{P}(x\leq X\leq x+\delta, y\leq Y\leq y+\epsilon)=\int\limits_x^{x+\delta}\int\limits_y^{y+\epsilon}f_{X,Y}(t,v)\mathop{dt} \mathop{dv}\approx f_{X,Y}(x,y)\cdot\delta\cdot \epsilon.
 	* Hence :math:`f_{X,Y}(x,y)` can be thought of as the joint probability per unit area.
 
 .. warning::
@@ -540,7 +539,7 @@ Probabilistic interpretation
 	* We can think of a small interval around :math:`X=x` of width :math:`\delta`, so that :math:`X\approx x`.
 	* Assuming that :math:`f_{X|A}(x)` stays the same within this interval
 
-		.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}=\begin{cases}\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_x^{x+\delta} dt\approx f_{X|A}(x)\cdot\delta & \text{if $[x,x+\delta]\in A$}\\ 0 & \text{otherwise}\end{cases}
+		.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)\mathop{dt}}{\mathbb{P}(A)}=\begin{cases}\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_x^{x+\delta} \mathop{dt}\approx f_{X|A}(x)\cdot\delta & \text{if $[x,x+\delta]\in A$}\\ 0 & \text{otherwise}\end{cases}
 
 	* So, the conditional PDF represents conditional probability per unit length.
 	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) \mathop{dx}`.
