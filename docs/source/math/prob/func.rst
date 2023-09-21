@@ -185,7 +185,7 @@ Moment Generating Function
 	* Moment generating function (MGF) of a rv is defined as a function of another parameter :math:`s`
 
 		.. math:: M_X(s)=\mathbb{E}[e^{sX}]
-	* This closely relates to the **Laplace Transform** (see stat stackexchange post `here <https://stats.stackexchange.com/questions/238776/how-would-you-explain-moment-generating-functionmgf-in-laymans-terms`>_)
+	* This closely relates to the **Laplace Transform** (see stat stackexchange post `here <https://stats.stackexchange.com/questions/238776/how-would-you-explain-moment-generating-functionmgf-in-laymans-terms>`_)
 	* We note that
 
 		.. math:: M_X(s)=\mathbb{E}[e^{sX}]=\int\left(1+sx+\frac{s^2x^2}{2!}+\cdots\right)\mathop{dx}=1+s\cdot\mathbb{E}[X]+\frac{s^2}{2!}\cdot\mathbb{E}[X^2]+\cdots
