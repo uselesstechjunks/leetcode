@@ -27,13 +27,21 @@ Let :math:`Y=g(X)=aX+b` with :math:`a\neq 0`. Therefore we have
 	* If :math:`a=0`, then :math:`Y=b` with probability 1 and it's no longer a continuous rv.
 	* If :math:`a\neq 0`, then we have
 
-		.. math:: F_Y(y)=\mathbb{P}(Y\leq y)=\mathbb{P}(g(X)\leq y)=\mathbb{P}(aX+b\leq y)=\begin{cases}\mathbb{P}\left(X\leq\frac{y-b}{a}\right) & \text{if $a>0$} \\ \mathbb{P}\left(X\geq\frac{y-b}{a}\right) & \text{if $a<0$}\end{cases}=\begin{cases}f_X(\frac{y-b}{a}) & \text{if $a>0$} \\ 1-f_X(\frac{y-b}{a}) & \text{if $a<0$}\end{cases}
-	* The PDF in this case has the format
+		.. math:: F_Y(y)=\mathbb{P}(Y\leq y)=\mathbb{P}(g(X)\leq y)=\mathbb{P}(aX+b\leq y)=\begin{cases}\mathbb{P}\left(X\leq\frac{y-b}{a}\right) & \text{if $a>0$} \\ \mathbb{P}\left(X\geq\frac{y-b}{a}\right) & \text{if $a<0$}\end{cases}=\begin{cases}F_X(\frac{y-b}{a}) & \text{if $a>0$} \\ 1-F_X(\frac{y-b}{a}) & \text{if $a<0$}\end{cases}
+	* We can recover the PDF in both cases as
 
 		.. math:: f_Y(y)=\begin{cases}\frac{1}{a}f_X(\frac{y-b}{a}) & \text{if $a>0$} \\ -\frac{1}{a}f_X(\frac{y-b}{a}) & \text{if $a<0$}\end{cases}=\frac{1}{\left| a \right|}f_X(\frac{y-b}{a})
 
 Monotonic functions
 ------------------------------------------------------------------------
+.. note::
+	* If :math:`g(Y)=X` is a monotonic function, then it has an inverse, :math:`g^{-1}(Y)`.
+	* Therefore, we have
+
+		.. math:: F_Y(y)=\mathbb{P}(Y\leq y)=\mathbb{P}(g(X)\leq y)=\begin{cases}\mathbb{P}(X\leq g^{-1}(y)) & \text{if $g(X)$ is monotonic increasing}\\\mathbb{P}(X\geq g^{-1}(y)) & \text{if $g(X)$ is monotonic decreasing}\end{cases}=\begin{cases}F_X(g^{-1}(y)) & \text{if $g(X)$ is monotonic increasing}\\1-F_X(g^{-1}(y)) & \text{if $g(X)$ is monotonic decreasing}\end{cases}
+	* We can recover the PDF in both cases as
+
+		.. math:: f_Y(y)=\left| f_X(g^{-1}(y)) \right|\cdot\frac{d}{dy}\left[g^{-1}(y)\right]
 
 Sum of rvs: Convolution
 ========================================================================
