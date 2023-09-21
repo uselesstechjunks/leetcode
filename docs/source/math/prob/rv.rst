@@ -350,11 +350,16 @@ Continuous = values are from an uncountable subset of :math:`\mathbb{R}`.
 	* Normalisation property holds, i.e.
 
 		.. math:: \mathbb{P}(-\infty< X<\infty)=\int\limits_{-\infty}^\infty f_X(x)dx=1.
-	* To understand why it is called a density
 
-		* We can think of a small interval :math:`[x,x+\delta]`, for some :math:`\delta>0` as :math:`\delta\to 0`. 
-		* Assuming that :math:`f_X(x)` is "well behaved" (its values doesn't jump around fanatically), we can assume that it stays (almost) constant for this entire interval.
-		* Therefore, :math:`\mathbb{P}(X\in[x,x+\delta])=\int\limits_x^{x+\delta} f_X(t)dt\approx f_X(x)\cdot\delta`, and :math:`f_X(x)` can be thought of "probability per unit length".
+Probabilistic interpretation
+---------------------------------------------------
+.. note::
+	To understand why it is called a density
+
+		* We consider an interval :math:`[x,x+\delta]`, for some small :math:`\delta>0`. 
+		* Assuming that :math:`f_X(x)` is "well behaved" (its values doesn't jump around fanatically), we assume that it stays (almost) constant for this entire interval.
+		* Therefore, :math:`\mathbb{P}(X\in[x,x+\delta])=\int\limits_x^{x+\delta} f_X(t)dt\approx f_X(x)\cdot\delta`.
+		* Hence, :math:`f_X(x)` can be thought of "probability per unit length".
 
 .. attention::
 	* A PDF can take arbitrarily large values as long as the normalisation property holds, e.g.
@@ -443,6 +448,8 @@ Regardless of whether a rv is discrete or continuous, there event :math:`\{X\leq
 			    \int\limits_{-\infty}^x f_X(x) dx, & \text{if $X$ is continuous}
 			  \end{cases}
 
+Properties of CDF
+--------------------------------------------------
 .. attention::
 	* Monotonic: The CDF :math:`F_X(x)` is non-decreasing. If :math:`x_1<x_2`, then :math:`F_X(x_1)\leq F_X(x_2)`.
 	* Normalised: We have :math:`\lim\limits_{x\to -\infty} F_X(x)=0` and :math:`\lim\limits_{x\to \infty} F_X(x)=1`.
@@ -480,14 +487,12 @@ Similar to the single continuous variable case, we say that two rvs, :math:`X` a
 Probabilistic interpretation
 ---------------------------------------------------
 .. note::
-	* To understand when it would truly be a jointly continuous rv
-
-		* For some small :math:`\delta>0` and :math:`\epsilon>0`, we can think of a small rectangular segment :math:`[x,x+\delta]\times[y,y+\epsilon]`.
-		* Assuming that :math:`f_{X,Y}` is "well behaved (its values doesn’t jump around fanatically), we can assume that it stays (almost) constant for this entire rectangular region.
-		* Therefore
+	* For some small :math:`\delta>0` and :math:`\epsilon>0`, we consider the rectangular area :math:`[x,x+\delta]\times[y,y+\epsilon]`.
+	* Assuming that :math:`f_{X,Y}` is "well behaved", we can assume that it stays (almost) constant within this small rectangular region.
+	* Therefore
 	
-			.. math:: \mathbb{P}(x\leq X\leq x+\delta, y\leq Y\leq y+\epsilon)=\int\limits_x^{x+\delta}\int\limits_y^{y+\epsilon}f_{X,Y}(t,v)dt dv\approx f_{X,Y}(x,y)\cdot\delta\cdot \epsilon.
-		* Hence :math:`f_{X,Y}(x,y)` can be thought of as probability per unit area.
+		.. math:: \mathbb{P}(x\leq X\leq x+\delta, y\leq Y\leq y+\epsilon)=\int\limits_x^{x+\delta}\int\limits_y^{y+\epsilon}f_{X,Y}(t,v)dt dv\approx f_{X,Y}(x,y)\cdot\delta\cdot \epsilon.
+	* Hence :math:`f_{X,Y}(x,y)` can be thought of as the joint probability per unit area.
 
 .. warning::
 	If :math:`X=g(Y)`, then the entire function :math:`f_{X,Y}` has an area of 0 in the :math:`\mathbb{R}^2` plane. Therefore, we cannot define a PDF which can represent probability per unit area. So :math:`X` and :math:`Y` cannot be **jointly** continuous even if they are **marginally** continuous (i.e. their marginal PDFs are well defined).
@@ -530,7 +535,7 @@ Probabilistic interpretation
 	* We can think of a small interval around :math:`X=x` of width :math:`\delta`, so that :math:`X\approx x`.
 	* Assuming that :math:`f_{X|A}(x)` stays the same within this interval
 
-		.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}=\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_{\{x\leq t\leq x+\delta\}\cap A} dt\approx f_{X|A}(x)\cdot\delta
+		.. math:: \mathbb{P}(x\leq X\leq x+\delta|A)=\frac{\mathbb{P}(x\leq X\leq x+\delta,A)}{\mathbb{P}(A)}=\frac{\int\limits_{\{x\leq t\leq x+\delta\}\cap A} f_X(t)dt}{\mathbb{P}(A)}=\begin{cases}\frac{f_X(x)}{\mathbb{P}(A)}\int\limits_x^{x+\delta} dt\approx f_{X|A}(x)\cdot\delta & \text{if $[x,x+\delta]\in A$}\\ 0 & \text{otherwise}\end{cases}
 
 	* Therefore, the conditional CDF represents conditional probability given an event per unit length.
 	* Conditional CDF can be defined as :math:`F_{X|A}(x)=\int\limits_{-\infty}^x f_{X|A}(x) dx`.
@@ -556,18 +561,21 @@ A continuous rv :math:`X` can be conditioned on another continuous rv :math:`Y`,
 Probabilistic interpretation
 """"""""""""""""""""""""""""""""""""""""""
 .. note::
-	* To interpret this, we cannot take the conditioning event as :math:`Y=y` as it has 0 probability.
+	* We can think of a small interval around :math:`X=x` of width :math:`\delta`, so that :math:`X\approx x`.
+	* However, we cannot take the conditioning event as :math:`Y=y` as it has 0 probability.
 	* Therefore, we must consider a small interval around :math:`Y=y` of width :math:`\epsilon` such that :math:`Y\approx y`.
 	* Assuming that the joint and the marginal PDFs stay the same within this rectangular region, we have
 
 		.. math:: \mathbb{P}(x\leq X\leq x+\delta|y\leq Y\leq y+\epsilon)=\frac{\mathbb{P}(x\leq X\leq x+\delta,y\leq Y\leq y+\epsilon)}{\mathbb{P}(y\leq Y\leq y+\epsilon)}\approx\frac{f_{X,Y}(x,y)\cdot\delta\cdot\epsilon}{f_Y(y)\cdot\epsilon}=\frac{f_{X,Y}(x,y)}{f_Y(y)}\cdot\delta=f_{X|Y}(x|y)\cdot\delta
-	* The above term, therefore, doesn't depent on :math:`\epsilon` at all, and therefore, it is well defined even if we assign to it the limit value 0.
+	* The above doesn't depent on :math:`\epsilon` at all, and is well defined even if we assign to it the limit value 0.
 	* The interpretation then works as conditional probability per unit length of the rv :math:`X`.
 
 Definition of probability conditioned on an event with 0 probability
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. tip::
-	* Using above, we can define the conditional probability as :math:`\mathbb{P}(X\in B|Y=y)=\int\limits_B f_{X|Y}(x|y) dx` for any (measurable) subset :math:`B\in\mathbb{R}`.
+	Using above, we can define the conditional probability for any (measurable) subset :math:`B\in\mathbb{R}` as
+
+		.. math:: \mathbb{P}(X\in B|Y=y)=\int\limits_B f_{X|Y}(x|y) dx
 
 Conditioning on a discrete rv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -587,7 +595,7 @@ Total probability theorem
 	* We recover the marginals as
 
 		* :math:`f_Y(y)=\sum_{k}p_K(k)f_{Y|K}(y|k)` and 
-		* :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(t)p_{K|Y}(k|t) dt`.
+		* :math:`p_K(k)=\int\limits_{-\infty}^\infty f_Y(y)p_{K|Y}(k|t) dy`.
 
 Bayes theorem
 ---------------------------------------------------
