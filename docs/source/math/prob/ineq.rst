@@ -51,6 +51,8 @@ Distribution known (Gaussian): Mill
 Convergence
 *********************************************
 
+We consider a sequence of 
+
 Convergence in distribution
 ====================================
 
