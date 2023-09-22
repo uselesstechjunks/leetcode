@@ -1,5 +1,9 @@
+################################################################
+Tail Bounds, Convergence and Limit Theorems
+################################################################
+
 *********************************************
-Inequalities
+Tail Bounds : Inequalities
 *********************************************
 
 Markov
@@ -8,7 +12,7 @@ Markov
 Chebyshev
 ====================================
 
-Hoeffding
+Chernoff's Bound
 ====================================
 
 Mill (Gaussian)
@@ -18,14 +22,21 @@ Mill (Gaussian)
 Convergence
 *********************************************
 
-Convergence in probability
+Convergence in distribution
 ====================================
 
-Convergence in distribution
+Convergence in probability
 ====================================
 
 Convergence in quadratic mean
 ====================================
+
+Almost surely convergence
+====================================
+
+*********************************************
+Limit Theorems
+*********************************************
 
 Weak Law of Large Number
 ====================================
