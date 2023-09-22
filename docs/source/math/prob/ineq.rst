@@ -39,8 +39,13 @@ MGF known: Chernoff's Bound
 		.. math:: \mathbb{P}(X\geq t)\leq \frac{M_X(s)}{e^{st}}
 	* We can recover Markov's and Chebyshev's from this one.
 
-Distribution known: Mill (Gaussian)
+Distribution known (Gaussian): Mill 
 ====================================
+.. note::
+	* Let :math:`Z` be a standard normal rv.
+	* Mills equality calculates directly from density how much probability lies on the tails.
+
+		.. math:: \mathbb{P}(|Z|\geq t)\leq \frac{2e^{-t^2/2}}{t}
 
 *********************************************
 Convergence
