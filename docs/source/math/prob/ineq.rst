@@ -5,6 +5,7 @@ Tail Bounds, Convergence and Limit Theorems
 *********************************************
 Tail Bounds : Inequalities
 *********************************************
+Why do we need inequalities?
 
 .. note::
 	* If we know the density directly, then, theoretically, we can compute exactly how much probability lie on the "tails".
