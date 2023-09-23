@@ -8,4 +8,5 @@ Deep-Dives
    linalg
    calc3
    prob/index
+   stat/index
    conv
