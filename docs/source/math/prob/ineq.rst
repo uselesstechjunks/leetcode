@@ -156,7 +156,7 @@ Strong Law of Large Number
 Central Limit Theorem
 ====================================
 .. note::
-	* CLT: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`Z_n\xrightarrow[]{D}\Phi` where :math:`Phi` represents standard normal distribution.
+	* CLT: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`Z_n\xrightarrow[]{D}\Phi` where :math:`\Phi` represents standard normal distribution.
 	* Since :math:`S_n` can be expressed as a linear transformation of :math:`Z_n`, it also converges to some normal distribution with mean :math:`n\mu` and ever increasing variance.
 
 .. warning::
