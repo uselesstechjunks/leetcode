@@ -20,7 +20,6 @@ Contents
 
    math
    math/index
-   stat
    mltheory
    rank
    dsalgo
