@@ -109,6 +109,18 @@ Almost surely convergence
 Limit Theorems
 *********************************************
 
+Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)_{n=1}^\infty`. Let the rvs be iid and has well defined mean :math:`\mu` and variance :math:`\sigma^2`.
+.. note::
+	* Let the sum rv be :math:`S_n=\sum_{i=1}^n X_i` for a given :math:`n`. We can think of a sequence of this as :math:`(S_n)_{n=1}^\infty`.
+
+		* We note that :math:`\mathbb{E}[S_n]=n\mu` and :math:`\mathrm{Var}(S_n)\to\infty`.
+	* Let the mean rv be :math:`M_n=\frac{S_n}{n}` for a given :math:`n`. We can think of a sequence of this as :math:`(M_n)_{n=1}^\infty`.
+
+		* We note that :math:`\mathbb{E}[M_n]=\mu` and :math:`\mathrm{Var}(M_n)=\sigma^2/n`.
+	* Let the standardised rv be :math:`Z_n=\frac{S_n-n\mu}{\sigma\sqrt{n}}` for a given :math:`n`. We can think of a sequence of this as :math:`(Z_n)_{n=1}^\infty`.
+
+		* We note that :math:`\mathbb{E}[Z_n]=0` and :math:`\mathrm{Var}(M_n)=1`.
+
 Weak Law of Large Number
 ====================================
 
