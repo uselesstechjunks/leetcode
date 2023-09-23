@@ -108,8 +108,8 @@ Almost surely convergence
 *********************************************
 Limit Theorems
 *********************************************
-
 Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)_{n=1}^\infty`. Let the rvs be iid and has well defined mean :math:`\mu` and variance :math:`\sigma^2`.
+
 .. note::
 	* Let the sum rv be :math:`S_n=\sum_{i=1}^n X_i` for a given :math:`n`. We can think of a sequence of this as :math:`(S_n)_{n=1}^\infty`.
 
