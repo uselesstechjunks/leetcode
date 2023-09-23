@@ -55,7 +55,9 @@ Parametric Model
 	This set can be spanned by a finitely many parameters.
 
 .. seealso::
-	* A regression model is defined by the set of affine functions :math:`\mathcal{F}=\{r(x)=mx+c; m,c\in\mathbb{R}\}`. 
+	* A regression model is defined by the set of affine functions
+
+		.. math:: \mathcal{F}=\{r(x)=mx+c; m,c\in\mathbb{R}\}
 	* Similarly, if the regression model is a set of feed-forward networks (FFN) of a given size, then it is also parametric and the parameters of this model are the weights and biases in each layer.
 	* If the task is to estimate densities, then a parametric model could be 
 
