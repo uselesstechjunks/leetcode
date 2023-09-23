@@ -146,18 +146,15 @@ Confidence Set Estimation
 	#. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
 
 .. note::
-	* **Pointwise Asymptotic CI**: :math:`\forall\theta\in\Theta,\liminf_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha``
-	* **Uniform Asymptotic CI**: :math:`\liminf_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha``
+	* **Pointwise Asymptotic CI**: :math:`\forall\theta\in\Theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
+	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
 
 		* Uniform Asymptotic CI is stricter.
-
-.. note::
-	**Normal-based Confidence Interval**: 
-
-	* If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
+	* **Normal-based CI**: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
 
 		.. math:: (\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})
-	* The above is a pointwise asymptotic CI.
+	
+		* The above is a pointwise asymptotic CI.
 
 For the empirical distribution model, following are some interesting results.
 
