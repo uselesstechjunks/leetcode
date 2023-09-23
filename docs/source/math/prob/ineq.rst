@@ -52,7 +52,7 @@ Convergence
 
 The concept of convergence of sequences involving rvs is more subtle than convergence of normal sequences. We consider a sequence of rvs, :math:`X_1,X_2,\cdots` and :math:`X` as the limiting rv. There are multiple notions of convergence for such sequences, some being stronger than others (as in, convergence in one sense might imply convergence in another sense, but not vice versa).
 
-#. Convergence in distribution
+Convergence in distribution
 ====================================
 .. note::
 	* :math:`(X_n)_{i=1}^\infty` is said to be converging to :math:`X` in distribution, :math:`X_n\xrightarrow[]{D}X`, if
@@ -62,13 +62,21 @@ The concept of convergence of sequences involving rvs is more subtle than conver
 
 		.. math:: \lim\limits_{n\to\infty}F_n(t)=F(t)
 
-#. Convergence in probability
+Convergence in probability
+====================================
+.. note::
+	* :math:`(X_n)_{i=1}^\infty` is said to be converging to :math:`X` in probability, :math:`X_n\xrightarrow[]{P}X`, if
+
+		.. math:: \lim\limits_{n\to\infty}\mathbb{P}(|X_n-X|\geq\epsilon)=0
+	* It can be restated using notions similar to convergence from calculus as follows: for a given **accuracy level** :math:`\epsilon` and a given **confidence level** :math:`\delta`,
+
+		.. math:: \exists n_0.n>n_0\implies\mathbb{P}(|X_n-X|\geq\epsilon)\leq\delta
+	* Convergence in probability implies convergence in distribution.
+
+Convergence in quadratic mean
 ====================================
 
-#. Convergence in quadratic mean
-====================================
-
-#. Almost surely convergence
+Almost surely convergence
 ====================================
 
 *********************************************
