@@ -55,7 +55,7 @@ The concept of convergence of sequences involving rvs is more subtle than conver
 Convergence in distribution
 ====================================
 .. note::
-	* :math:`(X_n)_{i=1}^\infty` is said to be converging to :math:`X` in distribution, :math:`X_n\xrightarrow[]{D}X`, if
+	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` in distribution, :math:`X_n\xrightarrow[]{D}X`, if
 
 		.. math:: \lim\limits_{n\to\infty}\mathbb{P}(X_n\leq t)=\mathbb{P}(X\leq t)
 	* If :math:`X_i\sim F_i` and :math:`X\sim F`, then the above can be written in terms of CDF as
@@ -65,7 +65,7 @@ Convergence in distribution
 Convergence in probability
 ====================================
 .. note::
-	* :math:`(X_n)_{i=1}^\infty` is said to be converging to :math:`X` in probability, :math:`X_n\xrightarrow[]{P}X`, if
+	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` in probability, :math:`X_n\xrightarrow[]{P}X`, if
 
 		.. math:: \lim\limits_{n\to\infty}\mathbb{P}(|X_n-X|\geq\epsilon)=0
 	* It can be restated using notions similar to convergence from calculus as follows: for a given **accuracy level** :math:`\epsilon` and a given **confidence level** :math:`\delta`,
