@@ -68,9 +68,9 @@ Convergence in probability
 	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` in probability, :math:`X_n\xrightarrow[]{P}X`, if
 
 		.. math:: \lim\limits_{n\to\infty}\mathbb{P}(|X_n-X|\geq\epsilon)=0
-	* It can be restated using notions similar to convergence from calculus as follows: for a given **accuracy level** :math:`\epsilon` and a given **confidence level** :math:`\delta`,
+	* It can be restated using notions similar to convergence from calculus as follows: for a given **accuracy level** :math:`\epsilon>0` and a given **confidence level** :math:`\delta>0`,
 
-		.. math:: \exists n_0.n>n_0\implies\mathbb{P}(|X_n-X|\geq\epsilon)\leq\delta
+		.. math:: \exists N . n>N\implies\mathbb{P}(|X_n-X|\geq\epsilon)\leq\delta
 	* Convergence in probability implies convergence in distribution.
 
 Convergence in quadratic mean
