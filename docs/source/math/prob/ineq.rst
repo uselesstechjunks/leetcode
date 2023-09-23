@@ -76,10 +76,10 @@ Convergence in probability
 Convergence in :math:`L_1`
 ====================================
 .. note::
-	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` in ::math::`L_1`, :math:`X_n\xrightarrow[]{L_1}X`, if
+	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` in :math:`L_1`, :math:`X_n\xrightarrow[]{L_1}X`, if
 
 		.. math:: \lim\limits_{n\to\infty}\mathbb{E}[|X_n-X|]=0
-	* Convergence in ::math::`L_1` implies convergence in probability.
+	* Convergence in :math:`L_1` implies convergence in probability.
 
 Convergence in quadratic mean
 ====================================
@@ -87,7 +87,7 @@ Convergence in quadratic mean
 	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` in quadratic mean, :math:`X_n\xrightarrow[]{qm}X`, if
 
 		.. math:: \lim\limits_{n\to\infty}\mathbb{E}[(X_n-X)^2]=0
-	* Convergence in quadratic mean implies convergence in ::math::`L_1`.
+	* Convergence in quadratic mean implies convergence in :math:`L_1`.
 
 Almost surely convergence
 ====================================
