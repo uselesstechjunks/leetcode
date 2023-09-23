@@ -60,10 +60,10 @@ Parametric Model
 	* If the task is to estimate densities, then a parametric model could be 
 
 		.. math::
-    	\mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
+			\mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
 
-.. note::
-    * The process that decides the model, such as choice of function-class or number of parameters, is independent of the inference and is performed separately beforehand. In ML, these are called *hyper-parameters*. 
+.. attention::
+    * The process that decides the model, such as choice of function-class or number of parameters, is independent of the inference and is performed separately beforehand. In ML, these are called **hyper-parameters**. 
     * Since there are multiple items to choose before performing inference, it is useful to clarify the sequence:
 
         #. A metric of goodness of an estimator is chosen first.
@@ -103,12 +103,9 @@ Point Estimation
 ==========================================================================================
 .. note::
 	* A single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. 
-	* This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data
-
-    .. math::
-        \hat{\theta_n}=g(X_1,\cdots,X_n)
+	* This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data :math:`\hat{\theta_n}=g(X_1,\cdots,X_n)`.
 	* The estimate :math:`\hat{\theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value).
-	* Example: 
+	* Examples: 
 
 		#. a single distribution/density function (parameterised/non-parameterised)
 		#. a single regression function
