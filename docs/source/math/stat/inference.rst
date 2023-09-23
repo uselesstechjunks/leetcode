@@ -147,7 +147,7 @@ Confidence Set Estimation
 
 .. note::
 	* **Pointwise Asymptotic CI**: :math:`\forall\theta\in\Theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
-	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
+	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
 
 		* Uniform Asymptotic CI is stricter.
 	* **Normal-based CI**: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
