@@ -52,7 +52,7 @@ The following categories of models are based on the dimensionality of this set.
 Parametric Model
 ==========================================================================================
 .. note::
-	If this set can be spanned by a finitely many parameters.
+	This set can be spanned by a finitely many parameters.
 
 .. seealso::
 	* A regression model is defined by the set of affine functions :math:`\mathcal{F}=\{r(x)=mx+c; m,c\in\mathbb{R}\}`. 
@@ -75,7 +75,7 @@ Parametric Model
 Non-parametric Model
 ==========================================================================================
 .. note::
-	If this set can be spanned by a finitely many parameters.
+	This set cannot be spanned by a finitely many parameters.
 
 .. seealso::
 	A non-parametric model for distributions can be the set of all possible cdfs.
@@ -85,15 +85,15 @@ Empirical distribution function
 The estimator for :math:`F` is :math:`\hat{F_n}` which assigns a mass :math:`1/n` to every point in sample :math:`\{X_i\}_{i=1}^n`.
 
 .. note::		
-		For a given :math:`x`,
-		
-			* :math:`\mathbb{E}[\hat{F_n}(x)]=F(x)`
-			* :math:`\text{Var}(\hat{F_n})=\frac{F(x)(1-F(x))}{n}`
+	For a given :math:`x`,
+
+		* :math:`\mathbb{E}[\hat{F_n}(x)]=F(x)`
+		* :math:`\text{Var}(\hat{F_n})=\frac{F(x)(1-F(x))}{n}`
 
 Plug-in Estimator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-		The plug-in estimator for any statistical functional :math:`T(F)` can be obtained by replacing it with :math:`\hat{F_n}` as :math:`T(\hat{F_n})`.
+	The plug-in estimator for any statistical functional :math:`T(F)` can be obtained by replacing it with :math:`\hat{F_n}` as :math:`T(\hat{F_n})`.
 
 ******************************************************************************************
 Types of Inference
@@ -176,6 +176,6 @@ Hypothesis Testing
 	* The task is then to arrive at probabilistic statements about how different these two are.
 
 .. attention::
-    #. The statement about the quantity of interest assuming the model is correct is called the *Null hypothesis*.
-    #. The statement where the model is incorrect is called *Alternate hypothesis*.
-		#. [TODO:CHECK IF TRUE] If we create a :math:`1-\alpha` confidence set for the estimated quantity and the quantity as-per-model doesn't fall within this set, then we *reject* the null hypothesis with significance level :math:`1-\alpha`.  If it does then we *fail to reject* the null hypothesis.
+	#. The statement about the quantity of interest assuming the model is correct is called the **Null hypothesis**.
+	#. The statement where the model is incorrect is called **Alternate hypothesis**.
+	#. [TODO:CHECK IF TRUE] If we create a :math:`1-\alpha` confidence set for the estimated quantity and the quantity as-per-model doesn't fall within this set, then we **reject** the null hypothesis with significance level :math:`1-\alpha`.  If it does then we **fail to reject** the null hypothesis.
