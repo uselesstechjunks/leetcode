@@ -73,11 +73,37 @@ Convergence in probability
 		.. math:: \exists N_{\epsilon,\delta} . n>N\implies\mathbb{P}(|X_n-X|\geq\epsilon)\leq\delta
 	* Convergence in probability implies convergence in distribution.
 
+Convergence in :math:`L_1`
+====================================
+.. note::
+	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` in ::math::`L_1`, :math:`X_n\xrightarrow[]{L_1}X`, if
+
+		.. math:: \lim\limits_{n\to\infty}\mathbb{E}[|X_n-X|]=0
+	* Convergence in ::math::`L_1` implies convergence in probability.
+
 Convergence in quadratic mean
 ====================================
+.. note::
+	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` in quadratic mean, :math:`X_n\xrightarrow[]{qm}X`, if
+
+		.. math:: \lim\limits_{n\to\infty}\mathbb{E}[(X_n-X)^2]=0
+	* Convergence in quadratic mean implies convergence in ::math::`L_1`.
 
 Almost surely convergence
 ====================================
+.. note::
+	* :math:`(X_n)_{n=1}^\infty` is said to be converging to :math:`X` almost surely (with probability 1), :math:`X_n\xrightarrow[]{as}X`, if
+
+		.. math:: \mathbb{P}(\lim\limits_{n\to\infty} X_n=X)=1
+	* This can be restated as follows: for any :math:`\epsilon>0`
+
+		.. math:: \mathbb{P}(\lim\limits_{n\to\infty}|X_n-X|\geq\epsilon)=0
+	* Note that the limit is inside.
+	* Interpretation:
+
+		* We can think that the sample space is represented as the set of sequences :math:`\{(x_n)_{n=1}^\infty\}`.
+		* In this case, almost surely convergence would mean that there are only finite number of elements in this set where the limit doesn't converge to the value of the rv :math:`X`.
+	* Almost surely convergence implies convergence in quadratic mean.
 
 *********************************************
 Limit Theorems
