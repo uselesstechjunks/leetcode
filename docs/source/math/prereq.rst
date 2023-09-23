@@ -53,7 +53,7 @@ Integration by parts:
 -------------------------------
 Let :math:`u(x)` and :math:`v(x)` be two functions. We want to find out the integral of the product, :math:`\int u(x)\cdot v(x) \mathop{dx}`.
 
-.. tip::
+.. note::
 	* To derive this formula, it becomes easier if we consider :math:`w(x)=\int v(x) \mathop{dx}` (:math:`w'(x)=v(x)`) and consider :math:`g(x)=u(x)\cdot w(x)`.
 	* Taking derivatives on both sides :math:`g'(x)=u'(x)\cdot w(x)+u(x)\cdot w'(x)` which gives
 
@@ -63,7 +63,11 @@ Let :math:`u(x)` and :math:`v(x)` be two functions. We want to find out the inte
 		.. math:: \int u(x)\cdot w'(x)\mathop{dx}=\int g'(x)\mathop{dx}-\int u'(x)\cdot w(x)\mathop{dx}=u(x)\cdot w(x)-\int u'(x)\cdot w(x)\mathop{dx}
 	* Replacing :math:`w(x)`
 
-		.. math:: \int u(x)\cdot v(x)\mathop{dx}=u(x)\cdot \int v(x)\mathop{dx}-\int u'(x)\left(\int v(x)\mathop{dx}) \right)\mathop{dx}
+		.. math:: \int u(x)\cdot v(x)\mathop{dx}=u(x)\cdot \int v(x)\mathop{dx}-\int u'(x)\left(\int v(x)\mathop{dx}) \right)\mathop{dx}\
+
+.. tip::
+	* ILATE: Dictates the order in which the functions should be chosen to be :math:`u` or :math:`v`. 
+	* ILATE: Acronym for Inverse > Logarithmic > Algebraic > Trigonometric > Exponential. Choose left of the two as :math:`u`.
 
 Fubini's Theorem:
 -------------------------------

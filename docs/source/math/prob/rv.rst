@@ -63,8 +63,24 @@ Expectations of linear functions of rv
 	* :math:`\mathbb{E}[aX+b]=a\mathbb{E}[X]+b`.
 	* :math:`\mathrm{Var}(aX+b)=a^2\mathrm{Var}(X)`.
 
+Variance of bounded rv
+--------------------------------------------------------
+.. tip::
+	* For bounded rvs :math:`a\leq X\leq b`, the variance is bounded as
+
+		.. math:: \mathrm{Var}(X)\leq\frac{(b-a)^2}{4}
+	* Proof?
+
+Expectations of general functions of rv
+--------------------------------------------------------
 ..  warning::
 	For non-linear functions, it is generally **not** true that :math:`\mathbb{E}[g(X)]=g(\mathbb{E}[X])`.
+
+Jensen's inequality
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. attention::
+	* If :math:`g` is convex, :math:`\mathbb{E}[g(X)]\geq g(\mathbb{X}[X])`.
+	* If :math:`g` is concave, :math:`\mathbb{E}[g(X)]\leq g(\mathbb{X}[X])`.
 
 Multiple discrete random variables
 ======================================================
