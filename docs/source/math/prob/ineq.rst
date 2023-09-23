@@ -70,7 +70,7 @@ Convergence in probability
 		.. math:: \lim\limits_{n\to\infty}\mathbb{P}(|X_n-X|\geq\epsilon)=0
 	* It can be restated using notions similar to convergence from calculus as follows: for a given **accuracy level** :math:`\epsilon>0` and a given **confidence level** :math:`\delta>0`,
 
-		.. math:: \exists N_{\epsilon,\delta} . n>N\implies\mathbb{P}(|X_n-X|\geq\epsilon)\leq\delta
+		.. math:: \exists N_{(\epsilon,\delta)} . n>N_{(\epsilon,\delta)}\implies\mathbb{P}(|X_n-X|\geq\epsilon)\leq\delta
 	* Convergence in probability implies convergence in distribution.
 
 Convergence in :math:`L_1`
