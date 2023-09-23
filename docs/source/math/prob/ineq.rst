@@ -7,8 +7,6 @@ Tail Bounds : Inequalities
 *********************************************
 
 .. note::
-  Why do we need inequalities?
-
 	* If we know the density directly, then, theoretically, we can compute exactly how much probability lie on the "tails".
 	* However, often we have to work with scenarios where either the density is not known or the exact calculation is cumbersome.
 	* These inequalities bound the probability on the tails based on how much we know about the underlying distribution.
