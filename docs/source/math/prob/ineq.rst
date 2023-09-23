@@ -50,18 +50,25 @@ Distribution known (Gaussian): Mill
 Convergence
 *********************************************
 
-We consider a sequence of 
+The concept of convergence of sequences involving rvs is more subtle than convergence of normal sequences. We consider a sequence of rvs, :math:`X_1,X_2,\cdots` and :math:`X` as the limiting rv. There are multiple notions of convergence for such sequences, some being stronger than others (as in, convergence in one sense might imply convergence in another sense, but not vice versa).
 
-Convergence in distribution
+#. Convergence in distribution
+====================================
+.. note::
+	* :math:`(X_n)_{i=1}^\infty` is said to be converging to :math:`X` in distribution, :math:`X_n\xrightarrow[]{D}X`, if
+
+		.. math:: \lim\limits_{n\to\infty}\mathbb{P}(X_n\leq t)=\mathbb{P}(X\leq t)
+	* If :math:`X_i\sim F_i` and :math:`X\sim F`, then the above can be written in terms of CDF as
+
+		.. math:: \lim\limits_{n\to\infty}F_n(t)=F(t)
+
+#. Convergence in probability
 ====================================
 
-Convergence in probability
+#. Convergence in quadratic mean
 ====================================
 
-Convergence in quadratic mean
-====================================
-
-Almost surely convergence
+#. Almost surely convergence
 ====================================
 
 *********************************************
