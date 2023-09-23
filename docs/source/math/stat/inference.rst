@@ -4,14 +4,13 @@ Classical Statistical Inference
 We have a sample of size :math:`n` from an unknown distribution :math:`F`, :math:`X_1,\cdots X_n \sim F`.
 
 .. note::
-	* The task for statistical inference is to infer :math:`F`, some function of :math:`F`, :math:`T(F)`, (also known as statistical functionals), or some other quantity that depends on :math:`F`, such as 
+	* The task for statistical inference is to infer :math:`F`, some function of :math:`F`, or some other quantity that depends on :math:`F`, that best explains the data, for some given definition of **best** chosen beforehand.
+	* The functions of this form, :math:`T(F)`, are known as **statistical functionals**, such as 
 
 		* density :math:`T(F)=f=F'`
 		* expectation :math:`T(F)=\mathbb{E}[X]=\int\limits_{-\infty}^{\infty} x \mathop{dF}`
 		* variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
-		* median: :math:`T(F)=F^{-1}(1/2)`
-
-	  that best explains the data, for some given definition of **best** chosen beforehand. 
+		* median: :math:`T(F)=F^{-1}(1/2)`   
 	* The inferred values are called **estimates** of the quantities of interest. 
 	* The expression that computes these estimates from samples is called an **estimator**.
 	* Estimates are rv as their values may change subject to a different sample.
