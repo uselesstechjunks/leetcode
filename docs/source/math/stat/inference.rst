@@ -37,7 +37,7 @@ Machine Learning as a Statistical Inference
 .. note::
 	Dependent and Independent Variable: 
 
-	* :math:`X` is known as the independent variable (**features**) and :math:`Y` is known as dependent variable (**target**). 
+	* :math:`X` is called the independent variable (**features**) and :math:`Y` called as dependent variable (**target**). 
 	* Independent variables are often multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.
 	* It can be proven that it is always possible to write a conditional expectation in the above form such that :math:`\mathbb{E}[\epsilon]=0`.
 
