@@ -98,9 +98,9 @@ Almost surely convergence
 	* This can be restated as follows: for any :math:`\epsilon>0`
 
 		.. math:: \mathbb{P}(\lim\limits_{n\to\infty}|X_n-X|\geq\epsilon)=0
-	* Note that the limit is inside.
 	* Interpretation:
 
+		* We note that the limit is inside. Hence it's talking about **probability about the convergence of the values** of the rvs in standard calculus sense.
 		* We can think that the sample space is represented as the set of sequences :math:`\{(x_n)_{n=1}^\infty\}`.
 		* In this case, almost surely convergence would mean that there are only finite number of elements in this set where the limit doesn't converge to the value of the rv :math:`X`.
 	* Almost surely convergence implies convergence in quadratic mean.
