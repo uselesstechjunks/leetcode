@@ -47,6 +47,16 @@ Statistical Model
 .. note::
 	A statistical model :math:`\mathcal{F}` is set of distributions (or other statistical functionals of interest). 
 
+.. attention::
+    * The process that decides the model, such as choice of function-class or number of parameters, is independent of the inference and is performed separately beforehand. In ML, these are called **hyper-parameters**. 
+    * Since there are multiple items to choose before performing inference, it is useful to clarify the sequence:
+
+        #. A metric of goodness of an estimator is chosen first.
+        #. A model is chosen (such as, hyperparameters).
+        #. Inference is performed using computation involving the samples.
+        #. Quality of model is judged by evaluating the model on the inference data.
+        #. (Optional) A different model is chosen and the process repeats.
+
 The following categories of models are based on the dimensionality of this set.
 
 Parametric Model
@@ -63,16 +73,6 @@ Parametric Model
 
 		.. math::
 			\mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
-
-.. attention::
-    * The process that decides the model, such as choice of function-class or number of parameters, is independent of the inference and is performed separately beforehand. In ML, these are called **hyper-parameters**. 
-    * Since there are multiple items to choose before performing inference, it is useful to clarify the sequence:
-
-        #. A metric of goodness of an estimator is chosen first.
-        #. A model is chosen (such as, hyperparameters).
-        #. Inference is performed using computation involving the samples.
-        #. Quality of model is judged by evaluating the model on the inference data.
-        #. (Optional) A different model is chosen and the process repeats.
 
 Non-parametric Model
 ==========================================================================================
