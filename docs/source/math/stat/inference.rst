@@ -1,10 +1,7 @@
 ##########################################################################################
 Classical Statistical Inference
 ##########################################################################################
-We have a sample of size :math:`n` from an unknown distribution :math:`F`.
-
-.. math::
-    X_1,\cdots X_n \sim F
+We have a sample of size :math:`n` from an unknown distribution :math:`F`, :math:`X_1,\cdots X_n \sim F`.
 
 .. note::
 	* The task for statistical inference is to infer :math:`F`, some function of :math:`F`, :math:`T(F)`, (also known as statistical functionals), or some other quantity that depends on :math:`F`, such as 
@@ -14,26 +11,27 @@ We have a sample of size :math:`n` from an unknown distribution :math:`F`.
 		* variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
 		* median: :math:`T(F)=F^{-1}(1/2)`
 
-		that best explains the data, for some given definition of *best* chosen beforehand. 
-	* The inferred values are called *estimates* of the quantities of interest. 
-	* The expression that computes these estimates from samples is called an *estimator*.
+	  that best explains the data, for some given definition of **best** chosen beforehand. 
+	* The inferred values are called **estimates** of the quantities of interest. 
+	* The expression that computes these estimates from samples is called an **estimator**.
 	* Estimates are rv as their values may change subject to a different sample.
 
 ******************************************************************************************
 Machine Learning
 ******************************************************************************************
 .. note::
-	* For 2 jointly distributed rvs, e.g. :math:`(X_i,Y_i)_{i=1}^n\sim F_{X,Y}`, then inference might mean infering a *regression function* :math:`r(X)` that fits the conditional expectation corresponding to :math:`F_{Y|X}`
+	* We have iid samples of size :math:`n` a joint CDF, e.g. :math:`(X_i,Y_i)_{i=1}^n\sim F_{X,Y}`.
+	* Then inference might mean infering a **regression function** :math:`r(X)` that fits the conditional expectation corresponding to :math:`F_{Y|X}`
 
 		.. math::
 		    T(F_{Y|X})=\mathbb{E}[Y|X]=r(X)+\epsilon
 
-		where :math:`\mathbb{E}[\epsilon]=0`. 
+	  where :math:`\mathbb{E}[\epsilon]=0`. 
 
-		* This inference is known as *learning* in Machine Learning (achieved via *training* on a given sample set) and *curve estimation* in statistics.
+		* This inference is known as **learning** in Machine Learning (achieved via **training** on a given sample set) and *curve estimation* in statistics.
 	* In the above case, an inference might also mean an inferring an unseen :math:`Y|X=x` by :math:`\hat{y}=r(x)` for a given :math:`X=x`. 
 
-		* This is known as *inference* in Machine Learning and *prediction* in statistics.
+		* This is known as **inference** in Machine Learning and **prediction** in statistics.
 
 .. note::
     * Dependent and Independent Variable: :math:`X` is known as the independent variable (*features* in Machine Learning) and :math:`Y` is known as dependent variable (*target* in Machine Learning). Independent variables are often multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.
