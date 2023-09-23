@@ -114,7 +114,7 @@ Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)
 	* Let the sum rv be :math:`S_n=\sum_{i=1}^n X_i` for a given :math:`n`. We can think of a sequence of this as :math:`(S_n)_{n=1}^\infty`.
 
 		* We note that :math:`\mathbb{E}[S_n]=n\mu` and :math:`\mathrm{Var}(S_n)\to\infty`.
-	* Let the mean rv be :math:`M_n=\frac{S_n}{n}` for a given :math:`n`. We can think of a sequence of this as :math:`(M_n)_{n=1}^\infty`.
+	* Let the sample mean rv be :math:`M_n=\frac{S_n}{n}` for a given :math:`n`. We can think of a sequence of this as :math:`(M_n)_{n=1}^\infty`.
 
 		* We note that :math:`\mathbb{E}[M_n]=\mu` and :math:`\mathrm{Var}(M_n)=\sigma^2/n`.
 	* Let the standardised rv be :math:`Z_n=\frac{S_n-n\mu}{\sigma\sqrt{n}}` for a given :math:`n`. We can think of a sequence of this as :math:`(Z_n)_{n=1}^\infty`.
@@ -123,15 +123,33 @@ Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)
 
 Weak Law of Large Number
 ====================================
+.. note::
+	* This talks about the convergence properties of :math:`M_n`.
+	* Applying Chebyshev's inequality, we obtain :math:`\mathbb{P}(|M_n-\mu|\geq \epsilon)\leq \sigma^2/n\cdot \epsilon^2`.
+	* Therefore :math:`\lim\limits_{n\to\infty}\mathbb{P}(|M_n-\mu|\geq \epsilon)=0`.
+	* WLLN: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`M_n\xrightarrow[]{P}\mu`.
+	* It doesn't talk about how quickly the sample mean converges.
 
 Special case: bounded rvs
 ------------------------------------
+If we know that the rvs are bounded, i.e. :math:`\forall i, a\leq X_i\leq b`, then we know that :math:`\mathrm{Var}(X_i)\leq (b-a)^2/4` (see note in randomv variable chapter TODO add link).
+
+.. note::
+	* From Chebyshev's inequality, we can obtain a bound which goes down inversely with :math:`n`.
+
+		.. math:: \mathbb{P}(|M_n-\mu|\geq \epsilon)\leq \frac{\sigma^2}{n\epsilon^2}\leq \frac{(b-a)^2}{4n\epsilon^2}
 
 Hoeffding's inequality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. attention::
+	* For bounded rvs, Hoeffding's inequality gives an even tigher bound which goes down exponentially with :math:`n`.
+
+		.. math:: \mathbb{P}(|M_n-\mu|\geq \epsilon)\leq 2\exp\left(\frac{-2n\epsilon^2}{(b-a)^2}\right)
 
 Strong Law of Large Number
 ====================================
+.. note::
+	* SLLN: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined moments till at least 4th moment, :math:`M_n\xrightarrow[]{as}\mu`.
 
 Central Limit Theorem
 ====================================
