@@ -148,6 +148,7 @@ Estimation using conditional expectation
 
 			* For a given value of :math:`Y=y`, the estimation is :math:`\hat{x}=\mathbb{E}[X|Y=y]=r(y)`.
 			* The function :math:`r(y)` is known called **regression function**.
+			* The variance of the estimator :math:`\mathrm{Var}(\hat{X})` is called **standard error**.
 		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
 
 			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
