@@ -113,7 +113,7 @@ Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)
 .. note::
 	* Let the sum rv be :math:`S_n=\sum_{i=1}^n X_i` for a given :math:`n`. We can think of a sequence of this as :math:`(S_n)_{n=1}^\infty`.
 
-		* We note that :math:`\mathbb{E}[S_n]=n\mu` and :math:`\mathrm{Var}(S_n)\to\infty`.
+		* We note that :math:`\mathbb{E}[S_n]=n\mu` and :math:`\lim\limits_{n\to\infty}\mathrm{Var}(S_n)\to\infty`.
 	* Let the sample mean rv be :math:`M_n=\frac{S_n}{n}` for a given :math:`n`. We can think of a sequence of this as :math:`(M_n)_{n=1}^\infty`.
 
 		* We note that :math:`\mathbb{E}[M_n]=\mu` and :math:`\mathrm{Var}(M_n)=\sigma^2/n`.
@@ -128,11 +128,13 @@ Weak Law of Large Number
 	* Applying Chebyshev's inequality, we obtain :math:`\mathbb{P}(|M_n-\mu|\geq \epsilon)\leq \sigma^2/n\cdot \epsilon^2`.
 	* Therefore :math:`\lim\limits_{n\to\infty}\mathbb{P}(|M_n-\mu|\geq \epsilon)=0`.
 	* WLLN: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`M_n\xrightarrow[]{P}\mu`.
+
+.. warning::
 	* It doesn't talk about how quickly the sample mean converges.
 
 Special case: bounded rvs
 ------------------------------------
-If we know that the rvs are bounded, i.e. :math:`\forall i, a\leq X_i\leq b`, then we know that :math:`\mathrm{Var}(X_i)\leq (b-a)^2/4` (see note in randomv variable chapter TODO add link).
+If we know that the rvs are bounded, i.e. :math:`\forall i, a\leq X_i\leq b`, then we know that :math:`\mathrm{Var}(X_i)\leq \frac{(b-a)^2}{4}` (see note in random variable chapter TODO add link).
 
 .. note::
 	* From Chebyshev's inequality, we can obtain a bound which goes down inversely with :math:`n`.
@@ -153,3 +155,13 @@ Strong Law of Large Number
 
 Central Limit Theorem
 ====================================
+.. note::
+	* CLT: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`Z_n\xrightarrow[]{D}\Phi` where :math:`Phi` represents standard normal distribution.
+	* Since :math:`S_n` can be expressed as a linear transformation of :math:`Z_n`, it also converges to some normal distribution with mean :math:`n\mu` and ever increasing variance.
+
+.. warning::
+	* It doesn't talk about how quickly the sum converges to normal.
+	* The speed of this convergence depends on the actual underlying distribution.
+
+		* Uniform: very quickly resembles a normal.
+		* Exponential: takes a long time.
