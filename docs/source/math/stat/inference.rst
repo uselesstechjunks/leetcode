@@ -8,7 +8,7 @@ We have a sample of size :math:`n`, :math:`X_1,\cdots X_n` from an unknown CDF :
 	* The functions of this form, :math:`T(F)`, are known as **statistical functionals**, such as 
 
 		* density :math:`T(F)=f=F'`
-		* expectation :math:`T(F)=\mathbb{E}[X]=\int\limits_{-\infty}^{\infty} x \mathop{dF}`
+		* expectation :math:`T(F)=\mathbb{E}[X]=\int x \mathop{dF}`
 		* variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
 		* median: :math:`T(F)=F^{-1}(1/2)`   
 	* The **inferred values** are called **estimates** of the quantities of interest. 
