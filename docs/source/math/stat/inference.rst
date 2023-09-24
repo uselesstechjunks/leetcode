@@ -119,17 +119,19 @@ Point Estimation
 Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
-    * **Sampling Distribution**: The distribution of :math:`\hat{\theta_n}` over different samples.
-    * **Bias**: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. 
+	* **Sampling Distribution**: The distribution of :math:`\hat{\theta_n}` over different samples.
+	* **Bias**: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. 
 
 			* If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an **unbiased estimator** of :math:`\theta`.
-    * **Standard Error**: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}_{\theta}(\hat{\theta_n})}`.
+	* **Standard Error**: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}_{\theta}(\hat{\theta_n})}`.
 
 If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\hat{\text{se}}=\sqrt{\hat{\text{Var}}_{\theta}(\hat{\theta_n})}`
 
 .. note::
-    * **Consistent Estimator**: If :math:`\hat{\theta_n}\xrightarrow[]{P}\theta`.
-    * **Mean-Squared Error**: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
+	* **Consistent Estimator**: If :math:`\hat{\theta_n}\xrightarrow[]{P}\theta`.
+	* **Mean-Squared Error**: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
+
+		.. math:: \text{bias}(\hat{\theta_n})^2+\text{Var}_{\theta}(\hat{\theta_n})=\left(\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta\right)^2+\mathbb{E}_{\theta}[\hat{\theta_n}^2]-\left(\mathbb{E}_{\theta}[\hat{\theta_n}]\right)^2=\left(\mathbb{E}_{\theta}[\hat{\theta_n}]\right)^2-2\theta\mathbb{E}_{\theta}[\hat{\theta_n}]+\theta^2+\mathbb{E}_{\theta}[\hat{\theta_n}^2]-\left(\mathbb{E}_{\theta}[\hat{\theta_n}]\right)^2=\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]
 
 .. attention::
 	Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
