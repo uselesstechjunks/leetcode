@@ -106,7 +106,7 @@ Types of Inference
 Point Estimation
 ==========================================================================================
 .. note::
-	* A single *best* estimate (i.e. a point) for the fixed, unknown qualtity of interest within the model. 
+	* A single **best** estimate (point) for the fixed, unknown qualtity of interest within the model. 
 	* This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data :math:`\hat{\theta_n}=g(X_1,\cdots,X_n)`.
 	* The estimate :math:`\hat{\theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value).
 	* Examples: 
