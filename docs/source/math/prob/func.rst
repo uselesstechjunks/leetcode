@@ -148,7 +148,7 @@ Estimation using conditional expectation
 
 			* For a given value of :math:`Y=y`, the estimation is :math:`\hat{x}=\mathbb{E}[X|Y=y]=r(y)`.
 			* The function :math:`r(y)` is known called **regression function**.
-			* The variance of the estimator :math:`\mathrm{Var}(\hat{X})` is called **standard error**.
+			* The variance of the estimator :math:`\mathrm{Var}(\hat{X})` is called **standard error** (SE).
 		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
 
 			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
@@ -166,7 +166,7 @@ Estimation using conditional expectation
 				* Given :math:`Y`, :math:`\hat{X}` is constant.
 
 					.. math:: \mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[(\hat{X}-X)|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\hat{X}|Y]]-\mathbb{E}[\hat{X}\cdot\mathbb{E}[X|Y]]=\mathbb{E}[\hat{X}^2]-\mathbb{E}[\hat{X}^2]=0
-			* Therefore, we have :math:`\mathrm{Var}(X)=\mathrm{Var}(\hat{X})+\mathrm{Var}(\tilde{X})`.
+			* Therefore, we have :math:`\mathrm{Var}(X)=\mathrm{Var}(\hat{X})+\mathrm{Var}(\tilde{X})=\text{SE}+\text{MSE}`.
 
 Conditional variance
 ========================================================================

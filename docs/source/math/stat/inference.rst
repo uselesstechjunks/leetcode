@@ -30,6 +30,7 @@ Machine Learning as a Statistical Inference
 	  where :math:`\mathbb{E}[\epsilon]=0`. 
 
 		* This inference is known as **learning** in Machine Learning and **curve estimation** in statistics.
+		* It can be proven that it is always possible to write a conditional expectation in the above form such that :math:`\mathbb{E}[\epsilon]=0`.
 	* In the above case, an inference might also mean an inferring an unseen :math:`Y|X=x` by :math:`\hat{y}=r(x)` for a given :math:`X=x`. 
 
 		* This is known as **inference** in Machine Learning and **prediction** in statistics.
@@ -38,8 +39,7 @@ Machine Learning as a Statistical Inference
 	Dependent and Independent Variable: 
 
 	* :math:`X` is called the independent variable (**features**) and :math:`Y` called as dependent variable (**target**). 
-	* Independent variables are often multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.
-	* It can be proven that it is always possible to write a conditional expectation in the above form such that :math:`\mathbb{E}[\epsilon]=0`.
+	* Independent variables are often multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.	
 
 ******************************************************************************************
 Statistical Model
@@ -57,10 +57,12 @@ Statistical Model
         #. Quality of model is judged by evaluating the model on the inference data.
         #. (Optional) A different model is chosen and the process repeats.
 
+Types of Statistical Model
+==========================================================================================
 The following categories of models are based on the dimensionality of this set.
 
 Parametric Model
-==========================================================================================
+------------------------------------------------------------------------------------------
 .. note::
 	This set can be spanned by a finitely many parameters.
 
@@ -75,7 +77,7 @@ Parametric Model
 			\mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
 
 Non-parametric Model
-==========================================================================================
+------------------------------------------------------------------------------------------
 .. note::
 	This set cannot be spanned by a finitely many parameters.
 
@@ -83,7 +85,7 @@ Non-parametric Model
 	A non-parametric model for distributions can be the set of all possible cdfs.
 
 Empirical distribution function
-------------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The estimator for :math:`F` is :math:`\hat{F_n}` which assigns a mass :math:`1/n` to every point in sample :math:`\{X_i\}_{i=1}^n`.
 
 .. note::		
@@ -93,7 +95,7 @@ The estimator for :math:`F` is :math:`\hat{F_n}` which assigns a mass :math:`1/n
 		* :math:`\text{Var}(\hat{F_n})=\frac{F(x)(1-F(x))}{n}`
 
 Plug-in Estimator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. note::
 	The plug-in estimator for any statistical functional :math:`T(F)` can be obtained by replacing it with :math:`\hat{F_n}` as :math:`T(\hat{F_n})`.
 
@@ -114,6 +116,8 @@ Point Estimation
 		#. a single value for expectation/variance/other moments
 		#. a single prediction for a dependent variable with a given independent variable. etc. 
 
+Some useful terminology
+-------------------------------------------------------------------------------------------
 .. note::
     * **Sampling Distribution**: The distribution of :math:`\hat{\theta_n}` over different samples.
     * **Bias**: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. 
@@ -145,6 +149,8 @@ Confidence Set Estimation
 	#. For vector quantities, this is expressed with sets instead of intervals.
 	#. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
 
+Some useful terminology
+-------------------------------------------------------------------------------------------
 .. note::
 	* **Pointwise Asymptotic CI**: :math:`\forall\theta\in\Theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
 	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
