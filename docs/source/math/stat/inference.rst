@@ -116,6 +116,8 @@ Point Estimation
 		#. a single value for expectation/variance/other moments
 		#. a single prediction for a dependent variable with a given independent variable. etc. 
 
+Some useful terminology
+-------------------------------------------------------------------------------------------
 .. note::
     * **Sampling Distribution**: The distribution of :math:`\hat{\theta_n}` over different samples.
     * **Bias**: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. 
@@ -147,6 +149,8 @@ Confidence Set Estimation
 	#. For vector quantities, this is expressed with sets instead of intervals.
 	#. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
 
+Some useful terminology
+-------------------------------------------------------------------------------------------
 .. note::
 	* **Pointwise Asymptotic CI**: :math:`\forall\theta\in\Theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
 	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
