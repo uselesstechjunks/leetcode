@@ -30,6 +30,7 @@ Machine Learning as a Statistical Inference
 	  where :math:`\mathbb{E}[\epsilon]=0`. 
 
 		* This inference is known as **learning** in Machine Learning and **curve estimation** in statistics.
+		* It can be proven that it is always possible to write a conditional expectation in the above form such that :math:`\mathbb{E}[\epsilon]=0`.
 	* In the above case, an inference might also mean an inferring an unseen :math:`Y|X=x` by :math:`\hat{y}=r(x)` for a given :math:`X=x`. 
 
 		* This is known as **inference** in Machine Learning and **prediction** in statistics.
@@ -38,8 +39,7 @@ Machine Learning as a Statistical Inference
 	Dependent and Independent Variable: 
 
 	* :math:`X` is called the independent variable (**features**) and :math:`Y` called as dependent variable (**target**). 
-	* Independent variables are often multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.
-	* It can be proven that it is always possible to write a conditional expectation in the above form such that :math:`\mathbb{E}[\epsilon]=0`.
+	* Independent variables are often multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.	
 
 ******************************************************************************************
 Statistical Model
