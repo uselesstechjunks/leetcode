@@ -129,9 +129,7 @@ If the variance in above is also an estimate (as it often is), then we estimate 
 
 .. note::
 	* **Consistent Estimator**: If :math:`\hat{\theta_n}\xrightarrow[]{P}\theta`.
-	* **Mean-Squared Error**: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`
-
-		.. math:: \text{bias}(\hat{\theta_n})^2+\text{Var}_{\theta}(\hat{\theta_n})=\left(\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta\right)^2+\mathbb{E}_{\theta}[\hat{\theta_n}^2]-\left(\mathbb{E}_{\theta}[\hat{\theta_n}]\right)^2=\left(\mathbb{E}_{\theta}[\hat{\theta_n}]\right)^2-2\theta\mathbb{E}_{\theta}[\hat{\theta_n}]+\theta^2+\mathbb{E}_{\theta}[\hat{\theta_n}^2]-\left(\mathbb{E}_{\theta}[\hat{\theta_n}]\right)^2=\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]
+	* **Mean-Squared Error**: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`.
 
 .. attention::
 	Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
