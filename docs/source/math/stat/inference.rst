@@ -57,10 +57,12 @@ Statistical Model
         #. Quality of model is judged by evaluating the model on the inference data.
         #. (Optional) A different model is chosen and the process repeats.
 
+Types of Statistical Model
+==========================================================================================
 The following categories of models are based on the dimensionality of this set.
 
 Parametric Model
-==========================================================================================
+------------------------------------------------------------------------------------------
 .. note::
 	This set can be spanned by a finitely many parameters.
 
@@ -75,7 +77,7 @@ Parametric Model
 			\mathcal{F}=\{f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\{\frac{1}{2\sigma}(x-\mu)^2);\mu\in\mathbb{R},\sigma\in\mathbb{R}^+\}
 
 Non-parametric Model
-==========================================================================================
+------------------------------------------------------------------------------------------
 .. note::
 	This set cannot be spanned by a finitely many parameters.
 
@@ -83,7 +85,7 @@ Non-parametric Model
 	A non-parametric model for distributions can be the set of all possible cdfs.
 
 Empirical distribution function
-------------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The estimator for :math:`F` is :math:`\hat{F_n}` which assigns a mass :math:`1/n` to every point in sample :math:`\{X_i\}_{i=1}^n`.
 
 .. note::		
@@ -93,7 +95,7 @@ The estimator for :math:`F` is :math:`\hat{F_n}` which assigns a mass :math:`1/n
 		* :math:`\text{Var}(\hat{F_n})=\frac{F(x)(1-F(x))}{n}`
 
 Plug-in Estimator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. note::
 	The plug-in estimator for any statistical functional :math:`T(F)` can be obtained by replacing it with :math:`\hat{F_n}` as :math:`T(\hat{F_n})`.
 
