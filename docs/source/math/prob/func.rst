@@ -153,12 +153,13 @@ Fundamentals of Estimation
 			* This can be rewritten as :math:`\text{mse}=\text{bias}^2+\mathbb{V}_Y(\tilde{Y})`.
 			* If the quantity we're estimating is an unknown constant :math:`c` instead of being a rv (as in classical statistical estimation of an unknown parameter),
 
-				.. math:: \text{mse}=\text{bias}^2+\mathbb{V}_Y(\hat{Y}-c)=\text{bias}^2+\mathbb{V}_Y(\hat{Y})=\text{bias}^2+{se}^2
+				.. math:: \text{mse}=\text{bias}^2+\mathbb{V}_Y(\hat{Y}-c)=\text{bias}^2+\mathbb{V}_Y(\hat{Y})=\text{bias}^2+\text{se}^2
 
 Estimation using conditional expectation
 ==========================================================================================
 .. note::
 	* We assume that knowing :math:`X`, we can estimate :math:`Y`.
+
 		* We assume that conditional density :math:`f_{Y|X}(y|x)` is known.
 	
 			* [**Discriminative**] We might have access to the conditional density directly.
@@ -169,14 +170,11 @@ Estimation using conditional expectation
 		* Estimator: :math:`\hat{Y}=\mathbb{E}[Y|X]` can be thought of as an estimator of :math:`X` as their expected values are the same.
 
 			* For a given value of :math:`X=x`, the estimation is :math:`\hat{y}=\mathbb{E}[Y|X=x]=r(x)`.
-			
-				* The function :math:`r(x)` is known called **regression function**.
-		* Bias: :math:`\tilde{Y}` is expected to be 0, as 
-
-			.. math:: \text{bias}=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0
+			* The function :math:`r(x)` is known called **regression function**.
+		* Bias: :math:`\tilde{Y}` is expected to be 0, as :math:`\text{bias}=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0\implies\text{mse}=\text{se}^2`.
 		* MSE is the same as the variance of estimation error.
 
-			.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\mathbb{E}_Y[\tilde{Y}^2]=\mathbb{E}_Y[(\hat{Y}-Y)^2]
+			.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\mathbb{E}_Y[\tilde{Y}^2]=\text{mse}
 		* This error is uncorrelated with the estimator.
 
 			* We note that
