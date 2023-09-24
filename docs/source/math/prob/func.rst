@@ -143,17 +143,17 @@ Fundamentals of Estimation
 
 		* Estimator for :math:`Y` is usually written as :math:`\hat{Y}`.
 		* Estimates are the values that this rv can take, :math:`\hat{Y}=\hat{y}`.
-		* **Standard error**: :math:`\text{se}=\sqrt{\mathbb{V}_Y(\hat{Y})}`.
+		* **Standard error**: :math:`\text{se}(\hat{Y})=\sqrt{\mathbb{V}_Y(\hat{Y})}`.
 	* **Estimation error**: :math:`\tilde{Y}=\hat{Y}-Y`.
 
-		* **Bias of an estimator**: :math:`\text{bias}=\mathbb{E}_Y[\tilde{Y}]`.
-		* **Mean squared error**: :math:`\text{mse}=\mathbb{E}_Y[\tilde{Y}^2]`.
+		* **Bias of an estimator**: :math:`\text{bias}(\hat{Y})=\mathbb{E}_Y[\tilde{Y}]`.
+		* **Mean squared error**: :math:`\text{mse}(\hat{Y})=\mathbb{E}_Y[\tilde{Y}^2]`.
 
-			* We note that :math:`\mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\text{mse}-\text{bias}^2`.
-			* This can be rewritten as :math:`\text{mse}=\text{bias}^2+\mathbb{V}_Y(\tilde{Y})`.
+			* We note that :math:`\mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\text{mse}(\hat{Y})-\text{bias}(\hat{Y})^2`.
+			* This can be rewritten as :math:`\text{mse}(\hat{Y})=\text{bias}(\hat{Y})^2+\mathbb{V}_Y(\tilde{Y})`.
 			* If the quantity we're estimating is an unknown constant :math:`c` instead of being a rv (as in classical statistical estimation of an unknown parameter),
 
-				.. math:: \text{mse}=\text{bias}^2+\mathbb{V}_Y(\hat{Y}-c)=\text{bias}^2+\mathbb{V}_Y(\hat{Y})=\text{bias}^2+\text{se}^2
+				.. math:: \text{mse}(\hat{Y})=\text{bias}(\hat{Y})^2+\mathbb{V}_Y(\hat{Y}-c)=\text{bias}(\hat{Y})^2+\mathbb{V}_Y(\hat{Y})=\text{bias}(\hat{Y})^2+\text{se}(\hat{Y})^2
 
 Estimation using conditional expectation
 ==========================================================================================
@@ -171,8 +171,9 @@ Estimation using conditional expectation
 
 			* For a given value of :math:`X=x`, the estimation is :math:`\hat{y}=\mathbb{E}[Y|X=x]=r(x)`.
 			* The function :math:`r(x)` is known called **regression function**.
-		* Bias: Since :math:`\tilde{Y}` is expected to be 0, :math:`\text{bias}=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0\implies\text{mse}=\text{se}^2`.
-		* MSE is the same as the variance of estimation error.
+		* Bias: Since :math:`\tilde{Y}` is expected to be 0
+
+			.. math:: \text{bias}(\hat{Y})=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0\implies\text{mse}(\hat{Y})=\text{se}(\hat{Y})^2
 		* This error is uncorrelated with the estimator.
 
 			* We note that
