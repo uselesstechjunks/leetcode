@@ -63,7 +63,7 @@ Let :math:`u(x)` and :math:`v(x)` be two functions. We want to find out the inte
 		.. math:: \int u(x)\cdot w'(x)\mathop{dx}=\int g'(x)\mathop{dx}-\int u'(x)\cdot w(x)\mathop{dx}=u(x)\cdot w(x)-\int u'(x)\cdot w(x)\mathop{dx}
 	* Replacing :math:`w(x)`
 
-		.. math:: \int u(x)\cdot v(x)\mathop{dx}=u(x)\cdot \int v(x)\mathop{dx}-\int u'(x)\left(\int v(x)\mathop{dx}) \right)\mathop{dx}\
+		.. math:: \int u(x)\cdot v(x)\mathop{dx}=u(x)\cdot \int v(x)\mathop{dx}-\int u'(x)\left(\int v(x)\mathop{dx}) \right)\mathop{dx}
 
 .. tip::
 	* ILATE: Dictates the order in which the functions should be chosen to be :math:`u` or :math:`v`. 
