@@ -133,8 +133,23 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 	* We can solve the hat problem using covariance.
 
 ******************************************************************************************
-Estimation using conditional expectation
+Fundamentals of Estimation
 ******************************************************************************************
+.. note::
+	* Estimate: If we do not know the exact value of a rv :math:`Y`, we can use an intelligent **guess** (estimate). 
+	
+		* The **guess** is another rv which can be observed or calculated based on other rvs.
+	* Estimator: The rv which takes estimates as values is known as the **estimator**.
+
+		* Estimator for :math:`Y` is usually written as :math:`\hat{Y}`.
+		* Estimates are the values that this rv can take, :math:`\hat{Y}=\hat{y}`.
+		* Standard error: The expression :math:`\sqrt{\mathbb{V}_Y(\hat{Y})}` is known as standard error (SE).
+	* Estimation error: :math:`\tilde{Y}=\hat{Y}-Y`.
+		* Bias of an estimator: :math:`\mathbb{E}[\tilde{Y}]`.
+		* Mean squared error: 
+
+Estimation using conditional expectation
+==========================================================================================
 .. note::
 	* We assume that knowing :math:`Y`, we can estimate :math:`X`.
 	* We assume that conditional density :math:`f_{X|Y}(x|y)` is known.
