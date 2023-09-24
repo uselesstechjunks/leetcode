@@ -136,7 +136,7 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 Fundamentals of Estimation
 ******************************************************************************************
 .. note::
-	* **Estimate**: If we do not know the exact value of a rv :math:`Y`, we can use an intelligent **guess** (estimate). 
+	* **Estimate**: If we do not know the exact value of a rv :math:`Y`, we can use a **guess** (estimate). 
 	
 		* The **guess** is another rv which can be observed or calculated based on other rvs.
 	* **Estimator**: The rv which takes estimates as values is known as the **estimator**.
