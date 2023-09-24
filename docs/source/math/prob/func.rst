@@ -147,7 +147,13 @@ Fundamentals of Estimation
 	* **Estimation error**: :math:`\tilde{Y}=\hat{Y}-Y`.
 
 		* **Bias of an estimator**: :math:`\text{bias}=\mathbb{E}_Y[\tilde{Y}]`.
-		* **Mean squared error**: :math:\text{mse}=\mathbb{E}_Y[\tilde{Y}^2]`.
+		* **Mean squared error**: :math:`\text{mse}=\mathbb{E}_Y[\tilde{Y}^2]`.
+
+			* We note that :math:`\mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\text{mse}-\text{bias}^2`.
+			* This can be rewritten as :math:`\text{mse}=\text{bias}^2+\mathbb{V}_Y(\tilde{Y})`.
+			* If the quantity we're estimating is an unknown constant :math:`c` instead of being a rv (as in classical statistical estimation of an unknown parameter),
+
+				.. math:: \text{mse}=\text{bias}^2+\mathbb{V}_Y(\hat{Y}-c)=\text{bias}^2+\mathbb{V}_Y(\hat{Y})=\text{bias}^2+{se}^2
 
 Estimation using conditional expectation
 ==========================================================================================
