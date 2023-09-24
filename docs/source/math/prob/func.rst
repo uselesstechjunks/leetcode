@@ -166,7 +166,7 @@ Estimation using conditional expectation
 				* Given :math:`Y`, :math:`\hat{X}` is constant.
 
 					.. math:: \mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[(\hat{X}-X)|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\hat{X}|Y]]-\mathbb{E}[\hat{X}\cdot\mathbb{E}[X|Y]]=\mathbb{E}[\hat{X}^2]-\mathbb{E}[\hat{X}^2]=0
-			* Therefore, we have :math:`\mathrm{Var}(X)=\mathrm{Var}(\hat{X})+\mathrm{Var}(\tilde{X})`.
+			* Therefore, we have :math:`\mathrm{Var}(X)=\mathrm{Var}(\hat{X})+\mathrm{Var}(\tilde{X})=\text{SE}+\text{MSE}`.
 
 Conditional variance
 ========================================================================
