@@ -171,10 +171,8 @@ Estimation using conditional expectation
 
 			* For a given value of :math:`X=x`, the estimation is :math:`\hat{y}=\mathbb{E}[Y|X=x]=r(x)`.
 			* The function :math:`r(x)` is known called **regression function**.
-		* Bias: :math:`\tilde{Y}` is expected to be 0, as :math:`\text{bias}=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0\implies\text{mse}=\text{se}^2`.
+		* Bias: Since :math:`\tilde{Y}` is expected to be 0, :math:`\text{bias}=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0\implies\text{mse}=\text{se}^2`.
 		* MSE is the same as the variance of estimation error.
-
-			.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\mathbb{E}_Y[\tilde{Y}^2]=\text{mse}
 		* This error is uncorrelated with the estimator.
 
 			* We note that
