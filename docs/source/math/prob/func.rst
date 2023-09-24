@@ -158,41 +158,40 @@ Fundamentals of Estimation
 Estimation using conditional expectation
 ==========================================================================================
 .. note::
-	* We assume that knowing :math:`Y`, we can estimate :math:`X`.
-	* We assume that conditional density :math:`f_{X|Y}(x|y)` is known.
-
-		* [**Discriminative**] We might have access to the conditional density directly.
-		* [**Generative**] We might have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem. 
-	* From law of iterated expectation, we have :math:`\mathbb{E}[X]=\mathbb{E}[\mathbb{E}[X|Y]]`
+	* We assume that knowing :math:`X`, we can estimate :math:`Y`.
+		* We assume that conditional density :math:`f_{Y|X}(y|x)` is known.
+	
+			* [**Discriminative**] We might have access to the conditional density directly.
+			* [**Generative**] We might have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem. 
+	* From law of iterated expectation, we have :math:`\mathbb{E}[Y]=\mathbb{E}[\mathbb{E}[Y|X]]`
 	* Therefore
 
-		* Estimator: :math:`\hat{X}=\mathbb{E}[X|Y]` can be thought of as an estimator of :math:`X` as their expected values are the same.
+		* Estimator: :math:`\hat{Y}=\mathbb{E}[Y|X]` can be thought of as an estimator of :math:`X` as their expected values are the same.
 
-			* For a given value of :math:`Y=y`, the estimation is :math:`\hat{x}=\mathbb{E}[X|Y=y]=r(y)`.
-			* The function :math:`r(y)` is known called **regression function**.
-			* The quantity :math:`\sqrt{\mathbb{V}(\hat{X})}` is called **standard error** (SE).
-		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
+			* For a given value of :math:`X=x`, the estimation is :math:`\hat{y}=\mathbb{E}[Y|X=x]=r(x)`.
+			
+				* The function :math:`r(x)` is known called **regression function**.
+		* Bias: :math:`\tilde{Y}` is expected to be 0, as 
 
-			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
-			* Variance of this error is the same as **Mean-Squared Error** (MSE).
+			.. math:: \text{bias}=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0
+		* MSE is the same as the variance of estimation error.
 
-				.. math:: \mathbb{V}(\tilde{X})=\mathbb{E}[\tilde{X}^2]-\left(\mathbb{E}[\tilde{X}]\right)^2=\mathbb{E}[\tilde{X}^2]=\mathbb{E}[(\hat{X}-X)^2]
-			* This error is uncorrelated with the estimator.
+			.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\mathbb{E}_Y[\tilde{Y}^2]=\mathbb{E}_Y[(\hat{Y}-Y)^2]
+		* This error is uncorrelated with the estimator.
 
-				* We note that
+			* We note that
 
-					.. math:: \mathrm{Cov}(\hat{X},\tilde{X})=\mathbb{E}[\hat{X}\tilde{X}]-\mathbb{E}[\hat{X}]\mathbb{E}[\tilde{X}]=\mathbb{E}[\hat{X}\tilde{X}]
-				* Invoking law of iterated expectation
+				.. math:: \mathrm{Cov}(\hat{Y},\tilde{Y})=\mathbb{E}[\hat{Y}\tilde{Y}]-\mathbb{E}[\hat{Y}]\mathbb{E}[\tilde{Y}]=\mathbb{E}[\hat{Y}\tilde{Y}]
+			* Invoking law of iterated expectation
 
-					.. math:: \mathbb{E}[\hat{X}\tilde{X}]=\mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]
-				* Given :math:`Y`, :math:`\hat{X}` is constant.
+				.. math:: \mathbb{E}[\hat{Y}\tilde{Y}]=\mathbb{E}[\mathbb{E}[\hat{Y}\tilde{Y}|X]]
+			* Given :math:`X`, :math:`\hat{Y}` is constant.
 
-					.. math:: \mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[(\hat{X}-X)|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\hat{X}|Y]]-\mathbb{E}[\hat{X}\cdot\mathbb{E}[X|Y]]=\mathbb{E}[\hat{X}^2]-\mathbb{E}[\hat{X}^2]=0
-			* Therefore, we have :math:`\mathbb{V}(X)=\mathbb{V}(\hat{X})+\mathbb{V}(\tilde{X})=\text{SE}^2+\text{MSE}`.
+				.. math:: \mathbb{E}[\mathbb{E}[\hat{Y}\tilde{Y}|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[\tilde{Y}|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[(\hat{Y}-Y)|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[\hat{Y}|X]]-\mathbb{E}[\hat{Y}\cdot\mathbb{E}[Y|X]]=\mathbb{E}[\hat{Y}^2]-\mathbb{E}[\hat{Y}^2]=0
+		* Therefore, we have :math:`\mathbb{V}(Y)=\mathbb{V}(\hat{Y})+\mathbb{V}(\tilde{Y})=\text{se}^2+\text{mse}`.
 
 Conditional variance
 ========================================================================
-
 .. note::
 	We can define conditional variance as :math:`\mathbb{V}(X|Y)=\mathbb{E}[(X-\mathbb{E}[X|Y])^2|Y]` such that
 	
