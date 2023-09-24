@@ -143,10 +143,11 @@ Fundamentals of Estimation
 
 		* Estimator for :math:`Y` is usually written as :math:`\hat{Y}`.
 		* Estimates are the values that this rv can take, :math:`\hat{Y}=\hat{y}`.
-		* Standard error: The expression :math:`\sqrt{\mathbb{V}_Y(\hat{Y})}` is known as standard error (SE).
+		* Standard error: :math:`\text{se}=\sqrt{\mathbb{V}_Y(\hat{Y})}`.
 	* Estimation error: :math:`\tilde{Y}=\hat{Y}-Y`.
-		* Bias of an estimator: :math:`\mathbb{E}[\tilde{Y}]`.
-		* Mean squared error: 
+
+		* Bias of an estimator: :math:`\text{bias}=\mathbb{E}[\tilde{Y}]`.
+		* Mean squared error: :math:\text{mse}=\mathbb{E}[\tilde{Y}^2]`.
 
 Estimation using conditional expectation
 ==========================================================================================
