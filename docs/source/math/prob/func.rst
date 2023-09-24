@@ -136,18 +136,18 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 Fundamentals of Estimation
 ******************************************************************************************
 .. note::
-	* Estimate: If we do not know the exact value of a rv :math:`Y`, we can use an intelligent **guess** (estimate). 
+	* **Estimate**: If we do not know the exact value of a rv :math:`Y`, we can use an intelligent **guess** (estimate). 
 	
 		* The **guess** is another rv which can be observed or calculated based on other rvs.
-	* Estimator: The rv which takes estimates as values is known as the **estimator**.
+	* **Estimator**: The rv which takes estimates as values is known as the **estimator**.
 
 		* Estimator for :math:`Y` is usually written as :math:`\hat{Y}`.
 		* Estimates are the values that this rv can take, :math:`\hat{Y}=\hat{y}`.
-		* Standard error: :math:`\text{se}=\sqrt{\mathbb{V}_Y(\hat{Y})}`.
-	* Estimation error: :math:`\tilde{Y}=\hat{Y}-Y`.
+		* **Standard error**: :math:`\text{se}=\sqrt{\mathbb{V}_Y(\hat{Y})}`.
+	* **Estimation error**: :math:`\tilde{Y}=\hat{Y}-Y`.
 
-		* Bias of an estimator: :math:`\text{bias}=\mathbb{E}[\tilde{Y}]`.
-		* Mean squared error: :math:\text{mse}=\mathbb{E}[\tilde{Y}^2]`.
+		* **Bias of an estimator**: :math:`\text{bias}=\mathbb{E}_Y[\tilde{Y}]`.
+		* **Mean squared error**: :math:\text{mse}=\mathbb{E}_Y[\tilde{Y}^2]`.
 
 Estimation using conditional expectation
 ==========================================================================================
