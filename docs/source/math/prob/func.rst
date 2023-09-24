@@ -61,7 +61,7 @@ Let :math:`Z=g(X,Y)` be a function of 2 jointly distributed rvs, :math:`X` and :
 
 .. seealso::
 	* Find the PDF of :math:`Z=X/Y`, where :math:`X` and :math:`Y` are independent and uniformly distributed in :math:`[0,1]`.
-	* Two people join a call but they are late by an amount, independent of the other, that follows an exponential distribution with parameter :math:`\lambda`. Find the PDF of the difference in their joining time.	
+	* Two people join a call but they are late by an amount, independent of the other, that follows an exponential distribution with parameter :math:`\lambda`. Find the PDF of the difference in their joining time.
 
 Special cases
 ========================================================================
@@ -185,7 +185,7 @@ Estimation using conditional expectation
 			* Given :math:`X`, :math:`\hat{Y}` is constant.
 
 				.. math:: \mathbb{E}[\mathbb{E}[\hat{Y}\tilde{Y}|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[\tilde{Y}|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[(\hat{Y}-Y)|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[\hat{Y}|X]]-\mathbb{E}[\hat{Y}\cdot\mathbb{E}[Y|X]]=\mathbb{E}[\hat{Y}^2]-\mathbb{E}[\hat{Y}^2]=0
-		* Therefore, we have :math:`\mathbb{V}(Y)=\mathbb{V}(\hat{Y})+\mathbb{V}(\tilde{Y})=\text{se}^2+\text{mse}`.
+		* Therefore, we have :math:`\mathbb{V}(Y)=\mathbb{V}(\hat{Y})+\mathbb{V}(\tilde{Y})=\text{se}(\hat{Y})^2+\text{mse}(\hat{Y})`.
 
 Conditional variance
 ========================================================================
