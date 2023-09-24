@@ -108,18 +108,18 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 	* :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]`.
 
 		* Proof follows from expanding the expression in definition.
-	* :math:`\mathrm{Cov}(X,X)=\mathrm{Var}(X)`.
+	* :math:`\mathrm{Cov}(X,X)=\mathbb{V}(X)`.
 	* :math:`\mathrm{Cov}(X,aY+b)=a\cdot\mathrm{Cov}(X,Y)`.
 	* :math:`\mathrm{Cov}(X,Y+Z)=\mathrm{Cov}(X,Y)+\mathrm{Cov}(X,Z)`.
-	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)+\mathrm{Cov}(X,Y)`.
+	* :math:`\mathbb{V}(X+Y)=\mathbb{V}(X)+\mathbb{V}(Y)+\mathrm{Cov}(X,Y)`.
 	* In general
 
-		.. math:: \mathrm{Var}\left(\sum_{i=1}^n X_i\right)=\sum_{i=1}^n \mathrm{Var}(X_i)+\sum_{i=1}^n\sum_{j=1, i\neq j}^n\mathrm{Cov}(X_i,Y_j)
+		.. math:: \mathbb{V}\left(\sum_{i=1}^n X_i\right)=\sum_{i=1}^n \mathbb{V}(X_i)+\sum_{i=1}^n\sum_{j=1, i\neq j}^n\mathrm{Cov}(X_i,Y_j)
 
 .. note::
 	* Correlation is defined as the normalised version of covariance
 
-		.. math:: \rho(X,Y)=\frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathrm{Var}(X)\mathrm{Var}(Y)}}.
+		.. math:: \rho(X,Y)=\frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathbb{V}(X)\mathbb{V}(Y)}}.
 	* We have :math:`|\rho(X,Y)|\leq 1`.
 
 		* Let :math:`\tilde{X}=X-\mathbb{E}[X]` and :math:`\tilde{Y}=Y-\mathbb{E}[Y]` be the centered rvs.
@@ -170,13 +170,13 @@ Estimation using conditional expectation
 
 			* For a given value of :math:`Y=y`, the estimation is :math:`\hat{x}=\mathbb{E}[X|Y=y]=r(y)`.
 			* The function :math:`r(y)` is known called **regression function**.
-			* The quantity :math:`\sqrt{\mathrm{Var}(\hat{X})}` is called **standard error** (SE).
+			* The quantity :math:`\sqrt{\mathbb{V}(\hat{X})}` is called **standard error** (SE).
 		* Estimation error: :math:`\tilde{X}=\hat{X}-X`.
 
 			* This error is expected to be 0, as :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[\mathbb{E}[X|Y]]-\mathbb{E}[X]=0`.
 			* Variance of this error is the same as **Mean-Squared Error** (MSE).
 
-				.. math:: \mathrm{Var}(\tilde{X})=\mathbb{E}[\tilde{X}^2]-\left(\mathbb{E}[\tilde{X}]\right)^2=\mathbb{E}[\tilde{X}^2]=\mathbb{E}[(\hat{X}-X)^2]
+				.. math:: \mathbb{V}(\tilde{X})=\mathbb{E}[\tilde{X}^2]-\left(\mathbb{E}[\tilde{X}]\right)^2=\mathbb{E}[\tilde{X}^2]=\mathbb{E}[(\hat{X}-X)^2]
 			* This error is uncorrelated with the estimator.
 
 				* We note that
@@ -188,15 +188,15 @@ Estimation using conditional expectation
 				* Given :math:`Y`, :math:`\hat{X}` is constant.
 
 					.. math:: \mathbb{E}[\mathbb{E}[\hat{X}\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\tilde{X}|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[(\hat{X}-X)|Y]]=\mathbb{E}[\hat{X}\cdot\mathbb{E}[\hat{X}|Y]]-\mathbb{E}[\hat{X}\cdot\mathbb{E}[X|Y]]=\mathbb{E}[\hat{X}^2]-\mathbb{E}[\hat{X}^2]=0
-			* Therefore, we have :math:`\mathrm{Var}(X)=\mathrm{Var}(\hat{X})+\mathrm{Var}(\tilde{X})=\text{SE}^2+\text{MSE}`.
+			* Therefore, we have :math:`\mathbb{V}(X)=\mathbb{V}(\hat{X})+\mathbb{V}(\tilde{X})=\text{SE}^2+\text{MSE}`.
 
 Conditional variance
 ========================================================================
 
 .. note::
-	We can define conditional variance as :math:`\mathrm{Var}(X|Y)=\mathbb{E}[(X-\mathbb{E}[X|Y])^2|Y]` such that
+	We can define conditional variance as :math:`\mathbb{V}(X|Y)=\mathbb{E}[(X-\mathbb{E}[X|Y])^2|Y]` such that
 	
-		.. math:: \mathbb{E}[\mathrm{Var}(X|Y)]=\mathbb{E}[\mathbb{E}[(X-\mathbb{E}[X|Y])^2|Y]]=\mathbb{E}[(X-\mathbb{E}[X|Y])^2]=\mathrm{E}[\tilde{X}^2]=\mathrm{Var}(\tilde{X})
+		.. math:: \mathbb{E}[\mathbb{V}(X|Y)]=\mathbb{E}[\mathbb{E}[(X-\mathbb{E}[X|Y])^2|Y]]=\mathbb{E}[(X-\mathbb{E}[X|Y])^2]=\mathrm{E}[\tilde{X}^2]=\mathbb{V}(\tilde{X})
 
 Law of iterated variance
 ========================================================================
@@ -204,13 +204,13 @@ Law of iterated variance
 .. note::
 	We can rewrite the variance relation using this new notation
 
-		.. math:: \mathrm{Var}(X)=\mathrm{Var}(\mathbb{E}[X|Y])+\mathbb{E}[\mathrm{Var}(X|Y)]
+		.. math:: \mathbb{V}(X)=\mathbb{V}(\mathbb{E}[X|Y])+\mathbb{E}[\mathbb{V}(X|Y)]
 
 .. tip::
 	The iterated law of expectation and variance allows us to tackle complicated cases by taking help in conditioning.
 
 .. seealso::
-	* A coin with unknown probability of head is tossed :math:`n` times. The probability is known to be uniform in :math:`[0,1]`. Let :math:`X` is the total number of heads. Find :math:`\mathbb{E}[X]` and :math:`\mathrm{Var}(X)`.
+	* A coin with unknown probability of head is tossed :math:`n` times. The probability is known to be uniform in :math:`[0,1]`. Let :math:`X` is the total number of heads. Find :math:`\mathbb{E}[X]` and :math:`\mathbb{V}(X)`.
 
 ******************************************************************************************
 Transforms of rv
