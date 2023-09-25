@@ -19,7 +19,6 @@ Contents
 .. toctree::
 
    math
-   math/index
    mltheory
    rank
    dsalgo
