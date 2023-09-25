@@ -102,6 +102,9 @@ Continuous case
 ******************************************************************************************
 Covariance and correlation
 ******************************************************************************************
+
+Scalar valued rvs
+==========================================================================================
 Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]`.
 
 .. note::
@@ -131,6 +134,14 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 
 .. seealso::
 	* We can solve the hat problem using covariance.
+
+Vector valued rvs
+==========================================================================================
+Let us consider vector values rvs :math:`\mathbf{X}` and :math:`\mathbf{Y}` which takes values :math:`\mathbf{x}=\{x_1,\cdots,x_n\}^\top\in\mathbb{R}^n` and :math:`\mathbf{y}=\{y_1,\cdots,y_m\}^\top\in\mathbb{R}^m`.
+
+.. note::
+	* Expectation: :math:`\mathbb{E}[\mathbf{X}]\in\mathbb{R}^n` (similarly for :math:`\mathbf{Y}`).
+	* Auto-covariance matrix: 
 
 ******************************************************************************************
 Fundamentals of Point Estimation
