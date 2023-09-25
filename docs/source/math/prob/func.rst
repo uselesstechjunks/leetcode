@@ -102,7 +102,10 @@ Continuous case
 ******************************************************************************************
 Covariance and correlation
 ******************************************************************************************
-Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]`.
+
+Scalar valued rvs
+==========================================================================================
+**Covariance** is defined between two scalar valued rvs as :math:`\sigma_{X,Y}=\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]`.
 
 .. note::
 	* :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]`.
@@ -117,7 +120,7 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 		.. math:: \mathbb{V}\left(\sum_{i=1}^n X_i\right)=\sum_{i=1}^n \mathbb{V}(X_i)+\sum_{i=1}^n\sum_{j=1, i\neq j}^n\mathrm{Cov}(X_i,Y_j)
 
 .. note::
-	* Correlation is defined as the normalised version of covariance
+	* **Correlation coefficient** is defined as the normalised version of covariance
 
 		.. math:: \rho(X,Y)=\frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathbb{V}(X)\mathbb{V}(Y)}}.
 	* We have :math:`|\rho(X,Y)|\leq 1`.
@@ -131,6 +134,43 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 
 .. seealso::
 	* We can solve the hat problem using covariance.
+
+Vector valued rvs
+==========================================================================================
+Let us consider vector values rvs :math:`\mathbf{X}\in\mathbb{R}^n` and :math:`\mathbf{Y}\in\mathbb{R}^m` which takes values :math:`\mathbf{X}=\mathbf{x}\implies(X_1=x_1,\cdots,X_n=x_n)^\top` and :math:`\mathbf{Y}=\mathbf{y}\implies(Y_1=y_1,\cdots,Y_m=y_m)^\top`.
+
+.. attention::
+	* Expectation: :math:`\mathbb{E}[\mathbf{X}]=\{\mathbb{E}[X_1],\cdots\mathbb{E}[X_2]\}^\top\in\mathbb{R}^n` (similarly for :math:`\mathbf{Y}`).
+
+.. note::
+	* **Auto-covariance matrix**: :math:`\mathbb{V}(\mathbf{X})=\mathrm{Cov}(\mathbf{X},\mathbf{X})=\mathbf{K}_{\mathbf{X,X}}=\mathbb{E}\left[\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)^\top\right]`.
+
+		* This is also known as just variance matrix or variance-covariance matrix.
+		* :math:`\mathbf{K}_{\mathbf{X,X}}\in\mathbb{R}^{n\times n}`.
+		* The entries of this matrix are :math:`\mathrm{Cov}(X_i,X_j)=\sigma_{X_i,X_j}`.		
+		* We note that when :math:`n=1` this reduces to the single rv case.
+		* :math:`\mathbf{K}_{\mathbf{X,Y}}` is positive-semidefinite and symmetric.
+		* **Linearity**: For a constant matrix :math:`\mathbf{A}` and a constant vector :math:`\mathbf{b}` of appropriate dimension
+
+			.. math: \mathbb{V}(\mathbf{A}\mathbf{X}+\mathbf{b})=\mathbf{A}\mathbb{V}(\mathbf{X})\mathbf{A}^\top
+	* **Auto-correlation matrix**: :math:`\mathbf{R}_{\mathbf{X,X}}=\mathbb{E}[\mathbf{X}\mathbf{X}^\top]`.
+
+		* It is connected with auto-covariance as :math:`\mathbf{K}_{\mathbf{X,X}}=\mathbf{R}_{\mathbf{X,X}}-\mathbb{E}[\mathbf{X}]\mathbb{E}[\mathbf{X}]^\top`.
+		* The entries of this matrix are :math:`\rho(X_i,X_j)=\frac{\sigma_{X_i,X_j}}{\sigma_{X_i}\sigma_{X_j}}`.
+		* Let :math:`\bar{\mathbf{X}}=\mathbf{X}-\mathbb{E}[\mathbf{X}]` be the centered rv.
+
+			* We note that in this case: :math:`\mathbf{K}_{\mathbf{X,X}}=\mathbf{R}_{\mathbf{X,X}}`.
+		* **Precision matrix**: If it exists, :math:`\mathbf{K}_{\mathbf{X,X}}^{-1}` is known as precision matrix.
+	* **Cross-covariance matrix**: :math:`\mathrm{Cov}(\mathbf{X},\mathbf{Y})=\mathbf{K}_{\mathbf{X,Y}}=\mathbb{E}\left[\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)\left(\mathbf{Y}-\mathbb{E}[\mathbf{Y}]\right)^\top\right]`.
+
+		* :math:`\mathbf{K}_{\mathbf{X,Y}}\in\mathbb{R}^{n\times m}`.
+		* The entries of this matrix are :math:`\mathrm{Cov}(X_i,Y_j)=\sigma_{X_i,Y_j}`.
+		* If :math:`\mathbf{X}` and :math:`\mathbf{Y}` are of same dimension
+
+			.. math: \mathbb{V}(\mathbf{X}+\mathbf{Y})=\mathbb{V}(\mathbf{X})+\mathrm{Cov}(\mathbf{X},\mathbf{Y})+\mathrm{Cov}(\mathbf{Y},\mathbf{X})+\mathbb{V}(\mathbf{Y})
+	* **Correlation matrix**: :math:`\mathrm{\rho}(\mathbf{X},\mathbf{Y})=\mathbb{E}[\mathbf{X}\mathbf{Y}^\top]`.
+
+		* The entries of this matrix are :math:`\rho(X_i,Y_j)=\frac{\sigma_{X_i,Y_j}}{\sigma_{X_i}\sigma_{Y_j}}`.
 
 ******************************************************************************************
 Fundamentals of Point Estimation
@@ -155,16 +195,18 @@ Fundamentals of Point Estimation
 
 				.. math:: \text{mse}(\hat{\theta})=\text{bias}(\hat{\theta})^2+\mathbb{V}_\theta(\hat{\theta}-\theta)=\text{bias}(\hat{\theta})^2+\mathbb{V}_\theta(\hat{\theta})=\text{bias}(\hat{\theta})^2+\text{se}(\hat{\theta})^2
 
-Point estimation using conditional expectation
+Bayesian point estimation using conditional expectation
 ==========================================================================================
 .. note::
-	* We assume that knowing :math:`X`, we can infer about an rv :math:`Y` (or, equivalently, an unknown constant :math:`theta`).
+	* We assume that knowing :math:`X`, we can infer about an rv :math:`Y` (or, equivalently, an unknown constant :math:`\theta`).
 
 		* We assume that conditional density :math:`f_{Y|X}(y|x)` is known.
 	
-			* [**Discriminative**] We might have access to the conditional density directly.
-			* [**Generative**] We might have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem. 
-	* From law of iterated expectation, we have :math:`\mathbb{E}[Y]=\mathbb{E}[\mathbb{E}[Y|X]]`
+			* We might have access to the conditional density directly.
+			* We might have access to a prior :math:`f_Y(y)` and the likelihood :math:`f_{X|Y}(x|y)` and we can compute the posterior with Bayes theorem. 
+	* From law of iterated expectation, we have :math:`\mathbb{E}[Y]=\mathbb{E}[\mathbb{E}[Y|X]]`.
+		
+		* This is a Bayesian estimator for :math:`Y`.
 	* Therefore
 
 		* Estimator: :math:`\hat{Y}=\mathbb{E}[Y|X]` can be thought of as an estimator of :math:`X` as their expected values are the same.
@@ -174,7 +216,8 @@ Point estimation using conditional expectation
 		* Bias: Since :math:`\tilde{Y}` is expected to be 0
 
 			.. math:: \text{bias}(\hat{Y})=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0\implies\text{mse}(\hat{Y})=\text{se}(\hat{Y})^2
-		* This error is uncorrelated with the estimator.
+		* **MMSE**: It can be shown that the conditional expectation estimator minimises the MSE. This is also known as a Minimum Mean Square Error Estimator (MMSE).
+		* **Orthogonality Principle**: This error is uncorrelated with the estimator.
 
 			* We note that
 
@@ -185,7 +228,7 @@ Point estimation using conditional expectation
 			* Given :math:`X`, :math:`\hat{Y}` is constant.
 
 				.. math:: \mathbb{E}[\mathbb{E}[\hat{Y}\tilde{Y}|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[\tilde{Y}|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[(\hat{Y}-Y)|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[\hat{Y}|X]]-\mathbb{E}[\hat{Y}\cdot\mathbb{E}[Y|X]]=\mathbb{E}[\hat{Y}^2]-\mathbb{E}[\hat{Y}^2]=0
-		* Therefore, we have :math:`\mathbb{V}(Y)=\mathbb{V}(\hat{Y})+\mathbb{V}(\tilde{Y})=\text{se}(\hat{Y})^2+\text{mse}(\hat{Y})`.
+		* Therefore, we have :math:`\mathbb{V}(Y)=\mathbb{V}(\hat{Y})+\mathbb{V}(\tilde{Y})=\text{se}(\hat{Y})^2+\text{mse}(\hat{Y})`.		
 
 Conditional variance
 ========================================================================
