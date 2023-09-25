@@ -195,7 +195,7 @@ Fundamentals of Point Estimation
 
 				.. math:: \text{mse}(\hat{\theta})=\text{bias}(\hat{\theta})^2+\mathbb{V}_\theta(\hat{\theta}-\theta)=\text{bias}(\hat{\theta})^2+\mathbb{V}_\theta(\hat{\theta})=\text{bias}(\hat{\theta})^2+\text{se}(\hat{\theta})^2
 
-Point estimation using conditional expectation
+Bayesian point estimation using conditional expectation
 ==========================================================================================
 .. note::
 	* We assume that knowing :math:`X`, we can infer about an rv :math:`Y` (or, equivalently, an unknown constant :math:`\theta`).
