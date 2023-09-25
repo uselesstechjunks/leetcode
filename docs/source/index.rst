@@ -17,9 +17,9 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
 
    math
-   math/index
    mltheory
    rank
    dsalgo

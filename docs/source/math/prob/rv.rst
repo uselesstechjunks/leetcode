@@ -38,7 +38,7 @@ Expectation and Variance
 		* If :math:`X>0`, then :math:`\mathbf{E}[X]>0`.
 		* If :math:`a\leq X\leq b`, then :math:`a\leq \mathbf{E}[X]\leq b`.
 		* If :math:`X=c`, then :math:`\mathbf{E}[X]=c`.
-	* We can define **Variance** of :math:`X` as :math:`\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
+	* We can define **Variance** of :math:`X` as :math:`\mathbb{V}(X)=\mathbb{E}[(X-\mathbb{E}[X])^2]`.
 
 Law of The Unconscious Statistician (LOTUS)
 -----------------------------------------------------
@@ -47,13 +47,13 @@ Law of The Unconscious Statistician (LOTUS)
 
 		.. math:: \mathbb{E}[g(X)]=\sum_x g(x)p_X(x)
 
-	* With the help of LOTUS, :math:`\mathrm{Var}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
+	* With the help of LOTUS, :math:`\mathbb{V}(X)=\sum_x (x-\mathbb{E}[X])^2 p_X(x)`.
 
 Moments of a rv
 ---------------------------
 .. note::
 	* The *n-th moment* of :math:`X` is defined as :math:`\mathbb{E}[X^n]`.
-	* Variance in terms of moments: :math:`\mathrm{Var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2`.
+	* Variance in terms of moments: :math:`\mathbb{V}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2`.
 
 Expectations of linear functions of rv
 --------------------------------------------------------
@@ -61,14 +61,14 @@ Expectations of linear functions of rv
 	For linear functions of :math:`X`, :math:`g(X)=aX+b`
 
 	* :math:`\mathbb{E}[aX+b]=a\mathbb{E}[X]+b`.
-	* :math:`\mathrm{Var}(aX+b)=a^2\mathrm{Var}(X)`.
+	* :math:`\mathbb{V}(aX+b)=a^2\mathbb{V}(X)`.
 
 Variance of bounded rv
 --------------------------------------------------------
 .. tip::
 	* For bounded rvs :math:`a\leq X\leq b`, the variance is bounded as
 
-		.. math:: \mathrm{Var}(X)\leq\frac{(b-a)^2}{4}
+		.. math:: \mathbb{V}(X)\leq\frac{(b-a)^2}{4}
 	* Proof?
 
 Expectations of general functions of rv
@@ -173,7 +173,7 @@ Expectation and variance for independent rvs
 ------------------------------------------------------
 .. note::
 	* :math:`\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]`
-	* :math:`\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)`
+	* :math:`\mathbb{V}(X+Y)=\mathbb{V}(X)+\mathbb{V}(Y)`
 	* Extends naturally to more than 2 rvs.
 
 Some discrete random variables
@@ -186,7 +186,7 @@ Any experiment that deals with a binary outcome (e.g. **success** or **failure**
 	* We can define a rv :math:`X=1` which represents success and :math:`X=0` which represents failure.
 	* We only need to know about one of the probability values, :math:`\mathbb{P}(X=1)=p`, as :math:`\mathbb{P}(X=0)=1-p`.
 	* Therefore, a Bernoulli rv is parameterised with just 1 parameter, :math:`p`.
-	* [Derive] For :math:`X\sim\mathrm{Ber}(p)`, :math:`\mathbb{E}[X]=p` and :math:`\mathrm{Var}(X)=p(1-p)`.
+	* [Derive] For :math:`X\sim\mathrm{Ber}(p)`, :math:`\mathbb{E}[X]=p` and :math:`\mathbb{V}(X)=p(1-p)`.
 
 .. tip::
 	* For any set of events :math:`A_1,A_2,\cdot A_n`, we can use **indicator functions** to denote the same.
@@ -228,7 +228,7 @@ In a repeated (:math:`n`-times) Bernoulli trial with parameter :math:`p`, let :m
 
 	* Let's denote each of the trials with a different Bernoulli rv, :math:`X_i\sim\mathrm{Ber}(p)` for :math:`i`-th trial. 
 	* Then :math:`Y=X_1+\cdots+X_n` is the total number of successes, :math:`X_i\perp\!\!\!\perp X_j` for :math:`i\neq j`.
-	* [Derive] For :math:`X\sim\mathrm{Bin}(n,p)`, :math:`\mathbb{E}[X]=np` and :math:`\mathrm{Var}(X)=np(1-p)`.
+	* [Derive] For :math:`X\sim\mathrm{Bin}(n,p)`, :math:`\mathbb{E}[X]=np` and :math:`\mathbb{V}(X)=np(1-p)`.
 	* Hint:
 
 		* For mean, utilise the linearity of expectation (does not require independence).
@@ -303,7 +303,7 @@ The number of repeated Bernoulli trials we need until we get a success can be mo
 		* Let the remaining number of trials until first success is represented by :math:`Y`. Clearly, :math:`X|X>1=Y+1` and :math:`\mathbb{E}[X|X>1]=\mathbb{E}[Y]+1`.
 		* By the memorylessless property, :math:`Y\sim\mathrm{Geom}(p)` as well. Therefore, :math:`\mathbb{E}[Y]=\mathbb{E}[X]`.
 		* We use the fact to compute the conditional expectation, :math:`\mathbb{E}[X|X>1]=1+\mathbb{E}[X]`.
-	* [Derive] For :math:`X\sim\mathrm{Geom}(p)`, :math:`\mathbb{E}[X]=\frac{1}{p}` and :math:`\mathrm{Var}(X)=\frac{1-p}{p^2}`.
+	* [Derive] For :math:`X\sim\mathrm{Geom}(p)`, :math:`\mathbb{E}[X]=\frac{1}{p}` and :math:`\mathbb{V}(X)=\frac{1-p}{p^2}`.
 	* Hint:
 
 		* Use divide-and-conquer by splitting the case where :math:`X=1` and :math:`X>1`.
@@ -333,7 +333,7 @@ If a Binomial rv has :math:`n\to\infty` and :math:`p\to 0`, we can approximate i
 
 .. tip::
 	* It is useful to model a specific, time-dependent outcome given just the average.
-	* [Derive] For :math:`X\sim\mathrm{Poisson}(\lambda)`, :math:`\mathbb{E}[X]=\lambda` and :math:`\mathrm{Var}(X)=\lambda`.
+	* [Derive] For :math:`X\sim\mathrm{Poisson}(\lambda)`, :math:`\mathbb{E}[X]=\lambda` and :math:`\mathbb{V}(X)=\lambda`.
 	* Hint: 
 
 		* For mean, reindex the terms in the sum.
@@ -414,8 +414,8 @@ Centerisation, standardisation, skewness and kurtosis
 	
 		* We also have :math:`\mathbb{E}[\tilde{X}]=\mathbb{E}[X-\mathbb{E}[X]]=0`.
 
-	* Variance is the 2nd moment of centered rv :math:`\mathrm{Var}(X)=\mathbb{E}[\tilde{X}^2]`.
-	* We denote :math:`Z=\frac{X-\mathbb{E}[X]}{\sqrt{\mathrm{Var}(X)}}=\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}` as the **standardised** version of :math:`X`.
+	* Variance is the 2nd moment of centered rv :math:`\mathbb{V}(X)=\mathbb{E}[\tilde{X}^2]`.
+	* We denote :math:`Z=\frac{X-\mathbb{E}[X]}{\sqrt{\mathbb{V}(X)}}=\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}` as the **standardised** version of :math:`X`.
 
 		* We note that :math:`\mathbb{E}[Z]=0` and :math:`\mathbb{E}[Z^2]=\mathbb{E}\left[\left(\frac{\tilde{X}}{\sqrt{\mathbb{E}[\tilde{X}^2]}}\right)^2\right]=\frac{\mathbb{E}[\tilde{X}^2]}{\mathbb{E}[\tilde{X}^2]}=1`.
 	* Skewness is the 3rd moment of **standardised** rv, :math:`\mathrm{skew}(X)=\mathbb{E}[Z^3]`.

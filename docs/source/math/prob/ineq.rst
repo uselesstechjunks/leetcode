@@ -23,7 +23,7 @@ Mean known: Markov
 Mean and variance known: Chebyshev
 ====================================
 .. note::
-	* Let :math:`X` be **any** rv with well defined :math:`\mathbb{E}[X]=\mu` and :math:`\mathrm{Var}(X)=\sigma^2`.
+	* Let :math:`X` be **any** rv with well defined :math:`\mathbb{E}[X]=\mu` and :math:`\mathbb{V}(X)=\sigma^2`.
 	* Chebyshev's inequality states that the tail probability of :math:`t` being away from :math:`\mu` goes down quadratically.
 
 		.. math:: \mathbb{P}(|X-\mu|\geq t)\leq \frac{\sigma^2}{t^2}
@@ -113,13 +113,13 @@ Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)
 .. note::
 	* Let the sum rv be :math:`S_n=\sum_{i=1}^n X_i` for a given :math:`n`. We can think of a sequence of this as :math:`(S_n)_{n=1}^\infty`.
 
-		* We note that :math:`\mathbb{E}[S_n]=n\mu` and :math:`\lim\limits_{n\to\infty}\mathrm{Var}(S_n)\to\infty`.
+		* We note that :math:`\mathbb{E}[S_n]=n\mu` and :math:`\lim\limits_{n\to\infty}\mathbb{V}(S_n)\to\infty`.
 	* Let the sample mean rv be :math:`M_n=\frac{S_n}{n}` for a given :math:`n`. We can think of a sequence of this as :math:`(M_n)_{n=1}^\infty`.
 
-		* We note that :math:`\mathbb{E}[M_n]=\mu` and :math:`\mathrm{Var}(M_n)=\sigma^2/n`.
+		* We note that :math:`\mathbb{E}[M_n]=\mu` and :math:`\mathbb{V}(M_n)=\sigma^2/n`.
 	* Let the standardised rv be :math:`Z_n=\frac{S_n-n\mu}{\sigma\sqrt{n}}` for a given :math:`n`. We can think of a sequence of this as :math:`(Z_n)_{n=1}^\infty`.
 
-		* We note that :math:`\mathbb{E}[Z_n]=0` and :math:`\mathrm{Var}(M_n)=1`.
+		* We note that :math:`\mathbb{E}[Z_n]=0` and :math:`\mathbb{V}(M_n)=1`.
 
 Weak Law of Large Number
 ====================================
@@ -134,7 +134,7 @@ Weak Law of Large Number
 
 Special case: bounded rvs
 ------------------------------------
-If we know that the rvs are bounded, i.e. :math:`\forall i, a\leq X_i\leq b`, then we know that :math:`\mathrm{Var}(X_i)\leq \frac{(b-a)^2}{4}` (see note in random variable chapter TODO add link).
+If we know that the rvs are bounded, i.e. :math:`\forall i, a\leq X_i\leq b`, then we know that :math:`\mathbb{V}(X_i)\leq \frac{(b-a)^2}{4}` (see note in random variable chapter TODO add link).
 
 .. note::
 	* From Chebyshev's inequality, we can obtain a bound which goes down inversely with :math:`n`.
