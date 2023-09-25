@@ -198,13 +198,15 @@ Fundamentals of Point Estimation
 Point estimation using conditional expectation
 ==========================================================================================
 .. note::
-	* We assume that knowing :math:`X`, we can infer about an rv :math:`Y` (or, equivalently, an unknown constant :math:`theta`).
+	* We assume that knowing :math:`X`, we can infer about an rv :math:`Y` (or, equivalently, an unknown constant :math:`\theta`).
 
 		* We assume that conditional density :math:`f_{Y|X}(y|x)` is known.
 	
-			* [**Discriminative**] We might have access to the conditional density directly.
-			* [**Generative**] We might have access to the joint density :math:`f_{X,Y}(x,y)` and we can compute the conditional with Bayes theorem. 
-	* From law of iterated expectation, we have :math:`\mathbb{E}[Y]=\mathbb{E}[\mathbb{E}[Y|X]]`
+			* We might have access to the conditional density directly.
+			* We might have access to a prior :math:`f_Y(y)` and the likelihood :math:`f_{X|Y}(x|y)` and we can compute the posterior with Bayes theorem. 
+	* From law of iterated expectation, we have :math:`\mathbb{E}[Y]=\mathbb{E}[\mathbb{E}[Y|X]]`.
+		
+		* This is a Bayesian estimator for :math:`Y`.
 	* Therefore
 
 		* Estimator: :math:`\hat{Y}=\mathbb{E}[Y|X]` can be thought of as an estimator of :math:`X` as their expected values are the same.
@@ -214,7 +216,8 @@ Point estimation using conditional expectation
 		* Bias: Since :math:`\tilde{Y}` is expected to be 0
 
 			.. math:: \text{bias}(\hat{Y})=\mathbb{E}[\tilde{Y}]=\mathbb{E}[\mathbb{E}[Y|X]]-\mathbb{E}[Y]=0\implies\text{mse}(\hat{Y})=\text{se}(\hat{Y})^2
-		* This error is uncorrelated with the estimator.
+		* **MMSE**: It can be shown that the conditional expectation estimator minimises the MSE. This is also known as a Minimum Mean Square Error Estimator (MMSE).
+		* **Orthogonality Principle**: This error is uncorrelated with the estimator.
 
 			* We note that
 
@@ -225,7 +228,7 @@ Point estimation using conditional expectation
 			* Given :math:`X`, :math:`\hat{Y}` is constant.
 
 				.. math:: \mathbb{E}[\mathbb{E}[\hat{Y}\tilde{Y}|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[\tilde{Y}|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[(\hat{Y}-Y)|X]]=\mathbb{E}[\hat{Y}\cdot\mathbb{E}[\hat{Y}|X]]-\mathbb{E}[\hat{Y}\cdot\mathbb{E}[Y|X]]=\mathbb{E}[\hat{Y}^2]-\mathbb{E}[\hat{Y}^2]=0
-		* Therefore, we have :math:`\mathbb{V}(Y)=\mathbb{V}(\hat{Y})+\mathbb{V}(\tilde{Y})=\text{se}(\hat{Y})^2+\text{mse}(\hat{Y})`.
+		* Therefore, we have :math:`\mathbb{V}(Y)=\mathbb{V}(\hat{Y})+\mathbb{V}(\tilde{Y})=\text{se}(\hat{Y})^2+\text{mse}(\hat{Y})`.		
 
 Conditional variance
 ========================================================================
