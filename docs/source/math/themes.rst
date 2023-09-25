@@ -29,5 +29,3 @@ The techniques that we use to explore a core concept are often useful for some o
 Engineering
 ========================================
 This refers to the application to *real-world* problems. For example, we can compute PageRank using matrix exponentiation.
-
-.. doc:: /math/index
