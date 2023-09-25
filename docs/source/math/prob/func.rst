@@ -133,12 +133,12 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 	* We can solve the hat problem using covariance.
 
 ******************************************************************************************
-Fundamentals of Estimation
+Fundamentals of Point Estimation
 ******************************************************************************************
 .. note::
-	* **Estimate**: If we do not know the exact value of a rv :math:`Y`, we can use a **guess** (estimate). 
+	* **Estimate**: If we do not know the exact value of a rv :math:`Y`, or an unknown, constant, parameter :math:`\theta`, we can use a **guess** (estimate). 
 	
-		* The **guess** is another rv which can be observed or calculated based on other rvs.
+		* The **guess** is a rv which can be observed or calculated based on other rvs.
 	* **Estimator**: The rv which takes estimates as values is known as the **estimator**.
 
 		* Estimator for :math:`Y` is usually written as :math:`\hat{Y}`.
@@ -151,14 +151,14 @@ Fundamentals of Estimation
 
 			* We note that :math:`\mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\text{mse}(\hat{Y})-\text{bias}(\hat{Y})^2`.
 			* This can be rewritten as :math:`\text{mse}(\hat{Y})=\text{bias}(\hat{Y})^2+\mathbb{V}_Y(\tilde{Y})`.
-			* If the quantity we're estimating is an unknown constant :math:`c` instead of being a rv (as in classical statistical estimation of an unknown parameter),
+			* If the quantity we're estimating is an unknown constant :math:`\theta` instead of being a rv (as in classical statistical estimation of an unknown parameter),
 
-				.. math:: \text{mse}(\hat{Y})=\text{bias}(\hat{Y})^2+\mathbb{V}_Y(\hat{Y}-c)=\text{bias}(\hat{Y})^2+\mathbb{V}_Y(\hat{Y})=\text{bias}(\hat{Y})^2+\text{se}(\hat{Y})^2
+				.. math:: \text{mse}(\hat{\theta})=\text{bias}(\hat{\theta})^2+\mathbb{V}_\theta(\hat{\theta}-\theta)=\text{bias}(\hat{\theta})^2+\mathbb{V}_\theta(\hat{\theta})=\text{bias}(\hat{\theta})^2+\text{se}(\hat{\theta})^2
 
-Estimation using conditional expectation
+Point estimation using conditional expectation
 ==========================================================================================
 .. note::
-	* We assume that knowing :math:`X`, we can estimate :math:`Y`.
+	* We assume that knowing :math:`X`, we can infer about an rv :math:`Y` (or, equivalently, an unknown constant :math:`theta`).
 
 		* We assume that conditional density :math:`f_{Y|X}(y|x)` is known.
 	
