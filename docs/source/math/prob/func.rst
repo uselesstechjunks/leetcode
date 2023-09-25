@@ -105,7 +105,7 @@ Covariance and correlation
 
 Scalar valued rvs
 ==========================================================================================
-Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]`.
+**Covariance** is defined between two scalar valued rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]`.
 
 .. note::
 	* :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]`.
@@ -120,7 +120,7 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 		.. math:: \mathbb{V}\left(\sum_{i=1}^n X_i\right)=\sum_{i=1}^n \mathbb{V}(X_i)+\sum_{i=1}^n\sum_{j=1, i\neq j}^n\mathrm{Cov}(X_i,Y_j)
 
 .. note::
-	* Correlation is defined as the normalised version of covariance
+	* **Correlation coefficient** is defined as the normalised version of covariance
 
 		.. math:: \rho(X,Y)=\frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathbb{V}(X)\mathbb{V}(Y)}}.
 	* We have :math:`|\rho(X,Y)|\leq 1`.
@@ -137,11 +137,23 @@ Covariance is defined between two rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-
 
 Vector valued rvs
 ==========================================================================================
-Let us consider vector values rvs :math:`\mathbf{X}` and :math:`\mathbf{Y}` which takes values :math:`\mathbf{x}=\{x_1,\cdots,x_n\}^\top\in\mathbb{R}^n` and :math:`\mathbf{y}=\{y_1,\cdots,y_m\}^\top\in\mathbb{R}^m`.
+Let us consider vector values rvs :math:`\mathbf{X}\in\mathbb{R}^n` and :math:`\mathbf{Y}\in\mathbb{R}^m` which takes values :math:`\mathbf{X}=\mathbf{x}\implies\{X_1=x_1,\cdots,X_n=x_n\}^\top` and :math:`\mathbf{Y}=\mathbf{y}\implies\{Y_1=y_1,\cdots,Y_m=y_m\}^\top`.
+
+.. attention::
+	* Expectation: :math:`\mathbb{E}[\mathbf{X}]=\{\mathbb{E}[X_1],\cdots\mathbb{E}[X_2]\}^\top\in\mathbb{R}^n` (similarly for :math:`\mathbf{Y}`).
 
 .. note::
-	* Expectation: :math:`\mathbb{E}[\mathbf{X}]\in\mathbb{R}^n` (similarly for :math:`\mathbf{Y}`).
-	* Auto-covariance matrix: 
+	* **Auto-covariance matrix**: :math:`\mathbf{K}_{\mathbf{X,X}}=\mathbb{E}\left[\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)^\top\right]`.
+
+		* :math:`\mathbf{K}_{\mathbf{X,X}}\in\mathbb{R}^{n\times n}`.
+		* This is also known as just variance matrix or variance-covariance matrix.
+		* We note that when :math:`n=1` this reduces to the single rv case.
+	* **Auto-correlation matrix**: :math:`\mathbf{R}_{\mathbf{X,X}}=\mathbb{E}[\mathbf{X}\mathbf{X}^\top]`.
+
+		* It is connected with auto-covariance as :math:`\mathbf{K}_{\mathbf{X,X}}=\mathbf{R}_{\mathbf{X,X}}-\mathbb{E}[\mathbf{X}]\mathbb{E}[\mathbf{X}]^\top`.
+	* **Cross-covariance matrix**: :math:`\mathbf{K}_{\mathbf{X,Y}}=\mathbb{E}\left[\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)\left(\mathbf{Y}-\mathbb{E}[\mathbf{Y}]\right)^\top\right]`.
+
+		* :math:`\mathbf{K}_{\mathbf{X,Y}}\in\mathbb{R}^{n\times m}`.
 
 ******************************************************************************************
 Fundamentals of Point Estimation
