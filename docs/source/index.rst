@@ -19,7 +19,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   math/index
+   math
    mltheory
    rank
    dsalgo
