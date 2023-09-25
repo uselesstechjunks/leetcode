@@ -30,12 +30,4 @@ Engineering
 ========================================
 This refers to the application to *real-world* problems. For example, we can compute PageRank using matrix exponentiation.
 
-.. toctree::
-
-   math/prereq
-   math/analysis
-   math/linalg
-   math/calc3
-   math/prob/index
-   math/stat/index
-   math/conv
+.. doc:: /math/index
