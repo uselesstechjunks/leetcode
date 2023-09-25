@@ -137,7 +137,7 @@ Scalar valued rvs
 
 Vector valued rvs
 ==========================================================================================
-Let us consider vector values rvs :math:`\mathbf{X}\in\mathbb{R}^n` and :math:`\mathbf{Y}\in\mathbb{R}^m` which takes values :math:`\mathbf{X}=\mathbf{x}\implies\{X_1=x_1,\cdots,X_n=x_n\}^\top` and :math:`\mathbf{Y}=\mathbf{y}\implies\{Y_1=y_1,\cdots,Y_m=y_m\}^\top`.
+Let us consider vector values rvs :math:`\mathbf{X}\in\mathbb{R}^n` and :math:`\mathbf{Y}\in\mathbb{R}^m` which takes values :math:`\mathbf{X}=\mathbf{x}\implies(X_1=x_1,\cdots,X_n=x_n)^\top` and :math:`\mathbf{Y}=\mathbf{y}\implies(Y_1=y_1,\cdots,Y_m=y_m)^\top`.
 
 .. attention::
 	* Expectation: :math:`\mathbb{E}[\mathbf{X}]=\{\mathbb{E}[X_1],\cdots\mathbb{E}[X_2]\}^\top\in\mathbb{R}^n` (similarly for :math:`\mathbf{Y}`).
