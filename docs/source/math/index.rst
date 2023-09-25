@@ -1,6 +1,3 @@
-Deep-Dives
-=============================
-
 .. toctree::
 
    prereq
@@ -10,3 +7,4 @@ Deep-Dives
    prob/index
    stat/index
    conv
+   themes
