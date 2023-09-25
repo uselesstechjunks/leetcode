@@ -108,7 +108,7 @@ Scalar valued rvs
 **Covariance** is defined between two scalar valued rvs as :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]`.
 
 .. note::
-	* :math:`\mathrm{Cov}(X,Y)=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]`.
+	* :math:`\sigma_{X,Y}=\mathrm{Cov}(X,Y)=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]`.
 
 		* Proof follows from expanding the expression in definition.
 	* :math:`\mathrm{Cov}(X,X)=\mathbb{V}(X)`.
@@ -143,15 +143,20 @@ Let us consider vector values rvs :math:`\mathbf{X}\in\mathbb{R}^n` and :math:`\
 	* Expectation: :math:`\mathbb{E}[\mathbf{X}]=\{\mathbb{E}[X_1],\cdots\mathbb{E}[X_2]\}^\top\in\mathbb{R}^n` (similarly for :math:`\mathbf{Y}`).
 
 .. note::
-	* **Auto-covariance matrix**: :math:`\mathbf{K}_{\mathbf{X,X}}=\mathbb{E}\left[\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)^\top\right]`.
+	* **Auto-covariance matrix**: :math:`\mathbb{V}(\mathbf{X})=\mathrm{Cov}(\mathbf{X},\mathbf{X})=\mathbf{K}_{\mathbf{X,X}}=\mathbb{E}\left[\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)^\top\right]`.
 
 		* :math:`\mathbf{K}_{\mathbf{X,X}}\in\mathbb{R}^{n\times n}`.
+		* The entries of this matrix are :math:`\mathrm{Cov}(X_i,X_j)=\sigma_{X_i,X_j}`
 		* This is also known as just variance matrix or variance-covariance matrix.
 		* We note that when :math:`n=1` this reduces to the single rv case.
 	* **Auto-correlation matrix**: :math:`\mathbf{R}_{\mathbf{X,X}}=\mathbb{E}[\mathbf{X}\mathbf{X}^\top]`.
 
 		* It is connected with auto-covariance as :math:`\mathbf{K}_{\mathbf{X,X}}=\mathbf{R}_{\mathbf{X,X}}-\mathbb{E}[\mathbf{X}]\mathbb{E}[\mathbf{X}]^\top`.
-	* **Cross-covariance matrix**: :math:`\mathbf{K}_{\mathbf{X,Y}}=\mathbb{E}\left[\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)\left(\mathbf{Y}-\mathbb{E}[\mathbf{Y}]\right)^\top\right]`.
+		* Let :math:`\bar{\mathbf{X}}=\mathbf{X}-\mathbb{E}[\mathbf{X}]` be the centered rv.
+
+			* We note that in this case: :math:`\mathbf{K}_{\mathbf{X,X}}=\mathbf{R}_{\mathbf{X,X}}`.
+		* **Precision matrix**: If it exists, :math:`\mathbf{K}_{\mathbf{X,X}}^{-1}` is known as precision matrix.
+	* **Cross-covariance matrix**: :math:`\mathrm{Cov}(\mathbf{X},\mathbf{Y})=\mathbf{K}_{\mathbf{X,Y}}=\mathbb{E}\left[\left(\mathbf{X}-\mathbb{E}[\mathbf{X}]\right)\left(\mathbf{Y}-\mathbb{E}[\mathbf{Y}]\right)^\top\right]`.
 
 		* :math:`\mathbf{K}_{\mathbf{X,Y}}\in\mathbb{R}^{n\times m}`.
 
