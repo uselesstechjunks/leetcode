@@ -149,7 +149,7 @@ Let us consider vector values rvs :math:`\mathbf{X}\in\mathbb{R}^n` and :math:`\
 		* :math:`\mathbf{K}_{\mathbf{X,X}}\in\mathbb{R}^{n\times n}`.
 		* The entries of this matrix are :math:`\mathrm{Cov}(X_i,X_j)=\sigma_{X_i,X_j}`.		
 		* We note that when :math:`n=1` this reduces to the single rv case.
-		* :math:`\mathbf{K}_{\mathbf{X,Y}} is positive-semidefinite and symmetric.
+		* :math:`\mathbf{K}_{\mathbf{X,Y}}` is positive-semidefinite and symmetric.
 		* **Linearity**: For a constant matrix :math:`\mathbf{A}` and a constant vector :math:`\mathbf{b}` of appropriate dimension
 
 			.. math: \mathbb{V}(\mathbf{A}\mathbf{X}+\mathbf{b})=\mathbf{A}\mathbb{V}(\mathbf{X})\mathbf{A}^\top
