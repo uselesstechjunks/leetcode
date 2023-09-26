@@ -176,6 +176,17 @@ Expectation and variance for independent rvs
 	* :math:`\mathbb{V}(X+Y)=\mathbb{V}(X)+\mathbb{V}(Y)`
 	* Extends naturally to more than 2 rvs.
 
+Mean and variance of sample mean
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. attention::
+	* Let :math:`X_1,\cdots,X_n` be a sample of size :math:`n`.
+	* We assume that these rvs have the same mean :math:`\mu` and variance :math:`\sigma^2`.
+	* The sample mean is the rv :math:`M_n=\frac{1}{n}\sum_{i=1}^n X_i`.
+	* Mean of :math:`M_n`:
+
+		.. math:: \mathbb{E}[M_n]=\mathbb{E}\left[\frac{1}{n}\sum_{i=1}^n X_i\right]=\frac{1}{n}\sum_{i=1}^n\mathbb{E}[X_i]=\frac{1}{n}\sum_{i=1}^n\mu=\mu
+	* Variance of :math:`M_n`:
+
 Some discrete random variables
 ======================================================
 Bernoulli
