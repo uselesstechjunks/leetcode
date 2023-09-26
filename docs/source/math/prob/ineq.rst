@@ -126,7 +126,7 @@ Weak Law of Large Number
 .. note::
 	* This talks about the convergence properties of :math:`M_n`.
 	* Recall that :math:`\mathbb{E}[M_n]=\mu` and :math:`\mathbb{V}(M_n)=\frac{\sigma^2}{n}`.
-	* Applying Chebyshev's inequality, we obtain :math:`\mathbb{P}(|M_n-\mu|\geq \epsilon)\leq \frac{\sigma^2}{n\cdot \epsilon^2}`.
+	* Applying Chebyshev's inequality, we obtain :math:`\mathbb{P}(|M_n-\mu|\geq \epsilon)\leq \frac{\sigma^2}{n\epsilon^2}`.
 	* Therefore :math:`\lim\limits_{n\to\infty}\mathbb{P}(|M_n-\mu|\geq \epsilon)=0`.
 	* WLLN: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, independent with common, well defined mean and variance, :math:`M_n\xrightarrow[]{P}\mu`.
 
