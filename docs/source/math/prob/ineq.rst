@@ -108,7 +108,7 @@ Almost surely convergence
 *********************************************
 Limit Theorems
 *********************************************
-Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)_{n=1}^\infty`. Let the rvs be iid and has well defined mean :math:`\mu` and variance :math:`\sigma^2`.
+Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)_{n=1}^\infty`. Let the rvs be independent and have common, well defined mean :math:`\mu` and variance :math:`\sigma^2`.
 
 .. note::
 	* Let the sum rv be :math:`S_n=\sum_{i=1}^n X_i` for a given :math:`n`. We can think of a sequence of this as :math:`(S_n)_{n=1}^\infty`.
@@ -125,12 +125,16 @@ Weak Law of Large Number
 ====================================
 .. note::
 	* This talks about the convergence properties of :math:`M_n`.
+	* Recall that :math:`\mathbb{E}[M_n]=\mu` and :math:`\mathbb{V}(M_n)=\frac{\sigma^2}{n}`.
 	* Applying Chebyshev's inequality, we obtain :math:`\mathbb{P}(|M_n-\mu|\geq \epsilon)\leq \sigma^2/n\cdot \epsilon^2`.
 	* Therefore :math:`\lim\limits_{n\to\infty}\mathbb{P}(|M_n-\mu|\geq \epsilon)=0`.
-	* WLLN: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`M_n\xrightarrow[]{P}\mu`.
+	* WLLN: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, independent with common, well defined mean and variance, :math:`M_n\xrightarrow[]{P}\mu`.
+
+.. attention::
+	It doesn't require the rvs to be identically distributed.
 
 .. warning::
-	* It doesn't talk about how quickly the sample mean converges.
+	It doesn't talk about how quickly the sample mean converges.	
 
 Special case: bounded rvs
 ------------------------------------
