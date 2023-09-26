@@ -119,7 +119,7 @@ Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
 	* **Sampling Distribution**: The distribution of :math:`\hat{\Theta_n}` over different samples.
-	* **Estimation Error**: :math:`\tilde{\hat{\Theta_n}}=\hat{\Theta_n}-\theta`.
+	* **Estimation Error**: :math:`\tilde{\Theta_n}=\hat{\Theta_n}-\theta`.
 	* **Bias**: :math:`\text{b}_\theta(\hat{\Theta_n})=\mathbb{E}_{\theta}[\tilde{\Theta_n}]=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. 
 	* **Standard Error**: :math:`\text{se}_\theta(\hat{\Theta_n})=\sqrt{\mathbb{V}_{\theta}(\hat{\Theta_n})}`.
 	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\sqrt{\hat{\mathbb{V}}_{\theta}(\hat{\Theta_n})}`.
