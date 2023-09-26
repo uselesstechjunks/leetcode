@@ -22,7 +22,7 @@ Machine Learning as a Statistical Inference
 ******************************************************************************************
 .. note::
 	* We have iid samples from an unknown joint CDF, e.g. :math:`(X_i,Y_i)_{i=1}^n\sim F_{X,Y}`.
-	* Then inference might mean infering a **regression function** :math:`r(X)` that fits the conditional expectation corresponding to :math:`F_{Y|X}`
+	* **Model inference**: Model inference means estmating the conditional expectation corresponding to :math:`F_{Y|X}` with a **regression function** :math:`r(X)` such that
 
 		.. math::
 		    T(F_{Y|X})=\mathbb{E}[Y|X]=r(X)+\epsilon
@@ -30,8 +30,7 @@ Machine Learning as a Statistical Inference
 	  where :math:`\mathbb{E}[\epsilon]=0`. 
 
 		* This inference is known as **learning** in Machine Learning and **curve estimation** in statistics.
-		* It can be proven that it is always possible to write a conditional expectation in the above form such that :math:`\mathbb{E}[\epsilon]=0`.
-	* In the above case, an inference might also mean an inferring an unseen :math:`Y|X=x` by :math:`\hat{y}=r(x)` for a given :math:`X=x`. 
+	* **Variable inference**: In the above case, a variable inference means estimating an unseen :math:`Y|X=x` by :math:`\hat{Y}=\hat{y}=r(x)` for a given :math:`X=x`. 
 
 		* This is known as **inference** in Machine Learning and **prediction** in statistics.
 
@@ -106,9 +105,9 @@ Types of Inference
 Point Estimation
 ==========================================================================================
 .. note::
-	* A single **best** estimate (point) for the fixed, unknown qualtity of interest within the model. 
-	* This estimate for a fixed, unknown quantity of interest, :math:`\theta`, is expressed as a function of the data :math:`\hat{\theta_n}=g(X_1,\cdots,X_n)`.
-	* The estimate :math:`\hat{\theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value).
+	* A single **best** estimate (point) for the fixed, unknown qualtity of interest :math:`\theta` within the model.
+	* This estimate of :math:`\theta` is expressed as a function of the data :math:`\hat{\theta_n}=g(x_1,\cdots,x_n)`.
+	* The estimator :math:`\hat{\Theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value :math:`\hat{\theta_n}`).
 	* Examples: 
 
 		#. a single distribution/density function (parameterised/non-parameterised)
@@ -119,23 +118,23 @@ Point Estimation
 Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
-	* **Sampling Distribution**: The distribution of :math:`\hat{\theta_n}` over different samples.
-	* **Bias**: :math:`\text{bias}(\hat{\theta_n})=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. 
-
-			* If :math:`\text{bias}(\hat{\theta_n})=0`, then :math:`\hat{\theta_n}` is called an **unbiased estimator** of :math:`\theta`.
-	* **Standard Error**: :math:`\text{se}(\hat{\theta_n})=\sqrt{\text{Var}_{\theta}(\hat{\theta_n})}`.
-
-If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\hat{\text{se}}=\sqrt{\hat{\text{Var}}_{\theta}(\hat{\theta_n})}`
+	* **Sampling Distribution**: The distribution of :math:`\hat{\Theta_n}` over different samples.
+	* **Estimation Error**: :math:`\tilde{\hat{\Theta_n}}=\hat{\Theta_n}-\theta`.
+	* **Bias**: :math:`\text{b}_\theta(\hat{\Theta_n})=\mathbb{E}_{\theta}[\tilde{\Theta_n}]=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. 
+	* **Standard Error**: :math:`\text{se}_\theta(\hat{\Theta_n})=\sqrt{\mathbb{V}_{\theta}(\hat{\Theta_n})}`.
+	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\sqrt{\hat{\mathbb{V}}_{\theta}(\hat{\Theta_n})}`.
 
 .. note::
-	* **Consistent Estimator**: If :math:`\hat{\theta_n}\xrightarrow[]{P}\theta`.
-	* **Mean-Squared Error**: :math:`\mathbb{E}_{\theta}[(\hat{\theta_n}-\theta)^2]=\text{bias}^2(\hat{\theta_n})+\text{Var}_{\theta}(\hat{\theta_n})`.
+	* **Unbiased Estimator**: If :math:`\text{b}_\theta(\hat{\Theta_n})=0`.
+	* **Asymptotically Unbiased Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{L_1}\theta`.
+	* **Consistent Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{P}\theta`.
+	* **Mean-Squared Error**: :math:`\text{mse}_\theta(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta_n}^2]=\mathbb{E}_{\theta}[(\hat{\Theta_n}-\theta)^2]=\text{b}_\theta^2(\hat{\Theta_n})+\mathbb{V}_{\theta}(\hat{\Theta_n})`.
 
 .. attention::
-	Theorem: If :math:`\text{bias}\to 0` and :math:`\text{se}\to 0` as :math:`n\to \infty`, then :math:`\hat{\theta_n}` is consistent.
+	Theorem: If :math:`\lim\limits_{n\to\infty}\text{b}_\theta(\hat{\Theta_n})=0` and :math:`\lim\limits_{n\to\infty}\text{se}_\theta(\hat{\Theta_n})=0` then :math:`\hat{\Theta_n}` is consistent.
 
 .. note::
-    * **Asymptotically Normal Estimator**: :math:`\hat{\theta_n}\approx\mathcal{N}(\theta,\hat{\text{se}}^2)`.
+    * **Asymptotically Normal Estimator**: :math:`\hat{\Theta_n}\xrightarrow[]{D}\mathcal{N}(\theta,\hat{\text{se}_\theta}^2(\hat{\Theta_n}))`.
     * Empirical distribution function is a consistent estimator for any distribution.
 
 Confidence Set Estimation
@@ -152,7 +151,7 @@ Confidence Set Estimation
 Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
-	* **Pointwise Asymptotic CI**: :math:`\forall\theta\in\Theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
+	* **Pointwise Asymptotic CI**: :math:`\forall\theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
 	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
 
 		* Uniform Asymptotic CI is stricter.
