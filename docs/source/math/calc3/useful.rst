@@ -1,5 +1,5 @@
 ##########################################################
-Some Basic Vector/Matrix Calculus Identities
+Useful Results
 ##########################################################
 
 .. csv-table:: Table for derivatives
@@ -15,3 +15,6 @@ Some Basic Vector/Matrix Calculus Identities
 	:math:`x^2\to 2x`, :math:`\mathbf{x}^\top\mathbf{x}\to 2\mathbf{x}`
 	:math:`ax^2\to 2ax`, :math:`\mathbf{x}^\top\mathbf{A}\mathbf{x}\to (\mathbf{A}+\mathbf{A}^\top)\mathbf{x}`
 	:math:`abx^2\to 2abx`, :math:`\mathbf{b}^\top\mathbf{X}^\top\mathbf{X}\mathbf{a}\to \mathbf{X}(\mathbf{a}\mathbf{b}^\top+\mathbf{b}\mathbf{a}^\top)`
+
+.. seealso::
+	Plethora of useful results: `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
