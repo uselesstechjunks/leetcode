@@ -180,12 +180,25 @@ Mean and variance of sample mean
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. attention::
 	* Let :math:`X_1,\cdots,X_n` be a sample of size :math:`n`.
-	* We assume that these rvs have the same mean :math:`\mu` and variance :math:`\sigma^2`.
+	* We assume that these rvs 
+
+		* are **independent**.
+		* have **common mean** :math:`\mu` and **common variance** :math:`\sigma^2`.		
 	* The sample mean is the rv :math:`M_n=\frac{1}{n}\sum_{i=1}^n X_i`.
 	* Mean of :math:`M_n`:
 
 		.. math:: \mathbb{E}[M_n]=\mathbb{E}\left[\frac{1}{n}\sum_{i=1}^n X_i\right]=\frac{1}{n}\sum_{i=1}^n\mathbb{E}[X_i]=\frac{1}{n}\sum_{i=1}^n\mu=\mu
+
+		* Note: We've only used linearity of expectation.
 	* Variance of :math:`M_n`:
+
+		.. math:: \mathbb{V}[M_n]=\mathbb{V}\left[\frac{1}{n}\sum_{i=1}^n X_i\right]=\frac{1}{n^2}\sum_{i=1}^n\mathbb{V}[X_i]=\frac{1}{n^2}\sum_{i=1}^n\sigma^2=\frac{\sigma^2}{n}
+
+		* Note: We've used the independence assumption here.
+
+.. note::
+	* Note: We **don't required them to be identically distributed**.
+	* This is useful in establishing WLLN along with Chebyshev's inequality.
 
 Some discrete random variables
 ======================================================
