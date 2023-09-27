@@ -60,7 +60,7 @@ Estimtor for variance
 .. note::
 	Here :math:`T(F)=\int (x-\mathbb{E}[X]^2)\mathop{dF}`. Since :math:`\hat{F}_n` is discrete
 
-		.. math::  \hat{T}(F)=T(\hat{F}_n)=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^2
+		.. math::  \hat{T}(F)=T(\hat{F}_n)=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^2=S^2_n
 
 	* TODO: bias of sample variance
 	* For sample mean estimator, :math:`\hat{\text{se}}^2_n(\hat{T}(F))=\frac{1}{n^2}\sum_{i=1}^n(X_i-\bar{X})^2`
