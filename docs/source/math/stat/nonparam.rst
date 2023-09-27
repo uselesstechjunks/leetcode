@@ -70,6 +70,12 @@ Estimtor for variance
 
 Estimator for other functionals
 =========================================================================================
+The estimator can be obtained similarly.
+
 .. tip::
-	* The estimator can be obtained similarly.
-	* However, the :math:`\text{se}` often has to be estimated as well in order to obtain a confidence interval.
+	* :math:`\text{se}_F` often has to be estimated in order to obtain a confidence interval.
+	* As the estimator is also a statistic, the variance can be obtained using the following methodology.
+
+****************************************************************************************
+Variance of a Statistic
+****************************************************************************************
