@@ -45,7 +45,6 @@ Estimator for mean
 		.. math:: \hat{T}_n(F)=T(\hat{F}_n)=\frac{1}{n}\sum_{i=1}^nX_i=\bar{X}
 
 	* :math:`\text{se}_F^2(\hat{T}_n(F))=\mathbb{V}(\hat{T}(F))=\frac{\sigma^2}{n}`.
-	* :math:`\text{b}(\hat{T}_n(F))=0`.
 	* CLT says that this estimator is asymptotically normal.
 
 .. tip::
