@@ -1,5 +1,5 @@
 ########################################################################################
-Non-Parametric Methods for Estimating Statistical Functionals
+Non-Parametric Methods
 ########################################################################################
 
 ****************************************************************************************
@@ -33,7 +33,7 @@ Confidence interval for :math:`\hat{F}_n`
 		* TODO: derive.
 
 ****************************************************************************************
-Plug-in Estimator
+Plug-in Estimator for Estimating Statistical Functionals
 ****************************************************************************************
 The plug-in estimator for any :math:`T(F)` can be obtained by replacing :math:`F` with :math:`\hat{F}_n`.
 
