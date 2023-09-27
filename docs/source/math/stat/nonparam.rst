@@ -35,7 +35,7 @@ Confidence interval for :math:`\hat{F}_n`
 ****************************************************************************************
 Plug-in Estimator for Estimating Statistical Functionals
 ****************************************************************************************
-The plug-in estimator for any :math:`T(F)` can be obtained by replacing :math:`F` with :math:`\hat{F}_n`.
+The plug-in estimator :math:`\hat{T}_n(F)` for any :math:`T(F)` can be obtained by replacing :math:`F` with :math:`\hat{F}_n`.
 
 Estimator for mean
 ========================================================================================
