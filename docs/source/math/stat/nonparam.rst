@@ -14,11 +14,9 @@ The estimator for any CDF :math:`F` is the discrete estimator :math:`\hat{F}_n` 
 
 .. attention::
 	* Unbiased: :math:`\mathbb{E}[\hat{F}_n(x)]=F(x)`
-
-		* :math:`\text{b}_F(\hat{F}_n)=0`.
 	* :math:`\mathbb{V}(\hat{F}_n)=\frac{F(x)(1-F(x))}{n}`
 
-		* Therefore, :math:`\lim\limits_{n\to\infty}\text{mse}(\hat{F}_n)=0`.
+		* :math:`\lim\limits_{n\to\infty}\text{mse}(\hat{F}_n)=0`.
 	* Empirical distribution function is a consistent estimator for any distribution.
 
 		.. math:: \hat{F}_n(x)\xrightarrow[]{P}F(x)
@@ -27,7 +25,7 @@ The estimator for any CDF :math:`F` is the discrete estimator :math:`\hat{F}_n` 
 Plug-in Estimator
 ****************************************************************************************
 .. note::
-	The plug-in estimator for any statistical functional :math:`T(F)` can be obtained by replacing it with :math:`\hat{F}_n` as :math:`T(\hat{F}_n`)`.
+	The plug-in estimator for any :math:`T(F)` can be obtained by replacing :math:`F` with :math:`\hat{F}_n`.
 
 Confidence interval for plug-in estimator
 ========================================================================================
