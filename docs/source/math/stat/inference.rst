@@ -120,7 +120,10 @@ Hypothesis Testing
 .. attention::
 	#. The statement about the quantity of interest assuming the model is correct is called the **Null hypothesis**.
 	#. The statement where the model is incorrect is called **Alternate hypothesis**.
-	#. [TODO:CHECK IF TRUE] If we create a :math:`1-\alpha` confidence set for the estimated quantity and the quantity as-per-model doesn't fall within this set, then we **reject** the null hypothesis with significance level :math:`1-\alpha`.  If it does then we **fail to reject** the null hypothesis.
+	#. We create a :math:`1-\alpha` confidence set for the estimated quantity.
+
+		* If the quantity as-per-model doesn't fall within this set, then we **reject** the null hypothesis with significance level :math:`\alpha`. 
+		* If it does, then we **fail to reject** the null hypothesis.
 
 .. note::
 	* TODO - write common definitions, significance level, rejection region, critical point, type-I type-II errors
