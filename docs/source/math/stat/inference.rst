@@ -88,7 +88,8 @@ Some useful terminology
 Confidence Set Estimation
 ==========================================================================================
 .. note::
-	An estimated set which traps the fixed, unknown value of our quality of interest with a pre-determined probability. 
+	* An estimated set which traps the fixed, unknown value of our quality of interest with a pre-determined probability.
+	* We often report confidence interval along with a point estimate of a quantity of interest.
 
 .. attention::
 	#. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
