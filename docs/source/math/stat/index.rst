@@ -5,3 +5,4 @@ Statistics
 .. toctree::
 
     inference
+    nonparam
