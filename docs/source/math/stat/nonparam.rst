@@ -44,15 +44,15 @@ Estimator for mean
 
 		.. math:: \hat{T}_n(F)=T(\hat{F}_n)=\frac{1}{n}\sum_{i=1}^nX_i=\bar{X}
 
-	* :math:`\text{se}_F^2(\hat{T}_n(F))=\mathbb{V}(\hat{T}(F))=\frac{\sigma^2}{n}`.
+	* :math:`\text{se}_F^2(\hat{T}_n)=\mathbb{V}_F(\hat{T}_n)=\frac{\sigma^2}{n}`.
 	* CLT says that this estimator is asymptotically normal.
 
 .. tip::
 	* For :math:`\text{se}_F`, it depends on the true distribution :math:`F`.
 	* If the true variance :math:`\sigma^2` is not known, it can be estimated as the next step.
-	* Let the estimate for :math:`\text{se}_F` be :math:`\hat{\text{se}}_n(\hat{T}_n(F))`. Assuming asymptotic normality, we can compute confidence interval as
+	* Let the estimate for :math:`\text{se}_F` be :math:`\hat{\text{se}}_n(\hat{T}_n)`. Assuming asymptotic normality, we can compute confidence interval as
 
-		.. math:: T(\hat{F}_n)\pm z_{\alpha/2}(\hat{\text{se}}_n(\hat{T}_n(F)))	
+		.. math:: T(\hat{F}_n)\pm z_{\alpha/2}(\hat{\text{se}}_n(\hat{T}_n))
 
 Estimtor for variance
 ========================================================================================
@@ -62,7 +62,7 @@ Estimtor for variance
 		.. math::  \hat{T}(F)=T(\hat{F}_n)=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^2=S^2_n
 
 	* TODO: bias of sample variance
-	* For sample mean estimator, :math:`\hat{\text{se}}^2_n(\hat{T}(F))=\frac{1}{n^2}\sum_{i=1}^n(X_i-\bar{X})^2`
+	* For sample mean estimator, :math:`\hat{\text{se}}^2_n(\hat{T}_n)=\frac{1}{n^2}\sum_{i=1}^n(X_i-\bar{X})^2`
 
 .. tip::
 	We can use similar techniques for estimating any moments of :math:`F`.
@@ -78,9 +78,30 @@ The estimator can be obtained similarly.
 ****************************************************************************************
 Variance of a Statistic
 ****************************************************************************************
+We're interested in estimating the variance of a statistic :math:`g(X_1,\cdots,X_n)`.
 
 Bootstrap
 ========================================================================================
+.. note::
+	* The key idea:
+
+		* Let :math:`Y=g(X_1,\cdots,X_n)`
+		* WLLN: :math:`\frac{1}{n}\sum_{i=1}^nY_i\xrightarrow[]{P}\mathbb{E}[Y]`
+		* :math:`\frac{1}{n}\sum_{i=1}^nh(Y_i)\xrightarrow[]{P}\mathbb{E}[h(Y)]`
+		* :math:`\frac{1}{n}\sum_{i=1}^n(Y_i-\bar{Y})^2=\frac{1}{n}\sum_{i=1}^n Y_i^2-\left(\frac{1}{n}\sum_{i=1}^n Y_i\right)^2\xrightarrow[]{P}\mathbb{E}[Y^2]-(\mathbb{E}[Y])^2=\mathbb{V}(Y)`
+
+.. tip::
+	* We can therefore estimate the variance of a statistic by sample variance.
+
+.. note::
+	* For :math:`i=1` to :math:`n`:
+
+		* Obtain a sample :math:`X^*=(X^*_1,\cdots,X^*_2)` by drawing **with replacement** from a given sample :math:`X=(X_1,\cdots,X_n)`.
+	* Compute sample variance as the estimator.
+
+.. tip::
+	* :math:`\mathbb{V}_F(\hat{T}_n)\approx\mathbb{V}_{\hat{F}_n}(\hat{T}_n)\approx v_{\text{boot}}`
+	* We can use :math:`v_{\text{boot}}` to obtain :math:`\text{se}` and compute CI.
 
 Jack knife
 ========================================================================================
