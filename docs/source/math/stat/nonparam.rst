@@ -40,22 +40,36 @@ The plug-in estimator for any :math:`T(F)` can be obtained by replacing :math:`F
 Estimator for mean
 ========================================================================================
 .. note::
-	Here :math:`T(F)=\mathbb{E}[X]=\int x\mathop{dF}`. Since :math:`\hat{F}_n` is discrete
+	Here :math:`T(F)=\int x\mathop{dF}`. Since :math:`\hat{F}_n` is discrete
 
-		.. math:: \hat{T}(F)=T(\hat{F}_n)=\frac{1}{n}\sum_{i=1}^nX_i=\bar{X}
+		.. math:: \hat{T}_n(F)=T(\hat{F}_n)=\frac{1}{n}\sum_{i=1}^nX_i=\bar{X}
 
-	* :math:`\text{se}_F^2(\hat{T}(F))=\mathbb{V}(\widehat{T(F)})=\frac{\sigma^2}{n}`.
-	* :math:`\text{b}_F(\hat{T}(F))=0`.
+	* :math:`\text{se}_F^2(\hat{T}_n(F))=\mathbb{V}(\hat{T}(F))=\frac{\sigma^2}{n}`.
+	* :math:`\text{b}(\hat{T}_n(F))=0`.
+	* CLT says that this estimator is asymptotically normal.
 
 .. tip::
-	If the true variance :math:`\sigma^2` is not known, it can be estimated as the next step.
+	* For :math:`\text{se}_F`, it depends on the true distribution :math:`F`.
+	* If the true variance :math:`\sigma^2` is not known, it can be estimated as the next step.
+	* Let the estimate for :math:`\text{se}_F` be :math:`\hat{\text{se}}_n(\hat{T}_n(F))`. Assuming asymptotic normality, we can compute confidence interval as
+
+		.. math:: T(\hat{F}_n)\pm z_{\alpha/2}(\hat{\text{se}}_n(\hat{T}_n(F)))	
 
 Estimtor for variance
 ========================================================================================
 .. note::
-	Here :math:`T(F)=\mathbb{E}[(X-\mathbb{E}[X]^2)]=\int (x-\mathbb{E}[X]^2)\mathop{dF}`. Since :math:`\hat{F}_n` is discrete
+	Here :math:`T(F)=\int (x-\mathbb{E}[X]^2)\mathop{dF}`. Since :math:`\hat{F}_n` is discrete
 
 		.. math::  \hat{T}(F)=T(\hat{F}_n)=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^2
 
 	* TODO: bias of sample variance
-	* For sample mean estimator, :math:`\hat{\text{se}}_F^2(\hat{T}(F))=\frac{1}{n^2}\sum_{i=1}^n(X_i-\bar{X})^2`
+	* For sample mean estimator, :math:`\hat{\text{se}}^2_n(\hat{T}(F))=\frac{1}{n^2}\sum_{i=1}^n(X_i-\bar{X})^2`
+
+.. tip::
+	We can use similar techniques for estimating any moments of :math:`F`.
+
+Estimator for other functionals
+=========================================================================================
+.. tip::
+	* The estimator can be obtained similarly.
+	* However, the :math:`\text{se}` often has to be estimated as well in order to obtain a confidence interval.
