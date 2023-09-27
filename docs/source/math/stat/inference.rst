@@ -12,10 +12,14 @@ We have a sample of size :math:`n`, :math:`X_1,\cdots X_n` from an unknown CDF :
 	* median: :math:`T(F)=F^{-1}(1/2)`
 
 .. note::
-	* The task for statistical inference is to infer :math:`F`, or some statistical functional, that best explains the data, for some criteria of **best** chosen beforehand.	
-	* The **inferred values** are called **estimates** of the quantities of interest.
+	* The task for statistical inference is to infer :math:`F` or some :math:`T(F)`, that best explains the data, for some criteria of **best** chosen beforehand.	
+	* The **inferred values** based on data are called **estimates** of the quantities of interest.
 	* Estimates are rv as their values may change subject to a different sample.
 	* The **rv** associated with these estimates is called an **estimator**.
+
+.. attention::
+	* **Statistic**: Any function of the data :math:`g(X_1,\cdots,X_n)` is called a statistic.
+	* Any estimator is a statistic.
 
 ******************************************************************************************
 Statistical Model
