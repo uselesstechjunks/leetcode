@@ -49,11 +49,8 @@ Likelihood function
 --------------------------------------------------------------------------------
 .. note::
 	* We assume that we have samples of size :math:`n`, :math:`X=(X_1,\cdots,X_n)` such that :math:`X_i\sim f_{X_i}(x_i; \theta)`.
-	* Underlying probability model: :math:`f_X(x; \theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)`.
-	* Independence assumption:
-
-		.. math:: \mathcal{L}(\theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)=\prod_{i=1}^n f_{X_i}(x_i;\theta)	
-
+	* Likelihood function is defined as :math:`\mathcal{L}(\theta)=f_X(x; \theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)`.
+	
 .. warning::
 	* Given a particular observation :math:`X=x=(x_1,\cdots,x_n)`, the function :math:`f_X(x; \theta)` is no longer a density, but just a function of :math:`\theta`.
 	* For discrete case, :math:`p_X(x; \theta)=\mathbb{P}(X_1=x_1,\cdots,X_n=x_n;\theta)`.
@@ -66,6 +63,10 @@ Likelihood function
 	
 Log likelihood
 --------------------------------------------------------------------------------
+	* Independence assumption:
+
+		.. math:: \mathcal{L}(\theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)=\prod_{i=1}^n f_{X_i}(x_i;\theta)	
+
 	* Identical distribution assumption: 
 
 		.. math:: \mathcal{L}(\theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)=\prod_{i=1}^n f_X(x_i;\theta)
