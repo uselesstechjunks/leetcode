@@ -6,3 +6,4 @@ Statistics
 
     inference
     nonparam
+    pointest
