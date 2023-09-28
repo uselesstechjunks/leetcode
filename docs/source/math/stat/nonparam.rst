@@ -118,4 +118,7 @@ Let the estimator for :math:`T(F)` be :math:`\hat{T}_n=g(X_1,\cdots,X_n)`.
 
 Jack knife
 ========================================================================================
-TODO
+.. note::
+	* Instead of a simulated sample obtained via replacement, we remove one observation and consider it a new sample. 
+	* Rest of the steps are carried out exactly the same way as bootstrap.
+	* This is less computationally expensive than bootstrap.
