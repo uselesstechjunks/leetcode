@@ -1,17 +1,18 @@
 ##########################################################################################
-Classical Statistical Inference
+Statistical Inference
 ##########################################################################################
 We have a sample of size :math:`n`, :math:`X_1,\cdots X_n` from an unknown CDF :math:`F`.
 
 .. note::
 	**Statistical Functionals**: The functions of this form, :math:`T(F)`, such as
 
-	* density :math:`T(F)=f=F'`
-	* expectation :math:`T(F)=\mathbb{E}[X]=\int x \mathop{dF}`
-	* variance :math:`T(F)=\text{Var}(X)=\mathbb{E}[(\mathbb{E}[X]-X)^2]`
-	* median: :math:`T(F)=F^{-1}(1/2)`
+	* density :math:`T(F)=f_F=\frac{\mathop{d}}{\mathop{dx}}=\mathop{dF}`
+	* expectation :math:`T(F)=\mathbb{E}_F[X]=\int x \mathop{dF}`
+	* variance :math:`T(F)=\mathbb{V}_F(X)=\int(x-\mathbb{E}[X])^2\mathop{dF}`
+	* moments: :math:`T(F)=M_F(X)=\int e^{sx}\mathop{dF}`
+	* median: :math:`T(F)=F^{-1}(1/2)`	
 
-.. note::
+.. attention::
 	* The task for statistical inference is to infer :math:`F` or some :math:`T(F)`, that best explains the data, for some criteria of **best** chosen beforehand.	
 	* The **inferred values** based on data are called **estimates** of the quantities of interest.
 	* Estimates are rv as their values may change subject to a different sample.
@@ -34,14 +35,13 @@ The following categories of models are based on the dimensionality of :math:`\ma
 Parametric Model
 ------------------------------------------------------------------------------------------
 .. note::
-	:math:`\mathcal{F}` can be spanned by a finitely many parameters, such as .
+	* :math:`\mathcal{F}` can be spanned by a finitely many parameters.
 
 .. seealso::
-	* A distribution model such as :math:`\mathcal{F}=\{F_X(x;\theta_1,\cdots,\theta_n)\}`
-	* A regression model is defined by the set of affine functions
+	Example: 
 
-		.. math:: \mathcal{F}=\{r(x)=mx+c; m,c\in\mathbb{R}\}
-	* If the regression model is a set of feed-forward networks (FFN) of a given size, then it is also parametric and the parameters of this model are the weights and biases in each layer.
+	* Let the parameter vector be :math:`\boldsymbol{\theta}=(\theta_1,\cdots,\theta_k)^\top`.
+	* The model here is the set of distributions :math:`\mathcal{F}=\{F_\boldsymbol{\theta}\}=\{F_X(x;\theta_1,\cdots,\theta_k)\}`.
 
 Non-parametric Model
 ------------------------------------------------------------------------------------------
@@ -49,18 +49,41 @@ Non-parametric Model
 	:math:`\mathcal{F}` cannot be spanned by a finitely many parameters.
 
 .. seealso::
-	A non-parametric model for distributions can be the set of all possible CDFs.
+	Example: Set of all possible CDFs.
+
+******************************************************************************************
+Different Approaches to Inference
+******************************************************************************************
+Bayesian Inference
+==========================================================================================
+.. note::
+	* The quantity that we want to estimate is assumed to be a rv on its own, :math:`\Theta`. 
+	* Before observing any data, we have a prior notion of what its distribution is which is expressed as the prior probability :math:`f_\Theta(\theta)`.
+	* The likelihood is the PDF of the data conditioned on :math:`\Theta`, :math:`f_{X|\Theta}(x|\theta)`.
+	* The posterior is obtained by applying Bayes rule which gives a **single probability model** for the quantity after observation :math:`f_{\Theta|X}(\theta|x)`.
+	* We perform inference about :math:`\Theta` based on this distribution directly.
+
+Frequentist (Classical) Inference
+==========================================================================================
+.. note::
+	* The quantity that we want to estimate is assumed to be an unknown constant, :math:`\theta`.
+	* No prior knowledge is assumed about this.
+	* We assume that our underlying probability model is dependent on :math:`\theta` in some way.
+	* Therefore, the **probability model here is the collection of PDFs** :math:`f_\theta(X;\theta)` for each possible values of :math:`\theta`.
+	* In order to perform inference, our statements must apply to all possible values of :math:`\theta`.
 
 ******************************************************************************************
 Types of Inference
 ******************************************************************************************
-
 Point Estimation
 ==========================================================================================
 .. note::
-	* A single **best** estimate (point) for the fixed, unknown qualtity of interest :math:`\theta` within the model.
-	* This estimate of :math:`\theta` is expressed as a function of the data :math:`\hat{\theta_n}=g(x_1,\cdots,x_n)`.
-	* The estimator :math:`\hat{\Theta_n}` is a rv (i.e. with a different sample, it evaluates to a different value :math:`\hat{\theta_n}'`).
+	* A single **best** estimate (point) within the model for 
+		
+		* Classical: the unknown constant :math:`\theta`
+		* Bayesian: the rv :math:`\Theta=\theta`
+	* This estimate of :math:`\theta` is expressed as a statistic :math:`\hat{\theta}_n=g(x_1,\cdots,x_n)`
+	* The estimator :math:`\hat{\Theta}_n` is always a rv as it evaluates to a different value :math:`\hat{\theta}'_n` with a different sample.
 	* Examples: 
 
 		#. a single distribution/density function (parameterised/non-parameterised)
@@ -71,17 +94,29 @@ Point Estimation
 Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
-	* **Sampling Distribution**: The distribution of :math:`\hat{\Theta_n}` over different samples.
-	* **Estimation Error**: :math:`\tilde{\Theta_n}=\hat{\Theta_n}-\theta`.
-	* **Bias**: :math:`\text{b}_\theta(\hat{\Theta_n})=\mathbb{E}_{\theta}[\tilde{\Theta_n}]=\mathbb{E}_{\theta}[\hat{\theta_n}]-\theta`. 
-	* **Standard Error**: :math:`\text{se}_\theta(\hat{\Theta_n})=\sqrt{\mathbb{V}_{\theta}(\hat{\Theta_n})}`.
-	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\sqrt{\hat{\mathbb{V}}_{\theta}(\hat{\Theta_n})}`.
+	* **Sampling Distribution**: The distribution of :math:`\hat{\Theta}_n` over different samples.
+	* **Estimation Error**: 
+
+		* Classical: :math:`\tilde{\Theta}_n=\hat{\Theta}_n-\theta`
+		* Bayesian: :math:`\tilde{\Theta}_n=\hat{\Theta}_n-\Theta`
+	* **Bias**: 
+
+		* Classical: :math:`\text{b}(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n]=\mathbb{E}_{\theta}[\hat{\theta}_n]-\theta`
+		* Bayesian: :math:`\text{b}(\hat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n]=\mathbb{E}[\hat{\theta}_n]-\Theta`
+	* **Standard Error**:
+
+		* Classical: :math:`\text{se}(\hat{\Theta}_n)=\sqrt{\mathbb{V}_{\theta}(\hat{\Theta}_n)}`
+		* Bayesian: :math:`\text{se}(\hat{\Theta}_n)=\sqrt{\mathbb{V}(\hat{\Theta}_n)}`
+	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\hat{\text{se}}=\widehat{\text{se}(\hat{\Theta}_n)}=\sqrt{\hat{\mathbb{V}}_{\theta}(\hat{\Theta}_n)}`.
 
 .. note::
-	* **Unbiased Estimator**: If :math:`\text{b}_\theta(\hat{\Theta_n})=0`.
-	* **Asymptotically Unbiased Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{L_1}\theta`.
-	* **Consistent Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{P}\theta`.
-	* **Mean-Squared Error**: :math:`\text{mse}_\theta(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta_n}^2]=\mathbb{E}_{\theta}[(\hat{\Theta_n}-\theta)^2]=\text{b}_\theta^2(\hat{\Theta_n})+\mathbb{V}_{\theta}(\hat{\Theta_n})`.
+	* **Unbiased Estimator**: If :math:`\text{b}(\hat{\Theta}_n)=0`.
+	* **Asymptotically Unbiased Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{L_1}\theta` (or :math:`\Theta`).
+	* **Consistent Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{P}\theta` (or :math:`\Theta`).
+	* **Mean-Squared Error**: 
+
+		Classical: :math:`\text{mse}(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n^2]=\mathbb{E}_{\theta}[(\hat{\Theta}_n-\theta)^2]=\text{b}^2(\hat{\Theta}_n)+\text{se}^2(\hat{\Theta}_n)`
+		Bayesian: 
 
 .. attention::
 	Theorem: If :math:`\lim\limits_{n\to\infty}\text{b}_\theta(\hat{\Theta_n})=0` and :math:`\lim\limits_{n\to\infty}\text{se}_\theta(\hat{\Theta_n})=0` then :math:`\hat{\Theta_n}` is consistent.
@@ -116,6 +151,9 @@ Some useful terminology
 
 Hypothesis Testing
 ==========================================================================================
+TODO: fill in
+Can be treated as a special case of point estimation
+
 .. note::
 	* This helps to evaluate how good a statistical model is given samples. 
 	* Assuming a fixed statistical model, we compute estimates for certain quantities of interest, which can then be compared with the same quantity assuming the model is correct. 
