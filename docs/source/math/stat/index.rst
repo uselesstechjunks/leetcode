@@ -6,3 +6,5 @@ Statistics
 
     inference
     nonparam
+    pointest
+    hyp
