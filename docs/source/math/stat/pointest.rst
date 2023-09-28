@@ -56,7 +56,7 @@ Likelihood function
 	* For discrete case, :math:`\mathcal{L}(\theta)=p_X(x; \theta)=\mathbb{P}(X_1=x_1,\cdots,X_n=x_n;\theta)`.
 
 		* This is the probability that the observation would match current data under a particular :math:`\theta`.
-		* If this probability is higher under :math:`\theta_1` compared to :math:\theta_2`, it is more likely that the underlying parameter is :math:`\theta_2`.
+		* If this probability is higher when :math:`\theta=\theta_i` compared to :math:`\theta=\theta_j`, it is more likely that the underlying parameter has value :math:`\theta_i`.
 
 .. note::
 	We estimate :math:`\widehat{\Theta}_n=\mathop{\underset{\theta}{\mathrm{argmax}}}\mathcal{L}(\theta)`.
