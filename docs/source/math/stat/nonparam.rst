@@ -78,12 +78,14 @@ The estimator can be obtained similarly.
 ****************************************************************************************
 Variance of a Statistic
 ****************************************************************************************
-We're interested in estimating the variance of a statistic :math:`g(X_1,\cdots,X_n)` given the sample :math:`x_1,\cdots,x_n`.
+We're interested in estimating the variance of a statistic :math:`g(X_1,\cdots,X_n)` given the sample :math:`(x_1,\cdots,x_n)`.
 
 Bootstrap
 ========================================================================================
 Key Idea
 ----------------------------------------------------------------------------------------
+Let :math:`X^*=(X^*_1,\cdots,X^*_2)` be a simulation obtained from the original sample by drawing **with replacement**.
+
 .. note::
 	* Let :math:`Y=g(X^*_1,\cdots,X^*_n)`
 	* WLLN: :math:`\frac{1}{B}\sum_{i=1}^BY_i\xrightarrow[]{P}\mathbb{E}[Y]`
@@ -100,11 +102,11 @@ Let the estimator for :math:`T(F)` be :math:`\hat{T}_n=g(X_1,\cdots,X_n)`.
 .. note::
 	* For :math:`i=1` to :math:`B`:
 
-		* Obtain a sample :math:`X^*=(X^*_1,\cdots,X^*_2)` by drawing **with replacement** from a given sample :math:`X=(X_1,\cdots,X_n)`.
+		* Obtain a simulated sample :math:`X^*=(X^*_1,\cdots,X^*_2)`.
 		* Compute estimate :math:`\hat{T}^*_{n,i}=g(X^*_1,\cdots,X^*_n)`
 	* Compute bootstrap variance
 
-		.. v_{\text{boot}}=\frac{1}{B}\sum_{i=1}^B(\hat{T}^*_{n,i}-\frac{1}{B}\sum_{j=1}^B\hat{T}^*_{n,i})^2
+		.. math:: v_{\text{boot}}=\frac{1}{B}\sum_{i=1}^B(\hat{T}^*_{n,i}-\frac{1}{B}\sum_{j=1}^B\hat{T}^*_{n,i})^2
 	* Use estimation strategy 
 	
 		.. math:: \mathbb{V}_F(\hat{T}_n)\approx\mathbb{V}_{\hat{F}_n}(\hat{T}_n)\approx v_{\text{boot}}
