@@ -115,8 +115,8 @@ Some useful terminology
 
 .. note::
 	* **Unbiased Estimator**: If :math:`\text{b}(\widehat{\Theta}_n)=0`.
-	* **Asymptotically Unbiased Estimator**: If :math:`\widehat{\Theta_n}\xrightarrow[]{L_1}\theta` (or :math:`\Theta`).
-	* **Consistent Estimator**: If :math:`\widehat{\Theta_n}\xrightarrow[]{P}\theta` (or :math:`\Theta`).
+	* **Asymptotically Unbiased Estimator**: If :math:`\widehat{\Theta}_n\xrightarrow[]{L_1}\theta` (or :math:`\Theta`).
+	* **Consistent Estimator**: If :math:`\widehat{\Theta}_n\xrightarrow[]{P}\theta` (or :math:`\Theta`).
 	* **Asymptotically Normal Estimator**: 
 
 		* Classical: :math:`\frac{\widehat{\Theta}_n-\theta}{\widehat{\text{se}}(\widehat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
@@ -136,7 +136,7 @@ Confidence Set Estimation
 	* A 95% confidence set means that if we repeatedly estimate it from multiple samples (works even if samples are from completely unrelated experiments), then around 95% of the times the estimated set contains the true quantity.
 
 .. attention::
-	#. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\widehat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\widehat{C_n})\ge 1-\alpha`. 
+	#. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\widehat{C}_n=(a,b)` where :math:`\mathbb{P}(\theta\in\widehat{C}_n)\ge 1-\alpha`. 
 	#. The task is to estimate :math:`\widehat{a}=a(X_1,\cdots,X_n)` and :math:`\widehat{b}=b(X_1,\cdots,X_n)` such that the above holds. 
 	#. For vector quantities, this is expressed with sets instead of intervals.
 	#. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
@@ -144,13 +144,13 @@ Confidence Set Estimation
 Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
-	* **Pointwise Asymptotic CI**: :math:`\forall\theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\widehat{C_n})\ge 1-\alpha`
-	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\widehat{C_n})\ge 1-\alpha`
+	* **Pointwise Asymptotic CI**: :math:`\forall\theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\widehat{C}_n)\ge 1-\alpha`
+	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\widehat{C}_n)\ge 1-\alpha`
 
 		* Uniform Asymptotic CI is stricter.
-	* **Normal-based CI**: If :math:`\widehat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
+	* **Normal-based CI**: If :math:`\widehat{\Theta}_n` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
 
-		.. math:: (\widehat{\theta_n}-z_{\alpha/2}\widehat{\text{se}},\widehat{\theta_n}+z_{\alpha/2}\widehat{\text{se}})
+		.. math:: (\widehat{\Theta}_n-z_{\alpha/2}\widehat{\text{se}},\widehat{\Theta}_n+z_{\alpha/2}\widehat{\text{se}})
 	
 		* The above is a pointwise asymptotic CI.
 
