@@ -78,30 +78,42 @@ The estimator can be obtained similarly.
 ****************************************************************************************
 Variance of a Statistic
 ****************************************************************************************
-We're interested in estimating the variance of a statistic :math:`g(X_1,\cdots,X_n)`.
+We're interested in estimating the variance of a statistic :math:`g(X_1,\cdots,X_n)` given the sample :math:`(x_1,\cdots,x_n)`.
 
 Bootstrap
 ========================================================================================
-.. note::
-	* The key idea:
-
-		* Let :math:`Y=g(X_1,\cdots,X_n)`
-		* WLLN: :math:`\frac{1}{n}\sum_{i=1}^nY_i\xrightarrow[]{P}\mathbb{E}[Y]`
-		* :math:`\frac{1}{n}\sum_{i=1}^nh(Y_i)\xrightarrow[]{P}\mathbb{E}[h(Y)]`
-		* :math:`\frac{1}{n}\sum_{i=1}^n(Y_i-\bar{Y})^2=\frac{1}{n}\sum_{i=1}^n Y_i^2-\left(\frac{1}{n}\sum_{i=1}^n Y_i\right)^2\xrightarrow[]{P}\mathbb{E}[Y^2]-(\mathbb{E}[Y])^2=\mathbb{V}(Y)`
-
-.. tip::
-	* We can therefore estimate the variance of a statistic by sample variance.
+Key Idea
+----------------------------------------------------------------------------------------
+Let :math:`X^*=(X^*_1,\cdots,X^*_2)` be a simulation obtained from the original sample by drawing **with replacement**.
 
 .. note::
-	* For :math:`i=1` to :math:`n`:
-
-		* Obtain a sample :math:`X^*=(X^*_1,\cdots,X^*_2)` by drawing **with replacement** from a given sample :math:`X=(X_1,\cdots,X_n)`.
-	* Compute sample variance as the estimator.
+	* Let :math:`Y=g(X^*_1,\cdots,X^*_n)`
+	* WLLN: :math:`\frac{1}{B}\sum_{i=1}^BY_i\xrightarrow[]{P}\mathbb{E}[Y]`
+	* :math:`\frac{1}{B}\sum_{i=1}^Bh(Y_i)\xrightarrow[]{P}\mathbb{E}[h(Y)]`
+	* :math:`\frac{1}{B}\sum_{i=1}^B(Y_i-\bar{Y})^2=\frac{1}{B}\sum_{i=1}^n Y_i^2-\left(\frac{1}{B}\sum_{i=1}^n Y_i\right)^2\xrightarrow[]{P}\mathbb{E}[Y^2]-(\mathbb{E}[Y])^2=\mathbb{V}(Y)`
 
 .. tip::
-	* :math:`\mathbb{V}_F(\hat{T}_n)\approx\mathbb{V}_{\hat{F}_n}(\hat{T}_n)\approx v_{\text{boot}}`
-	* We can use :math:`v_{\text{boot}}` to obtain :math:`\text{se}` and compute CI.
+	* We can therefore estimate the variance of a statistic by sample variance obtained via simulation :math:`B` times.
+
+Obtaining the variance of an estimator
+----------------------------------------------------------------------------------------
+Let the estimator for :math:`T(F)` be :math:`\hat{T}_n=g(X_1,\cdots,X_n)`.
+
+.. note::
+	* For :math:`i=1` to :math:`B`:
+
+		* Obtain a simulated sample :math:`X^*=(X^*_1,\cdots,X^*_2)`.
+		* Compute estimate :math:`\hat{T}^*_{n,i}=g(X^*_1,\cdots,X^*_n)`
+	* Compute bootstrap variance
+
+		.. math:: v_{\text{boot}}=\frac{1}{B}\sum_{i=1}^B(\hat{T}^*_{n,i}-\frac{1}{B}\sum_{j=1}^B\hat{T}^*_{n,i})^2
+	* Use estimation strategy 
+	
+		.. math:: \mathbb{V}_F(\hat{T}_n)\approx\mathbb{V}_{\hat{F}_n}(\hat{T}_n)\approx v_{\text{boot}}
+
+.. tip::
+	We can use :math:`v_{\text{boot}}` to obtain :math:`\text{se}` and compute CI.
 
 Jack knife
 ========================================================================================
+TODO
