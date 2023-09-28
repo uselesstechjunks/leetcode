@@ -174,7 +174,7 @@ The Delta Method
 ====================================
 .. note::
 	* Let :math:`X_n\xrightarrow[]{D}\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})`
-	* Let :math:`g` be a differentiable function of.
+	* Let :math:`g` be a differentiable function.
 	* Then :math:`g(X_n)\xrightarrow[]{D}\mathcal{N}(g(\mu),\frac{\sigma}{\sqrt{n}}\left(g'(\mu)^2\right))`.
 
 .. tip::
