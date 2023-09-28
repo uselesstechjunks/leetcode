@@ -3,8 +3,10 @@ Non-Parametric Methods
 ########################################################################################
 
 ****************************************************************************************
-Empirical distribution function
+Estimation of CDF
 ****************************************************************************************
+Empirical distribution function as an estimator
+========================================================================================
 The estimator for any CDF :math:`F` is the discrete estimator :math:`\hat{F}_n` which assigns a mass :math:`1/n` to every point in sample :math:`\{X_i\}_{i=1}^n`.
 
 .. note::
@@ -23,7 +25,7 @@ The estimator for any CDF :math:`F` is the discrete estimator :math:`\hat{F}_n` 
 
 		.. math:: \hat{F}_n(x)\xrightarrow[]{P}F(x)
 
-Confidence interval for :math:`\hat{F}_n`
+Confidence interval for CDF estimator
 ========================================================================================
 .. note::        
 	* **Glivenko-Cantelli Theorem**: :math:`||\hat{F_n}(x)-F(x)||_\infty=\sup_{x}|\hat{F_n}(x)-F(x)|\xrightarrow[]{as} 0`.
@@ -37,7 +39,7 @@ Confidence interval for :math:`\hat{F}_n`
 		* TODO: derive.
 
 ****************************************************************************************
-Plug-in Estimator for Estimating Statistical Functionals
+Plug-in Estimator for Statistical Functionals
 ****************************************************************************************
 The plug-in estimator :math:`\hat{T}_n(F)` for any :math:`T(F)` can be obtained by replacing :math:`F` with :math:`\hat{F}_n`.
 
@@ -79,7 +81,7 @@ The estimator can be obtained similarly.
 	* As the estimator is also a statistic, the variance can be obtained using the following methodology.
 
 ****************************************************************************************
-Variance of a Statistic
+Variance Estimation of a Statistic for CI
 ****************************************************************************************
 We're interested in estimating the variance of a statistic :math:`g(X_1,\cdots,X_n)` given the sample.
 
@@ -121,5 +123,5 @@ Jack knife
 ========================================================================================
 .. note::
 	* Instead of a simulated sample obtained via replacement, we remove one observation and consider it a new sample. 
-	* Rest of the steps are carried out exactly the same way as bootstrap.
+	* Rest of the steps are carried out exactly the same way as bootstrap and we get :math:`v_{\text{jack}}` to compute CI.
 	* This is less computationally expensive than bootstrap.
