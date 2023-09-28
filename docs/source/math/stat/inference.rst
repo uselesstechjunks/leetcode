@@ -82,8 +82,8 @@ Point Estimation
 		
 		* Classical: the unknown constant :math:`\theta`
 		* Bayesian: the rv :math:`\Theta=\theta`
-	* This estimate of :math:`\theta` is expressed as a statistic :math:`\hat{\theta}_n=g(x_1,\cdots,x_n)`
-	* The estimator :math:`\hat{\Theta}_n` is always a rv as it evaluates to a different value :math:`\hat{\theta}'_n` with a different sample.
+	* This estimate of :math:`\theta` is expressed as a statistic :math:`\widehat{\theta}_n=g(x_1,\cdots,x_n)`
+	* The estimator :math:`\widehat{\Theta}_n` is always a rv as it evaluates to a different value :math:`\widehat{\theta}'_n` with a different sample.
 	* Examples: 
 
 		#. a single distribution/density function (parameterised/non-parameterised)
@@ -94,36 +94,36 @@ Point Estimation
 Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
-	* **Sampling Distribution**: The distribution of :math:`\hat{\Theta}_n` over different samples.
+	* **Sampling Distribution**: The distribution of :math:`\widehat{\Theta}_n` over different samples.
 	* **Estimation Error**: 
 
-		* Classical: :math:`\tilde{\Theta}_n=\hat{\Theta}_n-\theta`
-		* Bayesian: :math:`\tilde{\Theta}_n=\hat{\Theta}_n-\Theta`
+		* Classical: :math:`\tilde{\Theta}_n=\widehat{\Theta}_n-\theta`
+		* Bayesian: :math:`\tilde{\Theta}_n=\widehat{\Theta}_n-\Theta`
 	* **Bias**: 
 
-		* Classical: :math:`\text{b}(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n]=\mathbb{E}_{\theta}[\hat{\theta}_n]-\theta`
-		* Bayesian: :math:`\text{b}(\hat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n]=\mathbb{E}[\hat{\theta}_n]-\mathbb{E}[\Theta]`
+		* Classical: :math:`\text{b}(\widehat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n]=\mathbb{E}_{\theta}[\widehat{\theta}_n]-\theta`
+		* Bayesian: :math:`\text{b}(\widehat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n]=\mathbb{E}[\widehat{\theta}_n]-\mathbb{E}[\Theta]`
 	* **Standard Error**:
 
-		* Classical: :math:`\text{se}(\hat{\Theta}_n)=\sqrt{\mathbb{V}_{\theta}(\hat{\Theta}_n)}`
-		* Bayesian: :math:`\text{se}(\hat{\Theta}_n)=\sqrt{\mathbb{V}(\hat{\Theta}_n)}`
-	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\hat{\text{se}}=\widehat{\text{se}(\hat{\Theta}_n)}=\sqrt{\hat{\mathbb{V}}_{\theta}(\hat{\Theta}_n)}`.
+		* Classical: :math:`\text{se}(\widehat{\Theta}_n)=\sqrt{\mathbb{V}_{\theta}(\widehat{\Theta}_n)}`
+		* Bayesian: :math:`\text{se}(\widehat{\Theta}_n)=\sqrt{\mathbb{V}(\widehat{\Theta}_n)}`
+	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\widehat{\text{se}}=\widehat{\text{se}(\widehat{\Theta}_n)}=\sqrt{\widehat{\mathbb{V}}_{\theta}(\widehat{\Theta}_n)}`.
 	* **Mean-Squared Error**: 
 
-		* Classical: :math:`\text{mse}(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n^2]=\mathbb{E}_{\theta}[(\hat{\Theta}_n-\theta)^2]=\text{b}^2(\hat{\Theta}_n)+\text{se}^2(\hat{\Theta}_n)`
-		* Bayesian: :math:`\text{mse}(\hat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n^2]=\mathbb{E}[(\hat{\Theta}_n-\Theta)^2]=\mathbb{E}[\hat{\Theta}_n^2]+\mathbb{E}[\Theta^2]-2\mathbb{E}[\hat{\Theta}_n\Theta]`
+		* Classical: :math:`\text{mse}(\widehat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n^2]=\mathbb{E}_{\theta}[(\widehat{\Theta}_n-\theta)^2]=\text{b}^2(\widehat{\Theta}_n)+\text{se}^2(\widehat{\Theta}_n)`
+		* Bayesian: :math:`\text{mse}(\widehat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n^2]=\mathbb{E}[(\widehat{\Theta}_n-\Theta)^2]=\mathbb{E}[\widehat{\Theta}_n^2]+\mathbb{E}[\Theta^2]-2\mathbb{E}[\widehat{\Theta}_n\Theta]`
 
 .. note::
-	* **Unbiased Estimator**: If :math:`\text{b}(\hat{\Theta}_n)=0`.
-	* **Asymptotically Unbiased Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{L_1}\theta` (or :math:`\Theta`).
-	* **Consistent Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{P}\theta` (or :math:`\Theta`).
+	* **Unbiased Estimator**: If :math:`\text{b}(\widehat{\Theta}_n)=0`.
+	* **Asymptotically Unbiased Estimator**: If :math:`\widehat{\Theta_n}\xrightarrow[]{L_1}\theta` (or :math:`\Theta`).
+	* **Consistent Estimator**: If :math:`\widehat{\Theta_n}\xrightarrow[]{P}\theta` (or :math:`\Theta`).
 	* **Asymptotically Normal Estimator**: 
 
-		* Classical: :math:`\frac{\hat{\Theta}_n-\theta}{\hat{\text{se}}(\hat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
-		* Bayesian: :math:`\frac{\hat{\Theta}_n-\Theta}{\hat{\text{se}}(\hat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
+		* Classical: :math:`\frac{\widehat{\Theta}_n-\theta}{\widehat{\text{se}}(\widehat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
+		* Bayesian: :math:`\frac{\widehat{\Theta}_n-\Theta}{\widehat{\text{se}}(\widehat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
 
 .. attention::
-	Theorem: If :math:`\lim\limits_{n\to\infty}\text{b}_\theta(\hat{\Theta}_n)=0` and :math:`\lim\limits_{n\to\infty}\text{se}(\hat{\Theta}_n)=0` then :math:`\hat{\Theta}_n` is consistent.
+	Theorem: If :math:`\lim\limits_{n\to\infty}\text{b}_\theta(\widehat{\Theta}_n)=0` and :math:`\lim\limits_{n\to\infty}\text{se}(\widehat{\Theta}_n)=0` then :math:`\widehat{\Theta}_n` is consistent.
 
 Confidence Set Estimation
 ==========================================================================================
@@ -136,21 +136,21 @@ Confidence Set Estimation
 	* A 95% confidence set means that if we repeatedly estimate it from multiple samples (works even if samples are from completely unrelated experiments), then around 95% of the times the estimated set contains the true quantity.
 
 .. attention::
-	#. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
-	#. The task is to estimate :math:`\hat{a}=a(X_1,\cdots,X_n)` and :math:`\hat{b}=b(X_1,\cdots,X_n)` such that the above holds. 
+	#. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\widehat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\widehat{C_n})\ge 1-\alpha`. 
+	#. The task is to estimate :math:`\widehat{a}=a(X_1,\cdots,X_n)` and :math:`\widehat{b}=b(X_1,\cdots,X_n)` such that the above holds. 
 	#. For vector quantities, this is expressed with sets instead of intervals.
 	#. In regression setting, a confidence interval around the regression function can be thought of the set of functions which contains the true function with certain probabilty. However, this is usually never measured.
 
 Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
-	* **Pointwise Asymptotic CI**: :math:`\forall\theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
-	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\hat{C_n})\ge 1-\alpha`
+	* **Pointwise Asymptotic CI**: :math:`\forall\theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\widehat{C_n})\ge 1-\alpha`
+	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\widehat{C_n})\ge 1-\alpha`
 
 		* Uniform Asymptotic CI is stricter.
-	* **Normal-based CI**: If :math:`\hat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
+	* **Normal-based CI**: If :math:`\widehat{\theta_n}` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
 
-		.. math:: (\hat{\theta_n}-z_{\alpha/2}\hat{\text{se}},\hat{\theta_n}+z_{\alpha/2}\hat{\text{se}})
+		.. math:: (\widehat{\theta_n}-z_{\alpha/2}\widehat{\text{se}},\widehat{\theta_n}+z_{\alpha/2}\widehat{\text{se}})
 	
 		* The above is a pointwise asymptotic CI.
 
@@ -192,7 +192,7 @@ Machine Learning as a Statistical Inference
 	  where :math:`\mathbb{E}[\epsilon]=0`. 
 
 		* This inference is known as **learning** in Machine Learning and **curve estimation** in statistics.
-	* **Variable inference**: In the above case, a variable inference means estimating an unseen :math:`Y|X=x` by :math:`\hat{Y}=\hat{y}=r(x)` for a given :math:`X=x`. 
+	* **Variable inference**: In the above case, a variable inference means estimating an unseen :math:`Y|X=x` by :math:`\widehat{Y}=\widehat{y}=r(x)` for a given :math:`X=x`. 
 
 		* This is known as **inference** in Machine Learning and **prediction** in statistics.
 
