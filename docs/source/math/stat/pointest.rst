@@ -52,8 +52,8 @@ Likelihood function
 	* Likelihood function is defined as :math:`\mathcal{L}(\theta)=f_X(x; \theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)`.
 	
 .. warning::
-	* Given a particular observation :math:`X=x=(x_1,\cdots,x_n)`, the function :math:`f_X(x; \theta)` is no longer a density, but just a function of :math:`\theta`.
-	* For discrete case, :math:`p_X(x; \theta)=\mathbb{P}(X_1=x_1,\cdots,X_n=x_n;\theta)`.
+	* Given a particular observation :math:`X=x=(x_1,\cdots,x_n)`, the function :math:`\mathcal{L}(\theta)=f_X(x; \theta)` is no longer a density, but just a function of :math:`\theta`.
+	* For discrete case, :math:`\mathcal{L}(\theta)=p_X(x; \theta)=\mathbb{P}(X_1=x_1,\cdots,X_n=x_n;\theta)`.
 
 		* This is the probability that the observation would match current data under a particular :math:`\theta`.
 		* If this probability is higher under :math:`\theta_1` compared to :math:\theta_2`, it is more likely that the underlying parameter is :math:`\theta_2`.
