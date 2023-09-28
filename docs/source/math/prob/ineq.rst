@@ -160,7 +160,7 @@ Strong Law of Large Number
 Central Limit Theorem
 ====================================
 .. note::
-	* CLT: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`Z_n\xrightarrow[]{D}\Phi` where :math:`\Phi` represents standard normal distribution.
+	* CLT: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`Z_n\xrightarrow[]{D}\mathcal{N}(0,1)`.
 	* Since :math:`S_n` can be expressed as a linear transformation of :math:`Z_n`, it also converges to some normal distribution with mean :math:`n\mu` and ever increasing variance.
 
 .. warning::
@@ -169,3 +169,10 @@ Central Limit Theorem
 
 		* Uniform: very quickly resembles a normal.
 		* Exponential: takes a long time.
+
+The Delta Method
+====================================
+.. note::
+	* Let :math:`X_n\xrightarrow[]{D}\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})`
+	* Let :math:`g` be a differentiable function of.
+	* Then :math:`g(X_n)\xrightarrow[]{D}\mathcal{N}(g(\mu),\frac{\sigma}{\sqrt{n}}\left(g'(\mu)^2\right))`.
