@@ -59,7 +59,7 @@ Likelihood function
 		* If this probability is higher when :math:`\theta=\theta_i` compared to :math:`\theta=\theta_j`, it is more likely that the underlying parameter has value :math:`\theta_i`.
 
 .. note::
-	We estimate :math:`\widehat{\Theta}_n=\mathop{\underset{\theta}{\mathrm{argmax}}}\mathcal{L}(\theta)`.
+	We estimate :math:`\widehat{\Theta}_n=\widehat{\Theta}_{\text{ML}}=\mathop{\underset{\theta}{\mathrm{argmax}}}\mathcal{L}(\theta)`.
 	
 Log likelihood
 --------------------------------------------------------------------------------
