@@ -11,6 +11,7 @@ The estimator for any CDF :math:`F` is the discrete estimator :math:`\hat{F}_n` 
 	Let 
 	
 		.. math:: I(X_i\leq x)=\begin{cases}1 & \text{if $X_i\leq x$}\\ 0 & \text{otherwise}\end{cases}
+
 	Then
 
 		.. math:: \hat{F}_n(x)=\frac{1}{n}\sum_{i=1}^n I(X_i\leq x_i)
