@@ -133,7 +133,7 @@ Confidence Set Estimation
 
 .. note::
 	* An estimated set which traps the fixed, unknown value of our quality of interest with a pre-determined probability.
-	* We often report confidence set along with a point estimate of a quantity of interest.
+	* A 95% confidence set means that if we repeatedly estimate it from multiple samples (works even if samples are from completely unrelated experiments), then around 95% of the times the estimated set contains the true quantity.
 
 .. attention::
 	#. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
