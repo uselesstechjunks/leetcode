@@ -176,3 +176,6 @@ The Delta Method
 	* Let :math:`X_n\xrightarrow[]{D}\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})`
 	* Let :math:`g` be a differentiable function of.
 	* Then :math:`g(X_n)\xrightarrow[]{D}\mathcal{N}(g(\mu),\frac{\sigma}{\sqrt{n}}\left(g'(\mu)^2\right))`.
+
+.. tip::
+	A multivariate version can be obtained by observing that :math:`\sigma\left(g'(\mu)^2\right)` becomes :math:`\nabla_g(\mu)^\top\Sigma\nabla_g(\mu)`.
