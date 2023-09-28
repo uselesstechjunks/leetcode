@@ -102,33 +102,38 @@ Some useful terminology
 	* **Bias**: 
 
 		* Classical: :math:`\text{b}(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n]=\mathbb{E}_{\theta}[\hat{\theta}_n]-\theta`
-		* Bayesian: :math:`\text{b}(\hat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n]=\mathbb{E}[\hat{\theta}_n]-\Theta`
+		* Bayesian: :math:`\text{b}(\hat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n]=\mathbb{E}[\hat{\theta}_n]-\mathbb{E}[\Theta]`
 	* **Standard Error**:
 
 		* Classical: :math:`\text{se}(\hat{\Theta}_n)=\sqrt{\mathbb{V}_{\theta}(\hat{\Theta}_n)}`
 		* Bayesian: :math:`\text{se}(\hat{\Theta}_n)=\sqrt{\mathbb{V}(\hat{\Theta}_n)}`
 	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\hat{\text{se}}=\widehat{\text{se}(\hat{\Theta}_n)}=\sqrt{\hat{\mathbb{V}}_{\theta}(\hat{\Theta}_n)}`.
+	* **Mean-Squared Error**: 
+
+		* Classical: :math:`\text{mse}(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n^2]=\mathbb{E}_{\theta}[(\hat{\Theta}_n-\theta)^2]=\text{b}^2(\hat{\Theta}_n)+\text{se}^2(\hat{\Theta}_n)`
+		* Bayesian: :math:`\text{mse}(\hat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n^2]=\mathbb{E}[(\hat{\Theta}_n-\Theta)^2]=\mathbb{E}[\hat{\Theta}_n^2]+\mathbb{E}[\Theta^2]-2\mathbb{E}[\hat{\Theta}_n\Theta]`
 
 .. note::
 	* **Unbiased Estimator**: If :math:`\text{b}(\hat{\Theta}_n)=0`.
 	* **Asymptotically Unbiased Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{L_1}\theta` (or :math:`\Theta`).
 	* **Consistent Estimator**: If :math:`\hat{\Theta_n}\xrightarrow[]{P}\theta` (or :math:`\Theta`).
-	* **Mean-Squared Error**: 
+	* **Asymptotically Normal Estimator**: 
 
-		Classical: :math:`\text{mse}(\hat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n^2]=\mathbb{E}_{\theta}[(\hat{\Theta}_n-\theta)^2]=\text{b}^2(\hat{\Theta}_n)+\text{se}^2(\hat{\Theta}_n)`
-		Bayesian: 
+		* Classical: :math:`\frac{\hat{\Theta}_n-\theta}{\hat{\text{se}}(\hat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
+		* Bayesian: :math:`\frac{\hat{\Theta}_n-\Theta}{\hat{\text{se}}(\hat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
 
 .. attention::
-	Theorem: If :math:`\lim\limits_{n\to\infty}\text{b}_\theta(\hat{\Theta_n})=0` and :math:`\lim\limits_{n\to\infty}\text{se}_\theta(\hat{\Theta_n})=0` then :math:`\hat{\Theta_n}` is consistent.
-
-.. note::
-    * **Asymptotically Normal Estimator**: :math:`\hat{\Theta_n}\xrightarrow[]{D}\mathcal{N}(\theta,\hat{\text{se}_\theta}^2(\hat{\Theta_n}))`.
+	Theorem: If :math:`\lim\limits_{n\to\infty}\text{b}_\theta(\hat{\Theta}_n)=0` and :math:`\lim\limits_{n\to\infty}\text{se}(\hat{\Theta}_n)=0` then :math:`\hat{\Theta}_n` is consistent.
 
 Confidence Set Estimation
 ==========================================================================================
+.. attention::
+	* In Bayesian setting, the point estimate is already associated with a probability distribution which convey the degree of belief about the true quantity being the same as the estimated quantity.
+	* On the other hand, confidence set estimation is a technique used in a classical setting. However, this makes probabilitic statement about the estimated set, not the quantity itself.
+
 .. note::
 	* An estimated set which traps the fixed, unknown value of our quality of interest with a pre-determined probability.
-	* We often report confidence interval along with a point estimate of a quantity of interest.
+	* We often report confidence set along with a point estimate of a quantity of interest.
 
 .. attention::
 	#. A :math:`1-\alpha` confidence interval (CI) for a real qualtity of interest :math:`\theta` is defined as :math:`\hat{C_n}=(a,b)` where :math:`\mathbb{P}(\theta\in\hat{C_n})\ge 1-\alpha`. 
@@ -151,18 +156,22 @@ Some useful terminology
 
 Hypothesis Testing
 ==========================================================================================
-TODO: fill in
-Can be treated as a special case of point estimation
-
 .. note::
-	* This helps to evaluate how good a statistical model is given samples. 
-	* Assuming a fixed statistical model, we compute estimates for certain quantities of interest, which can then be compared with the same quantity assuming the model is correct. 
-	* The task is then to arrive at probabilistic statements about how different these two are.
+	* We have 2 or more unknown hypothesis about the probability model, :math:`H_0` (null) and :math:`H_1` (alternate), which are exclusively T/F.
+	
+		* We might have 1 hypothesis which we can convert into 2 as :math:`H_1=\not H_0`.
+	* We assume that this unknown hypothesis determines the distribution of the data.
+
+		* Bayesian: 
+			* Here we assume that the hypothesis themselves are Bernoulli rv, :math:`H_0=T\implies\Theta=1.`
+			* We have some prior :math:`p_{\Theta}(\theta)`
+		* Classical: 
+			* We assume that we have a different probability model under each hypothesis, :math:`f_X(x; H_0)` and :math:`f_X(x; H_1)`.
+			* No prior knowledge is assumed
+	* Inferring about :math:`H_0` and :math:`H_1` then becomes similar to point estimation.
 
 .. attention::
-	#. The statement about the quantity of interest assuming the model is correct is called the **Null hypothesis**.
-	#. The statement where the model is incorrect is called **Alternate hypothesis**.
-	#. We create a :math:`1-\alpha` confidence set for the estimated quantity.
+	We create a :math:`1-\alpha` confidence set for the estimated quantity.
 
 		* If the quantity as-per-model doesn't fall within this set, then we **reject** the null hypothesis with significance level :math:`\alpha`. 
 		* If it does, then we **fail to reject** the null hypothesis.
