@@ -81,9 +81,17 @@ Properties
 --------------------------------------------------------------------------------
 .. note::
 	* **Consistent**: :math:`\widehat{\Theta}_{\text{ML}}\xrightarrow[]{P}\theta`.
+
+		* TODO proof
 	* **Equivariant**: If :math:`\widehat{\Theta}_{\text{ML}}` is the MLE for :math:`\theta`, then :math:`g(\widehat{\Theta}_{\text{ML}})` is the MLE for :math:`g(\theta)`.
+
+		* TODO proof
 	* **Asymptotically normal**: :math:`\frac{\widehat{\Theta}_{\text{ML}}-\theta}{\widehat{\text{se}}(\widehat{\Theta}_{\text{ML}})}\xrightarrow[]{D}\mathcal{N}(0,1)`
+
+		* TODO proof
 	* **Asymptotically optimal**: Estimator has least variance for large sample size.
+
+		* TODO proof
 
 Computing CI for MLE
 --------------------------------------------------------------------------------
@@ -114,12 +122,24 @@ Normal
 
 Iterative Method of Computation
 --------------------------------------------------------------------------------
+.. note::
+	* For complicated or composite rvs, computation of likelihood in a closed form might be challenging. 
+	* We can approximate MLE estimates by iterative methods.
 
 Newton Raphson
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* We gather an initial estimate as a starting point, :math:`\theta'`.
+
+		* MOM can give us a good starting point.
+	* We assume that the true optimal value :math:`\theta^*` lie in the vicinity of this initial guess.
+	* We apply first order taylor approximation
 
 The EM Algorithm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* TODO add more details
+	* Assume hidden variables - likelihood computation is easier for joint
 
 ********************************************************************************
 Bayesian Inference
