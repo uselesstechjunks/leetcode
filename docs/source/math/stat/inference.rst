@@ -1,7 +1,6 @@
 ##########################################################################################
 Statistical Inference
 ##########################################################################################
-We have a sample of size :math:`n`, :math:`X_1,\cdots X_n` from an unknown CDF :math:`F`.
 
 .. note::
 	**Statistical Functionals**: The functions of this form, :math:`T(F)`, such as
@@ -13,6 +12,7 @@ We have a sample of size :math:`n`, :math:`X_1,\cdots X_n` from an unknown CDF :
 	* median: :math:`T(F)=F^{-1}(1/2)`	
 
 .. attention::
+	* We have a sample of size :math:`n`, :math:`X_1,\cdots X_n` from an unknown CDF :math:`F`.
 	* The task for statistical inference is to infer :math:`F` or some :math:`T(F)`, that best explains the data, for some criteria of **best** chosen beforehand.	
 	* The **inferred values** based on data are called **estimates** of the quantities of interest.
 	* Estimates are rv as their values may change subject to a different sample.
@@ -58,7 +58,7 @@ Bayesian Inference
 ==========================================================================================
 .. note::
 	* The quantity that we want to estimate is assumed to be a rv on its own, :math:`\Theta`. 
-	* Before observing any data, we have a prior notion of what its distribution is which is expressed as the prior probability :math:`f_\Theta(\theta)`.
+	* Before observing any data, we have a prior notion of what its distribution. This is expressed as the prior probability :math:`f_\Theta(\theta)`.
 	* The likelihood is the PDF of the data conditioned on :math:`\Theta`, :math:`f_{X|\Theta}(x|\theta)`.
 	* The posterior is obtained by applying Bayes rule which gives a **single probability model** for the quantity after observation :math:`f_{\Theta|X}(\theta|x)`.
 	* We perform inference about :math:`\Theta` based on this distribution directly.
@@ -69,7 +69,7 @@ Frequentist (Classical) Inference
 	* The quantity that we want to estimate is assumed to be an unknown constant, :math:`\theta`.
 	* No prior knowledge is assumed about this.
 	* We assume that our underlying probability model is dependent on :math:`\theta` in some way.
-	* Therefore, the **probability model here is the collection of PDFs** :math:`f_\theta(X;\theta)` for each possible values of :math:`\theta`.
+	* Therefore, the **probability model here is the collection of PDFs** :math:`f_\theta(x;\theta)` for each possible values of :math:`\theta`.
 	* In order to perform inference, our statements must apply to all possible values of :math:`\theta`.
 
 ******************************************************************************************
@@ -83,7 +83,7 @@ Point Estimation
 		* Classical: the unknown constant :math:`\theta`
 		* Bayesian: the rv :math:`\Theta=\theta`
 	* This estimate of :math:`\theta` is expressed as a statistic :math:`\widehat{\theta}_n=g(x_1,\cdots,x_n)`
-	* The estimator :math:`\widehat{\Theta}_n` is always a rv as it evaluates to a different value :math:`\widehat{\theta}'_n` with a different sample.
+	* The estimator :math:`\widehat{\Theta}_n` is always a rv as it evaluates to a different value with a different sample.
 	* Examples: 
 
 		#. a single distribution/density function (parameterised/non-parameterised)
@@ -107,7 +107,7 @@ Some useful terminology
 
 		* Classical: :math:`\text{se}(\widehat{\Theta}_n)=\sqrt{\mathbb{V}_{\theta}(\widehat{\Theta}_n)}`
 		* Bayesian: :math:`\text{se}(\widehat{\Theta}_n)=\sqrt{\mathbb{V}(\widehat{\Theta}_n)}`
-	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\widehat{\text{se}}=\widehat{\text{se}(\widehat{\Theta}_n)}=\sqrt{\widehat{\mathbb{V}}_{\theta}(\widehat{\Theta}_n)}`.
+	* If the variance in above is also an estimate (as it often is), then we estimate SE as :math:`\widehat{\text{se}}=\widehat{\text{se}}(\widehat{\Theta}_n)=\sqrt{\widehat{\mathbb{V}}_{\theta}(\widehat{\Theta}_n)}`.
 	* **Mean-Squared Error**: 
 
 		* Classical: :math:`\text{mse}(\widehat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n^2]=\mathbb{E}_{\theta}[(\widehat{\Theta}_n-\theta)^2]=\text{b}^2(\widehat{\Theta}_n)+\text{se}^2(\widehat{\Theta}_n)`
@@ -119,8 +119,8 @@ Some useful terminology
 	* **Consistent Estimator**: If :math:`\widehat{\Theta}_n\xrightarrow[]{P}\theta` (or :math:`\Theta`).
 	* **Asymptotically Normal Estimator**: 
 
-		* Classical: :math:`\frac{\widehat{\Theta}_n-\theta}{\widehat{\text{se}}(\widehat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
-		* Bayesian: :math:`\frac{\widehat{\Theta}_n-\Theta}{\widehat{\text{se}}(\widehat{\Theta}_n)}\xrightarrow[]{D}\mathcal{N}(0,1)`.
+		* Classical: :math:`\frac{\widehat{\Theta}_n-\theta}{\widehat{\text{se}}}\xrightarrow[]{D}\mathcal{N}(0,1)`.
+		* Bayesian: :math:`\frac{\widehat{\Theta}_n-\Theta}{\widehat{\text{se}}}\xrightarrow[]{D}\mathcal{N}(0,1)`.
 
 .. attention::
 	Theorem: If :math:`\lim\limits_{n\to\infty}\text{b}_\theta(\widehat{\Theta}_n)=0` and :math:`\lim\limits_{n\to\infty}\text{se}(\widehat{\Theta}_n)=0` then :math:`\widehat{\Theta}_n` is consistent.
@@ -201,14 +201,14 @@ Machine Learning as a Statistical Inference
 
 
 .. attention::
-    * The process that decides the model, such as choice of function-class or number of parameters, is independent of the inference and is performed separately beforehand. In ML, these are called **hyper-parameters**. 
-    * Since there are multiple items to choose before performing inference, it is useful to clarify the sequence:
+	* The process that decides the model, such as choice of function-class or number of parameters, is independent of the inference and is performed separately beforehand. In ML, these are called **hyper-parameters**. 
+	* Since there are multiple items to choose before performing inference, it is useful to clarify the sequence:
 
-        #. A metric of goodness of an estimator is chosen first.
-        #. A model is chosen (such as, hyperparameters).
-        #. Inference is performed using computation involving the samples.
-        #. Quality of model is judged by evaluating the model on the inference data.
-        #. (Optional) A different model is chosen and the process repeats.
+		#. A metric of goodness of an estimator is chosen first.
+		#. A model is chosen (such as, hyperparameters).
+		#. Inference is performed using computation involving the samples.
+		#. Quality of model is judged by evaluating the model on the inference data.
+		#. (Optional) A different model is chosen and the process repeats.
 
 	* :math:`X` is called the independent variable (**features**) and :math:`Y` called as dependent variable (**target**). 
 	* Independent variables are often multidimensional vectors :math:`X=\mathbf{x}\in\mathbb{R}^d` for some :math:`d>1`.	
