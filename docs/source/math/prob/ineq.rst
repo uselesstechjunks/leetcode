@@ -21,7 +21,7 @@ Mean known: Markov
 		.. math:: \mathbb{P}(X\geq t)\leq \frac{\mu}{t}
 	* Proof:
 
-		.. math:: \mathbb{P}(X\geq t)=\int\limits_t^\infty f_X(x)\mathop{dx}=\frac{1}{t}\int\limits_t^\infty t\cdot f_X(x)\mathop{dx}\leq \frac{1}{t}\int\limits_t^\infty x\cdot f_X(x)\mathop{dx}
+		.. math:: \mathbb{P}(X\geq t)=\int\limits_t^\infty f_X(x)\mathop{dx}=\frac{1}{t}\int\limits_t^\infty t\cdot f_X(x)\mathop{dx}\leq \frac{1}{t}\int\limits_t^\infty x\cdot f_X(x)\mathop{dx}\leq \frac{1}{t}\int\limits_{-\infty}^\infty x\cdot f_X(x)\mathop{dx}
 
 Mean and variance known: Chebyshev
 ====================================
