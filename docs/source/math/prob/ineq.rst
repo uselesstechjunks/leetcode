@@ -19,6 +19,9 @@ Mean known: Markov
 	* Markov's inequality states that the tail probability goes down inversely as we move further right.
 
 		.. math:: \mathbb{P}(X\geq t)\leq \frac{\mu}{t}
+	* Proof:
+
+		.. math:: \mathbb{P}(X\geq t)=\int\limits_t^\infty f_X(x)\mathop{dx}=\frac{1}{t}\int\limits_t^\infty t\cdot f_X(x)\mathop{dx}\leq \frac{1}{t}\int\limits_t^\infty x\cdot f_X(x)\mathop{dx}
 
 Mean and variance known: Chebyshev
 ====================================
@@ -27,6 +30,9 @@ Mean and variance known: Chebyshev
 	* Chebyshev's inequality states that the tail probability of :math:`t` being away from :math:`\mu` goes down quadratically.
 
 		.. math:: \mathbb{P}(|X-\mu|\geq t)\leq \frac{\sigma^2}{t^2}
+	* Proof:
+
+		.. math:: Y=(X-\mu)^2\implies\mathbb{E}[Y]=\sigma^2\implies\mathbb{P}(Y\geq t^2)=\mathbb{P}(|Y|\geq t)\leq\frac{\sigma^2}{t^2}
 	* This is a tighter bound than Markov's.
 
 MGF known: Chernoff's Bound
