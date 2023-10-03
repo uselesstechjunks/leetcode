@@ -69,7 +69,11 @@ Variance of bounded rv
 	* For bounded rvs :math:`a\leq X\leq b`, the variance is bounded as
 
 		.. math:: \mathbb{V}(X)\leq\frac{(b-a)^2}{4}
-	* Proof?
+	* Proof Hint:
+
+		* The expression :math:`\mathbb{E}[(X-\gamma)^2]` is minimised when :math:`\gamma=\mathbb{E}[X]`
+		* Therefore, :math:`\mathbb{V}(X)\leq\mathbb{E}\left[\left(X-\frac{a+b}{2}\right)^2\right]=\mathbb{E}[(X-a)(X-b)]+\frac{(b-a)^2}{4}`
+		* :math:`a\leq X\leq b\implies (X-a)(X-b)\leq 0\implies \mathbb{E}[(X-a)(X-b)]\leq 0`
 
 Expectations of general functions of rv
 --------------------------------------------------------
