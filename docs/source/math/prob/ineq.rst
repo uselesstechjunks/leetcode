@@ -119,7 +119,7 @@ Here we deal with rvs of 3 special kind for a given sequence of rvs :math:`(X_n)
 .. note::
 	* Let the sum rv be :math:`S_n=\sum_{i=1}^n X_i` for a given :math:`n`. We can think of a sequence of this as :math:`(S_n)_{n=1}^\infty`.
 
-		* We note that :math:`\mathbb{E}[S_n]=n\mu` and :math:`\lim\limits_{n\to\infty}\mathbb{V}(S_n)\to\infty`.
+		* We note that :math:`\mathbb{E}[S_n]=n\mu` :math:`\mathbb{V}(S_n)=n\sigma^2`.
 	* Let the sample mean rv be :math:`M_n=\frac{S_n}{n}` for a given :math:`n`. We can think of a sequence of this as :math:`(M_n)_{n=1}^\infty`.
 
 		* We note that :math:`\mathbb{E}[M_n]=\mu` and :math:`\mathbb{V}(M_n)=\sigma^2/n`.
