@@ -93,10 +93,8 @@ Properties
 
 				.. math:: M(\theta)=\mathbb{E}_{\theta_\text{true}}\left[\log\left(\frac{f_X(x;\theta)}{f_X(x;\theta_{\text{true}})}\right)\right]=\int\log\left(\frac{f_X(x;\theta)}{f_X(x;\theta_{\text{true}})}\right)f_X(x;\theta_{\text{true}})\mathop{dx}=-D_{KL}(\theta_{\text{true}},\theta)
 			* Maximum value of :math:`M(\theta)` is 0.
-			* For all :math:`\theta`, :math`M_n(\theta)\xrightarrow[]{P}M(\theta)`
-
-		* Technically, we need uniform convergence to prove this formally.
-
+			* For all :math:`\theta`, :math:`M_n(\theta)\xrightarrow[]{P}M(\theta)`
+			* Technically, we need uniform convergence to prove this formally.
 	* **Equivariant**: If :math:`\widehat{\Theta}_{\text{ML}}` is the MLE for :math:`\theta`, then :math:`g(\widehat{\Theta}_{\text{ML}})` is the MLE for :math:`g(\theta)`.
 
 		* TODO proof
