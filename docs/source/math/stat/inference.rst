@@ -148,7 +148,7 @@ Some useful terminology
 
 		* Given any :math:`\theta`, we consider the smallest probability that :math:`\widehat{C}_n` captures :math:`\theta`.
 		* This probability is at least :math:`1-\alpha` asymptotically as :math:`n\to\infty`.
-		* The rate of this convergence depends on the value of :math:`theta`.
+		* The rate of this convergence depends on the value of :math:`\theta`.
 	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\widehat{C}_n)\ge 1-\alpha`
 
 		* Given any :math:`n`, we consider the smallest probability that :math:`\widehat{C}_n` captures :math:`\theta` for any :math:`\theta`.
