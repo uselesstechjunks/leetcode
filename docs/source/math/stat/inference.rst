@@ -146,12 +146,11 @@ Some useful terminology
 .. note::
 	* **Pointwise Asymptotic CI**: :math:`\forall\theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\widehat{C}_n)\ge 1-\alpha`
 
-		* Given any :math:`\theta`, we consider the smallest probability that :math:`\widehat{C}_n` captures :math:`\theta`.
-		* This probability is at least :math:`1-\alpha` asymptotically as :math:`n\to\infty`.
+		* Given any :math:`\theta`, the smallest probability that :math:`\widehat{C}_n` captures :math:`\theta` is at least :math:`1-\alpha` asymptotically as :math:`n\to\infty`.
 		* The rate of this convergence depends on the value of :math:`\theta`.
 	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\widehat{C}_n)\ge 1-\alpha`
 
-		* Given any :math:`n`, we consider the smallest probability that :math:`\widehat{C}_n` captures :math:`\theta` for any :math:`\theta`.
+		* Given any :math:`n`, we consider the smallest probability that :math:`\widehat{C}_n` captures :math:`\theta` for any :math:`\theta\in\Theta`.
 		* This probability is at least :math:`1-\alpha` asymptotically as :math:`n\to\infty`.
 		* Uniform Asymptotic CI is stricter, as in, satisfying this condition automatically implies the former.
 	* **Normal-based CI**: If :math:`\widehat{\Theta}_n` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
