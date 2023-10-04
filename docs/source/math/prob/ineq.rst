@@ -15,7 +15,7 @@ Why do we need inequalities?
 Mean known: Markov
 ====================================
 .. note::
-	* Let :math:`X` be a non-negative rv with well defined :math:`\mathbb{E}[X]=\mu`.
+	* Let :math:`X` be a **non-negative** rv with well defined :math:`\mathbb{E}[X]=\mu`.
 	* Markov's inequality states that the tail probability goes down inversely as we move further right.
 
 		.. math:: \mathbb{P}(X\geq t)\leq \frac{\mu}{t}
@@ -32,7 +32,7 @@ Mean and variance known: Chebyshev
 		.. math:: \mathbb{P}(|X-\mu|\geq t)\leq \frac{\sigma^2}{t^2}
 	* Proof:
 
-		.. math:: Y=(X-\mu)^2\implies\mathbb{E}[Y]=\sigma^2\implies\mathbb{P}(Y\geq t^2)=\mathbb{P}(|Y|\geq t)\leq\frac{\sigma^2}{t^2}
+		.. math:: Y=(X-\mu)\implies\mathbb{E}[Y^2]=\sigma^2\implies\mathbb{P}(|Y|\geq t)=\mathbb{P}(Y^2\geq t^2)\leq\frac{\sigma^2}{t^2}
 	* This is a tighter bound than Markov's.
 
 MGF known: Chernoff's Bound
