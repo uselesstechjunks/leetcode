@@ -83,18 +83,23 @@ Properties
 	* **Consistent**: :math:`\widehat{\Theta}_{\text{ML}}\xrightarrow[]{P}\theta`.
 
 		* Proof Hint:
+
 			* Let :math:`\theta_{\text{true}}` be the true value of :math:`\theta`.
 			* The likelihood function with the true value :math:`l_n(\theta_{\text{true}})` evaluates to a constant.
 			* Maximising :math:`l_n(\theta)` is the same as maximising 
 
-				.. math:: M_n(\theta)=\frac{1}{n}\left(l_n(\theta)-l_n(\theta_{\text{true}})\right)=\frac{1}{n}\sum_{i=1}^n\log\left(\frac{f_X(x_i;\theta)}{f_X(x_i;\theta_{\text{true}})}\right)
-	* **Equivariant**: If :math:`\widehat{\Theta}_{\text{ML}}` is the MLE for :math:`\theta`, then :math:`g(\widehat{\Theta}_{\text{ML}})` is the MLE for :math:`g(\theta)`.
+				.. math:: M_n(\theta)=\frac{1}{n}\left(l_n(\theta)-l_n(\theta_{\text{true}})\right)=\frac{1}{n}\sum_{i=1}^n\log\left(\frac{f_X(x_i;\theta)}{f_X(x_i;\theta_{\text{true}})}\right)	
 			* Let :math:`M(\theta)` be defined as the expectation of this rv
 
 				.. math:: M(\theta)=\mathbb{E}_{\theta_\text{true}}\left[\log\left(\frac{f_X(x;\theta)}{f_X(x;\theta_{\text{true}})}\right)\right]=\int\log\left(\frac{f_X(x;\theta)}{f_X(x;\theta_{\text{true}})}\right)f_X(x;\theta_{\text{true}})\mathop{dx}=-D_{KL}(\theta_{\text{true}},\theta)
 			* Maximum value of :math:`M(\theta)` is 0.
 			* For all :math:`\theta`, :math`M_n(\theta)\xrightarrow[]{P}M(\theta)`
+
 		* Technically, we need uniform convergence to prove this formally.
+
+	* **Equivariant**: If :math:`\widehat{\Theta}_{\text{ML}}` is the MLE for :math:`\theta`, then :math:`g(\widehat{\Theta}_{\text{ML}})` is the MLE for :math:`g(\theta)`.
+
+		* TODO proof
 	* **Asymptotically normal**: :math:`\frac{\widehat{\Theta}_{\text{ML}}-\theta}{\widehat{\text{se}}}\xrightarrow[]{D}\mathcal{N}(0,1)`
 
 		* TODO proof
