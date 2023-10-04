@@ -706,7 +706,7 @@ Let :math:`f` and :math:`g` be two densities.
 
 KL Divergence
 ------------------------------------------------------------------------------------------
-.. math:: D_{KL}(f,g)=\int f(x)\left(\log\frac{f(x)}{g(x)}\right)\mathop{dx}
+.. math:: D_{KL}(f,g)=\mathbb{E}\left[\log\frac{f(x)}{g(x)}\right]=\int \left(\log\frac{f(x)}{g(x)}\right)f(x)\mathop{dx}
 
 .. note::
 	* :math:`D_{KL}(f,g)\geq 0`
