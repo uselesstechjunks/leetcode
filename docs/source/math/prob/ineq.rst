@@ -130,11 +130,23 @@ Uniform convergence
 .. math:: \lim\limits_{n\to\infty}\sup_{x\in E}|f_n(x)-f(x)|=0
 
 .. note::
-	* Interpretation: For every :math:`\epsilon>0`, there is a universal :math:`N_\epsilon`, such that :math:`n> N_{\epsilon,x}\implies |f_n(x)-f(x)|<\epsilon` holds for any :math:`x\in E`.
-	* This is more stricter.
+	* Interpretation: For every :math:`\epsilon>0`, there is a universal :math:`N_\epsilon`, such that :math:`n> N_\epsilon\implies |f_n(x)-f(x)|<\epsilon` holds for any :math:`x\in E`.
+	* We note that the speed of convergence is independent on the value of :math:`x`. This is more stricter.
 
 Convergence of statistical functionals
 ========================================================================================
+Let :math:`\left(f_n(\theta)\right)_{i=1}^n` be a sequence functions evaluated on observed data :math:`\left(X_i\right)_{i=1}^n`, where :math:`X_i\sim f_X(x_i;\theta)` in a parametric model.
+
+.. seealso::
+	For example, :math:`f_n(\theta)=\frac{1}{n}\sum_{i=1}^n X_i` and :math:`f(\theta)=\mathbb{E}_\theta[X]`.
+
+Point-wise convergence in probability
+----------------------------------------------------------------------------------------
+.. math:: \forall \theta\in\Theta, |f_n(\theta)-f(\theta)|\xrightarrow[]{P}0
+
+Uniform convergence in probability
+----------------------------------------------------------------------------------------
+.. math:: \sup_{\theta\in\Theta} |f_n(\theta)-f(\theta)|\xrightarrow[]{P}0
 
 ****************************************************************************************
 Limit Theorems
