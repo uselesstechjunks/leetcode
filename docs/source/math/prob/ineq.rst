@@ -167,7 +167,7 @@ Central Limit Theorem
 ====================================
 .. note::
 	* CLT: For a sequence of rvs :math:`(X_n)_{n=1}^\infty`, iid with well defined mean and variance, :math:`Z_n\xrightarrow[]{D}\mathcal{N}(0,1)`.
-	* Since :math:`S_n` can be expressed as a linear transformation of :math:`Z_n`, it also converges to some normal distribution with mean :math:`n\mu` and ever increasing variance.
+	* Since :math:`S_n` can be expressed as a linear transformation of :math:`Z_n`, it also converges to some normal distribution with ever increasing mean :math:`n\mu` and variance :math:`\sigma\sqrt{n}`.
 
 .. warning::
 	* It doesn't talk about how quickly the sum converges to normal.
