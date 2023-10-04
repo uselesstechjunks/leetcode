@@ -699,3 +699,22 @@ TODO
 	* dependent case - parabolas in contours
 
 TODO
+
+Distance between two probability densities
+==========================================================================================
+Let :math:`f` and :math:`g` be two densities.
+
+KL Divergence
+------------------------------------------------------------------------------------------
+:math:: D_{KL}(f,g)=\int f(x)\left(\log\frac{f(x)}{g(x)}\right)\mathop{dx}
+
+.. note::
+	* :math:`D_{KL}(f,g)\geq 0`
+	* :math:`f=g\implies D_{KL}(f,g)= 0`
+	* This is not a metric as :math:`D_{KL}(f,g)\neq D_{KL}(g,f)`.
+
+Wasserstein Distance
+------------------------------------------------------------------------------------------
+
+Maximum Mean Discrepancy (MMD)
+------------------------------------------------------------------------------------------
