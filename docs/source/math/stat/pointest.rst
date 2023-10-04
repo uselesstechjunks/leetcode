@@ -86,7 +86,7 @@ Properties
 	* **Equivariant**: If :math:`\widehat{\Theta}_{\text{ML}}` is the MLE for :math:`\theta`, then :math:`g(\widehat{\Theta}_{\text{ML}})` is the MLE for :math:`g(\theta)`.
 
 		* TODO proof
-	* **Asymptotically normal**: :math:`\frac{\widehat{\Theta}_{\text{ML}}-\theta}{\widehat{\text{se}}(\widehat{\Theta}_{\text{ML}})}\xrightarrow[]{D}\mathcal{N}(0,1)`
+	* **Asymptotically normal**: :math:`\frac{\widehat{\Theta}_{\text{ML}}-\theta}{\widehat{\text{se}}}\xrightarrow[]{D}\mathcal{N}(0,1)`
 
 		* TODO proof
 	* **Asymptotically optimal**: Estimator has least variance for large sample size.
