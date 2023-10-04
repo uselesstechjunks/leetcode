@@ -82,9 +82,8 @@ Properties
 .. note::
 	* **Consistent**: :math:`\widehat{\Theta}_{\text{ML}}\xrightarrow[]{P}\theta`.
 
-		* Proof Hint:
+		* Proof Hint: Involve KL distance between the true value of :math:`\theta`, :math:`\theta_{\text{true}}` and any arbitrary :math:`\theta`.
 
-			* Let :math:`\theta_{\text{true}}` be the true value of :math:`\theta`.
 			* The likelihood function with the true value :math:`l_n(\theta_{\text{true}})` evaluates to a constant.
 			* Maximising :math:`l_n(\theta)` is the same as maximising 
 
