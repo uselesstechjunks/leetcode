@@ -69,7 +69,11 @@ Variance of bounded rv
 	* For bounded rvs :math:`a\leq X\leq b`, the variance is bounded as
 
 		.. math:: \mathbb{V}(X)\leq\frac{(b-a)^2}{4}
-	* Proof?
+	* Proof Hint:
+
+		* The expression :math:`\mathbb{E}[(X-\gamma)^2]` is minimised when :math:`\gamma=\mathbb{E}[X]`
+		* Therefore, :math:`\mathbb{V}(X)\leq\mathbb{E}\left[\left(X-\frac{a+b}{2}\right)^2\right]=\mathbb{E}[(X-a)(X-b)]+\frac{(b-a)^2}{4}`
+		* :math:`a\leq X\leq b\implies (X-a)(X-b)\leq 0\implies \mathbb{E}[(X-a)(X-b)]\leq 0`
 
 Expectations of general functions of rv
 --------------------------------------------------------
@@ -695,3 +699,22 @@ TODO
 	* dependent case - parabolas in contours
 
 TODO
+
+Distance between two probability densities
+==========================================================================================
+Let :math:`f` and :math:`g` be two densities.
+
+KL Divergence
+------------------------------------------------------------------------------------------
+.. math:: D_{KL}(f,g)=\mathbb{E}\left[\log\frac{f(x)}{g(x)}\right]=\int \left(\log\frac{f(x)}{g(x)}\right)f(x)\mathop{dx}
+
+.. note::
+	* :math:`D_{KL}(f,g)\geq 0`
+	* :math:`f=g\implies D_{KL}(f,g)= 0`
+	* This is not a metric as :math:`D_{KL}(f,g)\neq D_{KL}(g,f)`.
+
+Wasserstein Distance
+------------------------------------------------------------------------------------------
+
+Maximum Mean Discrepancy (MMD)
+------------------------------------------------------------------------------------------
