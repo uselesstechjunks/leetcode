@@ -99,7 +99,7 @@ Properties
 		* TODO proof
 	* **Asymptotically normal**: :math:`\frac{\widehat{\Theta}_{\text{ML}}-\theta}{\widehat{\text{se}}}\xrightarrow[]{D}\mathcal{N}(0,1)`
 
-		* Score function: :math:`s(X;\theta)=\frac{\partial}{\partial\theta}\log(X;\theta)`
+		* Score function: :math:`s(X;\theta)=\frac{\partial}{\partial\theta}\log f(X;\theta)`
 		* Fisher information: :math:`I_n(\theta)=\mathbb{V}_\theta\left(\sum_{i=1}^n s(X_i;\theta)\right)=\sum_{i=1}^n\mathbb{V}_\theta\left(s(X_i;\theta)\right)`
 	* **Asymptotically optimal**: Estimator has least variance for large sample size.
 
