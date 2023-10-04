@@ -49,11 +49,11 @@ Likelihood function
 --------------------------------------------------------------------------------
 .. note::
 	* We assume that we have samples of size :math:`n`, :math:`X=(X_1,\cdots,X_n)` such that :math:`X_i\sim f_{X_i}(x_i; \theta)`.
-	* Likelihood function is defined as :math:`\mathcal{L}(\theta)=f_X(x; \theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)`.
+	* Likelihood function is defined as :math:`\mathcal{L}_n(\theta)=f_X(x; \theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)`.
 	
 .. warning::
-	* Given a particular observation :math:`X=x=(x_1,\cdots,x_n)`, the function :math:`\mathcal{L}(\theta)=f_X(x; \theta)` is no longer a density, but just a function of :math:`\theta`.
-	* For discrete case, :math:`\mathcal{L}(\theta)=p_X(x; \theta)=\mathbb{P}(X_1=x_1,\cdots,X_n=x_n;\theta)`.
+	* Given a particular observation :math:`X=x=(x_1,\cdots,x_n)`, the function :math:`\mathcal{L}_n(\theta)=f_X(x; \theta)` is no longer a density, but just a function of :math:`\theta`.
+	* For discrete case, :math:`\mathcal{L}_n(\theta)=p_X(x; \theta)=\mathbb{P}(X_1=x_1,\cdots,X_n=x_n;\theta)`.
 
 		* This is the probability that the observation would match current data under a particular :math:`\theta`.
 		* If this probability is higher when :math:`\theta=\theta_i` compared to :math:`\theta=\theta_j`, it is more likely that the underlying parameter has value :math:`\theta_i`.
@@ -65,24 +65,29 @@ Log likelihood
 --------------------------------------------------------------------------------
 	* Independence assumption:
 
-		.. math:: \mathcal{L}(\theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)=\prod_{i=1}^n f_{X_i}(x_i;\theta)	
+		.. math:: \mathcal{L}_n(\theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)=\prod_{i=1}^n f_{X_i}(x_i;\theta)	
 
 	* Identical distribution assumption: 
 
-		.. math:: \mathcal{L}(\theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)=\prod_{i=1}^n f_X(x_i;\theta)
+		.. math:: \mathcal{L}_n(\theta)=f_{X_1,\cdots,X_n}(x_1,\cdots,x_n;\theta)=\prod_{i=1}^n f_X(x_i;\theta)
 	* Log likelihood is defined as
 
-		.. math:: \mathcal{l}(\theta)=\log{\mathcal{L}(\theta)}=\sum_{i=1}^n \log(f_X(x_i;\theta))
+		.. math:: \mathcal{l}_n(\theta)=\log{\mathcal{L}(\theta)}=\sum_{i=1}^n \log(f_X(x_i;\theta))
 	* As log is a monotonic increasing function
 
-		.. math:: \mathop{\underset{\theta}{\mathrm{argmax}}}\mathcal{l}(\theta)=\mathop{\underset{\theta}{\mathrm{argmax}}}\mathcal{L}(\theta)
+		.. math:: \mathop{\underset{\theta}{\mathrm{argmax}}}\mathcal{l}_n(\theta)=\mathop{\underset{\theta}{\mathrm{argmax}}}\mathcal{L}_n(\theta)
 
 Properties
 --------------------------------------------------------------------------------
 .. note::
 	* **Consistent**: :math:`\widehat{\Theta}_{\text{ML}}\xrightarrow[]{P}\theta`.
 
-		* TODO proof
+		* Proof Hint:
+			* Let :math:`\theta_{\text{true}}` be the true value of :math:`theta`.
+			* The likelihood function with the true value :math:`l_n(\theta_{\text{true}})` evaluates to a constant.
+			* Maximising :math:`l_n(\theta)` is the same as maximising 
+
+				.. math:: M_n(\theta)=\frac{1}{n}\left(l_n(\theta)-l_n(\theta_{\text{true}})\right)=\frac{1}{n}\sum_{i=1}^n\log\left(\frac{f_X(x_i;\theta)}{f_X(x_i;\theta_{\text{true}})}\right)
 	* **Equivariant**: If :math:`\widehat{\Theta}_{\text{ML}}` is the MLE for :math:`\theta`, then :math:`g(\widehat{\Theta}_{\text{ML}})` is the MLE for :math:`g(\theta)`.
 
 		* TODO proof
