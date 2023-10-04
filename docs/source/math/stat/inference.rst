@@ -101,8 +101,8 @@ Some useful terminology
 		* Bayesian: :math:`\tilde{\Theta}_n=\widehat{\Theta}_n-\Theta`
 	* **Bias**: 
 
-		* Classical: :math:`\text{b}(\widehat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n]=\mathbb{E}_{\theta}[\widehat{\theta}_n]-\theta`
-		* Bayesian: :math:`\text{b}(\widehat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n]=\mathbb{E}[\widehat{\theta}_n]-\mathbb{E}[\Theta]`
+		* Classical: :math:`\text{b}(\widehat{\Theta}_n)=\mathbb{E}_{\theta}[\tilde{\Theta}_n]=\mathbb{E}_{\theta}[\widehat{\Theta}_n]-\theta`
+		* Bayesian: :math:`\text{b}(\widehat{\Theta}_n)=\mathbb{E}[\tilde{\Theta}_n]=\mathbb{E}[\widehat{\Theta}_n]-\mathbb{E}[\Theta]`
 	* **Standard Error**:
 
 		* Classical: :math:`\text{se}(\widehat{\Theta}_n)=\sqrt{\mathbb{V}_{\theta}(\widehat{\Theta}_n)}`
@@ -145,9 +145,15 @@ Some useful terminology
 -------------------------------------------------------------------------------------------
 .. note::
 	* **Pointwise Asymptotic CI**: :math:`\forall\theta,\liminf\limits_{n\to\infty}\mathbb{P}_{\theta}(\theta\in\widehat{C}_n)\ge 1-\alpha`
+
+		* Given any :math:`\theta`, we consider the smallest probability that :math:`\widehat{C}_n` captures :math:`\theta`.
+		* This probability is at least :math:`1-\alpha` asymptotically as :math:`n\to\infty`.
+		* The rate of this convergence depends on the value of :math:`theta`.
 	* **Uniform Asymptotic CI**: :math:`\liminf\limits_{n\to\infty}\inf\limits_{\theta\in\Theta}\mathbb{P}_{\theta}(\theta\in\widehat{C}_n)\ge 1-\alpha`
 
-		* Uniform Asymptotic CI is stricter.
+		* Given any :math:`n`, we consider the smallest probability that :math:`\widehat{C}_n` captures :math:`\theta` for any :math:`\theta`.
+		* This probability is at least :math:`1-\alpha` asymptotically as :math:`n\to\infty`.
+		* Uniform Asymptotic CI is stricter, as in, satisfying this condition automatically implies the former.
 	* **Normal-based CI**: If :math:`\widehat{\Theta}_n` is an aysmptotically normal estimator of :math:`\theta`, then a :math:`1-\alpha` confidence interval is given by
 
 		.. math:: (\widehat{\Theta}_n-z_{\alpha/2}\widehat{\text{se}},\widehat{\Theta}_n+z_{\alpha/2}\widehat{\text{se}})
