@@ -42,6 +42,8 @@ Let :math:`\mathbf{A}` be the matrix as before and let :math:`\mathbf{B}` be a :
 
 	.. math:: \mathbf{B}=\begin{bmatrix}-&\mathbf{b}^*_1&-\\&\vdots&\\-&\mathbf{b}^*_n&-\end{bmatrix}
 
+where :math:`\mathbf{b}^*_k\in\mathbb{R}^p` are the row vectors.
+
 .. note::
 	The multiplication :math:`\mathbf{A}\mathbf{B}` is the sum of outer products :math:`\mathbf{u}\mathbf{v}^\top=\mathbf{a}_k \mathbf{b}^*_k`
 
