@@ -50,7 +50,7 @@ where :math:`\mathbf{b}^*_k\in\mathbb{R}^p` are the row vectors.
 		.. math:: \mathbf{A}\mathbf{B}=\begin{bmatrix} | & \cdots & |\\ \mathbf{a}_1 & \cdots & \mathbf{a}_n\\ | & \cdots & |\\ \end{bmatrix}\begin{bmatrix}-&\mathbf{b}^*_1&-\\&\vdots&\\-&\mathbf{b}^*_n&-\end{bmatrix}=\begin{bmatrix}|\\ \mathbf{a}_1\\|\end{bmatrix}\begin{bmatrix}-&\mathbf{b}^*_1&-\end{bmatrix}+\cdots+\begin{bmatrix}|\\ \mathbf{a}_n\\|\end{bmatrix}\begin{bmatrix}-&\mathbf{b}^*_n&-\end{bmatrix}
 
 ********************************************************************************
-Independence, Rank, Inverse Mapping, Basis and Subspaces
+Independence, Rank, Inverse Mapping, Basis and Fundamental Subspaces
 ********************************************************************************
 Independence
 ================================================================================
@@ -92,6 +92,23 @@ Basis
 
 .. attention::
 	* There can be multiple basis vectors for a matrix which span the same column space.
+
+Fundamental Subspaces
+================================================================================
+.. note::
+	* We define the **null-space** of :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^m` as the subspace in the domain :math:`\mathbb{R}^n` which maps to :math:`\mathbf{0}` in the range :math:`\mathbb{R}^m`.
+
+		.. math:: N(\mathbf{A})\subseteq \mathbb{R}^n
+	* The vectors in the null-space span a :math:`n-r` dimensional space where :math:`r` is the rank of the matrix.
+
+		* We prefer the basis for the null-space to be orthogonal although it's not a necessity.
+	* The **right-null-space** is defined as the null-space of the transposed operator :math:`\mathbf{A}^\top`.
+
+.. attention::
+	* :math:`\dim(C(\mathbf{A}))=r` and :math:`\dim(N(\mathbf{A}^\top))=m-r`
+	* :math:`\dim(C(\mathbf{A}^\top))=r` and :math:`\dim(N(\mathbf{A}))=n-r`
+	* :math:`C(\mathbf{A})\mathop{\bot} N(\mathbf{A}^\top)` and :math:`C(\mathbf{A}^\top)\mathop{\bot} N(\mathbf{A})`
+	* :math:`\mathbf{A}:\text{span}\left(C(\mathbf{A}^\top)\mathop{\cup} N(\mathbf{A})\right)=\mathbb{R}^n\mapsto \text{span}\left(C(\mathbf{A})\mathop{\cup} N(\mathbf{A}^\top)\right)=\mathbb{R}^m`
 
 ********************************************************************************
 Topics
