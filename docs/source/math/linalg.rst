@@ -137,7 +137,7 @@ Matrix with orthonormal columns
 	* We note that :math:`\mathbf{Q}^\top\mathbf{Q}=\mathbf{I}`.
 	* **Doesn't change the length:** :math:`||\mathbf{Q}\mathbf{x}||=||\mathbf{x}||` but might lose/gain a few dimensions though based on the dimensionality of :math:`\mathbf{Q}`.
 
-		.. math: ||\mathbf{Q}\mathbf{x}||=(\mathbf{Q}\mathbf{x})^\top(\mathbf{Q}\mathbf{x})=\mathbf{x}^\top(\mathbf{Q}^\top\mathbf{Q})\mathbf{x}=\mathbf{x}^\top\mathbf{x}=||\mathbf{x}||
+		.. math:: ||\mathbf{Q}\mathbf{x}||=(\mathbf{Q}\mathbf{x})^\top(\mathbf{Q}\mathbf{x})=\mathbf{x}^\top(\mathbf{Q}^\top\mathbf{Q})\mathbf{x}=\mathbf{x}^\top\mathbf{x}=||\mathbf{x}||
 
 Projection matrices
 ================================================================================
