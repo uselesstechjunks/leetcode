@@ -5,7 +5,7 @@ Linear Algebra
 ********************************************************************************
 Matrix-vector multiplication
 ********************************************************************************
-Let :math:`\mathbf{A} be a :math:`m\times n` matrix
+Let :math:`\mathbf{A}` be a :math:`m\times n` matrix
 
 	.. math:: \mathbf{A}=\begin{bmatrix} | & \cdots & |\\ \mathbf{a}_1 & \cdots & \mathbf{a}_n\\ | & \cdots & |\\ \end{bmatrix}
 
