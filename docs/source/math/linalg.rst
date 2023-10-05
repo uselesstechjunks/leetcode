@@ -114,7 +114,7 @@ Orthogonality
 Orthogonal vectors
 ================================================================================
 .. note::
-	Two vectors :math:`\mathbf{u}` and :math:`\mathbf{v}` are orthogonal if :math:`\mathbf{u}^\top\mathbf{v}=\mathbf{0}`.
+	Two vectors :math:`\mathbf{u}` and :math:`\mathbf{v}` are orthogonal if :math:`\mathbf{u}^\top\mathbf{v}=0`.
 
 .. tip::
 	* Pythagoras: For :math:`\mathbf{x}\mathop{\bot}\mathbf{y}`
