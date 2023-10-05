@@ -123,7 +123,7 @@ Orthogonal vectors
 	* In general, :math:`\mathbf{x}^\top\mathbf{y}=||\mathbf{x}||\cdot||\mathbf{y}||\cdot\cos\theta`
 
 .. attention::
-	If :math:`\mathbf{x}\in N(\mathbf{A})`, then :math:`\mathbf{a}^*_k\bot\mathbf{x}` as :math:`(\mathbf{a}^*_k)^\top\mathbf{x}=\mathbf{0}`.
+	If :math:`\mathbf{x}\in N(\mathbf{A})`, then :math:`\mathbf{a}^*_k\mathop{\bot}\mathbf{x}` as :math:`(\mathbf{a}^*_k)^\top\mathbf{x}=0`.
 
 Orthonormal vectors
 ================================================================================
