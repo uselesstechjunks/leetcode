@@ -160,6 +160,9 @@ Orthogonal matrices
 	* We have :math:`\mathbf{Q}^\top=\mathbf{Q}^{-1}` since
 
 		.. math:: \mathbf{Q}^\top\mathbf{Q}=\mathbf{Q}^\top\mathbf{Q}=\mathbf{I}
+	* They represent a **pure rotation** or **reflection** in :math:`\mathbb{R}^n` as neigher the length or the dimensionality changes.
+
+		* Positive determinant implies rotation, negative reflection (as the orientation changes).
 
 Orthogonal basis
 ================================================================================
