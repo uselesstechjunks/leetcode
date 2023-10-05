@@ -38,7 +38,7 @@ where :math:`\mathbf{a}_k\in\mathbb{R}^m` are column vectors. Let :math:`\mathbf
 ********************************************************************************
 Matrix-matrix multiplication
 ********************************************************************************
-Let :math:`\mathbf{A}` be the matrix as before and let :math:`\mathbf{B} be a :math:`n\times p` matrix written as a collection of rows similar to a vector
+Let :math:`\mathbf{A}` be the matrix as before and let :math:`\mathbf{B}` be a :math:`n\times p` matrix written as a collection of rows similar to a vector
 
 	.. math:: \mathbf{B}=\begin{bmatrix}-&\mathbf{b}^*_1&-\\&\vdots&\\-&\mathbf{b}^*_n&-\end{bmatrix}
 
