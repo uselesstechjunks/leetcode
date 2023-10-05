@@ -24,7 +24,13 @@ where :math:`\mathbf{a}_k\in\mathbb{R}^m` are column vectors. Let :math:`\mathbf
 		.. math:: \mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^m
 	* The range of this operator is the **column space** of this operator
 
-		.. math:: C(\mathbf{A})=\left{\mathbf{A}\mathbf{x}\right|\forall \mathbf{x}\in\mathbb{R}^n}
+		.. math:: C(\mathbf{A})=\{\mathbf{A}\mathbf{x}\mathop{|}\forall \mathbf{x}\in\mathbb{R}^n\}
+	* The transposed matrix :math:`\mathbf{A}^\top` does the mapping the other way around (but it's not necessarily the inverse operator)
+
+		.. math:: \mathbf{A}^\top:\mathbb{R}^m\mapsto\mathbb{R}^n
+	* The range of the transpose operator is the **row space** of :math:`\mathbf{A}`
+
+		.. math:: C(\mathbf{A}^\top)=\{\mathbf{A}^\top\mathbf{y}\mathop{|}\forall \mathbf{y}\in\mathbb{R}^m\}
 
 ********************************************************************************
 Topics
