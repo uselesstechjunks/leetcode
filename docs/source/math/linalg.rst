@@ -11,7 +11,7 @@ Let :math:`\mathbf{A}` be a :math:`m\times n` matrix
 
 where :math:`\mathbf{a}_k\in\mathbb{R}^m` are column vectors. Let :math:`\mathbf{x}\in\mathbb{R}^n` be a column vector which can also be thought of as a :math:`n\times 1` matrix
 
-	.. math:: \mathbb{x}=[x_1,\cdots,x_n]^\top=\begin{bmatrix} x_1\\ \vdots\\ x_n \end{bmatrix}
+	.. math:: \mathbb{x}=(x_1,\cdots,x_n)^\top=\begin{bmatrix} x_1\\ \vdots\\ x_n \end{bmatrix}
 
 .. note::
 	* TODO
