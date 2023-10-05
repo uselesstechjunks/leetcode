@@ -72,7 +72,7 @@ Rank determines whether the linear operator :math:`\mathbf{A}` defines a mapping
 	* The number of independent row vectors in a matrix :math:`\mathbf{A}` is the **row-rank**.
 
 .. attention::
-	* For any matrix :math:`\mathbf{A}`, column-rank and row-rank are the same, and it is called the **rank of a matrix**, :math:`r\leq m` and :math:`r\leq n.
+	* For any matrix :math:`\mathbf{A}`, column-rank and row-rank are the same, and it is called the **rank of a matrix**, :math:`r\leq m` and :math:`r\leq n`.
 	* :math:`r` is the dimensionality of the column-space :math:`C(\mathbf{A})` as well as the row-space :math:`C(\mathbf{A}^\top)`.
 	* If :math:`m=n=r`, then the matrix is **full-rank**.
 
