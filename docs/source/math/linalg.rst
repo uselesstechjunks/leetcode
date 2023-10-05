@@ -117,7 +117,7 @@ Orthogonal vectors
 	Two vectors :math:`\mathbf{u}` and :math:`\mathbf{v}` are orthogonal if :math:`\mathbf{u}^\top\mathbf{v}=\mathbf{0}`.
 
 .. tip::
-	* Pythagoras: For :math:`\mathbf{x}\bot\mathbf{y}`
+	* Pythagoras: For :math:`\mathbf{x}\mathop{\bot}\mathbf{y}`
 
 		.. math:: ||\mathbf{x}-\mathbf{y}||=(\mathbf{x}-\mathbf{y})^\top(\mathbf{x}-\mathbf{y})=\mathbf{x}^\top\mathbf{x}+\mathbf{y}^\top\mathbf{y}-\mathbf{x}^\top\mathbf{y}-\mathbf{y}^\top\mathbf{x}=\mathbf{x}^\top\mathbf{x}+\mathbf{y}^\top\mathbf{y}=||\mathbf{x}||+||\mathbf{y}||
 	* In general, :math:`\mathbf{x}^\top\mathbf{y}=||\mathbf{x}||\cdot||\mathbf{y}||\cdot\cos\theta`
