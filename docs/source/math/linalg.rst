@@ -107,6 +107,67 @@ Fundamental Subspaces
 .. attention::
 	* :math:`\dim(C(\mathbf{A}))=r` and :math:`\dim(N(\mathbf{A}^\top))=m-r`
 	* :math:`\dim(C(\mathbf{A}^\top))=r` and :math:`\dim(N(\mathbf{A}))=n-r`
+
+********************************************************************************
+Orthogonality
+********************************************************************************
+Orthogonal vectors
+================================================================================
+.. note::
+	Two vectors :math:`\mathbf{u}` and :math:`\mathbf{v}` are orthogonal if :math:`\mathbf{u}^\top\mathbf{v}=\mathbf{0}`.
+
+.. tip::
+	* Pythagoras: For :math:`\mathbf{x}\bot\mathbf{y}`
+
+		.. math:: ||\mathbf{x}-\mathbf{y}||=(\mathbf{x}-\mathbf{y})^\top(\mathbf{x}-\mathbf{y})=\mathbf{x}^\top\mathbf{x}+\mathbf{y}^\top\mathbf{y}-\mathbf{x}^\top\mathbf{y}-\mathbf{y}^\top\mathbf{x}=\mathbf{x}^\top\mathbf{x}+\mathbf{y}^\top\mathbf{y}=||\mathbf{x}||+||\mathbf{y}||
+	* In general, :math:`\mathbf{x}^\top\mathbf{y}=||\mathbf{x}||\cdot||\mathbf{y}||\cdot\cos\theta`
+
+.. attention::
+	If :math:`\mathbf{x}\in N(\mathbf{A})`, then :math:`\mathbf{a}^*_k\bot\mathbf{x}` as :math:`(\mathbf{a}^*_k)^\top\mathbf{x}=\mathbf{0}`.
+
+Orthonormal vectors
+================================================================================
+.. note::
+	Orthogonal vectors such that :math:`||\mathbf{u}||=1`.
+
+Matrix with orthonormal columns
+================================================================================
+.. note::
+	* Written as :math:`\mathbf{Q}`.
+	* We note that :math:`\mathbf{Q}^\top\mathbf{Q}=\mathbf{I}`.
+	* **Doesn't change the length:** :math:`||\mathbf{Q}\mathbf{x}||=||\mathbf{x}||` but might lose/gain a few dimensions though based on the dimensionality of :math:`\mathbf{Q}`.
+
+		.. math: ||\mathbf{Q}\mathbf{x}||=(\mathbf{Q}\mathbf{x})^\top(\mathbf{Q}\mathbf{x})=\mathbf{x}^\top(\mathbf{Q}^\top\mathbf{Q})\mathbf{x}=\mathbf{x}^\top\mathbf{x}=||\mathbf{x}||
+
+Projection matrices
+================================================================================
+.. note::
+	* Any matrix :math:`\mathbf{P}=\mathbf{Q}\mathbf{Q}^\top` is a projection matrix which projects any vector in the column space of :math:`\mathbf{Q}`.
+	* **Repeated projection doesn't change anything**
+
+		.. math:: \mathbf{P}^2=(\mathbf{Q}\mathbf{Q}^\top)(\mathbf{Q}\mathbf{Q}^\top)=\mathbf{Q}(\mathbf{Q}^\top\mathbf{Q})\mathbf{Q}^\top=\mathbf{Q}\mathbf{Q}^\top=\mathbf{P}
+	* Any vector :math:`\mathbf{v}` can be broken into two parts
+
+		* Projection :math:`\mathbf{P}\mathbf{v}`
+		* Error :math:`\mathbf{v}-\mathbf{P}\mathbf{v}`
+
+Orthogonal matrices
+================================================================================
+.. note::
+	Symmetric matrices with orthonormal columns such that :math:`\mathbf{Q}^\top=\mathbf{Q}`.
+
+.. attention::
+	* We have :math:`\mathbf{Q}^\top=\mathbf{Q}^{-1}` since
+
+		.. math:: \mathbf{Q}^\top\mathbf{Q}=\mathbf{Q}^\top\mathbf{Q}=\mathbf{I}
+
+Orthogonal basis
+================================================================================
+TODO
+
+Orthogonal subspace
+================================================================================
+.. attention::
 	* :math:`C(\mathbf{A})\mathop{\bot} N(\mathbf{A}^\top)` and :math:`C(\mathbf{A}^\top)\mathop{\bot} N(\mathbf{A})`
 	* :math:`\mathbf{A}:\text{span}\left(C(\mathbf{A}^\top)\mathop{\cup} N(\mathbf{A})\right)=\mathbb{R}^n\mapsto \text{span}\left(C(\mathbf{A})\mathop{\cup} N(\mathbf{A}^\top)\right)=\mathbb{R}^m`
 
@@ -140,6 +201,9 @@ Gram-Schmidt Orgthogonalisation
 
 Eigendecomposition
 ================================================================================
+
+Special case: Symmetric Real Matrices
+--------------------------------------------------------------------------------
 
 Singular Value Decomposition
 ================================================================================
