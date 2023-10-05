@@ -32,6 +32,9 @@ where :math:`\mathbf{a}_k\in\mathbb{R}^m` are column vectors. Let :math:`\mathbf
 
 		.. math:: C(\mathbf{A}^\top)=\{\mathbf{A}^\top\mathbf{y}\mathop{|}\forall \mathbf{y}\in\mathbb{R}^m\}
 
+.. attention::
+	The equation :math:`\mathbf{A}\mathbf{x}=\mathbf{b}` has a unique solution if :math:`\mathbf{b}\in C(\mathbf{A})`.
+
 ********************************************************************************
 Topics
 ********************************************************************************
