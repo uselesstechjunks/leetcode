@@ -143,14 +143,20 @@ Matrix with orthonormal columns
 Projection matrices
 ================================================================================
 .. note::
-	* Any matrix :math:`\mathbf{P}=\mathbf{Q}\mathbf{Q}^\top` is a projection matrix which projects any vector in the column space of :math:`\mathbf{Q}`.
-	* **Repeated projection doesn't change anything**
-
-		.. math:: \mathbf{P}^2=(\mathbf{Q}\mathbf{Q}^\top)(\mathbf{Q}\mathbf{Q}^\top)=\mathbf{Q}(\mathbf{Q}^\top\mathbf{Q})\mathbf{Q}^\top=\mathbf{Q}\mathbf{Q}^\top=\mathbf{P}
+	* Any matrix that can be factorised as :math:`\mathbf{P}=\mathbf{Q}\mathbf{Q}^\top` is a projection matrix. 
+	* For any vector :math:`\mathbf{v}`, :math:`\mathbf{P}\mathbf{v}` is the orthogonal projection onto the column space of :math:`\mathbf{P}`.
 	* Any vector :math:`\mathbf{v}` can be broken into two parts
 
 		* Projection :math:`\mathbf{P}\mathbf{v}`
 		* Error :math:`\mathbf{v}-\mathbf{P}\mathbf{v}`
+
+.. attention::
+	* **Repeated projection doesn't change anything**
+
+		.. math:: \mathbf{P}^2=(\mathbf{Q}\mathbf{Q}^\top)(\mathbf{Q}\mathbf{Q}^\top)=\mathbf{Q}(\mathbf{Q}^\top\mathbf{Q})\mathbf{Q}^\top=\mathbf{Q}\mathbf{Q}^\top=\mathbf{P}
+	* **Projection matrices are symmetric**
+
+		.. math:: \mathbf{P}^\top=(\mathbf{Q}\mathbf{Q}^\top)^\top=(\mathbf{Q}^\top)^\top\mathbf{Q}^\top=\mathbf{Q}\mathbf{Q}^\top=\mathbf{P}
 
 Orthogonal matrices
 ================================================================================
