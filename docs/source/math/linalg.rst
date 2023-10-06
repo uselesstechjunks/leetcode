@@ -181,9 +181,12 @@ Orthonormal basis
 		* Let the orthogonal basis vectors are :math:`\mathbf{q}_1,\cdots,\mathbf{q}_n`. Then any vector :math:`\mathbf{v}\in\mathbb{R}^n` can be expressed as
 
 			.. math:: \mathbf{v}=c_1\mathbf{q}_1+\cdots+c_n\mathbf{q}_n
-		* The scalar along any :math:`\mathbf{q}_k` can be obtained using projection rule
+		* The scalar along any :math:`\mathbf{q}_k` can be obtained as :math:`c_k=\mathbf{q}_k^\top\mathbf{v}` since
 
-			.. math:: c_k=(\mathbf{q}_k\mathbf{q}_k^\top)\mathbf{v}
+			.. math:: \mathbf{q}_k^\top\mathbf{v}=c_1\mathbf{q}_k^\top\mathbf{q}_1+\cdots+c_k\mathbf{q}_k^\top\mathbf{q}_k+\cdots+c_n\mathbf{q}_k^\top\mathbf{q}_n=c_1\cdot0+\cdots+c_k\cdot1+\cdots+c_n\cdot0=c_k
+
+.. tip::
+	* We can create an orthogonal matrix :math:`\mathbf{Q}` with the basis vectors as columns. Then all these coefficients can be found using :math:`\mathbf{Q}\mathbf{v}`.
 
 Orthogonal subspace
 ================================================================================
