@@ -171,6 +171,7 @@ Orthonormal basis
 	* Standard co-ordinate vectors are an example of orthonormal basis.
 	* It's not necessary for basis vectors to be orthonormal but it's desired.
 	* For orthonormal basis, we can obtain the scalar along each component independently.
+
 		* Let the orthogonal basis vectors are :math:`\mathbf{q}_1,\cdots,\mathbf{q}_n`. Then any vector :math:`\mathbf{v}\in\mathbb{R}^n` can be expressed as
 
 			.. math:: \mathbf{v}=c_1\mathbf{q}_1+\cdots+c_n\mathbf{q}_n
