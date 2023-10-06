@@ -57,7 +57,7 @@ Independence
 .. note::
 	* Vector :math:`\mathbf{u}` is linearly independent of vector :math:`\mathbf{v}` if they are not in the same direction.
 
-		* There is not scalar :math:`a\in\mathbb{R}` such that :math:`\mathbf{u}=a\mathbf{v}`
+		* There is no scalar :math:`a\in\mathbb{R}` such that :math:`\mathbf{u}=a\mathbf{v}`
 	* Vector :math:`\mathbf{w}` is linearly independent of vectors :math:`\mathbf{u}` and :math:`\mathbf{v}` if it is not in the same place spanned by these.
 
 		* There are no scalars :math:`a,b\in\mathbb{R}` such that :math:`\mathbf{w}=a\mathbf{u}+b\mathbf{v}`
@@ -123,7 +123,8 @@ Orthogonal vectors
 	* In general, :math:`\mathbf{x}^\top\mathbf{y}=||\mathbf{x}||\cdot||\mathbf{y}||\cdot\cos\theta`
 
 .. attention::
-	If :math:`\mathbf{x}\in N(\mathbf{A})`, then :math:`\mathbf{a}^*_k\mathop{\bot}\mathbf{x}` as :math:`(\mathbf{a}^*_k)^\top\mathbf{x}=0`.
+	* If :math:`\mathbf{x}\in N(\mathbf{A})`, then for any :math:`k`, :math:`\mathbf{a}^*_k\mathop{\bot}\mathbf{x}` as :math:`(\mathbf{a}^*_k)^\top\mathbf{x}=0`.
+	* Therefore, any vector in the null-space cannot be spanned by the row-space of :math:`\mathbf{A}`.
 
 Orthonormal vectors
 ================================================================================
@@ -164,9 +165,18 @@ Orthogonal matrices
 
 		* Positive determinant implies rotation, negative reflection (as the orientation changes).
 
-Orthogonal basis
+Orthonormal basis
 ================================================================================
-TODO
+.. note::
+	* Standard co-ordinate vectors are an example of orthonormal basis.
+	* It's not necessary for basis vectors to be orthonormal but it's desired.
+	* For orthonormal basis, we can obtain the scalar along each component independently.
+		* Let the orthogonal basis vectors are :math:`\mathbf{q}_1,\cdots,\mathbf{q}_n`. Then any vector :math:`\mathbf{v}\in\mathbb{R}^n` can be expressed as
+
+			.. math:: \mathbf{v}=c_1\mathbf{q}_1+\cdots+c_n\mathbf{q}_n
+		* The scalar along any :math:`\mathbf{q}_k` can be obtained using projection rule
+
+			.. math:: c_k=(\mathbf{q}_k\mathbf{q}_k^\top)\mathbf{v}
 
 Orthogonal subspace
 ================================================================================
