@@ -11,7 +11,7 @@ Let :math:`\mathbf{A}` be a :math:`m\times n` matrix.
 
 	.. math:: \mathbf{A}=\begin{bmatrix} | & \cdots & |\\ \mathbf{a}_1 & \cdots & \mathbf{a}_n\\ | & \cdots & |\\ \end{bmatrix}
 
-* Row view: :math:`\mathbf{a}^*_k\in\mathbb{R}^n` are row vectors
+* Row view: :math:`(\mathbf{a}^*_k)^\top\in\mathbb{R}^n` are row vectors
 
 	.. math:: \mathbf{A}=\begin{bmatrix}-&\mathbf{a}^*_1&-\\&\vdots&\\-&\mathbf{a}^*_m&-\end{bmatrix}
 
@@ -26,7 +26,7 @@ Let :math:`\mathbf{x}\in\mathbb{R}^n` be a column vector which can also be thoug
 
 	* Row view: It can also be thought of the collection of inner products with each row vectors
 
-		.. math:: \mathbf{A}\mathbf{x}=\begin{bmatrix}\langle\mathbf{a}^*_1,\mathbf{x}\rangle\\\vdots\\\langle\mathbf{a}^*_m,\mathbf{x}\rangle\end{bmatrix}
+		.. math:: \mathbf{A}\mathbf{x}=\begin{bmatrix}\langle(\mathbf{a}^*_1)^\top,\mathbf{x}\rangle\\\vdots\\\langle(\mathbf{a}^*_m)^\top,\mathbf{x}\rangle\end{bmatrix}
 
 .. tip::
 	* The matrix :math:`\mathbf{A}` is a linear operator which maps :math:`\mathbb{R}^n` dimensional vectors to :math:`\mathbb{R}^m` dimensional vectors.
