@@ -5,18 +5,28 @@ Linear Algebra
 ********************************************************************************
 Matrix-vector multiplication
 ********************************************************************************
-Let :math:`\mathbf{A}` be a :math:`m\times n` matrix
+Let :math:`\mathbf{A}` be a :math:`m\times n` matrix. 
+
+* Column view: :math:`\mathbf{a}_k\in\mathbb{R}^m` are column vectors in :math:`\mathbb{R}^m`
 
 	.. math:: \mathbf{A}=\begin{bmatrix} | & \cdots & |\\ \mathbf{a}_1 & \cdots & \mathbf{a}_n\\ | & \cdots & |\\ \end{bmatrix}
 
-where :math:`\mathbf{a}_k\in\mathbb{R}^m` are column vectors. Let :math:`\mathbf{x}\in\mathbb{R}^n` be a column vector which can also be thought of as a :math:`n\times 1` matrix
+* Row view: :math:`\mathbf{a}^*_k\in\mathbb{R}^m` are row vectors in :math:`\mathbb{R}^n`
+
+	.. math:: \mathbf{A}=\begin{bmatrix}-&\mathbf{a}^*_1&-\\&\vdots&\\-&\mathbf{a}^*_m&-\end{bmatrix}
+
+Let :math:`\mathbf{x}\in\mathbb{R}^n` be a column vector which can also be thought of as a :math:`n\times 1` matrix
 
 	.. math:: \mathbf{x}=(x_1,\cdots,x_n)^\top=\begin{bmatrix} x_1\\ \vdots\\ x_n \end{bmatrix}
 
 .. note::
-	The multiplication :math:`\mathbf{A}\mathbf{x}` is a combination of the column vectors of :math:`\mathbf{A}`, where each vector :math:`\mathbf{a}_k` is scaled as per :math:`x_k`.
+	* Column view: The multiplication :math:`\mathbf{A}\mathbf{x}` is a combination of the column vectors of :math:`\mathbf{A}`, where each vector :math:`\mathbf{a}_k` is scaled as per :math:`x_k`.
 
 		.. math:: \mathbf{A}\mathbf{x}=\begin{bmatrix} | & \cdots & |\\ \mathbf{a}_1 & \cdots & \mathbf{a}_n\\ | & \cdots & |\\ \end{bmatrix}\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}=x_1\begin{bmatrix}|\\ \mathbf{a}_1\\|\end{bmatrix}+\cdots+x_n\begin{bmatrix}|\\ \mathbf{a}_n\\|\end{bmatrix}
+
+	* Row view: It can also be thought of the collection of inner products with each row vectors
+
+		.. math:: \mathbf{A}\mathbf{x}=\begin{bmatrix}(\mathbf{a}^*_1)^\top\mathbf{x}\\\vdots\\(\mathbf{a}^*_m)^\top\mathbf{x}\end{bmatrix}
 
 .. tip::
 	* The matrix :math:`\mathbf{A}` is a linear operator which maps :math:`\mathbb{R}^n` dimensional vectors to :math:`\mathbb{R}^m` dimensional vectors.
