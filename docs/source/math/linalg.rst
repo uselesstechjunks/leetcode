@@ -11,7 +11,7 @@ Let :math:`\mathbf{A}` be a :math:`m\times n` matrix.
 
 	.. math:: \mathbf{A}=\begin{bmatrix} | & \cdots & |\\ \mathbf{a}_1 & \cdots & \mathbf{a}_n\\ | & \cdots & |\\ \end{bmatrix}
 
-* Row view: :math:`\mathbf{a}^*_k\in\mathbb{R}^m` are row vectors in :math:`\mathbb{R}^n`
+* Row view: :math:`\mathbf{a}^*_k\in\mathbb{R}^n` are row vectors in :math:`\mathbb{R}^n`
 
 	.. math:: \mathbf{A}=\begin{bmatrix}-&\mathbf{a}^*_1&-\\&\vdots&\\-&\mathbf{a}^*_m&-\end{bmatrix}
 
