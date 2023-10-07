@@ -5,18 +5,28 @@ Linear Algebra
 ********************************************************************************
 Matrix-vector multiplication
 ********************************************************************************
-Let :math:`\mathbf{A}` be a :math:`m\times n` matrix
+Let :math:`\mathbf{A}` be a :math:`m\times n` matrix. 
+
+* Column view: :math:`\mathbf{a}_k\in\mathbb{R}^m` are column vectors
 
 	.. math:: \mathbf{A}=\begin{bmatrix} | & \cdots & |\\ \mathbf{a}_1 & \cdots & \mathbf{a}_n\\ | & \cdots & |\\ \end{bmatrix}
 
-where :math:`\mathbf{a}_k\in\mathbb{R}^m` are column vectors. Let :math:`\mathbf{x}\in\mathbb{R}^n` be a column vector which can also be thought of as a :math:`n\times 1` matrix
+* Row view: :math:`(\mathbf{a}^*_k)^\top\in\mathbb{R}^n` are row vectors
+
+	.. math:: \mathbf{A}=\begin{bmatrix}-&\mathbf{a}^*_1&-\\&\vdots&\\-&\mathbf{a}^*_m&-\end{bmatrix}
+
+Let :math:`\mathbf{x}\in\mathbb{R}^n` be a column vector which can also be thought of as a :math:`n\times 1` matrix
 
 	.. math:: \mathbf{x}=(x_1,\cdots,x_n)^\top=\begin{bmatrix} x_1\\ \vdots\\ x_n \end{bmatrix}
 
 .. note::
-	The multiplication :math:`\mathbf{A}\mathbf{x}` is a combination of the column vectors of :math:`\mathbf{A}`, where each vector :math:`\mathbf{a}_k` is scaled as per :math:`x_k`.
+	* Column view: The multiplication :math:`\mathbf{A}\mathbf{x}` is a combination of the column vectors of :math:`\mathbf{A}`, where each vector :math:`\mathbf{a}_k` is scaled as per :math:`x_k`.
 
 		.. math:: \mathbf{A}\mathbf{x}=\begin{bmatrix} | & \cdots & |\\ \mathbf{a}_1 & \cdots & \mathbf{a}_n\\ | & \cdots & |\\ \end{bmatrix}\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}=x_1\begin{bmatrix}|\\ \mathbf{a}_1\\|\end{bmatrix}+\cdots+x_n\begin{bmatrix}|\\ \mathbf{a}_n\\|\end{bmatrix}
+
+	* Row view: It can also be thought of the collection of inner products with each row vectors
+
+		.. math:: \mathbf{A}\mathbf{x}=\begin{bmatrix}\langle(\mathbf{a}^*_1)^\top,\mathbf{x}\rangle\\\vdots\\\langle(\mathbf{a}^*_m)^\top,\mathbf{x}\rangle\end{bmatrix}
 
 .. tip::
 	* The matrix :math:`\mathbf{A}` is a linear operator which maps :math:`\mathbb{R}^n` dimensional vectors to :math:`\mathbb{R}^m` dimensional vectors.
@@ -57,7 +67,7 @@ Independence
 .. note::
 	* Vector :math:`\mathbf{u}` is linearly independent of vector :math:`\mathbf{v}` if they are not in the same direction.
 
-		* There is not scalar :math:`a\in\mathbb{R}` such that :math:`\mathbf{u}=a\mathbf{v}`
+		* There is no scalar :math:`a\in\mathbb{R}` such that :math:`\mathbf{u}=a\mathbf{v}`
 	* Vector :math:`\mathbf{w}` is linearly independent of vectors :math:`\mathbf{u}` and :math:`\mathbf{v}` if it is not in the same place spanned by these.
 
 		* There are no scalars :math:`a,b\in\mathbb{R}` such that :math:`\mathbf{w}=a\mathbf{u}+b\mathbf{v}`
@@ -123,7 +133,8 @@ Orthogonal vectors
 	* In general, :math:`\mathbf{x}^\top\mathbf{y}=||\mathbf{x}||\cdot||\mathbf{y}||\cdot\cos\theta`
 
 .. attention::
-	If :math:`\mathbf{x}\in N(\mathbf{A})`, then :math:`\mathbf{a}^*_k\mathop{\bot}\mathbf{x}` as :math:`(\mathbf{a}^*_k)^\top\mathbf{x}=0`.
+	* If :math:`\mathbf{x}\in N(\mathbf{A})`, then for any :math:`k`, :math:`\mathbf{a}^*_k\mathop{\bot}\mathbf{x}` as :math:`(\mathbf{a}^*_k)^\top\mathbf{x}=0`.
+	* Therefore, any vector in the null-space cannot be spanned by the row-space of :math:`\mathbf{A}`.
 
 Orthonormal vectors
 ================================================================================
@@ -142,14 +153,20 @@ Matrix with orthonormal columns
 Projection matrices
 ================================================================================
 .. note::
-	* Any matrix :math:`\mathbf{P}=\mathbf{Q}\mathbf{Q}^\top` is a projection matrix which projects any vector in the column space of :math:`\mathbf{Q}`.
-	* **Repeated projection doesn't change anything**
-
-		.. math:: \mathbf{P}^2=(\mathbf{Q}\mathbf{Q}^\top)(\mathbf{Q}\mathbf{Q}^\top)=\mathbf{Q}(\mathbf{Q}^\top\mathbf{Q})\mathbf{Q}^\top=\mathbf{Q}\mathbf{Q}^\top=\mathbf{P}
+	* Any matrix that can be factorised as :math:`\mathbf{P}=\mathbf{Q}\mathbf{Q}^\top` is a projection matrix. 
+	* For any vector :math:`\mathbf{v}`, :math:`\mathbf{P}\mathbf{v}` is the orthogonal projection onto the column space of :math:`\mathbf{P}`.
 	* Any vector :math:`\mathbf{v}` can be broken into two parts
 
 		* Projection :math:`\mathbf{P}\mathbf{v}`
 		* Error :math:`\mathbf{v}-\mathbf{P}\mathbf{v}`
+
+.. attention::
+	* **Repeated projection doesn't change anything**
+
+		.. math:: \mathbf{P}^2=(\mathbf{Q}\mathbf{Q}^\top)(\mathbf{Q}\mathbf{Q}^\top)=\mathbf{Q}(\mathbf{Q}^\top\mathbf{Q})\mathbf{Q}^\top=\mathbf{Q}\mathbf{Q}^\top=\mathbf{P}
+	* **Projection matrices are symmetric**
+
+		.. math:: \mathbf{P}^\top=(\mathbf{Q}\mathbf{Q}^\top)^\top=(\mathbf{Q}^\top)^\top\mathbf{Q}^\top=\mathbf{Q}\mathbf{Q}^\top=\mathbf{P}
 
 Orthogonal matrices
 ================================================================================
@@ -164,9 +181,22 @@ Orthogonal matrices
 
 		* Positive determinant implies rotation, negative reflection (as the orientation changes).
 
-Orthogonal basis
+Orthonormal basis
 ================================================================================
-TODO
+.. note::
+	* Standard co-ordinate vectors are an example of orthonormal basis.
+	* It's not necessary for basis vectors to be orthonormal but it's desired.
+	* For orthonormal basis, we can obtain the scalar along each component independently.
+
+		* Let the orthogonal basis vectors are :math:`\mathbf{q}_1,\cdots,\mathbf{q}_n`. Then any vector :math:`\mathbf{v}\in\mathbb{R}^n` can be expressed as
+
+			.. math:: \mathbf{v}=c_1\mathbf{q}_1+\cdots+c_n\mathbf{q}_n
+		* The scalar along any :math:`\mathbf{q}_k` can be obtained as :math:`c_k=\mathbf{q}_k^\top\mathbf{v}` since
+
+			.. math:: \mathbf{q}_k^\top\mathbf{v}=c_1\mathbf{q}_k^\top\mathbf{q}_1+\cdots+c_k\mathbf{q}_k^\top\mathbf{q}_k+\cdots+c_n\mathbf{q}_k^\top\mathbf{q}_n=c_1\cdot0+\cdots+c_k\cdot1+\cdots+c_n\cdot0=c_k
+
+.. tip::
+	* We can create an orthogonal matrix :math:`\mathbf{Q}` with the basis vectors as columns. Then all these coefficients can be found using :math:`\mathbf{Q}\mathbf{v}`.
 
 Orthogonal subspace
 ================================================================================
