@@ -43,7 +43,7 @@ Eigendecomposition
 		* These are determined entirely by the matrix of the linear transform :math:`\mathbf{A}`.
 	* If all such vectors are collected in a matrix, then
 
-		.. math:: \mathbf{A}\mathbf{X}=\mathbf{A}\begin{bmatrix}|&\cdots&|\\\mathbf{x}_1&\cdots&\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\mathbf{A}\mathbf{x}_1&\cdots&\mathbf{A}\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\lambda_1\mathbf{x}_1&\cdots&\lambda_n\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\mathbf{x}_1&\cdots&\mathbf{x}_n\\|&\cdots&|\end{bmatrix}\begin{bmatrix}\lambda_1 & 0 & \dots & 0 \\ 0 & \lambda_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_n\end{bmatrix}=\mathbf{X}\boldsymbol{\Lambda}
+		.. math:: \mathbf{A}\mathbf{X}=\mathbf{A}\begin{bmatrix}|&|&\cdots&|\\\mathbf{x}_1&\mathbf{x}_2&\cdots&\mathbf{x}_n\\|&|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&|&\cdots&|\\\mathbf{A}\mathbf{x}_1&\mathbf{A}\mathbf{x}_2&\cdots&\mathbf{A}\mathbf{x}_n\\|&|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&|&\cdots&|\\\lambda_1\mathbf{x}_1&\lambda_2\mathbf{x}_2&\cdots&\lambda_n\mathbf{x}_n\\|&|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&|&\cdots&|\\\mathbf{x}_1&\mathbf{x}_2&\cdots&\mathbf{x}_n\\|&|&\cdots&|\end{bmatrix}\begin{bmatrix}\lambda_1 & 0 & \dots & 0 \\ 0 & \lambda_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_n\end{bmatrix}=\mathbf{X}\boldsymbol{\Lambda}
 
 	* Therefore, the matrix factorises as 
 
