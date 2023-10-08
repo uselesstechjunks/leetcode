@@ -34,7 +34,7 @@ Eigendecomposition
 ********************************************************************************
 .. note::
 	* When we're dealing with square matrices :math:`\mathbf{A}_{n\times n}`, we can think of the matrix transforming the input space by rotating or stretching or flipping directions.
-	* Under such a linear transform, there are certain directions which stays fixed (doesn't rotate). They just stretch or flipped.
+	* Under such a linear transform, there are certain directions which stay fixed (they don't rotate). They just get stretched or flipped.
 	* For any vector along these directions, the effect of matrix multiplication is just the same as scalar multiplication which stretches/flips the vectors.
 
 		.. math:: \mathbf{A}\mathbf{x}=\lambda\mathbf{x}
@@ -51,6 +51,9 @@ Eigendecomposition
 
 Properties:
 ================================================================================
+.. note::
+	* The eigenvalues can be real or complex.
+	* **Symmetric matrices have real eigenvalues** while **orthogonal matrices have complex eigenvalues**.
 
 Special case: Symmetric Real Matrices
 ================================================================================
