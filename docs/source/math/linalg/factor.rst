@@ -117,7 +117,11 @@ Special case: Symmetric Real Matrices
 			* Proof Hint
 		* The eigenvectors are orthogonal
 
-			* Proof Hint
+			* Proof Hint: Involve null-space and utilise the fact that for symmetric matrices, row-space and column-space are the same.
+
+				* For some :math:`i\neq j`, let :math:`\lambda_i` and :math:`\lambda_j` be two eigenvalues with corresponding eigenvectors :math:`\mathbf{x}_i` and :math:`\mathbf{x}_j`.
+				* We have :math:`(\mathbf{S}-\lambda_i\mathbf{I})\mathbf{x}_i=\mathbf{0}`. Therefore, :math:`\mathbf{x}_i\in N(\mathbf{S}-\lambda_i\mathbf{I})`.
+				* We also have :math:`(\mathbf{S}-\lambda_i\mathbf{I})\mathbf{x}_j=(\lambda_j-\lambda_i)\mathbf{x}_j`. Therefore, :math:`\mathbf{x}_j\in C(\mathbf{S}-\lambda_i\mathbf{I})=C((\mathbf{S}-\lambda_i\mathbf{I})^\top)`
 	* We usually write :math:`\mathbf{S}=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top`
 
 		* Every matrix in this form is symmetric
