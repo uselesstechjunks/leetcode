@@ -26,6 +26,10 @@ This factorisation keeps the columns of the original matrix intact.
 	* A similar factorisation can also be achieved using original rows as well, :math:`\mathbf{A}=\mathbf{C}\mathbf{M}\mathbf{R}` where :math:`\mathbf{R}` consists of indepoendent row-vectors and :math:`\mathbf{M}_{r\times r}` is a mixing matrix.
 
 ********************************************************************************
+LU Factorisation
+********************************************************************************
+
+********************************************************************************
 Gram-Schmidt Orgthogonalisation
 ********************************************************************************
 
@@ -116,11 +120,29 @@ Special case: Symmetric Real Matrices
 			* Proof Hint
 	* We usually write :math:`\mathbf{S}=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top`
 
+		* Every matrix in this form is symmetric
+
+			.. math:: \mathbf{S}^\top=(\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top)^\top=(\mathbf{Q}^\top)^\top\boldsymbol{\Lambda}^\top\mathbf{Q}^\top=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top=\mathbf{S}
+
 Positive Definite Matrices
 --------------------------------------------------------------------------------
 .. note::
 	* All eigenvalues are positive.
-	* **Quadratic Form**: For any vector :math:`\mathbf{x}`, :math:`\mathbf{x}^\top\mathbf{S}\mathbf{x} > 0`.
+	* **Quadratic Form**: For any vector :math:`\mathbf{x}\neq\mathbf{0}`, :math:`\mathbf{x}^\top\mathbf{S}\mathbf{x} > 0`.
+
+Positive Semi-definite Matrices
+--------------------------------------------------------------------------------
+.. note::
+	* All eigenvalues are :math:`\geq 0`
+	* **Quadratic Form**: For any vector :math:`\mathbf{x}\neq\mathbf{0}`, :math:`\mathbf{x}^\top\mathbf{S}\mathbf{x} \geq 0`.
+
+********************************************************************************
+LDLT Factorisation
+********************************************************************************
+
+********************************************************************************
+Cholesky Factorisation
+********************************************************************************
 
 ********************************************************************************
 Singular Value Decomposition
