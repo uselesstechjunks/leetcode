@@ -43,11 +43,14 @@ Matrix as Linear Operators
 .. attention::
 	* The space of matrices :math:`\mathbf{A}:\mathbb{C}^n\mapsto\mathbb{C}^m` themselves define **another vector space** with the same scalar field.
 
-		.. math:: \mathcal{M}_\mathcal{\mathbf{C}=\{\mathbf{A} \mathop{|} \mathbf{A}:\mathbf{C}^n\mapsto\mathbf{C}^m\}
+		.. math:: \mathcal{M}_\mathbb{C}=\{\mathbf{A} \mathop{|} \mathbf{A}:\mathbb{C}^n\mapsto\mathbb{C}^m\}
 	* For :math:`a,b\in\mathbb{C}` and :math:`\mathbf{A},\mathbf{B}\in\mathcal{M}_\mathbb{C}`, :math:`\mathbf{C}=a\cdot\mathbf{A}+b\cdot\mathbf{B}\in\mathcal{M}_\mathbb{C}`
 
-		.. math:: \mathbf{C}\mathbf{u}=(a\mathbf{A}+b\mathbf{B})\mathbf{u}=a\mathbf{A}\mathbf{u}+b\mathbf{B}\mathbf{u}
-	* There is a unique :math:`\mathbf{0}\in\mathcal{M}_\mathbb{C}` such that :math:`0\cdot\mathbf{A}=\mathbf{0}` and :math:`\mathbf{0}+\mathbf{A}=\mathbf{A}+\mathbf{0}=\mathbf{A}`
+		.. math:: \mathbf{C}\mathbf{u}=(a\cdot\mathbf{A}+b\cdot\mathbf{B})\mathbf{u}=a\cdot\mathbf{A}\mathbf{u}+b\cdot\mathbf{B}\mathbf{u}
+	* There is a unique :math:`\mathbf{0}\in\mathcal{M}_\mathbb{C}` such that 
+
+		* For :math:`0\in \mathcal{F}`, :math:`0\cdot\mathbf{A}=\mathbf{0}` and 
+		* :math:`\mathbf{0}+\mathbf{A}=\mathbf{A}+\mathbf{0}=\mathbf{A}`
 
 ********************************************************************************
 Matrix-vector multiplication
