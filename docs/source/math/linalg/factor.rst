@@ -33,7 +33,24 @@ Gram-Schmidt Orgthogonalisation
 Eigendecomposition
 ********************************************************************************
 .. note::
-	* 
+	* When we're dealing with square matrices :math:`\mathbf{A}_{n\times n}`, we can think of the matrix transforming the input space by rotating or stretching or flipping directions.
+	* Under such a linear transform, there are certain directions which stays fixed (doesn't rotate). They just stretch or flipped.
+	* For any vector along these directions, the effect of matrix multiplication is just the same as scalar multiplication which stretches/flips the vectors.
+
+		.. math:: \mathbf{A}\mathbf{x}=\lambda\mathbf{x}
+
+		* :math:`\lambda` is a eigenvalue and :math:`\mathbf{x}` is a eigenvector of :math:`\mathbf{A}`.
+		* These are determined entirely by the matrix of the linear transform :math:`\mathbf{A}`.
+	* If all such vectors are collected in a matrix, then
+
+		.. math:: \mathbf{A}\mathbf{X}=\mathbf{A}\begin{bmatrix}|&\cdots&|\\\mathbf{x}_1&\cdots&\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\mathbf{A}\mathbf{x}_1&\cdots&\mathbf{A}\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\lambda_1\mathbf{x}_1&\cdots&\lambda_n\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\mathbf{x}_1&\cdots&\mathbf{x}_n\\|&\cdots&|\end{bmatrix}\begin{bmatrix}\lambda_1 & 0 & \dots & 0 \\ 0 & \lambda_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_n\end{bmatrix}=\mathbf{X}\mathbf{\Lambda}
+
+	* Therefore, the matrix factorises as 
+
+		.. math:: \mathbf{A}=\mathbf{A}(\mathbf{X}\mathbf{X}^{-1})=(\mathbf{A}\mathbf{X})\mathbf{X}^{-1}=(\mathbf{X}\mathbf{\Lambda})\mathbf{X}^{-1}=\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1}
+
+Properties:
+================================================================================
 
 Special case: Symmetric Real Matrices
 ================================================================================
