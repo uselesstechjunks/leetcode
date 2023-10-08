@@ -114,19 +114,33 @@ Special case: Symmetric Real Matrices
 
 		* The eigenvalues are all real
 			
-			* Proof Hint
+			* Proof Hint: Multiply with complex conjugate of eigenvectors.
+
+				* Let :math:`\bar{\mathbf{x}}=\begin{bmatrix}\bar{x_1}\\\vdots\\\bar{x_n}\end{bmatrix}=\begin{bmatrix}a_1-ib_1\\\vdots\\a_n-ib_n\end{bmatrix}` be the complex conjugate of the eigenvector :math:`\mathbf{x}=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}=\begin{bmatrix}a_1+ib_1\\\vdots\\a_n+ib_n\end{bmatrix}\in\mathbb{C}^n`.
+				* We have :math:`\bar{\mathbf{x}}^\top\mathbf{S}\mathbf{x}=\lambda\bar{\mathbf{x}}^\top\mathbf{x}`
+				* From RHS: :math:`\sum_{i=1}^n\bar{x_i}x_i=\sum_{i=1}^n a_i^2+b_i^2`, all real.
+				* The LHS: :math:`S_{1,1}(\bar{x_1}x_1)+S_{1,2}(\bar{x_1}x_2+\bar{x_2}x_1)+\cdots`.
+				* Terms of the form :math:`S_{i,i}(\bar{x_i}x_i)` are all real.
+				* Terms of the form :math:`S_{i,j}(\bar{x_i}x_j+\bar{x_j}x_i)=S_{i,j}\left((a_i-ib_i)(a_i+ib_i)+(a_i+ib_i)(a_i-ib_i)\right)` which is also real.
+				* Therefore, :math:`\lambda` must be real.
 		* The eigenvectors are orthogonal
 
 			* Proof Hint: Involve null-space and utilise the fact that for symmetric matrices, row-space and column-space are the same.
 
 				* For some :math:`i\neq j`, let :math:`\lambda_i` and :math:`\lambda_j` be two eigenvalues with corresponding eigenvectors :math:`\mathbf{x}_i` and :math:`\mathbf{x}_j`.
-				* We have :math:`(\mathbf{S}-\lambda_i\mathbf{I})\mathbf{x}_i=\mathbf{0}`. Therefore, :math:`\mathbf{x}_i\in N(\mathbf{S}-\lambda_i\mathbf{I})`.
-				* We also have :math:`(\mathbf{S}-\lambda_i\mathbf{I})\mathbf{x}_j=(\lambda_j-\lambda_i)\mathbf{x}_j`. Therefore, :math:`\mathbf{x}_j\in C(\mathbf{S}-\lambda_i\mathbf{I})=C((\mathbf{S}-\lambda_i\mathbf{I})^\top)`
+				* We have :math:`(\mathbf{S}-\lambda_i\mathbf{I})\mathbf{x}_i=\mathbf{0}`. Therefore
+
+					.. math:: \mathbf{x}_i\in N(\mathbf{S}-\lambda_i\mathbf{I})
+				* We also have :math:`(\mathbf{S}-\lambda_i\mathbf{I})\mathbf{x}_j=(\lambda_j-\lambda_i)\mathbf{x}_j`. Therefore
+
+					.. math:: \mathbf{x}_j\in C(\mathbf{S}-\lambda_i\mathbf{I})=C((\mathbf{S}-\lambda_i\mathbf{I})^\top)
+				* Therefore, :math:`\mathbf{x}_i\mathop{\bot}\mathbf{x}_j` for :math:`i\neq j`.
+
+.. tip::
 	* We usually write :math:`\mathbf{S}=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top`
+	* Every matrix in this form is symmetric
 
-		* Every matrix in this form is symmetric
-
-			.. math:: \mathbf{S}^\top=(\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top)^\top=(\mathbf{Q}^\top)^\top\boldsymbol{\Lambda}^\top\mathbf{Q}^\top=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top=\mathbf{S}
+		.. math:: \mathbf{S}^\top=(\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top)^\top=(\mathbf{Q}^\top)^\top\boldsymbol{\Lambda}^\top\mathbf{Q}^\top=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top=\mathbf{S}
 
 Positive Definite Matrices
 --------------------------------------------------------------------------------
