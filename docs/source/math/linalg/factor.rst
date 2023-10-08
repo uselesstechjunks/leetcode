@@ -180,7 +180,7 @@ Tests for positive definiteness
 
 		* Choices for :math:`\mathbf{A}` can be
 
-			* :math:`\mathbf{S}=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top=(\mathbf{Q}^\top\sqrt{\boldsymbol{\Lambda}})^\top(\mathbf{Q}^\top\sqrt{\boldsymbol{\Lambda}})=\mathbf{A}^\top\mathbf{A}`
+			* :math:`\mathbf{S}=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top=(\sqrt{\boldsymbol{\Lambda}}\mathbf{Q}^\top)^\top(\sqrt{\boldsymbol{\Lambda}}\mathbf{Q}^\top)=\mathbf{A}^\top\mathbf{A}`
 			* :math:`\mathbf{S}=\mathbf{L}\mathbf{L}^\top`
 	* The leading determinants :math:`D_1,D_2,\cdots,D_n` are all positive.
 	* In LU elimination, the pivot elements are all positive.
