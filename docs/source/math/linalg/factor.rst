@@ -39,6 +39,22 @@ LU Factorisation
 	* The matrix :math:`\mathbf{L}` is lower triangular with :math:`1s` in its diagonal, where as the matrix :math:`\mathbf{U}` is upper triangular.
 
 ********************************************************************************
+LDLT Factorisation
+********************************************************************************
+.. note::
+	* For symmetric matrices :math:`\mathbf{A}`, the :math:`\mathbf{U}` factor can be expressed in terms of :math:`\mathbf{L}` after pulling out the diagonal elements to make it all :math:`1s`.
+
+		.. math:: \mathbf{A}=\mathbf{L}\mathbf{D}\mathbf{L}^\top
+
+********************************************************************************
+Cholesky Factorisation
+********************************************************************************
+.. note::
+	* We can take square root of the diagonal and push inside the :math:`\mathbf{L}` to obtain factorisation in the form
+
+		.. math:: \mathbf{A}=\mathbf{L}\mathbf{L}^\top
+
+********************************************************************************
 Gram-Schmidt Orgthogonalisation
 ********************************************************************************
 
@@ -153,23 +169,27 @@ Special case: Symmetric Real Matrices
 
 Positive Definite Matrices
 --------------------------------------------------------------------------------
+Multiplication by a pd matrix is similar to multiplying by a positive real number.
+
+Tests for positive definiteness
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* All eigenvalues are positive.
 	* **Quadratic Form**: For any vector :math:`\mathbf{x}\neq\mathbf{0}`, :math:`\mathbf{x}^\top\mathbf{S}\mathbf{x} > 0`.
+	* The matrix :math:`\mathbf{S}` can be factorised as :math:`\mathbf{S}=\mathbf{A}^\top\mathbf{A}`.
+
+		* Choices for :math:`\mathbf{A}` can be
+
+			* :math:`\mathbf{S}=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top=(\mathbf{Q}^\top\sqrt{\boldsymbol{\Lambda}})^\top(\mathbf{Q}^\top\sqrt{\boldsymbol{\Lambda}})=\mathbf{A}^\top\mathbf{A}`
+			* :math:`\mathbf{S}=\mathbf{L}\mathbf{L}^\top`
+	* The leading determinants :math:`D_1,D_2,\cdots,D_n` are all positive.
+	* In LU elimination, the pivot elements are all positive.
 
 Positive Semi-definite Matrices
 --------------------------------------------------------------------------------
 .. note::
 	* All eigenvalues are :math:`\geq 0`
 	* **Quadratic Form**: For any vector :math:`\mathbf{x}\neq\mathbf{0}`, :math:`\mathbf{x}^\top\mathbf{S}\mathbf{x} \geq 0`.
-
-********************************************************************************
-LDLT Factorisation
-********************************************************************************
-
-********************************************************************************
-Cholesky Factorisation
-********************************************************************************
 
 ********************************************************************************
 Singular Value Decomposition
