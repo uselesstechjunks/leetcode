@@ -149,7 +149,7 @@ Matrix with orthonormal columns
 	* **Doesn't change the length:** :math:`||\mathbf{Q}\mathbf{x}||=||\mathbf{x}||` but might lose/gain a few dimensions though based on the dimensionality of :math:`\mathbf{Q}`.
 
 		.. math:: ||\mathbf{Q}\mathbf{x}||=(\mathbf{Q}\mathbf{x})^\top(\mathbf{Q}\mathbf{x})=\mathbf{x}^\top(\mathbf{Q}^\top\mathbf{Q})\mathbf{x}=\mathbf{x}^\top\mathbf{x}=||\mathbf{x}||
-	* If :math:`\mathbf{Q}_1` and :math:`\mathbf{Q}_2` are matrices with orthonormal columns, then :math:`\mahtbf{Q}=\mathbf{Q}_1\mathbf{Q}_2` is also a matrix with orthonormal columns.
+	* If :math:`\mathbf{Q}_1` and :math:`\mathbf{Q}_2` are matrices with orthonormal columns, then :math:`\mathbf{Q}=\mathbf{Q}_1\mathbf{Q}_2` is also a matrix with orthonormal columns.
 
 		.. math:: \mathbf{Q}^\top\mathbf{Q}=(\mathbf{Q}_1\mathbf{Q}_2)^\top(\mathbf{Q}_1\mathbf{Q}_2)=\mathbf{Q}_2^\top(\mathbf{Q}_1^\top\mathbf{Q}_1)\mathbf{Q}_2=\mathbf{Q}_2^\top\mathbf{Q}_2=\mathbf{I}
 
