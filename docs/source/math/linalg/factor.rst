@@ -32,12 +32,10 @@ LU Factorisation
 	* Applicable for square matrices where the matrix can be thought of as :math:`n` equations with :math:`n` unknowns.
 	* It is an iterative process where every step we peel off the first column and first row of the remaining matrix until we reach a :math:`1\times 1` matrix.
 
-		.. math:: \mathbf{A}=\begin{bmatrix}a_{1,1}&a_{1,2}&\dots&a_{1,n}\\a_{2,1}&a_{2,2}&\dots&a_{2,n}\\\vdots&\vdots&\dots&\vdots\\a_{n,1}&a_{n,2}&\dots&a_{n,n}\end{bmatrix}=\begin{bmatrix}1\\\frac{a_{2,1}}{a_{1,1}}\\\vdots\\\frac{a_{n,1}}{a_{1,1}}\end{bmatrix}\begin{bmatrix}a_{1,1}&a_{1,2}&\dots&a_{1,n}\end{bmatrix}+\begin{bmatrix}0 & 0 & \dots & 0\\0 & \left(a_{2,2}-\frac{a_{2,1}a_{1,2}}{a_{1,1}}\right) & \dots & \left(a_{2,n}-\frac{a_{2,1}a_{1,n}}{a_{1,1}}\right)\\\vdots&\vdots&\dots&\vdots\\
-0 & \left(a_{n,2}-\frac{a_{n,1}a_{1,2}}{a_{1,1}}\right) & \dots & \left(a_{n,n}-\frac{a_{n,1}a_{1,n}}{a_{1,1}}\right)\end{bmatrix}=\mathbf{l}_1\mathbf{u}^*_1+\begin{bmatrix}0 & \dots\\\vdots & \mathbf{A}_2\end{bmatrix}
+		.. math:: \mathbf{A}=\begin{bmatrix}a_{1,1}&a_{1,2}&\dots&a_{1,n}\\a_{2,1}&a_{2,2}&\dots&a_{2,n}\\\vdots&\vdots&\dots&\vdots\\a_{n,1}&a_{n,2}&\dots&a_{n,n}\end{bmatrix}=\begin{bmatrix}1\\\frac{a_{2,1}}{a_{1,1}}\\\vdots\\\frac{a_{n,1}}{a_{1,1}}\end{bmatrix}\begin{bmatrix}a_{1,1}&a_{1,2}&\dots&a_{1,n}\end{bmatrix}+\begin{bmatrix}0 & 0 & \dots & 0\\0 & \left(a_{2,2}-\frac{a_{2,1}a_{1,2}}{a_{1,1}}\right) & \dots & \left(a_{2,n}-\frac{a_{2,1}a_{1,n}}{a_{1,1}}\right)\\\vdots&\vdots&\dots&\vdots\\0 & \left(a_{n,2}-\frac{a_{n,1}a_{1,2}}{a_{1,1}}\right) & \dots & \left(a_{n,n}-\frac{a_{n,1}a_{1,n}}{a_{1,1}}\right)\end{bmatrix}=\mathbf{l}_1\mathbf{u}^*_1+\begin{bmatrix}0 & \dots\\\vdots & \mathbf{A}_2\end{bmatrix}
 	* At the end of the process, we're left with the sum of all rank 1 matrices
 
-		.. math:: \mathbf{A}=\mathbf{l}_1\mathbf{u}^*_1+\cdots+\mathbf{l}_n\mathbf{u}^*_n=\begin{bmatrix}|&\cdots&|\\
-\mathbf{l}_1&\cdots&\mathbf{l}_n\\|&\cdots&|\end{bmatrix}\begin{bmatrix}-&\mathbf{u}^*_1&-\\\vdots&\vdots&\vdots\\-&\mathbf{u}^*_n&-\end{bmatrix}=\mathbf{L}\mathbf{U}
+		.. math:: \mathbf{A}=\mathbf{l}_1\mathbf{u}^*_1+\cdots+\mathbf{l}_n\mathbf{u}^*_n=\begin{bmatrix}|&\cdots&|\\\mathbf{l}_1&\cdots&\mathbf{l}_n\\|&\cdots&|\end{bmatrix}\begin{bmatrix}-&\mathbf{u}^*_1&-\\\vdots&\vdots&\vdots\\-&\mathbf{u}^*_n&-\end{bmatrix}=\mathbf{L}\mathbf{U}
 	* The matrix :math:`\mathbf{L}` is lower triangular with :math:`1s` in its diagonal, where as the matrix :math:`\mathbf{U}` is upper triangular.
 
 ********************************************************************************
