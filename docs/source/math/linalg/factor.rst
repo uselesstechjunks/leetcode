@@ -43,11 +43,11 @@ Eigendecomposition
 		* These are determined entirely by the matrix of the linear transform :math:`\mathbf{A}`.
 	* If all such vectors are collected in a matrix, then
 
-		.. math:: \mathbf{A}\mathbf{X}=\mathbf{A}\begin{bmatrix}|&\cdots&|\\\mathbf{x}_1&\cdots&\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\mathbf{A}\mathbf{x}_1&\cdots&\mathbf{A}\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\lambda_1\mathbf{x}_1&\cdots&\lambda_n\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\mathbf{x}_1&\cdots&\mathbf{x}_n\\|&\cdots&|\end{bmatrix}\begin{bmatrix}\lambda_1 & 0 & \dots & 0 \\ 0 & \lambda_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_n\end{bmatrix}=\mathbf{X}\mathbf{\Lambda}
+		.. math:: \mathbf{A}\mathbf{X}=\mathbf{A}\begin{bmatrix}|&\cdots&|\\\mathbf{x}_1&\cdots&\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\mathbf{A}\mathbf{x}_1&\cdots&\mathbf{A}\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\lambda_1\mathbf{x}_1&\cdots&\lambda_n\mathbf{x}_n\\|&\cdots&|\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\\mathbf{x}_1&\cdots&\mathbf{x}_n\\|&\cdots&|\end{bmatrix}\begin{bmatrix}\lambda_1 & 0 & \dots & 0 \\ 0 & \lambda_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_n\end{bmatrix}=\mathbf{X}\boldsymbol{\Lambda}
 
 	* Therefore, the matrix factorises as 
 
-		.. math:: \mathbf{A}=\mathbf{A}(\mathbf{X}\mathbf{X}^{-1})=(\mathbf{A}\mathbf{X})\mathbf{X}^{-1}=(\mathbf{X}\mathbf{\Lambda})\mathbf{X}^{-1}=\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1}
+		.. math:: \mathbf{A}=\mathbf{A}(\mathbf{X}\mathbf{X}^{-1})=(\mathbf{A}\mathbf{X})\mathbf{X}^{-1}=(\mathbf{X}\boldsymbol{\Lambda})\mathbf{X}^{-1}=\mathbf{X}\boldsymbol{\Lambda}\mathbf{X}^{-1}
 
 Real and Complex Eigenvalues
 ================================================================================
@@ -57,10 +57,10 @@ Real and Complex Eigenvalues
 
 Matrix power
 ================================================================================
-	.. math:: \mathbf{A}^n\mathbf{u}=(\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1})^n\mathbf{u}=(\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1})(\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1})\cdots(\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1})\mathbf{u}=(\mathbf{X}\mathbf{\Lambda}^n\mathbf{X}^{-1})\mathbf{u}
+	.. math:: \mathbf{A}^n\mathbf{u}=(\mathbf{X}\boldsymbol{\Lambda}\mathbf{X}^{-1})^n\mathbf{u}=(\mathbf{X}\boldsymbol{\Lambda}\mathbf{X}^{-1})(\mathbf{X}\boldsymbol{\Lambda}\mathbf{X}^{-1})\cdots(\mathbf{X}\boldsymbol{\Lambda}\mathbf{X}^{-1})\mathbf{u}=(\mathbf{X}\boldsymbol{\Lambda}^n\mathbf{X}^{-1})\mathbf{u}
 
 .. attention::
-	* For the eigenvalues that are real, the vectors get stretched repeatedly along that direction as the effect is the same as multiplication by a real number.
+	* For the eigenvalues that are real, the vectors get stretched repeatedly (and flipped alternatively, if eigenvalues are negative) along that direction as the effect is the same as multiplication by a real number.
 	* For the eigenvalues that are complex, the vectors oscilate as the effect is the same as multiplication by a complex number.
 
 Trace and Determinant
@@ -89,6 +89,21 @@ Properties
 
 Special case: Symmetric Real Matrices
 ================================================================================
+.. note::
+	* For real symmetric matrices :math:`\mathbf{S}`
+
+		* The eigenvalues are all real
+			
+			* Proof Hint
+		* The eigenvectors are orthogonal
+
+			* Proof Hint
+	* We usually write :math:`\mathbf{S}=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top`
+
+Positive Definite Matrices
+--------------------------------------------------------------------------------
+.. note::
+	* All eigenvalues are positive.
 
 ********************************************************************************
 Singular Value Decomposition
