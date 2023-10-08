@@ -49,11 +49,43 @@ Eigendecomposition
 
 		.. math:: \mathbf{A}=\mathbf{A}(\mathbf{X}\mathbf{X}^{-1})=(\mathbf{A}\mathbf{X})\mathbf{X}^{-1}=(\mathbf{X}\mathbf{\Lambda})\mathbf{X}^{-1}=\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1}
 
-Properties:
+Real and Complex Eigenvalues
 ================================================================================
 .. note::
 	* The eigenvalues can be real or complex.
 	* **Symmetric matrices have real eigenvalues** while **orthogonal matrices have complex eigenvalues**.
+
+Matrix power
+================================================================================
+	.. math:: \mathbf{A}^n\mathbf{u}=(\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1})^n\mathbf{u}=(\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1})(\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1})\cdots(\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1})\mathbf{u}=(\mathbf{X}\mathbf{\Lambda}^n\mathbf{X}^{-1})\mathbf{u}
+
+.. attention::
+	* For the eigenvalues that are real, the vectors get stretched repeatedly along that direction as the effect is the same as multiplication by a real number.
+	* For the eigenvalues that are complex, the vectors oscilate as the effect is the same as multiplication by a complex number.
+
+Trace and Determinant
+================================================================================
+.. note::
+	* **Trace**: :math:`\sum_{i=1}^n\lambda_i`
+	* **Determinant**: :math:`\prod_{i=1}^n\lambda_i`
+
+Properties
+================================================================================
+.. warning::
+	* It is not necessary that the eigenvectors are orthogonal.
+
+		* Iff :math:`\mathbf{A}\mathbf{A}^\top=\mathbf{A}^\top\mathbf{A}`, then eigenvectors are orthogonal.
+	* It is not necessary that the eigenvalues are all distinct.
+
+		* If all eigenvalues are distinct, then the matrix is full rank.
+	* Double eigenvalues :math:`\lambda_i=\lambda_j` might or might not have independent eigenvectors.
+	* **IT IS NOT TRUE** that 
+
+		* :math:`\lambda(\mathbf{A}+\mathbf{B})=\lambda(\mathbf{A})+\lambda(\mathbf{B})`
+		* :math:`\lambda(\mathbf{A}\mathbf{B})=\lambda(\mathbf{A})\cdot\lambda(\mathbf{B})`
+
+.. tip::
+	For :math:`\mathbf{B}=\mathbf{A}-a\cdot\mathbf{I}`, :math:`\lambda(\mathbf{B})=\lambda(\mathbf{A})-a`
 
 Special case: Symmetric Real Matrices
 ================================================================================
