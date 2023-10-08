@@ -40,6 +40,8 @@ Matrix as Linear Operators
 
 		.. math:: C(\mathbf{A}^\top)=\{\mathbf{A}^\top\mathbf{y}\mathop{|}\forall \mathbf{y}\in\mathbb{C}^m\}
 
+Vector space of linear operators
+=================================================================================
 .. attention::
 	* The space of matrices :math:`\mathbf{A}:\mathbb{C}^n\mapsto\mathbb{C}^m` themselves define **another vector space** with the same scalar field.
 
