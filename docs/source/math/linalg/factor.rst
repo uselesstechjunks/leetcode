@@ -53,7 +53,9 @@ Real and Complex Eigenvalues
 ================================================================================
 .. note::
 	* The eigenvalues can be real or complex.
-	* **Symmetric matrices have real eigenvalues** while **orthogonal matrices have complex eigenvalues**.
+		
+		* **Symmetric matrices have real eigenvalues** 
+		* **Orthogonal matrices have complex eigenvalues**.
 
 Matrix power
 ================================================================================
@@ -74,15 +76,15 @@ Properties
 .. warning::
 	* It is not necessary that the eigenvectors are orthogonal.
 
-		* Iff :math:`\mathbf{A}\mathbf{A}^\top=\mathbf{A}^\top\mathbf{A}`, then eigenvectors are orthogonal.
+		* Eigenvectors are orthogonal :math:`\iff\mathbf{A}\mathbf{A}^\top=\mathbf{A}^\top\mathbf{A}`
 	* It is not necessary that the eigenvalues are all distinct.
 
-		* If all eigenvalues are distinct, then the matrix is full rank.
+		* All eigenvalues are distinct :math:`\iff` the matrix is full rank.
 	* Double eigenvalues :math:`\lambda_i=\lambda_j` might or might not have independent eigenvectors.
-	* **IT IS NOT TRUE** that 
+	* **In general**
 
-		* :math:`\lambda(\mathbf{A}+\mathbf{B})=\lambda(\mathbf{A})+\lambda(\mathbf{B})`
-		* :math:`\lambda(\mathbf{A}\mathbf{B})=\lambda(\mathbf{A})\cdot\lambda(\mathbf{B})`
+		* :math:`\lambda(\mathbf{A}+\mathbf{B})\neq\lambda(\mathbf{A})+\lambda(\mathbf{B})`
+		* :math:`\lambda(\mathbf{A}\mathbf{B})\neq\lambda(\mathbf{A})\cdot\lambda(\mathbf{B})`
 
 .. tip::
 	For :math:`\mathbf{B}=\mathbf{A}-a\cdot\mathbf{I}`, :math:`\lambda(\mathbf{B})=\lambda(\mathbf{A})-a`
