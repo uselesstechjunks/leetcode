@@ -4,5 +4,5 @@ Linear Algebra
 
 .. toctree::
 
-		funda
-    factor
+	funda
+	factor
