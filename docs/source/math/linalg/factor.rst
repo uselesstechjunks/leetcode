@@ -33,7 +33,7 @@ Gram-Schmidt Orgthogonalisation
 Eigendecomposition
 ********************************************************************************
 .. note::
-	* When we're dealing with square matrices :math:`\mathbf{A}_{n\times n}`, we can think of the matrix transforming the input space by rotating or stretching or flipping directions.
+	* When we're dealing with square matrices :math:`\mathbf{A}_{n\times n}`, we can think of the matrix transforming the input space by rotating or stretching or flipping every vector in the entire space.
 	* Under such a linear transform, there are certain directions which stay fixed (they don't rotate). They just get stretched or flipped.
 	* For any vector along these directions, the effect of matrix multiplication is just the same as scalar multiplication which stretches/flips the vectors.
 
@@ -65,11 +65,25 @@ Matrix power
 	* For the eigenvalues that are real, the vectors get stretched repeatedly (and flipped alternatively, if eigenvalues are negative) along that direction as the effect is the same as multiplication by a real number.
 	* For the eigenvalues that are complex, the vectors oscilate as the effect is the same as multiplication by a complex number.
 
+.. tip::
+	:math:`\exp(\mathbf{A})=\mathbf{X}\exp(\boldsymbol{\Lambda})\mathbf{X}^{-1}`
+
 Trace and Determinant
 ================================================================================
 .. note::
 	* **Trace**: :math:`\sum_{i=1}^n\lambda_i`
 	* **Determinant**: :math:`\prod_{i=1}^n\lambda_i`
+
+Similar Matrices
+================================================================================
+.. note::
+	* The matrix :math:`\mathbf{A}` and any other matrix in the form :math:`\mathbf{M}=\mathbf{B}\mathbf{A}\mathbf{B}^{-1}` have the same eigenvalues.
+	* The eigenvectors corresponding to each such :math:`\lambda` is obtained by :math:`\mathbf{B}\mathbf{x}` whenever :math:`\mathbf{A}\mathbf{x}=\lambda\mathbf{x}`
+
+		.. math:: (\mathbf{B}\mathbf{A}\mathbf{B}^{-1})(\mathbf{B}\mathbf{x})=\mathbf{B}\mathbf{A}(\mathbf{B}^{-1}\mathbf{B})\mathbf{x}=\mathbf{B}\mathbf{A}\mathbf{x}=\lambda\mathbf{B}\mathbf{x}
+	* So :math:`\mathbf{A}` and :math:`\mathbf{M}` are called **similar matrices**.
+
+		* They stretch/flip the vectors in the same fashion, but in a different orientation.
 
 Properties
 ================================================================================
@@ -106,6 +120,7 @@ Positive Definite Matrices
 --------------------------------------------------------------------------------
 .. note::
 	* All eigenvalues are positive.
+	* **Quadratic Form**: For any vector :math:`\mathbf{x}`, :math:`\mathbf{x}^\top\mathbf{S}\mathbf{x} > 0`.
 
 ********************************************************************************
 Singular Value Decomposition
