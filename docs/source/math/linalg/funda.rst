@@ -212,15 +212,15 @@ Projection matrices
 Orthogonal matrices
 ================================================================================
 .. note::
-	Symmetric matrices with orthonormal columns such that :math:`\mathbf{Q}^\top=\mathbf{Q}`.
+	Square matrices with orthonormal columns.
 
 .. attention::
 	* We have :math:`\mathbf{Q}^\top=\mathbf{Q}^{-1}` since
 
 		.. math:: \mathbf{Q}^\top\mathbf{Q}=\mathbf{Q}\mathbf{Q}^\top=\mathbf{I}
-	* They represent a **pure rotation** or **reflection** in :math:`\mathbb{R}^n` as neigher the length or the dimensionality changes.
+	* They represent a **pure rotation** or **reflection** in :math:`\mathbb{R}^n` as neither the length or the dimensionality changes of any vector under this transformation.
 
-		* Positive determinant implies rotation, negative reflection (as the orientation changes).
+		* Positive determinant implies rotation, negative determinant implies reflection (as the orientation changes).
 
 Orthonormal basis
 ================================================================================
