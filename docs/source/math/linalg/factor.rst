@@ -256,7 +256,7 @@ We formulate SVD via Eigendecomposition.
 
 			* We have :math:`||\mathbf{A}\mathbf{x}||=||\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^T\mathbf{x}||`
 			* Since :math:`\mathbf{U}` and :math:`\mathbf{V}` are matrices with orthonormal columns, they don't change the length.
-			* Therefore, :math:`||\mathbf{A}\mathbf{x}||=||\boldsymbol{\Sigma}\mathbf{x}||=\sigma_1 x_1+\cdots+\sigma_n x_n\leq sigma_1(x_1+\cdots+x_n)=\sigma_1||\mathbf{x}}}`
+			* Therefore, :math:`||\mathbf{A}\mathbf{x}||=||\boldsymbol{\Sigma}\mathbf{x}||=\sigma_1 x_1+\cdots+\sigma_n x_n\leq \sigma_1(x_1+\cdots+x_n)=\sigma_1||\mathbf{x}||`
 
 .. attention::
 	* If :math:`A` is a symmetric positive definite matrix, then its SVD is given by its eigen decomposition.
