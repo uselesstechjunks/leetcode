@@ -199,6 +199,6 @@ Singular Value Decomposition
 	:align: center
 
 	Works with :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^n`, Works with :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^m`
-	Finds directions in the :math:`\mathbb{R}^n` (input=output) space that are invariant under the operator. Along those directions, operator acts the same as a scalar multiplier., Finds directions in the input space :math:`\mathbb{R}^n` and a different set of directions in the output space :math:`\mathbb{R}^m` such that the operator produces a scaled version of these output vectors when applied to any vector in those input directions.
+	Finds directions in the :math:`\mathbb{R}^n` (input=output) space that are invariant under the operator. Along those directions the operator acts the same as a scalar multiplier., Finds directions in the input space :math:`\mathbb{R}^n` and a different set of directions in the output space :math:`\mathbb{R}^m` such that the operator produces a scaled version of these output vectors when applied to any vector in those input directions.
 	Eigenvalues can be real or complex., Singular values can are non-negative real numbers (actual scaling).
-	Eigenvectors are not always guaranted to be orthogonal to one another. Singular vectors are orthonormal.
+	Eigenvectors are not always guaranted to be orthogonal to one another., Singular vectors are orthonormal.
