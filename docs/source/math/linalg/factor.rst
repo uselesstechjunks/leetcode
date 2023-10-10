@@ -224,13 +224,19 @@ We formulate SVD via Eigendecomposition.
 .. note::
 	* Let :math:`\mathbf{M}=\mathbf{A}^\top\mathbf{A}` and :math:`\mathbf{N}=\mathbf{A}\mathbf{A}^\top`.
 
-		* We note that :math:`\mathbf{M}` and :math:`\mathbf{N}` are symmetric.
+		* We note that :math:`\mathbf{M}` and :math:`\mathbf{N}` are symetric, hence have **real eigenvalues** and **orthonormal eigenvectors**.
 
 			.. math:: \mathbf{M}^\top=(\mathbf{A}^\top\mathbf{A})^\top=\mathbf{A}^\top\mathbf{A}=\mathbf{M}\\\mathbf{N}^\top=(\mathbf{A}\mathbf{A}^\top)^\top=\mathbf{A}\mathbf{A}^\top=\mathbf{N}
-	* We note that
+	* Reformualtion in terms of eigen decomposition
+
 		* :math:`\mathbf{M}=\mathbf{A}^\top\mathbf{A}=(\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^\top)^\top\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^\top=\mathbf{V}\boldsymbol{\Sigma}^\top(\mathbf{U}^\top\mathbf{U})\boldsymbol{\Sigma}\mathbf{V}^\top=\mathbf{V}\boldsymbol{\Sigma}^2\mathbf{V}^\top`
 		* Similarly, :math:`\mathbf{N}=\mathbf{U}\boldsymbol{\Sigma}^2\mathbf{U}^\top`
-	* Therefore, from the eigen decomposition we can obtain :math:`\boldsymbol{\Sigma}=\sqrt{\boldsymbol{\Lambda}}` and the set of vectors :math:`\mathbf{U}` and :math:`\mathbf{V}`.
+	* From the 2 eigen decompositions we obtain 
+	
+		* **Singular values**: the diagonal matrix :math:`\boldsymbol{\Sigma}=\sqrt{\boldsymbol{\Lambda}}` and 
+		* **Singular vectors**: the set of vectors :math:`\mathbf{U}` and :math:`\mathbf{V}`.
+	* Since each :math:`\sigma=\sqrt{\lambda}`, we need to ensure that :math:`\lambda\geq 0`.
 
-.. attention::
-	* Proof that :math:`\boldsymbol{\Sigma}` are the singular values and :math:`\mathbf{U}` and :math:`\mathbf{V}` are singular vectors:
+		* :math:`\mathbf{x}^\top\mathbf{M}\mathbf{x}=\mathbf{x}^\top\mathbf{A}^\top\mathbf{A}\mathbf{x}=||\mathbf{A}\mathbf{x}||\geq 0`
+		* :math:`\mathbf{y}^\top\mathbf{N}\mathbf{y}=\mathbf{y}^\top\mathbf{A}\mathbf{A}^\top\mathbf{y}=||\mathbf{A}^\top\mathbf{y}||\geq 0`
+		* Therefore, :math:`\mathbf{M}` and :math:`\mathbf{N}` are positive semi definite, so :math:`\sqrt{\lambda}` is real.
