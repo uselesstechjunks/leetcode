@@ -227,3 +227,10 @@ We formulate SVD via Eigendecomposition.
 		* We note that :math:`\mathbf{M}` and :math:`\mathbf{N}` are symmetric.
 
 			.. math:: \mathbf{M}^\top=(\mathbf{A}^\top\mathbf{A})^\top=\mathbf{A}^\top\mathbf{A}=\mathbf{M}\\\mathbf{N}^\top=(\mathbf{A}\mathbf{A}^\top)^\top=\mathbf{A}\mathbf{A}^\top=\mathbf{N}
+	* We note that
+		* :math:`\mathbf{M}=\mathbf{A}^\top\mathbf{A}=(\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^\top)^\top\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^\top=\mathbf{V}\boldsymbol{\Sigma}^\top(\mathbf{U}^\top\mathbf{U})\boldsymbol{\Sigma}\mathbf{V}^\top=\mathbf{V}\boldsymbol{\Sigma}^2\mathbf{V}^\top`
+		* Similarly, :math:`\mathbf{N}=\mathbf{U}\boldsymbol{\Sigma}^2\mathbf{U}^\top`
+	* Therefore, from the eigen decomposition we can obtain :math:`\boldsymbol{\Sigma}=\sqrt{\boldsymbol{\Lambda}}` and the set of vectors :math:`\mathbf{U}` and :math:`\mathbf{V}`.
+
+.. attention::
+	* Proof that :math:`\boldsymbol{\Sigma}` are the singular values and :math:`\mathbf{U}` and :math:`\mathbf{V}` are singular vectors:
