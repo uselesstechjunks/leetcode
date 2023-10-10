@@ -200,10 +200,13 @@ Singular Value Decomposition
 	:widths: 40, 40
 	:class: longtable
 
-	Works with :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^n`, Works with :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^m`
-	Finds directions in the :math:`\mathbb{R}^n` (input=output) space that are invariant under the operator. Along those directions the operator acts the same as a scalar multiplier., Finds directions in the input space :math:`\mathbb{R}^n` and a different set of directions in the output space :math:`\mathbb{R}^m` such that the operator produces a scaled version of these output vectors when applied to any vector in those input directions.
-	Eigenvalues can be real or complex., Singular values can are non-negative real numbers (actual scaling).
-	Eigenvectors are not always guaranted to be orthogonal to one another., Singular vectors are orthonormal.
+	Works with :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^n`, Works with :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^m`	
+	Eigenvalues can be real or complex., Singular values are non-negative real numbers.
+	Eigenvectors are not always to be orthogonal to one another., Singular vectors are orthonormal.
+
+.. tip::
+	* Eigen decompositon finds directions in the :math:`\mathbb{R}^n` (input=output) space that are invariant under the operator. Along those directions the operator acts the same as a scalar multiplier.
+	* Singular value decomposition finds directions in the input space :math:`\mathbb{R}^n` and a different set of directions in the output space :math:`\mathbb{R}^m` such that the operator produces a scaled version of these output vectors when applied to any vector in those input directions.
 
 .. note::
 	* Let :math:`\mathbf{v}\in\mathbb{R}^n` a singular vector in the input dimension, :math:`\mathbf{u}\in\mathbb{R}^m` a singular vector in the output dimension, and :math:`\sigma` be the singular value for the matrix :math:`\mathbf{A}`. Then
@@ -212,6 +215,15 @@ Singular Value Decomposition
 	* If all such vectors are collected in a matrix, then
 
 		.. math:: \mathbf{A}\mathbf{V}=\mathbf{U}\boldsymbol{\Sigma}\implies\mathbf{A}=\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^\top
+	* We note that :math:`\mathbf{V}` and :math:`\mathbf{U}` are not square, not are matrices with orthonormal columns while :math:`\mathbf{\Sigma}` is a square, diagonal matrix containing all the singular values.
 
 Computing singular values and vectors
 ================================================================================
+We formulate SVD via Eigendecomposition.
+
+.. note::
+	* Let :math:`\mathbf{M}=\mathbf{A}^\top\mathbf{A}` and :math:`\mathbf{N}=\mathbf{A}\mathbf{A}^\top`.
+
+		* We note that :math:`\mathbf{M}` and :math:`\mathbf{N}` are symmetric.
+
+			.. math:: \mathbf{M}^\top=(\mathbf{A}^\top\mathbf{A})^\top=\mathbf{A}^\top\mathbf{A}=\mathbf{M}\\\mathbf{N}^\top=(\mathbf{A}\mathbf{A}^\top)^\top=\mathbf{A}\mathbf{A}^\top=\mathbf{N}
