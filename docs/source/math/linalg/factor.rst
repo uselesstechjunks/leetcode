@@ -28,6 +28,31 @@ This factorisation keeps the columns of the original matrix intact.
 ********************************************************************************
 LU Factorisation
 ********************************************************************************
+.. note::
+	* Applicable for square matrices where the matrix can be thought of as :math:`n` equations with :math:`n` unknowns.
+	* It is an iterative process where every step we peel off the first column and first row of the remaining matrix until we reach a :math:`1\times 1` matrix.
+
+		.. math:: \mathbf{A}=\begin{bmatrix}a_{1,1}&a_{1,2}&\dots&a_{1,n}\\a_{2,1}&a_{2,2}&\dots&a_{2,n}\\\vdots&\vdots&\dots&\vdots\\a_{n,1}&a_{n,2}&\dots&a_{n,n}\end{bmatrix}=\begin{bmatrix}1\\\frac{a_{2,1}}{a_{1,1}}\\\vdots\\\frac{a_{n,1}}{a_{1,1}}\end{bmatrix}\begin{bmatrix}a_{1,1}&a_{1,2}&\dots&a_{1,n}\end{bmatrix}+\begin{bmatrix}0 & 0 & \dots & 0\\0 & \left(a_{2,2}-\frac{a_{2,1}a_{1,2}}{a_{1,1}}\right) & \dots & \left(a_{2,n}-\frac{a_{2,1}a_{1,n}}{a_{1,1}}\right)\\\vdots&\vdots&\dots&\vdots\\0 & \left(a_{n,2}-\frac{a_{n,1}a_{1,2}}{a_{1,1}}\right) & \dots & \left(a_{n,n}-\frac{a_{n,1}a_{1,n}}{a_{1,1}}\right)\end{bmatrix}=\mathbf{l}_1\mathbf{u}^*_1+\begin{bmatrix}0 & \dots\\\vdots & \mathbf{A}_2\end{bmatrix}
+	* At the end of the process, we're left with the sum of all rank 1 matrices
+
+		.. math:: \mathbf{A}=\mathbf{l}_1\mathbf{u}^*_1+\cdots+\mathbf{l}_n\mathbf{u}^*_n=\begin{bmatrix}|&\cdots&|\\\mathbf{l}_1&\cdots&\mathbf{l}_n\\|&\cdots&|\end{bmatrix}\begin{bmatrix}-&\mathbf{u}^*_1&-\\\vdots&\vdots&\vdots\\-&\mathbf{u}^*_n&-\end{bmatrix}=\mathbf{L}\mathbf{U}
+	* The matrix :math:`\mathbf{L}` is lower triangular with :math:`1s` in its diagonal, where as the matrix :math:`\mathbf{U}` is upper triangular.
+
+********************************************************************************
+LDLT Factorisation
+********************************************************************************
+.. note::
+	* For symmetric matrices :math:`\mathbf{A}`, the :math:`\mathbf{U}` factor can be expressed in terms of :math:`\mathbf{L}` after pulling out the diagonal elements to make it all :math:`1s`.
+
+		.. math:: \mathbf{A}=\mathbf{L}\mathbf{D}\mathbf{L}^\top
+
+********************************************************************************
+Cholesky Factorisation
+********************************************************************************
+.. note::
+	* We can take square root of the diagonal and push inside the :math:`\mathbf{L}` to obtain factorisation in the form
+
+		.. math:: \mathbf{A}=\mathbf{L}\mathbf{L}^\top
 
 ********************************************************************************
 Gram-Schmidt Orgthogonalisation
@@ -144,23 +169,27 @@ Special case: Symmetric Real Matrices
 
 Positive Definite Matrices
 --------------------------------------------------------------------------------
+Multiplication by a pd matrix is similar to multiplying by a positive real number.
+
+Tests for positive definiteness
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* All eigenvalues are positive.
 	* **Quadratic Form**: For any vector :math:`\mathbf{x}\neq\mathbf{0}`, :math:`\mathbf{x}^\top\mathbf{S}\mathbf{x} > 0`.
+	* The matrix :math:`\mathbf{S}` can be factorised as :math:`\mathbf{S}=\mathbf{A}^\top\mathbf{A}`.
+
+		* Choices for :math:`\mathbf{A}` can be
+
+			* :math:`\mathbf{S}=\mathbf{Q}\boldsymbol{\Lambda}\mathbf{Q}^\top=(\sqrt{\boldsymbol{\Lambda}}\mathbf{Q}^\top)^\top(\sqrt{\boldsymbol{\Lambda}}\mathbf{Q}^\top)=\mathbf{A}^\top\mathbf{A}`
+			* :math:`\mathbf{S}=\mathbf{L}\mathbf{L}^\top`
+	* The leading determinants :math:`D_1,D_2,\cdots,D_n` are all positive.
+	* In LU elimination, the pivot elements are all positive.
 
 Positive Semi-definite Matrices
 --------------------------------------------------------------------------------
 .. note::
 	* All eigenvalues are :math:`\geq 0`
 	* **Quadratic Form**: For any vector :math:`\mathbf{x}\neq\mathbf{0}`, :math:`\mathbf{x}^\top\mathbf{S}\mathbf{x} \geq 0`.
-
-********************************************************************************
-LDLT Factorisation
-********************************************************************************
-
-********************************************************************************
-Cholesky Factorisation
-********************************************************************************
 
 ********************************************************************************
 Singular Value Decomposition
