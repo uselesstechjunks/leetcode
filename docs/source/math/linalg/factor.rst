@@ -263,7 +263,7 @@ We formulate SVD via Eigendecomposition.
 	* If :math:`A` is a matrix with orthonormal columns, then all its singular values are 1.
 
 
-Eckhard-Young: Best rank k approximation
+Eckart-Young: Best rank k approximation
 ================================================================================
 .. attention::
 	* Let :math:`\mathbf{A}_k=\sigma_1\mathbf{u}_1\mathbf{v}_1^\top+\cdots+\sigma_k\mathbf{u}_k\mathbf{v}_k^\top` for some :math:`k\leq r`.
