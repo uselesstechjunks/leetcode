@@ -6,3 +6,5 @@ Linear Algebra
 
 	funda
 	factor
+	norm
+	applied
