@@ -240,3 +240,32 @@ We formulate SVD via Eigendecomposition.
 		* :math:`\mathbf{x}^\top\mathbf{M}\mathbf{x}=\mathbf{x}^\top\mathbf{A}^\top\mathbf{A}\mathbf{x}=||\mathbf{A}\mathbf{x}||\geq 0`
 		* :math:`\mathbf{y}^\top\mathbf{N}\mathbf{y}=\mathbf{y}^\top\mathbf{A}\mathbf{A}^\top\mathbf{y}=||\mathbf{A}^\top\mathbf{y}||\geq 0`
 		* Therefore, :math:`\mathbf{M}` and :math:`\mathbf{N}` are positive semi definite, so :math:`\sqrt{\lambda}` is real.
+
+.. tip::
+	* Singular values are arranged in descending order, :math:`\sigma_1\geq\sigma_2\geq\cdots\sigma_r\geq 0=\cdots 0`, where :math:`r` is the rank of the matrix.
+	* Any linear transformation :math:`\mathbf{A}=\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^T` can be thought of as a 
+
+		* pure rotation/flip
+		* stretching
+		* another pure rotation/flip
+
+	* All the stretching happens due to :math:`\boldsymbol{\Sigma}`.
+	* For any vector :math:`\mathbf{x}`, :math:`||\mathbf{A}\mathbf{x}||\leq \sigma_1||\mathbf{x}||` where :math:`\sigma_1` is the first singular value.
+
+		* Proof Hint:
+
+			* We have :math:`||\mathbf{A}\mathbf{x}||=||\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^T\mathbf{x}||`
+			* Since :math:`\mathbf{U}` and :math:`\mathbf{V}` are matrices with orthonormal columns, they don't change the length.
+			* Therefore, :math:`||\mathbf{A}\mathbf{x}||=||\boldsymbol{\Sigma}\mathbf{x}||=\sigma_1 x_1+\cdots+\sigma_n x_n\leq sigma_1(x_1+\cdots+x_n)=\sigma_1||\mathbf{x}}}`
+
+.. attention::
+	* If :math:`A` is a symmetric positive definite matrix, then its SVD is given by its eigen decomposition.
+	* If :math:`A` is a matrix with orthonormal columns, then all its singular values are 1.
+
+
+Eckhard-Young: Best rank k approximation
+================================================================================
+.. attention::
+	* Let :math:`\mathbf{A}_k=\sigma_1\mathbf{u}_1\mathbf{v}_1^\top+\cdots+\sigma_k\mathbf{u}_k\mathbf{v}_k^\top` for some :math:`k\leq r`.
+	* Let :math:`\mathbf{B}` be any rank :math:`k` matrix.
+	* We have :math:`||\mathbf{A}-\mathbf{A}_k||\leq ||\mathbf{A}-\mathbf{B}||`
