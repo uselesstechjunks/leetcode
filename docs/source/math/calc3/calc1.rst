@@ -182,7 +182,7 @@ Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be any bounded function.
 
 Properties
 ----------------------------------------------------------------
-..note::
+.. note::
 	* :math:`\int\limits_a^b (f(x)+g(x))\mathop{dx}=\int\limits_a^b f(x)\mathop{dx}=+\int\limits_a^b g(x)\mathop{dx}`
 	* :math:`\int\limits_a^b c\cdot f(x)\mathop{dx}=c\cdot\int\limits_a^b f(x)\mathop{dx}`
 	* :math:`\int\limits_a^b f(x)\mathop{dx}=-\int\limits_b^a f(x)\mathop{dx}`
