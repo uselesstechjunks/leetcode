@@ -110,8 +110,7 @@ This is an even stricter form of continuity.
 ****************************************************************
 Differentiation
 ****************************************************************
-.. warning::
-	Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function at some :math:`x\in(a,b)`.
+Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function at some :math:`x\in(a,b)`.
 
 .. note::
 	The derivative of :math:`f` at :math:`x\in(a,b)` is defined to be (assuming that the limit exists),
@@ -134,16 +133,27 @@ Integration
 
 Integration of step functions
 ================================================================
-.. warning::
-	Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be a function.
+Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be a step-function defined on a partition :math:`P=\{x_0,\cdots,x_n\}` such that within each open interval :math:`(x_{k-1},x_k)`, the function takes a constant value :math:`s_k`.
+
+.. note::
+	The integral of such function is defined as
+
+		.. math:: \int\limits_a^b f(x)\mathop{dx}=\sum_{k=1}^n s_k\cdot(x_k-x_{k-1})
+
+Properties
+----------------------------------------------------------------
+.. note::
+	* If :math:`f(x)<g(x)` for all :math:`x\in[a,b]`, then :math:`\int\limits_a^b f(x)\mathop{dx}<\int\limits_a^b g(x)\mathop{dx}`.
 
 Integration of general function
 ================================================================
+Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be a general function.
+
 .. note::
 	TODO
 
 Properties
-================================================================
+----------------------------------------------------------------
 
 ****************************************************************
 Important Theorems
