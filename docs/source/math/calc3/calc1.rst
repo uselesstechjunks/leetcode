@@ -238,7 +238,7 @@ Fundamental theorem of calculus
 		.. math:: \int f(x)\mathop{dx}=F(x)+C
 
 .. attention::
-	..math:: \int\limits_a^b f(x)\mathop{dx}=F(b)-F(a)
+	.. math:: \int\limits_a^b f(x)\mathop{dx}=F(b)-F(a)
 
 Integration by parts
 ================================================================
