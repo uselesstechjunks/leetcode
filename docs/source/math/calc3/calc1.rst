@@ -55,6 +55,16 @@ Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 ****************************************************************
 Differentiation
 ****************************************************************
+Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function at some :math:`x\in(a,b)`.
+
+.. note::
+	The derivative of :math:`f` at :math:`x\in(a,b)` is defined to be (assuming that the limit exists),
+
+		.. math:: f'(x)=\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}
+
+.. warning::
+	We need the point to be inside the open interval because we should be able to create an open ball around it for which the function is defined.
+
 Properties
 ================================================================
 
