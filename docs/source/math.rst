@@ -8,7 +8,7 @@ Mathematics
    math/prereq
    math/analysis
    math/linalg/index
-   math/calc3
+   math/calc3/index
    math/prob/index
    math/stat/index
    math/conv
