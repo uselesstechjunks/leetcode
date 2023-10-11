@@ -37,7 +37,7 @@ Cauchy convergence
 
 Continuity
 ================================================================
-Let :math:`f:X\subset\mathbb{R}\mapsto\Y\subset\mathbb{R}`.
+Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 
 .. note::
 	The set :math:`U=\{f(x)\mathop{|}x\in S\}=f(S)` is called the image of :math:`S` under :math:`f`.
