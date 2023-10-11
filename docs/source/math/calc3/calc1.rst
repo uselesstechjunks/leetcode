@@ -185,6 +185,8 @@ Properties
 	* :math:`\int\limits_a^b f(x)\mathop{dx}=-\int\limits_b^a f(x)\mathop{dx}`
 	* :math:`\int\limits_a^c f(x)\mathop{dx}=\int\limits_a^b f(x)\mathop{dx}+\int\limits_b^c f(x)\mathop{dx}`
 
+		* :math:`\int\limits_a^b f(x)\mathop{dx}=-\int\limits_b^a f(x)\mathop{dx}`
+
 Indefinite Integral
 ================================================================
 .. note::
@@ -288,10 +290,7 @@ Rolle's theorem
 ----------------------------------------------------------------
 .. note::
 	* Special case of MVT.
-	* When all the MVT conditions are satisfied
-
-		* if for some :math:`a\leq x_1 < x_2\leq b` we have :math:`f(x_1)=f(x_2)`
-		* then :math:`\exists c\in[a,b]` such that :math:`f'(c)=0`
+	* Assuming that all the MVT conditions are satisfied, if :math:`f(a)=f(b)`, then :math:`\exists c\in(a,b)` such that :math:`f'(c)=0`.
 
 ****************************************************************
 Useful Resources
