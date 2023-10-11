@@ -73,7 +73,7 @@ Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 	* If we're allowed to take larger :math:`\delta`, then the function is considered smoother.
 
 .. tip::
-	:math:`\lim\limits_{n\to\infty} x_n=x\in X\implies \lim\limits_{n\to\infty} f(x_n)=f(x)\in Y`
+	Under a continuous function :math:`f`, :math:`\lim\limits_{n\to\infty} x_n=x\in X\implies \lim\limits_{n\to\infty} f(x_n)=f(x)\in Y`
 
 Properties
 ----------------------------------------------------------------
