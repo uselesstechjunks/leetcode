@@ -245,7 +245,7 @@ Integration by parts
 Let :math:`u(x)` and :math:`v(x)` be two integrable functions. We want to find out the integral of the product, :math:`\int u(x)\cdot v(x) \mathop{dx}`.
 
 .. note::
-	* To derive this formula, it becomes easier if we consider :math:`w(x)=\int v(x) \mathop{dx}` (:math:`w'(x)=v(x)`) and consider :math:`g(x)=u(x)\cdot w(x)`.
+	* To derive this formula, it becomes easier if we consider :math:`w(x)=\int v(x) \mathop{dx}` (such that :math:`w'(x)=v(x)`) and consider :math:`g(x)=u(x)\cdot w(x)`.
 	* Taking derivatives on both sides :math:`g'(x)=u'(x)\cdot w(x)+u(x)\cdot w'(x)` which gives
 
 		.. math:: u(x)\cdot w'(x)=g'(x)-u'(x)\cdot w(x)
