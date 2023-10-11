@@ -47,7 +47,7 @@ Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 
 	* :math:`\forall\epsilon > 0`
 	* :math:`\exists\delta_\epsilon > 0` such that
-	* :math:`\forall y\in X, |x-y|\leq\delta_epsilon\implies |f(x)-f(y)|\leq\epsilon`
+	* :math:`\forall y\in X, |x-y|\leq\delta_\epsilon\implies |f(x)-f(y)|\leq\epsilon`
 
 .. tip::
 	:math:`\lim\limits_{n\to\infty} x_n=x\in X\implies \lim\limits_{n\to\infty} f(x_n)=f(x)`
