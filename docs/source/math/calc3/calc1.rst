@@ -81,9 +81,6 @@ Properties
 	* If :math:`f` and :math:`g` are continuous at :math:`x`, so is :math:`f\cdot g`.
 	* If :math:`f` and :math:`g` are continuous at :math:`x`, so is :math:`f\circ g`.
 
-.. attention::
-	* **Boundedness Theorem**: Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`. then it is bounded.
-
 Continuous Everywhere
 ----------------------------------------------------------------
 .. note::
@@ -208,6 +205,20 @@ Indefinite Integral
 ****************************************************************
 Important Theorems
 ****************************************************************
+Boundedness theorem
+================================================================
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`. Then it is bounded.
+
+		* There exists :math:`m, M\in\mathbb{R}` such that :math:`m\leq f(x)\leq M`.
+
+EVT: Extreme value theorem
+================================================================
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`. Then the function achives a min and a max.
+
+		* There exists :math:`c,d\in[a,b]` such that :math:`f(c)\leq f(x)\leq f(d)`.
+
 Fundamental theorem of calculus
 ================================================================
 .. note::
@@ -283,10 +294,10 @@ Rolle's theorem
 		* then :math:`\exists c\in[a,b]` such that :math:`f'(c)=0`
 
 ****************************************************************
-Important Formulae
+Useful Resources
 ****************************************************************
 .. seealso::
 	* Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
 	* Different ways for evaluating the Gaussian integral: `YouTube video playlist by Dr Peyam <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_.
 
-	* Hints (one way): Let :math:`I=\int\limits_{-\infty}^\infty e^{x^2}\mathop{dx}`. Try to compute :math:`I^2`, convert this into a double integral using Fubini's theorem, and then use polar co-ordinate transform.
+		* Hints (one way): Let :math:`I=\int\limits_{-\infty}^\infty e^{x^2}\mathop{dx}`. Try to compute :math:`I^2`, convert this into a double integral using Fubini's theorem, and then use polar co-ordinate transform.
