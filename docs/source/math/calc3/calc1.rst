@@ -24,7 +24,7 @@ Let :math:`(x_n)_{n=1}^\infty` be a sequence such that :math:`\forall x_n\in S\s
 
 	* :math:`\forall\delta > 0`
 	* :math:`\exists N_\delta\in\mathbb{N}^{+}` (depends on how small of a :math:`\delta` we're given) such that
-	* if we skip :math:`N_\delta` number of terms in that sequence, the remaining values fall under a :math:`\delta`-ball around :math:`x`.
+	* if we skip :math:`N_\delta` number of terms in that sequence, the remaining values are guaranteed to be inside :math:`B_\delta(x)`.
 		
 		* Formally, :math:`n \geq N_\delta\implies |x_n-x|\leq\delta`
 
@@ -55,8 +55,10 @@ Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 	The function :math:`f:X\mapsto Y` is said to be continuous at a point :math:`p\in X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* :math:`\exists\delta_{\epsilon, p} > 0` (depends on :math:`\epsilon` as well as :math:`p` and can be arbitrarily small) such that
-	* if we force :math:`x` to be in a :math:`\delta_{\epsilon, p}`-ball around :math:`p`, then the image :math:`f(x)` is guaranteed to be in a :math:`\epsilon`-ball around :math:`f(p)`.
+	* we can create an open ball around :math:`p` in the domain with some :math:`\delta_{\epsilon, p} > 0` such that
+
+		* (note: the size depends on :math:`\epsilon` as well as :math:`p` and can be arbitrarily small)
+	* if we force :math:`x` to be in :math:`B_{\delta_{\epsilon, p}}(p)`, then the image :math:`f(x)` is guaranteed to be in :math:`B_\epsilon(f(p))`.
 	
 		* Formally, :math:`\forall x\in X, |p-x|\leq\delta_{\epsilon, p}\implies |f(p)-f(x)|\leq\epsilon`
 
@@ -86,8 +88,10 @@ This is a stricter form of continuity.
 	The function :math:`f:X\mapsto Y` is said to be uniformly continuous in :math:`X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* :math:`\exists\delta_\epsilon > 0` (a universal one, as it doesn't depend on :math:`p` anymore, however can still be arbitrarily small) such that
-	* if we force :math:`x` to be in a :math:`\delta_\epsilon`-ball around **any** :math:`p`, the image :math:`f(x)` is guaranteed to be in a :math:`\epsilon`-ball around :math:`f(p)`.
+	* we can create an open ball around :math:`p` in the domain with some :math:`\exists\delta_\epsilon > 0` such that
+
+		* (note: a universal one as it doesn't depend on :math:`p` anymore, however can still be arbitrarily small)
+	* if we force :math:`x` to be in :math:`B_{\delta_\epsilon}(p)` around **any** :math:`p`, the image :math:`f(x)` is guaranteed to be in :math:`B_\epsilon(f(p))`.
 
 		* Formally, :math:`\forall p, x\in X, |p-x|\leq\delta_\epsilon\implies |f(p)-f(x)|\leq\epsilon`
 
