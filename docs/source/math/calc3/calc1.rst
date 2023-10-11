@@ -89,7 +89,7 @@ This is an even stricter form of continuity.
 	* :math:`\forall x,y\in X, \frac{|f(x)-f(x)|}{|x-y|}\leq K`
 
 .. seealso::
-	This means
+	[TODO: verify] This means
 
 	* :math:`\forall\epsilon > 0`
 	* we can choose :math:`\delta=\epsilon/K` (able to take larger values now) such that
@@ -128,7 +128,7 @@ Integration of step functions
 Integration of general function
 ================================================================
 .. note::
-	
+	TODO
 
 Properties
 ================================================================
