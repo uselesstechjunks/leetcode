@@ -2,11 +2,19 @@
 Single Variable Calculus
 ################################################################
 .. attention::
-	All the variables are real and all the functions are real valued functions.
+	* All the variables are real and all the functions are real valued functions.
+	* We will be using **point** instead of **elements** since :math:`\mathbb{R}` is a metric space with a distance function defined in terms of absolute function.
+	* The set :math:`U=\{f(x)\mathop{|}x\in S\}=f(S)` is called the image of :math:`S` under :math:`f`.
 
 ****************************************************************
 Convergence and Continuity
 ****************************************************************
+Open Ball
+================================================================
+Around any point we can create an open :math:`\epsilon`-ball
+
+.. math:: B_\eplison(x)=\{y\mathop{|} |x-y|< \epsilon\}
+
 Convergent sequence
 ================================================================
 Let :math:`(x_n)_{n=1}^\infty` be a sequence such that :math:`\forall x_n\in S\subset\mathbb{R}`. 
@@ -15,8 +23,10 @@ Let :math:`(x_n)_{n=1}^\infty` be a sequence such that :math:`\forall x_n\in S\s
 	The sequence is said to be convergent to a limit :math:`x\in S` iff
 
 	* :math:`\forall\delta > 0`
-	* :math:`\exists N_\delta\in\mathbb{N}^{+}` such that
-	* :math:`n \geq N_\delta\implies |x_n-x|\leq\delta`
+	* :math:`\exists N_\delta\in\mathbb{N}^{+}` (depends on how small of a :math:`\delta` we're given) such that
+	* if we skip :math:`N_\delta` number of terms in that sequence, the remaining values fall under a :math:`\delta`-ball around :math:`x`.
+		
+		* Formally, :math:`n \geq N_\delta\implies |x_n-x|\leq\delta`
 
 Cauchy convergence
 ================================================================
@@ -25,32 +35,33 @@ Cauchy convergence
 
 	* :math:`\forall\delta > 0`
 	* :math:`\exists N_\delta\in\mathbb{N}^{+}` such that
-	* :math:`m, n\geq N_\delta\implies |x_m-x_n|\leq\delta`
+	* if we skip :math:`N_\delta` number of terms in that sequence, any two values fall under a :math:`\delta`-ball around one another.
+	
+		* Formally, :math:`m, n\geq N_\delta\implies |x_m-x_n|\leq\delta`
 
 .. attention::
 	* For a sequence to be Cauchy convergent, the limit value doesn't need to be in :math:`S`.
 	* Example: We can imagine a sequence in rationals
 
-		.. math:: 1,1.4,1.41,1.414,1.4142,1.41421,1.414213,1.4142135,1.41421356,1.414213562,1.4142135623,1.41421356237,\cdots
+		.. math:: 1,1.4,1.41,1.414,1.4142,1.41421,1.414213,\cdots
 
-	* This sequence is Cauchy convergent as it tends to :math:`\sqrt(2)` but it's not convergent in :math:`\mathbb{Q}`.
+	* This sequence is Cauchy convergent as it tends to :math:`\sqrt{2}` but it's not convergent in :math:`\mathbb{Q}`.
 
 Continuity
 ================================================================
 Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 
 .. note::
-	The set :math:`U=\{f(x)\mathop{|}x\in S\}=f(S)` is called the image of :math:`S` under :math:`f`.
-
-.. note::
-	The function :math:`f:X\mapsto Y` is said to be continuous at a point :math:`x\in X` iff
+	The function :math:`f:X\mapsto Y` is said to be continuous at a point :math:`p\in X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* :math:`\exists\delta_{\epsilon, x} > 0` (depends on :math:`\epsilon` as well as :math:`x` and can be arbitrarily small) such that
-	* :math:`\forall y\in X, |x-y|\leq\delta_{\epsilon, x}\implies |f(x)-f(y)|\leq\epsilon`
+	* :math:`\exists\delta_{\epsilon, p} > 0` (depends on :math:`\epsilon` as well as :math:`p` and can be arbitrarily small) such that
+	* if we force :math:`x` to be in a :math:`\delta_{\epsilon, p}`-ball around :math:`p`, then the image :math:`f(x)` is guaranteed to be in a :math:`\epsilon`-ball around :math:`f(p)`.
+	
+		* Formally, :math:`\forall x\in X, |p-x|\leq\delta_{\epsilon, p}\implies |f(p)-f(x)|\leq\epsilon`
 
 .. seealso::
-	* If we're only able to take extremely small :math:`\delta_{\epsilon, x}` to push the image inside the :math:`\epsilon` ball in :math:`Y`, then we can say that the function varies quite drastically.
+	* If we're only able to take extremely small :math:`\delta_{\epsilon, p}` to push the image inside the :math:`\epsilon`-ball in :math:`Y`, then we can say that the function varies quite drastically.
 	* If we're allowed to take larger :math:`\delta`, then the function is considered smoother.
 
 .. tip::
@@ -75,8 +86,13 @@ This is a stricter form of continuity.
 	The function :math:`f:X\mapsto Y` is said to be uniformly continuous in :math:`X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* :math:`\exists\delta_\epsilon > 0` (a universal one, as it doesn't depend on :math:`x` anymore, however can still be arbitrarily small) such that
-	* :math:`\forall x, y\in X, |x-y|\leq\delta_\epsilon\implies |f(x)-f(y)|\leq\epsilon`
+	* :math:`\exists\delta_\epsilon > 0` (a universal one, as it doesn't depend on :math:`p` anymore, however can still be arbitrarily small) such that
+	* if we force :math:`x` to be in a :math:`\delta_\epsilon`-ball around **any** :math:`p`, the image :math:`f(x)` is guaranteed to be in a :math:`\epsilon`-ball around :math:`f(p)`.
+
+		* Formally, :math:`\forall p, x\in X, |p-x|\leq\delta_\epsilon\implies |f(p)-f(x)|\leq\epsilon`
+
+.. tip::
+	* The same :math:`\delta` works for every :math:`\epsilon`, hence the term **uniform**.
 
 Lipschitz Continuity
 ----------------------------------------------------------------
@@ -85,15 +101,11 @@ This is an even stricter form of continuity.
 .. note::
 	The function :math:`f:X\mapsto Y` is said to be Lipschitz continuous in :math:`X` with Lipschitz constant :math:`K` iff
 
-	* :math:`\exists K\geq 0` such that
-	* :math:`\forall x,y\in X, \frac{|f(x)-f(x)|}{|x-y|}\leq K`
+	* :math:`\exists K\geq 0` such that :math:`\forall x,y\in X, \frac{|f(x)-f(x)|}{|x-y|}\leq K`
 
 .. seealso::
-	[TODO: verify] This means
-
-	* :math:`\forall\epsilon > 0`
-	* we can choose :math:`\delta=\epsilon/K` (able to take larger values now) such that
-	* :math:`\forall x, y\in X, |x-y|\leq\delta\implies |f(x)-f(y)|\leq\epsilon`
+	* For the image to be in a :math:`\epsilon`-ball around any :math:`p`, we can afford to be in a :math:`\epsilon/K`-ball in the domain.
+	* These functions are a lot smoother.
 
 ****************************************************************
 Differentiation
