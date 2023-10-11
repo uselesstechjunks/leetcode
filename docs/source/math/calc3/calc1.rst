@@ -208,6 +208,27 @@ Indefinite Integral
 ****************************************************************
 Important Theorems
 ****************************************************************
+Fundamental theorem of calculus
+================================================================
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` be a function that is integrable for every :math:`[a,x]`.
+	* Let :math:`F(x)` be an indefinite integral of :math:`f`
+
+		.. math:: F(x)=\int\limits_c^x f(t)\mathop{dt}
+	* Then the derivative of :math:`F` exists at all :math:`x\in(a,b)` wherever :math:`f(x)` is continuous and
+
+		.. math:: F'(x)=f(x)
+
+.. tip::
+	* :math:`F` is called an **antiderivative** of :math:`f`.
+	* Any other antiderivative differs only by a constant.
+	* **Leibniz Notation**: Therefore, we can use the notation
+
+		.. math:: \int f(x)\mathop{dx}=F(x)+C
+
+.. attention::
+	..math:: \int\limits_a^b f(x)\mathop{dx}=F(b)-F(a)
+
 Bolzano's theorem
 ================================================================
 .. note::
@@ -215,15 +236,31 @@ Bolzano's theorem
 	* Also assume that :math:`f(a)` and :math:`f(b)` have opposite signs.
 	* Then :math:`\exists c\in(a,b)` such that :math:`f(c)=0`
 
-Intermediate value theorem
+IVT: Intermediate value theorem
 ================================================================
 .. note::
 	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
 	* Let :math:`a\leq p < q\leq b` be two arbitrary points with :math:`f(p)\neq f(q)`.
 	* Then :math:`f(x)` takes every possible value in :math:`(f(p), f(q))` within the interval :math:`(a,b)`.
 
-Mean value theorem
+MVT: Mean value theorem
 ================================================================
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
+	* Then :math:`\exists c\in[a,b]` such that :math:`f(c)` acts as the mean value of the integral :math:`\int\limits_a^b f(x)\mathop{dx}`.
+	* Formally, :math:`\int\limits_a^b f(x)\mathop{dx}=f(c)\cdot(b-a)`
+
+.. seealso::
+	* This can also be stated using derivatives as :math:`\frac{F(b)-F(a)}{b-a}=f(c)` or :math:`\frac{g(b)-g(a)}{b-a}=g'(c)`
+
+Rolle's theorem
+----------------------------------------------------------------
+.. note::
+	* Special case of MVT.
+	* When all the MVT conditions are satisfied
+
+		* if for some :math:`a\leq x_1 < x_2\leq b` we have :math:`f(x_1)=f(x_2)`
+		* then :math:`\exists c\in[a,b]` such that :math:`f'(c)=0`
 
 ****************************************************************
 Important Formulae
