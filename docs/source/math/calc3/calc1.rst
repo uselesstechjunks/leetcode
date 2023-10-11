@@ -222,7 +222,7 @@ EVT: Extreme value theorem
 Fundamental theorem of calculus
 ================================================================
 .. note::
-	* Let :math:`f:[a,b]\mapsto\mathbb{R}` be a function that is integrable for every :math:`[a,x]`.
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` be a function that is integrable for every :math:`[a,x]`. Let :math:`c\in[a,b]`.
 	* Let :math:`F(x)` be an indefinite integral of :math:`f`
 
 		.. math:: F(x)=\int\limits_c^x f(t)\mathop{dt}
