@@ -46,8 +46,12 @@ Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 	The function :math:`f:X\mapsto Y` is said to be continuous at a point :math:`x\in X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* :math:`\exists\delta_{\epsilon, x} > 0` (depends on :math:`\epsilon` as well as :math:`x` and can be arbitrarily large) such that
+	* :math:`\exists\delta_{\epsilon, x} > 0` (depends on :math:`\epsilon` as well as :math:`x` and can be arbitrarily small) such that
 	* :math:`\forall y\in X, |x-y|\leq\delta_{\epsilon, x}\implies |f(x)-f(y)|\leq\epsilon`
+
+.. seealso::
+	* If we're only able to take extremely small :math:`\delta_{\epsilon, x}` to push the image inside the :math:`\epsilon` ball in :math:`Y`, then we can say that the function varies quite drastically.
+	* If we're allowed to take larger :math:`\delta`, then the function is considered smoother.
 
 .. tip::
 	:math:`\lim\limits_{n\to\infty} x_n=x\in X\implies \lim\limits_{n\to\infty} f(x_n)=f(x)\in Y`
@@ -71,7 +75,7 @@ This is a stricter form of continuity.
 	The function :math:`f:X\mapsto Y` is said to be uniformly continuous in :math:`X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* :math:`\exists\delta_\epsilon > 0` (doesn't depend on :math:`x` anymore, however can be arbitrarily large) such that
+	* :math:`\exists\delta_\epsilon > 0` (a universal one, as it doesn't depend on :math:`x` anymore, however can still be arbitrarily small) such that
 	* :math:`\forall x, y\in X, |x-y|\leq\delta_\epsilon\implies |f(x)-f(y)|\leq\epsilon`
 
 Lipschitz Continuity
@@ -88,7 +92,7 @@ This is an even stricter form of continuity.
 	This means
 
 	* :math:`\forall\epsilon > 0`
-	* we can choose :math:`0<\delta\leq \epsilon/K` (don't even have to be arbitrarily large this time) such that
+	* we can choose :math:`\delta=\epsilon/K` (able to take larger values now) such that
 	* :math:`\forall x, y\in X, |x-y|\leq\delta\implies |f(x)-f(y)|\leq\epsilon`
 
 ****************************************************************
@@ -106,6 +110,10 @@ Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function 
 
 Properties
 ================================================================
+.. note::
+	* **Sum Rule**: :math:`(f+g)'=f'+g'`
+	* **Product Rule**: :math:`(f\cdot g)'=f\cdot g'+f'\cdot g`
+	* **Chain Rule**: :math:`(f\circ g)'=(f'\circ g)\cdot g'`
 
 ****************************************************************
 Integration
