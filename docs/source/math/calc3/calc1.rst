@@ -285,3 +285,8 @@ Rolle's theorem
 ****************************************************************
 Important Formulae
 ****************************************************************
+.. seealso::
+	* Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
+	* Different ways for evaluating the Gaussian integral: `YouTube video playlist by Dr Peyam <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_.
+
+	* Hints (one way): Let :math:`I=\int\limits_{-\infty}^\infty e^{x^2}\mathop{dx}`. Try to compute :math:`I^2`, convert this into a double integral using Fubini's theorem, and then use polar co-ordinate transform.
