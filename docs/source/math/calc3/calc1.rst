@@ -61,7 +61,7 @@ Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 	The function :math:`f:X\mapsto Y` is said to be continuous at a point :math:`p\in X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* we can create an open ball around :math:`p` in the domain with some :math:`\delta_{\epsilon, p} > 0` such that
+	* we can create an open ball around :math:`p` with some :math:`\delta_{\epsilon, p} > 0` such that
 
 		* (note: the size depends on :math:`\epsilon` as well as :math:`p` and can be arbitrarily small)
 	* if we force :math:`x` to be in :math:`B_{\delta_{\epsilon, p}}(p)`, then the image :math:`f(x)` is guaranteed to be in :math:`B_\epsilon(f(p))`.
@@ -87,7 +87,7 @@ Properties
 Continuous Everywhere
 ----------------------------------------------------------------
 .. note::
-	If the function is continuous :math:`\forall\in X`, then it is said to be continuous everywhere.
+	If the function is continuous :math:`\forall p\in X`, then it is said to be continuous everywhere.
 
 Uniform Continuity
 ----------------------------------------------------------------
@@ -97,7 +97,7 @@ This is a stricter form of continuity.
 	The function :math:`f:X\mapsto Y` is said to be uniformly continuous in :math:`X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* we can create an open ball around :math:`p` in the domain with some :math:`\exists\delta_\epsilon > 0` such that
+	* we can create an open ball around :math:`p` with some :math:`\exists\delta_\epsilon > 0` such that
 
 		* (note: a universal one as it doesn't depend on :math:`p` anymore, however can still be arbitrarily small)
 	* if we force :math:`x` to be in :math:`B_{\delta_\epsilon}(p)` around **any** :math:`p`, the image :math:`f(x)` is guaranteed to be in :math:`B_\epsilon(f(p))`.
