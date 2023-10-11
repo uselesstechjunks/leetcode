@@ -13,7 +13,7 @@ Open Ball
 ================================================================
 Around any point we can create an open :math:`\epsilon`-ball
 
-.. math:: B_\eplison(x)=\{y\mathop{|} |x-y|< \epsilon\}
+.. math:: B_\epsilon(x)=\{y\mathop{|} |x-y|< \epsilon\}
 
 Convergent sequence
 ================================================================
