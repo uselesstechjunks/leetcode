@@ -82,7 +82,7 @@ Properties
 	* If :math:`f` and :math:`g` are continuous at :math:`x`, so is :math:`f\circ g`.
 
 .. attention::
-	* **Boundedness Theorem**: If :math:`f` is a continuous function defined on a closed interval, then it is bounded.
+	* **Boundedness Theorem**: Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`. then it is bounded.
 
 Continuous Everywhere
 ----------------------------------------------------------------
@@ -176,6 +176,10 @@ Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be any bounded function.
 
 		.. math:: I=\int\limits_a^b f(x)\mathop{dx}=\sup_s S=\inf_t T
 
+.. attention::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
+	* Then it is integrable (follows since it is bounded).
+
 Properties
 ----------------------------------------------------------------
 ..note::
@@ -186,15 +190,37 @@ Properties
 
 Indefinite Integral
 ================================================================
+.. note::
+	* For every :math:`a\leq x\leq b`, we can define a function of :math:`x` which is obtained via the integral
+
+		.. math:: A(x)=\int\limits_a^x f(t)\mathop{dt}
+
+		* This is known as **an** indefinite integral of :math:`f`.
+	* We can define another indefinite integral with a different lower limit :math:`c\in[a,b]` as
+
+		.. math:: C(x)=\int\limits_c^x f(t)\mathop{dt}
+
+.. attention::
+	* These two differ by only a constant as
+
+		.. math:: A(x)-C(x)=\int\limits_a^x f(t)\mathop{dt}-\int\limits_c^x f(t)\mathop{dt}=\int\limits_a^c f(t)\mathop{dt}=k
 
 ****************************************************************
 Important Theorems
 ****************************************************************
 Bolzano's theorem
 ================================================================
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
+	* Also assume that :math:`f(a)` and :math:`f(b)` have opposite signs.
+	* Then :math:`\exists c\in(a,b)` such that :math:`f(c)=0`
 
 Intermediate value theorem
 ================================================================
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
+	* Let :math:`a\leq p < q\leq b` be two arbitrary points with :math:`f(p)\neq f(q)`.
+	* Then :math:`f(x)` takes every possible value in :math:`(f(p), f(q))` within the interval :math:`(a,b)`.
 
 Mean value theorem
 ================================================================
