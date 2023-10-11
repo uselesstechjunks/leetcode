@@ -4,7 +4,7 @@ Single Variable Calculus
 .. attention::
 	* All the variables are real and all the functions are real valued functions.
 	* We will be using **point** instead of **elements** since :math:`\mathbb{R}` is a metric space with a distance function defined in terms of absolute function.
-	* The set :math:`U=\{f(x)\mathop{|}x\in S\}=f(S)` is called the image of :math:`S` under :math:`f`.
+	* The set :math:`U=\{f(x)\mathop{:}x\in S\}=f(S)` is called the image of :math:`S` under :math:`f`.
 
 ****************************************************************
 Convergence and Continuity
