@@ -81,6 +81,9 @@ Properties
 	* If :math:`f` and :math:`g` are continuous at :math:`x`, so is :math:`f\cdot g`.
 	* If :math:`f` and :math:`g` are continuous at :math:`x`, so is :math:`f\circ g`.
 
+.. attention::
+	* **Boundedness Theorem**: If :math:`f` is a continuous function defined on a closed interval, then it is bounded.
+
 Continuous Everywhere
 ----------------------------------------------------------------
 .. note::
@@ -157,13 +160,32 @@ Properties
 
 Integration of general function
 ================================================================
-Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be a general function.
+.. warning::
+	* We try to approximate the integral :math:`I=\int\limits_a^b f(x)\mathop{dx}` by 2 step functions :math:`s` and :math:`t`, one above and one below, that is
+
+		.. math:: s(x)\leq f(x)\leq t(x)
+	* This is not possible if the function :math:`f` is unbounded (such as :math:`f(x)=1/x`).
+
+Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be any bounded function.
 
 .. note::
-	TODO
+	* Let :math:`s` and :math:`t` be arbitrary step functions such that :math:`s(x)\leq f(x)\leq t(x)`.
+	* We define :math:`S=\left\{\int\limits_a^b s(x)\mathop{dx}\mathop{:}\forall s\leq f\right\}` and :math:`T=\left\{\int\limits_a^b t(x)\mathop{dx}\mathop{:}\forall f\leq t\right\}`.
+	* It is in general true that :math:`\int\limits_a^b s(x)\mathop{dx}\leq\sup_s S\leq I\leq\inf_t T\leq \int\limits_a^b t(x)\mathop{dx}`
+	* The integral :math:`I` exists when :math:`\sup_s S=\inf_t T` and takes that exact same value 
+
+		.. math:: I=\int\limits_a^b f(x)\mathop{dx}=\sup_s S=\inf_t T
 
 Properties
 ----------------------------------------------------------------
+..note::
+	* :math:`\int\limits_a^b (f(x)+g(x))\mathop{dx}=\int\limits_a^b f(x)\mathop{dx}=+\int\limits_a^b g(x)\mathop{dx}`
+	* :math:`\int\limits_a^b c\cdot f(x)\mathop{dx}=c\cdot\int\limits_a^b f(x)\mathop{dx}`
+	* :math:`\int\limits_a^b f(x)\mathop{dx}=-\int\limits_b^a f(x)\mathop{dx}`
+	* :math:`\int\limits_a^c f(x)\mathop{dx}=\int\limits_a^b f(x)\mathop{dx}+\int\limits_b^c f(x)\mathop{dx}`
+
+Indefinite Integral
+================================================================
 
 ****************************************************************
 Important Theorems
