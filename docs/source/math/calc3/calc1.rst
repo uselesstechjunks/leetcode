@@ -98,7 +98,8 @@ This is an even stricter form of continuity.
 ****************************************************************
 Differentiation
 ****************************************************************
-Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function at some :math:`x\in(a,b)`.
+.. warning::
+	Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function at some :math:`x\in(a,b)`.
 
 .. note::
 	The derivative of :math:`f` at :math:`x\in(a,b)` is defined to be (assuming that the limit exists),
@@ -118,6 +119,17 @@ Properties
 ****************************************************************
 Integration
 ****************************************************************
+
+Integration of step functions
+================================================================
+.. warning::
+	Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be a function.
+
+Integration of general function
+================================================================
+.. note::
+	
+
 Properties
 ================================================================
 
