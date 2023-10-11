@@ -24,7 +24,7 @@ Cauchy convergence
 	The sequence is said to be Cauchy convergent iff
 
 	* :math:`\forall\delta > 0`
-	* :math:`\exists N_\delta\mathbb{N}^{+}` such that
+	* :math:`\exists N_\delta\in\mathbb{N}^{+}` such that
 	* :math:`m, n\geq N_\delta\implies |x_m-x_n|\leq\delta`
 
 .. attention::
