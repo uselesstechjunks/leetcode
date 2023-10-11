@@ -9,11 +9,17 @@ Single Variable Calculus
 ****************************************************************
 Convergence and Continuity
 ****************************************************************
-Open Ball
+Open and Closed Balls and Intervals
 ================================================================
-Around any point we can create an open :math:`\epsilon`-ball
+.. note::
+	* For any :math:`\epsilon > 0`, we can create an open :math:`\epsilon`-ball around any point :math:`x` as
 
-.. math:: B_\epsilon(x)=\{y\mathop{|} |x-y|< \epsilon\}
+		.. math:: B_\epsilon(x)=\{y\mathop{:} |x-y|< \epsilon\}
+	* Closed ball is defined similarly as 
+
+		.. math:: \bar{B}_\epsilon(x)=\{y\mathop{:} |x-y|\leq \epsilon\}
+	* Open interval: :math:`(a,b)=\{x\mathop{:} a < x < b\}`
+	* Closed interval: :math:`[a,b]=\{x\mathop{:} a \leq x \leq b\}`
 
 Convergent sequence
 ================================================================
