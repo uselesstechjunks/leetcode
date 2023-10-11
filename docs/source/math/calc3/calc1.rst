@@ -46,11 +46,50 @@ Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 	The function :math:`f:X\mapsto Y` is said to be continuous at a point :math:`x\in X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* :math:`\exists\delta_\epsilon > 0` such that
-	* :math:`\forall y\in X, |x-y|\leq\delta_\epsilon\implies |f(x)-f(y)|\leq\epsilon`
+	* :math:`\exists\delta_{\epsilon, x} > 0` (depends on :math:`\epsilon` as well as :math:`x` and can be arbitrarily large) such that
+	* :math:`\forall y\in X, |x-y|\leq\delta_{\epsilon, x}\implies |f(x)-f(y)|\leq\epsilon`
 
 .. tip::
 	:math:`\lim\limits_{n\to\infty} x_n=x\in X\implies \lim\limits_{n\to\infty} f(x_n)=f(x)\in Y`
+
+Properties
+----------------------------------------------------------------
+.. note::
+	* If :math:`f` and :math:`g` are continuous at :math:`x`, so is :math:`f\cdot g`.
+	* If :math:`f` and :math:`g` are continuous at :math:`x`, so is :math:`f\circ g`.
+
+Continuous Everywhere
+----------------------------------------------------------------
+.. note::
+	If the function is continuous :math:`\forall\in X`, then it is said to be continuous everywhere.
+
+Uniform Continuity
+----------------------------------------------------------------
+This is a stricter form of continuity.
+
+.. note::
+	The function :math:`f:X\mapsto Y` is said to be uniformly continuous in :math:`X` iff
+
+	* :math:`\forall\epsilon > 0`
+	* :math:`\exists\delta_\epsilon > 0` (doesn't depend on :math:`x` anymore, however can be arbitrarily large) such that
+	* :math:`\forall x, y\in X, |x-y|\leq\delta_\epsilon\implies |f(x)-f(y)|\leq\epsilon`
+
+Lipschitz Continuity
+----------------------------------------------------------------
+This is an even stricter form of continuity.
+
+.. note::
+	The function :math:`f:X\mapsto Y` is said to be Lipschitz continuous in :math:`X` with Lipschitz constant :math:`K` iff
+
+	* :math:`\exists K\geq 0` such that
+	* :math:`\forall x,y\in X, \frac{|f(x)-f(x)|}{|x-y|}\leq K`
+
+.. seealso::
+	This means
+
+	* :math:`\forall\epsilon > 0`
+	* we can choose :math:`0<\delta\leq \epsilon/K` (don't even have to be arbitrarily large this time) such that
+	* :math:`\forall x, y\in X, |x-y|\leq\delta\implies |f(x)-f(y)|\leq\epsilon`
 
 ****************************************************************
 Differentiation
