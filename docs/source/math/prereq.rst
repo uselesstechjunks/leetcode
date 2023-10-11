@@ -41,45 +41,11 @@ Multinomial theorem:
 ***********************************************
 Calculus
 ***********************************************
-Differentiation
-==============================================
-.. note::
-	* [Product rule] :math:`\left(u(x)\cdot v(x)\right)'=u'(x)\cdot v(x)+u(x)\cdot v'(x)`
-	* [Chain rule] :math:`\left(f(g(x))\right)'=f'(g(x))\cdot g'(x)`
-
-Integration
-==============================================
-Integration by parts:
--------------------------------
-Let :math:`u(x)` and :math:`v(x)` be two functions. We want to find out the integral of the product, :math:`\int u(x)\cdot v(x) \mathop{dx}`.
-
-.. note::
-	* To derive this formula, it becomes easier if we consider :math:`w(x)=\int v(x) \mathop{dx}` (:math:`w'(x)=v(x)`) and consider :math:`g(x)=u(x)\cdot w(x)`.
-	* Taking derivatives on both sides :math:`g'(x)=u'(x)\cdot w(x)+u(x)\cdot w'(x)` which gives
-
-		.. math:: u(x)\cdot w'(x)=g'(x)-u'(x)\cdot w(x)
-	* Taking integration on both sides and ignoring the constant
-
-		.. math:: \int u(x)\cdot w'(x)\mathop{dx}=\int g'(x)\mathop{dx}-\int u'(x)\cdot w(x)\mathop{dx}=u(x)\cdot w(x)-\int u'(x)\cdot w(x)\mathop{dx}
-	* Replacing :math:`w(x)`
-
-		.. math:: \int u(x)\cdot v(x)\mathop{dx}=u(x)\cdot \int v(x)\mathop{dx}-\int u'(x)\left(\int v(x)\mathop{dx}) \right)\mathop{dx}
-
-.. tip::
-	* ILATE: Dictates the order in which the functions should be chosen to be :math:`u` or :math:`v`. 
-	* ILATE: Acronym for Inverse > Logarithmic > Algebraic > Trigonometric > Exponential. Choose left of the two as :math:`u`.
-
 Fubini's Theorem:
--------------------------------
+==============================================
 For double integral of a function :math:`f(x,y)` in a rectangular region :math:`R=[a,b]\times [c,d]` and :math:`\iint\limits_{R} \left|f(x,y)\right|\mathop{dx} \mathop{dy}<\infty`, we can compute it using iterated integrals as follows:
 
 	.. math:: \iint\limits_{R} f(x,y)\mathop{dx} \mathop{dy}=\int\limits_a^b \left(\int\limits_c^d f(x,y)\mathop{dy}\right)\mathop{dx}=\int\limits_c^d \left(\int\limits_a^b f(x,y)\mathop{dx}\right)\mathop{dy}
-
-.. seealso::
-	* Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
-	* Different ways for evaluating the Gaussian integral: `YouTube video playlist by Dr Peyam <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_.
-
-	* Hints (one way): Let :math:`I=\int\limits_{-\infty}^\infty e^{x^2}\mathop{dx}`. Try to compute :math:`I^2`, convert this into a double integral using Fubini's theorem, and then use polar co-ordinate transform.
 
 ***********************************************
 Geometry
