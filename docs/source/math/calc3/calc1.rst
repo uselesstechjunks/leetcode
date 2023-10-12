@@ -3,7 +3,7 @@ Single Variable Calculus
 ################################################################
 .. attention::
 	* All the variables are real and all the functions are real valued functions.
-	* We will be using **point** instead of **elements** since :math:`\mathbb{R}` is a metric space with a distance function defined in terms of the absolute value function :math:`|\cdot|`.
+	* We will be using **points** instead of **elements** since :math:`\mathbb{R}` is a metric space with a distance function defined in terms of the absolute value function :math:`|\cdot|`.
 	* The set :math:`U=\{f(x)\mathop{:}x\in S\}=f(S)` is called the image of :math:`S` under :math:`f`.
 
 ****************************************************************
@@ -32,7 +32,7 @@ Let :math:`(x_n)_{n=1}^\infty` be a sequence such that :math:`\forall x_n\in S\s
 	* :math:`\exists N_\delta\in\mathbb{N}^{+}` (depends on how small of a :math:`\delta` we're given) such that
 	* if we skip :math:`N_\delta` number of terms in that sequence, the remaining values are guaranteed to be inside :math:`B_\delta(x)`.
 		
-		* Formally, :math:`n \geq N_\delta\implies |x_n-x|\leq\delta`
+		* Formally, :math:`n > N_\delta\implies |x_n-x|< \delta`
 
 Cauchy convergence
 ================================================================
@@ -41,9 +41,9 @@ Cauchy convergence
 
 	* :math:`\forall\delta > 0`
 	* :math:`\exists N_\delta\in\mathbb{N}^{+}` such that
-	* if we skip :math:`N_\delta` number of terms in that sequence, any two values fall under a :math:`\delta`-ball around one another.
+	* if we skip :math:`N_\delta` number of terms in that sequence, any two values from the rest of it fall under a :math:`\delta`-ball around one another.
 	
-		* Formally, :math:`m, n\geq N_\delta\implies |x_m-x_n|\leq\delta`
+		* Formally, :math:`m, n> N_\delta\implies |x_m-x_n|< \delta`
 
 .. attention::
 	* For a sequence to be Cauchy convergent, the limit value doesn't need to be in :math:`S`.
@@ -66,12 +66,14 @@ Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
 		* (note: the size depends on :math:`\epsilon` as well as :math:`p` and can be arbitrarily small)
 	* if we force :math:`x` to be in :math:`B_{\delta_{\epsilon, p}}(p)`, then the image :math:`f(x)` is guaranteed to be in :math:`B_\epsilon(f(p))`.
 	
-		* Formally, :math:`\forall x\in X, |p-x|\leq\delta_{\epsilon, p}\implies |f(p)-f(x)|\leq\epsilon`
+		* Formally, :math:`\forall x\in X, |p-x|< \delta_{\epsilon, p}\implies |f(p)-f(x)|< \epsilon`
 
 .. seealso::
-	* If we're only able to take extremely small :math:`\delta_{\epsilon, p}` to push the image inside the :math:`\epsilon`-ball in :math:`Y`, then we can say that the function varies quite drastically.
+	* If the function varies quite drastically, we'd only able to choose extremely small :math:`\delta_{\epsilon, p}` to push the image inside :math:`B_\epsilon(f(p))`.
 	* If we're allowed to take larger :math:`\delta`, then the function is considered smoother.
 
+Sequential Continuity
+----------------------------------------------------------------
 .. tip::
 	Under a continuous function :math:`f`, :math:`\lim\limits_{n\to\infty} x_n=x\in X\implies \lim\limits_{n\to\infty} f(x_n)=f(x)\in Y`
 
@@ -94,15 +96,15 @@ This is a stricter form of continuity.
 	The function :math:`f:X\mapsto Y` is said to be uniformly continuous in :math:`X` iff
 
 	* :math:`\forall\epsilon > 0`
-	* we can create an open ball around :math:`p` with some :math:`\exists\delta_\epsilon > 0` such that
+	* we can create an open ball around **any** :math:`p` with some :math:`\exists\delta_\epsilon > 0` such that
 
 		* (note: a universal one as it doesn't depend on :math:`p` anymore, however can still be arbitrarily small)
-	* if we force :math:`x` to be in :math:`B_{\delta_\epsilon}(p)` around **any** :math:`p`, the image :math:`f(x)` is guaranteed to be in :math:`B_\epsilon(f(p))`.
+	* if we force :math:`x` to be in :math:`B_{\delta_\epsilon}(p)`, the image :math:`f(x)` is guaranteed to be in :math:`B_\epsilon(f(p))`.
 
-		* Formally, :math:`\forall p, x\in X, |p-x|\leq\delta_\epsilon\implies |f(p)-f(x)|\leq\epsilon`
+		* Formally, :math:`\forall p, x\in X, |p-x|< \delta_\epsilon\implies |f(p)-f(x)|< \epsilon`
 
 .. tip::
-	* The same :math:`\delta` works for every :math:`\epsilon`, hence the term **uniform**.
+	* The same :math:`\delta` works for every point :math:`p\in X`, hence the term **uniform**.
 
 Lipschitz Continuity
 ----------------------------------------------------------------
@@ -128,7 +130,7 @@ Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function 
 		.. math:: f'(x)=\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}
 
 .. warning::
-	We need the point to be inside the open interval because we should be able to create an open ball around it for which the function is defined.
+	We need the point :math:`x` to be inside the open interval because we need to be able to create an open :math:`h`-ball around it and we need the function to be well defined in that region.
 
 Properties
 ================================================================
@@ -136,6 +138,47 @@ Properties
 	* **Sum Rule**: :math:`(f+g)'=f'+g'`
 	* **Product Rule**: :math:`(f\cdot g)'=f\cdot g'+f'\cdot g`
 	* **Chain Rule**: :math:`(f\circ g)'=(f'\circ g)\cdot g'`
+
+Application: Local extremum
+================================================================
+.. note::
+	* Let the function be :math:`f:X\mapsto Y` and let :math:`c\in X`.
+	* :math:`c` is called a relative (local) maximum iff
+
+		.. math:: \exists\epsilon>0,x\in B_\epsilon(c)\implies f(x)\leq f(c)
+.. note::
+	* Relative minimum is defined in the same way.
+	* This is usually defined in terms of an open interval, i.e. :math:`c\in(a,b)`.
+	* Maxima and minimum are jointly called an extremum.
+
+First derivative test
+----------------------------------------------------------------
+For critical points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. attention::
+	Let :math:`c\in(a,b)` be a local extremum. Then :math:`f'(c)=0`.
+
+.. tip::
+	* The point :math:`c\in(a,b)` is called a **critical point**.
+	* First derivative test doesn't tell us whether it's a maximum or a minimum.
+
+For monotonic functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. attention::
+	* If :math:`\forall x\in (a,b), f'(x)> 0`, then :math:`f` is strictly increasing in :math:`[a,b]`.
+	* If :math:`\forall x\in (a,b), f'(x)< 0`, then :math:`f` is strictly decreasing in :math:`[a,b]`.
+	* If :math:`\forall x\in (a,b), f'(x)= 0`, then :math:`f` is constant in :math:`[a,b]`.
+
+Second derivative test
+----------------------------------------------------------------
+For critical points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. tip::
+	Think of the slope of tangent for a convex function as it reaches a minimum.
+
+.. attention::
+	* For a minimum :math:`c\in(a,b)`, the second derivative is a strictly increasing function in :math:`[a,b]`, i.e. :math:`\forall x\in(a,b), f''(x)> 0`.
+	* For a maximum :math:`c\in(a,b)`, the second derivative is a strictly decreasing function in :math:`[a,b]`, i.e. :math:`\forall x\in(a,b), f''(x)< 0`.
 
 ****************************************************************
 Integration
@@ -167,8 +210,10 @@ Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be any bounded function.
 
 .. note::
 	* Let :math:`s` and :math:`t` be arbitrary step functions such that :math:`s(x)\leq f(x)\leq t(x)`.
-	* We define :math:`S=\left\{\int\limits_a^b s(x)\mathop{dx}\mathop{:}\forall s\leq f\right\}` and :math:`T=\left\{\int\limits_a^b t(x)\mathop{dx}\mathop{:}\forall f\leq t\right\}`.
-	* It is in general true that :math:`\int\limits_a^b s(x)\mathop{dx}\leq\sup_s S\leq I\leq\inf_t T\leq \int\limits_a^b t(x)\mathop{dx}`
+	* We define :math:`S=\left\{\int\limits_a^b s(x)\mathop{dx}\mathop{:}\forall s\leq f\right\}` and :math:`T=\left\{\int\limits_a^b t(x)\mathop{dx}\mathop{:}\forall t\geq f\right\}`.
+	* It is in general true that
+
+		.. math:: \int\limits_a^b s(x)\mathop{dx}\leq\sup_s S\leq I\leq\inf_t T\leq \int\limits_a^b t(x)\mathop{dx}
 	* The integral :math:`I` exists when :math:`\sup_s S=\inf_t T` and takes that exact same value 
 
 		.. math:: I=\int\limits_a^b f(x)\mathop{dx}=\sup_s S=\inf_t T
@@ -184,8 +229,7 @@ Properties
 	* :math:`\int\limits_a^b c\cdot f(x)\mathop{dx}=c\cdot\int\limits_a^b f(x)\mathop{dx}`
 	* :math:`\int\limits_a^b f(x)\mathop{dx}=-\int\limits_b^a f(x)\mathop{dx}`
 	* :math:`\int\limits_a^c f(x)\mathop{dx}=\int\limits_a^b f(x)\mathop{dx}+\int\limits_b^c f(x)\mathop{dx}`
-
-		* :math:`\int\limits_a^b f(x)\mathop{dx}=-\int\limits_b^a f(x)\mathop{dx}`
+	* :math:`\int\limits_a^a f(x)\mathop{dx}=0`
 
 Indefinite Integral
 ================================================================
@@ -194,7 +238,7 @@ Indefinite Integral
 
 		.. math:: A(x)=\int\limits_a^x f(t)\mathop{dt}
 
-		* This is known as **an** indefinite integral of :math:`f`.
+	* This is known as **an** indefinite integral of :math:`f`.
 	* We can define another indefinite integral with a different lower limit :math:`c\in[a,b]` as
 
 		.. math:: C(x)=\int\limits_c^x f(t)\mathop{dt}
