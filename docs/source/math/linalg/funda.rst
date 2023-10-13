@@ -54,19 +54,14 @@ Space of Linear Transform
 As a Vector Space over Addition
 --------------------------------------------------------------------------------
 .. attention::
-	* We can define a + operator in :math:`L(U,V)`.
+	* Let's consider :math:`A,B\in L(U,W)`.
+	* We can define an addition operator in :math:`L(U,V)` with the same scalar multiplication of :math:`W`.
 
-		* Let :math:`C=(a\cdot A+b\cdot B)` for any :math:`A,B\in L(U,W)` and any :math:`a,b\in\mathcal{F}` such that 
+		* Let :math:`C=(a\cdot A+b\cdot B)` where for any :math:`a,b\in\mathcal{F}` we have
 
-			.. math:: (a\cdot A+b\cdot B)(\mathbf{u})=a\cdot A(\mathbf{u})+b\cdot B(\mathbf{u})
-		* Then :math:`C\in L(U,W)`.
-	* We can also define a scalar multiplication :math:`\cdot`.
-
-		* Let :math:`C=c\cdot A` for any :math:`A\in L(U,W)` and any :math:`c\in\mathcal{F}` such that 
-
-			.. math:: (c\cdot A)(\mathbf{u})=c\cdot A(\mathbf{u}).
-		* Then :math:`C\in L(U,W)`.
-	* We also define a :math:`0_L\in L(U,W)` such that :math:`\forall \mathbf{u}, 0_L(\mathbf{u})=\mathbf{0}`.
+			.. math:: \forall\mathbf{u}\in U, C(\mathbf{u})=(a\cdot A+b\cdot B)(\mathbf{u})=a\cdot A(\mathbf{u})+b\cdot B(\mathbf{u})
+		* We note that :math:`C\in L(U,W)`.
+	* We also define an identity operator :math:`0_L\in L(U,W)` such that :math:`\forall \mathbf{u}, 0_L(\mathbf{u})=\mathbf{0}`.
 
 		* We note that :math:`A+0_L=0_L+A=A`.
 	* If the transform is **onto**, we can define a unique additive inverse :math:`-A:U\mapsto W`.
@@ -78,17 +73,19 @@ Composition of Linear Transforms
 .. attention::
 	* We can define composite linear transforms in the usual way.
 	* Let :math:`A:U\mapsto V` and :math:`B:V\mapsto W`.
-	* Then :math:`(B\circ A)\in L(U,W)` where :math:`\forall\mathbf{u}\in U, (B\circ A)\mathbf{u}=B(A(\mathbf{u}))`.
+	* Then :math:`(B\circ A)\in L(U,W)` where :math:`\forall\mathbf{u}\in U, (B\circ A)(\mathbf{u})=B(A(\mathbf{u}))`.
 
 As a Vector Space over Composition
 --------------------------------------------------------------------------------
 	* Let's consider :math:`A,B\in L(U)`.
-	* We note that :math:`((b\cdot B)\circ (a\cdot A))\in L(U)` where
+	* We note that :math:`\circ` serves as a different "addition" operator with the same scalar multiplication of :math:`U`.
 
-		.. math:: \forall\mathbf{u}\in U, ((b\cdot B)\circ (a\cdot A))\mathbf{u}=ab\cdot B(A(\mathbf{u}))
-	* We define the identity operator :math:`I:U\mapsto U` such that :math:`I(\mathbf{u})=\mathbf{u}` such that
+		* Let :math:`C=((b\cdot B)\circ (a\cdot A))\in L(U)` where for any :math:`a,b\in\mathcal{F}` we have
 
-		.. math:: (A\circ I)(\mathbf{u}) = (I\circ A)(\mathbf{u}) = A(\mathbf{u})
+			.. math:: \forall\mathbf{u}\in U, C(\mathbf{u})=((b\cdot B)\circ (a\cdot A))(\mathbf{u})=ab\cdot B(A(\mathbf{u}))
+	* We define the identity operator :math:`I:U\mapsto U` such that :math:`\forall \mathbf{u}, I(\mathbf{u})=\mathbf{u}`.
+
+		We note that :math:`A\circ I = I\circ A = A`
 	* If the transform is **onto**, then we can define a unique composition inverse :math:`A^{-1}:U\mapsto U` such that
 
 		.. math:: (A\circ A^{-1})(\mathbf{u}) = (A^{-1}\circ A)(\mathbf{u}) = I(\mathbf{u}) = \mathbf{u}
