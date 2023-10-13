@@ -177,6 +177,7 @@ Scalar Multiplication as a Linear Transform
 Differentiation as a Linear Transform
 --------------------------------------------------------------------------------
 .. attention::
+	* Let :math:`X` and :math:`Y` be two vector spaces over :math:`\mathbb{R}`.
 	* Let :math:`\mathcal{F}=\{f\mathop{|} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
 	* Let :math:`\mathcal{D}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **differentiable functions**.
 	* The differentiation operator :math:`D=\frac{\mathop{d}}{\mathop{dx}}` on its own defines a function :math:`D:\mathcal{G}\mapsto\mathcal{F}`.
@@ -185,11 +186,12 @@ Differentiation as a Linear Transform
 	* :math:`D` applied on some specific function :math:`g` (ready to be evaluated on any :math:`x`) defines a linear transform :math:`D(g)\in\mathcal{F}:X\mapsto Y` since
 
 		* :math:`\forall g_1,g_2\in \mathcal{G}, D(g_1+g_2)=D(g_1)+D(g_2)`
-		* :math:`\forall c\in\mathbb{Y},\forall g\in \mathcal{G}, D(c\dot g)=c\cdot D(g)`
+		* :math:`\forall c\in \mathbb{R},\forall g\in \mathcal{G}, D(c\cdot g)=c\cdot D(g)`
 
 Integration as a Linear Transform
 --------------------------------------------------------------------------------
 .. attention::
+	* Let :math:`X` and :math:`Y` be two vector spaces over :math:`\mathbb{R}`.
 	* Let :math:`\mathcal{F}=\{f\mathop{|} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
 	* Let :math:`\mathcal{I}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **integrable functions**.
 	* The integration operator :math:`I=\int\cdot\mathop{dx}` on its own defines a function :math:`I:\mathcal{I}\mapsto\mathcal{F}`.
@@ -198,4 +200,4 @@ Integration as a Linear Transform
 	* :math:`I` applied on some specific function :math:`g` (ready to be evaluated on any :math:`x`) defines a linear transform :math:`I(g)\in\mathcal{F}:X\mapsto Y` since
 
 		* :math:`\forall g_1,g_2\in \mathcal{G}, I(g_1+g_2)=I(g_1)+I(g_2)`
-		* :math:`\forall c\in\mathbb{Y},\forall g\in \mathcal{G}, I(c\dot g)=c\cdot I(g)`
+		* :math:`\forall c\in \mathbb{R},\forall g\in \mathcal{G}, I(c\cdot g)=c\cdot I(g)`
