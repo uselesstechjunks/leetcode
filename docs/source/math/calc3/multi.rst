@@ -1,7 +1,7 @@
 ##########################################################
 Multivariable Calculus
 ##########################################################
-We consider functions from :math:`\mathbb{R}^n` to :math:`\mathbb{R}^m`.
+We consider functions from :math:`\mathbb{R}^n` to :math:`\mathbb{R}^m` which are expressed as :math:`\mathbf{f}(\mathbf{x})=\mathbf{f}(x_1,\cdots,x_n)=(f_1(\mathbf{x}),\cdots,f_m(\mathbf{x}))`.
 
 **********************************************************
 Different Forms of Multivariable Functions
@@ -28,6 +28,13 @@ Vector field
 	* If :math:`n> 1` and :math:`m> 1` then the functions :math:`\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m` are known as vector fields.
 	* We write :math:`\mathbf{f}(\mathbf{x})` or :math:`\mathbf{f}(x_1,\cdots,x_n)`.
 	* Example: :math:`f(x,y)=(x^2,\sin(y),x+y)`
+
+**********************************************************
+Continuity
+**********************************************************
+.. note::
+	* We have a function :math:`\mathbf{f}`, from an open set :math:`E\in\mathbb{R}^n` into :math:`\mathbb{R}^m`.
+	* A function is continuous at a point if each of its components, :math:`f_k(\mathbf{x})` is continuous at that point.
 
 **********************************************************
 Directional Derivative
@@ -94,19 +101,40 @@ We define the derivative (total derivative) as a linear approximation of the fun
 	* Let :math:`D` denote an operator which, when applied to a differentiable vector field, :math:`\mathbf{f}`, returns :math:`D(\mathbf{f})=D\mathbf{f}` which represents another function :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m`.
 	* We can consider an error term
 
-		.. math:: E(\mathbf{x},\mathbf{h})=f(\mathbf{f}+\mathbf{h})-f(\mathbf{x})-D\mathbf{f}(\mathbf{x})\cdot ||\mathbf{h}||
+		.. math:: E(\mathbf{x},\mathbf{h})=\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-D\mathbf{f}(\mathbf{x})\cdot ||\mathbf{h}||
 	* We note that :math:`\lim\limits_{||\mathbf{h}||\to 0} E(\mathbf{x},\mathbf{h})=\mathbf{0}\implies D\mathbf{f}=\mathbf{f}'`
-	* We note that :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m` is a linear transform because of the sum rule.
+	* We note that :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m` is a linear transform.
 	* Therefore, :math:`D\mathbf{f}` is a linear approximation of :math:`\mathbf{f}` with an approximation error that becomes negligible as we move closer to :math:`\mathbf{x}`.
 
-Continuously Differentiable Functions
-=========================================================
+.. attention::
+	* If total derivative exists, then directional derivative exists along every vector :math:`\mathbf{v}`.
+	* Since :math:`D\mathbf{f}` is a linear transform involving finite dimensional spaces, we can always define a matrix :math:`\mathbf{D}_{n\times m}` which represents this transform.
 
 Gradient
 ==========================================================
+.. note::
+	* If :math:`m=1`, then the linear transform is usually written as a column vector instead of a :math:`1\times n` row matrix.
+	* The total derivative is known as the gradient of :math:`\mathbf{f}` at :math:`\mathbf{x}`
+
+		.. math:: \nabla f(\mathbf{x}) =\begin{bmatrix}\frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}
+	* The total derivative operator :math:`D` in this case is the gradient operator
+
+		.. math:: \nabla =\begin{bmatrix}\frac{\mathop{\partial}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial}}{\mathop{\partial x_n}}\end{bmatrix}
 
 Jacobian
 ==========================================================
+.. note::
+	* If :math:`m> 1`, the matrix associated with the linear transform is known as Jacibian matrix.
+
+		.. math:: J f(\mathbf{x}) =\begin{bmatrix}\frac{\mathop{\partial \mathbf{f}(\mathbf{x})}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial \mathbf{f}(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}=\begin{bmatrix}\frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_1}} & \cdots & \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_1}} \\ \vdots & \vdots & \vdots \\ \frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_n}} & \cdots & \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}
+
+Continuously Differentiable Functions
+=========================================================
+.. warning::
+	* Since we've established that the partial derivatives can exist at a point even when the function is not continuous at that point, let alone be differentiable, the existance of the gradient or the Jacobian doesn't imply that the function is differentiable at any point.
+
+.. note::
+	The function is differentiable at :math:`\mathbf{x}` if all the partial derivatives exist and are **continuous** at :math:`\mathbf{x}`.
 
 **********************************************************
 Higher Order Derivative
