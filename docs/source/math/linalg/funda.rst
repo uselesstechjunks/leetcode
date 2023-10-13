@@ -53,7 +53,7 @@ Space of Linear Transform
 
 As a Vector Space over Addition
 --------------------------------------------------------------------------------
-.. attention::
+.. seealso::
 	* Let's consider :math:`A,B\in L(U,W)`.
 	* We can define an addition operator in :math:`L(U,V)` with the same scalar multiplication of :math:`W`.
 
@@ -70,13 +70,14 @@ As a Vector Space over Addition
 
 Composition of Linear Transforms
 ================================================================================
-.. attention::
+.. note::
 	* We can define composite linear transforms in the usual way.
 	* Let :math:`A:U\mapsto V` and :math:`B:V\mapsto W`.
 	* Then :math:`(B\circ A)\in L(U,W)` where :math:`\forall\mathbf{u}\in U, (B\circ A)(\mathbf{u})=B(A(\mathbf{u}))`.
 
 As a Vector Space over Composition
 --------------------------------------------------------------------------------
+.. seealso::
 	* Let's consider :math:`A,B\in L(U)`.
 	* We note that :math:`\circ` serves as a different "addition" operator with the same scalar multiplication of :math:`U`.
 
