@@ -1,10 +1,28 @@
 ##########################################################
 Multivariable Calculus
 ##########################################################
+We consider functions from :math:``\mathbb{R}^n` to :math:`\mathbb{R}^m`.
 
 **********************************************************
-Scalar And Vector Fields
+Different Forms of Multivariable Functions
 **********************************************************
+Parametric Surface
+==========================================================
+.. note::
+	* If :math:`n=1` and :math:`m > 1` then the functions :math:`f:\mathbb{R}\mapsto\mathbb{R}^m` are known as parametric sufraces.
+	* Example: :math:`f(x)=(x, x^2)`
+
+Scalar field
+==========================================================
+.. note::
+	* If :math:`n> 1` and :math:`m=1` then the functions :math:`f:\mathbb{R}^n\mapsto\mathbb{R}` are known as scalar fields.
+	* Example: :math:`f(x,y)=xy`
+
+Vector field
+==========================================================
+.. note::
+	* If :math:`n> 1` and :math:`m> 1` then the functions :math:`\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m` are known as vector fields.
+	* Example: :math:`f(x,y)=(x^2,\sin(y),x+y)^\top`
 
 **********************************************************
 Directional Derivative
