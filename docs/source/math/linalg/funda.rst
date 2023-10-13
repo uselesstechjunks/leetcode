@@ -62,7 +62,7 @@ Examples
 Scalar Multiplication as a Linear Transform
 --------------------------------------------------------------------------------
 .. attention::
-	* For every scalar :math:`\alpha\in\mathbf{R}`, we can define a unique linear operator in :math:`L(\mathbf{R})` with its already defined multiplication operator as :math:`\alpha:\mathbb{R}\mapsto\mathbb{R}` where :math:`\forall x\in\mathbb{R}, \alpha(x)=\alpha\cdot x`.
+	* For every scalar :math:`\alpha\in\mathbb{R}`, we can define a unique linear operator in :math:`L(\mathbb{R})` with its already defined multiplication operator as :math:`\alpha:\mathbb{R}\mapsto\mathbb{R}` where :math:`\forall x\in\mathbb{R}, \alpha(x)=\alpha\cdot x`.
 	* We note that
 
 		* :math:`\forall u,v\in \mathbb{R}, \alpha(u+v)=\alpha(u)+\alpha(v)`
