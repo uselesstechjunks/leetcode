@@ -79,6 +79,11 @@ Example
 
 .. warning::
 	* However, we note that along the parabolic path :math:`x=y^2`, :math:`f(x,y)=\frac{1}{2}`.
+	* This means that if we move along this parabolic path, the value of the function jumps from :math:`\frac{1}{2}` to 0 all of a sudden.
+	* No directional derivative along any straight line can catch this jump, as along that line, we can always form tiny open balls which excludes the points in the parabola.
+
+.. image:: ../../img/2.png
+  :width: 400
 
 **********************************************************
 Total Derivative
