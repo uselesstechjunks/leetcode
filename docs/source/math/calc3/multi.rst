@@ -37,8 +37,10 @@ Continuity
 	* A function is continuous at a point if each of its components, :math:`f_k(\mathbf{x})` is continuous at that point.
 
 **********************************************************
-Directional Derivative
+Differentiation
 **********************************************************
+Directional Derivative as a rate of change
+==========================================================
 We have a function :math:`\mathbf{f}`, from an open set :math:`E\in\mathbb{R}^n` into :math:`\mathbb{R}^m`. We want to find a proper definition of derivative of :math:`\mathbf{f}` at some point :math:`\mathbf{x}\in E`.
 
 .. note::
@@ -60,19 +62,19 @@ We have a function :math:`\mathbf{f}`, from an open set :math:`E\in\mathbb{R}^n`
 	* In this case, :math:`\mathbf{f}'(\mathbf{x}; \mathbf{u})` is called the directional derivative along :math:`\mathbf{u}`.
 
 Partial Derivative
-==========================================================
+------------------------------------------------------------
 .. note::
 	* If the unit vector in a directional derivative is along any of the coordinate-axes, such as :math:`\mathbf{e}_k`, the directional derivative is called a partial derivative.
 	* Notation: :math:`\mathbf{f}'(\mathbf{x}; \mathbf{e}_k)=\frac{\mathop{\partial}}{\mathop{\partial x_k}}\mathbf{f}(\mathbf{x})`
 
 Directional Derivative isn't sufficient
-=========================================================
+------------------------------------------------------------
 .. warning::
 	* A nice property of derivatives for single variable case is that if it exists at a given point, it implies that the function is continuous at that particular point.
 	* HOWEVER, existence of direcitional derivatives doesn't imply continuity.
 
 Example
----------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. seealso::
 	* We consider a scalar field 
 
@@ -95,9 +97,8 @@ Example
 .. image:: ../../img/2.png
   :width: 400
 
-**********************************************************
-Total Derivative
-**********************************************************
+Total Derivative as a linear approximation
+==========================================================
 We define the total derivative as a linear approximation of the function at close proximity of :math:`\mathbf{x}`.
 
 .. note::
@@ -115,7 +116,7 @@ We define the total derivative as a linear approximation of the function at clos
 	* We assume that :math:`\lim\limits_{\mathbf{h}\to\mathbf{0}}\frac{||\boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})||}{||\mathbf{h}||}=0` and define :math:`\mathbf{f}'(\mathbf{x})=\mathbf{A}`.
 
 Gradient
-==========================================================
+------------------------------------------------------------
 .. note::
 	* If :math:`m=1`, then the :math:` is usually written as a column vector instead of a :math:`1\times n` row matrix.
 	* This linear transform :math:`Df` is known as the gradient of :math:`\mathbf{f}`
@@ -129,14 +130,14 @@ Gradient
 		.. math:: \nabla =\begin{bmatrix}\frac{\mathop{\partial}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial}}{\mathop{\partial x_n}}\end{bmatrix}
 
 Jacobian
-==========================================================
+------------------------------------------------------------
 .. note::
 	* If :math:`m> 1`, the matrix associated with the linear transform is known as Jacibian matrix.
 
 		.. math:: J f(\mathbf{x}) =\begin{bmatrix}\frac{\mathop{\partial \mathbf{f}(\mathbf{x})}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial \mathbf{f}(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}=\begin{bmatrix}\frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_1}} & \cdots & \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_1}} \\ \vdots & \vdots & \vdots \\ \frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_n}} & \cdots & \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}
 
-Continuously Differentiable Functions
-=========================================================
+Differentiability : Continuously Differentiable Functions
+===========================================================
 .. warning::
 	* Since we've established that the partial derivatives can exist at a point even when the function is not continuous at that point, let alone be differentiable, the existance of the gradient or the Jacobian doesn't imply that the function is differentiable at any point.
 
@@ -144,12 +145,11 @@ Continuously Differentiable Functions
 	* The function is differentiable at :math:`\mathbf{x}` if all the partial derivatives exist and are **continuous** at :math:`\mathbf{x}`.
 	* If the function is differentiable at :math:`\mathbf{x}`, it is continuous at :math:`\mathbf{x}`. All is good in the world.
 
-**********************************************************
 Higher Order Derivative
-**********************************************************
+===========================================================
 
 Hessian
-==========================================================
+------------------------------------------------------------
 
 **********************************************************
 Useful Results
