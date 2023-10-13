@@ -132,20 +132,23 @@ Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function 
 .. warning::
 	We need the point :math:`x` to be inside the open interval because we need to be able to create an open :math:`h`-ball around it and we need the function to be well defined in that region.
 
-Differentiation as a linear approximation
-================================================================
-.. note::
-	* Let :math:`D` denote the differentiation operator such that :math:`D(f)=f'`.
-	* We can consider the term
-
-		.. math:: f(x+h)-f(x)-D(f)\cdot h+E(x,h)
-
 Properties
 ================================================================
 .. note::
 	* **Sum Rule**: :math:`(f+g)'=f'+g'`
 	* **Product Rule**: :math:`(f\cdot g)'=f\cdot g'+f'\cdot g`
 	* **Chain Rule**: :math:`(f\circ g)'=(f'\circ g)\cdot g'`
+
+Differentiation as a linear approximation
+================================================================
+.. note::
+	* Let :math:`D` denote an operator which, when applied to a differentiable function, :math:`f`, returns :math:`D(f)=Df` which represents another function :math:`Df:\mathbf{R}\mapsto\mathbf{R}`.
+	* We can consider an error term
+
+		.. math:: E(x,h)=f(x+h)-f(x)-Df(x)\cdot h
+	* We note that :math:`\lim\limits_{h\to 0)E(x,h)=0\implies Df=f'`
+	* We note that :math:`Df:\mathbf{R}\mapsto\mathbf{R}` is a linear transform because of the sum rule.
+	* Therefore, :math:`Df` is a linear approximation of :math:`f` with an approximation error that becomes negligible as we move closer to :math:`x`.
 
 Application: Local extremum
 ================================================================
