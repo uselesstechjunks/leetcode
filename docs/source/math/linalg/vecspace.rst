@@ -176,6 +176,16 @@ Scalar Multiplication as a Linear Transform
 
 Differentiation as a Linear Transform
 --------------------------------------------------------------------------------
+.. attention::
+	* Let :math:`\mathcal{F}=\{f\mathop{:} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
+	* Let :math:`\mathcal{G}=\{f\mathop{:} g:X\mapsto Y\}` be the set of all **differentiable functions**.
+	* The differentiation operator :math:`D=\frac{\mathop{d}}{\mathop{dx}}` on its own defines a function :math:`D:\mathcal{G}\mapsto\mathcal{F}`.
+
+		.. math:: D(g)\in\mathcal{G}=g'\in\mathcal{F}
+	* The differential (:math:`D` applied on some specific function :math:`g` evaluated on any :math:`x`) defines a linear transform :math:`D(g):X\mapsto Y` since
+
+		* :math:`\forall g_1,g_2\in \mathcal{G}, D(g_1+g_2)=D(g_1)+D(g_2)`
+		* :math:`\forall c\in\mathbb{Y},\forall g\in \mathcal{G}, D(c\dot g)=c\cdot D(g)
 
 Integration as a Linear Transform
 --------------------------------------------------------------------------------
