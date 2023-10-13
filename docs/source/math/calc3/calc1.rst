@@ -132,6 +132,9 @@ Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function 
 .. warning::
 	We need the point :math:`x` to be inside the open interval because we need to be able to create an open :math:`h`-ball around it and we need the function to be well defined in that region.
 
+.. tip::
+	If the derivative of a function exists at a point, then the function is continuous at that point.
+
 Properties
 ================================================================
 .. note::
