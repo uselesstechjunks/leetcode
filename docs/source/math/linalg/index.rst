@@ -5,7 +5,7 @@ Linear Algebra
 .. toctree::
 
 	vecspace
-	funda
+	findim
 	factor
 	norm
 	applied
