@@ -52,6 +52,9 @@ We have a function :math:`\mathbf{f}`, from an open set :math:`E\in\mathbb{R}^n`
 		.. math:: \frac{\mathbf{f}(\mathbf{x}+h\cdot\mathbf{u})-\mathbf{f}(\mathbf{x})}{h}
 	* We define a version of derivative as :math:`\mathbf{f}'(\mathbf{x}; \mathbf{u})=\lim\limits_{h\to 0}\frac{\mathbf{f}(\mathbf{x}+h\cdot\mathbf{u})-\mathbf{f}(\mathbf{x})}{h}`
 
+.. attention::
+	We note that the open ball in this case is essentially an equivalent of an one dimensional interval.
+
 .. note::
 	* If :math:`\mathbf{u}` happens to a unit-vector, then our open ball is :math:`B_h(\mathbf{x})`.
 	* In this case, :math:`\mathbf{f}'(\mathbf{x}; \mathbf{u})` is called the directional derivative along :math:`\mathbf{u}`.
@@ -98,6 +101,16 @@ Total Derivative
 We define the derivative (total derivative) as a linear approximation of the function at close proximity of :math:`\mathbf{x}`.
 
 .. note::
+	* Instead of looking at the function from a single direction, we need to include all directions at once.
+	* We therefore, consider a variable length vector :math:`\mathbf{h}` which is allowed to rotate.
+	* We consider the open-hypersphere :math:`B_\mathbf{h}(\mathbf{x})`, and define the ratio
+
+		.. math:: \frac{\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})}{||\mathbf{h}||}
+	* We define the total derivative as :math:`\mathbf{f}'(\mathbf{x})=\lim\limits_{||\mathbf{h}||\to 0}\frac{\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})}{||\mathbf{h}||}`
+
+Total derivative as a linear transform
+==========================================================
+.. note::
 	* Let :math:`D` denote an operator which, when applied to a differentiable vector field, :math:`\mathbf{f}`, returns :math:`D(\mathbf{f})=D\mathbf{f}` which represents another function :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m`.
 	* We can consider an error term
 
@@ -114,9 +127,12 @@ Gradient
 ==========================================================
 .. note::
 	* If :math:`m=1`, then the linear transform is usually written as a column vector instead of a :math:`1\times n` row matrix.
-	* The total derivative is known as the gradient of :math:`\mathbf{f}` at :math:`\mathbf{x}`
+	* This linear transform :math:`Df` is known as the gradient of :math:`\mathbf{f}`
 
-		.. math:: \nabla f(\mathbf{x}) =\begin{bmatrix}\frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}
+		.. math:: \nabla f =\begin{bmatrix}\frac{\mathop{\partial f}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial f}}{\mathop{\partial x_n}}\end{bmatrix}
+	* The total derivative :math:`f'(\mathbf(x))=Df(\mathbf{x})` at any point :math:`\mathbf{x}` is
+
+		.. math:: \nabla f\cdot\mathbf{x}=\sum_{i=1}^n\frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_i}}
 	* The total derivative operator :math:`D` in this case is the gradient operator
 
 		.. math:: \nabla =\begin{bmatrix}\frac{\mathop{\partial}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial}}{\mathop{\partial x_n}}\end{bmatrix}
