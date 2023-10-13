@@ -177,8 +177,8 @@ Scalar Multiplication as a Linear Transform
 Differentiation as a Linear Transform
 --------------------------------------------------------------------------------
 .. attention::
-	* Let :math:`\mathcal{F}=\{f\mathop{:} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
-	* Let :math:`\mathcal{D}=\{f\mathop{:} g:X\mapsto Y\}` be the set of all **differentiable functions**.
+	* Let :math:`\mathcal{F}=\{f\mathop{|} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
+	* Let :math:`\mathcal{D}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **differentiable functions**.
 	* The differentiation operator :math:`D=\frac{\mathop{d}}{\mathop{dx}}` on its own defines a function :math:`D:\mathcal{G}\mapsto\mathcal{F}`.
 
 		.. math:: D(g\in\mathcal{G})=g'\in\mathcal{F}
@@ -190,8 +190,8 @@ Differentiation as a Linear Transform
 Integration as a Linear Transform
 --------------------------------------------------------------------------------
 .. attention::
-	* Let :math:`\mathcal{F}=\{f\mathop{:} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
-	* Let :math:`\mathcal{I}=\{f\mathop{:} g:X\mapsto Y\}` be the set of all **integrable functions**.
+	* Let :math:`\mathcal{F}=\{f\mathop{|} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
+	* Let :math:`\mathcal{I}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **integrable functions**.
 	* The integration operator :math:`I=\int\cdot\mathop{dx}` on its own defines a function :math:`I:\mathcal{I}\mapsto\mathcal{F}`.
 
 		.. math:: I(g\in\mathcal{G})=G\in\mathcal{F}
