@@ -142,12 +142,12 @@ Properties
 Differentiation as a linear approximation
 ================================================================
 .. note::
-	* Let :math:`D` denote an operator which, when applied to a differentiable function, :math:`f`, returns :math:`D(f)=Df` which represents another function :math:`Df:\mathbf{R}\mapsto\mathbf{R}`.
+	* Let :math:`D` denote an operator which, when applied to a differentiable function, :math:`f`, returns :math:`D(f)=Df` which represents another function :math:`Df:\mathbb{R}\mapsto\mathbb{R}`.
 	* We can consider an error term
 
 		.. math:: E(x,h)=f(x+h)-f(x)-Df(x)\cdot h
-	* We note that :math:`\lim\limits_{h\to 0)E(x,h)=0\implies Df=f'`
-	* We note that :math:`Df:\mathbf{R}\mapsto\mathbf{R}` is a linear transform because of the sum rule.
+	* We note that :math:`\lim\limits_{h\to 0}E(x,h)=0\implies Df=f'`
+	* We note that :math:`Df:\mathbb{R}\mapsto\mathbf{R}` is a linear transform because of the sum rule.
 	* Therefore, :math:`Df` is a linear approximation of :math:`f` with an approximation error that becomes negligible as we move closer to :math:`x`.
 
 Application: Local extremum
