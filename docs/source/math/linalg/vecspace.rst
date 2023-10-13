@@ -189,6 +189,7 @@ Differentiation as a Linear Transform
 
 Integration as a Linear Transform
 --------------------------------------------------------------------------------
+.. attention::
 	* Let :math:`\mathcal{F}=\{f\mathop{:} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
 	* Let :math:`\mathcal{I}=\{f\mathop{:} g:X\mapsto Y\}` be the set of all **integrable functions**.
 	* The integration operator :math:`I=\int\cdot\mathop{dx}` on its own defines a function :math:`I:\mathcal{I}\mapsto\mathcal{F}`.
