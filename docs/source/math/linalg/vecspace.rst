@@ -1,4 +1,56 @@
 ################################################################################
+Algebraic Structures
+################################################################################
+.. note::
+	* Any set :math:`X` can be endowed with rich albegraic structures.
+	* In the following, we assume that all the elements are in :math:`X`.
+	* In each of the following operations, we assume that it creates a closure, i.e. it maps to some other element in :math:`X` itself.
+
+********************************************************************************
+Group
+********************************************************************************
+.. note::
+	* We have an addition :math:`+` defined for :math:`X` which follows **associativity**, i.e.
+
+		* :math:`x+(y+z)=(x+y)+z`.
+	* There is a unique identity element :math:`0` w.r.t :math:`+` such that
+
+		* :math:`x+0=0+x=x`
+	* For every :math:`x`, there is a unique inverse element w.r.t :math:`+`, :math:`-x` such that
+
+		* :math:`x+(-x)=(-x)+x=0`
+
+Abelian Group
+================================================================================
+.. note::
+	* It is a group.
+	* The addition operator has to be **commutative** so that
+
+		* :math:`x+y=y+x`
+
+********************************************************************************
+Ring
+********************************************************************************
+.. note::
+	* It is an Abelian group w.r.t the addition operator :math:`+`.
+	* It also has a multiplication :math:`\cdot` defined so that
+
+		* It is associative, :math:`x\cdot (y\cdot z)=(x\cdot y)\cdot z`
+		* There is a unique identity element :math:`1` w.r.t :math:`\cdot` such that
+
+			* :math:`x\cdot 1=1\cdot x=x`
+		* For every :math:`x`, there is a unique inverse element w.r.t :math:`\cdot`, :math:`x^{-1}` such that
+
+			* :math:`x\cdot x^{-1}=x^{-1}\cdot x=1`
+
+********************************************************************************
+Field
+********************************************************************************
+.. note::
+	* It is a ring.
+	* It is an Abelian group w.r.t the addition operator :math:`+` as well as the multiplication opeartor :math:`\cdot`.
+
+################################################################################
 Vector Space and Linear Transform
 ################################################################################
 .. note::
@@ -6,14 +58,14 @@ Vector Space and Linear Transform
 
 		* Field refers to the algebraic definition with properly defined addition and multiplication operators on them. 
 		* Not to be confused with **scalar fields** which represents functionals that maps vectors into scalers.
-	* Then :math:`V_\mathcal{F}` is a vector space over :math:`\mathcal{F}` if we have scalar multiplication and vector addition defined as follows:
+	* Then :math:`V_\mathcal{F}` is a vector space over :math:`\mathcal{F}` if we have **scalar multiplication** and a **commutative addition** defined as follows:
 
 		* **Scalar Multiplication**: 
 
 			* For :math:`\mathbf{u}\in V_\mathcal{F}\implies\forall a\in \mathcal{F}, a\cdot\mathbf{u}\in V_\mathcal{F}`
-		* **Vector Addition**: 
+		* **Commutative Vector Addition**: 
 
-			* For :math:`\mathbf{u},\mathbf{v}\in V_\mathcal{F}\implies \mathbf{u}+\mathbf{v}\in V_\mathcal{F}`
+			* For :math:`\mathbf{u},\mathbf{v}\in V_\mathcal{F}\implies \mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}\in V_\mathcal{F}`
 			* There is a unique :math:`\mathbf{0}\in V_\mathcal{F}` such that 
 
 				* For :math:`0\in \mathcal{F}`, :math:`\forall\mathbf{u}\in V_\mathcal{F}, 0\cdot\mathbf{u}=\mathbf{0}\in V_\mathcal{F}`
@@ -24,6 +76,7 @@ Vector Space and Linear Transform
 				* We represent :math:`\mathbf{v}` as :math:`-\mathbf{u}`
 
 .. tip::
+	* Vector spaces are Abelian groups w.r.t :math:`+`.
 	* Elements of vector space are called vectors.
 	* We often omit the underlying scalar field :math:`\mathcal{F}` and write the vector space as :math:`V`.
 	* Example of finite dimensional vectors: Euclidean vectors :math:`\mathbb{R}^n` where the scalar field is :math:`\mathbb{R}` or complex vectors :math:`\mathbb{C}^n` over the scalar field :math:`\mathbb{C}`.
@@ -53,11 +106,11 @@ Space of Linear Transform
 .. tip::
 	The set of all linear transforms :math:`T:U\mapsto W` is represented as :math:`L(U,W)`.
 
-As a Vector Space over Addition
+As a Vector Space over Addition? Always.
 --------------------------------------------------------------------------------
 .. seealso::
 	* Let's consider :math:`A,B\in L(U,W)`.
-	* We can define an addition operator in :math:`L(U,V)` with the same scalar multiplication of :math:`W`.
+	* We can define a commutative addition in :math:`L(U,V)` with the same scalar multiplication of :math:`W`.
 
 		* Let :math:`C=(a\cdot A+b\cdot B)` where for any :math:`a,b\in\mathcal{F}` we have
 
@@ -77,11 +130,11 @@ Composition of Linear Transforms
 	* Let :math:`A:U\mapsto V` and :math:`B:V\mapsto W`.
 	* Then :math:`(B\circ A)\in L(U,W)` where :math:`\forall\mathbf{u}\in U, (B\circ A)(\mathbf{u})=B(A(\mathbf{u}))`.
 
-As a Vector Space over Composition
+As a Vector Space over Composition? Not Guaranteed.
 --------------------------------------------------------------------------------
 .. seealso::
 	* Let's consider :math:`A,B\in L(U)`.
-	* We note that :math:`\circ` serves as a different "addition" operator with the same scalar multiplication of :math:`U`.
+	* We can utilise :math:`\circ` as a different "addition" in :math:`L(U,V)` with the same scalar multiplication of :math:`U`.
 
 		* Let :math:`C=((b\cdot B)\circ (a\cdot A))\in L(U)` where for any :math:`a,b\in\mathcal{F}` we have
 
@@ -92,6 +145,20 @@ As a Vector Space over Composition
 	* If the transform is **onto**, then we can define a unique composition inverse :math:`A^{-1}:U\mapsto U` such that
 
 		.. math:: (A\circ A^{-1})(\mathbf{u}) = (A^{-1}\circ A)(\mathbf{u}) = I(\mathbf{u}) = \mathbf{u}
+
+.. warning::
+	* HOWEVER, The composition operator is not always **commutative**.
+	
+		* It is generally NOT true that :math:`(A\circ B)\mathbf{u}=(B\circ A)\mathbf{u}`.
+	* Example where it IS commutative:
+
+		* Let :math:`\mathbf{A}` and :math:`\mathbf{B}` be matrices with the same eigenvectors and possibly different eigenvalues.
+		* In this case, the composition is commutative.
+		* We note that this is a sufficient but not a necessary condition.
+
+.. attention::
+	* The composition operator, therefore, is better thought of as a **multiplication**.
+	* Together with the addition and multiplication, the space of linear operators follows the structure of a **ring**.
 
 Examples
 ================================================================================
