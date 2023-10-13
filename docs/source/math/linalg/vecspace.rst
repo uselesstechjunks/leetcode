@@ -137,7 +137,7 @@ As a Vector Space over Composition? Not Guaranteed.
 --------------------------------------------------------------------------------
 .. seealso::
 	* Let's consider :math:`A,B\in L(U)`.
-	* We can utilise :math:`\circ` as a different "addition" in :math:`L(U,V)` with the same scalar multiplication of :math:`U`.
+	* We can consider :math:`\circ` as an "addition" in :math:`L(U,V)` with the same scalar multiplication of :math:`U`.
 
 		* Let :math:`C=((b\cdot B)\circ (a\cdot A))\in L(U)` where for any :math:`a,b\in\mathcal{F}` we have
 
