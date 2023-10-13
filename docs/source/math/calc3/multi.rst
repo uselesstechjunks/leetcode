@@ -18,6 +18,10 @@ Scalar field
 	* If :math:`n> 1` and :math:`m=1` then the functions :math:`f:\mathbb{R}^n\mapsto\mathbb{R}` are known as scalar fields.
 	* Example: :math:`f(x,y)=xy`
 
+.. image:: img/1.png
+  :width: 400
+  :alt: Scalar Field of f(x,y)=xy
+
 Vector field
 ==========================================================
 .. note::
