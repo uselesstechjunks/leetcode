@@ -92,7 +92,7 @@ Invertible linear transforms : As a vector space over composition
 		.. math:: (A\circ I)(\mathbf{u}) = (I\circ A)(\mathbf{u}) = A(\mathbf{u})
 	* If the transform is **onto**, then we can define a unique composition inverse :math:`A^{-1}:U\mapsto U` such that
 
-		.. math:: (A\circ A^{-1})(\mathbf{u}) = I(\mathbf{u}) = \mathbf{u}
+		.. math:: (A\circ A^{-1})(\mathbf{u}) = (A^{-1}\circ A)(\mathbf{u}) = I(\mathbf{u}) = \mathbf{u}
 
 Examples
 ================================================================================
