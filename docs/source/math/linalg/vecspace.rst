@@ -1,14 +1,17 @@
 ################################################################################
-Algebraic Structures
+Vector Space and Linear Transform
 ################################################################################
+
+********************************************************************************
+Algebraic Structures
+********************************************************************************
 .. note::
 	* Any set :math:`X` can be endowed with rich albegraic structures.
 	* In the following, we assume that all the elements are in :math:`X`.
 	* In each of the following operations, we assume that it creates a closure, i.e. it maps to some other element in :math:`X` itself.
 
-********************************************************************************
 Group
-********************************************************************************
+================================================================================
 .. note::
 	* We have an addition :math:`+` defined for :math:`X` which follows **associativity**, i.e.
 
@@ -21,16 +24,15 @@ Group
 		* :math:`x+(-x)=(-x)+x=0`
 
 Abelian Group
-================================================================================
+--------------------------------------------------------------------------------
 .. note::
 	* It is a group.
 	* The addition operator has to be **commutative** so that
 
 		* :math:`x+y=y+x`
 
-********************************************************************************
 Ring
-********************************************************************************
+================================================================================
 .. note::
 	* It is an Abelian group w.r.t the addition operator :math:`+`.
 	* It also has a multiplication :math:`\cdot` defined so that
@@ -43,16 +45,15 @@ Ring
 
 			* :math:`x\cdot x^{-1}=x^{-1}\cdot x=1`
 
-********************************************************************************
 Field
-********************************************************************************
+================================================================================
 .. note::
 	* It is a ring.
 	* It is an Abelian group w.r.t the addition operator :math:`+` as well as the multiplication opeartor :math:`\cdot`.
 
-################################################################################
-Vector Space and Linear Transform
-################################################################################
+********************************************************************************
+Vector Space
+********************************************************************************
 .. note::
 	* Let :math:`\mathcal{F}` be a scalar **field** (such as :math:`\mathbb{R}` or :math:`\mathbb{C}`).
 
@@ -75,8 +76,10 @@ Vector Space and Linear Transform
 				* :math:`\mathbf{u}+\mathbf{v}=\mathbf{0}`
 				* We represent :math:`\mathbf{v}` as :math:`-\mathbf{u}`
 
-.. tip::
-	* Vector spaces are Abelian groups w.r.t :math:`+`.
+.. attention::
+	Vector spaces are Abelian groups w.r.t :math:`+` but the addition of scalar multiplication provides an even richer structure.
+
+.. tip::	
 	* Elements of vector space are called vectors.
 	* We often omit the underlying scalar field :math:`\mathcal{F}` and write the vector space as :math:`V`.
 	* Example of finite dimensional vectors: Euclidean vectors :math:`\mathbb{R}^n` where the scalar field is :math:`\mathbb{R}` or complex vectors :math:`\mathbb{C}^n` over the scalar field :math:`\mathbb{C}`.
