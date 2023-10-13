@@ -1,7 +1,9 @@
 ##########################################################
 Multivariable Calculus
 ##########################################################
-We consider functions from :math:`\mathbb{R}^n` to :math:`\mathbb{R}^m` which are expressed as :math:`\mathbf{f}(\mathbf{x})=\mathbf{f}(x_1,\cdots,x_n)=(f_1(\mathbf{x}),\cdots,f_m(\mathbf{x}))`.
+We consider functions from :math:`\mathbb{R}^n` to :math:`\mathbb{R}^m` which are expressed as
+
+	.. math:: \mathbf{f}(\mathbf{x})=\mathbf{f}(x_1,\cdots,x_n)=(f_1(\mathbf{x}),\cdots,f_m(\mathbf{x}))
 
 **********************************************************
 Different Forms of Multivariable Functions
@@ -101,27 +103,18 @@ Total Derivative
 We define the derivative (total derivative) as a linear approximation of the function at close proximity of :math:`\mathbf{x}`.
 
 .. note::
-	* Instead of looking at the function from a single direction, we need to include all directions at once.
+	* Instead of looking at the rate of change in the function from a single direction, we need to consider all directions at once.
 	* We therefore, consider a variable length vector :math:`\mathbf{h}` which is allowed to rotate.
-	* We consider the open-hypersphere :math:`B_\mathbf{h}(\mathbf{x})`, and define the ratio, for some matrix :math:`\mathbf{A}_{m\times n}`
+	* We consider the **open-hypersphere** :math:`B_\mathbf{h}(\mathbf{x})`, and assume that inside this, the function is approximately linear.
+	* Therefore, we introduce a linear transform :math:`\mathbf{A}\mathbb{R}^n\mapsto\mathbb{R}^m` to replace our function :math:`\mathbf{f}\mathbb{R}^n\mapsto\mathbb{R}^m`.
+	* The **change in value** as we move from :math:`\mathbf{x}` to :math:`\mathbf{x}+\mathbf{h}` is
 
-		.. math:: \frac{||\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{A}\mathbf{h}||}{||\mathbf{h}||}
-	* If this ratio :math:`\to 0` as :math:`\mathbf{h}\to\mathbf{0}`, then we define the total derivative as :math:`\mathbf{f}'(\mathbf{x})=\mathbf{A}`
+		* :math:`\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})` under the actual function.
+		* :math:`\mathbf{A}(\mathbf{x}+\mathbf{h})-\mathbf{A}(\mathbf{x})=\mathbf{A}\mathbf{h}` under the actual function.
+	* The error in this approximation is 
 
-Total derivative as a linear transform
-==========================================================
-.. note::
-	* Let :math:`D` denote an operator which, when applied to :math:`\mathbf{f}`, returns :math:`D(\mathbf{f})=D\mathbf{f}` which represents another function :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m`.
-	* We can consider an error term
-
-		.. math:: E(\mathbf{x},\mathbf{h})=\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-D\mathbf{f}(\mathbf{x})\mathbf{h}
-	* We note that :math:`\lim\limits_{\mathbf{h}\to\mathbf{0}}\frac{||E(\mathbf{x},\mathbf{h})||}{||\mathbf{h}||} =0\implies D\mathbf{f}=\mathbf{f}'`
-	* We note that :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m` is a linear transform.
-	* Therefore, :math:`D\mathbf{f}` is a linear approximation of :math:`\mathbf{f}` with an approximation error that becomes negligible as we move closer to :math:`\mathbf{x}`.
-
-.. attention::
-	* If total derivative exists, then directional derivative exists along every vector :math:`\mathbf{v}`.
-	* Since :math:`D\mathbf{f}` is a linear transform involving finite dimensional spaces, we can always define a matrix :math:`\mathbf{D}_{n\times m}` which represents this transform.
+		.. math:: \boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})=\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{A}\mathbf{h}
+	* We assume that :math:`\lim\limits_{\mathbf{h}\to\mathbf{0}}\boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})=0` and define :math:`\mathbf{f}'(\mathbf{x})=\mathbf{A}`.
 
 Gradient
 ==========================================================
