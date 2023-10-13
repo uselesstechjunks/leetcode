@@ -42,6 +42,12 @@ Linear Transform
 .. tip::
 	A linear transform is one-to-one when it's onto.
 
+Linear Operator
+================================================================================
+.. tip::
+	* Linear transforms from :math:`U` to :math:`U` are called Linear Operators.
+	* The set of all linear operators :math:`T:U\mapsto U` is represented as :math:`L(U)`.
+
 Space of Linear Transform
 ================================================================================
 .. tip::
@@ -103,9 +109,3 @@ Differentiation as a Linear Transform
 
 Integration as a Linear Transform
 --------------------------------------------------------------------------------
-
-Linear Operator
-================================================================================
-.. tip::
-	* Linear transforms from :math:`U` to :math:`U` are called Linear Operators.
-	* The set of all linear operators :math:`T:U\mapsto U` is represented as :math:`L(U)`.
