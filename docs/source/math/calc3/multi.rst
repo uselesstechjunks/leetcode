@@ -90,7 +90,7 @@ Example
 
 .. warning::
 	* However, we note that along the parabolic path :math:`x=y^2`, :math:`f(x,y)=\frac{1}{2}`.
-	* This means that if we move along this parabolic path, the value of the function jumps from :math:`\frac{1}{2}` to 0 all of a sudden.
+	* This means that if we move along this parabolic path, the value of the function jumps from :math:`\frac{1}{2}` to 0 at the origin all of a sudden.
 	* No directional derivative along any straight line can catch this jump, as along that line, we can always form tiny open balls which excludes the points in the parabola.
 	* Therefore, directional, and by extension, partial derivatives don't define a proper differentiation.
 
