@@ -180,7 +180,7 @@ Differentiation as a Linear Transform
 	* Let :math:`X` and :math:`Y` be two vector spaces over :math:`\mathbb{R}`.
 	* Let :math:`\mathcal{F}=\{f\mathop{|} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
 	* Let :math:`\mathcal{D}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **differentiable functions**.
-	* The differentiation operator :math:`D=\frac{\mathop{d}}{\mathop{dx}}` on its own defines a function :math:`D:\mathcal{G}\mapsto\mathcal{F}`.
+	* The differentiation operator :math:`D=\frac{\mathop{d}}{\mathop{dx}}(\cdot)` on its own defines a function :math:`D:\mathcal{G}\mapsto\mathcal{F}`.
 
 		.. math:: D(g\in\mathcal{G})=g'\in\mathcal{F}
 	* :math:`D` applied on some specific function :math:`g` (ready to be evaluated on any :math:`x`) defines a linear transform :math:`D(g)\in\mathcal{F}:X\mapsto Y` since
@@ -194,7 +194,7 @@ Integration as a Linear Transform
 	* Let :math:`X` and :math:`Y` be two vector spaces over :math:`\mathbb{R}`.
 	* Let :math:`\mathcal{F}=\{f\mathop{|} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
 	* Let :math:`\mathcal{I}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **integrable functions**.
-	* The integration operator :math:`I=\int\cdot\mathop{dx}` on its own defines a function :math:`I:\mathcal{I}\mapsto\mathcal{F}`.
+	* The integration operator :math:`I=\int(\cdot)\mathop{dx}` on its own defines a function :math:`I:\mathcal{I}\mapsto\mathcal{F}`.
 
 		.. math:: I(g\in\mathcal{G})=G\in\mathcal{F}
 	* :math:`I` applied on some specific function :math:`g` (ready to be evaluated on any :math:`x`) defines a linear transform :math:`I(g)\in\mathcal{F}:X\mapsto Y` since
