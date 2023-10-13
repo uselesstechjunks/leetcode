@@ -152,7 +152,7 @@ As a Vector Space over Composition? Not Guaranteed.
 .. warning::
 	* HOWEVER, The composition operator is not always **commutative**.
 	
-		* It is generally NOT true that :math:`(A\circ B)\mathbf{u}=(B\circ A)\mathbf{u}`.
+		* It is generally NOT true that :math:`(A\circ B)(\mathbf{u})=(B\circ A)(\mathbf{u})`.
 	* Example where it IS commutative:
 
 		* Let :math:`\mathbf{A}` and :math:`\mathbf{B}` be matrices with the same eigenvectors and possibly different eigenvalues.
