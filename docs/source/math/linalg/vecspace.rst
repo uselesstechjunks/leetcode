@@ -183,6 +183,7 @@ Differentiation as a Linear Transform
 	* The differentiation operator :math:`D=\frac{\mathop{d}}{\mathop{dx}}(\cdot)` on its own defines a function :math:`D:\mathcal{G}\mapsto\mathcal{F}`.
 
 		.. math:: D(g\in\mathcal{G})=g'\in\mathcal{F}
+		* Here :math:`g'(x)=\frac{\mathop{d}}{\mathop{dx}}(g)(x)`.
 	* :math:`D` applied on some specific function :math:`g` (ready to be evaluated on any :math:`x`) defines a linear transform :math:`D(g)\in\mathcal{F}:X\mapsto Y` since
 
 		* :math:`\forall g_1,g_2\in \mathcal{G}, D(g_1+g_2)=D(g_1)+D(g_2)`
@@ -197,6 +198,7 @@ Integration as a Linear Transform
 	* The integration operator :math:`I=\int(\cdot)\mathop{dx}` on its own defines a function :math:`I:\mathcal{I}\mapsto\mathcal{F}`.
 
 		.. math:: I(g\in\mathcal{I})=G\in\mathcal{F}
+		* Here :math:`G(x)=\int g(x)\mathop{dx}`.
 	* :math:`I` applied on some specific function :math:`g` (ready to be evaluated on any :math:`x`) defines a linear transform :math:`I(g)\in\mathcal{F}:X\mapsto Y` since
 
 		* :math:`\forall g_1,g_2\in \mathcal{I}, I(g_1+g_2)=I(g_1)+I(g_2)`
