@@ -100,7 +100,7 @@ Example
 **********************************************************
 Total Derivative
 **********************************************************
-We define the derivative (total derivative) as a linear approximation of the function at close proximity of :math:`\mathbf{x}`.
+We define the total derivative as a linear approximation of the function at close proximity of :math:`\mathbf{x}`.
 
 .. note::
 	* Instead of looking at the rate of change in the function from a single direction, we need to consider all directions at once.
