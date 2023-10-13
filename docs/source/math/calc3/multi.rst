@@ -20,8 +20,7 @@ Scalar field
 	* Example: :math:`f(x,y)=xy`
 
 .. image:: ../../img/1.png
-  :width: 400
-  :alt: Scalar Field of f(x,y)=xy
+  :width: 300
 
 Vector field
 ==========================================================
