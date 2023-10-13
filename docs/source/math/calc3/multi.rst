@@ -39,9 +39,9 @@ Continuity
 **********************************************************
 Differentiation
 **********************************************************
-Directional Derivative as a rate of change
-==========================================================
-We have a function :math:`\mathbf{f}`, from an open set :math:`E\in\mathbb{R}^n` into :math:`\mathbb{R}^m`. We want to find a proper definition of derivative of :math:`\mathbf{f}` at some point :math:`\mathbf{x}\in E`.
+Directional Derivative as a rate of change in scalar fields
+==============================================================
+We have a function :math:`f`, from an open set :math:`E\in\mathbb{R}^n` into :math:`\mathbb{R}`. We want to find a proper definition of derivative of :math:`f` at some point :math:`\mathbf{x}\in E`.
 
 .. note::
 	* If the domain was in :math:`\mathbb{R}`, there is a single direction along which we can approach a point :math:`x\in\mathbb{R}`.
@@ -51,8 +51,8 @@ We have a function :math:`\mathbf{f}`, from an open set :math:`E\in\mathbb{R}^n`
 	* We fix our direction along some vector :math:`\mathbf{u}\in\mathbb{R}^n` and look at the rate-of-change of the function along :math:`\mathbf{u}` as we move closer to :math:`\mathbf{x}`.
 	* For some :math:`h> 0`, we assume an open-ball around :math:`\mathbf{x}` of radius :math:`h\cdot||\mathbf{u}||`, and define the ratio
 
-		.. math:: \frac{\mathbf{f}(\mathbf{x}+h\cdot\mathbf{u})-\mathbf{f}(\mathbf{x})}{h}
-	* We define a version of derivative as :math:`\mathbf{f}'(\mathbf{x}; \mathbf{u})=\lim\limits_{h\to 0}\frac{\mathbf{f}(\mathbf{x}+h\cdot\mathbf{u})-\mathbf{f}(\mathbf{x})}{h}`
+		.. math:: \frac{f(\mathbf{x}+h\cdot\mathbf{u})-f(\mathbf{x})}{h}
+	* We define a version of derivative as :math:`f'(\mathbf{x}; \mathbf{u})=\lim\limits_{h\to 0}\frac{f(\mathbf{x}+h\cdot\mathbf{u})-f(\mathbf{x})}{h}`
 
 .. attention::
 	We note that the open ball in this case is essentially an equivalent of an one dimensional interval.
@@ -97,7 +97,7 @@ Example
 .. image:: ../../img/2.png
   :width: 400
 
-Total Derivative as a linear approximation
+Total Derivative as a linear approximation in general
 ==========================================================
 We define the total derivative as a linear approximation of the function at close proximity of :math:`\mathbf{x}`.
 
@@ -118,13 +118,12 @@ We define the total derivative as a linear approximation of the function at clos
 Gradient
 ------------------------------------------------------------
 .. note::
-	* If :math:`m=1`, then the :math:` is usually written as a column vector instead of a :math:`1\times n` row matrix.
-	* This linear transform :math:`Df` is known as the gradient of :math:`\mathbf{f}`
+	* If :math:`m=1`, then :math:`\mathbf{A}` is usually written as a column vector instead of a :math:`1\times n` matrix which is known as the gradient.
 
-		.. math:: \nabla f =\begin{bmatrix}\frac{\mathop{\partial f}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial f}}{\mathop{\partial x_n}}\end{bmatrix}
-	* At any point :math:`\mathbf{x}`, the directional derivative along any :math:`\mathbf{y}` is given by
+		.. math:: \nabla f(\mathbf{x}) =\begin{bmatrix}\frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}
+	* At any point :math:`\mathbf{x}`, the directional derivative along any :math:`\mathbf{v}` is given by
 
-		.. math:: f'(\mathbf{x};\mathbf{y})=\nabla f(\mathbf{x})\cdot\mathbf{y}=\sum_{i=1}^n\frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_i}}\cdot y_i
+		.. math:: f'(\mathbf{x};\mathbf{v})=\nabla f(\mathbf{x})\cdot\mathbf{v}=\sum_{i=1}^n\frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_i}}\cdot v_i
 	* The total derivative operator :math:`D` in this case is the gradient operator
 
 		.. math:: \nabla =\begin{bmatrix}\frac{\mathop{\partial}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial}}{\mathop{\partial x_n}}\end{bmatrix}
@@ -132,9 +131,9 @@ Gradient
 Jacobian
 ------------------------------------------------------------
 .. note::
-	* If :math:`m> 1`, the matrix associated with the linear transform is known as Jacibian matrix.
+	* If :math:`m> 1`, :math:`\mathbf{A}` is known as Jacibian matrix.
 
-		.. math:: J f(\mathbf{x}) =\begin{bmatrix}\frac{\mathop{\partial \mathbf{f}(\mathbf{x})}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial \mathbf{f}(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}=\begin{bmatrix}\frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_1}} & \cdots & \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_1}} \\ \vdots & \vdots & \vdots \\ \frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_n}} & \cdots & \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}
+		.. math:: J_\mathbf{f}(\mathbf{x})=\begin{bmatrix}\nabla f_1(\mathbf{x})^\top\\ \vdots \\ \nabla f_m(\mathbf{x})^\top\end{bmatrix}=\begin{bmatrix}\frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_1}} & \cdots & \frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_n}} \\ \vdots & \vdots & \vdots \\ \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_1}} & \cdots & \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}
 
 Differentiability : Continuously Differentiable Functions
 ===========================================================
