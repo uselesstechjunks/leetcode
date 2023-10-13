@@ -132,6 +132,14 @@ Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function 
 .. warning::
 	We need the point :math:`x` to be inside the open interval because we need to be able to create an open :math:`h`-ball around it and we need the function to be well defined in that region.
 
+Differentiation as a linear approximation
+================================================================
+.. note::
+	* Let :math:`D` denote the differentiation operator such that :math:`D(f)=f'`.
+	* We can consider the term
+
+		.. math:: f(x+h)-f(x)-D(f)\cdot h+E(x,h)
+
 Properties
 ================================================================
 .. note::
