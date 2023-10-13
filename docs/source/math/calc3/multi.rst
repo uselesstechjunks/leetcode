@@ -31,6 +31,21 @@ Vector field
 **********************************************************
 Directional Derivative
 **********************************************************
+We have a function :math:`\mathbf{f}`, from an open set :math:`E\in\mathbb{R}^n` into :math:`\mathbb{R}^m`. We want to find a proper definition of derivative of :math:`\mathbf{f}` at some point :math:`\mathbf{x}\in E`.
+
+.. note::
+	* If the domain was in :math:`\mathbb{R}`, then there is a single direction along which we can approach a point :math:`x\in\mathbb{R}`.
+	* Now that the domain is in :math:`\mathbb{R}^n`, there are infinite directions along which we can approach a point :math:`\mathbf{x}\in\mathbb{R}`.
+	* Along each such direction, the rate-of-change in the function can be different.
+	* Therefore, extending the idea of single variable derivative, we fix our direction along a particular vector :math:`\mathbf{u}\in\mathbb{R}`.
+	* For some :math:`h> 0`, we assume an :math:`h\cdot||\mathbf{u}||`-ball around :math:`\mathbf{x}`, and define the ratio
+
+		.. math:: \frac{\mathbf{f}(\mathbf{x}+h\cdot\mathbf{u})-\mathbf{f}(\mathbf{x})}{h}
+	* We define a version of derivative as :math:`\mathbf{f}'(\mathbf{x}; \mathbf{u})=\lim\limits_{h\to 0}\frac{\mathbf{f}(\mathbf{x}+h\cdot\mathbf{u})-\mathbf{f}(\mathbf{x})}{h}`
+
+.. note::
+	* If :math:`\mathbf{u}` happens to a unit-vector, then our open ball is :math:`B_h(\mathbf{x})`.
+	* In this case, :math:`\mathbf{f}'(\mathbf{x}; \mathbf{u})` is called the directional derivative along :math:`\mathbf{u}`.
 
 Partial Derivative
 ==========================================================
