@@ -4,6 +4,7 @@ Linear Algebra
 
 .. toctree::
 
+	vecspace
 	funda
 	factor
 	norm
