@@ -5,4 +5,4 @@ Multivariable Calculus
 .. toctree::
 
     calc1
-    useful
+    multi
