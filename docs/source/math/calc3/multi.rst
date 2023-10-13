@@ -114,7 +114,7 @@ We define the derivative (total derivative) as a linear approximation of the fun
 	* The error in this approximation is 
 
 		.. math:: \boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})=\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{A}\mathbf{h}
-	* We assume that :math:`\lim\limits_{\mathbf{h}\to\mathbf{0}}\boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})=0` and define :math:`\mathbf{f}'(\mathbf{x})=\mathbf{A}`.
+	* We assume that :math:`\lim\limits_{\mathbf{h}\to\mathbf{0}}\frac{||\boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})||}{||\mathbf{h}||}=0` and define :math:`\mathbf{f}'(\mathbf{x})=\mathbf{A}`.
 
 Gradient
 ==========================================================
