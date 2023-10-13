@@ -106,7 +106,7 @@ We define the total derivative as a linear approximation of the function at clos
 	* Instead of looking at the rate of change in the function from a single direction, we need to consider all directions at once.
 	* We therefore, consider a variable length vector :math:`\mathbf{h}` which is allowed to rotate.
 	* We consider the **open-hypersphere** :math:`B_\mathbf{h}(\mathbf{x})`, and assume that inside this, the function is approximately linear.
-	* Therefore, we introduce a linear transform :math:`\mathbf{A}\mathbb{R}^n\mapsto\mathbb{R}^m` to replace our function :math:`\mathbf{f}\mathbb{R}^n\mapsto\mathbb{R}^m`.
+	* Therefore, we introduce a linear transform :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^m` to replace our original function :math:`\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m`.
 	* The **change in value** as we move from :math:`\mathbf{x}` to :math:`\mathbf{x}+\mathbf{h}` is
 
 		* :math:`\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})` under the actual function.
