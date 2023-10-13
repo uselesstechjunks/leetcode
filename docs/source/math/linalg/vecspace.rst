@@ -196,8 +196,8 @@ Integration as a Linear Transform
 	* Let :math:`\mathcal{I}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **integrable functions**.
 	* The integration operator :math:`I=\int(\cdot)\mathop{dx}` on its own defines a function :math:`I:\mathcal{I}\mapsto\mathcal{F}`.
 
-		.. math:: I(g\in\mathcal{G})=G\in\mathcal{F}
+		.. math:: I(g\in\mathcal{I})=G\in\mathcal{F}
 	* :math:`I` applied on some specific function :math:`g` (ready to be evaluated on any :math:`x`) defines a linear transform :math:`I(g)\in\mathcal{F}:X\mapsto Y` since
 
-		* :math:`\forall g_1,g_2\in \mathcal{G}, I(g_1+g_2)=I(g_1)+I(g_2)`
-		* :math:`\forall c\in \mathbb{R},\forall g\in \mathcal{G}, I(c\cdot g)=c\cdot I(g)`
+		* :math:`\forall g_1,g_2\in \mathcal{I}, I(g_1+g_2)=I(g_1)+I(g_2)`
+		* :math:`\forall c\in \mathbb{R},\forall g\in \mathcal{I}, I(c\cdot g)=c\cdot I(g)`
