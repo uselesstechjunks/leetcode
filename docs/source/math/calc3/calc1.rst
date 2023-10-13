@@ -144,10 +144,10 @@ We can define the derivative as a linear approximation of the function at close 
 	* The **change in value** as we move from :math:`x` to :math:`x+h` is
 
 		* :math:`f(x+h)-f(x)` under the actual function.
-		* :math:`\alpha(x+h)-\alpha(x)=\alpha x` under the approximation.
+		* :math:`\alpha(x+h)-\alpha(x)=\alpha h` under the approximation.
 	* The error in this approximation is 
 
-		.. math:: \epsilon_x(h)=f(x+h)-f(x)-\alpha x
+		.. math:: \epsilon_x(h)=f(x+h)-f(x)-\alpha h
 	* We assume that :math:`\lim\limits_{h\to 0}\frac{|\epsilon_x(h)|}{|h|}=0` and define :math:`f'(x)=\alpha`.
 
 .. tip::
