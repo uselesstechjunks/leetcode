@@ -1,7 +1,7 @@
 ##########################################################
 Multivariable Calculus
 ##########################################################
-We consider functions from :math:``\mathbb{R}^n` to :math:`\mathbb{R}^m`.
+We consider functions from :math:`\mathbb{R}^n` to :math:`\mathbb{R}^m`.
 
 **********************************************************
 Different Forms of Multivariable Functions
