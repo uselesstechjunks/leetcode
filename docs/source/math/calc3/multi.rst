@@ -103,19 +103,19 @@ We define the derivative (total derivative) as a linear approximation of the fun
 .. note::
 	* Instead of looking at the function from a single direction, we need to include all directions at once.
 	* We therefore, consider a variable length vector :math:`\mathbf{h}` which is allowed to rotate.
-	* We consider the open-hypersphere :math:`B_\mathbf{h}(\mathbf{x})`, and define the ratio
+	* We consider the open-hypersphere :math:`B_\mathbf{h}(\mathbf{x})`, and define the ratio, for some matrix :math:`\mathbf{A}_{m\times n}`
 
-		.. math:: \frac{\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})}{||\mathbf{h}||}
-	* We define the total derivative as :math:`\mathbf{f}'(\mathbf{x})=\lim\limits_{||\mathbf{h}||\to 0}\frac{\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})}{||\mathbf{h}||}`
+		.. math:: \frac{||\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{A}\mathbf{h}||}{||\mathbf{h}||}
+	* If this ratio :math:`\to 0` as :math:`\mathbf{h}\to\mathbf{0}`, then we define the total derivative as :math:`\mathbf{f}'(\mathbf{x})=\mathbf{A}`
 
 Total derivative as a linear transform
 ==========================================================
 .. note::
-	* Let :math:`D` denote an operator which, when applied to a differentiable vector field, :math:`\mathbf{f}`, returns :math:`D(\mathbf{f})=D\mathbf{f}` which represents another function :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m`.
+	* Let :math:`D` denote an operator which, when applied to :math:`\mathbf{f}`, returns :math:`D(\mathbf{f})=D\mathbf{f}` which represents another function :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m`.
 	* We can consider an error term
 
-		.. math:: E(\mathbf{x},\mathbf{h})=\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-D\mathbf{f}(\mathbf{x})\cdot ||\mathbf{h}||
-	* We note that :math:`\lim\limits_{||\mathbf{h}||\to 0} E(\mathbf{x},\mathbf{h})=\mathbf{0}\implies D\mathbf{f}=\mathbf{f}'`
+		.. math:: E(\mathbf{x},\mathbf{h})=\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-D\mathbf{f}(\mathbf{x})\mathbf{h}
+	* We note that :math:`\lim\limits_{\mathbf{h}\to\mathbf{0}}\frac{||E(\mathbf{x},\mathbf{h})||}{||\mathbf{h}||} =0\implies D\mathbf{f}=\mathbf{f}'`
 	* We note that :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m` is a linear transform.
 	* Therefore, :math:`D\mathbf{f}` is a linear approximation of :math:`\mathbf{f}` with an approximation error that becomes negligible as we move closer to :math:`\mathbf{x}`.
 
@@ -126,13 +126,13 @@ Total derivative as a linear transform
 Gradient
 ==========================================================
 .. note::
-	* If :math:`m=1`, then the linear transform is usually written as a column vector instead of a :math:`1\times n` row matrix.
+	* If :math:`m=1`, then the :math:` is usually written as a column vector instead of a :math:`1\times n` row matrix.
 	* This linear transform :math:`Df` is known as the gradient of :math:`\mathbf{f}`
 
 		.. math:: \nabla f =\begin{bmatrix}\frac{\mathop{\partial f}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial f}}{\mathop{\partial x_n}}\end{bmatrix}
-	* The total derivative :math:`f'(\mathbf(x))=Df(\mathbf{x})` at any point :math:`\mathbf{x}` is
+	* At any point :math:`\mathbf{x}`, the directional derivative along any :math:`\mathbf{y}` is given by
 
-		.. math:: \nabla f\cdot\mathbf{x}=\sum_{i=1}^n\frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_i}}
+		.. math:: f'(\mathbf{x};\mathbf{y})=\nabla f(\mathbf{x})\cdot\mathbf{y}=\sum_{i=1}^n\frac{\mathop{\partial f(\mathbf{x})}}{\mathop{\partial x_i}}\cdot y_i
 	* The total derivative operator :math:`D` in this case is the gradient operator
 
 		.. math:: \nabla =\begin{bmatrix}\frac{\mathop{\partial}}{\mathop{\partial x_1}}\\ \vdots \\ \frac{\mathop{\partial}}{\mathop{\partial x_n}}\end{bmatrix}
