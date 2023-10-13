@@ -69,7 +69,7 @@ As a Vector Space over Addition
 	* We also define a :math:`0_L\in L(U,W)` such that :math:`\forall \mathbf{u}, 0_L(\mathbf{u})=\mathbf{0}`.
 
 		* We note that :math:`A+0_L=0_L+A=A`.
-	* Assuming that the transform is **onto**, we can define a unique additive inverse :math:`-A:U\mapsto W`.
+	* If the transform is **onto**, we can define a unique additive inverse :math:`-A:U\mapsto W`.
 
 		.. math:: A(\mathbf{u})+-A(\mathbf{u})=-A(\mathbf{u})+A(\mathbf{u})=0_L(\mathbf{u})=\mathbf{0}
 
