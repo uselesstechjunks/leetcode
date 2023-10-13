@@ -28,8 +28,8 @@ Vector space
 				* We represent :math:`\mathbf{v}` as :math:`-\mathbf{u}`
 
 .. tip::
-	* We often omit the underlying scalar field :math:`\mathcal{F}` and write the vector space as :math:`V`.
 	* Elements of vector space are called vectors.
+	* We often omit the underlying scalar field :math:`\mathcal{F}` and write the vector space as :math:`V`.
 	* Example of finite dimensional vectors: Euclidean vectors :math:`\mathbb{R}^n` where the scalar field is :math:`\mathbb{R}` or complex vectors :math:`\mathbb{C}^n` over the scalar field :math:`\mathbb{C}`.
 
 ********************************************************************************
@@ -44,18 +44,55 @@ Linear Transform
 	* This means, if we want to add or scale vecetors, it doesn't matter whether we do it in the domain space before the mapping or in the range space after the mapping.
 
 .. tip::
+	A linear transform is one-to-one when it's onto.
+
+Space of Linear Transform
+================================================================================
+.. tip::
 	The set of all linear transforms :math:`T:U\mapsto W` is represented as :math:`L(U,W)`.
 
+As a vector space over over + and scalar multiplication
+--------------------------------------------------------------------------------
+.. attention::
+	* We can define a + operator in :math:`L(U,V)`.
+
+		* Let :math:`C=(a\cdot A+b\cdot B)` for any :math:`A,B\in L(U,W)` and any :math:`a,b\in\mathcal{F}` such that 
+
+			.. math:: (a\cdot A+b\cdot B)(\mathbf{u})=a\cdot A(\mathbf{u})+b\cdot B(\mathbf{u})
+		* Then :math:`C\in L(U,W)`.
+	* We can also define a scalar multiplication :math:`\cdot`.
+
+		* Let :math:`C=c\cdot A` for any :math:`A\in L(U,W)` and any :math:`c\in\mathcal{F}` such that 
+
+			.. math:: (c\cdot A)(\mathbf{u})=c\cdot A(\mathbf{u}).
+		* Then :math:`C\in L(U,W)`.
+	* We also define a :math:`0_L\in L(U,W)` such that :math:`\forall \mathbf{u}, 0_L(\mathbf{u})=\mathbf{0}`.
+
+		* We note that :math:`A+0_L=0_L+A=A`.
+	* Assuming that the transform is **onto**, we can define a unique additive inverse.
+
+		.. math:: A(\mathbf{u})+B(\mathbf{u})=\mathbf{0}
+	* Therefore, :math:`L(U,W)` itself is a vector space over the same field :math:`\mathcal{F}`.
+
+Composition of linear transforms
+================================================================================
 .. attention::
 	* We can define composite linear transforms in the usual way.
 	* Let :math:`A:U\mapsto V` and :math:`B:V\mapsto W`.
-	* Then :math:`\forall\mathbf{u}\in U, (B\circ A)\mathbf{u}=B(A(\mathbf{u}))`.
+	* Then :math:`(B\circ A)\in L(U,W)` where :math:`\forall\mathbf{u}\in U, (B\circ A)\mathbf{u}=B(A(\mathbf{u}))`.
 
-.. attention::
-	* If we define :math:`C=(a\cdot A+b\cdot B)` for any :math:`A,B\in L(U,W)` and any :math:`a,b\in\mathcal{F}` such that :math:`(a\cdot A+b\cdot B)(\mathbf{u})=a\cdot A(\mathbf{u})+b\cdot B(\mathbf{u})` then :math:`C\in L(U,W)`.
-	* If we define :math:`C=c\cdot A` for any :math:`A\in L(U,W)` and any :math:`c\in\mathcal{F}` such that :math:`(c\cdot A)(\mathbf{u})=c\cdot A(\mathbf{u})` then :math:`C\in L(U,W)`.
-	* We also define a :math:`0_L\in L(U,W)` such that :math:`\forall \mathbf{u}, 0_L(\mathbf{u})=\mathbf{0}`.
-	* Therefore, as long as a unique inverse transform exists, :math:`L(U,W)` itself is a vector space over the same field :math:`\mathcal{F}`.
+Invertible linear transforms : As a vector space over composition
+--------------------------------------------------------------------------------
+	* Let's consider :math:`A,B\in L(U)`.
+	* We note that :math:`((b\cdot B)\circ (a\cdot A))\in L(U)` where
+
+		.. math:: \forall\mathbf{u}\in U, ((b\cdot B)\circ (a\cdot A))\mathbf{u}=ab\cdot B(A(\mathbf{u}))
+	* We define the identity operator :math:`I:U\mapsto U` such that :math:`I(\mathbf{u})=\mathbf{u}` such that
+
+		.. math:: (A\circ I)(\mathbf{u}) = (I\circ A)(\mathbf{u}) = A(\mathbf{u})
+	* If the transform is **onto**, then we can define a unique composition inverse :math:`A^{-1}:U\mapsto U` such that
+
+		.. math:: (A\circ A^{-1})(\mathbf{u}) = I(\mathbf{u}) = \mathbf{u}
 
 Examples
 ================================================================================
