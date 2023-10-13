@@ -110,7 +110,7 @@ We define the total derivative as a linear approximation of the function at clos
 	* The **change in value** as we move from :math:`\mathbf{x}` to :math:`\mathbf{x}+\mathbf{h}` is
 
 		* :math:`\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})` under the actual function.
-		* :math:`\mathbf{A}(\mathbf{x}+\mathbf{h})-\mathbf{A}(\mathbf{x})=\mathbf{A}\mathbf{h}` under the actual function.
+		* :math:`\mathbf{A}(\mathbf{x}+\mathbf{h})-\mathbf{A}(\mathbf{x})=\mathbf{A}\mathbf{h}` under the approximation.
 	* The error in this approximation is 
 
 		.. math:: \boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})=\mathbf{f}(\mathbf{x}+\mathbf{h})-\mathbf{f}(\mathbf{x})-\mathbf{A}\mathbf{h}
