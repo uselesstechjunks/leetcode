@@ -134,16 +134,6 @@ Differentiation as a rate of change
 .. warning::
 	We need the point :math:`x` to be inside the open interval because we need to be able to create an open :math:`h`-ball around it and we need the function to be well defined in that region.
 
-.. tip::
-	If the derivative of a function exists at a point, then the function is continuous at that point.
-
-Properties
-================================================================
-.. note::
-	* **Sum Rule**: :math:`(f+g)'=f'+g'`
-	* **Product Rule**: :math:`(f\cdot g)'=f\cdot g'+f'\cdot g`
-	* **Chain Rule**: :math:`(f\circ g)'=(f'\circ g)\cdot g'`
-
 Differentiation as a linear approximation
 ================================================================
 We can define the derivative as a linear approximation of the function at close proximity of :math:`x`.
@@ -159,6 +149,16 @@ We can define the derivative as a linear approximation of the function at close 
 
 		.. math:: \epsilon_x(h)=f(x+h)-f(x)-\alpha x
 	* We assume that :math:`\lim\limits_{h\to 0}\frac{|\epsilon_x(h)|}{|h|}=0` and define :math:`f'(x)=\alpha`.
+
+.. tip::
+	If the derivative of a function exists at a point, then the function is continuous at that point.
+
+Properties
+================================================================
+.. note::
+	* **Sum Rule**: :math:`(f+g)'=f'+g'`
+	* **Product Rule**: :math:`(f\cdot g)'=f\cdot g'+f'\cdot g`
+	* **Chain Rule**: :math:`(f\circ g)'=(f'\circ g)\cdot g'`
 
 Application: Local extremum
 ================================================================
