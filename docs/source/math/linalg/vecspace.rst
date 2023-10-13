@@ -44,6 +44,9 @@ Ring
 		* For every :math:`x`, there is a unique inverse element w.r.t :math:`\cdot`, :math:`x^{-1}` such that
 
 			* :math:`x\cdot x^{-1}=x^{-1}\cdot x=1`
+	* Addition and multiplication follow the **distributive** property
+
+		* :math:`x\cdot(y+z)=x\cdot y+x\cdot z`
 
 Field
 ================================================================================

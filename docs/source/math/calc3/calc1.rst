@@ -124,6 +124,8 @@ Differentiation
 ****************************************************************
 Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function at some :math:`x\in(a,b)`.
 
+Differentiation as a rate of change
+================================================================
 .. note::
 	The derivative of :math:`f` at :math:`x\in(a,b)` is defined to be (assuming that the limit exists),
 
@@ -132,23 +134,31 @@ Let :math:`f:(a,b)\subset\mathbb{R}\mapsto \mathbb{R}` be a continuous function 
 .. warning::
 	We need the point :math:`x` to be inside the open interval because we need to be able to create an open :math:`h`-ball around it and we need the function to be well defined in that region.
 
+Differentiation as a linear approximation
+================================================================
+We can define the derivative as a linear approximation of the function at close proximity of :math:`x`.
+
+.. note::
+	* We consider the **open-ball** :math:`B_h(x)`, and assume that inside this, the function is approximately linear.
+	* Therefore, we introduce a linear transform :math:`\alpha:\mathbb{R}\mapsto\mathbb{R}` to replace our original function :math:`f:\mathbb{R}\mapsto\mathbb{R}`.
+	* The **change in value** as we move from :math:`x` to :math:`x+h` is
+
+		* :math:`f(x+h)-f(x)` under the actual function.
+		* :math:`\alpha(x+h)-\alpha(x)=\alpha h` under the approximation.
+	* The error in this approximation is 
+
+		.. math:: \epsilon_x(h)=f(x+h)-f(x)-\alpha h
+	* We assume that :math:`\lim\limits_{h\to 0}\frac{|\epsilon_x(h)|}{|h|}=0` and define :math:`f'(x)=\alpha`.
+
+.. tip::
+	If the derivative of a function exists at a point, then the function is continuous at that point.
+
 Properties
 ================================================================
 .. note::
 	* **Sum Rule**: :math:`(f+g)'=f'+g'`
 	* **Product Rule**: :math:`(f\cdot g)'=f\cdot g'+f'\cdot g`
 	* **Chain Rule**: :math:`(f\circ g)'=(f'\circ g)\cdot g'`
-
-Differentiation as a linear approximation
-================================================================
-.. note::
-	* Let :math:`D` denote an operator which, when applied to a differentiable function, :math:`f`, returns :math:`D(f)=Df` which represents another function :math:`Df:\mathbb{R}\mapsto\mathbb{R}`.
-	* We can consider an error term
-
-		.. math:: E(x,h)=f(x+h)-f(x)-Df(x)\cdot h
-	* We note that :math:`\lim\limits_{h\to 0}E(x,h)=0\implies Df=f'`
-	* We note that :math:`Df:\mathbb{R}\mapsto\mathbb{R}` is a linear transform because of the sum rule.
-	* Therefore, :math:`Df` is a linear approximation of :math:`f` with an approximation error that becomes negligible as we move closer to :math:`x`.
 
 Application: Local extremum
 ================================================================
