@@ -44,8 +44,8 @@ Directional Derivative as a rate of change in scalar fields
 We have a function :math:`f`, from an open set :math:`E\in\mathbb{R}^n` into :math:`\mathbb{R}`. We want to find a proper definition of derivative of :math:`f` at some point :math:`\mathbf{x}\in E`.
 
 .. note::
-	* If the domain was in :math:`\mathbb{R}`, there is a single direction along which we can approach a point :math:`x\in\mathbb{R}`.
-	* As the domain now is in :math:`\mathbb{R}^n`, there are infinite directions along which we can approach a point :math:`\mathbf{x}\in\mathbb{R}^n`.
+	* There is a single direction along which we can approach a point :math:`x\in\mathbb{R}`.
+	* However, there are infinite directions along which we can approach a point :math:`\mathbf{x}\in\mathbb{R}^n`.
 	* Along each such direction, the rate-of-change in the function can be different.
 	* In order to apply the notion of single variable derivative, we can therefore reduce the function to a single dimensional one by looking at the slice along a particular line.
 	* We fix our direction along some vector :math:`\mathbf{u}\in\mathbb{R}^n` and look at the rate-of-change of the function along :math:`\mathbf{u}` as we move closer to :math:`\mathbf{x}`.
@@ -59,13 +59,13 @@ We have a function :math:`f`, from an open set :math:`E\in\mathbb{R}^n` into :ma
 
 .. note::
 	* If :math:`\mathbf{u}` happens to a unit-vector, then our open ball is :math:`B_h(\mathbf{x})`.
-	* In this case, :math:`\mathbf{f}'(\mathbf{x}; \mathbf{u})` is called the directional derivative along :math:`\mathbf{u}`.
+	* In this case, :math:`f'(\mathbf{x}; \mathbf{u})` is called the directional derivative along :math:`\mathbf{u}`.
 
 Partial Derivative
 ------------------------------------------------------------
 .. note::
 	* If the unit vector in a directional derivative is along any of the coordinate-axes, such as :math:`\mathbf{e}_k`, the directional derivative is called a partial derivative.
-	* Notation: :math:`\mathbf{f}'(\mathbf{x}; \mathbf{e}_k)=\frac{\mathop{\partial}}{\mathop{\partial x_k}}\mathbf{f}(\mathbf{x})`
+	* Notation: :math:`f'(\mathbf{x}; \mathbf{e}_k)=\frac{\mathop{\partial}}{\mathop{\partial x_k}}f(\mathbf{x})`
 
 Directional Derivative isn't sufficient
 ------------------------------------------------------------
@@ -131,7 +131,7 @@ Gradient
 Jacobian
 ------------------------------------------------------------
 .. note::
-	* If :math:`m> 1`, :math:`\mathbf{A}` is known as Jacibian matrix.
+	* If :math:`m> 1`, :math:`\mathbf{A}` is known as Jacobian matrix.
 
 		.. math:: J_\mathbf{f}(\mathbf{x})=\begin{bmatrix}\nabla f_1(\mathbf{x})^\top\\ \vdots \\ \nabla f_m(\mathbf{x})^\top\end{bmatrix}=\begin{bmatrix}\frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_1}} & \cdots & \frac{\mathop{\partial f_1(\mathbf{x})}}{\mathop{\partial x_n}} \\ \vdots & \vdots & \vdots \\ \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_1}} & \cdots & \frac{\mathop{\partial f_m(\mathbf{x})}}{\mathop{\partial x_n}}\end{bmatrix}
 
