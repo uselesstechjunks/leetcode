@@ -80,6 +80,7 @@ Example
 	* However, we note that along the parabolic path :math:`x=y^2`, :math:`f(x,y)=\frac{1}{2}`.
 	* This means that if we move along this parabolic path, the value of the function jumps from :math:`\frac{1}{2}` to 0 all of a sudden.
 	* No directional derivative along any straight line can catch this jump, as along that line, we can always form tiny open balls which excludes the points in the parabola.
+	* Therefore, directional, and by extension, partial derivatives don't define a proper differentiation.
 
 .. image:: ../../img/2.png
   :width: 400
@@ -87,6 +88,16 @@ Example
 **********************************************************
 Total Derivative
 **********************************************************
+We define the derivative (total derivative) as a linear approximation of the function at close proximity of :math:`\mathbf{x}`.
+
+.. note::
+	* Let :math:`D` denote an operator which, when applied to a differentiable vector field, :math:`\mathbf{f}`, returns :math:`D(\mathbf{f})=D\mathbf{f}` which represents another function :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m`.
+	* We can consider an error term
+
+		.. math:: E(\mathbf{x},\mathbf{h})=f(\mathbf{f}+\mathbf{h})-f(\mathbf{x})-D\mathbf{f}(\mathbf{x})\cdot ||\mathbf{h}||
+	* We note that :math:`\lim\limits_{||\mathbf{h}||\to 0} E(\mathbf{x},\mathbf{h})=\mathbf{0}\implies D\mathbf{f}=\mathbf{f}'`
+	* We note that :math:`D\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m` is a linear transform because of the sum rule.
+	* Therefore, :math:`D\mathbf{f}` is a linear approximation of :math:`\mathbf{f}` with an approximation error that becomes negligible as we move closer to :math:`\mathbf{x}`.
 
 Continuously Differentiable Functions
 =========================================================
