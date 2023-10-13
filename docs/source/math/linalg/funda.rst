@@ -6,10 +6,10 @@ Fundamentals
 Vector space
 ********************************************************************************
 .. note::
-	* Let :math:`\mathcal{F}` be a scalar **field** (such as :math:`\mathbf{R}` or :math:`\mathbf{C}`).
+	* Let :math:`\mathcal{F}` be a scalar **field** (such as :math:`\mathbb{R}` or :math:`\mathbb{C}`).
 
 		* Field refers to the algebraic definition with properly defined addition and multiplication operators on them. 
-		* Not to be confused with **scalar fields** which represents functionals that maps vectors into scalers
+		* Not to be confused with **scalar fields** which represents functionals that maps vectors into scalers.
 	* Then :math:`V_\mathcal{F}` is a vector space over :math:`\mathcal{F}` if we have scalar multiplication and vector addition defined as follows:
 
 		* **Scalar Multiplication**: 
@@ -47,11 +47,32 @@ Linear Transform
 	The set of all linear transforms :math:`T:U\mapsto W` is represented as :math:`L(U,W)`.
 
 .. attention::
-	* For every scalar :math:`\alpha\in\mathbf{R}`, we can define a unique linear operator in :math:`L(\mathbf{R})` with its already defined multiplication operator as :math:`\alpha:\mathbb{R}\mapsto\mathbb{R}` where :math:`\forall x\in\mathbb{R}, \alpha(x)\colonqq \alpha\cdot x`.
+	* We can define composite linear transforms in the usual way.
+	* Let :math:`A:U\mapsto V` and :math:`B:V\mapsto W`.
+	* Then :math:`\forall\mathbf{u}\in U, (B\circ A)\mathbf{u}=B(A(\mathbf{u}))`.
+
+.. attention::
+	* If we define :math:`C=(a\cdot A+b\cdot B)` for any :math:`A,B\in L(U,W)` and any :math:`a,b\in\mathcal{F}` such that :math:`(a\cdot A+b\cdot B)(\mathbf{u})=a\cdot A(\mathbf{u})+b\cdot B(\mathbf{u})` then :math:`C\in L(U,W)`.
+	* If we define :math:`C=c\cdot A` for any :math:`A\in L(U,W)` and any :math:`c\in\mathcal{F}` such that :math:`(c\cdot A)(\mathbf{u})=c\cdot A(\mathbf{u})` then :math:`C\in L(U,W)`.
+	* We also define a :math:`0_L\in L(U,W)` such that :math:`\forall \mathbf{u}, 0_L(\mathbf{u})=\mathbf{0}`.
+	* Therefore, as long as a unique inverse transform exists, :math:`L(U,W)` itself is a vector space over the same field :math:`\mathcal{F}`.
+
+Examples
+================================================================================
+Scalar Multiplication as a Linear Transform
+--------------------------------------------------------------------------------
+.. attention::
+	* For every scalar :math:`\alpha\in\mathbf{R}`, we can define a unique linear operator in :math:`L(\mathbf{R})` with its already defined multiplication operator as :math:`\alpha:\mathbb{R}\mapsto\mathbb{R}` where :math:`\forall x\in\mathbb{R}, \alpha(x)=\alpha\cdot x`.
 	* We note that
 
 		* :math:`\forall u,v\in \mathbb{R}, \alpha(u+v)=\alpha(u)+\alpha(v)`
 		* :math:`\forall c\in\mathbb{R},\forall u\in \mathbb{R}, \alpha(c\cdot u)=c\cdot\alpha(u)`
+
+Differentiation as a Linear Transform
+--------------------------------------------------------------------------------
+
+Integration as a Linear Transform
+--------------------------------------------------------------------------------
 
 Linear Operator
 ================================================================================
