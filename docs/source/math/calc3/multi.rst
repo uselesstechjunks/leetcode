@@ -18,7 +18,6 @@ Scalar field
 ==========================================================
 .. note::
 	* If :math:`n> 1` and :math:`m=1` then the functions :math:`f:\mathbb{R}^n\mapsto\mathbb{R}` are known as scalar fields.
-	* We write :math:`f(\mathbf{x})` or :math:`f(x_1,\cdots,x_n)`.
 	* Example: :math:`f(x,y)=xy`
 
 .. image:: ../../img/1.png
@@ -28,7 +27,6 @@ Vector field
 ==========================================================
 .. note::
 	* If :math:`n> 1` and :math:`m> 1` then the functions :math:`\mathbf{f}:\mathbb{R}^n\mapsto\mathbb{R}^m` are known as vector fields.
-	* We write :math:`\mathbf{f}(\mathbf{x})` or :math:`\mathbf{f}(x_1,\cdots,x_n)`.
 	* Example: :math:`f(x,y)=(x^2,\sin(y),x+y)`
 
 **********************************************************
