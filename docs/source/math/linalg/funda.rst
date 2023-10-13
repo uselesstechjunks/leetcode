@@ -51,7 +51,7 @@ Space of Linear Transform
 .. tip::
 	The set of all linear transforms :math:`T:U\mapsto W` is represented as :math:`L(U,W)`.
 
-As a vector space over over + and scalar multiplication
+As a Vector Space over Addition
 --------------------------------------------------------------------------------
 .. attention::
 	* We can define a + operator in :math:`L(U,V)`.
@@ -69,19 +69,18 @@ As a vector space over over + and scalar multiplication
 	* We also define a :math:`0_L\in L(U,W)` such that :math:`\forall \mathbf{u}, 0_L(\mathbf{u})=\mathbf{0}`.
 
 		* We note that :math:`A+0_L=0_L+A=A`.
-	* Assuming that the transform is **onto**, we can define a unique additive inverse.
+	* Assuming that the transform is **onto**, we can define a unique additive inverse :math:`-A:U\mapsto W`.
 
-		.. math:: A(\mathbf{u})+B(\mathbf{u})=\mathbf{0}
-	* Therefore, :math:`L(U,W)` itself is a vector space over the same field :math:`\mathcal{F}`.
+		.. math:: A(\mathbf{u})+-A(\mathbf{u})=-A(\mathbf{u})+A(\mathbf{u})=0_L(\mathbf{u})=\mathbf{0}
 
-Composition of linear transforms
+Composition of Linear Transforms
 ================================================================================
 .. attention::
 	* We can define composite linear transforms in the usual way.
 	* Let :math:`A:U\mapsto V` and :math:`B:V\mapsto W`.
 	* Then :math:`(B\circ A)\in L(U,W)` where :math:`\forall\mathbf{u}\in U, (B\circ A)\mathbf{u}=B(A(\mathbf{u}))`.
 
-Invertible linear transforms : As a vector space over composition
+As a Vector Space over Composition
 --------------------------------------------------------------------------------
 	* Let's consider :math:`A,B\in L(U)`.
 	* We note that :math:`((b\cdot B)\circ (a\cdot A))\in L(U)` where
