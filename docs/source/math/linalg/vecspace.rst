@@ -104,7 +104,7 @@ Linear Operator
 	* Linear transforms from :math:`U` to :math:`U` are called Linear Operators.
 	* The set of all linear operators :math:`T:U\mapsto U` is represented as :math:`L(U)`.
 
-Space of Linear Transform
+Space of Linear Transforms
 ================================================================================
 .. tip::
 	The set of all linear transforms :math:`T:U\mapsto W` is represented as :math:`L(U,W)`.
