@@ -1,58 +1,22 @@
 ################################################################################
-Fundamentals
+Finite Dimensional Linear Transform
 ################################################################################
-
 ********************************************************************************
-Vector space
-********************************************************************************
-.. note::
-	* Let :math:`\mathcal{F}` be a scalar **field**. Then :math:`V_\mathcal{F}` is a vector space over :math:`\mathcal{F}` if we have scalar multiplication and vector addition defined as follows:
-
-		* **Scalar Multiplication**: 
-
-			* For :math:`\mathbf{u}\in V_\mathcal{F}\implies\forall a\in \mathcal{F}, a\cdot\mathbf{u}\in V_\mathcal{F}`
-		* **Vector Addition**: 
-
-			* For :math:`\mathbf{u},\mathbf{v}\in V_\mathcal{F}\implies \mathbf{u}+\mathbf{v}\in V_\mathcal{F}`
-			* There is a unique :math:`\mathbf{0}\in V_\mathcal{F}` such that 
-
-				* For :math:`0\in \mathcal{F}`, :math:`\forall\mathbf{u}\in V_\mathcal{F}, 0\cdot\mathbf{u}=\mathbf{0}\in V_\mathcal{F}`
-				* :math:`\mathbf{u}+\mathbf{0}=\mathbf{0}+\mathbf{u}=\mathbf{u}`
-
-.. tip::
-	* Elements of vector space are called vectors.
-	* Example of finite dimensional vectors: Euclidean vectors :math:`\mathbb{R}^n` where the scalar field is :math:`\mathbb{R}` or complex vectors :math:`\mathbb{C}^n` over the scalar field :math:`\mathbb{C}`.
-
-********************************************************************************
-Matrix as Linear Operators
+Matrix as Linear Transform
 ********************************************************************************
 .. tip::
-	* The matrix :math:`\mathbf{A}` is a linear operator which maps :math:`\mathbb{C}^n` dimensional vectors to :math:`\mathbb{C}^m` dimensional vectors.
+	* The matrix :math:`\mathbf{A}` is a linear transform which maps :math:`\mathbb{C}^n` dimensional vectors to :math:`\mathbb{C}^m` dimensional vectors.
 
 		.. math:: \mathbf{A}:\mathbb{C}^n\mapsto\mathbb{C}^m
-	* The range of this operator is the **column space** of this operator
+	* The range of this transform is the **column space** of this transform
 
 		.. math:: C(\mathbf{A})=\{\mathbf{A}\mathbf{x}\mathop{|}\forall \mathbf{x}\in\mathbb{C}^n\}
-	* The transposed matrix :math:`\mathbf{A}^\top` does the mapping the other way around (but it's not necessarily the inverse operator)
+	* The transposed matrix :math:`\mathbf{A}^\top` does the mapping the other way around (but it's not necessarily the inverse transform)
 
 		.. math:: \mathbf{A}^\top:\mathbb{C}^m\mapsto\mathbb{C}^n
-	* The range of the transpose operator is the **row space** of :math:`\mathbf{A}`
+	* The range of the transpose transform is the **row space** of :math:`\mathbf{A}`
 
 		.. math:: C(\mathbf{A}^\top)=\{\mathbf{A}^\top\mathbf{y}\mathop{|}\forall \mathbf{y}\in\mathbb{C}^m\}
-
-Vector space of linear operators
-=================================================================================
-.. attention::
-	* The space of matrices :math:`\mathbf{A}:\mathbb{C}^n\mapsto\mathbb{C}^m` themselves define **another vector space** with the same scalar field.
-
-		.. math:: \mathcal{M}_\mathbb{C}=\{\mathbf{A} \mathop{|} \mathbf{A}:\mathbb{C}^n\mapsto\mathbb{C}^m\}
-	* For :math:`a,b\in\mathbb{C}` and :math:`\mathbf{A},\mathbf{B}\in\mathcal{M}_\mathbb{C}`, :math:`\mathbf{C}=a\cdot\mathbf{A}+b\cdot\mathbf{B}\in\mathcal{M}_\mathbb{C}`
-
-		.. math:: \mathbf{C}\mathbf{u}=(a\cdot\mathbf{A}+b\cdot\mathbf{B})\mathbf{u}=a\cdot\mathbf{A}\mathbf{u}+b\cdot\mathbf{B}\mathbf{u}
-	* There is a unique :math:`\mathbf{0}\in\mathcal{M}_\mathbb{C}` such that 
-
-		* For :math:`0\in \mathcal{F}`, :math:`0\cdot\mathbf{A}=\mathbf{0}` and 
-		* :math:`\mathbf{0}+\mathbf{A}=\mathbf{A}+\mathbf{0}=\mathbf{A}`
 
 ********************************************************************************
 Matrix-vector multiplication
@@ -113,7 +77,7 @@ Independence
 
 Rank
 ================================================================================
-Rank determines whether the linear operator :math:`\mathbf{A}` defines a mapping which is **onto** or **into**.
+Rank determines whether the linear transform :math:`\mathbf{A}` defines a mapping which is **onto** or **into**.
 
 .. note::
 	* The number of independent column vectors in a matrix :math:`\mathbf{A}` is the **column-rank**.
@@ -129,7 +93,7 @@ Inverse Mapping
 .. note::
 	* A full rank matrix :math:`\mathbf{A}:\mathbb{R}^n\mapsto\mathbb{R}^n` defines a **onto** mapping, i.e. it spans the entire range.
 	* In such cases, the operation is **one-to-one** as well. There are no two vectors in the domain which maps to the same vector in the range space.
-	* We can define an inverse operator in this case as :math:`\mathbf{A}^{-1}:\mathbb{R}^n\mapsto\mathbb{R}^n`.
+	* We can define an inverse transform in this case as :math:`\mathbf{A}^{-1}:\mathbb{R}^n\mapsto\mathbb{R}^n`.
 
 Basis
 ================================================================================
@@ -150,7 +114,7 @@ Fundamental Subspaces
 	* The vectors in the null-space span a :math:`n-r` dimensional space where :math:`r` is the rank of the matrix.
 
 		* We prefer the basis for the null-space to be orthogonal although it's not a necessity.
-	* The **right-null-space** is defined as the null-space of the transposed operator :math:`\mathbf{A}^\top`.
+	* The **right-null-space** is defined as the null-space of the transposed transform :math:`\mathbf{A}^\top`.
 
 .. attention::
 	* :math:`\dim(C(\mathbf{A}))=r` and :math:`\dim(N(\mathbf{A}^\top))=m-r`

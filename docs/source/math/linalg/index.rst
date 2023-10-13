@@ -4,7 +4,8 @@ Linear Algebra
 
 .. toctree::
 
-	funda
+	vecspace
+	findim
 	factor
 	norm
 	applied
