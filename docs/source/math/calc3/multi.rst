@@ -142,7 +142,31 @@ Differentiability : Continuously Differentiable Functions
 
 .. note::
 	* The function is differentiable at :math:`\mathbf{x}` if all the partial derivatives exist and are **continuous** at :math:`\mathbf{x}`.
-	* If the function is differentiable at :math:`\mathbf{x}`, it is continuous at :math:`\mathbf{x}`. All is good in the world.
+	* If the function is differentiable at :math:`\mathbf{x}`, it is continuous at :math:`\mathbf{x}`. All is good in the world again.
+
+Properties
+===========================================================
+.. tip::
+	* The sum, product and the chain rule works just as the single variable case.
+	* The composition might be a bit complicated though. For example, we might have a composition like :math:`f\circ \mathbf{g}` where
+
+		* :math:`\mathbf{g}` is a vector field, :math:`\mathbf{g}:\mathbb{R}^n\mapsto\mathbb{R}^m`
+		* while :math:`f` is a scalar field, :math:`f:\mathbb{R}^m\mapsto\mathbb{R}`
+	* So we'd be using a Jacobian matrix for :math:`\mathbf{g}` and a gradient for :math:`f`.
+
+Application of Gradient: Normal vector to level sets
+===========================================================
+Level sets
+------------------------------------------------------------
+.. note::
+	* Set of :math:`\mathbf{x}` where the value of the function is constant.
+
+		.. math:: L(c) = \{\mathbf{x}\mathop{|} f(\mathbf{x})=c \}
+	* Level curve for :math:`f:\mathbb{R}^2\mapsto\mathbb{R}` (represented by lines in a contour plot)
+	* Level surface for :math:`f:\mathbb{R}^3\mapsto\mathbb{R}`
+
+.. attention::
+	* The gradient vector of the scalar field at any point :math:`\mathbf{a}` is perpendicular to the tangent vector at the same point on the level curve :math:`L(f\mathbf{a})`.
 
 Higher Order Derivative
 ===========================================================
