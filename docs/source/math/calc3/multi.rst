@@ -154,20 +154,6 @@ Properties
 		* while :math:`f` is a scalar field, :math:`f:\mathbb{R}^m\mapsto\mathbb{R}`
 	* So we'd be using a Jacobian matrix for :math:`\mathbf{g}` and a gradient for :math:`f`.
 
-Application of Gradient: Normal vector to level sets
-===========================================================
-Level sets
-------------------------------------------------------------
-.. note::
-	* Set of :math:`\mathbf{x}` where the value of the function is constant.
-
-		.. math:: L(c) = \{\mathbf{x}\mathop{|} f(\mathbf{x})=c \}
-	* Level curve for :math:`f:\mathbb{R}^2\mapsto\mathbb{R}` (represented by lines in a contour plot)
-	* Level surface for :math:`f:\mathbb{R}^3\mapsto\mathbb{R}`
-
-.. attention::
-	* The gradient vector of the scalar field at any point :math:`\mathbf{a}` is perpendicular to the tangent vector at the same point on the level curve :math:`L(f(\mathbf{a}))`.
-
 Higher Order Derivative
 ===========================================================
 Higher Order Partial Derivative
@@ -189,8 +175,10 @@ Higher Order Partial Derivative
 	* If either of :math:`D_{i,j}` and :math:`D_{j,i}` are contibuous, then the other is also continuous.
 	* This is a sufficient condition, not a necessary one.
 
-Higher Order Total Derivative: Hessian
+Higher Order Total Derivative
 ------------------------------------------------------------
+Hessian
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* The gradient of a scalar field :math:`f:\mathbb{R}^n\mapsto\mathbb{R}` at any point in :math:`\mathbf{x}` is a vector field on :math:`\mathbf{x}`
 
@@ -203,23 +191,54 @@ Higher Order Total Derivative: Hessian
 	* The matrix is symmetric depending on the equality of partial derivatives.
 
 Laplacian
-------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* The Laplacian operator is defined as
 
 		.. math:: \Delta f=\nabla^2f=\nabla\cdot\nabla f
 	* We note that :math:`\Delta f(\mathbf{x})=\text{trace}({\mathbf{H}(\mathbf{x})})`
 
-Application of Hessian: Local extremum
+Application
 ===========================================================
+Normal vector to level sets
+------------------------------------------------------------
+Level sets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* Second order Taylor approximation for a scalar field :math:`f` at a point :math:`\mathbf{x}`
+	* Set of :math:`\mathbf{x}` where the value of the function is constant.
 
-		.. math:: f(\mathbf{x}+\mathbf{h})=f(\mathbf{x})+\nabla f(\mathbf{x})\cdot\mathbf{h}+\frac{1}{2!}\left(\mathbf{h}\cdot H\mathbf{x}\cdot\mathbf{h}^\top\right)+\boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})
+		.. math:: L(c) = \{\mathbf{x}\mathop{|} f(\mathbf{x})=c \}
+	* Level curve for :math:`f:\mathbb{R}^2\mapsto\mathbb{R}` (represented by lines in a contour plot)
+	* Level surface for :math:`f:\mathbb{R}^3\mapsto\mathbb{R}`
 
-**********************************************************
+.. attention::
+	* The gradient vector of the scalar field at any point :math:`\mathbf{a}` is perpendicular to the tangent vector at the same point on the level curve :math:`L(f(\mathbf{a}))`.
+
+Local extremum
+------------------------------------------------------------
+.. note::
+	We note that extremum makes sense only for scalar fields.
+
+.. attention::
+	Second order Taylor approximation for a scalar field :math:`f` at a point :math:`\mathbf{x}`
+
+	.. math:: f(\mathbf{x}+\mathbf{h})=f(\mathbf{x})+\nabla f(\mathbf{x})\cdot\mathbf{h}+\frac{1}{2!}\left(\mathbf{h}\cdot H\mathbf{x}\cdot\mathbf{h}^\top\right)+\boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})
+
+First Derivative Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	At a critical point :math:`\mathbf{c}\in E\subset\mathbf{R}^n`, we have :math:`\nabla f(\mathbf{c})=\mathbf{0}`.
+
+Second Derivative Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* For a minimum, the Hessian matrix :math:`\mathbf{H}(\mathbf{c})` is positive definite.
+	* For a maximum, the Hessian matrix :math:`\mathbf{H}(\mathbf{c})` is negative definite.
+	* If the Hessian matrix :math:`\mathbf{H}(\mathbf{c})` is neither, then it is a saddle point.
+
+************************************************************
 Useful Results
-**********************************************************
+************************************************************
 
 .. csv-table:: Table for derivatives
 	:header: "Scalar derivative", "Vector derivative"
