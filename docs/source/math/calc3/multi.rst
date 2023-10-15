@@ -65,7 +65,7 @@ Partial Derivative
 ------------------------------------------------------------
 .. note::
 	* If the unit vector in a directional derivative is along any of the coordinate-axes, such as :math:`\mathbf{e}_k`, the directional derivative is called a partial derivative.
-	* Notation: :math:`f'(\mathbf{x}; \mathbf{e}_k)=\frac{\mathop{\partial}}{\mathop{\partial x_k}}f(\mathbf{x})`
+	* Notation: :math:`D_k f(\mathbf{x})=f'(\mathbf{x}; \mathbf{e}_k)=\frac{\mathop{\partial}}{\mathop{\partial x_k}}f(\mathbf{x})`
 
 Directional Derivative isn't sufficient
 ------------------------------------------------------------
@@ -142,17 +142,103 @@ Differentiability : Continuously Differentiable Functions
 
 .. note::
 	* The function is differentiable at :math:`\mathbf{x}` if all the partial derivatives exist and are **continuous** at :math:`\mathbf{x}`.
-	* If the function is differentiable at :math:`\mathbf{x}`, it is continuous at :math:`\mathbf{x}`. All is good in the world.
+	* If the function is differentiable at :math:`\mathbf{x}`, it is continuous at :math:`\mathbf{x}`. All is good in the world again.
+
+Properties
+===========================================================
+.. tip::
+	* The sum, product and the chain rule works just as the single variable case.
+	* The composition might be a bit complicated though. For example, we might have a composition like :math:`f\circ \mathbf{g}` where
+
+		* :math:`\mathbf{g}` is a vector field, :math:`\mathbf{g}:\mathbb{R}^n\mapsto\mathbb{R}^m`
+		* while :math:`f` is a scalar field, :math:`f:\mathbb{R}^m\mapsto\mathbb{R}`
+	* So we'd be using a Jacobian matrix for :math:`\mathbf{g}` and a gradient for :math:`f`.
 
 Higher Order Derivative
 ===========================================================
-
-Hessian
+Higher Order Partial Derivative
 ------------------------------------------------------------
+.. note::
+	* We can partial derivatives of second order for functions, as 
 
-**********************************************************
+		.. math:: D_k^2f(\mathbf{x})=\frac{\partial^2}{\mathop{\partial x_k^2}}f(\mathbf{x})=\frac{\partial}{\mathop{\partial x_k}}\left(\frac{\partial}{\mathop{\partial x_k}}f(\mathbf{x})\right)
+	* We can also have mixed partial derivatives, as
+
+		.. math:: D_{i,j}f(\mathbf{x})=D_i (D_j f(\mathbf{x}))=\frac{\partial^2}{\mathop{\partial x_i}\mathop{\partial x_j}}f(\mathbf{x})=\frac{\partial}{\mathop{\partial x_i}}\left(\frac{\partial}{\mathop{\partial x_j}}f(\mathbf{x})\right)
+
+.. warning::
+	* In general :math:`D_{i,j}f(\mathbf{x})\neq D_{j,i}f(\mathbf{x})`
+
+.. attention::
+	* We assume that :math:`D_i` and :math:`D_j` exist.
+	* If :math:`D_{i,j}` and :math:`D_{j,i}` are both continuous at a point :math:`\mathbf{p}`, then :math:`D_{i,j}f(\mathbf{p})= D_{j,i}f(\mathbf{p})`
+	* If either of :math:`D_{i,j}` and :math:`D_{j,i}` are contibuous, then the other is also continuous.
+	* This is a sufficient condition, not a necessary one.
+
+Higher Order Total Derivative
+------------------------------------------------------------
+Hessian
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* The gradient of a scalar field :math:`f:\mathbb{R}^n\mapsto\mathbb{R}` at any point in :math:`\mathbf{x}` is a vector field on :math:`\mathbf{x}`
+
+		.. math:: \nabla f:\mathbf{R}^n\mapsto\mathbf{R}^n
+	* Therefore, the total derivative of second order is given by the Jacobian :math:`\mathbf{J}(\nabla f(\mathbf{x}))`
+	* The Hessian matrix is defined as 
+
+		.. math:: \mathbf{H}(\mathbf{x})=\mathbf{J}(\nabla f(\mathbf{x}))^\top
+	* We have the :math:`D_1^2,\cdots,D_n^2` on the diagonal and partial derivatives elsewhere.
+	* The matrix is symmetric depending on the equality of partial derivatives.
+
+Laplacian
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* The Laplacian operator is defined as
+
+		.. math:: \Delta f=\nabla^2f=\nabla\cdot\nabla f
+	* We note that :math:`\Delta f(\mathbf{x})=\text{trace}({\mathbf{H}(\mathbf{x})})`
+
+Application
+===========================================================
+Normal vector to level sets
+------------------------------------------------------------
+Level sets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* Set of :math:`\mathbf{x}` where the value of the function is constant.
+
+		.. math:: L(c) = \{\mathbf{x}\mathop{|} f(\mathbf{x})=c \}
+	* Level curve for :math:`f:\mathbb{R}^2\mapsto\mathbb{R}` (represented by lines in a contour plot)
+	* Level surface for :math:`f:\mathbb{R}^3\mapsto\mathbb{R}`
+
+.. attention::
+	* The gradient vector of the scalar field at any point :math:`\mathbf{a}` is perpendicular to the tangent vector at the same point on the level curve :math:`L(f(\mathbf{a}))`.
+
+Local extremum
+------------------------------------------------------------
+.. note::
+	We note that extremum makes sense only for scalar fields.
+
+.. attention::
+	Second order Taylor approximation for a scalar field :math:`f` at a point :math:`\mathbf{x}`
+
+	.. math:: f(\mathbf{x}+\mathbf{h})=f(\mathbf{x})+\nabla f(\mathbf{x})\cdot\mathbf{h}+\frac{1}{2!}\left(\mathbf{h}\cdot H\mathbf{x}\cdot\mathbf{h}^\top\right)+\boldsymbol{\epsilon}_\mathbf{x}(\mathbf{h})
+
+First Derivative Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	At a critical point :math:`\mathbf{c}\in E\subset\mathbf{R}^n`, we have :math:`\nabla f(\mathbf{c})=\mathbf{0}`.
+
+Second Derivative Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* For a minimum, the Hessian matrix :math:`\mathbf{H}(\mathbf{c})` is positive definite.
+	* For a maximum, the Hessian matrix :math:`\mathbf{H}(\mathbf{c})` is negative definite.
+	* If the Hessian matrix :math:`\mathbf{H}(\mathbf{c})` is neither, then it is a saddle point.
+
+************************************************************
 Useful Results
-**********************************************************
+************************************************************
 
 .. csv-table:: Table for derivatives
 	:header: "Scalar derivative", "Vector derivative"
