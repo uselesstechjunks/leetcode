@@ -199,7 +199,7 @@ Higher Order Total Derivative: Hessian
 	* The Hessian matrix is defined as 
 
 		.. math:: \mathbf{H}(\mathbf{x})=\mathbf{J}(\nabla f(\mathbf{x}))^\top
-	* We have the :math:`D_1^2,\cdot,D_n^2` on the diagonal and partial derivatives elsewhere.
+	* We have the :math:`D_1^2,\cdots,D_n^2` on the diagonal and partial derivatives elsewhere.
 	* The matrix is symmetric depending on the equality of partial derivatives.
 
 Laplacian
