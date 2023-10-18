@@ -29,13 +29,43 @@ Statistical Decision Theory
 **********************************************************************************
 Regression
 ==================================================================================
+.. note::
+	* We're interested in finding an estimator for :math:`Y`
+
+		.. math:: \hat{Y}=f(X)
+	* Estimation error: :math:`\tilde{Y}=\hat{Y}-Y`
+	* Bias: :math:`\mathbb{E}_Y[\tilde{Y}]`
+	* Standard error (se): :math:`\sqrt{\mathbb{V}_Y(\hat{Y})}`
+	* Mean-squared errr (mse): :math:`\mathbb{E}_Y[\tilde{Y}^2]`
+
+.. tip::
+	* We note that 
+
+		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\mathbb{E}_Y[(\hat{Y}-Y)^2]-\left(\mathbb{E}_Y[(\hat{Y}-Y)]\right)^2=\mathbb{E}_Y[\hat{Y}^2]-2\mathbb{E}_Y[\hat{Y}Y]+\mathbb{E}_Y[Y^2]-(\mathbb{E}_Y[\hat{Y}])^2+2\mathbb{E}_Y[\hat{Y}]\mathbb{E}_Y[Y]-(\mathbb{E}_Y[Y])^2
+	* Assuming that :math:`\hat{Y}` and :math:`Y` are independent
+
+		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{V}_Y(\hat{Y})+\mathbb{V}_Y(Y)
+
+.. tip::
+	* We note that
+
+		.. math:: \text{mse}(\hat{Y})=\mathbb{E}_Y[(\hat{Y}-Y)^2]=\mathbb{E}_Y[\hat{Y}^2]-2\mathbb{E}_Y[\hat{Y}Y]+\mathbb{E}_Y[Y^2]
+	* If the unknown :math:`Y` is some constant :math:`y` instead of a rv, then :math:`\mathbb{V}_Y(Y)=0` and we have 
+
+		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{V}_Y(\hat{Y})=\text{se}^2
+
 Bayes Estimator
 ----------------------------------------------------------------------------------
+.. note::
+	* 
+
 Approximating The Bayes Estimator
 ----------------------------------------------------------------------------------
 
 Classification
 ==================================================================================
+.. note::
+
 Bayes Classifier
 ----------------------------------------------------------------------------------
 
