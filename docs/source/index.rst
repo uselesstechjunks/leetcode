@@ -20,7 +20,7 @@ Contents
    :maxdepth: 1
 
    math
-   mltheory
+   ml/index
    rank
    dsalgo
    sysdes
