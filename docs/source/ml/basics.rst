@@ -81,7 +81,7 @@ Assuming locally constant nature of the fucntion
 Explicit assumption from a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* In linear regression approach, we explicitly assume that the estimator is linear in :math:`X_j`s.
+	* In linear regression approach, we explicitly assume that the estimator is linear in :math:`X_j`.
 	* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\x^T\beta`
 
 Classification
