@@ -11,10 +11,10 @@ Notation
 	* Our target data points are in :math:`\mathbb{R}^K` for some :math:`K\geq 1`.
 	* The data is associated with a random variable :math:`X` which might be a random vector for :math:`d> 1` 
 
-		.. math X=(X_1,\cdots,X_d)
+		.. math:: X=(X_1,\cdots,X_d)
 	* The target is associated with a random variable :math:`Y` which might also be a random vector
 
-		.. math:`Y=(Y_1,\cdots,Y_K)
+		.. math:: Y=(Y_1,\cdots,Y_K)
 	* An observation for :math:`X=x_i\in\mathbb{R}^d` might be taken in the row-vector form, :math:`x_i^T\in\mathbb{R}_{1\times d}`.
 	* Single dimensional observations for target are usually written as :math:`Y=y_i\in\mathbb{R}`.
 
