@@ -16,7 +16,7 @@ Notation
 
 		.. math:`Y=(Y_1,\cdots,Y_K)
 	* An observation for :math:`X=x_i\in\mathbb{R}^d` might be taken in the row-vector form, :math:`x_i^T\in\mathbb{R}_{1\times d}`.
-	* Single observations are usually written as :math:`Y=y_i\in\mathbb{R}`.
+	* Single dimensional observations for target are usually written as :math:`Y=y_i\in\mathbb{R}`.
 
 		* For :math:`K> 1`, we can also associate it with the row vector form, :math:`y_i^T\in\mathbb{R}_{1\times K}`.
 	* We have a total of :math:`N` observations, and all the observations together are taken in the matrix form
