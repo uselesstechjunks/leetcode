@@ -39,14 +39,11 @@ Regression
 	* Mean-squared error (mse): :math:`\mathbb{E}_Y[\tilde{Y}^2]`
 
 .. tip::
-	* We note that 
-
-		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{E}_Y[\tilde{Y}^2]-\left(\mathbb{E}_Y[\tilde{Y}]\right)^2=\mathbb{E}_Y[(\hat{Y}-Y)^2]-\left(\mathbb{E}_Y[(\hat{Y}-Y)]\right)^2=\mathbb{E}_Y[\hat{Y}^2]-2\mathbb{E}_Y[\hat{Y}Y]+\mathbb{E}_Y[Y^2]-(\mathbb{E}_Y[\hat{Y}])^2+2\mathbb{E}_Y[\hat{Y}]\mathbb{E}_Y[Y]-(\mathbb{E}_Y[Y])^2
-	* Assuming that :math:`\hat{Y}` and :math:`Y` are independent
+	* Assuming that :math:`\hat{Y}` and :math:`Y` are independent, we note that
 
 		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{V}_Y(\hat{Y})+\mathbb{V}_Y(Y)
 
-.. tip::
+.. attention::
 	* We note that
 
 		.. math:: \text{mse}(\hat{Y})=\mathbb{E}_Y[\tilde{Y}^2]=\mathbb{E}_Y[(\hat{Y}-Y)^2]=\mathbb{V}_Y(\hat{Y}-Y)+\left(\mathbb{E}_Y[\hat{Y}-Y]\right)^2=\mathbb{V}_Y(\hat{Y})+\mathbb{V}_Y(Y)+\left(\mathbb{E}_Y[\hat{Y}-y]\right)^2=\text{se}^2(\hat{Y})+\text{bias}^2(\hat{Y})+\mathbb{V}_Y(Y)
