@@ -65,7 +65,7 @@ Bayes Estimator
 		.. math:: f^*=\underset{f}{\arg\min}\left(\mathbb{E}_Y[(f(X)-Y)^2]\right)=\underset{f}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(f(X)-Y)^2]|X\right]\right)
 	* [WHY??] This minimisation problem is equivalent to finding a pointwise minimum, such that, for each :math:`X=x`, 
 
-		.. math:: f(x)=\underset{x}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(f(x)-Y)^2]|X=x\right]\right)
+		.. math:: f(x)=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(\hat{y}-Y)^2]|X=x\right]\right)
 	* [WHY??] The solution is :math:`f(x)=\mathbb{E}_Y[Y|X=x]` which is the conditional expectation estimator or Bayes estimator.
 	* We note that this estimator is unbiased.
 
