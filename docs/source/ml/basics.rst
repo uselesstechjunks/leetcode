@@ -66,7 +66,7 @@ Bayes Estimator
 	* [WHY??] This minimisation problem is equivalent to finding a pointwise minimum, such that, for each :math:`X=x`, 
 
 		.. math:: f(x)=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(\hat{y}-Y)^2]|X=x\right]\right)
-	* [WHY??] The solution is :math:`f(x)=\mathbb{E}_Y[Y|X=x]` which is the conditional expectation estimator or Bayes estimator.
+	* [WHY??] The solution is :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]` which is the conditional expectation estimator or Bayes estimator.
 	* We note that this estimator is unbiased.
 
 Approximating The Bayes Estimator
