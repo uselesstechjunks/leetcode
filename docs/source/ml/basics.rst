@@ -75,14 +75,14 @@ Assuming locally constant nature of the fucntion
 
 		* replacing expectation with sample average
 		* approximating the point :math:`X=x` with a neighbourhood :math:`N(x)` where :math:`|N(x)|=k`
-	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\frac{1}{k) \sum_{x_i\in N(x)} x_i`
+	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\frac{1}{k}\sum_{x_i\in N(x)} x_i`
 	* The implicit assumption is that the function behaves locally constant around each point :math:`x` so it can be estimated with the average value of :math:`x_i`
 
 Explicit assumption from a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* In linear regression approach, we explicitly assume that the estimator is linear in :math:`X_j`.
-	* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\x^T\beta`
+	* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx x^T\beta`
 
 Classification
 ==================================================================================
