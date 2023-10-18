@@ -53,6 +53,9 @@ Regression
 	* If the unknown :math:`Y` is some constant :math:`y` instead of a rv, then :math:`\mathbb{V}_Y(Y)=0` and we have 
 
 		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{V}_Y(\hat{Y})=\text{se}^2
+	* In that case
+
+		.. math:: \text{mse}=\mathbb{E}_Y[\tilde{Y}^2]=\mathbb{E}_Y[(\hat{Y}-y)^2]=\mathbb{V}_Y(\hat{Y}-y)+\left(\mathbb{E}_Y[\hat{Y}-y]\right)^2=\mathbb{V}_Y(\hat{Y})+\left(\mathbb{E}_Y[\hat{Y}-y]\right)^2=\text{se}^2+\text{bias}^2
 
 Bayes Estimator
 ----------------------------------------------------------------------------------
