@@ -38,22 +38,6 @@ Regression
 	* Standard error (se): :math:`\sqrt{\mathbb{V}_Y(\hat{Y})}`
 	* Mean-squared error (mse): :math:`\mathbb{E}_Y[\tilde{Y}^2]`
 
-.. tip::
-	* Assuming that :math:`\hat{Y}` and :math:`Y` are independent, we note that
-
-		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{V}_Y(\hat{Y})+\mathbb{V}_Y(Y)
-
-.. attention::
-	* We note that
-
-		.. math:: \text{mse}(\hat{Y})=\mathbb{E}_Y[\tilde{Y}^2]=\mathbb{E}_Y[(\hat{Y}-Y)^2]=\mathbb{V}_Y(\hat{Y}-Y)+\left(\mathbb{E}_Y[\hat{Y}-Y]\right)^2=\mathbb{V}_Y(\hat{Y})+\mathbb{V}_Y(Y)+\left(\mathbb{E}_Y[\hat{Y}-y]\right)^2=\text{se}^2(\hat{Y})+\text{bias}^2(\hat{Y})+\mathbb{V}_Y(Y)
-	* If the unknown :math:`Y` is some constant :math:`y` instead of a rv, then :math:`\mathbb{V}_Y(Y)=0` and we have 
-
-		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{V}_Y(\hat{Y})=\text{se}^2
-	* In that case
-
-		.. math:: \text{mse}(\hat{Y})=\text{se}^2(\hat{Y})+\text{bias}^2(\hat{Y})
-
 Bayes Estimator
 ----------------------------------------------------------------------------------
 .. note::
