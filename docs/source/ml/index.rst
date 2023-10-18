@@ -3,6 +3,6 @@ Statistical Machine Learning
 #######################################################################
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
 
    basics
