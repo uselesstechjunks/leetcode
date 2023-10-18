@@ -49,16 +49,25 @@ Regression
 .. tip::
 	* We note that
 
-		.. math:: \text{mse}(\hat{Y})=\mathbb{E}_Y[(\hat{Y}-Y)^2]=\mathbb{E}_Y[\hat{Y}^2]-2\mathbb{E}_Y[\hat{Y}Y]+\mathbb{E}_Y[Y^2]
+		.. math:: \text{mse}(\hat{Y})=\mathbb{E}_Y[\tilde{Y}^2]=\mathbb{E}_Y[(\hat{Y}-Y)^2]=\mathbb{V}_Y(\hat{Y}-Y)+\left(\mathbb{E}_Y[\hat{Y}-Y]\right)^2=\mathbb{V}_Y(\hat{Y})+\mathbb{V}_Y(Y)+\left(\mathbb{E}_Y[\hat{Y}-y]\right)^2=\text{se}^2(\hat{Y})+\text{bias}^2(\hat{Y})+\mathbb{V}_Y(Y)
 	* If the unknown :math:`Y` is some constant :math:`y` instead of a rv, then :math:`\mathbb{V}_Y(Y)=0` and we have 
 
 		.. math:: \mathbb{V}_Y(\tilde{Y})=\mathbb{V}_Y(\hat{Y})=\text{se}^2
 	* In that case
 
-		.. math:: \text{mse}=\mathbb{E}_Y[\tilde{Y}^2]=\mathbb{E}_Y[(\hat{Y}-y)^2]=\mathbb{V}_Y(\hat{Y}-y)+\left(\mathbb{E}_Y[\hat{Y}-y]\right)^2=\mathbb{V}_Y(\hat{Y})+\left(\mathbb{E}_Y[\hat{Y}-y]\right)^2=\text{se}^2+\text{bias}^2
+		.. math:: \text{mse}(\hat{Y})=\text{se}^2(\hat{Y})+\text{bias}^2(\hat{Y})
 
 Bayes Estimator
 ----------------------------------------------------------------------------------
+.. note::
+	* This is the estimator which minimises mse.
+
+		.. math:: f^*=\underset{f}{\arg\min}\left(\mathbb{E}_Y[(f(X)-Y)^2]\right)=\underset{f}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(f(X)-Y)^2]|X\right]\right)
+	* [WHY??] This minimisation problem is equivalent to finding a pointwise minimum, such that, for each :math:`X=x`, 
+
+		.. math:: f(x)=\underset{x}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(f(x)-Y)^2]|X=x\right]\right)
+	* [WHY??] The solution is :math:`f(x)=\mathbb{E}_Y[Y|X=x]` which is the conditional expectation estimator or Bayes estimator.
+	* We note that this estimator is unbiased.
 
 Approximating The Bayes Estimator
 ----------------------------------------------------------------------------------
