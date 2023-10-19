@@ -6,3 +6,4 @@ Statistical Machine Learning
    :maxdepth: 3
 
    basics
+   linearreg
