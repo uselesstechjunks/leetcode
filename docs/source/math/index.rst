@@ -5,11 +5,11 @@ Mathematics
 .. toctree::
    :maxdepth: 1
 
-   math/prereq
-   math/analysis
-   math/linalg/index
-   math/calc3/index
-   math/prob/index
-   math/stat/index
-   math/conv
-   math/themes
+   prereq
+   analysis
+   linalg/index
+   calc3/index
+   prob/index
+   stat/index
+   conv
+   themes

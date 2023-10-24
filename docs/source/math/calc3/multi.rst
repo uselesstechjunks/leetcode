@@ -255,4 +255,5 @@ Useful Results
 	:math:`abx^2\to 2abx`, :math:`\mathbf{b}^\top\mathbf{X}^\top\mathbf{X}\mathbf{a}\to \mathbf{X}(\mathbf{a}\mathbf{b}^\top+\mathbf{b}\mathbf{a}^\top)`
 
 .. seealso::
-	Plethora of useful results: `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
+	* Plethora of useful results: `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
+	* `The Matrix Calculus You Need For Deep Learning <https://arxiv.org/abs/1802.01528>`_

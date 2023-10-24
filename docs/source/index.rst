@@ -19,8 +19,8 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   math
-   mltheory
+   math/index
+   ml/index
    rank
    dsalgo
    sysdes
