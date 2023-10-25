@@ -29,8 +29,30 @@ Optimisation
 	* In linear regression, we assume that true regression function is an affine transform of the data, :math:`f(X)=X\boldsymbol{\beta}+\beta_0` where :math:`\beta_0\in\mathbb{R}` and :math:`\boldsymbol{\beta}\in\mathbb{R}^d` are unknown constants which need to be estimated.
 	* For notational simplification, we introduce a dummy column :math:`\mathbf{x}_0=\mathbf{1}\in\mathbb{R}^N` and express the objective as 
 
-		.. math:: \sum_{i=1}^N(y_i-x_i^T\beta))^2=||\mathbf{y}-\mathbf{X}\boldsymbol{\beta}||^2=(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})
+		.. math:: R^2(\boldsymbol{\beta})=\sum_{i=1}^N(y_i-x_i^T\beta))^2=||\mathbf{y}-\mathbf{X}\boldsymbol{\beta}||^2=(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})
 	* In this formulation, :math:`\boldsymbol{\beta}\in\mathbb{R}^{d+1}`.
+
+.. tip::
+	* First derivative: :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=-2\mathbf{X}^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})`
+	* Second derivative: :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})=2\mathbf{X}^T\mathbf{X}`.
+	* If we assume that the data matrix :math:`\mathbf{X}` is full rank, then :math:`\mathbf{X}^T\mathbf{X}` is symmetric positive definite and therefore :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})> 0`.
+	* We can find the minima from setting :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\mathbf{0}`.
+	* The linear regresson coefficient is obtained from :math:`\hat{\boldsymbol{\beta}}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}`.
+
+.. seealso::
+	* The linear regression estimate for :math:`\mathbf{y}` is given by
+
+		.. math:: \hat{\mathbf{y}}=\mathbf{X}\hat{\boldsymbol{\beta}}=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
+
+Geometric Interpretation in terms of data
+---------------------------------------------------------------------------
+.. note::
+	* We observe from the optimality condition of the objective that
+
+		.. math:: \mathbf{X}^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})=\mathbf{0}
+	* This means the residual :math:`\mathbf{y}-\mathbf{X}\boldsymbol{\beta}` is in the nullspace of the transposed data matrix :math:`\mathbf{X}^T`.
+	* The estimate, :math:`\mathbf{X}\boldsymbol{\beta}`, on the other hand, is in the column space of :math:`\mathbf{X}`.
+	* Therefore, the estimate and residual are orthogonal and the estimate can be thought of as an orthogonal projection onto the column space spanned by the data matrix.
 
 Orthogonalisation for Mutltiple Regression
 ===========================================================================
