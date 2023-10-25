@@ -26,10 +26,11 @@ Linear Regression
 Optimisation
 ===========================================================================
 .. note::
-	* In linear regression, we assume that true regression function is an affine transform of the data, :math:`f(X)=X^T\beta+\beta_0` where :math:`\beta_0` and :math:`\beta` are unknown constants which need to be estimated.
+	* In linear regression, we assume that true regression function is an affine transform of the data, :math:`f(X)=X\boldsymbol{\beta}+\beta_0` where :math:`\beta_0\in\mathbb{R}` and :math:`\boldsymbol{\beta}\in\mathbb{R}^d` are unknown constants which need to be estimated.
 	* For notational simplification, we introduce a dummy column :math:`\mathbf{x}_0=\mathbf{1}\in\mathbb{R}^N` and express the objective as 
 
-		.. math:: \sum_{i=1}^N(y_i-x_i^T\beta))^2=||\mathbf{y}-\mathbf{X}\boldsymbol(\beta)||=(\mathbf{y}-\mathbf{X}\boldsymbol(\beta))^T(\mathbf{y}-\mathbf{X}\boldsymbol(\beta))
+		.. math:: \sum_{i=1}^N(y_i-x_i^T\beta))^2=||\mathbf{y}-\mathbf{X}\boldsymbol{\beta}||^2=(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})
+	* In this formulation, :math:`\boldsymbol{\beta}\in\mathbb{R}^{d+1}`.
 
 Orthogonalisation for Mutltiple Regression
 ===========================================================================
