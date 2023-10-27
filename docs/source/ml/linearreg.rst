@@ -27,7 +27,12 @@ Optimisation: Least Squares
 ===========================================================================
 .. note::
 	* In linear regression, we assume that true regression function is an affine transform of the data, :math:`f(X)=X\boldsymbol{\beta}+\beta_0` where :math:`\beta_0\in\mathbb{R}` and :math:`\boldsymbol{\beta}\in\mathbb{R}^d` are unknown constants which need to be estimated.
-	* For notational simplification, we introduce a dummy column :math:`\mathbf{x}_0=\mathbf{1}\in\mathbb{R}^N` and express the objective as 
+	* For notational simplification, we introduce a dummy column :math:`\mathbf{x}_0=\mathbf{1}\in\mathbb{R}^N` and define data matrix 
+
+		.. math:: \mathbf{X}=\begin{bmatrix}|&|&\cdots&|\\ \mathbf{x}_0 & \mathbf{x}_1 & \cdots & \mathbf{x}_d \\ |&|&\cdots&|\end{bmatrix},
+	* Each individual data point is represented by a row vector :math:`x^T\in\mathbb{R}^{d+1}` with 1 at the first dimension.
+	* With this, linear regression is expressed as a linear transform instead of affine, :math:`\mathbf{y}=\mathbf{X}\boldsymbol{\beta}`.
+	* We can express the objective as 
 
 		.. math:: R^2(\boldsymbol{\beta})=\sum_{i=1}^N(y_i-x_i^T\beta))^2=||\mathbf{y}-\mathbf{X}\boldsymbol{\beta}||^2=(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})
 	* In this formulation, :math:`\boldsymbol{\beta}\in\mathbb{R}^{d+1}`.
@@ -78,8 +83,17 @@ Gauss Markov Theorem
 
 Orthogonalisation for Mutltiple Regression
 ===========================================================================
+.. tip::
+	* For any two vectors, :math:`\mathbf{u}` and :math:`\mathbf{v}`, we can measure the projection of :math:`\mathbf{v}` onto the direction of :math:`\mathbf{u}` as 
+
+		.. math:: ||\mathbf{v}||\cos\theta=\frac{\langle\mathbf{u},\mathbf{v}\rangle}{||\mathbf{u}||^2}=\frac{\langle\mathbf{u},\mathbf{v}\rangle}{\langle\mathbf{u},\mathbf{u}\rangle}
+
 .. note::
-	* **Multiple Regression** is the case where :math:`d> 1`. For this, we can think of a formulation in an iterative fashion starting from the single variable case.
+	* **Multiple Regression** is the case where :math:`d> 1`. For this, we can think of a formulation in an iterative fashion starting from the single variable case.	
+	* For the univariate case, from the optimality condition, we have 
+
+		.. math:: \hat{\beta}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}=\frac{\sum_{i=1}^N x_i y_i}{\sum_{j=1}^N x_j x_j}=\frac{\langle\mathbf{x},\mathbf{y}\rangle}{\langle\mathbf{x},\mathbf{x}\rangle}
+	
 
 ***************************************************************************
 Subset Selection Methods
