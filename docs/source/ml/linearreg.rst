@@ -23,7 +23,7 @@ Linear Methods for Regression
 ***************************************************************************
 Linear Regression
 ***************************************************************************
-Optimisation
+Optimisation: Least Squares
 ===========================================================================
 .. note::
 	* In linear regression, we assume that true regression function is an affine transform of the data, :math:`f(X)=X\boldsymbol{\beta}+\beta_0` where :math:`\beta_0\in\mathbb{R}` and :math:`\boldsymbol{\beta}\in\mathbb{R}^d` are unknown constants which need to be estimated.
@@ -54,8 +54,20 @@ Geometric Interpretation in terms of data
 	* The estimate, :math:`\mathbf{X}\boldsymbol{\beta}`, on the other hand, is in the column space of :math:`\mathbf{X}`.
 	* Therefore, the estimate and residual are orthogonal and the estimate can be thought of as an orthogonal projection onto the column space spanned by the data matrix.
 
+Inference about Beta
+---------------------------------------------------------------------------
+.. note::
+	TODO: variance of the estimate, confidence intervals
+
+Gauss Markov Theorem
+---------------------------------------------------------------------------
+.. attention::
+	Of all competing methods, OLS method for estimating :math:`\boldsymbol{\beta}` has the least variance.
+
 Orthogonalisation for Mutltiple Regression
 ===========================================================================
+.. note::
+	* *Multiple Regression* is the case where :math:`d> 1`. For this, we can think of a formulation in an iterative fashion starting from the single variable case.
 
 ***************************************************************************
 Subset Selection Methods
