@@ -49,9 +49,10 @@ Geometric Interpretation
 In terms of covariates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* The equation :math:`\mathbf{y}=\beta_0+X\boldsymbol{\beta}` defines the equation of a plane in :math:`\mathbb{R}^d` in terms of the covariates :math:`(X_1,\cdots,X_d)` with :math:`\beta_0` as the intercept.
-	* When evaluated with the data, each estimate :math:`\hat{y}=\beta_0+x^T\boldsymbol{\beta}` is a point in :math:`\mathbb{R}^d`.
-	* The residual is measured as :math:`y-\hat{y}=y-\beta_0-x^T\boldsymbol{\beta}` and the residual vector is given as
+	* The equation :math:`\mathbf{y}=\beta_0+X\boldsymbol{\beta}` defines the equation of a plane in :math:`\mathbb{R}^{d+1}` (:math:`d` for covariates, 1 for :math:`y`) in terms of the covariates :math:`(X_1,\cdots,X_d)` with :math:`\beta_0` as the intercept along :math:`y`.
+	* When evaluated with the data, each estimate :math:`\hat{y}=\beta_0+x^T\boldsymbol{\beta}` defines a point on the plane :math:`(x,\hat{y})\in\mathbb{R}^{d+1}`.
+	* True value of :math:`y` also defines a point :math:`(x,y)\in\mathbb{R}^{d+1}` which is not necessarily on the plane.
+	* The residual is measured as :math:`y-\hat{y}=y-\beta_0-x^T\boldsymbol{\beta}` and the residual vector for the entirety of the data is given as
 
 		.. math:: \mathbf{y}-\hat{\mathbf{y}}=\mathbf{y}-\mathbf{X}\boldsymbol{\beta}
 
@@ -78,7 +79,7 @@ Gauss Markov Theorem
 Orthogonalisation for Mutltiple Regression
 ===========================================================================
 .. note::
-	* *Multiple Regression* is the case where :math:`d> 1`. For this, we can think of a formulation in an iterative fashion starting from the single variable case.
+	* **Multiple Regression** is the case where :math:`d> 1`. For this, we can think of a formulation in an iterative fashion starting from the single variable case.
 
 ***************************************************************************
 Subset Selection Methods
