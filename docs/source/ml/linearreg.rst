@@ -2,7 +2,7 @@
 Linear Methods for Regression
 ###########################################################################
 .. note::
-	* For a regresion problem, we assume that the true value of the target :math:`Y` has a normal distribution which
+	* For a regresion problem, we assume that the target rv :math:`Y` has a normal distribution which
 
 		* has a mean that can be modeled by a regression function :math:`f(X)`
 		* has a unknown variance :math:`\sigma^2`
@@ -12,7 +12,7 @@ Linear Methods for Regression
 		* :math:`Y\sim\mathcal{N}(f(X),\sigma^2)`.
 
 .. attention::
-	* We also assume that the observations are independent.
+	* We also assume that the observations :math:`Y=y_i` are independent.
 	* We compute the MLE estimate of :math:`\hat{f}` from the likelihood function.
 
 		.. math:: L(X;f)=-N\log(\sigma)-\frac{N}{2}\log(2\pi)-\frac{1}{2\sigma^2}\sum_{i=1}^N(y_i-f(x_i))^2
@@ -37,15 +37,26 @@ Optimisation: Least Squares
 	* Second derivative: :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})=2\mathbf{X}^T\mathbf{X}`.
 	* If we assume that the data matrix :math:`\mathbf{X}` is full rank, then :math:`\mathbf{X}^T\mathbf{X}` is symmetric positive definite and therefore :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})> 0`.
 	* We can find the minima from setting :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\mathbf{0}`.
-	* The linear regresson coefficient is obtained from :math:`\hat{\boldsymbol{\beta}}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}`.
+	* The estimate for the linear regresson coefficient is obtained from :math:`\hat{\boldsymbol{\beta}}_N=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}`.
 
 .. seealso::
 	* The linear regression estimate for :math:`\mathbf{y}` is given by
 
-		.. math:: \hat{\mathbf{y}}=\mathbf{X}\hat{\boldsymbol{\beta}}=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
+		.. math:: \hat{\mathbf{y}}=\mathbf{X}\hat{\boldsymbol{\beta}}_N=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
 
-Geometric Interpretation in terms of data
+Geometric Interpretation
 ---------------------------------------------------------------------------
+In terms of covariates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* The equation :math:`\mathbf{y}=\beta_0+X\boldsymbol{\beta}` defines the equation of a plane in :math:`\mathbb{R}^d` in terms of the covariates :math:`(X_1,\cdots,X_d)` with :math:`\beta_0` as the intercept.
+	* When evaluated with the data, each estimate :math:`\hat{y}=\beta_0+x^T\boldsymbol{\beta}` is a point in :math:`\mathbb{R}^d`.
+	* The residual is measured as :math:`y-\hat{y}=y-\beta_0-x^T\boldsymbol{\beta}` and the residual vector is given as
+
+		.. math:: \mathbf{y}-\hat{\mathbf{y}}=\mathbf{y}-\mathbf{X}\boldsymbol{\beta}
+
+In terms of data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* We observe from the optimality condition of the objective that
 
@@ -72,6 +83,7 @@ Orthogonalisation for Mutltiple Regression
 ***************************************************************************
 Subset Selection Methods
 ***************************************************************************
+TODO
 
 ***************************************************************************
 Shrinkage Methods
