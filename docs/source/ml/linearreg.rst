@@ -93,7 +93,12 @@ Orthogonalisation for Mutltiple Regression
 	* For the univariate case, from the optimality condition, we have 
 
 		.. math:: \hat{\beta}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}=\frac{\sum_{i=1}^N x_i y_i}{\sum_{j=1}^N x_j x_j}=\frac{\langle\mathbf{x},\mathbf{y}\rangle}{\langle\mathbf{x},\mathbf{x}\rangle}
-	
+	* Therefore, :math:`\hat{\beta}` measures the projection of the target :math:`\mathbf{y}` along the line of the feature vector :math:`\mathbf{x}`.
+	* The residual :math:`\mathbf{r}=\mathbf{y}-\hat{\beta}\mathbf{x}` is orthogonal to :math:`\mathbf{x}`.
+
+.. attention::
+	* We can start off with the first column vector from the data matrix, which is :math:`\mathbf{x}_0=\mathbf{1}`.
+	* We can compute :math:`\beta_0=\frac{\langle\mathbf{x}_0,\mathbf{y}\rangle}{\langle\mathbf{x}_0,\mathbf{x}_0\rangle}=\langle\mathbf{1},\mathbf{y}\rangle`
 
 ***************************************************************************
 Subset Selection Methods
