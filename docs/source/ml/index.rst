@@ -7,3 +7,4 @@ Statistical Machine Learning
 
    basics
    linearreg
+   linearcls
