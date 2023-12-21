@@ -32,3 +32,7 @@ Entropy and Mutual Information
 
 		* [Hint] Use the inequality :math:`\ln(\alpha)=\alpha-1` for :math:`\alpha>0`.
 	* As a special case of the above, :math:`H(X)\leq\lg(n)` and the equality holds when :math:`p_i=\frac{1}{n}` for all :math:`i`.
+
+
+.. seealso::
+	* Information Theory Notes from `Introduction To Renormalization <https://www.complexityexplorer.org/courses/67-introduction-to-renormalization/materials>`_
