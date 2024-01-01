@@ -38,6 +38,13 @@ Multinomial theorem:
 
 	.. math:: (x_1+x_2+\cdots+x_r)^n=\sum_{\sum_{i=1}^r k_i=n} {n\choose k_1\cdots k_r} x_1^{k_1}\cdots x_r^{k_r}
 
+Binomial theorem for fractional and negative powers: 
+===============================================================
+* For evaluating expressions where the power is fractional or negative, we can use the following infinite series expansion
+
+	.. math:: (1+\delta)^\alpha=1+\alpha\delta+\frac{\alpha(\alpha-1)}{2!}\delta^2+\frac{\alpha(\alpha-1)(\alpha-2)}{3!}\delta^3+\cdots
+* This series converges only when :math:`|\delta|< 1`
+
 ***********************************************
 Calculus
 ***********************************************
