@@ -6,5 +6,6 @@ Deep Learning
 	:maxdepth: 3
 
 	basics
+	perturb
 	rg
 	ntk
