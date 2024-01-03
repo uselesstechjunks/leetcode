@@ -21,6 +21,7 @@ Contents
 
    math/index
    ml/index
+   dl/index
    rank
    dsalgo
    sysdes
