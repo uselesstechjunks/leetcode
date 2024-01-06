@@ -18,7 +18,7 @@ Markov Process
 Gaussian Process
 ***************************************************************************************
 
-.. info::
+.. seealso::
 
   Learning Resources:
 
