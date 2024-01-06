@@ -17,3 +17,10 @@ Markov Process
 ***************************************************************************************
 Gaussian Process
 ***************************************************************************************
+
+.. info::
+
+  Learning Resources:
+
+  * `Lectures from Gaussian Process Summar School <https://gpss.cc/gpss23/program>`_
+  * `[Carl Edward Rasmussen and Christopher K. I. Williams] Gaussian Processes for Machine Learning <https://gaussianprocess.org/gpml/>`_
