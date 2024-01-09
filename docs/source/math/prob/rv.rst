@@ -697,6 +697,8 @@ TODO
 	* explain the shape of 2d normal density 
 	* independent case - circles in contours
 	* dependent case - parabolas in contours
+	* gaussians are closed under linear transform
+	* gaussians are closed under conditioning
 
 TODO
 
