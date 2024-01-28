@@ -62,6 +62,36 @@ Optimisation: Least Squares
 
 		.. math:: \hat{\mathbf{y}}=\mathbf{X}\hat{\boldsymbol{\beta}}_N=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
 
+Code Example
+---------------------------------------------------------------------------
+.. code-block:: python
+
+	import numpy as np
+	import matplotlib.pyplot as plot
+	import pandas as pd
+	import seaborn as seaborn
+
+	# create the function as linear with random normal noise
+	def define_function(d):
+		return np.random.randn(d)
+
+	def create_dataset(w, noise_sigma, N=1000):
+		d = w.shape[0]
+		X = [np.random.rand(d).tolist() for i in np.arange(N)] # N rows and d columns
+		return pd.DataFrame([(*x, w.dot(x) + np.random.randn() * noise_sigma) for x in X])
+
+	w = define_function(2)
+	df = create_dataset(w, noise_sigma=0.01, N=1000)
+	X = np.asarray(df.iloc[:,:2])
+	y = np.asarray(df.iloc[:,2])
+
+	X = np.asmatrix(X)
+	y = np.asmatrix(y).T
+
+	# least square estimator
+	w_hat = (np.linalg.inv(X.T * X)) * X.T * y
+	error = np.linalg.norm(w - w_hat)
+
 Geometric Interpretation
 ---------------------------------------------------------------------------
 In terms of covariates
