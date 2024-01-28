@@ -102,6 +102,45 @@ Second-order Methods
 ========================================================================================
 Newton's Method
 ----------------------------------------------------------------------------------------
+.. code-block:: python
+
+	def compute_loss(X, y, wt):
+		return np.linalg.norm(y-X*wt)
+
+	def compute_gradient(X, y, wt):
+		return -2*X.T*(y-X*wt)
+
+	def compute_hessian(X):
+		return 2*X.T*X
+
+	def newton_method(X, y, eps=1e-5, max_iter=5):
+		wt = np.matrix([[np.random.randn()], [np.random.randn()]])
+		loss = compute_loss(X, y, wt)
+		i = 0
+		print(f'iter={i}')
+		print(f'wt={wt}')
+		print(f'loss={loss}')
+		loss_values = []
+    
+		while loss > eps and i < max_iter:
+			print(f'iter={i}')
+			g = compute_gradient(X, y, wt)
+			H = compute_hessian(X)
+			wt = wt - np.linalg.inv(H)*g
+			loss = compute_loss(X, y, wt)
+			i = i+1
+			print(f'wt={wt}')
+			print(f'loss={loss}')
+			loss_values.append([loss])
+        
+		return wt, loss_values
+
+	w_newt, loss_values_newt = newton_method(X, y, eps=1e-5, max_iter=2)
+	plot.plot(np.arange(len(loss_values_newt)), loss_values_newt)
+	plot.show()
+
+Code example for Linear Regression
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ****************************************************************************************
 Constrained Optimization
