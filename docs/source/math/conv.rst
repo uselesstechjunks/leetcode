@@ -60,7 +60,7 @@ Code example for Linear Regression
 		return -2*X.T*(y-X*wt)
 
 	def gradient_descent(X, y, lr=0.0001, eps=1e-5, max_iter=100):
-		wt = np.matrix([[np.random.randn()], [np.random.randn()]])
+		wt = np.matrix(np.random.randn(X.shape[1],1))
 		loss = compute_loss(X, y, wt)
 		i = 0
 		print(f'iter={i}')
@@ -111,7 +111,7 @@ Newton's Method
 		return 2*X.T*X
 
 	def newton_method(X, y, eps=1e-5, max_iter=5):
-		wt = np.matrix([[np.random.randn()], [np.random.randn()]])
+		wt = np.matrix(np.random.randn(X.shape[1],1))
 		loss = compute_loss(X, y, wt)
 		i = 0
 		print(f'iter={i}')
