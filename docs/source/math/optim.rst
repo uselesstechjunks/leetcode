@@ -95,6 +95,11 @@ Code example for Linear Regression
 	plot.plot(np.arange(len(loss_values)), loss_values)
 	plot.show()
 
+Accelerated Gradient Descent
+----------------------------------------------------------------------------------------
+.. note::
+	`Nesterov Accelerated Gradient Descent <https://jlmelville.github.io/mize/nesterov.html>`_
+
 Second-order Methods
 ========================================================================================
 Newton's Method
