@@ -32,8 +32,8 @@ Gradient Descent
 	* We start with an abritrary starting point :math:`\mathbf{x}_t=\mathbf{x}_0\in\mathbb{R}^d`.
 	* We take a small step along the direction of the gradient as
 
-		.. math:: \mathbf{x}_{t+1}=\mathbf{x}_t-\varepsilon\mathbf{g}(\mathbf{x}_t)
-	* Here, the scalar :math:`\varepsilon>0` is a parameter that determines the stepsize.
+		.. math:: \mathbf{x}_{t+1}=\mathbf{x}_t-\eta\mathbf{g}(\mathbf{x}_t)
+	* Here, the scalar :math:`\eta>0` is a parameter that determines the stepsize.
 
 Code example for Linear Regression
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
