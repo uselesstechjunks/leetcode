@@ -106,7 +106,7 @@ Newton's Method
 
 		.. math:: 0=f(x_{t+1})=f(x_t)+g(x_t)(x_{t+1}-x_t)\implies x_{t+1}=x_t-\frac{f(x_t)}{g(x_t)}
 	* This can be used for minimizing a function :math:`f` as well by finding roots of :math:`\nabla_f(x)=0`.
-	* For a function :math:`f:mathbb{R}^d\mapsto\mathbb{R}`, the iteration rule becomes
+	* For a function :math:`f:\mathbb{R}^d\mapsto\mathbb{R}`, the iteration rule becomes
 
 		.. math:: \mathbf{0}=\mathbf{g}_{t+1}=\mathbf{g}_t+\mathbf{H}_t(\mathbf{x}_{t+1}-\mathbf{x}_t)\implies \mathbf{x}_{t+1}=\mathbf{x}_t-\mathbf{H}_t^{-1}\mathbf{g}_t
 	* It approximates the functional locally (around :math:`\mathbf{x}_t`) by a quadratic function.
