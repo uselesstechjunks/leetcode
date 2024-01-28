@@ -36,7 +36,7 @@ Gradient Descent
 	* Here, the scalar math:`\varepsilon>0` is a parameter that determines the stepsize.
 	* We evaluate the function value at this new point as
 
-		.. math:: f(\mathbf{x}_{t+1})=f(\mathbf{x}_t)+\mathbf{g}(\mathbf{x}_t)^T(\mathbf{x}_{t+1}-\mathbf{x}_t)+\frac{1}{2!}(\mathbf{x}_{t+1}-\mathbf{x}_t)^T\mathbf{H}(\mathbf{x}_t)(\mathbf{x}_{t+1}-\mathbf{x}_t)\cdots=f(\mathbf{x}_t)-\varepsilon\mathbf{g}(\mathbf{x}_t)^T\mathbf{g}(\mathbf{x}_t)+\frac{1}{2!}\varepsilon^2\mathbf{g}(\mathbf{x}_t)^T\mathbf{H}(\mathbf{x}_t)\mathbf{g}+\cdots
+		.. math:: f(\mathbf{x}_{t+1})=f(\mathbf{x}_t)+\mathbf{g}(\mathbf{x}_t)^T(\mathbf{x}_{t+1}-\mathbf{x}_t)+\frac{1}{2!}(\mathbf{x}_{t+1}-\mathbf{x}_t)^T\mathbf{H}(\mathbf{x}_t)(\mathbf{x}_{t+1}-\mathbf{x}_t)\cdots=f(\mathbf{x}_t)-\varepsilon\mathbf{g}(\mathbf{x}_t)^T\mathbf{g}(\mathbf{x}_t)+\frac{1}{2!}\varepsilon^2\mathbf{g}(\mathbf{x}_t)^T\mathbf{H}(\mathbf{x}_t)\mathbf{g}(\mathbf{x}_t)+\cdots
 
 Second-order Methods
 ========================================================================================
