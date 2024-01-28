@@ -5,11 +5,11 @@ Convex Optimisation
 	* The functions we're dealing with are of the form :math:`f(\mathbf{x}):\mathbb{R}^d\mapsto\mathbb{R}`
 	* Taylor expansion of the function around a fixed point :math:`\mathbf{x}_0\in\mathbb{R}^d` if the function is infinitely differentiable
 
-		.. math:: f(\mathbf{x})=f(\mathbf{x}_0)+\langle(\nabla_\mathbf{x}f|_{\mathbf{x}=\mathbf{x}_0}), (\mathbf{x}-\mathbf{x}_0)\rangle+(\mathbf{x}-\mathbf{x}_0)^T(\nabla^2_\mathbf{x}f|_{\mathbf{x}=\mathbf{x}_0})(\mathbf{x}-\mathbf{x}_0)+\cdots
-	* We use the notation :math:`\mathbf{g}:\mathbb{R}^d\mapsto\mathbb{R}^d:=\nabla_\mathbf{x}f` for the gradient and :math:`\mathbf{H}:\mathbb{R}^d\mapsto\mathbb{R}^d:=\nabla_\mathbf{x}f` for the Hessian.
+		.. math:: f(\mathbf{x})=f(\mathbf{x}_0)+\langle\nabla_f(\mathbf{x}_0), (\mathbf{x}-\mathbf{x}_0)\rangle+\frac{1}{2!}(\mathbf{x}-\mathbf{x}_0)^T\nabla^2_f(\mathbf{x}_0)(\mathbf{x}-\mathbf{x}_0)+\cdots
+	* We use the notation :math:`\mathbf{g}_{\mathbf{x}_0}:=\nabla_f(\mathbf{x}_0)\in\mathbb{R}^d` for the gradient vector evaluated at :math:`\mathbf{x}_0` and :math:`\mathbf{H}_{\mathbf{x}_0}:=\nabla^2_f(\mathbf{x}_0)\in:\mathbb{R}^{d\times d}` for the Hessian matrix evaluated at :math:`\mathbf{x}_0`.
 	* The Taylor expansion is then written as
 
-		.. math:: f(\mathbf{x})=f(\mathbf{x}_0)+\mathbf{g}(\mathbf{x}_0)^T(\mathbf{x}-\mathbf{x}_0)+(\mathbf{x}-\mathbf{x}_0)^T\mathbf{H}(\mathbf{x}_0)(\mathbf{x}-\mathbf{x}_0)+\cdots
+		.. math:: f(\mathbf{x})=f(\mathbf{x}_0)+\mathbf{g}_{\mathbf{x}_0}^T(\mathbf{x}-\mathbf{x}_0)+\frac{1}{2!}(\mathbf{x}-\mathbf{x}_0)^T\mathbf{H}_{\mathbf{x}_0}(\mathbf{x}-\mathbf{x}_0)+\cdots
 
 ****************************************************************************************
 Unconstrained Optimization
@@ -23,7 +23,7 @@ First-order Methods
 	* First-order methods use the first-order Taylor's approximation
 	* It is assumed that the function :math:`f(\mathbf{x})` behaves locally linear around a point :math:`\mathbf{x}\in\mathbb{R}^d` and therefore can be approximated by
 
-		.. math:: f(\mathbf{x})\approx f(\mathbf{x}_0)+\mathbf{g}(\mathbf{x}_0)^T(\mathbf{x}-\mathbf{x}_0)
+		.. math:: f(\mathbf{x})\approx f(\mathbf{x}_0)+\mathbf{g}_{\mathbf{x}_0}^T(\mathbf{x}-\mathbf{x}_0)
 
 Gradient Descent
 ----------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ Gradient Descent
 	* We start with an abritrary starting point :math:`\mathbf{x}_t=\mathbf{x}_0\in\mathbb{R}^d`.
 	* We take a small step along the direction of the gradient as
 
-		.. math:: \mathbf{x}_{t+1}=\mathbf{x}_t-\eta\mathbf{g}(\mathbf{x}_t)
+		.. math:: \mathbf{x}_{t+1}=\mathbf{x}_t-\eta\mathbf{g}_{\mathbf{x}_t}
 	* Here, the scalar :math:`\eta>0` is a parameter that determines the stepsize.
 
 Code example for Linear Regression
@@ -99,6 +99,24 @@ Second-order Methods
 ========================================================================================
 Newton's Method
 ----------------------------------------------------------------------------------------
+.. note::
+	* Originally developed for finding roots of equations :math:`f(x)=0`.
+	* We start with an abritrary starting point :math:`x_t=x_0\in\mathbb{R}`.
+	* We compute the gradient and obtain the point where the tangent line of :math:`f(x)` at :math:`x_t` equals 0. We use this point as the next iteration.
+
+		.. math:: 0=f(x_{t+1})=f(x_t)+g(x_t)(x_{t+1}-x_t)\implies x_{t+1}=x_t-\frac{f(x_t)}{g(x_t)}
+	* This can be used for minimizing a function :math:`f` as well by finding roots of :math:`\nabla_f(x)=0`.
+	* For a function :math:`f:mathbb{R}^d\mapsto\mathbb{R}`, the iteration rule becomes
+
+		.. math:: \mathbf{0}=\mathbf{g}_{\mathbf{x}_{t+1}}=\mathbf{g}_{\mathbf{x}_t}+\mathbf{H}_{\mathbf{x}_t}(\mathbf{x}_{t+1}-\mathbf{x}_t)\implies \mathbf{x}_{t+1}=\mathbf{x}_t-\mathbf{H}_{\mathbf{x}_t}^{-1}\mathbf{g}_{\mathbf{x}_t}
+
+
+Code example for Linear Regression
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+	* For Linear Regression, since the function is quadratic in its parameter, Newton's method finds the minima in exactly 1 step.
+	* TODO: prove why?
+
 .. code-block:: python
 
 	def compute_loss(X, y, wt):
@@ -135,9 +153,6 @@ Newton's Method
 	w_newt, loss_values_newt = newton_method(X, y, eps=1e-5, max_iter=2)
 	plot.plot(np.arange(len(loss_values_newt)), loss_values_newt)
 	plot.show()
-
-Code example for Linear Regression
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ****************************************************************************************
 Constrained Optimization
