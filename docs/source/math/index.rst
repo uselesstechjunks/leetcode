@@ -11,5 +11,5 @@ Mathematics
    calc3/index
    prob/index
    stat/index
-   conv
+   optim
    themes

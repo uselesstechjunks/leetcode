@@ -39,10 +39,20 @@ Optimisation: Least Squares
 
 		.. math:: R^2(\boldsymbol{\beta})=\sum_{i=1}^N(y_i-x_i^T\beta))^2=||\mathbf{y}-\mathbf{X}\boldsymbol{\beta}||^2=(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})
 	* In this formulation, :math:`\boldsymbol{\beta}\in\mathbb{R}^{d+1}`.
+	* We note that 
+
+		.. math:: R^2(\boldsymbol{\beta}):\mathbb{R}^{d+1}\mapsto\mathbb{R}=\mathbf{y}^T\mathbf{y}-\left(\mathbf{X}\boldsymbol{\beta}\right)^T\mathbf{y}-\mathbf{y}^T\mathbf{X}\boldsymbol{\beta}+\left(\mathbf{X}\boldsymbol{\beta}\right)^T\mathbf{X}\boldsymbol{\beta}
+	* Here :math:`\mathbf{y}^T\mathbf{X}\boldsymbol{\beta}=\langle\mathbf{y},\mathbf{X}\boldsymbol{\beta}\rangle=\langle\mathbf{X}\boldsymbol{\beta},\mathbf{y}\rangle=\left(\mathbf{X}\boldsymbol{\beta}\right)^T\mathbf{y}=\boldsymbol{\beta}^T\mathbf{X}^T\mathbf{y}` and the above simplifies as
+
+		.. math:: R^2(\boldsymbol{\beta})=\mathbf{y}^T\mathbf{y}-2\boldsymbol{\beta}^T\mathbf{X}^T\mathbf{y}+\boldsymbol{\beta}^T\left(\mathbf{X}^T\mathbf{X}\right)\boldsymbol{\beta}
 
 .. tip::
-	* First derivative: :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=-2\mathbf{X}^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})`
-	* Second derivative: :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})=2\mathbf{X}^T\mathbf{X}`.
+	* First derivative: :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\nabla_{\boldsymbol{\beta}}R^2:\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}`
+
+		.. math:: -2\mathbf{X}^T\mathbf{y}+\left(\mathbf{X}^T\mathbf{X}+(\mathbf{X}^T\mathbf{X})^T\right)\boldsymbol{\beta}=-2\mathbf{X}^T\mathbf{y}+2\mathbf{X}^T\mathbf{X}\boldsymbol{\beta}=-2\mathbf{X}^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})
+	* Second derivative: :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})=\mathbf{H}_{\boldsymbol{\beta}}(R^2):\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}\times\mathbb{R}^{d+1}`
+
+		.. math:: 2(\mathbf{X}^T\mathbf{X})^T=2\mathbf{X}^T\mathbf{X}
 	* If we assume that the data matrix :math:`\mathbf{X}` is full rank, then :math:`\mathbf{X}^T\mathbf{X}` is symmetric positive definite and therefore :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})> 0`.
 	* We can find the minima from setting :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\mathbf{0}`.
 	* The estimate for the linear regresson coefficient is obtained from :math:`\hat{\boldsymbol{\beta}}_N=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}`.
@@ -51,6 +61,36 @@ Optimisation: Least Squares
 	* The linear regression estimate for :math:`\mathbf{y}` is given by
 
 		.. math:: \hat{\mathbf{y}}=\mathbf{X}\hat{\boldsymbol{\beta}}_N=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
+
+Code Example
+---------------------------------------------------------------------------
+.. code-block:: python
+
+	import numpy as np
+	import matplotlib.pyplot as plot
+	import pandas as pd
+	import seaborn as seaborn
+
+	# create the function as linear with random normal noise
+	def define_function(d):
+		return np.random.randn(d)
+
+	def create_dataset(w, noise_sigma, N=1000):
+		d = w.shape[0]
+		X = [np.random.rand(d).tolist() for i in np.arange(N)] # N rows and d columns
+		return pd.DataFrame([(*x, w.dot(x) + np.random.randn() * noise_sigma) for x in X])
+
+	w = define_function(2)
+	df = create_dataset(w, noise_sigma=0.01, N=1000)
+	X = np.asarray(df.iloc[:,:2])
+	y = np.asarray(df.iloc[:,2])
+
+	X = np.asmatrix(X)
+	y = np.asmatrix(y).T
+
+	# least square estimator
+	w_hat = (np.linalg.inv(X.T * X)) * X.T * y
+	error = np.linalg.norm(w - w_hat)
 
 Geometric Interpretation
 ---------------------------------------------------------------------------
