@@ -47,7 +47,7 @@ Optimisation: Least Squares
 		.. math:: R^2(\boldsymbol{\beta})=\mathbf{y}^T\mathbf{y}-2\boldsymbol{\beta}^T\mathbf{X}^T\mathbf{y}-\boldsymbol{\beta}^T\left(\mathbf{X}^T\mathbf{X}\right)\boldsymbol{\beta}
 
 .. tip::
-	* First derivative: :math:`\grad_{\boldsymbol{\beta}}R^2:\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}=-2\mathbf{X}^T\mathbf{y}-\left(\mathbf{X}^T\mathbf{X}+(\mathbf{X}^T\mathbf{X})^T\right)\boldsymbol{\beta}=-2\mathbf{X}^T\mathbf{y}-2\mathbf{X}^T\mathbf{X}\boldsymbol{\beta}`
+	* First derivative: :math:`\nabla_{\boldsymbol{\beta}}R^2:\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}=-2\mathbf{X}^T\mathbf{y}-\left(\mathbf{X}^T\mathbf{X}+(\mathbf{X}^T\mathbf{X})^T\right)\boldsymbol{\beta}=-2\mathbf{X}^T\mathbf{y}-2\mathbf{X}^T\mathbf{X}\boldsymbol{\beta}`
 	* Second derivative: :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})=2\mathbf{X}^T\mathbf{X}`.
 	* If we assume that the data matrix :math:`\mathbf{X}` is full rank, then :math:`\mathbf{X}^T\mathbf{X}` is symmetric positive definite and therefore :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})> 0`.
 	* We can find the minima from setting :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\mathbf{0}`.
