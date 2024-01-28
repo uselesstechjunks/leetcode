@@ -102,7 +102,8 @@ Newton's Method
 .. note::
 	* Originally developed for finding roots of equations :math:`f(x)=0`.
 	* We start with an abritrary starting point :math:`x_t=x_0\in\mathbb{R}`.
-	* We compute the gradient and obtain the point where the tangent line of :math:`f(x)` at :math:`x_t` equals 0. We use this point as the next iteration.
+	* We compute the gradient and obtain the point where the tangent line of :math:`f` at :math:`x_t` equals 0. 
+	* We use this point as the next iteration.
 
 		.. math:: 0=f(x_{t+1})=f(x_t)+g(x_t)(x_{t+1}-x_t)\implies x_{t+1}=x_t-\frac{f(x_t)}{g(x_t)}
 	* This can be used for minimizing a function :math:`f` as well by finding roots of :math:`\nabla_f(x)=0`.
