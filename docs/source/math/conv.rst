@@ -38,6 +38,66 @@ Gradient Descent
 
 		.. math:: f(\mathbf{x}_{t+1})=f(\mathbf{x}_t)+\mathbf{g}(\mathbf{x}_t)^T(\mathbf{x}_{t+1}-\mathbf{x}_t)+\frac{1}{2!}(\mathbf{x}_{t+1}-\mathbf{x}_t)^T\mathbf{H}(\mathbf{x}_t)(\mathbf{x}_{t+1}-\mathbf{x}_t)\cdots=f(\mathbf{x}_t)-\varepsilon\mathbf{g}(\mathbf{x}_t)^T\mathbf{g}(\mathbf{x}_t)+\frac{1}{2!}\varepsilon^2\mathbf{g}(\mathbf{x}_t)^T\mathbf{H}(\mathbf{x}_t)\mathbf{g}(\mathbf{x}_t)+\cdots
 
+Code example for Linear Regression
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. code-block:: python
+
+	import numpy as np
+	import matplotlib.pyplot as plot
+	import pandas as pd
+	import seaborn as seaborn
+	
+	# create the function as linear with random normal noise
+	def define_function(d):
+		return np.random.randn(d)
+
+	def create_dataset(w, noise_sigma, N=1000):
+		d = w.shape[0]
+		X = [np.random.rand(d).tolist() for i in np.arange(N)] # N rows and d columns
+		return pd.DataFrame([(*x, w.dot(x) + np.random.randn() * noise_sigma) for x in X])
+
+	def compute_loss(X, y, wt):
+		return np.linalg.norm(y-X*wt)
+
+	def compute_gradient(X, y, wt):
+		return -2*X.T*(y-X*wt)
+
+	def gradient_descent(X, y, lr=0.0001, eps=1e-5, max_iter=100):
+		wt = np.matrix([[np.random.randn()], [np.random.randn()]])
+		loss = compute_loss(X, y, wt)
+		i = 0
+		print(f'iter={i}')
+		print(f'wt={wt}')
+		print(f'loss={loss}')
+		loss_values = []
+    
+		while loss > eps and i < max_iter:
+			print(f'iter={i}')
+			g = compute_gradient(X, y, wt)
+			wt = wt - lr*g
+			loss = compute_loss(X, y, wt)
+			i = i+1
+			print(f'wt={wt}')
+			print(f'loss={loss}')
+			loss_values.append([loss])
+        
+		return wt, loss_values
+
+	w = define_function(2)
+	df = create_dataset(w, noise_sigma=0.01, N=1000)
+	X = np.asarray(df.iloc[:,:2])
+	y = np.asarray(df.iloc[:,2])
+
+	# direct estimator from least square
+	w_hat = (np.linalg.inv(X.T * X)) * X.T * y
+
+	X = np.asmatrix(X)
+	y = np.asmatrix(y).T
+	w_gd, loss_values = gradient_descent(X, y, lr=0.001, eps=1e-5, max_iter=50)
+
+	plot.plot(np.arange(len(loss_values)), loss_values)
+	plot.show()
+
 Second-order Methods
 ========================================================================================
 Newton's Method
