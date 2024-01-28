@@ -6,10 +6,10 @@ Convex Optimisation
 	* Taylor expansion of the function around a fixed point :math:`\mathbf{x}_0\in\mathbb{R}^d` if the function is infinitely differentiable
 
 		.. math:: f(\mathbf{x})=f(\mathbf{x}_0)+\langle\nabla_f(\mathbf{x}_0), (\mathbf{x}-\mathbf{x}_0)\rangle+\frac{1}{2!}(\mathbf{x}-\mathbf{x}_0)^T\nabla^2_f(\mathbf{x}_0)(\mathbf{x}-\mathbf{x}_0)+\cdots
-	* We use the notation :math:`\mathbf{g}_{\mathbf{x}_0}:=\nabla_f(\mathbf{x}_0)\in\mathbb{R}^d` for the gradient vector evaluated at :math:`\mathbf{x}_0` and :math:`\mathbf{H}_{\mathbf{x}_0}:=\nabla^2_f(\mathbf{x}_0)\in:\mathbb{R}^{d\times d}` for the Hessian matrix evaluated at :math:`\mathbf{x}_0`.
+	* We use the notation :math:`\mathbf{g}_0:=\nabla_f(\mathbf{x}_0)\in\mathbb{R}^d` for the gradient vector evaluated at :math:`\mathbf{x}_0` and :math:`\mathbf{H}_0:=\nabla^2_f(\mathbf{x}_0)\in:\mathbb{R}^{d\times d}` for the Hessian matrix evaluated at :math:`\mathbf{x}_0`.
 	* The Taylor expansion is then written as
 
-		.. math:: f(\mathbf{x})=f(\mathbf{x}_0)+\mathbf{g}_{\mathbf{x}_0}^T(\mathbf{x}-\mathbf{x}_0)+\frac{1}{2!}(\mathbf{x}-\mathbf{x}_0)^T\mathbf{H}_{\mathbf{x}_0}(\mathbf{x}-\mathbf{x}_0)+\cdots
+		.. math:: f(\mathbf{x})=f(\mathbf{x}_0)+\mathbf{g}_0^T(\mathbf{x}-\mathbf{x}_0)+\frac{1}{2!}(\mathbf{x}-\mathbf{x}_0)^T\mathbf{H}_0(\mathbf{x}-\mathbf{x}_0)+\cdots
 
 ****************************************************************************************
 Unconstrained Optimization
@@ -23,7 +23,7 @@ First-order Methods
 	* First-order methods use the first-order Taylor's approximation
 	* It is assumed that the function :math:`f(\mathbf{x})` behaves locally linear around a point :math:`\mathbf{x}\in\mathbb{R}^d` and therefore can be approximated by
 
-		.. math:: f(\mathbf{x})\approx f(\mathbf{x}_0)+\mathbf{g}_{\mathbf{x}_0}^T(\mathbf{x}-\mathbf{x}_0)
+		.. math:: f(\mathbf{x})\approx f(\mathbf{x}_0)+\mathbf{g}_0^T(\mathbf{x}-\mathbf{x}_0)
 
 Gradient Descent
 ----------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ Gradient Descent
 	* We start with an abritrary starting point :math:`\mathbf{x}_t=\mathbf{x}_0\in\mathbb{R}^d`.
 	* We take a small step along the direction of the gradient as
 
-		.. math:: \mathbf{x}_{t+1}=\mathbf{x}_t-\eta\mathbf{g}_{\mathbf{x}_t}
+		.. math:: \mathbf{x}_{t+1}=\mathbf{x}_t-\eta\mathbf{g}_t
 	* Here, the scalar :math:`\eta>0` is a parameter that determines the stepsize.
 
 Code example for Linear Regression
@@ -108,8 +108,15 @@ Newton's Method
 	* This can be used for minimizing a function :math:`f` as well by finding roots of :math:`\nabla_f(x)=0`.
 	* For a function :math:`f:mathbb{R}^d\mapsto\mathbb{R}`, the iteration rule becomes
 
-		.. math:: \mathbf{0}=\mathbf{g}_{\mathbf{x}_{t+1}}=\mathbf{g}_{\mathbf{x}_t}+\mathbf{H}_{\mathbf{x}_t}(\mathbf{x}_{t+1}-\mathbf{x}_t)\implies \mathbf{x}_{t+1}=\mathbf{x}_t-\mathbf{H}_{\mathbf{x}_t}^{-1}\mathbf{g}_{\mathbf{x}_t}
+		.. math:: \mathbf{0}=\mathbf{g}_{t+1}=\mathbf{g}_t+\mathbf{H}_t(\mathbf{x}_{t+1}-\mathbf{x}_t)\implies \mathbf{x}_{t+1}=\mathbf{x}_t-\mathbf{H}_t^{-1}\mathbf{g}_t
+	* It approximates the functional locally (around :math:`\mathbf{x}_t`) by a quadratic function.
 
+.. tips::
+	* Here the learning rate is not required. The rate is implied automatically by the geometric behaviour of :math:`\mathbf{H}_t` at every :math:`\mathbf{x}_t`.
+	* If :math:`\mathbf{H}_t` is symmetric positive definite, the inverse always exists and we can investigate the eigenvalues to find out the step-size across each dimension
+
+		.. math:: \mathbf{H}_t=\mathbf{Q}^T\boldsymbol{\Lambda}\mathbf{Q}\implies \mathbf{x}_{t+1}=\mathbf{x}_t-\mathbf{Q}^T\boldsymbol{\Lambda}^{-1}\mathbf{Q}\mathbf{g}_t
+	* If the original function is quadratic, this method finds the minima in 1 step (TODO: prove)
 
 Code example for Linear Regression
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
