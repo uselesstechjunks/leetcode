@@ -12,7 +12,7 @@ Convex Optimisation
 		.. math:: f(\mathbf{x})=f(\mathbf{x}_0)+\mathbf{g}_0^T(\mathbf{x}-\mathbf{x}_0)+\frac{1}{2!}(\mathbf{x}-\mathbf{x}_0)^T\mathbf{H}_0(\mathbf{x}-\mathbf{x}_0)+\cdots
 
 ****************************************************************************************
-Unconstrained Optimization
+Unconstrained Optimisation
 ****************************************************************************************
 .. note::
 	* We're interested in finding the minimum :math:`\min_{\mathbf{x}\in\mathbb{R}^d}f(\mathbf{x})`.
@@ -105,11 +105,11 @@ Newton's Method
 	* We compute the gradient and obtain the point where the tangent line of :math:`f` at :math:`x_t` equals 0. 
 	* We use this point as the next iteration.
 
-		.. math:: 0=f(x_{t+1})=f(x_t)+g(x_t)(x_{t+1}-x_t)\implies x_{t+1}=x_t-\frac{f(x_t)}{g(x_t)}
+		.. math:: 0=f(x_t)+g(x_t)(x_{t+1}-x_t)\implies x_{t+1}=x_t-\frac{f(x_t)}{g(x_t)}
 	* This can be used for minimizing a function :math:`f` as well by finding roots of :math:`\nabla_f(x)=0`.
 	* For a function :math:`f:\mathbb{R}^d\mapsto\mathbb{R}`, the iteration rule becomes
 
-		.. math:: \mathbf{0}=\mathbf{g}_{t+1}=\mathbf{g}_t+\mathbf{H}_t(\mathbf{x}_{t+1}-\mathbf{x}_t)\implies \mathbf{x}_{t+1}=\mathbf{x}_t-\mathbf{H}_t^{-1}\mathbf{g}_t
+		.. math:: \mathbf{0}=\mathbf{g}_t+\mathbf{H}_t(\mathbf{x}_{t+1}-\mathbf{x}_t)\implies \mathbf{x}_{t+1}=\mathbf{x}_t-\mathbf{H}_t^{-1}\mathbf{g}_t
 	* It approximates the functional locally (around :math:`\mathbf{x}_t`) by a quadratic function.
 
 .. tip::
@@ -163,7 +163,7 @@ Code example for Linear Regression
 	plot.show()
 
 ****************************************************************************************
-Constrained Optimization
+Constrained Optimisation
 ****************************************************************************************
 .. note::
 	* We're interested in finding the minimum :math:`\min_{\mathbf{x}\in S\subseteq \mathbb{R}^d}f(\mathbf{x})`.
