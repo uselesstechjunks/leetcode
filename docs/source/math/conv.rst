@@ -112,7 +112,7 @@ Newton's Method
 		.. math:: \mathbf{0}=\mathbf{g}_{t+1}=\mathbf{g}_t+\mathbf{H}_t(\mathbf{x}_{t+1}-\mathbf{x}_t)\implies \mathbf{x}_{t+1}=\mathbf{x}_t-\mathbf{H}_t^{-1}\mathbf{g}_t
 	* It approximates the functional locally (around :math:`\mathbf{x}_t`) by a quadratic function.
 
-.. tips::
+.. tip::
 	* Here the learning rate is not required. The rate is implied automatically by the geometric behaviour of :math:`\mathbf{H}_t` at every :math:`\mathbf{x}_t`.
 	* If :math:`\mathbf{H}_t` is symmetric positive definite, the inverse always exists and we can investigate the eigenvalues to find out the step-size across each dimension
 
