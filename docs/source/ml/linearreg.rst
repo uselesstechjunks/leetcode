@@ -53,14 +53,21 @@ Optimisation: Least Squares
 	* Second derivative: :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})=\mathbf{H}_{R^2}(\boldsymbol{\beta}):\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}\times\mathbb{R}^{d+1}`
 
 		.. math:: 2(\mathbf{X}^T\mathbf{X})^T=2\mathbf{X}^T\mathbf{X}
-	* If we assume that the data matrix :math:`\mathbf{X}` is full rank, then :math:`\mathbf{X}^T\mathbf{X}` is symmetric positive definite and therefore :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})> 0`.
-	* We can find the minima from setting :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\mathbf{0}`.
-	* The estimate for the linear regresson coefficient is obtained from :math:`\hat{\boldsymbol{\beta}}_N=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}`.
+	
+		* The second derivative is entirely determined by the data and is free of the parameter since the objective is quadratic in :math:`\boldsymbol{\beta}`.
+	* If the data matrix :math:`\mathbf{X}` is full rank, then :math:`\mathbf{X}^T\mathbf{X}` is symmetric positive definite (and :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})> 0`).
+	
+		* This means, the loss surface is convex and has a unique global minima.
+	* We can find the minima in a closed form by setting :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\mathbf{0}`.
+	
+		* The estimate for the linear regresson coefficient is obtained from :math:`\hat{\boldsymbol{\beta}}_N=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}`.
 
 .. seealso::
 	* The linear regression estimate for :math:`\mathbf{y}` is given by
 
 		.. math:: \hat{\mathbf{y}}=\mathbf{X}\hat{\boldsymbol{\beta}}_N=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
+
+		* The quantity :math:`\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T` is called a **hat-matrix** (puts the hat on :math:`\mathbf{y}`).
 
 Code Example
 ---------------------------------------------------------------------------
