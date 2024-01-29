@@ -151,6 +151,7 @@ Orthogonalisation for Mutltiple Regression
 .. attention::
 	* We can start off with the first column vector from the data matrix, which is :math:`\mathbf{x}_0=\mathbf{1}`.
 	* We can compute :math:`\beta_0=\frac{\langle\mathbf{x}_0,\mathbf{y}\rangle}{\langle\mathbf{x}_0,\mathbf{x}_0\rangle}=\langle\mathbf{1},\mathbf{y}\rangle`
+	* This iterative method avoids the inverse computation in the full matrix expression.
 
 ***************************************************************************
 Subset Selection Methods
