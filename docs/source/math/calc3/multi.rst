@@ -242,8 +242,8 @@ Matrix Calculus: Tricks and Useful Results
 .. note::
 	* We can have a 
 
-		* dependent quantity in scalar (:math:`y`), vector (:math:`\mathbf{y}`) or matrix (:math:`mathbf{Y}`) form and an 
-		* independent variable in scalar (:math:`x`), vector (:math:`\mathbf{x}`) or matrix form (:math:`mathbf{X}`).
+		* dependent quantity in scalar (:math:`y`), vector (:math:`\mathbf{y}`) or matrix (:math:`\mathbf{Y}`) form and an 
+		* independent variable in scalar (:math:`x`), vector (:math:`\mathbf{x}`) or matrix form (:math:`\mathbf{X}`).
 	* We can think about the derivatives in this case as the limiting ratio of the changes in components for the dependent variable in response to a tiny nudge in the components of the independent one.
 
 .. csv-table:: Table for derivatives
@@ -254,7 +254,7 @@ Matrix Calculus: Tricks and Useful Results
 	:math:`\frac{\partial y}{\mathop{\partial \mathbf{X}}}`, :math:`\frac{\partial \mathbf{y}}{\mathop{\partial \mathbf{X}}}`, :math:`\frac{\partial \mathbf{Y}}{\mathop{\partial \mathbf{X}}}`
 
 .. tip::
-	* In any case, we can stick to the numerator layout notation - where the number of rows would be the same as the number of rows in the numerator (or, the output dimension as we think of them as functions of the independent variables).
+	* In any case, we can stick to the `numerator layout notation <https://en.wikipedia.org/wiki/Matrix_calculus#Numerator-layout_notation>`_ - where the number of rows in the derivative would be the same as the number of rows in the numerator (or, the output dimension as we think of them as functions of the independent variables).
 	* We can take the differential operators in the transposed order of the denominator in each case.
 
 		* Let a function :math:`\mathbf{f}:\mathbb{R}^2\mapsto\mathbb{R}^3` be defined as
