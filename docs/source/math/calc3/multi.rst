@@ -268,7 +268,9 @@ We can think about the derivatives in this case as the limiting ratio of the cha
 
 			.. math:: \frac{\partial\mathbf{f}}{\mathop{\partial\mathbf{r}}}=\begin{bmatrix}\frac{\partial}{\mathop{\partial x}} & \frac{\partial}{\mathop{\partial y}}\end{bmatrix}\otimes \begin{bmatrix}x^2e^y\\ \log(x)\\ y-\cos(x)\end{bmatrix}=\begin{bmatrix}\frac{\partial}{\mathop{\partial x}}(x^2e^y) & \frac{\partial}{\mathop{\partial y}}(x^2e^y)\\ \frac{\partial}{\mathop{\partial x}}(\log(x)) & \frac{\partial}{\mathop{\partial y}}(\log(x))\\ \frac{\partial}{\mathop{\partial x}}(y-\cos(x)) & \frac{\partial}{\mathop{\partial y}}(y-\cos(x))\end{bmatrix}=\begin{bmatrix}2xe^y&x^2e^y\\ 1/x&0\\\sin(x)&1\end{bmatrix}
 
-.. csv-table:: Table for derivatives
+Useful Derivatives
+===========================================================
+.. csv-table:: Useful derivatives
 	:header: "Scalar derivative", "Vector derivative"
 	:align: center
 
