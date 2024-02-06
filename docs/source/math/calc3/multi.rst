@@ -252,7 +252,7 @@ We can think about the derivatives in this case as the limiting ratio of the cha
 	:math:`\frac{\partial y}{\mathop{\partial \mathbf{X}}}`, :math:`\frac{\partial \mathbf{y}}{\mathop{\partial \mathbf{X}}}`, :math:`\frac{\partial \mathbf{Y}}{\mathop{\partial \mathbf{X}}}`
 
 .. tip::
-	* In any case, we can stick to the numerator layout notation - where the number of rows would be the same as the number of rows in the numerator.
+	* In any case, we can stick to the numerator layout notation - where the number of rows would be the same as the number of rows in the numerator (or, the output dimension as we think of them as functions of the independent variables).
 	* We can take the differential operators in the transposed order of the denominator in each case.
 
 		* Let a function :math:`\mathbf{f}:\mathbb{R}^2\mapsto\mathbb{R}^3` be defined as
