@@ -12,9 +12,10 @@ Notation
 	* The data is associated with a random variable :math:`X` which might be a random vector for :math:`d> 1` 
 
 		.. math:: X=(X_1,\cdots,X_d)
-	* The target is associated with a random variable :math:`Y` which might also be a random vector
+	* [Regression] The target is associated with a continuous random variable :math:`Y\in\mathbb{R}`. It ight also be a random vector
 
 		.. math:: Y=(Y_1,\cdots,Y_K)
+	* [Classification] The target might also be associated with a discrete valued random variable :math:`G\in\mathcal{G}` with :math:`|\mathcal{G}|=K` for some :math:`K`.
 	* An observation for :math:`X=x_i\in\mathbb{R}^d` might be taken in the row-vector form, :math:`x_i^T\in\mathbb{R}_{1\times d}`.
 	* Single dimensional observations for target are usually written as :math:`Y=y_i\in\mathbb{R}`.
 
@@ -27,6 +28,31 @@ Notation
 **********************************************************************************
 Statistical Decision Theory
 **********************************************************************************
+.. tip::
+	* This puts the prediction task under a probabilistic paradigm.
+	* We assume that the input variables rv :math:`X` and the target are distributed per some **unknown joint distribution**
+
+		* :math:`X,Y\sim F_{X,Y}(x,y)` or :math:`X,G\sim F_{X,G}(x,g)`
+	* We wish to find a predictor as function of data, :math:`\hat{Y}(X)` or :math:`\hat{G}(X)`.
+	* We associate a **misprediction penalty** for making prediction error.
+
+		* :math:`L(Y,\hat{Y}(X))` or :math:`L(G,\hat{G}(X))`.
+	* The learning theory wishes to choose such predictors for which the expected prediction error (EPE) is minimised.
+
+		* :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))` or :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
+	* [TODO: check the conditioning variables in the expectation] This quantity can be conditioned on observed input variables
+
+		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_{Y|X}\left[\mathbb{E}_{Y}\left(L(Y,\hat{Y}(X))\right) |X\right]`
+		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))=\mathbb{E}_{G|X}\left[\mathbb{E}_{G}\left(L(G,\hat{G}(X))\right) |X\right]`
+	* This quantity is minimised pointwise (i.e. at each point :math:`X=x`).
+
+		* [Regression] :math:`\hat{Y}(x)=f(x)=\underset{f}{\arg\min}\left(\mathbb{E}_{Y|X}\left[\mathbb{E}_{Y}\left(L(Y,f(x))\right) |X=x\right]\right)`
+
+			* If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}\mathbb{E}_{Y}[Y|X=x]`
+		* [Classification] :math:`\hat{G}(x)=g(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}\left[\mathbb{E}_{G}\left(L(G,g(x))\right) |X=x\right]\right)`
+
+			* If 0-1 loss is used, then :math:`\hat{G}(x)` corresponds to the predicted class with highest probability.
+
 Regression
 ==================================================================================
 .. note::
