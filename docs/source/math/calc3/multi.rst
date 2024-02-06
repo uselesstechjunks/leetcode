@@ -237,8 +237,36 @@ Second Derivative Test
 	* If the Hessian matrix :math:`\mathbf{H}(\mathbf{c})` is neither, then it is a saddle point.
 
 ************************************************************
-Useful Results
+Matrix Calculus: Tricks and Useful Results
 ************************************************************
+We can have a 
+	* dependent quantity in scalar (:math:`y`), vector (:math:`\mathbf{y}`) or matrix (:math:`mathbf{Y}`) form and an 
+	* independent variable in scalar (:math:`x`), vector (:math:`\mathbf{x}`) or matrix form (:math:`mathbf{X}`).
+We can think about the derivatives in this case as the limiting ratio of the changes in components for the dependent variable in response to a tiny nudge in the components of the independent one.
+
+.. csv-table:: Table for derivatives
+	:align: center
+
+	:math:`\frac{\partial y}{\mathop{\partial x}}`, :math:`\frac{\partial \mathbf{y}}{\mathop{\partial x}}`, :math:`\frac{\partial \mathbf{Y}}{\mathop{\partial x}}`
+	:math:`\frac{\partial y}{\mathop{\partial \mathbf{x}}}`, :math:`\frac{\partial \mathbf{y}}{\mathop{\partial \mathbf{x}}}`, :math:`\frac{\partial \mathbf{Y}}{\mathop{\partial \mathbf{x}}}`
+	:math:`\frac{\partial y}{\mathop{\partial \mathbf{X}}}`, :math:`\frac{\partial \mathbf{y}}{\mathop{\partial \mathbf{X}}}`, :math:`\frac{\partial \mathbf{Y}}{\mathop{\partial \mathbf{X}}}`
+
+.. tips::
+	* In any case, we can stick to the numerator layout notation - where the number of rows would be the same as the number of rows in the numerator.
+	* We can take the differential operators in the transposed order of the denominator in each case.
+
+		* Let a function :math:`\mathbf{f}:\mathbb{R}^2\mapsto\mathbb{R}^3` be defined as
+
+			.. math:: \mathbf{f}(x,y)=\begin{bmatrix}x^2e^y\\ \log(x)\\ y-\cos(x)\end{bmatrix}
+		* We wish to compute :math:`\frac{\partial \mathbf{f}}{\mathop{\partial \mathbf{r}}}` where :math:`\mathbf{r}=\begin{bmatrix}x\\ y\end{bmatrix}=(x,y)^T`
+		* To follow numerator layout notation, we transpose :math:`\mathbf{r}` and take the differential operator in the row format
+
+			.. math:: \frac{\partial}{\mathop{\partial\mathbf{r}}}=\begin{bmatrix}\frac{\partial}{\mathop{\partial x}} & \frac{\partial}{\mathop{\partial y}}\end{bmatrix}
+	* We can then perform Kronecker product of the operator and operand.
+
+		* For the example, it then becomes
+
+			.. math:: \frac{\partial\mathbf{f}}{\mathop{\partial\mathbf{r}}}=\begin{bmatrix}\frac{\partial}{\mathop{\partial x}} & \frac{\partial}{\mathop{\partial y}}\end{bmatrix}\otimes \begin{bmatrix}x^2e^y\\ \log(x)\\ y-\cos(x)\end{bmatrix}=\begin{bmatrix}\frac{\partial}{\mathop{\partial x}}(x^2e^y) & \frac{\partial}{\mathop{\partial y}}(x^2e^y)\\ \frac{\partial}{\mathop{\partial x}}(\log(x)) & \frac{\partial}{\mathop{\partial y}}(\log(x))\\ \frac{\partial}{\mathop{\partial x}}(y-\cos(x)) & \frac{\partial}{\mathop{\partial y}}(y-\cos(x))\end{bmatrix}=\begin{bmatrix}2xe^y&x^2e^y\\ 1/x&0\\\sin(x)&1\end{bmatrix}
 
 .. csv-table:: Table for derivatives
 	:header: "Scalar derivative", "Vector derivative"
