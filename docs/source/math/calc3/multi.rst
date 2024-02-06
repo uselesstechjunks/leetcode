@@ -240,6 +240,7 @@ Second Derivative Test
 Matrix Calculus: Tricks and Useful Results
 ************************************************************
 We can have a 
+
 	* dependent quantity in scalar (:math:`y`), vector (:math:`\mathbf{y}`) or matrix (:math:`mathbf{Y}`) form and an 
 	* independent variable in scalar (:math:`x`), vector (:math:`\mathbf{x}`) or matrix form (:math:`mathbf{X}`).
 We can think about the derivatives in this case as the limiting ratio of the changes in components for the dependent variable in response to a tiny nudge in the components of the independent one.
