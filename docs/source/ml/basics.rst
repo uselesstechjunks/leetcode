@@ -29,18 +29,22 @@ Notation
 **********************************************************************************
 Statistical Decision Theory
 **********************************************************************************
-.. tip::
-	* This puts the prediction task under a probabilistic paradigm.
-	* We assume that the input variables rv :math:`X` and the target are distributed per some **unknown joint distribution**
+This puts the prediction task under a statistical inference paradigm.
 
-		* :math:`X,Y\sim F_{X,Y}(x,y)` or :math:`X,G\sim F_{X,G}(x,g)`
-	* We wish to find a predictor as function of data, :math:`\hat{Y}(X)` or :math:`\hat{G}(X)`.
-	* We associate a **misprediction penalty** for making prediction error.
+.. tip::	
+	* We assume that the :math:`X` and the :math:`Y/G` are distributed per some **unknown joint distribution**
 
-		* :math:`L(Y,\hat{Y}(X))` or :math:`L(G,\hat{G}(X))`.
-	* The learning theory wishes to choose such predictors for which the expected prediction error (EPE) is minimised.
+		* [Regression] :math:`X,Y\sim F_{X,Y}(x,y)`
+		* [Classification] :math:`X,G\sim F_{X,G}(x,g)`
+	* The task is to find a predictor as function of data, :math:`\hat{Y}(X)` or :math:`\hat{G}(X)`.
+	* We associate a **misprediction penalty**, L, for making an error in prediction.
 
-		* :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))` or :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
+		* [Regression] :math:`L(Y,\hat{Y}(X))`
+		* [Classification] :math:`L(G,\hat{G}(X))`
+	* In learning theory we wish to choose predictors for which the expected prediction error (EPE) is minimised.
+
+		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))`
+		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
 	* This quantity can be conditioned on observed input variables
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_{Y|X}\left[\mathbb{E}_{Y}\left(L(Y,\hat{Y}(X))\right) |X\right]`
