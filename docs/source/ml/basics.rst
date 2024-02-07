@@ -56,7 +56,7 @@ This puts the prediction task under a statistical inference paradigm.
 		* [Classification] :math:`\hat{G}(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,g(X)|X=x]\right)`.
 	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
 
-		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{X}\mathbb{E}_{Y|X}[Y|X=x]`.
+		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}[Y|X=x]`.
 		* [Classification] If 0-1 loss is used, then :math:`\hat{G}(x)` corresponds to the predicted class with highest probability.
 
 Regression
@@ -75,8 +75,8 @@ Bayes Estimator
 .. note::
 	* This is the estimator which minimises mse.
 
-		.. math:: f^*=\underset{f}{\arg\min}\left(\mathbb{E}_Y[(f(X)-Y)^2]\right)=\underset{f}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(f(X)-Y)^2]|X\right]\right)
-	* [WHY??] This minimisation problem is equivalent to finding a pointwise minimum, such that, for each :math:`X=x`, 
+		.. math:: f^*=\underset{f}{\arg\min}\left(\mathbb{E}_{X,Y}[(f(X)-Y)^2]\right)=\underset{f}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(f(X)-Y)^2]|X\right]\right)
+	* This minimisation problem is equivalent to finding a pointwise minimum, such that, for each :math:`X=x`, 
 
 		.. math:: f(x)=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(\hat{y}-Y)^2]|X=x\right]\right)
 	* [WHY??] The solution is :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]` which is the conditional expectation estimator or Bayes estimator.
