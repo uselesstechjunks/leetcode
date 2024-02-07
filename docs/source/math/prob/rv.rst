@@ -141,11 +141,25 @@ Total law of probability
 Conditional expectation
 --------------------------------------------
 .. note::
-	* Defined in terms of the conditional PMF, such as :math:`\mathbb{E}[X|A]=\sum_x x p_{X|A}(x)` and :math:`\mathbb{E}[X|Y=y]=\sum_x x p_{X|Y}(x|y)`.
+	* Defined in terms of the conditional PMF, such as 
+
+		* :math:`\mathbb{E}[X|A]=\sum_x x p_{X|A}(x)` and 
+		* :math:`\mathbb{E}[X|Y=y]=\sum_x x p_{X|Y}(x|y)`
 	* LOTUS holds, i.e. :math:`\mathbb{E}[g(X)|A]=\sum_x g(x)p_{X|A}(x)`.
 
+.. tip::
+	* Since we can have multivariable functions and joint distributions, we explicitly write the variables along with the expectation that are part of the PMF.
+	* This means
+
+		* :math:`\mathbb{E}_{X,Y}[f(X,Y)]=\sum_x\sum_yf(x,y)p_{X,Y}(x,y)`
+		* :math:`\mathbb{E}_{X|Y}[f(X,Y)|Y=y]=\sum_xf(x,y)p_{X|Y}(x|y)`
+
 .. attention::
-	* While :math:`\mathbb{E}[X]` is a constant, the conditional expectation :math:`\mathbb{E}[X|Y]` is another rv and it has the same PMF as :math:`Y`.
+	* :math:`\mathbb{E}[X]` is a constant.
+	* We note that :math:`\mathbb{E}_{X|Y}[f(X,Y)|Y=y]` is just a function (not a rv) of a simple variable :math:`y\in\mathbb{R}`.
+
+		* :math:`g(y)=\mathbb{E}_{X|Y}[f(X,Y)|Y=y]`
+	* On the other hand, :math:`\mathbb{E}[X|Y]` is a rv and it has the same PMF as :math:`Y`.
 
 .. tip::
 	From total law of probability:
