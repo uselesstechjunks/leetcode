@@ -156,10 +156,10 @@ Conditional expectation
 
 .. attention::
 	* :math:`\mathbb{E}[X]` is a constant.
-	* We note that :math:`\mathbb{E}_{X|Y}[f(X,Y)|Y=y]` is just a function (not a rv) of a simple variable :math:`y\in\mathbb{R}`.
+	* We note that :math:`\mathbb{E}_{X|Y}[X|Y=y]` is just a function (not a rv) of a simple variable :math:`y\in\mathbb{R}`.
 
-		* :math:`g(y)=\mathbb{E}_{X|Y}[f(X,Y)|Y=y]`
-	* On the other hand, :math:`\mathbb{E}[X|Y]` is a rv and it has the same PMF as :math:`Y`.
+		* :math:`g(y)=\mathbb{E}_{X|Y}[X|Y=y]`
+	* On the other hand, :math:`\mathbb{E}_{X|Y}[X|Y]` is a rv and it has the same PMF as :math:`Y`.
 
 .. tip::
 	From total law of probability:
