@@ -5,8 +5,11 @@ Fundamentals
 **********************************************************************************
 Notation
 **********************************************************************************
+.. warning::
+	* All vectors are named for their column vector form. 
+	* For row-representation, we use the transpose notation.
+
 .. note::
-	* All vectors are named for their column vector form. For row-representation, we use the transpose notation.
 	* The data is associated with a random variable :math:`X`.
 
 		* It might also be a random vector for some :math:`d> 1`, in which case, individual components can referred to as :math:`X_j` and :math:`X=(X_1,\cdots,X_d)`.
