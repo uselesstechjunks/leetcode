@@ -45,7 +45,7 @@ This puts the prediction task under a statistical inference paradigm.
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))`
 		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
-	* This quantity can be conditioned on observed input variables
+	* EPE can be reformulated as conditional expectation on observed input variables.
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_{Y|X}\left[\mathbb{E}_{Y}\left(L(Y,\hat{Y}(X))\right) |X\right]`
 		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))=\mathbb{E}_{G|X}\left[\mathbb{E}_{G}\left(L(G,\hat{G}(X))\right) |X\right]`
