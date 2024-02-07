@@ -45,15 +45,14 @@ This puts the prediction task under a statistical inference paradigm.
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))`
 		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
-	* EPE can be reformulated as conditional expectation on observed input variables.
+	* EPE can be reformulated as conditional expectation on observed input variables :math:`X`.
 
-		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_{Y|X}\left[\mathbb{E}_{Y}\left(L(Y,\hat{Y}(X))\right) |X\right]`
-		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))=\mathbb{E}_{G|X}\left[\mathbb{E}_{G}\left(L(G,\hat{G}(X))\right) |X\right]`
-		* [TODO: check the conditioning variables in the expectation]
-	* This quantity is minimised pointwise (i.e. at each point :math:`X=x`).
+		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[L(Y,\hat{Y}(X)|X]\right]=\int_x \mathbb{E}_{Y|X}[L(Y,\hat{Y}(X)|X=x]f_{Y|X}(y|x)\mathop{dx}`
+		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}(X)|X]\right]=\int_x \mathbb{E}_{G|X}[L(G,\hat{Y}(X)|X=x]f_{G|X}(y|x)\mathop{dx}`
+	* This quantity is minimised pointwise (i.e. at each point :math:`X=x`, taking derivative removes the integral sign).
 
-		* [Regression] :math:`\hat{Y}(x)=f(x)=\underset{f}{\arg\min}\left(\mathbb{E}_{Y|X}\left[\mathbb{E}_{Y}\left(L(Y,f(x))\right) |X=x\right]\right)`
-		* [Classification] :math:`\hat{G}(x)=g(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}\left[\mathbb{E}_{G}\left(L(G,g(x))\right) |X=x\right]\right)`.
+		* [Regression] :math:`\hat{Y}(x)=\underset{f}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,f(X)|X=x]\right)`
+		* [Classification] :math:`\hat{G}(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,g(X)|X=x]\right)`.
 	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
 
 		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}\mathbb{E}_{Y}[Y|X=x]`.
