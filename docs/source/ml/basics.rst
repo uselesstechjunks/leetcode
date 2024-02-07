@@ -41,7 +41,7 @@ This puts the prediction task under a statistical inference paradigm.
 
 		* [Regression] :math:`L(Y,\hat{Y}(X))`
 		* [Classification] :math:`L(G,\hat{G}(X))`
-	* In learning theory we wish to choose predictors for which the expected prediction error (EPE) is minimised.
+	* In learning theory we wish the predictors to have minimal expected prediction error (EPE).
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))`
 		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
