@@ -41,18 +41,19 @@ Statistical Decision Theory
 	* The learning theory wishes to choose such predictors for which the expected prediction error (EPE) is minimised.
 
 		* :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))` or :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
-	* [TODO: check the conditioning variables in the expectation] This quantity can be conditioned on observed input variables
+	* This quantity can be conditioned on observed input variables
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_{Y|X}\left[\mathbb{E}_{Y}\left(L(Y,\hat{Y}(X))\right) |X\right]`
 		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))=\mathbb{E}_{G|X}\left[\mathbb{E}_{G}\left(L(G,\hat{G}(X))\right) |X\right]`
+		* [TODO: check the conditioning variables in the expectation]
 	* This quantity is minimised pointwise (i.e. at each point :math:`X=x`).
 
 		* [Regression] :math:`\hat{Y}(x)=f(x)=\underset{f}{\arg\min}\left(\mathbb{E}_{Y|X}\left[\mathbb{E}_{Y}\left(L(Y,f(x))\right) |X=x\right]\right)`
+		* [Classification] :math:`\hat{G}(x)=g(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}\left[\mathbb{E}_{G}\left(L(G,g(x))\right) |X=x\right]\right)`.
+	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
 
-			* If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}\mathbb{E}_{Y}[Y|X=x]`
-		* [Classification] :math:`\hat{G}(x)=g(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}\left[\mathbb{E}_{G}\left(L(G,g(x))\right) |X=x\right]\right)`
-
-			* If 0-1 loss is used, then :math:`\hat{G}(x)` corresponds to the predicted class with highest probability.
+		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}\mathbb{E}_{Y}[Y|X=x]`.
+		* [Classification] If 0-1 loss is used, then :math:`\hat{G}(x)` corresponds to the predicted class with highest probability.
 
 Regression
 ==================================================================================
