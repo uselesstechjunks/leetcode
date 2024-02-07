@@ -181,6 +181,7 @@ Law of iterated expectation
 	* For a single-valued function :math:`f(X)` of a rv, we have 
 
 		.. math:: \mathbb{E}_X[f(X)]=\mathbb{E}_X\left[\mathbb{E}_{X|Y}[f(X,Y)|Y]\right]
+
 		* Proof:
 
 			.. math:: \mathbb{E}_X[f(X)]=\sum_xf(x)p_X(x)=\sum_xf(x)\left(\sum_yp_{X,Y}(x,y)\right)=\sum_xf(x)\left(\sum_yp_{Y}(y)p_{X|Y}(x|y)\right)=\sum_yp_{Y}(y)\left(\sum_yf(x)p_{X|Y}(x|y)\right)=\sum_yp_{Y}(y)\mathbb{E}_{X|Y}[f(X,Y)|Y=y]=\mathbb{E}_X\left[\mathbb{E}_{X|Y}[f(X,Y)|Y]\right]
