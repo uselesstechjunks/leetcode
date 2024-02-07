@@ -56,7 +56,7 @@ This puts the prediction task under a statistical inference paradigm.
 		* [Classification] :math:`\hat{G}(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,g(X)|X=x]\right)`.
 	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
 
-		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}\mathbb{E}_{Y}[Y|X=x]`.
+		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{X}\mathbb{E}_{Y|X}[Y|X=x]`.
 		* [Classification] If 0-1 loss is used, then :math:`\hat{G}(x)` corresponds to the predicted class with highest probability.
 
 Regression
