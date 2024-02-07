@@ -11,7 +11,6 @@ Notation
 
 		* It might also be a random vector for some :math:`d> 1`, in which case, individual components can referred to as :math:`X_j` and :math:`X=(X_1,\cdots,X_d)`.
 	* For observed data points are instances of the rv, :math:`X=x\in\mathbb{R}^d` for some :math:`d\geq 1`.
-	* A particular observation for :math:`X=x_i\in\mathbb{R}^d` is better represented in the row-vector form, :math:`x_i^T\in\mathbb{R}_{1\times d}`.
 	* [Regression] The target quantity is associated with a continuous random variable :math:`Y\in\mathbb{R}`. 
 
 		* It might also be a random vector, with :math:`Y=(Y_1,\cdots,Y_K)`, for some :math:`K\geq 1`.
@@ -22,6 +21,7 @@ Notation
 
 		.. math:: \mathbf{X}_{N\times d}=\begin{bmatrix}-& x_1^T & - \\ \vdots & \vdots & \vdots \\ -& x_N^T & -\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\ \mathbf{x}_1 & \cdots & \mathbf{x}_d \\ |&\cdots&|\end{bmatrix}
 	* The vector :math:`\mathbf{x}_j\in\mathbb{R}^N` represents the column vector for all the observations for rv :math:`X_j`.
+	* A particular observation for :math:`X=x_i\in\mathbb{R}^d` is better represented in the row-vector form, :math:`x_i^T\in\mathbb{R}_{1\times d}`.
 
 **********************************************************************************
 Statistical Decision Theory
