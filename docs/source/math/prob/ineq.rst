@@ -197,6 +197,9 @@ Tigher bounds from Hoeffding's inequality
 
 		.. math:: \mathbb{P}(|M_n-\mu|\geq \epsilon)\leq 2\exp\left(\frac{-2n\epsilon^2}{(b-a)^2}\right)
 
+.. note::
+	`Concentration Inequality <https://en.wikipedia.org/wiki/Concentration_inequality>`_
+
 Strong Law of Large Number
 ========================================================================================
 .. note::

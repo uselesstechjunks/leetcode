@@ -47,20 +47,29 @@ Optimisation: Least Squares
 		.. math:: R^2(\boldsymbol{\beta})=\mathbf{y}^T\mathbf{y}-2\boldsymbol{\beta}^T\mathbf{X}^T\mathbf{y}+\boldsymbol{\beta}^T\left(\mathbf{X}^T\mathbf{X}\right)\boldsymbol{\beta}
 
 .. tip::
-	* First derivative: :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\nabla_{\boldsymbol{\beta}}R^2:\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}`
+	* First derivative: :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\nabla_{R^2}(\boldsymbol{\beta}):\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}`
 
 		.. math:: -2\mathbf{X}^T\mathbf{y}+\left(\mathbf{X}^T\mathbf{X}+(\mathbf{X}^T\mathbf{X})^T\right)\boldsymbol{\beta}=-2\mathbf{X}^T\mathbf{y}+2\mathbf{X}^T\mathbf{X}\boldsymbol{\beta}=-2\mathbf{X}^T(\mathbf{y}-\mathbf{X}\boldsymbol{\beta})
-	* Second derivative: :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})=\mathbf{H}_{\boldsymbol{\beta}}(R^2):\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}\times\mathbb{R}^{d+1}`
+	* Second derivative: :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})=\mathbf{H}_{R^2}(\boldsymbol{\beta}):\mathbb{R}^{d+1}\mapsto\mathbb{R}^{d+1}\times\mathbb{R}^{d+1}`
 
 		.. math:: 2(\mathbf{X}^T\mathbf{X})^T=2\mathbf{X}^T\mathbf{X}
-	* If we assume that the data matrix :math:`\mathbf{X}` is full rank, then :math:`\mathbf{X}^T\mathbf{X}` is symmetric positive definite and therefore :math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})> 0`.
-	* We can find the minima from setting :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\mathbf{0}`.
-	* The estimate for the linear regresson coefficient is obtained from :math:`\hat{\boldsymbol{\beta}}_N=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}`.
+	
+		* The second derivative is entirely determined by the data and is free of the parameter since the objective is quadratic in :math:`\boldsymbol{\beta}`.
+	* If :math:`\mathbf{X}` is full rank, then :math:`\mathbf{X}^T\mathbf{X}` is symmetric positive definite (:math:`\frac{\partial^2}{\mathop{\partial\boldsymbol{\beta}}^2}R^2(\boldsymbol{\beta})> 0`).
+	
+		* This means, the loss surface is convex and has a unique global minima.
+	* We can find the minima in a closed form by setting :math:`\frac{\partial}{\mathop{\partial\boldsymbol{\beta}}}R^2(\boldsymbol{\beta})=\mathbf{0}`.
+	
+		* The estimate for the linear regresson coefficient is obtained from
+	
+			.. math:: \hat{\boldsymbol{\beta}}_N=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
 
 .. seealso::
 	* The linear regression estimate for :math:`\mathbf{y}` is given by
 
 		.. math:: \hat{\mathbf{y}}=\mathbf{X}\hat{\boldsymbol{\beta}}_N=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
+
+		* The quantity :math:`\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T` is called a **hat-matrix** (puts the hat on :math:`\mathbf{y}`).
 
 Code Example
 ---------------------------------------------------------------------------
@@ -142,6 +151,7 @@ Orthogonalisation for Mutltiple Regression
 .. attention::
 	* We can start off with the first column vector from the data matrix, which is :math:`\mathbf{x}_0=\mathbf{1}`.
 	* We can compute :math:`\beta_0=\frac{\langle\mathbf{x}_0,\mathbf{y}\rangle}{\langle\mathbf{x}_0,\mathbf{x}_0\rangle}=\langle\mathbf{1},\mathbf{y}\rangle`
+	* This iterative method avoids the inverse computation in the full matrix expression.
 
 ***************************************************************************
 Subset Selection Methods

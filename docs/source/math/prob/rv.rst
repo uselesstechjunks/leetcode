@@ -141,11 +141,25 @@ Total law of probability
 Conditional expectation
 --------------------------------------------
 .. note::
-	* Defined in terms of the conditional PMF, such as :math:`\mathbb{E}[X|A]=\sum_x x p_{X|A}(x)` and :math:`\mathbb{E}[X|Y=y]=\sum_x x p_{X|Y}(x|y)`.
+	* Defined in terms of the conditional PMF, such as 
+
+		* :math:`\mathbb{E}[X|A]=\sum_x x p_{X|A}(x)` and 
+		* :math:`\mathbb{E}[X|Y=y]=\sum_x x p_{X|Y}(x|y)`
 	* LOTUS holds, i.e. :math:`\mathbb{E}[g(X)|A]=\sum_x g(x)p_{X|A}(x)`.
 
+.. tip::
+	* Since we can have multivariable functions and joint distributions, we explicitly write the variables along with the expectation that are part of the PMF.
+	* This means
+
+		* :math:`\mathbb{E}_{X,Y}[f(X,Y)]=\sum_x\sum_yf(x,y)p_{X,Y}(x,y)`
+		* :math:`\mathbb{E}_{X|Y}[f(X,Y)|Y=y]=\sum_xf(x,y)p_{X|Y}(x|y)`
+
 .. attention::
-	* While :math:`\mathbb{E}[X]` is a constant, the conditional expectation :math:`\mathbb{E}[X|Y]` is another rv and it has the same PMF as :math:`Y`.
+	* :math:`\mathbb{E}[X]` is a constant.
+	* We note that :math:`\mathbb{E}_{X|Y}[X|Y=y]` is just a function (not a rv) of a simple variable :math:`y\in\mathbb{R}`.
+
+		* :math:`g(y)=\mathbb{E}_{X|Y}[X|Y=y]`
+	* On the other hand, :math:`\mathbb{E}_{X|Y}[X|Y]` is a rv and it has the same PMF as :math:`Y`.
 
 .. tip::
 	From total law of probability:
@@ -157,13 +171,25 @@ Conditional expectation
 	* For any other event :math:`B` where :math:`\mathbb{P}(A_i\cap B)>0` for all :math:`i`
 
 		.. math:: \mathbb{E}[X|B]=\sum_{i=1}^n \mathbb{P}(A_i|B)\mathbb{E}[X|A_i\cap B]
-
-Law of iterated expectation
-----------------------------------------
-.. attention::
 	* If the events, :math:`A_i`, are represented by another discrete rv such that :math:`A_i=\{Y=y\}`
 
 		.. math:: \mathbb{E}[X]=\sum_y p_Y(y)\mathbb{E}[X|Y=y]=\sum_y g(y)p_Y(y)=\mathbb{E}[g(Y)]=\mathbb{E}\left[\mathbb{E}[X|Y]\right] \text{, where $g(Y)=\mathbb{E}[X|Y]$.}
+
+Law of iterated expectation
+----------------------------------------
+.. attention::	
+	* For a single-valued function :math:`f(X)` of a rv, we have 
+
+		.. math:: \mathbb{E}_X[f(X)]=\mathbb{E}_Y\left[\mathbb{E}_{X|Y}[f(X)|Y]\right]
+	* For a multi-valued function :math:`f(X,Y)` of two jointly distributed rvs, we have
+
+		.. math:: \mathbb{E}_{X,Y}[f(X,Y)]=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[f(X,Y)|X]\right]=\mathbb{E}_Y\left[\mathbb{E}_{X|Y}[f(X,Y)|Y]\right]
+	* Proof (first):
+
+		.. math:: \mathbb{E}_X[f(X)]=\sum_xf(x)p_X(x)=\sum_xf(x)\left(\sum_yp_{X,Y}(x,y)\right)=\sum_xf(x)\left(\sum_yp_{Y}(y)p_{X|Y}(x|y)\right)=\sum_yp_{Y}(y)\left(\sum_xf(x)p_{X|Y}(x|y)\right)=\sum_yp_{Y}(y)\mathbb{E}_{X|Y}[f(X)|Y=y]=\mathbb{E}_Y\left[\mathbb{E}_{X|Y}[f(X)|Y]\right]
+	* Proof (second:
+
+		.. math:: \mathbb{E}_{X,Y}[f(X,Y)]=\sum_x\sum_yf(x,y)p_{X,Y}(x,y)=\sum_x\sum_yf(x,y)p_X(x)p_{Y|X}(y|x)=\sum_xp_X(x)\left(\sum_yf(x,y)p_{Y|X}(y|x)\right)=\sum_xp_X(x)\mathbb{E}_{Y|X}[f(X,Y)|X=x]=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[f(X,Y)|X]\right]
 
 Notion of Independence
 ======================================================
