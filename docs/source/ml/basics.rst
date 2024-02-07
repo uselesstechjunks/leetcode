@@ -17,14 +17,14 @@ Notation
 	* [Regression] The target quantity is associated with a continuous rv :math:`Y\in\mathbb{R}`. 
 
 		* It might also be a random vector, with :math:`Y=(Y_1,\cdots,Y_K)`, for some :math:`K\geq 1`.
-		* Single dimensional observations for target are usually written as :math:`Y=y_i\in\mathbb{R}`.		
+		* Single dimensional observations for target are usually written as :math:`Y=y\in\mathbb{R}`.		
 	* [Classification] The target quantity is associated with a discrete rv :math:`G\in\mathcal{G}` with :math:`|\mathcal{G}|=K`.		
 	* We have a total of :math:`N` observations, and all the observations together are taken in the matrix form
 
 		.. math:: \mathbf{X}_{N\times d}=\begin{bmatrix}-& x_1^T & - \\ \vdots & \vdots & \vdots \\ -& x_N^T & -\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\ \mathbf{x}_1 & \cdots & \mathbf{x}_d \\ |&\cdots&|\end{bmatrix}
 	* The vector :math:`\mathbf{x}_j\in\mathbb{R}^N` represents the column vector for all the observations for rv :math:`X_j`.
 	* A particular observation for :math:`X=x_i\in\mathbb{R}^d` is better represented in the row-vector form, :math:`x_i^T\in\mathbb{R}_{1\times d}`.
-	* For :math:`K> 1`, we can also associate the target with the row vector form, :math:`y_i^T\in\mathbb{R}_{1\times K}` [regression] or g_i^T\in\mathcal{G}_{1\times K} [classification].
+	* For :math:`K> 1`, we can also associate the target with the row vector form, :math:`y_i^T\in\mathbb{R}_{1\times K}` [regression] or :math:`g_i^T\in\mathcal{G}_{1\times K}` [classification].
 
 **********************************************************************************
 Statistical Decision Theory
