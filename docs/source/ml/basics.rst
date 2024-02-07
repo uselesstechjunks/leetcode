@@ -41,7 +41,7 @@ This puts the prediction task under a statistical inference paradigm.
 
 		* [Regression] :math:`L(Y,\hat{Y}(X))`
 		* [Classification] :math:`L(G,\hat{G}(X))`
-	* In learning theory we wish the predictors to have minimal expected prediction error (EPE).
+	* We wish the predictors to have minimal expected prediction error (EPE) over the joint.
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))`
 		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
@@ -49,8 +49,9 @@ This puts the prediction task under a statistical inference paradigm.
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[L(Y,\hat{Y}(X)|X]\right]=\int_x \mathbb{E}_{Y|X}[L(Y,\hat{Y}(X)|X=x]f_{Y|X}(y|x)\mathop{dx}`
 		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}(X)|X]\right]=\int_x \mathbb{E}_{G|X}[L(G,\hat{Y}(X)|X=x]f_{G|X}(y|x)\mathop{dx}`
-	* This quantity is minimised pointwise (i.e. at each point :math:`X=x`, taking derivative removes the integral sign).
+	* This quantity is minimised pointwise (i.e. at each point :math:`X=x`)
 
+		* (Informally, to minimise, we take derivative of EPE which removes the integral).
 		* [Regression] :math:`\hat{Y}(x)=\underset{f}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,f(X)|X=x]\right)`
 		* [Classification] :math:`\hat{G}(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,g(X)|X=x]\right)`.
 	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
