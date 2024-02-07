@@ -185,6 +185,13 @@ Law of iterated expectation
 		* Proof:
 
 			.. math:: \mathbb{E}_X[f(X)]=\sum_xf(x)p_X(x)=\sum_xf(x)\left(\sum_yp_{X,Y}(x,y)\right)=\sum_xf(x)\left(\sum_yp_{Y}(y)p_{X|Y}(x|y)\right)=\sum_yp_{Y}(y)\left(\sum_xf(x)p_{X|Y}(x|y)\right)=\sum_yp_{Y}(y)\mathbb{E}_{X|Y}[f(X)|Y=y]=\mathbb{E}_Y\left[\mathbb{E}_{X|Y}[f(X)|Y]\right]
+	* For a multi-valued function :math:`f(X,Y)` of two jointly distributed rvs, we have
+
+		.. math:: \mathbb{E}_{X,Y}[f(X,Y)]=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[f(X,Y)|X]\right]=\mathbb{E}_Y\left[\mathbb{E}_{X|Y}[f(X,Y)|Y]\right]
+
+		* Proof:
+
+			.. math:: \mathbb{E}_{X,Y}[f(X,Y)]=\sum_x\sum_yf(x,y)p_{X,Y}(x,y)=\sum_x\sum_yf(x,y)p_X(x)p_{Y|X}(y|x)=\sum_xp_X(x)\left(\sum_yf(x,y)p_{Y|X}(y|x)\right)=\sum_xp_X(x)\mathbb{E}_{Y|X}[f(X,Y)|X=x]=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[f(X,Y)|X]\right]
 
 Notion of Independence
 ======================================================
