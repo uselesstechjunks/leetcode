@@ -66,10 +66,12 @@ Discriminative Models
 	* The final probability can just be defined in terms of others
 
 		.. math:: \mathbb{P}(G=K|X=x)=\frac{1}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
-	* This formulation defines a multinoulli probability distribution for the output variable.
-	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be written as
+	* This formulation defines a multinoulli probability distribution for the output variable
 
-		.. math:: \mathbb{P}(G=k|X=x)=p_G(k|x;\theta)
+		.. math:: G\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)
+	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be parameterised in terms of
+
+		.. math:: p_k=p_G(k|x;\theta)=\mathbb{P}(G=k|X=x)
 
 Inference
 --------------------------------------------------------------------------------------
