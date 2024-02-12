@@ -30,6 +30,7 @@ Generative Models
 	* It follows from Bayes theorem that
 
 		.. math:: \mathbb{P}(G=k|X=x_i)\propto\mathbb{P}(G=k)\times\mathbb{P}(X=x_i|G=k)=\pi_k\times f_k(x_i)
+
 		* :math:`\pi_k=\mathbb{P}(G=k)` is the **class prior** probability.
 		* :math:`f_k(x_i)=\mathbb{P}(X=x_i|G=k)` is the density of the data under a particular class :math:`k`.
 	* We note that since we're interested in the arg max, we won't be needing to compute the normalisation constant in the denominator as that's the same for all classes.
