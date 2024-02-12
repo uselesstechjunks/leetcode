@@ -1,6 +1,16 @@
 ######################################################################################
 Linear Methods for Classification
 ######################################################################################
+.. note::
+	* For classification, we can always assign a different colour to each set of points :math:`x_i` in the input space :math:`\mathcal{X}` as per the output class :math:`k_i\in\mathcal{K}` they belong to.
+	* The classification boundary in that case is the **partition boundary** in the input space between different coloured inputs.
+	* A classifier is **linear** iff the boundary can be expressed as a (set of) linear equations of :math:`\mathbf{x}_j`.
+
 **************************************************************************************
-Objective Functions from MLE
+Probabilistic Classifiers
 **************************************************************************************
+
+**************************************************************************************
+Hyperplane Classifiers
+**************************************************************************************
+
