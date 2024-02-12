@@ -41,7 +41,7 @@ Inference
 .. warning::
 	* For generative models, we usually consider the joint likelihood
 
-		.. math:: \mathbb{P}(X_1=x_1,\cdots,X_N=x_N,G_1=g_i,\cdots,G_N=g_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i)\times\mathbb{P}(X=x_i|G_i=g_i)=\pi_{g_i}\times \prod_{i=1}^{N}f_{g_i}(x_i)
+		.. math:: \mathbb{P}(X_1=x_1,\cdots,X_N=x_N,G_1=g_i,\cdots,G_N=g_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i)\times\mathbb{P}(X=x_i|G_i=g_i)=\prod_{i=1}^{N}\pi_{g_i}\times f_{g_i}(x_i)
 	* We use MLE to estimate the parameters of :math:`f_k`.
 
 Quadratic Discriminator Analysis
