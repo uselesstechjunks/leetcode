@@ -12,17 +12,26 @@ Linear Methods for Classification
 Probabilistic Classifiers
 **************************************************************************************
 .. note::
-	* We can define a discriminator function :math:`\delta_k(x)` for each class :math:`k`.
+	* We can define a **discriminant function** :math:`\delta_k(x)` for each class :math:`k`.
 	* For each :math:`x\in\mathcal{X}`, the classification prediction then becomes
 
 		.. math:: g^*=\underset{k}{\arg\max}\delta_k(x)
-	* [WHY??] For a linear classifier, we need some monotone transform of :math:`\delta_k` to be linear.
-	* For probabilistic classifiers, the discriminator function is usually defined as the posterior probability.
+	* For a linear classifier, we need some monotone transform :math:`h` of :math:`\delta_k` to be linear.
+
+		* :math:`h` can very well be just the identity function.
+		* The decision boundary between :math:`k=1` and :math:`k=K` is given by the surface where
+
+			.. math:: h(\delta_1(x))-h(\delta_K(x))=0
+	* For probabilistic classifiers, the discriminant function is usually defined as the posterior probability.
 
 		.. math:: \delta_k(x)=\mathbb{P}(G=k|X=x)
 	* The monotone linear transform here is often the logit function
 
 		.. math:: \log\frac{\mathbb{P}(G=1|X=x)}{\mathbb{P}(G=K|X=x)}=\log\delta_1(x)-\log\delta_K(x)
+
+		* At the decision boundary, the posterior probabilities are equal.
+
+			.. math:: \log\delta_1(x)-\log\delta_K(x)=0
 
 Generative Models
 ======================================================================================
@@ -61,6 +70,17 @@ Prediction
 
 Quadratic Discriminator Analysis
 --------------------------------------------------------------------------------------
+.. note::
+	* We assume the conditional data density to be Gaussian for each class
+
+		.. math:: f_k(x)=\frac{1}{|\Sigma_k|^{1/2}\left(2\pi\right)^{d/2}}\exp(-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k))
+	* We note that
+
+		.. math:: \log(\pi_k\times f_k(x))=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{d}{2}\log(2\pi)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)
+	* The decision boundary is given by the surface
+
+		.. math:: 
+\log\frac{\pi_1\times f_1(x)}{\pi_2\times f_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\Sigma_1|}{|\Sigma_2|}-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\Sigma_2^{-1}(x-\mu_2)=0
 
 Linear Discriminator Analysis
 --------------------------------------------------------------------------------------
