@@ -55,10 +55,7 @@ Estimation
 .. warning::
 	* For generative models, we usually consider the joint likelihood
 
-		.. math:: \mathbb{P}(X_1=x_1,\cdots,X_N=x_N,G_1=g_i,\cdots,G_N=g_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i)\times\mathbb{P}(X=x_i|G_i=g_i)=\prod_{i=1}^{N}\pi_{g_i}\times f_{g_i}(x_i)
-	* We estimate the priors using MLE
-
-		.. math:: \hat{\pi}_k=\frac{\sum_{i=1}^N\mathbb{I}_{g_i=k}}{N}
+		.. math:: \mathbb{P}(X_1=x_1,\cdots,X_N=x_N,G_1=g_i,\cdots,G_N=g_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i)\times\mathbb{P}(X=x_i|G_i=g_i)=\prod_{i=1}^{N}\pi_{g_i}\times f_{g_i}(x_i)	
 	* If :math:`f_k` is parametric in :math:`\theta`, we use MLE to estimate those parameters.
 
 		.. math:: \hat{f}_k(x;\theta)=f_k(x;\hat{\theta}_{\text{MLE}})
@@ -96,7 +93,13 @@ Linear Discriminator Analysis
 		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\Sigma^{-1}(\mu_1-\mu_2)-\frac{1}{2}\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)=0
 
 .. tip::
-	* TODO: estimation
+	* We estimate the priors using MLE
+
+		.. math:: \hat{\pi}_k=\frac{\sum_{i=1}^N\mathbb{I}_{g_i=k}}{N}
+	* The conditional density parameters are also estimated using MLE.
+		
+		* :math:`\hat{\mu}_k=\frac{\sum_{i=1}^N \mathbb{I}_{g_i=k}\times x_i}{\sum_{i=1}^N \mathbb{I}_{g_i=k}}`
+		* :math:`\hat{\Sigma}=\frac{1}{N-k}\sum_{i=1}^N(x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T`
 
 Discriminative Models
 ======================================================================================
