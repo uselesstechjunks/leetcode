@@ -61,7 +61,7 @@ Discriminative Models
 	* This formulation defines a multinoulli probability distribution for the output variable.
 	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be written as
 
-		.. math:: \mathbb{P}(G=k|X=x_i)=p_G(x;\theta)
+		.. math:: \mathbb{P}(G=k|X=x_i)=p_G(k|x_i;\theta)
 
 **************************************************************************************
 Hyperplane Classifiers
