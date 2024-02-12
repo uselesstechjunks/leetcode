@@ -6,7 +6,7 @@ Linear Methods for Classification
 	* We therefore associate each observed output :math:`g_i=k` where :math:`k=1,2,\cdots,K`.
 	* For classification, we can always assign a different colour to each datapoint :math:`x_i` in the input space :math:`\mathcal{X}` as per the output class :math:`k` it belongs to.
 	* The decision boundary in that case is the **partition boundary** in the input space between different coloured inputs.
-	* A classifier is **linear** iff the boundary can be expressed as a (set of) linear equations involving :math:`\mathbf{x}_j`.
+	* A classifier is **linear** if the boundary can be expressed as linear equations involving :math:`\mathbf{x}_j`.
 
 **************************************************************************************
 Probabilistic Classifiers
