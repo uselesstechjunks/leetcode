@@ -84,8 +84,7 @@ Quadratic Discriminator Analysis
 Linear Discriminator Analysis
 --------------------------------------------------------------------------------------
 .. note::
-	* If we model the conditional density in a way such that they all share the covariance, then the equation simplifies to a linear one in :math:`x`.
-	* We can use the simplification as the quadratic term :math:`x^T\Sigma^{-1}x` cancels
+	* If we model the conditional density in a way such that they all share the covariance (:math:`\Sigma`), then the equation simplifies to a linear one in :math:`x` as the quadratic term :math:`x^T\Sigma^{-1}x` cancels.
 
 		.. math:: x^T\Sigma^{-1}x-\mu_1^T\Sigma^{-1}x-x^T\Sigma^{-1}\mu_1+\mu_1^T\Sigma^{-1}\mu_1-x^T\Sigma^{-1}x+\mu_2^T\Sigma^{-1}x+x^T\Sigma^{-1}\mu_2-\mu_2^T\Sigma^{-1}\mu_2=2x^T\Sigma^{-1}(\mu_2-\mu_1)+\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)
 	* The decision boundary is given by
@@ -98,8 +97,12 @@ Linear Discriminator Analysis
 		.. math:: \hat{\pi}_k=\frac{\sum_{i=1}^N\mathbb{I}_{g_i=k}}{N}
 	* The conditional density parameters are also estimated using MLE.
 		
-		* :math:`\hat{\mu}_k=\frac{\sum_{i=1}^N \mathbb{I}_{g_i=k}\times x_i}{\sum_{i=1}^N \mathbb{I}_{g_i=k}}`
-		* :math:`\hat{\Sigma}=\frac{1}{N-k}\sum_{i=1}^N(x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T`
+		* Mean
+
+			.. math:: \hat{\mu}_k=\frac{\sum_{i=1}^N \mathbb{I}_{g_i=k}\times x_i}{\sum_{i=1}^N \mathbb{I}_{g_i=k}}
+		* Covariance
+		
+			.. math:: \hat{\Sigma}=\sum_{k=1}^K\frac{\mathbb{I}_{g_i=k}}{N-k}\sum_{i=1}^N (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
 
 Discriminative Models
 ======================================================================================
