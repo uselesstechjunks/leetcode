@@ -1,6 +1,13 @@
 ###########################################################################
 Linear Methods for Regression
 ###########################################################################
+.. note::
+	* For regression problem, the output :math:`Y` is being modeled as a function of the input data :math:`X`.
+	* We assume that the function :math:`f` belongs to some well-defined function class spanned by a set of parameters, and our model then becomes
+
+		.. math:: Y=f(X,\beta)
+	* We call this regressor a **linear** one if it's linear in the parameters :math:`\beta`.
+
 ***************************************************************************
 Objective Functions from MLE
 ***************************************************************************
