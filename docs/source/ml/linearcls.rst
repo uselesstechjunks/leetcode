@@ -77,10 +77,10 @@ Quadratic Discriminator Analysis
 	* We note that
 
 		.. math:: \log(\pi_k\times f_k(x))=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{d}{2}\log(2\pi)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)
+	* We can define :math:`\delta_k(x)=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)
 	* The decision boundary is given by the surface
 
-		.. math:: 
-\log\frac{\pi_1\times f_1(x)}{\pi_2\times f_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\Sigma_1|}{|\Sigma_2|}-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\Sigma_2^{-1}(x-\mu_2)=0
+		.. math:: \log\frac{\pi_1\times f_1(x)}{\pi_2\times f_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\Sigma_1|}{|\Sigma_2|}-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\Sigma_2^{-1}(x-\mu_2)=0
 
 Linear Discriminator Analysis
 --------------------------------------------------------------------------------------
