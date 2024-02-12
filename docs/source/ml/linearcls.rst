@@ -38,11 +38,24 @@ Generative Models
 
 Inference
 --------------------------------------------------------------------------------------
+Estimation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. warning::
 	* For generative models, we usually consider the joint likelihood
 
 		.. math:: \mathbb{P}(X_1=x_1,\cdots,X_N=x_N,G_1=g_i,\cdots,G_N=g_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i)\times\mathbb{P}(X=x_i|G_i=g_i)=\prod_{i=1}^{N}\pi_{g_i}\times f_{g_i}(x_i)
-	* We use MLE to estimate the parameters of :math:`f_k`.
+	* We estimate the priors using MLE
+
+		.. math:: \hat{\pi}_k=\frac{\sum_{i=1}^N\mathbb{I}_{g_i=k}}{N}
+	* If :math:`f_k` is parametric in :math:`\theta`, we use MLE to estimate those parameters.
+
+		.. math:: \hat{f}_k(x;\theta)=f_k(x;\hat{\theta}_{\text{MLE}})
+	* Otherwise. we resort to non-parametric density estimation methods to estimate :math:`\hat{f}_k(x)`.
+
+Prediction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. tip::
+	.. math:: \hat{g}=\underset{k}{\arg\max}\left(\hat{\pi}_k\times \hat{f}_k(x)\right) 
 
 Quadratic Discriminator Analysis
 --------------------------------------------------------------------------------------
@@ -75,11 +88,18 @@ Discriminative Models
 
 Inference
 --------------------------------------------------------------------------------------
+Estimation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. warning::
 	* For discriminative models, we usually consider the conditional likelihood
 
 		.. math:: \mathbb{P}(G_1=g_i,\cdots,G_N=g_N|X_1=x_1,\cdots,X_N=x_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i|X=x_i)=\prod_{i=1}^{N}p_G(g_i|x_i;\theta)
 	* We use MLE to estimate the parameters :math:`\theta`.
+
+Prediction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. tip::
+	.. math:: \hat{g}=\underset{k}{\arg\max}\left(\hat{p}_k\right) 
 
 **************************************************************************************
 Hyperplane Classifiers
