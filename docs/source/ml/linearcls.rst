@@ -48,17 +48,18 @@ Discriminative Models
 	* Here, instead of invoking Bayes theorem, we can directly focus on modeling the logit as a linear function of :math:`x`.
 	* For each class :math:`k=1,2,\cdots,K-1`, we can define the logits in terms of a set of linear equations
 
-		.. math:: \log\frac{\mathbb{P}(G=k|X=x_i)}{\mathbb{P}(G=K|X=x_i)}=\beta_{0,k}+\beta_k^Tx_i
+		.. math:: \log\frac{\mathbb{P}(G=k|X=x_i)}{\mathbb{P}(G=K|X=x_i)}=\beta_{0,k}+\beta_{1:,k}^Tx_i
 
-		* Here, each :math:`\beta_{j,k}\in\mathbb{R}` is the bias (intercept) term and :math:`\beta_k\in\mathbb{R}^d` is the weight vector.
+		* Here, each :math:`\beta_{0,k}\in\mathbb{R}` is the bias (intercept) term and :math:`\beta_{1:,k}\in\mathbb{R}^d` is the weight vector.
+		* We can use the notation :math:`\beta_k=(\beta_{0,k}, \beta_{1:,k})\in\mathbb{R}^{d+1}`.
 	* This can be achieved if we define the density as the softmax, i.e. for :math:`k=1,2,\cdots,K-1`
 
-		.. math:: \mathbb{P}(G=k|X=x_i)=\frac{\exp(\beta_{0,k}+\beta_k^Tx_i)}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_j^Tx_i)}
+		.. math:: \mathbb{P}(G=k|X=x_i)=\frac{\exp(\beta_{0,k}+\beta_{1:,k}^Tx_i)}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx_i)}
 	* The final probability can just be defined in terms of others
 
-		.. math:: \mathbb{P}(G=K|X=x_i)=\frac{1}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_j^Tx_i)}
+		.. math:: \mathbb{P}(G=K|X=x_i)=\frac{1}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx_i)}
 	* This formulation defines a multinoulli probability distribution for the output variable.
-	* If we use the notation where :math:`\theta=(\beta_{0,1},\beta_1,\cdots,\beta_{0,K-1},\beta_{K-1})` represents the param vector, then this multinoulli density can be written as
+	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be written as
 
 		.. math:: \mathbb{P}(G=k|X=x_i)=p_G(x;\theta)
 
