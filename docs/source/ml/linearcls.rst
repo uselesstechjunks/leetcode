@@ -31,7 +31,7 @@ Generative Models
 
 		.. math:: \mathbb{P}(G=k|X=x)\propto\mathbb{P}(G=k)\times\mathbb{P}(X=x|G=k)=\pi_k\times f_k(x)
 
-		* :math:`\pi_k=\mathbb{P}(G=k)` is the **class prior** probability.
+		* :math:`\pi_k=\mathbb{P}(G=k)` is the **class prior** probability defines a :math:`\mathrm{Multinoulli}(\pi_1,\cdots,\pi_k)` for priors.
 		* :math:`f_k(x)=\mathbb{P}(X=x|G=k)` is the density of the data under a particular class :math:`k`.
 	* We note that since we're interested in the arg max, we won't be needing to compute the normalisation constant in the denominator as that's the same for all classes.
 	* If we assume that the in-class data density is Gaussian, then we have LDA and QDA classifiers.
@@ -66,7 +66,7 @@ Discriminative Models
 	* The final probability can just be defined in terms of others
 
 		.. math:: \mathbb{P}(G=K|X=x)=\frac{1}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
-	* This formulation defines a multinoulli probability distribution for the output variable
+	* This formulation too defines a multinoulli probability distribution for the output variable once we observe :math:`x`
 
 		.. math:: G\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)
 	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be parameterised in terms of
