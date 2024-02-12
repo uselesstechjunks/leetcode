@@ -82,9 +82,21 @@ Quadratic Discriminator Analysis
 	* The decision boundary between :math:`k=1` and :math:`k=2` is given by the surface
 
 		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\Sigma_1|}{|\Sigma_2|}-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\Sigma_2^{-1}(x-\mu_2)=0
+	* We note that this is quadratic in :math:`x`.
 
 Linear Discriminator Analysis
 --------------------------------------------------------------------------------------
+.. note::
+	* If we model the conditional density in a way such that they all share the covariance, then the equation simplifies to a linear one in :math:`x`.
+	* We can use the simplification as the quadratic term :math:`x^T\Sigma^{-1}x` cancels
+
+		.. math:: x^T\Sigma^{-1}x-\mu_1^T\Sigma^{-1}x-x^T\Sigma^{-1}\mu_1+\mu_1^T\Sigma^{-1}\mu_1-x^T\Sigma^{-1}x+\mu_2^T\Sigma^{-1}x+x^T\Sigma^{-1}\mu_2-\mu_2^T\Sigma^{-1}\mu_2=2x^T\Sigma^{-1}(\mu_2-\mu_1)+\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)
+	* The decision boundary is given by
+
+		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\Sigma^{-1}(\mu_1-\mu_2)-\frac{1}{2}\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)=0
+
+.. tip::
+	* TODO: estimation
 
 Discriminative Models
 ======================================================================================
