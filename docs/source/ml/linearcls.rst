@@ -33,6 +33,8 @@ Generative Models
 
 		* :math:`\pi_k=\mathbb{P}(G=k)` is the **class prior** and it parameterises a :math:`\mathrm{Multinoulli}(\pi_1,\cdots,\pi_k)` over the classes.
 		* :math:`f_k(x)=\mathbb{P}(X=x|G=k)` is the **conditional data-density per class** :math:`k`.
+
+.. tip::
 	* We note that since we're interested in the arg max, we won't be needing to compute the normalisation constant in the denominator as that's the same for all classes.
 	* If we assume that the in-class data density is Gaussian, then we have LDA and QDA classifiers.
 
@@ -101,8 +103,17 @@ Prediction
 .. tip::
 	.. math:: \hat{g}=\underset{k}{\arg\max}\left(\hat{p}_k\right) 
 
+Logistic Regression
+--------------------------------------------------------------------------------------
+
+Comparison Between LDA and Logistic Regression
+======================================================================================
+
 **************************************************************************************
 Hyperplane Classifiers
 **************************************************************************************
 .. note::
 	* Here, instead of relying on a discriminator function, we directly model the separation boundary as a piece-wise hyperplane between classes.
+
+Perceptron
+======================================================================================
