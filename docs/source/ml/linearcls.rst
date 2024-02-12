@@ -7,6 +7,7 @@ Linear Methods for Classification
 	* For classification, we can always assign a different colour to each datapoint :math:`x_i` in the input space :math:`\mathcal{X}` as per the output class :math:`k` it belongs to.
 	* The decision boundary in that case is the **partition boundary** in the input space between different coloured inputs.
 	* A classifier is **linear** if the boundary can be expressed as linear equations involving :math:`\mathbf{x}_j`.
+	* We can extend linear classifier to create non-linear decision boundary in the original input space by using transforms, such as basis expansion.
 
 **************************************************************************************
 Probabilistic Classifiers
@@ -77,10 +78,10 @@ Quadratic Discriminator Analysis
 	* We note that
 
 		.. math:: \log(\pi_k\times f_k(x))=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{d}{2}\log(2\pi)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)
-	* We can define :math:`\delta_k(x)=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)
-	* The decision boundary is given by the surface
+	* We can define :math:`\delta_k(x)=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)`
+	* The decision boundary between :math:`k=1` and :math:`k=2` is given by the surface
 
-		.. math:: \log\frac{\pi_1\times f_1(x)}{\pi_2\times f_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\Sigma_1|}{|\Sigma_2|}-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\Sigma_2^{-1}(x-\mu_2)=0
+		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\Sigma_1|}{|\Sigma_2|}-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\Sigma_2^{-1}(x-\mu_2)=0
 
 Linear Discriminator Analysis
 --------------------------------------------------------------------------------------
