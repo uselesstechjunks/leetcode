@@ -36,6 +36,14 @@ Generative Models
 	* We note that since we're interested in the arg max, we won't be needing to compute the normalisation constant in the denominator as that's the same for all classes.
 	* If we assume that the in-class data density is Gaussian, then we have LDA and QDA classifiers.
 
+Inference
+--------------------------------------------------------------------------------------
+.. warning::
+	* For generative models, we usually consider the joint likelihood
+
+		.. math:: \mathbb{P}(X_1=x_1,\cdots,X_N=x_N,G_1=g_i,\cdots,G_N=g_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=k)\times\mathbb{P}(X=x_i|G_i=k)=\pi_k\times \prod_{i=1}^{N}f_k(x_i)
+	* We use MLE to estimate the parameters of :math:`f_k`.
+
 Quadratic Discriminator Analysis
 --------------------------------------------------------------------------------------
 
@@ -62,6 +70,14 @@ Discriminative Models
 	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be written as
 
 		.. math:: \mathbb{P}(G=k|X=x_i)=p_G(k|x_i;\theta)
+
+Inference
+--------------------------------------------------------------------------------------
+.. warning::
+	* For discriminative models, we usually consider the conditional likelihood
+
+		.. math:: \mathbb{P}(G_1=g_i,\cdots,G_N=g_N|X_1=x_1,\cdots,X_N=x_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i|X=x_i)=\prod_{i=1}^{N}p_G(g_i|x_i;\theta)
+	* We use MLE to estimate the parameters :math:`\theta`.
 
 **************************************************************************************
 Hyperplane Classifiers
