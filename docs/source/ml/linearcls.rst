@@ -161,7 +161,7 @@ Logistic Regression
 	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p_x(\beta))` with :math:`p_G(1|x;\theta)=p_x(\beta)` and :math:`p_G(2|x;\theta)=1-p_x(\beta)` where 
 
 		* :math:`\beta=(\beta_{0,1},\beta_{1:,1})^T` and
-		* :math:`p_x(\beta)p_\beta=\frac{\exp(\beta^Tx)}{1+\exp(\beta^Tx)}` is the **sigmoid function**.
+		* :math:`p_x(\beta)=\frac{\exp(\beta^Tx)}{1+\exp(\beta^Tx)}` is the **sigmoid function**.
 	* We introduce a dummy output variable :math:`y` such that
 
 		* :math:`y_i=1\iff g_i=1`
@@ -170,6 +170,11 @@ Logistic Regression
 
 		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_{x_i}(\beta))+(1-y_i)\log(1-p_{x_i}(\beta))=f(\beta)
 	* This is the Binary Cross Entropy (BCE) loss.
+
+.. tip::
+	* To estimate, we need to maximise the MLE.
+
+		.. math:: \pdv{f}{\beta}=\pdv{}{\beta}\left(\sum_{i=1}^{N}y_i\log(\frac{\exp(\beta^Tx_i)}{1+\exp(\beta^Tx_i)})+(1-y_i)\log(\frac{1}{1+\exp(\beta^Tx_i)})\right)=\sum_{i=1}^N x_i(y_i-p_{x_i}(\beta))
 
 Comparison Between LDA and Logistic Regression
 ======================================================================================
