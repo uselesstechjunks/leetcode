@@ -71,25 +71,25 @@ Quadratic Discriminator Analysis
 .. note::
 	* We assume the conditional data density to be Gaussian for each class
 
-		.. math:: f_k(x)=\frac{1}{|\Sigma_k|^{1/2}\left(2\pi\right)^{d/2}}\exp(-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k))
+		.. math:: f_k(x)=\frac{1}{|\boldsymbol{\Sigma}_k|^{1/2}\left(2\pi\right)^{d/2}}\exp(-\frac{1}{2}(x-\mu_k)^T\boldsymbol{\Sigma}_k^{-1}(x-\mu_k))
 	* We note that
 
-		.. math:: \log(\pi_k\times f_k(x))=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{d}{2}\log(2\pi)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)
-	* We can define :math:`\delta_k(x)=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)`
+		.. math:: \log(\pi_k\times f_k(x))=\log(\pi_k)-\frac{1}{2}\log(|\boldsymbol{\Sigma}_k|)-\frac{d}{2}\log(2\pi)-\frac{1}{2}(x-\mu_k)^T\boldsymbol{\Sigma}_k^{-1}(x-\mu_k)
+	* We can define :math:`\delta_k(x)=\log(\pi_k)-\frac{1}{2}\log(|\boldsymbol{\Sigma}_k|)-\frac{1}{2}(x-\mu_k)^T\boldsymbol{\Sigma}_k^{-1}(x-\mu_k)`
 	* The decision boundary between :math:`k=1` and :math:`k=2` is given by the surface
 
-		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\Sigma_1|}{|\Sigma_2|}-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\Sigma_2^{-1}(x-\mu_2)=0
+		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\boldsymbol{\Sigma}_1|}{|\boldsymbol{\Sigma}_2|}-\frac{1}{2}(x-\mu_1)^T\boldsymbol{\Sigma}_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\boldsymbol{\Sigma}_2^{-1}(x-\mu_2)=0
 	* We note that this is quadratic in :math:`x`.
 
 Linear Discriminator Analysis
 --------------------------------------------------------------------------------------
 .. note::
-	* If we model the conditional density in a way such that they all share the covariance (:math:`\Sigma`), then the equation simplifies to a linear one in :math:`x` as the quadratic term :math:`x^T\Sigma^{-1}x` cancels.
+	* If we model the conditional density in a way such that they all share the covariance (:math:`\boldsymbol{\Sigma}`), then the equation simplifies to a linear one in :math:`x` as the quadratic term :math:`x^T\boldsymbol{\Sigma}^{-1}x` cancels.
 
-		.. math:: x^T\Sigma^{-1}x-\mu_1^T\Sigma^{-1}x-x^T\Sigma^{-1}\mu_1+\mu_1^T\Sigma^{-1}\mu_1-x^T\Sigma^{-1}x+\mu_2^T\Sigma^{-1}x+x^T\Sigma^{-1}\mu_2-\mu_2^T\Sigma^{-1}\mu_2=2x^T\Sigma^{-1}(\mu_2-\mu_1)+\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)
+		.. math:: x^T\boldsymbol{\Sigma}^{-1}x-\mu_1^T\boldsymbol{\Sigma}^{-1}x-x^T\boldsymbol{\Sigma}^{-1}\mu_1+\mu_1^T\boldsymbol{\Sigma}^{-1}\mu_1-x^T\boldsymbol{\Sigma}^{-1}x+\mu_2^T\boldsymbol{\Sigma}^{-1}x+x^T\boldsymbol{\Sigma}^{-1}\mu_2-\mu_2^T\boldsymbol{\Sigma}^{-1}\mu_2=2x^T\boldsymbol{\Sigma}^{-1}(\mu_2-\mu_1)+\left(\mu_1^T\boldsymbol{\Sigma}^{-1}\mu_1-\mu_2^T\boldsymbol{\Sigma}^{-1}\mu_2\right)
 	* The decision boundary between :math:`k=1` and :math:`k=2` is given by the hyperplane
 
-		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\Sigma^{-1}(\mu_1-\mu_2)-\frac{1}{2}\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)=0
+		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\boldsymbol{\Sigma}^{-1}(\mu_1-\mu_2)-\frac{1}{2}\left(\mu_1^T\boldsymbol{\Sigma}^{-1}\mu_1-\mu_2^T\boldsymbol{\Sigma}^{-1}\mu_2\right)=0
 	* We note that this is linear in :math:`x`.
 
 .. tip::
@@ -104,7 +104,7 @@ Linear Discriminator Analysis
 			.. math:: \hat{\mu}_k=\frac{\sum_{g_i=k}x_i}{N_k}
 		* Covariance
 		
-			.. math:: \hat{\Sigma}=\frac{1}{N-K}\sum_{k=1}^K\sum_{g_i=k} (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
+			.. math:: \hat{\boldsymbol{\Sigma}}=\frac{1}{N-K}\sum_{k=1}^K\sum_{g_i=k} (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
 
 Discriminative Models
 ======================================================================================
