@@ -87,22 +87,24 @@ Linear Discriminator Analysis
 	* If we model the conditional density in a way such that they all share the covariance (:math:`\Sigma`), then the equation simplifies to a linear one in :math:`x` as the quadratic term :math:`x^T\Sigma^{-1}x` cancels.
 
 		.. math:: x^T\Sigma^{-1}x-\mu_1^T\Sigma^{-1}x-x^T\Sigma^{-1}\mu_1+\mu_1^T\Sigma^{-1}\mu_1-x^T\Sigma^{-1}x+\mu_2^T\Sigma^{-1}x+x^T\Sigma^{-1}\mu_2-\mu_2^T\Sigma^{-1}\mu_2=2x^T\Sigma^{-1}(\mu_2-\mu_1)+\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)
-	* The decision boundary is given by
+	* The decision boundary between :math:`k=1` and :math:`k=2` is given by the hyperplane
 
 		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\Sigma^{-1}(\mu_1-\mu_2)-\frac{1}{2}\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)=0
+	* We note that this is linear in :math:`x`.
 
 .. tip::
+	* Let :math:`N_k=\sum_{i=1}^N\mathbb{I}_{g_i=k}` be the number of labels belonging to a class :math:`k`.
 	* We estimate the priors using MLE
 
-		.. math:: \hat{\pi}_k=\frac{\sum_{i=1}^N\mathbb{I}_{g_i=k}}{N}
+		.. math:: \hat{\pi}_k=\frac{N_k}{N}
 	* The conditional density parameters are also estimated using MLE.
 		
 		* Mean
 
-			.. math:: \hat{\mu}_k=\frac{\sum_{i=1}^N \mathbb{I}_{g_i=k}\times x_i}{\sum_{i=1}^N \mathbb{I}_{g_i=k}}
+			.. math:: \hat{\mu}_k=\frac{\sum_{g_i=k}x_i}{N_k}
 		* Covariance
 		
-			.. math:: \hat{\Sigma}=\sum_{k=1}^K\frac{\mathbb{I}_{g_i=k}}{N-k}\sum_{i=1}^N (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
+			.. math:: \hat{\Sigma}=\sum_{k=1}^K\frac{1}{N-k}\sum_{g_i=k} (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
 
 Discriminative Models
 ======================================================================================
