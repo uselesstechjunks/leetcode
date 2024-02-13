@@ -183,6 +183,13 @@ Logistic Regression
 
 Comparison Between LDA and Logistic Regression
 ======================================================================================
+.. tip::
+	* LDA and LR performs similar and they both evaluate to linear logits. But the way we estimate the parameters of this linear model separates them.
+	* LDA assumes additional structure for the marginal data distribution because of Gaussian nature of the class-conditional density.
+	* On the other hand, LR assumes no structure for the marginal data distribution. We can think of it as if we're free to fit any non-parametric density for the marginal, such as empirical distribution.
+	* Since LDA makes additional assumption about the sturcture, we can estimate them with lower variance if the underlying data density indeed follows a Gaussian.
+	* However, since outliers play a significant role in how the covariance is estimated, it is not robust to outliers/mislabelled examples.
+	* If the data is perfectly separable by a hyperplane, the MLE formulation for LR is ill-defined.
 
 **************************************************************************************
 Hyperplane Classifiers
