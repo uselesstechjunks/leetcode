@@ -26,7 +26,7 @@ Probabilistic Classifiers
 	* For probabilistic classifiers, the discriminant function is usually defined as the posterior probability.
 
 		.. math:: \delta_k(x)=\mathbb{P}(G=k|X=x)
-	* The monotone linear transform here is often the logit function
+	* If :math:`\log` is used as the monotone transform, then the decision boundary forms the logit function
 
 		.. math:: \log\frac{\mathbb{P}(G=1|X=x)}{\mathbb{P}(G=K|X=x)}=\log\delta_1(x)-\log\delta_K(x)
 
@@ -71,38 +71,51 @@ Quadratic Discriminator Analysis
 .. note::
 	* We assume the conditional data density to be Gaussian for each class
 
-		.. math:: f_k(x)=\frac{1}{|\Sigma_k|^{1/2}\left(2\pi\right)^{d/2}}\exp(-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k))
+		.. math:: f_k(x)=\frac{1}{|\boldsymbol{\Sigma}_k|^{1/2}\left(2\pi\right)^{d/2}}\exp(-\frac{1}{2}(x-\mu_k)^T\boldsymbol{\Sigma}_k^{-1}(x-\mu_k))
 	* We note that
 
-		.. math:: \log(\pi_k\times f_k(x))=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{d}{2}\log(2\pi)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)
-	* We can define :math:`\delta_k(x)=\log(\pi_k)-\frac{1}{2}\log(|\Sigma_k|)-\frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\mu_k)`
+		.. math:: \log(\pi_k\times f_k(x))=\log(\pi_k)-\frac{1}{2}\log(|\boldsymbol{\Sigma}_k|)-\frac{d}{2}\log(2\pi)-\frac{1}{2}(x-\mu_k)^T\boldsymbol{\Sigma}_k^{-1}(x-\mu_k)
+	* We can define :math:`\delta_k(x)=\log(\pi_k)-\frac{1}{2}\log(|\boldsymbol{\Sigma}_k|)-\frac{1}{2}(x-\mu_k)^T\boldsymbol{\Sigma}_k^{-1}(x-\mu_k)`
 	* The decision boundary between :math:`k=1` and :math:`k=2` is given by the surface
 
-		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\Sigma_1|}{|\Sigma_2|}-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\Sigma_2^{-1}(x-\mu_2)=0
+		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}-\log\frac{|\boldsymbol{\Sigma}_1|}{|\boldsymbol{\Sigma}_2|}-\frac{1}{2}(x-\mu_1)^T\boldsymbol{\Sigma}_1^{-1}(x-\mu_1)+\frac{1}{2}(x-\mu_2)^T\boldsymbol{\Sigma}_2^{-1}(x-\mu_2)=0
 	* We note that this is quadratic in :math:`x`.
 
 Linear Discriminator Analysis
 --------------------------------------------------------------------------------------
 .. note::
-	* If we model the conditional density in a way such that they all share the covariance (:math:`\Sigma`), then the equation simplifies to a linear one in :math:`x` as the quadratic term :math:`x^T\Sigma^{-1}x` cancels.
+	* If we model the conditional density in a way such that they all share the covariance (:math:`\boldsymbol{\Sigma}`), then the equation simplifies to a linear one in :math:`x` as the quadratic term :math:`x^T\boldsymbol{\Sigma}^{-1}x` cancels.
 
-		.. math:: x^T\Sigma^{-1}x-\mu_1^T\Sigma^{-1}x-x^T\Sigma^{-1}\mu_1+\mu_1^T\Sigma^{-1}\mu_1-x^T\Sigma^{-1}x+\mu_2^T\Sigma^{-1}x+x^T\Sigma^{-1}\mu_2-\mu_2^T\Sigma^{-1}\mu_2=2x^T\Sigma^{-1}(\mu_2-\mu_1)+\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)
-	* The decision boundary is given by
+		.. math:: x^T\boldsymbol{\Sigma}^{-1}x-\mu_1^T\boldsymbol{\Sigma}^{-1}x-x^T\boldsymbol{\Sigma}^{-1}\mu_1+\mu_1^T\boldsymbol{\Sigma}^{-1}\mu_1-x^T\boldsymbol{\Sigma}^{-1}x+\mu_2^T\boldsymbol{\Sigma}^{-1}x+x^T\boldsymbol{\Sigma}^{-1}\mu_2-\mu_2^T\boldsymbol{\Sigma}^{-1}\mu_2=2x^T\boldsymbol{\Sigma}^{-1}(\mu_2-\mu_1)+\left(\mu_1^T\boldsymbol{\Sigma}^{-1}\mu_1-\mu_2^T\boldsymbol{\Sigma}^{-1}\mu_2\right)
+	* The decision boundary between :math:`k=1` and :math:`k=2` is given by the hyperplane
 
-		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\Sigma^{-1}(\mu_1-\mu_2)-\frac{1}{2}\left(\mu_1^T\Sigma^{-1}\mu_1-\mu_2^T\Sigma^{-1}\mu_2\right)=0
+		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\boldsymbol{\Sigma}^{-1}(\mu_1-\mu_2)-\frac{1}{2}(\mu_1-\mu_2)^T\boldsymbol{\Sigma}^{-1}(\mu_1-\mu_2)=0
+	* We note that this is linear in :math:`x`.
 
 .. tip::
+	* Let :math:`N_k=\sum_{i=1}^N\mathbb{I}_{g_i=k}` be the number of labels belonging to a class :math:`k`.
 	* We estimate the priors using MLE
 
-		.. math:: \hat{\pi}_k=\frac{\sum_{i=1}^N\mathbb{I}_{g_i=k}}{N}
+		.. math:: \hat{\pi}_k=\frac{N_k}{N}
 	* The conditional density parameters are also estimated using MLE.
 		
 		* Mean
 
-			.. math:: \hat{\mu}_k=\frac{\sum_{i=1}^N \mathbb{I}_{g_i=k}\times x_i}{\sum_{i=1}^N \mathbb{I}_{g_i=k}}
+			.. math:: \hat{\mu}_k=\frac{\sum_{g_i=k}x_i}{N_k}
 		* Covariance
 		
-			.. math:: \hat{\Sigma}=\sum_{k=1}^K\frac{\mathbb{I}_{g_i=k}}{N-k}\sum_{i=1}^N (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
+			.. math:: \hat{\boldsymbol{\Sigma}}=\frac{1}{N-K}\sum_{k=1}^K\sum_{g_i=k} (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
+
+Regularised Discriminator Analysis
+--------------------------------------------------------------------------------------
+.. note::
+	* As a compromise between QDA and LDA, we can decompose each of the class-covariance matrix into a pooled (shared) matrix and a class-specific matrix.
+
+		.. math:: \hat{\boldsymbol{\Sigma}}_k(\alpha)=\alpha\hat{\boldsymbol{\Sigma}}_k+(1-\alpha)\hat{\boldsymbol{\Sigma}}
+	* The shared-covariance matrix can be further decomposed into a diagonal one (uncorrelated covariates) and one which contains the correlations.
+
+		.. math:: \hat{\boldsymbol{\Sigma}}(\gamma)=\gamma\hat{\boldsymbol{\Sigma}}+(1-\gamma)\hat{\sigma}^2\mathbf{I}
+	* Both these versions form a regularised version of the QDA with :math:`\alpha` and :math:`\gamma` as hyperparameters.
 
 Discriminative Models
 ======================================================================================
@@ -113,7 +126,7 @@ Discriminative Models
 		.. math:: \log\frac{\mathbb{P}(G=k|X=x)}{\mathbb{P}(G=K|X=x)}=\beta_{0,k}+\beta_{1:,k}^Tx
 
 		* Here, each :math:`\beta_{0,k}\in\mathbb{R}` is the bias (intercept) term and :math:`\beta_{1:,k}\in\mathbb{R}^d` is the weight vector.
-		* We can use the notation :math:`\beta_k=(\beta_{0,k}, \beta_{1:,k})\in\mathbb{R}^{d+1}`.
+		* We can use the notation :math:`\beta_k=(\beta_{0,k}, \beta_{1:,k})^T\in\mathbb{R}^{d+1}`.
 	* This can be achieved if we define the density as the softmax, i.e. for :math:`k=1,2,\cdots,K-1`
 
 		.. math:: \mathbb{P}(G=k|X=x)=\frac{\exp(\beta_{0,k}+\beta_{1:,k}^Tx)}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
@@ -144,9 +157,39 @@ Prediction
 
 Logistic Regression
 --------------------------------------------------------------------------------------
+.. note::
+	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p_x(\beta))` with :math:`p_G(1|x;\theta)=p_x(\beta)` and :math:`p_G(2|x;\theta)=1-p_x(\beta)` where 
+
+		* :math:`\beta=(\beta_{0,1},\beta_{1:,1})^T` and
+		* :math:`p_x(\beta)=\frac{\exp(\beta^Tx)}{1+\exp(\beta^Tx)}` is the **sigmoid function**.
+	* We introduce a dummy output variable :math:`y` such that
+
+		* :math:`y_i=1\iff g_i=1`
+		* :math:`y_i=0\iff g_i=2`
+	* The log likelihood in this case can be written as
+
+		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_{x_i}(\beta))+(1-y_i)\log(1-p_{x_i}(\beta))=f(\beta)
+	* This is the Binary Cross Entropy (BCE) loss.
+
+.. tip::
+	* To estimate, we need to maximise the MLE.
+
+		.. math:: \frac{\partial f}{\partial \beta}=\frac{\partial}{\partial \beta}\left(\sum_{i=1}^{N}y_i\log(\frac{\exp(\beta^Tx_i)}{1+\exp(\beta^Tx_i)})+(1-y_i)\log(\frac{1}{1+\exp(\beta^Tx_i)})\right)=\sum_{i=1}^N x_i(y_i-p_{x_i}(\beta))
+	* This can be rewritten in terms of matrix equations as :math:`\mathbf{X}^T(\mathbf{y}-\mathbf{p})`.
+	* We can perform gradient descent, or even Newton's method which involves computing the second derivative
+
+		.. math:: \frac{\partial^2 f}{\mathop{\partial\beta}\mathop{\partial\beta^T}}=-\sum_{i=1}^N x_ix_i^Tp_{x_i}(\beta)(y_i-p_{x_i}(\beta))=-\mathbf{X}^T\mathbf{W}\mathbf{X}
+	* Here :math:`\mathbf{W}` is the diagonal matrix with entries of :math:`p_{x_i}(\beta)(y_i-p_{x_i}(\beta))`.
 
 Comparison Between LDA and Logistic Regression
 ======================================================================================
+.. tip::
+	* LDA and LR performs similar and they both evaluate to linear logits. But the way we estimate the parameters of this linear model separates them.
+	* LDA assumes additional structure for the marginal data distribution because of Gaussian nature of the class-conditional density.
+	* On the other hand, LR assumes no structure for the marginal data distribution. We can think of it as if we're free to fit any non-parametric density for the marginal, such as empirical distribution.
+	* Since LDA makes additional assumption about the sturcture, we can estimate them with lower variance if the underlying data density indeed follows a Gaussian.
+	* However, since outliers play a significant role in how the covariance is estimated, it is not robust to outliers/mislabelled examples.
+	* If the data is perfectly separable by a hyperplane, the MLE formulation for LR is ill-defined.
 
 **************************************************************************************
 Hyperplane Classifiers
