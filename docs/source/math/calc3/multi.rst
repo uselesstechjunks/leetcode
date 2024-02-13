@@ -315,7 +315,8 @@ Gaussian Integral using Polar Substitute
 		* For the limits, :math:`r` varies from 0 to :math:`\infty` and :math:`\theta` varies from 0 to :math:`2\pi`.
 	* Therefore, we have 
 
-		.. math:: \int_0^{2\pi}\left(\int_0^\infty e^{-r^2}r\mathop{dr}\right)\mathop{d\theta}=\int_0^{2\pi}\left(\frac{1}{2}\int_\infty^0 e^t\mathop{dt}\right)\mathop{d\theta}=\int_0^{2\pi}\left(\frac{1}{2}\left[e^t\right]_\infty^0\right)\mathop{d\theta}=\frac{1}{2}\int_0^{2\pi}\mathop{d\theta}=\pi
+		.. math:: I^2=\int_0^{2\pi}\left(\int_0^\infty e^{-r^2}r\mathop{dr}\right)\mathop{d\theta}=\int_0^{2\pi}\left(\frac{1}{2}\int_\infty^0 e^t\mathop{dt}\right)\mathop{d\theta}=\int_0^{2\pi}\left(\frac{1}{2}\left[e^t\right]_\infty^0\right)\mathop{d\theta}=\frac{1}{2}\int_0^{2\pi}\mathop{d\theta}=\pi
+	* So :math:`I=\sqrt{\pi}`.
 
 Useful Resources
 ===========================================================
