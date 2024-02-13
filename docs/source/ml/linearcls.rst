@@ -158,7 +158,10 @@ Prediction
 Logistic Regression
 --------------------------------------------------------------------------------------
 .. note::
-	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p)` where :math:`p_G(1|x;\theta)=p_\beta` and :math:`p_G(2|x;\theta)=1-p_\beta` where :math:`\beta=(\beta_{0,1},\beta_{1:,1})^T`.
+	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p)` where :math:`p_G(1|x;\theta)=p_\beta` and :math:`p_G(2|x;\theta)=1-p_\beta` where 
+
+		* :math:`\beta=(\beta_{0,1},\beta_{1:,1})^T` and
+		* :math:`p_\beta=\frac{\exp(\beta^Tx)}{1+\exp(\beta^Tx)}` is the **sigmoid function**.
 	* We introduce a dummy output variable :math:`y` such that
 
 		* :math:`y_i=1\iff g_i=1`
