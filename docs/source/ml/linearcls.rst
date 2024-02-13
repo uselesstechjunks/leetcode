@@ -126,7 +126,7 @@ Discriminative Models
 		.. math:: \log\frac{\mathbb{P}(G=k|X=x)}{\mathbb{P}(G=K|X=x)}=\beta_{0,k}+\beta_{1:,k}^Tx
 
 		* Here, each :math:`\beta_{0,k}\in\mathbb{R}` is the bias (intercept) term and :math:`\beta_{1:,k}\in\mathbb{R}^d` is the weight vector.
-		* We can use the notation :math:`\beta_k=(\beta_{0,k}, \beta_{1:,k})\in\mathbb{R}^{d+1}`.
+		* We can use the notation :math:`\beta_k=(\beta_{0,k}, \beta_{1:,k})^T\in\mathbb{R}^{d+1}`.
 	* This can be achieved if we define the density as the softmax, i.e. for :math:`k=1,2,\cdots,K-1`
 
 		.. math:: \mathbb{P}(G=k|X=x)=\frac{\exp(\beta_{0,k}+\beta_{1:,k}^Tx)}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
@@ -158,14 +158,14 @@ Prediction
 Logistic Regression
 --------------------------------------------------------------------------------------
 .. note::
-	* For :math:`|\mathcal{G}|=2` (binary classification), the conditional density follows a Bernoulli distribution :math:`G\sim\text{Bernoulli}(p)` where :math:`p_G(1|x;\theta)=p_\theta` and :math:`p_G(2|x;\theta)=1-p_\theta`.
+	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p)` where :math:`p_G(1|x;\theta)=p_\beta` and :math:`p_G(2|x;\theta)=1-p_\beta` where :math:`\beta=(\beta_{0,1},\beta_{1:,1})^T`.
 	* We introduce a dummy output variable :math:`y` such that
 
 		* :math:`y_i=1\iff g_i=1`
 		* :math:`y_i=0\iff g_i=2`
 	* The log likelihood in this case can be written as
 
-		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_\theta)+(1-y_i)\log(1-p_\theta)
+		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_\beta)+(1-y_i)\log(1-p_\beta)=f(\beta)
 	* This is the Binary Cross Entropy (BCE) loss.
 
 Comparison Between LDA and Logistic Regression
