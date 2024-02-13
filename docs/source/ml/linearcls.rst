@@ -157,6 +157,16 @@ Prediction
 
 Logistic Regression
 --------------------------------------------------------------------------------------
+.. note::
+	* For :math:`|\mathcal{G}|=2` (binary classification), the conditional density follows a Bernoulli distribution :math:`G\sim\text{Bernoulli}(p)` where :math:`p_G(1|x;\theta)=p_\theta` and :math:`p_G(2|x;\theta)=1-p_\theta`.
+	* We introduce a dummy output variable :math:`y` such that
+
+		* :math:`y_i=1\iff g_i=1`
+		* :math:`y_i=0\iff g_i=2`
+	* The log likelihood in this case can be written as
+
+		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_\theta)+(1-y_i)\log(1-p_\theta)
+	* This is the Binary Cross Entropy (BCE) loss.
 
 Comparison Between LDA and Logistic Regression
 ======================================================================================
