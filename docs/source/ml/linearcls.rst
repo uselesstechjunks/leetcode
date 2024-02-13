@@ -26,7 +26,7 @@ Probabilistic Classifiers
 	* For probabilistic classifiers, the discriminant function is usually defined as the posterior probability.
 
 		.. math:: \delta_k(x)=\mathbb{P}(G=k|X=x)
-	* The monotone linear transform here is often the logit function
+	* If :math:`\log` is used as the monotone transform, then the decision boundary forms the logit function
 
 		.. math:: \log\frac{\mathbb{P}(G=1|X=x)}{\mathbb{P}(G=K|X=x)}=\log\delta_1(x)-\log\delta_K(x)
 
