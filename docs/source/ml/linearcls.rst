@@ -104,7 +104,7 @@ Linear Discriminator Analysis
 			.. math:: \hat{\mu}_k=\frac{\sum_{g_i=k}x_i}{N_k}
 		* Covariance
 		
-			.. math:: \hat{\Sigma}=\sum_{k=1}^K\frac{1}{N-k}\sum_{g_i=k} (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
+			.. math:: \hat{\Sigma}=\frac{1}{N-K}\sum_{k=1}^K\sum_{g_i=k} (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
 
 Discriminative Models
 ======================================================================================
