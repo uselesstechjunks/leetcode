@@ -174,7 +174,11 @@ Logistic Regression
 .. tip::
 	* To estimate, we need to maximise the MLE.
 
-		.. math:: \pdv{f}{\beta}=\pdv{}{\beta}\left(\sum_{i=1}^{N}y_i\log(\frac{\exp(\beta^Tx_i)}{1+\exp(\beta^Tx_i)})+(1-y_i)\log(\frac{1}{1+\exp(\beta^Tx_i)})\right)=\sum_{i=1}^N x_i(y_i-p_{x_i}(\beta))
+		.. math:: \frac{\partial f}{\partial \beta}=\frac{\partial}{\partial \beta}\left(\sum_{i=1}^{N}y_i\log(\frac{\exp(\beta^Tx_i)}{1+\exp(\beta^Tx_i)})+(1-y_i)\log(\frac{1}{1+\exp(\beta^Tx_i)})\right)=\sum_{i=1}^N x_i(y_i-p_{x_i}(\beta))
+	* This can be rewritten in terms of matrix equations as :math:`\mathbf{X}^T(\mathbf{y}-\mathbf{p})`.
+	* We can perform gradient descent, or even Newton's method which involves computing the second derivative
+
+		.. math:: \frac{\partial^2 f}{\mathop{\partial\beta}\mathop{\partial\beta^T}}=-\sum_{i=1}^N x_ix_i^Tp_{x_i}(\beta)(y_i-p_{x_i}(\beta))=-\mathbf{X}^T\mathbf{W}\mathbf{X}
 
 Comparison Between LDA and Logistic Regression
 ======================================================================================
