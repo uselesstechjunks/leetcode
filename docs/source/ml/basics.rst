@@ -113,6 +113,18 @@ Bayes Classifier
 **********************************************************************************
 Curse of Dimensionality
 **********************************************************************************
+.. note::
+	* As we move to higher dimensional space, the notion of **distance** doesn't follow our intuition.
+	* As this `SO post <https://stats.stackexchange.com/a/99191>`_ puts it (quoting verbatim)
+
+		* Another application, beyond machine learning, is nearest neighbor search: given an observation of interest, find its nearest neighbors (in the sense that these are the points with the smallest distance from the query point). 
+		* But in high dimensions, a curious phenomenon arises: the ratio between the nearest and farthest points approaches 1, i.e. the points essentially become uniformly distant from each other. 
+		* This phenomenon can be observed for wide variety of distance metrics, but it is more pronounced for the Euclidean metric than, say, Manhattan distance metric. 
+		* The premise of nearest neighbor search is that "closer" points are more relevant than "farther" points, but if all points are essentially uniformly distant from each other, the distinction is meaningless.
+	* More resource on this:
+
+		* `On the Surprising Behavior of Distance Metrics in High Dimensional Space <https://bib.dbvis.de/uploadedFiles/155.pdf>`_
+		* `When Is "Nearest Neighbor" Meaningful? <https://members.loria.fr/MOBerger/Enseignement/Master2/Exposes/beyer.pdf>`_
 
 **********************************************************************************
 Statistical Models
