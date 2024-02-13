@@ -158,17 +158,17 @@ Prediction
 Logistic Regression
 --------------------------------------------------------------------------------------
 .. note::
-	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p)` where :math:`p_G(1|x;\theta)=p_\beta` and :math:`p_G(2|x;\theta)=1-p_\beta` where 
+	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p_x(\beta))` with :math:`p_G(1|x;\theta)=p_x(\beta)` and :math:`p_G(2|x;\theta)=1-p_x(\beta)` where 
 
 		* :math:`\beta=(\beta_{0,1},\beta_{1:,1})^T` and
-		* :math:`p_\beta=\frac{\exp(\beta^Tx)}{1+\exp(\beta^Tx)}` is the **sigmoid function**.
+		* :math:`p_x(\beta)p_\beta=\frac{\exp(\beta^Tx)}{1+\exp(\beta^Tx)}` is the **sigmoid function**.
 	* We introduce a dummy output variable :math:`y` such that
 
 		* :math:`y_i=1\iff g_i=1`
 		* :math:`y_i=0\iff g_i=2`
 	* The log likelihood in this case can be written as
 
-		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_\beta)+(1-y_i)\log(1-p_\beta)=f(\beta)
+		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_{x_i}(\beta))+(1-y_i)\log(1-p_{x_i}(\beta))=f(\beta)
 	* This is the Binary Cross Entropy (BCE) loss.
 
 Comparison Between LDA and Logistic Regression
