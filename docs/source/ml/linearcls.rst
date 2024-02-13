@@ -89,7 +89,7 @@ Linear Discriminator Analysis
 		.. math:: x^T\boldsymbol{\Sigma}^{-1}x-\mu_1^T\boldsymbol{\Sigma}^{-1}x-x^T\boldsymbol{\Sigma}^{-1}\mu_1+\mu_1^T\boldsymbol{\Sigma}^{-1}\mu_1-x^T\boldsymbol{\Sigma}^{-1}x+\mu_2^T\boldsymbol{\Sigma}^{-1}x+x^T\boldsymbol{\Sigma}^{-1}\mu_2-\mu_2^T\boldsymbol{\Sigma}^{-1}\mu_2=2x^T\boldsymbol{\Sigma}^{-1}(\mu_2-\mu_1)+\left(\mu_1^T\boldsymbol{\Sigma}^{-1}\mu_1-\mu_2^T\boldsymbol{\Sigma}^{-1}\mu_2\right)
 	* The decision boundary between :math:`k=1` and :math:`k=2` is given by the hyperplane
 
-		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\boldsymbol{\Sigma}^{-1}(\mu_1-\mu_2)-\frac{1}{2}\left(\mu_1^T\boldsymbol{\Sigma}^{-1}\mu_1-\mu_2^T\boldsymbol{\Sigma}^{-1}\mu_2\right)=0
+		.. math:: \log\frac{\delta_1(x)}{\delta_2(x)}=\log\frac{\pi_1}{\pi_2}+x^T\boldsymbol{\Sigma}^{-1}(\mu_1-\mu_2)-\frac{1}{2}(\mu_1-\mu_2)^T\boldsymbol{\Sigma}^{-1}(\mu_1-\mu_2)=0
 	* We note that this is linear in :math:`x`.
 
 .. tip::
