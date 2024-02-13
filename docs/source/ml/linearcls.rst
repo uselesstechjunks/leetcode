@@ -106,6 +106,17 @@ Linear Discriminator Analysis
 		
 			.. math:: \hat{\boldsymbol{\Sigma}}=\frac{1}{N-K}\sum_{k=1}^K\sum_{g_i=k} (x_i-\hat{\mu}_k)(x_i-\hat{\mu}_k)^T
 
+Regularised Discriminator Analysis
+--------------------------------------------------------------------------------------
+.. note::
+	* As a compromise between QDA and LDA, we can decompose each of the class-covariance matrix into a pooled (shared) matrix and a class-specific matrix.
+
+		.. math:: \hat{\boldsymbol{\Sigma}}_k(\alpha)=\alpha\hat{\boldsymbol{\Sigma}}_k+(1-\alpha)\hat{\boldsymbol{\Sigma}}
+	* The shared-covariance matrix can be further decomposed into a diagonal one (uncorrelated covariates) and one which contains the correlations.
+
+		.. math:: \hat{\boldsymbol{\Sigma}}(\gamma)=\gamma\hat{\boldsymbol{\Sigma}}+(1-\gamma)\hat{\sigma}^2\mathbf{I}
+	* Both these versions form a regularised version of the QDA.
+
 Discriminative Models
 ======================================================================================
 .. note::
