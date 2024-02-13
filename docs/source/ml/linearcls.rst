@@ -179,6 +179,7 @@ Logistic Regression
 	* We can perform gradient descent, or even Newton's method which involves computing the second derivative
 
 		.. math:: \frac{\partial^2 f}{\mathop{\partial\beta}\mathop{\partial\beta^T}}=-\sum_{i=1}^N x_ix_i^Tp_{x_i}(\beta)(y_i-p_{x_i}(\beta))=-\mathbf{X}^T\mathbf{W}\mathbf{X}
+	* Here :math:`\mathbf{W}` is the diagonal matrix with entries of :math:`p_{x_i}(\beta)(y_i-p_{x_i}(\beta))`.
 
 Comparison Between LDA and Logistic Regression
 ======================================================================================
