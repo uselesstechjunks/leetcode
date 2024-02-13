@@ -125,6 +125,7 @@ Curse of Dimensionality
 
 		* `On the Surprising Behavior of Distance Metrics in High Dimensional Space <https://bib.dbvis.de/uploadedFiles/155.pdf>`_
 		* `When Is "Nearest Neighbor" Meaningful? <https://members.loria.fr/MOBerger/Enseignement/Master2/Exposes/beyer.pdf>`_
+		* `Fractional Norms and Quasinorms Do Not Help to Overcome the Curse of Dimensionality <https://www.mdpi.com/1099-4300/22/10/1105/pdf?version=1603175755>`_
 
 **********************************************************************************
 Statistical Models
