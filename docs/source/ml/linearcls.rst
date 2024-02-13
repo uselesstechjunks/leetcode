@@ -115,7 +115,7 @@ Regularised Discriminator Analysis
 	* The shared-covariance matrix can be further decomposed into a diagonal one (uncorrelated covariates) and one which contains the correlations.
 
 		.. math:: \hat{\boldsymbol{\Sigma}}(\gamma)=\gamma\hat{\boldsymbol{\Sigma}}+(1-\gamma)\hat{\sigma}^2\mathbf{I}
-	* Both these versions form a regularised version of the QDA.
+	* Both these versions form a regularised version of the QDA with :math:`\alpha` and :math:`\gamma` as hyperparameters.
 
 Discriminative Models
 ======================================================================================
