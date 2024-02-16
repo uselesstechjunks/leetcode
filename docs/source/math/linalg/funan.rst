@@ -27,6 +27,7 @@ Addition of two functions
 .. tip::
 	* When we add two vectors, :math:`\mathbf{u}` and :math:`\mathbf{v}`, we add the corresponding values for each dimension.
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`, the dimensions are the values :math:`x\in\mathcal{X}`. 
+
 		* [Vector Addition]: We can define **vector addition** of a function for each "index" :math:`x` as
 
 			.. math:: (f + g)(x) = f(x) + g(x)
