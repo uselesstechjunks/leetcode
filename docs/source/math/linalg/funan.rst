@@ -31,10 +31,10 @@ Addition and Scalar Multiplication
 		* [Scalar Multiplication]: We multiply :math:`\alpha\in\mathcal{F}` to the value of each dimension.
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`, the dimensions are :math:`x\in\mathcal{X}`. 
 
-		* [Vector Addition]: We can define vector addition of a function for each "dimension" :math:`x` as
+		* [Vector Addition]: We can define vector addition of a function for each "dimension" :math:`x`
 
 			.. math:: (f + g)(x) = f(x) + g(x)
-		* [Scalar Multiplication]: For any :math:`\alpha\in\mathcal{F}`, we have, we can define scalar multiplication for each "dimension" :math:`x` as
+		* [Scalar Multiplication]: For any :math:`\alpha\in\mathcal{F}`, we can define scalar multiplication for each "dimension" :math:`x`
 
 			.. math:: (\alpha\cdot f)(x) = \alpha\cdot f(x)
 	* We don't need to restrict :math:`\mathcal{X}` and :math:`\mathcal{Y}` to reals.
