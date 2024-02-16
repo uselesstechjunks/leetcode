@@ -22,7 +22,7 @@ Functions are vectors : Intuition
 		.. math:: \mathbf{y}=\{(x,y)|x,y\in\mathbb{R}\}
 	* This is the way functions are defined in set theory.
 
-Addition of two functions
+Addition and Scalar Multiplication
 --------------------------------------------------------------------------------
 .. tip::
 	* For finite dimensional vectors, :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, where :math:`\mathcal{F}` is the underlying field:
