@@ -714,11 +714,19 @@ TOD: explain the memorylessness property of the exponential and connection with 
 
 Gaussian
 -------------------------------------
+.. note::
+	* The density of the rv is given by 
+
+		.. math:: f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{1}{2\sigma^2}(x-\mu)^2)
+	* :math:`\mu,\sigma\in\mathbb{R}` are the mean and standard-deviation parameters.
 
 Multivariate Gaussian
 -------------------------------------
-TODO
+.. note::
+	* bleh
 
+Important Properties of Gaussian Densities
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. note::
 	* explain the shape of 2d normal density 
 	* independent case - circles in contours
