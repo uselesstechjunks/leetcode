@@ -726,7 +726,7 @@ Multivariate Gaussian
 	* bleh
 
 Important Properties of Gaussian Densities
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* explain the shape of 2d normal density 
 	* independent case - circles in contours
