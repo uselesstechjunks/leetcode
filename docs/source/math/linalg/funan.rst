@@ -42,7 +42,7 @@ Addition and Scalar Multiplication
 		* As long as :math:`+` is well-defined in :math:`\mathcal{Y}`, we can define vector addition for functions.
 		* As long as elements in :math:`\mathcal{Y}` satisfy scalar multiplication for some underlying field, we can also define scalar multiplication for functions.
 
-Inner Product
+Function Inner Product
 --------------------------------------------------------------------------------
 .. tip::
 	* For finite dimensional vectors :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, to compute the inner (dot) product
@@ -59,13 +59,24 @@ Inner Product
 			.. math:: \langle f,g\rangle=\int_\limits{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
 		* We note that we need to have multiplication between elements, :math:`\cdot`, well defined in :math:`\mathcal{Y}`.
 
-Basis in functional space
-================================================================================
-
 Function Norm
 ================================================================================
 Lp Space
 --------------------------------------------------------------------------------
+.. note::
+	* The inner product defined above induces a norm
+
+		.. math:: ||f||^2=\langle f,f\rangle=\int_\limits{\mathcal{X}}|f(x)|^2\mathop{dx}
+	* More generally, we can have
+
+		.. math:: ||f||_{L_p}=\left(\int_\limits{\mathcal{X}}|f(x)|^p\mathop{dx}\right)^{\frac{1}{p}}
+	* For more general measurable spaces where we have a measure :math:`\mu(x)` defined
+
+		.. math:: ||f||_{L_p(\mathcal{X},\mu)}=\left(\int_\limits{\mathcal{X}}|f(x)|^p\mathop{d\mu}(x)\right)^{\frac{1}{p}}
+	* For :math:`p=\infty`
+
+		.. math:: ||f||_{L_\infty(\mathcal{X},\mu)}=\text{ess}\sup_\limits{x\in\mathcal{X}}|f(x)|
+
 Sobolev Space
 --------------------------------------------------------------------------------
 Holder Space
