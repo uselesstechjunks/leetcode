@@ -26,7 +26,7 @@ Principle Component Analysis
 Matrix Identities
 ********************************************************************************
 .. note::
-	* Matrix Inversion Lemma: 
+	* Matrix Inversion Lemma (needs 1 inverse instead of 3): 
 
 		.. math:: (\mathbf{A}^{-1}+\mathbf{B}^{-1})^{-1}=\mathbf{A}-\mathbf{A}(\mathbf{A}+\mathbf{B})^{-1}\mathbf{A}
 
