@@ -16,7 +16,7 @@ Convex Set
 Convex Function
 ========================================================================================
 .. note::
-	* We consider of a function :math:`f\mathcal{X}\mapsto\mathcal{Y}.
+	* We consider of a function :math:`f:\mathcal{X}\mapsto\mathcal{Y}`.
 	* If :math:`A\subseteq\mathcal{X}` is a convex subset, then its image, :math:`f(A)` also forms a convex subset in :math:`\mathcal{Y}`.
 	* Formally, for any :math:`0\leq\alpha\leq 1`,
 
