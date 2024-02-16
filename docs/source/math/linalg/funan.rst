@@ -77,9 +77,9 @@ Lp Space
 
 		.. math:: ||f||_{L_\infty(\mathcal{X},\mu)}=\text{ess}\sup_\limits{x\in\mathcal{X}}|f(x)|
 
-FUnction Basis
+Function Basis
 ================================================================================
-Fourier Transform
+Fourier Basis
 --------------------------------------------------------------------------------
 .. note::
 	* Let us define the basis vectors of a finite dimensional vector space :math:`V_{\mathcal{F}}` as
