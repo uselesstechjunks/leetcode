@@ -25,7 +25,7 @@ Functions are vectors : Intuition
 Addition and Scalar Multiplication
 --------------------------------------------------------------------------------
 .. tip::
-	* For finite dimensional vectors, :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, where :math:`\mathcal{F}` is the underlying field:
+	* For finite dimensional vectors :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, where :math:`\mathcal{F}` is the underlying field:
 
 		* [Vector Addition]: We add the corresponding values for each dimension.
 		* [Scalar Multiplication]: We multiply :math:`\alpha\in\mathcal{F}` to the value of each dimension.
@@ -41,6 +41,23 @@ Addition and Scalar Multiplication
 
 		* As long as :math:`+` is well-defined in :math:`\mathcal{Y}`, we can define vector addition for functions.
 		* As long as elements in :math:`\mathcal{Y}` satisfy scalar multiplication for some underlying field, we can also define scalar multiplication for functions.
+
+Inner Product
+--------------------------------------------------------------------------------
+.. tip::
+	* For finite dimensional vectors :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, to compute the inner (dot) product
+
+		* We multiply the corresponding values for each dimension.
+		* We sum the results across all dimensions.
+
+			.. math:: \langle\mathbf{u},\mathbf{v}\rangle=\sum_{i=1}^n u_i\cdot v_i
+	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`
+
+		* We can do the multiplication for each dimension :math:`x`
+		* However, since :math:`x` is uncountable, we replace the sum with integration
+
+			.. math:: \langle f,g\rangle=\int_\limits{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
+		* We note that we need to have multiplication between elements, :math:`\cdot`, well defined in :math:`\mathcal{Y}`.
 
 Basis in functional space
 ================================================================================
