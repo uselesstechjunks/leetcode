@@ -725,7 +725,7 @@ Multivariate Gaussian
 .. note::
 	* We write :math:`X\sim\mathcal{N}(\boldsymbol{\mu},\boldsymbol{\Sigma})` to represent an rv :math:`X\in\mathbb{R}^d` with Gaussian density, which is given by
 
-		.. math:: f_X(\mathbf{x};\boldsymbol{\mu},\boldsymbol{\Sigma})=(2\pi)^{-\frac{d}{2}}|\boldsymbol{\Sigma}|^{-1}\exp(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T\boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu}))
+		.. math:: f_X(\mathbf{x};\boldsymbol{\mu},\boldsymbol{\Sigma})=(2\pi)^{-\frac{d}{2}}|\boldsymbol{\Sigma}|^{-\frac{1}{2}}\exp(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T\boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu}))
 	* :math:`\boldsymbol{\mu}\in\mathbb{R}^d` is the mean and :math:`\boldsymbol{\Sigma}\in\mathbb{R}^{d\times d}` is the covariance matrix.	
 
 Important Properties of Gaussian Densities
