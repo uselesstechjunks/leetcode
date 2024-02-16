@@ -75,7 +75,7 @@ Lp Space
 		.. math:: ||f||_{L_p(\mathcal{X},\mu)}=\left(\int_\limits{\mathcal{X}}|f(x)|^p\mathop{d\mu}(x)\right)^{\frac{1}{p}}
 	* For :math:`p=\infty`
 
-		.. math:: ||f||_{L_\infty(\mathcal{X},\mu)}=\text{ess}\sup_\limits{x\in\mathcal{X}}|f(x)|
+		.. math:: ||f||_{L_\infty(\mathcal{X},\mu)}=\textbf{ess}\sup_\limits{x\in\mathcal{X}}|f(x)|
 
 Sobolev Space
 --------------------------------------------------------------------------------
