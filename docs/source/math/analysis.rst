@@ -1,24 +1,21 @@
 Analysis & Topology
 ------------------------------
 #. Topological Spaces
+
 	#. Metric Space
 	#. Product Space
 	#. Quotient Space
 #. Convergence in Topological Spaces
+
 	#. Point-wise convergence
 	#. Uniform convergence
 	#. Completeness & Sequential completeness
-#. Functional Spaces
-	#. Banach Space
-	#. Hilbert Space
-		#. Reproducing Kernel Hilbert Space (RKHS)
-	#. Lp Space
-	#. Sobolev Space
-	#. Holder's Space
 #. Continuity
+
 	#. Uniform continuity
 #. Measure
 #. Integration
+
 	#. Riemann's Integral
 	#. Lebesgue Integral
 
