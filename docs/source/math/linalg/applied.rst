@@ -37,4 +37,6 @@ Matrix Identities
 		.. math:: (\mathbf{A}^{-1}+\mathbf{B}^{-1})^{-1}=\mathbf{A}-\mathbf{A}(\mathbf{A}+\mathbf{B})^{-1}\mathbf{A}
 
 		* 1d verification: :math:`\frac{1}{1/a+1/b}=\frac{ab}{a+b}=\frac{a^2-a^2+ab}{a+b}=\frac{a(a+b)-a^2}{a+b}=a-a(a+b)^{-1}a`
-	
+	* For determinants:
+
+		.. math:: |\mathbf{Z}+\mathbf{U}\mathbf{W}\mathbf{V}^T|=|\mathbf{Z}||\mathbf{W}||\mathbf{X}|
