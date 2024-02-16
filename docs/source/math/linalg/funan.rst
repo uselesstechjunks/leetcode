@@ -54,9 +54,9 @@ Function Inner Product
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`
 
 		* We can do the multiplication for each dimension :math:`x`
-		* However, since :math:`x` is uncountable, we replace the sum with integration
+		* However, since :math:`\mathcal{X}` is uncountable, we replace the sum with integration
 
-			.. math:: \langle f,g\rangle=\int_\limits{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
+			.. math:: \langle f,g\rangle=\int_{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
 		* We note that we need to have multiplication between elements, :math:`\cdot`, well defined in :math:`\mathcal{Y}`.
 
 Function Norm
@@ -66,20 +66,31 @@ Lp Space
 .. note::
 	* The inner product defined above induces a norm
 
-		.. math:: ||f||^2=\langle f,f\rangle=\int_\limits{\mathcal{X}}|f(x)|^2\mathop{dx}
+		.. math:: ||f||^2=\langle f,f\rangle=\int_{\mathcal{X}}|f(x)|^2\mathop{dx}
 	* More generally, we can have
 
-		.. math:: ||f||_{L_p}=\left(\int_\limits{\mathcal{X}}|f(x)|^p\mathop{dx}\right)^{\frac{1}{p}}
+		.. math:: ||f||_{L_p}=\left(\int_{\mathcal{X}}|f(x)|^p\mathop{dx}\right)^{\frac{1}{p}}
 	* For more general measurable spaces where we have a measure :math:`\mu(x)` defined
 
-		.. math:: ||f||_{L_p(\mathcal{X},\mu)}=\left(\int_\limits{\mathcal{X}}|f(x)|^p\mathop{d\mu}(x)\right)^{\frac{1}{p}}
+		.. math:: ||f||_{L_p(\mathcal{X},\mu)}=\left(\int_{\mathcal{X}}|f(x)|^p\mathop{d\mu}(x)\right)^{\frac{1}{p}}
 	* For :math:`p=\infty`
 
-		.. math:: ||f||_{L_\infty(\mathcal{X},\mu)}=\textbf{ess}\sup_\limits{x\in\mathcal{X}}|f(x)|
+		.. math:: ||f||_{L_\infty(\mathcal{X},\mu)}=\text{ess}\sup_\limits{x\in\mathcal{X}}|f(x)|
 
-Sobolev Space
+FUnction Basis
+================================================================================
+Fourier Transform
 --------------------------------------------------------------------------------
-Holder Space
---------------------------------------------------------------------------------
-Hilbert Space
---------------------------------------------------------------------------------
+.. note::
+	* Let us define the basis vectors of a finite dimensional vector space :math:`V_{\mathcal{F}}` as
+
+		.. math:: \{\mathbf{e}_1,\cdots\mathbf{e}_n\}
+	* Any vector :math:`\mathbf{u}\in V_{\mathcal{F}}` can be written as
+
+		.. math:: \mathbf{u}=\langle \mathbf{u},\mathbf{e}_1\rangle+\cdots\langle \mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n \langle \mathbf{u},\mathbf{e}_i\rangle
+	* For well-defined (i.e. can define :math:`L_2` norm as per above) periodic functions, we can have basis functions of odd and even frequencies
+	* TODO:
+
+.. seealso::
+	* `Functions are vectors <https://www.youtube.com/watch?v=LSbpQawNzU8>`_
+	* `THE GEOMETRY OF MATHEMATICAL METHODS <https://books.physics.oregonstate.edu/GMM/complete.html>`_
