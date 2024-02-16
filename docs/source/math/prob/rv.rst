@@ -715,15 +715,18 @@ TOD: explain the memorylessness property of the exponential and connection with 
 Gaussian
 -------------------------------------
 .. note::
-	* The density of the rv is given by 
+	* We write :math:`X\sim\mathcal{N}(\mu,\sigma)` to represent an rv :math:`X\in\mathbb{R}` with Gaussian density, which is given by
 
 		.. math:: f_X(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{1}{2\sigma^2}(x-\mu)^2)
-	* :math:`\mu,\sigma\in\mathbb{R}` are the mean and standard-deviation parameters.
+	* :math:`\mu,\sigma\in\mathbb{R}` are the mean and standard-deviation parameters.	
 
 Multivariate Gaussian
 -------------------------------------
 .. note::
-	* bleh
+	* We write :math:`X\sim\mathcal{N}(\boldsymbol{\mu},\boldsymbol{\Sigma})` to represent an rv :math:`X\in\mathbb{R}^d` with Gaussian density, which is given by
+
+		.. math:: f_X(\mathbf{x};\boldsymbol{\mu},\boldsymbol{\Sigma})=(2\pi)^{-\frac{d}{2}}|\boldsymbol{\Sigma}|^{-1}\exp(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T\boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu}))
+	* :math:`\boldsymbol{\mu}\in\mathbb{R}^d` is the mean and :math:`\boldsymbol{\Sigma}\in\mathbb{R}^{d\times d}` is the covariance matrix.	
 
 Important Properties of Gaussian Densities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
