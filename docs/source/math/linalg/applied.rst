@@ -26,9 +26,15 @@ Principle Component Analysis
 Matrix Identities
 ********************************************************************************
 .. note::
-	* Matrix Inversion Lemma (needs 1 inverse instead of 3): 
+	* Matrix Inversion Lemma (Woodburry Identity):
+
+		.. math:: (\mathbf{Z}+\mathbf{U}\mathbf{W}\mathbf{V}^T)^{-1}=\mathbf{Z}^{-1}-\mathbf{Z}^{-1}\mathbf{U}\mathbf{X}\mathbf{V}^T\mathbf{Z}^{-1}
+
+		* Where :math:`\mathbf{X}=\mathbf{W}^{-1}+\mathbf{V}^T\mathbf{Z}^{-1}\mathbf{U}`
+
+	* If :math:`\mathbf{A}` and :math:`\mathbf{B}` are symmetric
 
 		.. math:: (\mathbf{A}^{-1}+\mathbf{B}^{-1})^{-1}=\mathbf{A}-\mathbf{A}(\mathbf{A}+\mathbf{B})^{-1}\mathbf{A}
 
 		* 1d verification: :math:`\frac{1}{1/a+1/b}=\frac{ab}{a+b}=\frac{a^2-a^2+ab}{a+b}=\frac{a(a+b)-a^2}{a+b}=a-a(a+b)^{-1}a`
-	* Woodburry Identity:
+	
