@@ -109,9 +109,13 @@ Fourier Basis
 	* We can have an orthonormal set of basis vectors (not necessarily unit-vectors) for a finite dimensional vector space :math:`V_{\mathcal{F}}` as
 
 		.. math:: \{\mathbf{b}_1,\cdots\mathbf{b}_n\}
-	* Any vector :math:`\mathbf{u}\in V_{\mathcal{F}}` then can be expressed in terms of inner product with the basis vectors and then taking a finite sum
+	
+		* For any vector :math:`\mathbf{u}\in V_{\mathcal{F}}`, we can find the proejection of it onto the basis vectors as :math:`\langle\mathbf{u},\mathbf{b}_i\rangle`.
+		* The length of the basis vectors are given by :math:`||\mathbf{b}_i||_2^2=\langle\mathbf{b}_i,\mathbf{b}_i\rangle`.
+		* Let :math:`a_i=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`.
+		* :math:`\mathbf{u}` then can be expressed as
 
-		.. math:: \mathbf{u}=\langle \mathbf{u},\mathbf{b}_1\rangle/||\mathbf{b}_1||_2+\cdots\langle \mathbf{u},\mathbf{b}_n\rangle/||\mathbf{b}_n||_2=\sum_{i=1}^n \langle \mathbf{u},\mathbf{b}_i\rangle/||\mathbf{b}_i||_2
+		.. math:: \mathbf{u}=a_1\cdot\mathbf{b}_i+\cdots a_n\cdot\mathbf{b}_n=\sum_{i=1}^na_i\cdot\mathbf{b}_i
 	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have `basis functions of odd and even frequencies <https://math.stackexchange.com/a/32663>`_.
 	* `Schauder basis <https://en.wikipedia.org/wiki/Schauder_basis>`_ (allows for infinite sum over basis):
 
