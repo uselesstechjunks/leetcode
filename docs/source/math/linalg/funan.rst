@@ -104,8 +104,16 @@ Fourier Basis
 	* Any vector :math:`\mathbf{u}\in V_{\mathcal{F}}` can be written as
 
 		.. math:: \mathbf{u}=\langle \mathbf{u},\mathbf{e}_1\rangle+\cdots\langle \mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n \langle \mathbf{u},\mathbf{e}_i\rangle
-	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have basis functions of odd and even frequencies
-	* TODO:
+	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have basis functions of odd and even frequencies.
+	* `Schauder basis <https://en.wikipedia.org/wiki/Schauder_basis>`_ (allows for infinite sum over basis):
+
+		* A basis is defined in terms of an infinite set of orthonormal functions
+
+			.. \{1, \{1, (\sqrt{2}\sin(2\pi nx))_{n=1}^\infty, (\sqrt{2}\cos(2\pi nx))_{n=1}^\infty\}
+		* The :math:`\sin` functions account for odd-frequencies and the :math:`\cos` functions account for even-frequencies.
+
+Integral Transforms
+--------------------------------------------------------------------------------
 
 .. seealso::
 	* `Functions are vectors <https://www.youtube.com/watch?v=LSbpQawNzU8>`_
