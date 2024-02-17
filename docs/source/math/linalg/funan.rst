@@ -121,6 +121,9 @@ Fourier Basis
 			.. math:: \mathbf{u}=\langle\mathbf{u},\mathbf{e}_1\rangle+\cdots\langle\mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n\langle\mathbf{u},\mathbf{e}_i\rangle
 
 			* Here :math:`\mathbf{e}_i=\frac{\mathbf{b}_i}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`
+			* [Operator view]: We can define :math:`a_i(\cdot)=\frac{\langle\cdot,\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}` as an operator which can take any vector :math:`\mathbf{u}` and computes the projection onto it, :math:`(a_i)(\mathbf{u})=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`
+
+				.. math:: \mathbf{u}=\sum_{i=1}^n(a_i)(\mathbf{u})
 	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have `basis functions of odd and even frequencies <https://math.stackexchange.com/a/32663>`_.
 	* `Schauder basis <https://en.wikipedia.org/wiki/Schauder_basis>`_ (allows for infinite sum over basis):
 
