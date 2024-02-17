@@ -133,7 +133,9 @@ Fourier Basis
 
 			.. math:: \{1, (\sqrt{2}\sin(2\pi nx))_{n=0}^\infty, (\sqrt{2}\cos(2\pi nx))_{n=0}^\infty\}
 		* The :math:`\sin` functions account for odd-frequencies and the :math:`\cos` functions account for even-frequencies.
-		* We define the inner products as
+	* Here we have 3 sets of basis functions, so we use 3 different kinds of normalised-projection co-efficients, :math:`a_0,a_i,b_i`
+
+		.. math:: f(x)=a_0\cdot1+\sum_{n=1}^\infty a_i\cdot\cos(2\pi nx)+\sum_{n=1}^\infty b_i\cdot\sin(2\pi nx)
 
 More Basis - Integral Transforms
 --------------------------------------------------------------------------------
