@@ -24,7 +24,7 @@ Functions are vectors : Intuition
 
 Addition and Scalar Multiplication
 --------------------------------------------------------------------------------
-.. tip::
+.. note::
 	* For finite dimensional vectors :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, where :math:`\mathcal{F}` is the underlying field:
 
 		* [Vector Addition]: We add the corresponding values for each dimension.
@@ -44,7 +44,7 @@ Addition and Scalar Multiplication
 
 Inner Product
 --------------------------------------------------------------------------------
-.. tip::
+.. note::
 	* For finite dimensional vectors :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, to compute the inner (dot) product
 
 		* We multiply the corresponding values for each dimension.
