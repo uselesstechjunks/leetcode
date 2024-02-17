@@ -103,8 +103,6 @@ Metric
 
 Function Basis
 ================================================================================
-Fourier Basis
---------------------------------------------------------------------------------
 .. note::
 	* We can have an orthonormal set of basis vectors (not necessarily unit-vectors) for a finite dimensional vector space :math:`V_{\mathcal{F}}` as
 
@@ -112,7 +110,7 @@ Fourier Basis
 	
 		* For any vector :math:`\mathbf{u}`, we can find the proejection of it onto the basis vectors as :math:`\langle\mathbf{u},\mathbf{b}_i\rangle`.
 		* The length of the basis vectors are given by :math:`||\mathbf{b}_i||_2^2=\langle\mathbf{b}_i,\mathbf{b}_i\rangle`.
-		* Let :math:`a_i=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`.
+		* Let :math:`a_i=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}` be the projection normalised for the length of the basis vector :math:`mathbf{b}_i`.
 		* :math:`\mathbf{u}` then can be expressed as
 
 			.. math:: \mathbf{u}=a_1\cdot\mathbf{b}_i+\cdots a_n\cdot\mathbf{b}_n=\sum_{i=1}^na_i\cdot\mathbf{b}_i
@@ -124,6 +122,10 @@ Fourier Basis
 			* [Operator view]: We can define :math:`a_i(\cdot)=\frac{\langle\cdot,\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}` as an operator which can take any vector :math:`\mathbf{u}` and computes the projection onto it, :math:`(a_i)(\mathbf{u})=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`
 
 				.. math:: \mathbf{u}=\sum_{i=1}^n(a_i)(\mathbf{u})
+
+Fourier Basis
+--------------------------------------------------------------------------------
+.. note::
 	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have `basis functions of odd and even frequencies <https://math.stackexchange.com/a/32663>`_.
 	* `Schauder basis <https://en.wikipedia.org/wiki/Schauder_basis>`_ (allows for infinite sum over basis):
 
@@ -133,7 +135,7 @@ Fourier Basis
 		* The :math:`\sin` functions account for odd-frequencies and the :math:`\cos` functions account for even-frequencies.
 		* We define the inner products as
 
-Integral Transforms
+More Basis - Integral Transforms
 --------------------------------------------------------------------------------
 
 .. seealso::
