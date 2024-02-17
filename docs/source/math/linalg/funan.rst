@@ -42,7 +42,7 @@ Addition and Scalar Multiplication
 		* As long as :math:`+` is well-defined in :math:`\mathcal{Y}`, we can define vector addition for functions.
 		* As long as elements in :math:`\mathcal{Y}` satisfy scalar multiplication for some underlying field, we can also define scalar multiplication for functions.
 
-Function Inner Product
+Inner Product
 --------------------------------------------------------------------------------
 .. tip::
 	* For finite dimensional vectors :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, to compute the inner (dot) product
@@ -59,23 +59,39 @@ Function Inner Product
 			.. math:: \langle f,g\rangle=\int_{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
 		* We note that we need to have multiplication between elements, :math:`\cdot`, well defined in :math:`\mathcal{Y}`.
 
-Function Norm
+Norm
 ================================================================================
 Lp Space
 --------------------------------------------------------------------------------
 .. note::
+	* The inner product for finite vectors induces a norm (:math:`l_2`)
+
+		.. math:: ||\mathbf{u}||_2^2=\langle \mathbf{u},\mathbf{u}\rangle=\sum_{i=1}^n|u_i|^2
 	* The inner product defined above induces a norm
 
-		.. math:: ||f||^2=\langle f,f\rangle=\int_{\mathcal{X}}|f(x)|^2\mathop{dx}
+		.. math:: ||f||_2^2=\langle f,f\rangle=\int_{\mathcal{X}}|f(x)|^2\mathop{dx}
 	* More generally, we can have
 
-		.. math:: ||f||_{L_p}=\left(\int_{\mathcal{X}}|f(x)|^p\mathop{dx}\right)^{\frac{1}{p}}
+		.. math:: ||f||_{L_p}=\left(\int_{\mathcal{X}}|f(x)|^p\mathop{dx}\right)^{1/p}
 	* For more general measurable spaces where we have a measure :math:`\mu(x)` defined
 
-		.. math:: ||f||_{L_p(\mathcal{X},\mu)}=\left(\int_{\mathcal{X}}|f(x)|^p\mathop{d\mu}(x)\right)^{\frac{1}{p}}
+		.. math:: ||f||_{L_p(\mathcal{X},\mu)}=\left(\int_{\mathcal{X}}|f(x)|^p\mathop{d\mu}(x)\right)^{1/p}
 	* For :math:`p=\infty`
 
 		.. math:: ||f||_{L_\infty(\mathcal{X},\mu)}=\text{ess}\sup_\limits{x\in\mathcal{X}}|f(x)|
+
+Metric
+================================================================================
+.. note::
+	* The :math:`l_p` norm for finite vectors induces a metric 
+
+		.. math:: d(\mathbf{u}, \mathbf{v})=||\mathbf{u}-\mathbf{v}||_2=\left(\sum_{i=1}^n|u_i-v_i|^p\right)^{1/p}
+	* We can define, similarly, for functions
+
+		.. math:: d(f, g)=||f-g||_{L_p(\mathcal{X},\mu)}=\left(\int_\limits{i=1}^n|f(x)-g(x)|^p\mathop{d\mu}(x)\right)^{1/p}
+
+		* If :math:`d(f, g)=0`, then the functions are the same "almost everywhere".
+		* In this case, they are different for **at most** finitely many "dimensions".
 
 Function Basis
 ================================================================================
