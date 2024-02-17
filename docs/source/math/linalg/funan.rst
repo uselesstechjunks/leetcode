@@ -111,7 +111,7 @@ Fourier Basis
 		.. math:: \{\mathbf{b}_1,\cdots\mathbf{b}_n\}
 	* Any vector :math:`\mathbf{u}\in V_{\mathcal{F}}` then can be expressed in terms of inner product with the basis vectors and then taking a finite sum
 
-		.. math:: \mathbf{u}=\langle \mathbf{u},\mathbf{b}_1\rangle\cdot||\mathbf{b}_1||_2+\cdots\langle \mathbf{u},\mathbf{b}_n\rangle\cdot||\mathbf{b}_n||_2=\sum_{i=1}^n \langle \mathbf{u},\mathbf{b}_i\rangle\cdot||\mathbf{b}_i||_2
+		.. math:: \mathbf{u}=\langle \mathbf{u},\mathbf{b}_1\rangle/||\mathbf{b}_1||_2+\cdots\langle \mathbf{u},\mathbf{b}_n\rangle/||\mathbf{b}_n||_2=\sum_{i=1}^n \langle \mathbf{u},\mathbf{b}_i\rangle/||\mathbf{b}_i||_2
 	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have `basis functions of odd and even frequencies <https://math.stackexchange.com/a/32663>`_.
 	* `Schauder basis <https://en.wikipedia.org/wiki/Schauder_basis>`_ (allows for infinite sum over basis):
 
