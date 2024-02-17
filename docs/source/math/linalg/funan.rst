@@ -28,13 +28,13 @@ Addition and Scalar Multiplication
 	* For finite dimensional vectors :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, where :math:`\mathcal{F}` is the underlying field:
 
 		* [Vector Addition]: We add the corresponding values for each dimension.
-		* [Scalar Multiplication]: We multiply :math:`\alpha\in\mathcal{F}` to the value of each dimension.
+		* [Scalar Multiplication]: For any :math:`\alpha\in\mathcal{F}`, we multiply :math:`\alpha\in\mathcal{F}` to the value of each dimension.
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`, the dimensions are :math:`x\in\mathcal{X}`. 
 
 		* [Vector Addition]: We can define vector addition of a function for each "dimension" :math:`x`
 
 			.. math:: (f + g)(x) = f(x) + g(x)
-		* [Scalar Multiplication]: For any :math:`\alpha\in\mathcal{F}`, we can define scalar multiplication for each "dimension" :math:`x`
+		* [Scalar Multiplication]: We can define scalar multiplication for each "dimension" :math:`x`
 
 			.. math:: (\alpha\cdot f)(x) = \alpha\cdot f(x)
 	* We don't need to restrict :math:`\mathcal{X}` and :math:`\mathcal{Y}` to reals.
@@ -88,7 +88,7 @@ Fourier Basis
 	* Any vector :math:`\mathbf{u}\in V_{\mathcal{F}}` can be written as
 
 		.. math:: \mathbf{u}=\langle \mathbf{u},\mathbf{e}_1\rangle+\cdots\langle \mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n \langle \mathbf{u},\mathbf{e}_i\rangle
-	* For well-defined (i.e. can define :math:`L_2` norm as per above) periodic functions, we can have basis functions of odd and even frequencies
+	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have basis functions of odd and even frequencies
 	* TODO:
 
 .. seealso::
