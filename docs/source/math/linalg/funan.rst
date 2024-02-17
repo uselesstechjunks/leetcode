@@ -127,3 +127,4 @@ Integral Transforms
 .. seealso::
 	* `Functions are vectors <https://www.youtube.com/watch?v=LSbpQawNzU8>`_
 	* `THE GEOMETRY OF MATHEMATICAL METHODS <https://books.physics.oregonstate.edu/GMM/complete.html>`_
+	* `Math 353 Lecture Notes Fourier series <https://services.math.duke.edu/~jtwong/math353-2020/lectures/Lec12-Fourier.pdf>`_
