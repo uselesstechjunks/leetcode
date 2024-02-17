@@ -98,16 +98,16 @@ Function Basis
 Fourier Basis
 --------------------------------------------------------------------------------
 .. note::
-	* Let us define the basis vectors of a finite dimensional vector space :math:`V_{\mathcal{F}}` as
+	* We can have an orthonormal set of basis vectors for a finite dimensional vector space :math:`V_{\mathcal{F}}` as
 
 		.. math:: \{\mathbf{e}_1,\cdots\mathbf{e}_n\}
-	* Any vector :math:`\mathbf{u}\in V_{\mathcal{F}}` can be written as
+	* Any vector :math:`\mathbf{u}\in V_{\mathcal{F}}` then can be expressed in terms of inner product with the basis vectors and then taking a finite sum
 
 		.. math:: \mathbf{u}=\langle \mathbf{u},\mathbf{e}_1\rangle+\cdots\langle \mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n \langle \mathbf{u},\mathbf{e}_i\rangle
 	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have basis functions of odd and even frequencies.
 	* `Schauder basis <https://en.wikipedia.org/wiki/Schauder_basis>`_ (allows for infinite sum over basis):
 
-		* A basis is defined in terms of an infinite set of orthonormal functions
+		* A basis for functions in :math:`L^2[0,1]can be defined in terms of an infinite set of orthonormal functions`
 
 			.. \{1, \{1, (\sqrt{2}\sin(2\pi nx))_{n=1}^\infty, (\sqrt{2}\cos(2\pi nx))_{n=1}^\infty\}
 		* The :math:`\sin` functions account for odd-frequencies and the :math:`\cos` functions account for even-frequencies.
