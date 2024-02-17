@@ -79,6 +79,9 @@ Lp Space
 	* For :math:`p=\infty`
 
 		.. math:: ||f||_{L_\infty(\mathcal{X},\mu)}=\text{ess}\sup_\limits{x\in\mathcal{X}}|f(x)|
+	* We write the function space as :math:`L^p(\mathcal{X},\mathcal{Y})=\{f|f:\mathcal{X}\mapsto\mathcal{Y};\text{such that }L_p(\mathcal{X,\mu})\text{ exists}\}`
+
+		* Example: :math:`L^2([0,1],\mathbb{R})`
 
 Metric
 ================================================================================
@@ -107,10 +110,11 @@ Fourier Basis
 	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have basis functions of odd and even frequencies.
 	* `Schauder basis <https://en.wikipedia.org/wiki/Schauder_basis>`_ (allows for infinite sum over basis):
 
-		* A basis for functions in :math:`L^2[0,1]can be defined in terms of an infinite set of orthonormal functions`
+		* A basis for functions in :math:`L^2([0,1],\mathbb{R})` can be defined in terms of an infinite set of orthonormal functions`
 
 			.. \{1, \{1, (\sqrt{2}\sin(2\pi nx))_{n=1}^\infty, (\sqrt{2}\cos(2\pi nx))_{n=1}^\infty\}
 		* The :math:`\sin` functions account for odd-frequencies and the :math:`\cos` functions account for even-frequencies.
+		* We define the inner products as
 
 Integral Transforms
 --------------------------------------------------------------------------------
