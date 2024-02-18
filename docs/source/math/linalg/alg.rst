@@ -58,5 +58,5 @@ Field
 	* It is an Abelian group w.r.t the addition operator :math:`+` as well as the multiplication opeartor :math:`\cdot`.
 
 .. tip::
-	* If we enforce group structure to the set of numbers, we extend integers (:math:`\mathbb{Z}`) to the set of rationals (:math:`\mathbb{Q}`)
+	* If we enforce field structure to the set of numbers, we extend integers (:math:`\mathbb{Z}`) to the set of rationals (:math:`\mathbb{Q}`)
 	* To extend rationals (:math:`\mathbb{Q}`) to reals (:math:`\mathbb{R}`), we need to introduce topological properties.
