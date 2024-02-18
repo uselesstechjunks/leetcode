@@ -4,6 +4,7 @@ Linear Algebra
 
 .. toctree::
 
+	alg
 	vecspace
 	findim
 	factor
