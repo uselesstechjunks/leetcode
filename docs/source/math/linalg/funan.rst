@@ -135,6 +135,13 @@ Fourier Basis
 	* Here we have 3 sets of basis functions, so we use 3 different kinds of normalised-projection co-efficients, :math:`a_0,a_i,b_i`
 
 		.. math:: f(x)=a_0\cdot1+\sum_{n=1}^\infty a_i\cdot\cos(2\pi nx)+\sum_{n=1}^\infty b_i\cdot\sin(2\pi nx)
+	* :math:`a_0` computes the projection of :math:`f(x)` onto the constant function :math:`1`.
+
+		.. math:: a_0=\frac{\int_\limits{[0,1]}1\cdot f(x)\mathop{dx}}{\int_\limits{[0,1]}1\cdot 1\mathop{dx}}=\int_\limits{[0,1]}f(x)\mathop{dx}
+	* For each :math:`k>0`, :math:`a_k` computes the projection of :math:`f(x)` onto the even frequencies, :math:`\sqrt{2}\cos(2\pi nx)`.
+
+		.. math:: a_k=\frac{\int_\limits{[0,1]}f(x)\cdot\sqrt{2}\cos(2\pi kx)\mathop{dx}}{\int_\limits{[0,1]}\sqrt{2}\cos(2\pi kx)\cdot\sqrt{2}\cos(2\pi kx)\mathop{dx}}
+	* Similarly, for :math:`b_k`.
 
 More Basis - Integral Transforms
 --------------------------------------------------------------------------------
