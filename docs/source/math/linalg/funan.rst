@@ -151,3 +151,4 @@ More Basis - Integral Transforms
 	* `THE GEOMETRY OF MATHEMATICAL METHODS <https://books.physics.oregonstate.edu/GMM/complete.html>`_
 	* `Math 353 Lecture Notes Fourier series <https://services.math.duke.edu/~jtwong/math353-2020/lectures/Lec12-Fourier.pdf>`_
 	* `[MIT] 9.520 Math Camp 2010 Functional Analysis Review <https://www.mit.edu/~9.520/spring10/Classes/mathcamp2010-fa-notes.pdf>`_
+	* `SO post about Dirac delta being a generalized function instead of norma function <https://math.stackexchange.com/a/285643>`_
