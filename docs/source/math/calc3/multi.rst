@@ -289,3 +289,36 @@ Useful Derivatives
 .. seealso::
 	* Plethora of useful results: `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
 	* `The Matrix Calculus You Need For Deep Learning <https://arxiv.org/abs/1802.01528>`_
+
+**********************************************************
+Integration
+**********************************************************
+Fubini's Theorem
+===========================================================
+For double integral of a function :math:`f(x,y)` in a rectangular region :math:`R=[a,b]\times [c,d]` and :math:`\iint\limits_{R} \left|f(x,y)\right|\mathop{dx} \mathop{dy}<\infty`, we can compute it using iterated integrals as follows:
+
+	.. math:: \iint\limits_{R} f(x,y)\mathop{dx} \mathop{dy}=\int\limits_a^b \left(\int\limits_c^d f(x,y)\mathop{dy}\right)\mathop{dx}=\int\limits_c^d \left(\int\limits_a^b f(x,y)\mathop{dx}\right)\mathop{dy}
+
+Gaussian Integral using Polar Substitute
+===========================================================
+.. note::
+	* Let :math:`I=\int\limits_{-\infty}^\infty e^{-x^2}\mathop{dx}`. 
+	* Try to compute :math:`I^2`, convert this into a double integral using Fubini's theorem.
+
+		.. math:: I^2=\left(\int\limits_{-\infty}^\infty e^{-x^2}\mathop{dx}\right)\left(\int\limits_{-\infty}^\infty e^{-y^2}\mathop{dy}\right)=\iint_{\mathbb{R}^2}e^{-(x^2+y^2)}\mathop{dx}\mathop{dy}
+	* Use polar co-ordinate transform, :math:`x=r\cos(\theta)` and :math:`y=r\sin(\theta)`.
+	* To substitute the differentials,
+
+		* We assume a small tiny rectangular region, starting at :math:`(x,y)` in the original space spanned by tiny sides :math:`\mathop{dx}` and :math:`\mathop{dy}`.
+		* In polar system, the rectangle is a distnace of :math:`r` away from origin, and it can be approximated by the region of sides :math:`r\mathop{d\theta}` and :math:`\mathop{dr}`.
+		* Therefore, the area of the tiny region, :math:`\mathop{dA}=\mathop{dx}\mathop{dy}=r\mathop{dr}\mathop{d\theta}`.
+		* For the limits, :math:`r` varies from 0 to :math:`\infty` and :math:`\theta` varies from 0 to :math:`2\pi`.
+	* Therefore, we have 
+
+		.. math:: I^2=\int_0^{2\pi}\left(\int_0^\infty e^{-r^2}r\mathop{dr}\right)\mathop{d\theta}=\int_0^{2\pi}\left(\frac{1}{2}\int_\infty^0 e^t\mathop{dt}\right)\mathop{d\theta}=\int_0^{2\pi}\left(\frac{1}{2}\left[e^t\right]_\infty^0\right)\mathop{d\theta}=\frac{1}{2}\int_0^{2\pi}\mathop{d\theta}=\pi
+	* So :math:`I=\sqrt{\pi}`.
+
+Useful Resources
+===========================================================
+.. seealso::
+	* Different ways for evaluating the Gaussian integral: `YouTube video playlist by Dr Peyam <https://www.youtube.com/watch?v=HcneBkidSDQ&list=PLJb1qAQIrmmCgLyHWMXGZnioRHLqOk2bW>`_.

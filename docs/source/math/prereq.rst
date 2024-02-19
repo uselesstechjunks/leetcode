@@ -46,15 +46,6 @@ Binomial theorem for fractional and negative powers:
 * This series converges only when :math:`|\delta|< 1`
 
 ***********************************************
-Calculus
-***********************************************
-Fubini's Theorem:
-==============================================
-For double integral of a function :math:`f(x,y)` in a rectangular region :math:`R=[a,b]\times [c,d]` and :math:`\iint\limits_{R} \left|f(x,y)\right|\mathop{dx} \mathop{dy}<\infty`, we can compute it using iterated integrals as follows:
-
-	.. math:: \iint\limits_{R} f(x,y)\mathop{dx} \mathop{dy}=\int\limits_a^b \left(\int\limits_c^d f(x,y)\mathop{dy}\right)\mathop{dx}=\int\limits_c^d \left(\int\limits_a^b f(x,y)\mathop{dx}\right)\mathop{dy}
-
-***********************************************
 Geometry
 ***********************************************
 

@@ -4,8 +4,10 @@ Linear Algebra
 
 .. toctree::
 
+	alg
 	vecspace
 	findim
 	factor
 	norm
 	applied
+	funan

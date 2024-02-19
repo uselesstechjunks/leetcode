@@ -1,6 +1,30 @@
 ########################################################################################
-Convex Optimisation
+Optimisation
 ########################################################################################
+****************************************************************************************
+Convexity
+****************************************************************************************
+Convex Set
+========================================================================================
+.. note::
+	* We consider a set :math:`A\subseteq\mathcal{X}` where :math:`\mathcal{X}` is a vector space.
+	* If we connect any two points, :math:`\mathbf{x},\mathbf{y}\in A`, by a line segment, then all the points in that line should also be in the set :math:`A`.
+	* More formally, for any :math:`0\leq\alpha\leq 1`,
+
+		.. math:: \alpha\mathbf{x}+(1-\alpha)\mathbf{y}\in A
+
+Convex Function
+========================================================================================
+.. note::
+	* We consider of a function :math:`f:\mathcal{X}\mapsto\mathcal{Y}`.
+	* If :math:`A\subseteq\mathcal{X}` is a convex subset, then its image, :math:`f(A)` also forms a convex subset in :math:`\mathcal{Y}`.
+	* Formally, for any :math:`0\leq\alpha\leq 1`,
+
+		.. math:: f(\alpha\mathbf{x}+(1-\alpha)\mathbf{y})=\alpha f(\mathbf{x})+(1-\alpha)f(\mathbf{y})
+
+****************************************************************************************
+Convex Optimisation
+****************************************************************************************
 .. note::
 	* The functions we're dealing with are of the form :math:`f(\mathbf{x}):\mathbb{R}^d\mapsto\mathbb{R}`
 	* Taylor expansion of the function around a fixed point :math:`\mathbf{x}_0\in\mathbb{R}^d` if the function is infinitely differentiable
