@@ -16,10 +16,10 @@ Functions are vectors : Intuition
 		.. math:: \mathbf{u}=\left((0,0.3426),(1,1.3258),(2,6.8943),(3,8.387)\right)
 	* This can be represented by a function
 
-		.. math:: f:[0,1,2,3]\mapsto[0.3426,1.3258,6.8943,8.387]
+		.. math:: u:[0,1,2,3]\mapsto[0.3426,1.3258,6.8943,8.387]
 	* If we extend the index set to have real values, then, theoretically, we end up with infinite lists
 
-		.. math:: \mathbf{u}=\{(x,y)|x,y\in\mathbb{R}\}
+		.. math:: f=\{(x,y)|x,y\in\mathbb{R}\}
 	* This is the way functions are defined in set theory, where the dimension of each function (informally) is :math:`|\mathcal{X}|\times|\mathcal{Y}|`.
 
 Cardinality of Function Space
