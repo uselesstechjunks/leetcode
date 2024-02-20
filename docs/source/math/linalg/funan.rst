@@ -38,7 +38,7 @@ Cardinality of Function Space
 
 		.. math:: f:\{x_1,x_2,x_3\}\mapsto\{y_1,y_2\}
 
-		.. csv-table:: Enumerating all possible functions in this case
+		.. csv-table:: 
 			:align: center
 
 			:math:`f_1:\{x_1\mapsto y_1\}`
