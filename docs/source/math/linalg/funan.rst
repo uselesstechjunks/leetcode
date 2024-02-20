@@ -31,12 +31,24 @@ Cardinality of Function Space
 .. note::
 	* The space of functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` is often denoted by :math:`\mathcal{Y}^{\mathcal{X}}`.
 
-		* To get some intuition about the notation, we can think of all possible functions
-
-			.. math:: f:\{x_1,x_2,x_3\}\mapsto\{y_1,y_2\}
 		* For every element :math:`x\in\mathcal{X}`, we have a choice to make its image map to some :math:`y\in\mathcal{Y}`.
 		* Therefore, the size of this choice for each :math:`x\in\mathcal{X}` is :math:`|\mathcal{Y}|`.
 		* The size of the choice for **all** the elements in :math:`\mathcal{X}` is therefore :math:`|\mathcal{Y}|^{|\mathcal{X}|}`.
+	* To get some intuition about the notation, we can think of all possible functions
+
+		.. math:: f:\{x_1,x_2,x_3\}\mapsto\{y_1,y_2\}
+
+		.. csv-table:: Enumerating all possible functions in this case
+			:align: center
+
+			:math:`f_1:\{x_1\mapsto y_1\}`
+			:math:`f_2:\{x_1\mapsto y_2\}`
+			:math:`f_3:\{x_2\mapsto y_1\}`
+			:math:`f_4:\{x_2\mapsto y_2\}`
+			:math:`f_5:\{x_1\mapsto y_1,x_2\mapsto y_1\}`	
+			:math:`f_6:\{x_1\mapsto y_1,x_2\mapsto y_2\}`
+			:math:`f_7:\{x_1\mapsto y_2,x_2\mapsto y_2\}`
+			:math:`f_8:\{x_1\mapsto y_2,x_2\mapsto y_1\}`
 
 Addition and Scalar Multiplication
 --------------------------------------------------------------------------------
