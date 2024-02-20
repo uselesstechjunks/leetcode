@@ -45,10 +45,10 @@ Cardinality of Function Space
 			:math:`f_2:\{x_1\mapsto y_2\}`
 			:math:`f_3:\{x_2\mapsto y_1\}`
 			:math:`f_4:\{x_2\mapsto y_2\}`
-			:math:`f_5:\{x_1\mapsto y_1,x_2\mapsto y_1\}`	
-			:math:`f_6:\{x_1\mapsto y_1,x_2\mapsto y_2\}`
-			:math:`f_7:\{x_1\mapsto y_2,x_2\mapsto y_2\}`
-			:math:`f_8:\{x_1\mapsto y_2,x_2\mapsto y_1\}`
+			:math:`f_5:\{x_1\mapsto y_1;x_2\mapsto y_1\}`	
+			:math:`f_6:\{x_1\mapsto y_1;x_2\mapsto y_2\}`
+			:math:`f_7:\{x_1\mapsto y_2;x_2\mapsto y_2\}`
+			:math:`f_8:\{x_1\mapsto y_2;x_2\mapsto y_1\}`
 
 Addition and Scalar Multiplication
 --------------------------------------------------------------------------------
