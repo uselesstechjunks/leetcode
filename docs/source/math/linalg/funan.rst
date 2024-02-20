@@ -19,8 +19,14 @@ Functions are vectors : Intuition
 		.. math:: f:[0,1,2,3]\mapsto[0.3426,1.3258,6.8943,8.387]
 	* If we extend the index set to have real values, then, theoretically, we end up with infinite lists
 
-		.. math:: \mathbf{y}=\{(x,y)|x,y\in\mathbb{R}\}
+		.. math:: \mathbf{f}=\{(x,y)|x,y\in\mathbb{R}\}
 	* This is the way functions are defined in set theory.
+
+Cardinality of Function Space
+--------------------------------------------------------------------------------
+.. warning::
+	* We might be tempted by the tuple definition to conclude that the cardinality of function space is :math:`|\mathcal{X}|\times|\mathcal{Y}|`.
+	* However, this is incorrect, as functions allow multiple points to map to the same element in the domain.
 
 .. note::
 	* The space of functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` is often denoted by :math:`\mathcal{Y}^{\mathcal{X}}`.
