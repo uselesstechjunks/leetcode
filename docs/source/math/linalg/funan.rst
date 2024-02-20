@@ -25,7 +25,9 @@ Functions are vectors : Intuition
 .. note::
 	* The space of functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` is often denoted by :math:`\mathcal{Y}^{\mathcal{X}}`.
 
-		* To get some intuition about the notation, we can think of all possible functions :math:`f:\{x_1,x_2,x_3\}\mapsto\{y_1,y_2\}`.
+		* To get some intuition about the notation, we can think of all possible functions
+
+			.. math:: f:\{x_1,x_2,x_3\}\mapsto\{y_1,y_2\}
 		* For every element :math:`x\in\mathcal{X}`, we have a choice to make its image map to some :math:`y\in\mathcal{Y}`.
 		* Therefore, the size of this choice for each :math:`x\in\mathcal{X}` is :math:`|\mathcal{Y}|`.
 		* The size of the choice for **all** the elements in :math:`\mathcal{X}` is therefore :math:`|\mathcal{Y}|^{|\mathcal{X}|}`.
