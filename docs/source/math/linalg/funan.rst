@@ -20,7 +20,7 @@ Functions are vectors : Intuition
 	* If we extend the index set to have real values, then, theoretically, we end up with infinite lists
 
 		.. math:: f=\{(x,y)|x,y\in\mathbb{R}\}
-	* This is the way functions are defined in set theory, where the dimension of each function (informally) is :math:`|\mathcal{X}|\times|\mathcal{Y}|`.
+	* This is the way functions are defined in set theory, where the dimension of each function (informally) is :math:`|\mathcal{X}|`.
 
 Cardinality of Function Space
 --------------------------------------------------------------------------------
