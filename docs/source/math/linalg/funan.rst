@@ -78,10 +78,10 @@ Inner Product
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`
 
 		* We can do the multiplication for each dimension :math:`x`
-		* However, since :math:`\mathcal{X}` is uncountable, we replace the sum with integration
+		* However, since :math:`\mathcal{X}` can be uncountable, we replace the sum with integration
 
 			.. math:: \langle f,g\rangle=\int_{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
-		* We note that we need to have multiplication between elements, :math:`\cdot`, well defined in :math:`\mathcal{Y}`.
+		* We note that we need to have the dot product between elements, :math:`\cdot`, well defined in :math:`\mathcal{Y}`.
 
 Norm
 ================================================================================
