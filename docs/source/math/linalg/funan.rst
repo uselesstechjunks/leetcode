@@ -139,19 +139,18 @@ Function Basis
 
 		.. math:: \{\mathbf{b}_1,\cdots\mathbf{b}_n\}
 	
-		* For any vector :math:`\mathbf{u}`, we can find the proejection of it onto the basis vectors as :math:`\langle\mathbf{u},\mathbf{b}_i\rangle`.
-		* The length of the basis vectors are given by :math:`||\mathbf{b}_i||_2^2=\langle\mathbf{b}_i,\mathbf{b}_i\rangle`.
-		* Let :math:`a_i=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}` be the projection normalised for the length of the basis vector :math:`\mathbf{b}_i`.
-		* :math:`\mathbf{u}` then can be expressed as
+	* For any vector :math:`\mathbf{u}`, we can find the proejection of it onto the basis vectors as :math:`\langle\mathbf{u},\mathbf{b}_i\rangle`.
+	* The length of the basis vectors are given by :math:`||\mathbf{b}_i||_2^2=\langle\mathbf{b}_i,\mathbf{b}_i\rangle`.
+	* Let :math:`a_i=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}` be the projection normalised for the length of the basis vector :math:`\mathbf{b}_i`.
+	* :math:`\mathbf{u}` then can be expressed as
 
-			.. math:: \mathbf{u}=a_1\cdot\mathbf{b}_i+\cdots +a_n\cdot\mathbf{b}_n=\sum_{i=1}^na_i\cdot\mathbf{b}_i
-		* We note that this results in the same expression if we convert each basis to a unit vector by normalising it, :math:`\mathbf{e}_i=\frac{\mathbf{b}_i}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`
+		.. math:: \mathbf{u}=a_1\cdot\mathbf{b}_i+\cdots +a_n\cdot\mathbf{b}_n=\sum_{i=1}^na_i\cdot\mathbf{b}_i
+	* We note that this results in the same expression if we convert each basis to a unit vector by normalising it, :math:`\mathbf{e}_i=\frac{\mathbf{b}_i}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`
 
-			.. math:: \mathbf{u}=\langle\mathbf{u},\mathbf{e}_1\rangle+\cdots+\langle\mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n\langle\mathbf{u},\mathbf{e}_i\rangle
+		.. math:: \mathbf{u}=\langle\mathbf{u},\mathbf{e}_1\rangle+\cdots+\langle\mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n\langle\mathbf{u},\mathbf{e}_i\rangle
+	* [Kernel view]: We can define :math:`K_i(\cdot,\mathbf{b}_i)=\frac{1}{||\mathbf{b}_i||^2_2}{\langle\cdot,\mathbf{b}_i\rangle}` as a kernel which can take any vector :math:`\mathbf{u}` and computes the projection onto it, :math:`K_i(\mathbf{u},\mathbf{b}_i)=\frac{1}{||\mathbf{b}_i||^2_2}{\langle\mathbf{u},\mathbf{b}_i\rangle}`
 
-		* [Operator view]: We can define :math:`a_i(\cdot)=\frac{\langle\cdot,\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}` as an operator which can take any vector :math:`\mathbf{u}` and computes the projection onto it, :math:`(a_i)(\mathbf{u})=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`
-
-			.. math:: \mathbf{u}=\sum_{i=1}^n(a_i)(\mathbf{u})
+		.. math:: \mathbf{u}=\sum_{i=1}^n K_i(\mathbf{u},\mathbf{b}_i)
 
 Fourier Basis
 --------------------------------------------------------------------------------
