@@ -81,8 +81,15 @@ Inner Product
 		* However, since :math:`\mathcal{X}` can be uncountable, we replace the sum with integration
 
 			.. math:: \langle f,g\rangle=\int_{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
-		* We note that we need to have the dot product between elements, :math:`\cdot`, well defined in :math:`\mathcal{Y}`.
+		* We just need to have the scalar product between elements well defined in :math:`\mathcal{Y}`.
 
+Orthogonality
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* Two functions :math:`f` and :math:`g` are orthogonal if their inner product is 0.
+	* Example: 
+
+		.. math:: \langle\sin(x),\cos(x)\rangle=\int_\limits{0}^{\pi}\sin(x)\cos(x)\mathop{dx}=0
 Norm
 ================================================================================
 Lp Space
