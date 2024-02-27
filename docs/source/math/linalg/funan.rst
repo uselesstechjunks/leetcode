@@ -90,6 +90,7 @@ Orthogonality
 	* Example: 
 
 		.. math:: \langle\sin(x),\cos(x)\rangle=\int_\limits{0}^{\pi}\sin(x)\cos(x)\mathop{dx}=0
+
 Norm
 ================================================================================
 Lp Space
