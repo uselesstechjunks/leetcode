@@ -63,7 +63,15 @@ Lagrange polynomial
 		* We can represent this in the normal :math:`y=ax+b` format as
 
 			.. math:: y=\frac{y_2-y_1}{x_2-x_1}x+\left(y_1-\frac{y_2-y_1}{x_2-x_1}x_1\right)
-	* TODO make it recognizable form
+	* We can represent this in Lagrange's polynomial form as the following:
+
+		* We form Lagrange basis by taking
+
+			* :math:`l_0(x)=\frac{x-x_1}{x_2-x_1}`
+			* :math:`l_1(x)=\frac{x-x_2}{x_1-x_2}`
+		* The final polynomial is formed by 
+
+			.. math:: L(x)=y_1 l_0(x)+y_2 l_1(x)=y_1\frac{x-x_1}{x_2-x_1}+y_2\frac{x-x_2}{x_1-x_2}
 	* TODO Extend to higher dimensions
 
 Wavy Curve Method
