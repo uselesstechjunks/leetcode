@@ -176,6 +176,8 @@ Uniform Convergence
 
 Linear Transforms
 --------------------------------------------------------------------------------
+Linear Transforms on Euclidean Space
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* We consider an normalized set of basis vectors (i.e. of unit-length but not necessarily orthogonal) in :math:`\mathbb{R}^n` for a finite dimensional vector space as
 
@@ -199,7 +201,22 @@ Function view
 	* Let :math:`\mathcal{I}=\{1,\cdots,d\}` be the index set.
 	* The vector :math:`\mathbf{u}` defines a function :math:`u:\mathcal{I}\mapsto\mathbb{R}\in\mathcal{U}(\mathcal{I})`
 	* The basis vectors :math:`\mathbf{a}_k` are also functions :math:`a_k:\mathcal{I}\mapsto\mathcal{H}` where :math:`\mathcal{H}^{\mathcal{I}}\subseteq\mathbb{R}^d` is the subspace spanned by the basis.
-	* Then the matrix :math:`mathbf{A}` defines a linear transform :math:`A:\mathcal{H}\mapsto\mathcal{U}(\mathcal{I})`.
+	* Then the matrix :math:`\mathbf{A}` defines a linear transform :math:`A:\mathcal{H}\mapsto\mathcal{U}(\mathcal{I})` where
+
+		.. math:: v(i)=(Au)(i)
+
+Linear Transforms on Function Space
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	* We consider functions :math:`f:E\mapsto\mathbb{R}\in\mathcal{F}(E)` (similar to :math:`\mathcal{U}(\mathcal{I})`) where :math:`E` is any abstract space.
+	* We consider basis functions :math:`h:E\mapsto\mathcal{H}` where :math:`\mathcal{H}` is a Hilbert space equipped with a norm
+
+		.. math:: \langle \cdot,\cdot\rangle_{\mathcal{H}}
+	* For any :math:`x\in E`, the projection onto a basis is given by
+
+		.. math:: f(x)=\langle f,h(x)\rangle_{\mathcal{H}}
+	* This defines a linear transform :math:`L:\mathcal{H}\mapsto\mathcal{F}(E)` where 
+
+		.. math:: f(\cdot)=(Lf)(\cdot)
 
 Mercer Basis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
