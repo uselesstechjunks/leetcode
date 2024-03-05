@@ -60,6 +60,10 @@ Cardinality of Function Space
 		* This can be formed as a function where each of the :math:`n` elements map to either 0 or 1.
 	* We also verify that function view of real-valued vectors which maps the index set (of size :math:`d`) to reals also make sense since we represent the dimension as :math:`\mathbb{R}^d`.
 
+Functions are vectors : Technicalities
+================================================================================
+As long as we're restricting ourselves to the class of functions from one vector (linear) space :math:`\mathcal{X}` to another :math:`\mathcal{Y}` over the same underlying scalar field :math:`\mathbb{F}`, we can faithfully recover many useful properties from a finite dimensional vector spaces for the (potentially infinite dimensional) space of functions.
+
 Addition and Scalar Multiplication
 --------------------------------------------------------------------------------
 .. note::
@@ -77,8 +81,7 @@ Addition and Scalar Multiplication
 			.. math:: (\alpha\cdot f)(x) = \alpha\cdot f(x)
 
 .. tip::
-	* We don't need to restrict :math:`\mathcal{X}` and :math:`\mathcal{Y}` to reals.
-	* As long as :math:`\mathcal{Y}` itself is a linear space over the same scalar field as :math:`\mathcal{X}`, the addition and scalar multiplication makes sense.
+	With :math:`\mathcal{X}` and :math:`\mathcal{Y}` being linear space over the same scalar field, the addition and scalar multiplication makes sense.
 
 Inner Product
 --------------------------------------------------------------------------------
@@ -89,13 +92,16 @@ Inner Product
 		* We sum the results across all dimensions.
 
 			.. math:: \langle\mathbf{u},\mathbf{v}\rangle=\sum_{i=1}^n u_i\cdot v_i
+	* Let's add an additional constraint that :math:`\mathcal{Y}` is equipped with an inner product.
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`
 
 		* We can do the multiplication for each dimension :math:`x`
 		* However, since :math:`\mathcal{X}` can be uncountable, we replace the sum with integration
 
 			.. math:: \langle f,g\rangle=\int_{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
-		* We just need to have the scalar product between elements well defined in :math:`\mathcal{Y}`.
+
+.. tip::
+	With :math:`\mathcal{Y}` being an inner product space, dot product under the integral makes sense.
 
 Orthogonality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -105,7 +111,7 @@ Orthogonality
 
 		.. math:: \langle\sin(x),\cos(x)\rangle=\int_\limits{0}^{\pi}\sin(x)\cos(x)\mathop{dx}=0
 
-Norm
+Norm - Induced by the Inner Product
 ================================================================================
 Lp Space
 --------------------------------------------------------------------------------
