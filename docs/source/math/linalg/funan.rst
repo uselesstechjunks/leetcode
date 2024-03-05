@@ -73,7 +73,7 @@ Inner Product
 .. note::
 	* For finite dimensional vectors :math:`\mathbf{u},\mathbf{v}\in V_{\mathcal{F}}`, to compute the inner (dot) product
 
-		* We multiply the corresponding values for each dimension.
+		* We take a scalar product of the corresponding values for each dimension.
 		* We sum the results across all dimensions.
 
 			.. math:: \langle\mathbf{u},\mathbf{v}\rangle=\sum_{i=1}^n u_i\cdot v_i
@@ -81,8 +81,8 @@ Inner Product
 	* Let's also add the constraint that :math:`\mathcal{X}` is equipped with a positive measure :math:`\mu` and :math:`\mathop{d\mu}(x)=\mathop{dx}`.
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`
 
-		* We can do the multiplication for each dimension :math:`x`
-		* However, since :math:`\mathcal{X}` can be uncountable, we replace the sum with integration
+		* We can take a scalar product for each dimension :math:`x`.
+		* Since :math:`\mathcal{X}` can be uncountable, we replace the sum with integration
 
 			.. math:: \langle f,g\rangle=\int_{\mathcal{X}}f(x)\cdot g(x)\mathop{dx}
 
