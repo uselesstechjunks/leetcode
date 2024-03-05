@@ -102,9 +102,9 @@ Orthogonality
 		.. math:: \langle\sin,\cos\rangle=\int_\limits{0}^{\pi}\sin(x)\cos(x)\mathop{dx}=0
 
 Norm - Induced by the Inner Product
-================================================================================
-Lp Space
 --------------------------------------------------------------------------------
+Lp Space
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* The inner product for finite vectors induces a norm (:math:`l_2`)
 
@@ -127,13 +127,8 @@ Lp Space
 
 		* Example: :math:`L^2([0,1],\mathbb{R})`
 
-Sobolev Space
---------------------------------------------------------------------------------
-.. note::
-	* TODO
-
 Metric - Induced by the Norm
-================================================================================
+--------------------------------------------------------------------------------
 .. note::
 	* The :math:`l_p` norm for finite vectors induces a metric 
 
@@ -145,7 +140,7 @@ Metric - Induced by the Norm
 		* If :math:`d(f, g)=0`, then the functions are the same "almost everywhere".
 		* In this case, they are different for **at most** finitely many "dimensions".
 
-Topological Notes
+Topological Properties
 --------------------------------------------------------------------------------
 .. note::
 	With a metric defined, we can define topological properties such as convergence and complete function spaces.
@@ -156,7 +151,7 @@ Topological Notes
 
 .. warning::
 	* Without the metric, the only topology we can have for the set of functions is the `product topology <https://en.wikipedia.org/wiki/Product_topology>`_ (as suggested by :math:`\mathcal{Y}^{\mathcal{X}}`).
-	* With product topology, the only convergence that we can define is `*point-wise convergence* <https://en.wikipedia.org/wiki/Pointwise_convergence#topology_of_pointwise_convergence>`_ which is a weak form of convergence.
+	* With product topology, the only convergence that we can define is `point-wise convergence <https://en.wikipedia.org/wiki/Pointwise_convergence#topology_of_pointwise_convergence>`_ which is a weak form of convergence.
 
 Point-wise Convergence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -220,8 +215,14 @@ Fourier Basis
 		.. math:: a_k=\frac{\int_\limits{[0,1]}f(x)\cdot\sqrt{2}\cos(2\pi kx)\mathop{dx}}{\int_\limits{[0,1]}\sqrt{2}\cos(2\pi kx)\cdot\sqrt{2}\cos(2\pi kx)\mathop{dx}}
 	* Similarly, for :math:`b_k`.
 
-Reproducing kernel Hilbert space
+Useful Function Spaces
 ================================================================================
+Sobolev Space
+--------------------------------------------------------------------------------
+Holder Space
+--------------------------------------------------------------------------------
+Reproducing kernel Hilbert space
+--------------------------------------------------------------------------------
 
 Generalised Functions - Distributions
 ================================================================================
