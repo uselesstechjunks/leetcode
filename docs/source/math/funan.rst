@@ -188,7 +188,7 @@ Linear Transforms
 		.. math:: \begin{bmatrix}|\\v_i\\|\end{bmatrix}=\langle\mathbf{u},\mathbf{a}_i\rangle
 	* We note that we can collect the basis vectors inside a matrix as rows and express the relation as
 
-		.. math:: \mathbf{v}=\begin{bmatrix}-&a_1^*&-\\ \vdots&\vdots&\vdots\\ -&a_n^*&-\\\end{bmatrix}\mathbf{u}=\mathbf{A}^T\mathbf{u}
+		.. math:: \mathbf{v}=\begin{bmatrix}-&\mathbf{a_1^*}&-\\ \vdots&\vdots&\vdots\\ -&\mathbf{a_n^*}&-\\\end{bmatrix}\mathbf{u}=\mathbf{A}^T\mathbf{u}
 	* We also note that the final vector can be written as a sum
 
 		.. math:: \mathbf{v}=\sum_{i=1}^n\begin{bmatrix}|\\v_i\\|\end{bmatrix}=\sum_{i=1}^n\langle\mathbf{u},\mathbf{a}_i\rangle
