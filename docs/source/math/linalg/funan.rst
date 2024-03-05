@@ -145,8 +145,8 @@ Metric - Induced by the Norm
 		* If :math:`d(f, g)=0`, then the functions are the same "almost everywhere".
 		* In this case, they are different for **at most** finitely many "dimensions".
 
-Topological Properties
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Topological Notes
+--------------------------------------------------------------------------------
 .. note::
 	With a metric defined, we can define topological properties such as convergence and complete function spaces.
 
