@@ -179,9 +179,10 @@ Linear Transforms
 .. note::
 	* We consider an orthonormal set of basis vectors (i.e. of unit-length) in :math:`\mathbb{R}^d` for a finite dimensional vector space as
 
-		.. math:: \{\mathbf{a}_1,\cdots\mathbf{a}_n\}
-	
-	* For any vector :math:`\mathbf{u}\in\mathbb{R}^d`, we can find the projection of it onto each of the basis vectors as :math:`\langle\mathbf{a}_i,\mathbf{u}\rangle`.
+		.. math:: \{\mathbf{a}_1,\cdots\mathbf{a}_n\}	
+	* We can find the projection of any vector :math:`\mathbf{u}\in\mathbb{R}^d` onto each of the basis
+
+		.. math:: \langle\mathbf{a}_i,\mathbf{u}\rangle
 	* Under the new basis, this gives the i-th co-ordinate for the result vector :math:`\mathbf{v}`
 
 		.. math:: \begin{bmatrix}|\\v_i\\|\end{bmatrix}=\langle\mathbf{u},\mathbf{a}_i\rangle
