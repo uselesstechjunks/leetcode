@@ -237,6 +237,7 @@ Kernel of a Linear Transform
 		and
 
 		.. math:: K(x,y)=\langle K(\cdot,x),K(\cdot,y)\rangle
+	* Symmetry: :math:`K(x,y)=K(y,x)` due to the symmetry of the inner product.
 	* Reproducing Property:
 
 		* Function evaluation is inner product: :math:`f(x)=\langle f,K(\cdot,x)\rangle_{\mathcal{H}}`
@@ -249,17 +250,24 @@ Kernel of a Linear Transform
 	* We note that when the matrix is the centered, normalised data matrix, then the kernel gives the sample covariance matrix.
 	* This hints as the usability of functional kernels for covariance functions for infinite dimensional Gaussian distributions (GPs).
 
-Moore-Aronszajn theorem
+Moore-Aronszajn Theorem
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. warning::
 	* We assume that the kernel is positive definite.
 	* Then there exists a unique :math:`\mathcal{H}_k` for which :math:`K` is the kernel basis.
 
-Mercer Basis - Self-Adjoint Kernels
+Mercer Theorem - Eigenfunctions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	TODO
 
 Other Integral Transforms
 --------------------------------------------------------------------------------
+General Form
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	TODO
+
 Fourier Basis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
