@@ -207,6 +207,7 @@ Function view
 
 Linear Transforms on Function Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
 	* We consider functions :math:`f:E\mapsto\mathbb{R}\in\mathcal{F}(E)` (similar to :math:`\mathcal{U}(\mathcal{I})`) where :math:`E` is any abstract space.
 	* We consider basis functions :math:`h:E\mapsto\mathcal{H}` where :math:`\mathcal{H}` is a Hilbert space equipped with a norm
 
@@ -217,6 +218,24 @@ Linear Transforms on Function Space
 	* This defines a linear transform :math:`L:\mathcal{H}\mapsto\mathcal{F}(E)` where 
 
 		.. math:: f(\cdot)=(Lf)(\cdot)
+
+Kernel of a Linear Transform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* The kernel of a linear transform is found by inner products of the basis functions.
+	* For finite dimensional case
+
+		.. math:: K(i,j)=\langle\mathbf{a}^*_i,\mathbf{a}^*_j\rangle
+	* For the functional case
+
+		.. math:: K(x,y)=\langle h(y),h(x)\rangle_{\mathcal{H}}
+	* Often the basis functions are referred by just the kernel itself as 
+
+		.. math:: K(\cdot,x)=h(x)
+
+.. note::
+	* We note that when the matrix is the centered, normalised data matrix, then the kernel gives the sample covariance matrix.
+	* This hints as the usability of functional kernels for covariance functions for infinite dimensional Gaussian distributions (GPs).
 
 Mercer Basis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
