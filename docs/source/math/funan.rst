@@ -185,13 +185,13 @@ Linear Transforms
 		.. math:: \langle\mathbf{a}_i,\mathbf{u}\rangle
 	* Under the new basis, this gives the i-th co-ordinate for the result vector :math:`\mathbf{v}`
 
-		.. math:: \begin{bmatrix}|\\v_i\\|\end{bmatrix}=\langle\mathbf{a}_i,\mathbf{u}\rangle
+		.. math:: \begin{bmatrix}0\\\vdots\\v_i\\\vdots\\0\end{bmatrix}=\langle\mathbf{a}_i,\mathbf{u}\rangle
 	* We note that we can collect the basis vectors inside a matrix as rows and express the relation as
 
 		.. math:: \mathbf{v}=\begin{bmatrix}-&\mathbf{a_1^*}&-\\ \vdots&\vdots&\vdots\\ -&\mathbf{a_n^*}&-\\\end{bmatrix}\mathbf{u}=\mathbf{A}^T\mathbf{u}
 	* We also note that the final vector can be written as a sum
 
-		.. math:: \mathbf{v}=\sum_{i=1}^n\begin{bmatrix}|\\v_i\\|\end{bmatrix}=\sum_{i=1}^n\langle\mathbf{u},\mathbf{a}_i\rangle
+		.. math:: \mathbf{v}=\sum_{i=1}^n\begin{bmatrix}0\\\vdots\\v_i\\\vdots\\0\end{bmatrix}=\sum_{i=1}^n\langle\mathbf{u},\mathbf{a}_i\rangle
 
 Function view
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
