@@ -155,7 +155,22 @@ Topological Notes
 	* Complete inner product spaces are known as `Hilbert Space <https://en.wikipedia.org/wiki/Hilbert_space>`_.
 
 .. warning::
-	Without the metric, the only topology we can have for the set of functions is the `product topology <https://en.wikipedia.org/wiki/Product_topology>`_ (as suggested by :math:`\mathcal{Y}^{\mathcal{X}}`).
+	* Without the metric, the only topology we can have for the set of functions is the `product topology <https://en.wikipedia.org/wiki/Product_topology>`_ (as suggested by :math:`\mathcal{Y}^{\mathcal{X}}`).
+	* With product topology, the only convergence that we can define is `*point-wise convergence* <https://en.wikipedia.org/wiki/Pointwise_convergence#topology_of_pointwise_convergence>`_ which is a weak form of convergence.
+
+Point-wise Convergence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* Let :math:`(f_n)_{n=1}^\infty` be a sequence of functions where :math:`f_n:\mathcal{X}\mapsto\mathcal{Y}`.
+	* Let :math:`f` be another function :math:`f:\mathcal{X}\mapsto\mathcal{Y}`
+	* We say that the sequence is point-wise converging towards :math:`f`
+
+		.. math:: \lim\limits_{n\to\infty}f_n=f\iff\forall x\in\mathcal{X}, \lim\limits_{n\to\infty}f_n(x)=f(x)
+
+Uniform Convergence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* TODO
 
 Function Basis
 ================================================================================
