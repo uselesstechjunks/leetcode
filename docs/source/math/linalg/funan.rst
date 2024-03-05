@@ -132,7 +132,7 @@ Sobolev Space
 .. note::
 	* TODO
 
-Metric
+Metric - Induced by the Norm
 ================================================================================
 .. note::
 	* The :math:`l_p` norm for finite vectors induces a metric 
@@ -144,6 +144,18 @@ Metric
 
 		* If :math:`d(f, g)=0`, then the functions are the same "almost everywhere".
 		* In this case, they are different for **at most** finitely many "dimensions".
+
+Topological Properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	With a metric defined, we can define topological properties such as convergence and complete function spaces.
+
+.. tip::
+	* Complete normed spaces are known as `Banach Space <https://en.wikipedia.org/wiki/Banach_space>`_.
+	* Complete inner product spaces are known as `Hilbert Space <https://en.wikipedia.org/wiki/Hilbert_space>`_.
+
+.. warning::
+	Without the metric, the only topology we can have for the set of functions is the `product topology <https://en.wikipedia.org/wiki/Product_topology>`_ (as suggested by :math:`\mathcal{Y}^{\mathcal{X}}`).
 
 Function Basis
 ================================================================================
@@ -186,10 +198,8 @@ Fourier Basis
 		.. math:: a_k=\frac{\int_\limits{[0,1]}f(x)\cdot\sqrt{2}\cos(2\pi kx)\mathop{dx}}{\int_\limits{[0,1]}\sqrt{2}\cos(2\pi kx)\cdot\sqrt{2}\cos(2\pi kx)\mathop{dx}}
 	* Similarly, for :math:`b_k`.
 
-Hilbert Space
+Reproducing kernel Hilbert space
 ================================================================================
-RKHS
---------------------------------------------------------------------------------
 
 Generalised Functions - Distributions
 ================================================================================
