@@ -229,11 +229,15 @@ Kernel of a Linear Transform
 	* For the functional case
 
 		.. math:: K(x,y)=\langle h(y),h(x)\rangle_{\mathcal{H}}
-	* Often the basis functions are referred by just the kernel itself as 
+	* For any fixed :math:`y_n`, :math:`K(x,y_n)` is a function of just :math:`x\in E` in :math:`\mathcal{F}(E)`
+	* Therefore, often the basis functions are referred by just the kernel itself as 
 
-		.. math:: K(\cdot,x)=h(x)
+		.. math:: K(\cdot,x)=h(x)		
+	* Any function :math:`g\in\mathcal{F}(E)` can be expressed as a linear combination of the basis
 
-.. note::
+		.. math:: g(x)=\sum_m\alpha_m K(x,y_m)
+
+.. tip::
 	* We note that when the matrix is the centered, normalised data matrix, then the kernel gives the sample covariance matrix.
 	* This hints as the usability of functional kernels for covariance functions for infinite dimensional Gaussian distributions (GPs).
 
