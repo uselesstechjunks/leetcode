@@ -75,10 +75,10 @@ Addition and Scalar Multiplication
 		* [Scalar Multiplication]: We can define scalar multiplication for each "dimension" :math:`x`
 
 			.. math:: (\alpha\cdot f)(x) = \alpha\cdot f(x)
-	* We don't need to restrict :math:`\mathcal{X}` and :math:`\mathcal{Y}` to reals.
 
-		* As long as :math:`+` is well-defined in :math:`\mathcal{Y}`, we can define vector addition for functions.
-		* As long as elements in :math:`\mathcal{Y}` satisfy scalar multiplication for some underlying field, we can also define scalar multiplication for functions.
+.. tip::
+	* We don't need to restrict :math:`\mathcal{X}` and :math:`\mathcal{Y}` to reals.
+	* As long as :math:`\mathcal{Y}` itself is a linear space over the same scalar field as :math:`\mathcal{X}`, the addition and scalar multiplication makes sense.
 
 Inner Product
 --------------------------------------------------------------------------------
