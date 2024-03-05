@@ -14,13 +14,20 @@ Functions are vectors : Intuition
 	* An alternate way to look at this is as a list of tuples, which binds the dimension (integer index in this case) and the value of that dimension
 
 		.. math:: \mathbf{u}=\left((0,0.3426),(1,1.3258),(2,6.8943),(3,8.387)\right)
-	* This can be represented by a function
 
-		.. math:: u:[0,1,2,3]\mapsto[0.3426,1.3258,6.8943,8.387]
-	* If we extend the index set to have real values, then, theoretically, we end up with infinite lists
+		* This can be represented by a function
+	
+			.. math:: u:[0,1,2,3]\mapsto[0.3426,1.3258,6.8943,8.387]
+		* In general, these sort of functions can be represented by 
+	
+			.. math:: u:\mathcal{I}\mapsto\mathbb{R}
+	
+			where :math:`\mathcal{I}` is a finite index set.
+	* If we extend :math:`\mathcal{I}` to be infinite or uncountable (e.g. :math:`\mathbb{N}` or :math:`\mathbb{R}`), then, we end up with infinite lists of tuples, e.g.
 
 		.. math:: f=\{(x,y)|x,y\in\mathbb{R}\}
-	* This is the way functions are defined in set theory, where the dimension of each function (informally) is :math:`|\mathcal{X}|`.
+	
+		* This is the way functions are defined in set theory, where the dimension of each function (informally) is :math:`|\mathcal{X}|`.
 
 Cardinality of Function Space
 --------------------------------------------------------------------------------
