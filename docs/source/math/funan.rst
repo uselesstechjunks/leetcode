@@ -223,13 +223,13 @@ Kernel of a Linear Transform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* The kernel of a linear transform is found by inner products of the basis functions.
-	* For finite dimensional case
+	* For finite dimensional case :math:`K:\mathcal{I}\times\mathcal{I}`
 
 		.. math:: K(i,j)=\langle\mathbf{a}^*_i,\mathbf{a}^*_j\rangle
-	* For the functional case
+	* For the functional case :math:`K:E\times E`
 
 		.. math:: K(x,y)=\langle h(y),h(x)\rangle_{\mathcal{H}}
-	* For any fixed :math:`y_n`, :math:`K(x,y_n)` is a function of just :math:`x\in E` in :math:`\mathcal{F}(E)`
+	* For any fixed :math:`y_n\in E`, :math:`K(x,y_n)` is a function of just :math:`x\in E` in :math:`\mathcal{F}(E)`
 	* Therefore, often the basis functions are referred by just the kernel itself as 
 
 		.. math:: K(\cdot,x)=h(x)		
