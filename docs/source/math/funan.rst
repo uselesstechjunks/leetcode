@@ -177,10 +177,10 @@ Uniform Convergence
 Linear Transforms
 --------------------------------------------------------------------------------
 .. note::
-	* We consider an orthonormal set of basis vectors (i.e. of unit-length) in :math:`\mathbb{R}^d` for a finite dimensional vector space as
+	* We consider an normalized set of basis vectors (i.e. of unit-length but not necessarily orthogonal) in :math:`\mathbb{R}^n` for a finite dimensional vector space as
 
 		.. math:: \{\mathbf{a}_1,\cdots\mathbf{a}_n\}	
-	* We can find the projection of any vector :math:`\mathbf{u}\in\mathbb{R}^d` onto each of the basis
+	* We can find the projection of any vector :math:`\mathbf{u}\in\mathbb{R}^n` onto each of the basis
 
 		.. math:: \langle\mathbf{a}_i,\mathbf{u}\rangle
 	* Under the new basis, this gives the i-th co-ordinate for the result vector :math:`\mathbf{v}`
@@ -196,8 +196,10 @@ Linear Transforms
 Function view
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* The vector :math:`\mathbf{u}` is actually a function :math:`u:\mathcal{I}\mapsto\mathbb{R}`, where :math:`\mathcal{I}=\{1,\cdots,d\}` is the index set.
-	* The basis vectors :math:`\mathbf{a}_k` are also functions :math:`a_k:\mathcal{I}\mapsto\mathbb{R}`.
+	* Let :math:`\mathcal{I}=\{1,\cdots,d\}` be the index set.
+	* The vector :math:`\mathbf{u}` defines a function :math:`u:\mathcal{I}\mapsto\mathbb{R}\in\mathcal{U}(\mathcal{I})`
+	* The basis vectors :math:`\mathbf{a}_k` are also functions :math:`a_k:\mathcal{I}\mapsto\mathcal{H}` where :math:`\mathcal{H}^{\mathcal{I}}\subseteq\mathbb{R}^d` is the subspace spanned by the basis.
+	* Then the matrix :math:`mathbf{A}` defines a linear transform :math:`A:\mathcal{H}\mapsto\mathcal{U}(\mathcal{I})`.
 
 Mercer Basis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
