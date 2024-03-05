@@ -77,8 +77,12 @@ Inner Product
 		* We sum the results across all dimensions.
 
 			.. math:: \langle\mathbf{u},\mathbf{v}\rangle=\sum_{i=1}^n u_i\cdot v_i
-	* Let's add an additional constraint that :math:`\mathcal{Y}` is equipped with an inner product.
-	* Let's also add the constraint that :math:`\mathcal{X}` is equipped with a positive measure :math:`\mu` and :math:`\mathop{d\mu}(x)=\mathop{dx}`.
+
+.. warning::
+	* Let's add a constraint that :math:`\mathcal{Y}` is equipped with an inner product.
+	* Let's add a constraint that :math:`\mathcal{X}` is equipped with a positive measure :math:`\mu(x)` and :math:`\mathop{d\mu}(x)=\mathop{dx}`.
+
+.. note::
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`
 
 		* We can take a scalar product for each dimension :math:`x`.
@@ -111,6 +115,8 @@ Lp Space
 	* More generally, we can have
 
 		.. math:: ||f||_{L_p}=\left(\int_{\mathcal{X}}|f(x)|^p\mathop{dx}\right)^{1/p}
+
+.. tip::
 	* For more general measurable spaces where we have a measure :math:`\mu(x)` defined
 
 		.. math:: ||f||_{L_p(\mathcal{X},\mu)}=\left(\int_{\mathcal{X}}|f(x)|^p\mathop{d\mu}(x)\right)^{1/p}
