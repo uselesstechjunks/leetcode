@@ -170,7 +170,14 @@ Point-wise Convergence
 Uniform Convergence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* TODO
+	* We can make a stronger convergence criterion for functions which map to a metric space :math:`\mathcal{Y}` (i.e., where :math:`\sup` makes sense).
+	* We say that the sequence is uninformly converging towards :math:`f`
+
+		.. math:: \lim\limits_{n\to\infty}f_n=f\iff\lim\limits_{n\to\infty}\sup\{|f_n(x)-f(x)|:x\in\mathcal{X}\}=0
+
+.. tip::
+	* All uniformly convergent functions are point-wise convergent.
+	* The converse is not true.
 
 Function Basis
 ================================================================================
