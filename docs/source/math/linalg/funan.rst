@@ -78,6 +78,7 @@ Inner Product
 
 			.. math:: \langle\mathbf{u},\mathbf{v}\rangle=\sum_{i=1}^n u_i\cdot v_i
 	* Let's add an additional constraint that :math:`\mathcal{Y}` is equipped with an inner product.
+	* Let's also add the constraint that :math:`\mathcal{X}` is equipped with a positive measure :math:`\mu` and :math:`\mathop{d\mu}(x)=\mathop{dx}`.
 	* For functions :math:`f:\mathcal{X}\mapsto\mathcal{Y}` and :math:`g:\mathcal{X}\mapsto\mathcal{Y}`
 
 		* We can do the multiplication for each dimension :math:`x`
@@ -92,9 +93,9 @@ Orthogonality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* Two functions :math:`f` and :math:`g` are orthogonal if their inner product is 0.
-	* Example: 
+	* Example: For real trig functions :math:`\sin:[0,\pi]\mapsto[0,1]` and :math:`\cos:[0,\pi]\mapsto[0,1]`
 
-		.. math:: \langle\sin(x),\cos(x)\rangle=\int_\limits{0}^{\pi}\sin(x)\cos(x)\mathop{dx}=0
+		.. math:: \langle\sin,\cos\rangle=\int_\limits{0}^{\pi}\sin(x)\cos(x)\mathop{dx}=0
 
 Norm - Induced by the Inner Product
 ================================================================================
