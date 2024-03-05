@@ -46,6 +46,13 @@ Cardinality of Function Space
 			:math:`f_7:\{x_1\mapsto y_2;x_2\mapsto y_2;x_3\mapsto y_1\}`
 			:math:`f_8:\{x_1\mapsto y_2;x_2\mapsto y_2;x_3\mapsto y_2\}`
 
+.. tip::
+	* To remember, we can think of the selection problem, where we have :math:`n` items which are either selected or discarded.
+		
+		* We know from combinatorics that the total number of such choices is :math:`2^n`.
+		* This can be formed as a function where each of the :math:`n` elements map to either 0 or 1.
+	* We also verify that function view of real-valued vectors which maps the index set (of size :math:`d`) to reals also make sense since we represent the dimension as :math:`\mathbb{R}^d`.
+
 Addition and Scalar Multiplication
 --------------------------------------------------------------------------------
 .. note::
