@@ -37,21 +37,6 @@ Cardinality of Function Space
 		* For every element :math:`x\in\mathcal{X}`, we have a choice to make its image map to some :math:`y\in\mathcal{Y}`.
 		* Therefore, the size of this choice for each :math:`x\in\mathcal{X}` is :math:`|\mathcal{Y}|`.
 		* The size of the choice for **all** the elements in :math:`\mathcal{X}` is therefore :math:`|\mathcal{Y}|^{|\mathcal{X}|}`.
-	* As an example, we can enumerate all possible functions in the form
-
-		.. math:: f:\{x_1,x_2,x_3\}\mapsto\{y_1,y_2\}
-
-		.. csv-table:: 
-			:align: center
-
-			:math:`f_1:\{x_1\mapsto y_1;x_2\mapsto y_1;x_3\mapsto y_1\}`
-			:math:`f_2:\{x_1\mapsto y_1;x_2\mapsto y_1;x_3\mapsto y_2\}`
-			:math:`f_3:\{x_1\mapsto y_1;x_2\mapsto y_2;x_3\mapsto y_1\}`
-			:math:`f_4:\{x_1\mapsto y_1;x_2\mapsto y_2;x_3\mapsto y_2\}`
-			:math:`f_5:\{x_1\mapsto y_2;x_2\mapsto y_1;x_3\mapsto y_1\}`
-			:math:`f_6:\{x_1\mapsto y_2;x_2\mapsto y_1;x_3\mapsto y_2\}`
-			:math:`f_7:\{x_1\mapsto y_2;x_2\mapsto y_2;x_3\mapsto y_1\}`
-			:math:`f_8:\{x_1\mapsto y_2;x_2\mapsto y_2;x_3\mapsto y_2\}`
 
 .. tip::
 	* To remember, we can think of the selection problem, where we have :math:`n` items which are either selected or discarded.
