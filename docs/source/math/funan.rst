@@ -177,22 +177,15 @@ Uniform Convergence
 Linear Transforms
 --------------------------------------------------------------------------------
 .. note::
-	* We can have an orthonormal set of basis vectors (not necessarily unit-vectors) for a finite dimensional vector space :math:`V_{\mathcal{F}}` as
+	* We consider an orthonormal set of basis vectors (i.e. of unit-length) for a finite dimensional vector space as
 
-		.. math:: \{\mathbf{b}_1,\cdots\mathbf{b}_n\}
+		.. math:: \{\mathbf{a}_1,\cdots\mathbf{a}_n\}
 	
-	* For any vector :math:`\mathbf{u}`, we can find the proejection of it onto the basis vectors as :math:`\langle\mathbf{u},\mathbf{b}_i\rangle`.
-	* The length of the basis vectors are given by :math:`||\mathbf{b}_i||_2^2=\langle\mathbf{b}_i,\mathbf{b}_i\rangle`.
-	* Let :math:`a_i=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}` be the projection normalised for the length of the basis vector :math:`\mathbf{b}_i`.
-	* :math:`\mathbf{u}` then can be expressed as
+	* For any vector :math:`\mathbf{u}`, we can find the projection of it onto each of the basis vectors as :math:`\langle\mathbf{a}_i,\mathbf{u}\rangle`.
+	* Under the new basis, this gives the i-th co-ordinate for the result vector :math:`\mathbf{v}`
 
-		.. math:: \mathbf{u}=a_1\cdot\mathbf{b}_i+\cdots +a_n\cdot\mathbf{b}_n=\sum_{i=1}^na_i\cdot\mathbf{b}_i
-	* We note that this results in the same expression if we convert each basis to a unit vector by normalising it, :math:`\mathbf{e}_i=\frac{\mathbf{b}_i}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`
-
-		.. math:: \mathbf{u}=\langle\mathbf{u},\mathbf{e}_1\rangle+\cdots+\langle\mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n\langle\mathbf{u},\mathbf{e}_i\rangle
-	* [Kernel view]: We can define :math:`K_i(\cdot,\mathbf{b}_i)=\frac{1}{||\mathbf{b}_i||^2_2}{\langle\cdot,\mathbf{b}_i\rangle}` as a kernel which can take any vector :math:`\mathbf{u}` and computes the projection onto it, :math:`K_i(\mathbf{u},\mathbf{b}_i)=\frac{1}{||\mathbf{b}_i||^2_2}{\langle\mathbf{u},\mathbf{b}_i\rangle}`
-
-		.. math:: \mathbf{u}=\sum_{i=1}^n K_i(\mathbf{u},\mathbf{b}_i)
+		.. math:: \begin{bmatrix}|\\v_i\\|\end{bmatrix}=\langle\mathbf{u},\mathbf{a}_i\rangle
+	* For a function view, 
 
 Mercer Basis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
