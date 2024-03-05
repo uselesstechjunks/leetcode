@@ -174,8 +174,8 @@ Uniform Convergence
 	* All uniformly convergent functions are point-wise convergent.
 	* The converse is not true.
 
-Function Basis
-================================================================================
+Linear Transforms
+--------------------------------------------------------------------------------
 .. note::
 	* We can have an orthonormal set of basis vectors (not necessarily unit-vectors) for a finite dimensional vector space :math:`V_{\mathcal{F}}` as
 
@@ -194,8 +194,11 @@ Function Basis
 
 		.. math:: \mathbf{u}=\sum_{i=1}^n K_i(\mathbf{u},\mathbf{b}_i)
 
+Mercer Basis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Fourier Basis
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* For "well-behaved" (i.e. square-integrable so that one can define :math:`L_2` norm as per above) periodic functions, we can have `basis functions of odd and even frequencies <https://math.stackexchange.com/a/32663>`_.
 	* `Schauder basis <https://en.wikipedia.org/wiki/Schauder_basis>`_ (allows for infinite sum over basis):
