@@ -8,6 +8,7 @@ Mathematics
    prereq
    analysis
    linalg/index
+   funan
    calc3/index
    prob/index
    stat/index

@@ -24,3 +24,4 @@ Gaussian Process
 
   * `Lectures from Gaussian Process Summar School <https://gpss.cc/gpss23/program>`_
   * `[Carl Edward Rasmussen and Christopher K. I. Williams] Gaussian Processes for Machine Learning <https://gaussianprocess.org/gpml/>`_
+  * `GP model zoo <https://jejjohnson.github.io/gp_model_zoo/#/literature>`_

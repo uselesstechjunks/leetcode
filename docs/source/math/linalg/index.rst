@@ -10,4 +10,3 @@ Linear Algebra
 	factor
 	norm
 	applied
-	funan
