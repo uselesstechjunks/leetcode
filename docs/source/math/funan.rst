@@ -223,16 +223,24 @@ Kernel of a Linear Transform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* The kernel of a linear transform is found by inner products of the basis functions.
-	* For finite dimensional case :math:`K:\mathcal{I}\times\mathcal{I}`
+	* For finite dimensional case :math:`K:\mathcal{I}\times\mathcal{I}\mapsto\mathbb{R}`
 
 		.. math:: K(i,j)=\langle\mathbf{a}^*_i,\mathbf{a}^*_j\rangle
-	* For the functional case :math:`K:E\times E`
+	* For the functional case :math:`K:E\times E\mapsto\mathbb{R}`
 
 		.. math:: K(x,y)=\langle h(y),h(x)\rangle_{\mathcal{H}}
 	* For any fixed :math:`y_n\in E`, :math:`K(x,y_n)` is a function of just :math:`x\in E` in :math:`\mathcal{F}(E)`
 	* Therefore, often the basis functions are referred by just the kernel itself as 
 
-		.. math:: K(\cdot,x)=h(x)		
+		.. math:: K(\cdot,x)=h(x)
+
+		and
+
+		.. math:: K(x,y)=\langle K(\cdot,x),K(\cdot,y)\rangle
+	* Reproducing Property:
+
+		* Function evaluation is inner product: :math:`f(x)=\langle f,K(\cdot,x)\rangle_{\mathcal{H}}`
+		* Therefore, knowing the kernel, we can recover any function.
 	* Any function :math:`g\in\mathcal{F}(E)` can be expressed as a linear combination of the basis
 
 		.. math:: g(x)=\sum_m\alpha_m K(x,y_m)
@@ -241,7 +249,13 @@ Kernel of a Linear Transform
 	* We note that when the matrix is the centered, normalised data matrix, then the kernel gives the sample covariance matrix.
 	* This hints as the usability of functional kernels for covariance functions for infinite dimensional Gaussian distributions (GPs).
 
-Mercer Basis
+Moore-Aronszajn theorem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. warning::
+	* We assume that the kernel is positive definite.
+	* Then there exists a unique :math:`\mathcal{H}_k` for which :math:`K` is the kernel basis.
+
+Mercer Basis - Self-Adjoint Kernels
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Fourier Basis
