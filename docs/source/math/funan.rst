@@ -177,15 +177,26 @@ Uniform Convergence
 Linear Transforms
 --------------------------------------------------------------------------------
 .. note::
-	* We consider an orthonormal set of basis vectors (i.e. of unit-length) for a finite dimensional vector space as
+	* We consider an orthonormal set of basis vectors (i.e. of unit-length) in :math:`\mathbb{R}^d` for a finite dimensional vector space as
 
 		.. math:: \{\mathbf{a}_1,\cdots\mathbf{a}_n\}
 	
-	* For any vector :math:`\mathbf{u}`, we can find the projection of it onto each of the basis vectors as :math:`\langle\mathbf{a}_i,\mathbf{u}\rangle`.
+	* For any vector :math:`\mathbf{u}\in\mathbb{R}^d`, we can find the projection of it onto each of the basis vectors as :math:`\langle\mathbf{a}_i,\mathbf{u}\rangle`.
 	* Under the new basis, this gives the i-th co-ordinate for the result vector :math:`\mathbf{v}`
 
 		.. math:: \begin{bmatrix}|\\v_i\\|\end{bmatrix}=\langle\mathbf{u},\mathbf{a}_i\rangle
-	* For a function view, 
+	* We note that we can collect the basis vectors inside a matrix as rows and express the relation as
+
+		.. math:: \mathbf{v}=\begin{bmatrix}-&a_1^*&-\\ \vdots&\vdots&\vdots\\ -&a_n^*&-\\\end{bmatrix}\mathbf{u}=\mathbf{A}^T\mathbf{u}
+	* We also note that the final vector can be written as a sum
+
+		.. math:: \mathbf{v}=\sum_{i=1}^n\begin{bmatrix}|\\v_i\\|\end{bmatrix}=\sum_{i=1}^n\langle\mathbf{u},\mathbf{a}_i\rangle
+
+Function view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* The vector :math:`\mathbf{u}` is actually a function :math:`u:\mathcal{I}\mapsto\mathbb{R}`, where :math:`\mathcal{I}=\{1,\cdots,d\}` is the index set.
+	* The basis vectors :math:`\mathbf{a}_k` are also functions :math:`a_k:\mathcal{I}\mapsto\mathbb{R}`.
 
 Mercer Basis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
