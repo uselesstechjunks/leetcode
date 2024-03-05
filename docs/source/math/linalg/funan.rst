@@ -23,7 +23,7 @@ Functions are vectors : Intuition
 			.. math:: u:\mathcal{I}\mapsto\mathbb{R}
 	
 			where :math:`\mathcal{I}` is a finite index set.
-	* If we extend :math:`\mathcal{I}` to be infinite or uncountable (e.g. :math:`\mathbb{N}` or :math:`\mathbb{R}`), then, we end up with infinite lists of tuples, e.g.
+	* If we extend :math:`\mathcal{I}` to be countably infinite or uncountable (e.g. :math:`\mathbb{N}` or :math:`\mathbb{R}`), then, we end up with infinite lists of tuples, e.g.
 
 		.. math:: f=\{(x,y)|x,y\in\mathbb{R}\}
 	
