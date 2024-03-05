@@ -3,9 +3,9 @@ Functional Analysis
 ################################################################################
 
 ********************************************************************************
-Vector Space of Functions
+Functions are vectors
 ********************************************************************************
-Functions are vectors : Intuition
+Intuition
 ================================================================================
 .. tip::
 	* We usually think of vectors in finite dimensional case, e.g. :math:`\mathbf{u}\in\mathbb{R}^4`, as a list
@@ -45,7 +45,7 @@ Cardinality of Function Space
 		* This can be formed as a function where each of the :math:`n` elements map to either 0 or 1.
 	* We also verify that function view of real-valued vectors which maps the index set (of size :math:`d`) to reals also make sense since we represent the dimension as :math:`\mathbb{R}^d`.
 
-Functions are vectors : Technicalities
+Technicalities
 ================================================================================
 As long as we're restricting ourselves to the class of functions from one vector (linear) space :math:`\mathcal{X}` to another :math:`\mathcal{Y}` over the same underlying scalar field :math:`\mathbb{F}`, we can faithfully recover many useful properties from a finite dimensional vector spaces for the (potentially infinite dimensional) space of functions.
 
@@ -218,21 +218,21 @@ Fourier Basis
 		.. math:: a_k=\frac{\int_\limits{[0,1]}f(x)\cdot\sqrt{2}\cos(2\pi kx)\mathop{dx}}{\int_\limits{[0,1]}\sqrt{2}\cos(2\pi kx)\cdot\sqrt{2}\cos(2\pi kx)\mathop{dx}}
 	* Similarly, for :math:`b_k`.
 
+********************************************************************************
 Useful Function Spaces
-================================================================================
+********************************************************************************
 Sobolev Space
---------------------------------------------------------------------------------
-Holder Space
---------------------------------------------------------------------------------
-Reproducing kernel Hilbert space
---------------------------------------------------------------------------------
-
-Generalised Functions - Distributions
 ================================================================================
+Holder Space
+================================================================================
+Reproducing kernel Hilbert space
+================================================================================
+
+********************************************************************************
+Generalised Functions - Distributions
+********************************************************************************
 Dirac-Delta Function
---------------------------------------------------------------------------------
-More Basis - Integral Transforms
---------------------------------------------------------------------------------
+================================================================================
 
 .. seealso::
 	* `Functions are vectors <https://www.youtube.com/watch?v=LSbpQawNzU8>`_
