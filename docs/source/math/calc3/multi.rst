@@ -291,7 +291,7 @@ Useful Derivatives
 	:math:`\mathbf{X}`, , ,:math:`\mathbf{X}`, :math:`\mathbb{I}`, :math:`\mathbb{I}`
 	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}\mathbf{b}=\mathbf{b}^T\mathbf{X}\mathbf{a}`, , , :math:`\mathbf{b}\mathbf{a}^T`, :math:`\mathbf{a}\mathbf{b}^T`
 	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}^T\mathbf{b}=\mathbf{b}^T\mathbf{X}^T\mathbf{a}`, , , :math:`\mathbf{a}\mathbf{b}^T`, :math:`\mathbf{b}\mathbf{a}^T`
-	:math:`\mathbf{X}`, :math:`\mathbf{b}^T\mathbf{X}^T\mathbf{X}\mathbf{a}=(\mathbf{X}\mathbf{b})^T(\mathbf{X}\mathbf{a})`, , , (\mathbf{a}\mathbf{b}^T+\mathbf{b}\mathbf{a}^T)\mathbf{X}^T, \mathbf{X}(\mathbf{a}\mathbf{b}^T+\mathbf{b}\mathbf{a}^T)
+	:math:`\mathbf{X}`, :math:`\mathbf{b}^T\mathbf{X}^T\mathbf{X}\mathbf{a}=(\mathbf{X}\mathbf{b})^T(\mathbf{X}\mathbf{a})`, , , :math:`(\mathbf{a}\mathbf{b}^T+\mathbf{b}\mathbf{a}^T)\mathbf{X}^T`, :math:`\mathbf{X}(\mathbf{a}\mathbf{b}^T+\mathbf{b}\mathbf{a}^T)`
 
 .. seealso::
 	* Plethora of useful results: `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
