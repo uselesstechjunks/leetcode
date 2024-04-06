@@ -176,26 +176,97 @@ Uniform Convergence
 
 Linear Transforms
 --------------------------------------------------------------------------------
-.. note::
-	* We can have an orthonormal set of basis vectors (not necessarily unit-vectors) for a finite dimensional vector space :math:`V_{\mathcal{F}}` as
-
-		.. math:: \{\mathbf{b}_1,\cdots\mathbf{b}_n\}
-	
-	* For any vector :math:`\mathbf{u}`, we can find the proejection of it onto the basis vectors as :math:`\langle\mathbf{u},\mathbf{b}_i\rangle`.
-	* The length of the basis vectors are given by :math:`||\mathbf{b}_i||_2^2=\langle\mathbf{b}_i,\mathbf{b}_i\rangle`.
-	* Let :math:`a_i=\frac{\langle\mathbf{u},\mathbf{b}_i\rangle}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}` be the projection normalised for the length of the basis vector :math:`\mathbf{b}_i`.
-	* :math:`\mathbf{u}` then can be expressed as
-
-		.. math:: \mathbf{u}=a_1\cdot\mathbf{b}_i+\cdots +a_n\cdot\mathbf{b}_n=\sum_{i=1}^na_i\cdot\mathbf{b}_i
-	* We note that this results in the same expression if we convert each basis to a unit vector by normalising it, :math:`\mathbf{e}_i=\frac{\mathbf{b}_i}{\langle\mathbf{b}_i,\mathbf{b}_i\rangle}`
-
-		.. math:: \mathbf{u}=\langle\mathbf{u},\mathbf{e}_1\rangle+\cdots+\langle\mathbf{u},\mathbf{e}_n\rangle=\sum_{i=1}^n\langle\mathbf{u},\mathbf{e}_i\rangle
-	* [Kernel view]: We can define :math:`K_i(\cdot,\mathbf{b}_i)=\frac{1}{||\mathbf{b}_i||^2_2}{\langle\cdot,\mathbf{b}_i\rangle}` as a kernel which can take any vector :math:`\mathbf{u}` and computes the projection onto it, :math:`K_i(\mathbf{u},\mathbf{b}_i)=\frac{1}{||\mathbf{b}_i||^2_2}{\langle\mathbf{u},\mathbf{b}_i\rangle}`
-
-		.. math:: \mathbf{u}=\sum_{i=1}^n K_i(\mathbf{u},\mathbf{b}_i)
-
-Mercer Basis
+Linear Transforms on Euclidean Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* We consider an normalized set of basis vectors (i.e. of unit-length but not necessarily orthogonal) in :math:`\mathbb{R}^n` for a finite dimensional vector space as
+
+		.. math:: \{\mathbf{a}_1,\cdots\mathbf{a}_n\}	
+	* We can find the projection of any vector :math:`\mathbf{u}\in\mathbb{R}^n` onto each of the basis
+
+		.. math:: \langle\mathbf{a}_i,\mathbf{u}\rangle
+	* Under the new basis, this gives the i-th co-ordinate for the result vector :math:`\mathbf{v}`
+
+		.. math:: \begin{bmatrix}0\\\vdots\\v_i\\\vdots\\0\end{bmatrix}=\langle\mathbf{a}_i,\mathbf{u}\rangle
+	* We note that we can collect the basis vectors inside a matrix as rows and express the relation as
+
+		.. math:: \mathbf{v}=\begin{bmatrix}-&\mathbf{a_1^*}&-\\ \vdots&\vdots&\vdots\\ -&\mathbf{a_n^*}&-\\\end{bmatrix}\mathbf{u}=\mathbf{A}^T\mathbf{u}
+	* We also note that the final vector can be written as a sum
+
+		.. math:: \mathbf{v}=\sum_{i=1}^n\begin{bmatrix}0\\\vdots\\v_i\\\vdots\\0\end{bmatrix}=\sum_{i=1}^n\langle\mathbf{u},\mathbf{a}_i\rangle
+
+Function view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* Let :math:`\mathcal{I}=\{1,\cdots,d\}` be the index set.
+	* The vector :math:`\mathbf{u}` defines a function :math:`u:\mathcal{I}\mapsto\mathbb{R}\in\mathcal{U}(\mathcal{I})`
+	* The basis vectors :math:`\mathbf{a}_k` are also functions :math:`a_k:\mathcal{I}\mapsto\mathcal{H}` where :math:`\mathcal{H}^{\mathcal{I}}\subseteq\mathbb{R}^d` is the subspace spanned by the basis.
+	* Then the matrix :math:`\mathbf{A}` defines a linear transform :math:`A:\mathcal{H}\mapsto\mathcal{U}(\mathcal{I})` where
+
+		.. math:: v(i)=(Au)(i)
+
+Linear Transforms on Function Space
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* We consider functions :math:`f:E\mapsto\mathbb{R}\in\mathcal{F}(E)` (similar to :math:`\mathcal{U}(\mathcal{I})`) where :math:`E` is any abstract space.
+	* We consider basis functions :math:`h:E\mapsto\mathcal{H}` where :math:`\mathcal{H}` is a Hilbert space equipped with a norm
+
+		.. math:: \langle \cdot,\cdot\rangle_{\mathcal{H}}
+	* For any :math:`x\in E`, the projection onto a basis is given by
+
+		.. math:: f(x)=\langle f,h(x)\rangle_{\mathcal{H}}
+	* This defines a linear transform :math:`L:\mathcal{H}\mapsto\mathcal{F}(E)` where 
+
+		.. math:: f(\cdot)=(Lf)(\cdot)
+
+Kernel of a Linear Transform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* The kernel of a linear transform is found by inner products of the basis functions.
+	* For finite dimensional case :math:`K:\mathcal{I}\times\mathcal{I}\mapsto\mathbb{R}`
+
+		.. math:: K(i,j)=\langle\mathbf{a}^*_i,\mathbf{a}^*_j\rangle
+	* For the functional case :math:`K:E\times E\mapsto\mathbb{R}`
+
+		.. math:: K(x,y)=\langle h(y),h(x)\rangle_{\mathcal{H}}
+	* For any fixed :math:`y_n\in E`, :math:`K(x,y_n)` is a function of just :math:`x\in E` in :math:`\mathcal{F}(E)`
+	* Therefore, often the basis functions are referred by just the kernel itself as 
+
+		.. math:: K(\cdot,x)=h(x)
+
+		and
+
+		.. math:: K(x,y)=\langle K(\cdot,x),K(\cdot,y)\rangle
+	* Symmetry: :math:`K(x,y)=K(y,x)` due to the symmetry of the inner product.
+	* Reproducing Property:
+
+		* Function evaluation is inner product: :math:`f(x)=\langle f,K(\cdot,x)\rangle_{\mathcal{H}}`
+		* Therefore, knowing the kernel, we can recover any function.
+	* Any function :math:`g\in\mathcal{F}(E)` can be expressed as a linear combination of the basis
+
+		.. math:: g(x)=\sum_m\alpha_m K(x,y_m)
+
+.. tip::
+	* We note that when the matrix is the centered, normalised data matrix, then the kernel gives the sample covariance matrix.
+	* This hints as the usability of functional kernels for covariance functions for infinite dimensional Gaussian distributions (GPs).
+
+Moore-Aronszajn Theorem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. warning::
+	* We assume that the kernel is positive definite.
+	* Then there exists a unique :math:`\mathcal{H}_k` for which :math:`K` is the kernel basis.
+
+Mercer Theorem - Eigenfunctions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	TODO
+
+Other Integral Transforms
+--------------------------------------------------------------------------------
+General Form
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	TODO
 
 Fourier Basis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
