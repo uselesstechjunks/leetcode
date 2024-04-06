@@ -273,18 +273,20 @@ Matrix Calculus: Tricks and Useful Results
 Useful Derivatives
 ===========================================================
 .. csv-table:: Useful derivatives
-	:header: "Scalar derivative", "Vector derivative"
+	:header: "Variable", "Scalar", "Vector", "Matrix", "Derivative (Numerator L)", "Derivative (Denominator L)"
 	:align: center
 
-	:math:`f(x)\to\frac{\mathop{d}}{\mathop{dx}}f(x)`, :math:`f(\mathbf{x})\to\frac{\mathop{d}}{\mathop{d\mathbf{x}}}f(\mathbf{x})`
-	:math:`bx\to b`, :math:`\mathbf{x}^\top\mathbf{b}/\mathbf{b}^\top\mathbf{x}\to \mathbf{b}`
-	:math:`ax\to a`, :math:`\mathbf{x}^\top\mathbf{A}\to \mathbf{A}`
-	:math:`a^2x\to a^2`, :math:`\mathbf{a}^\top\mathbf{X}^\top\mathbf{a}/\mathbf{a}^\top\mathbf{X}\mathbf{a}\to \mathbf{a}\mathbf{a}^\top`
-	:math:`abx\to ab`, :math:`\mathbf{a}^\top\mathbf{X}\mathbf{b}\to \mathbf{a}\mathbf{b}^\top`	
-	:math:`abx\to ab`, :math:`\mathbf{a}^\top\mathbf{X}^\top\mathbf{b}\to \mathbf{b}\mathbf{a}^\top`
-	:math:`x^2\to 2x`, :math:`\mathbf{x}^\top\mathbf{x}\to 2\mathbf{x}`
-	:math:`ax^2\to 2ax`, :math:`\mathbf{x}^\top\mathbf{A}\mathbf{x}\to (\mathbf{A}+\mathbf{A}^\top)\mathbf{x}`
-	:math:`abx^2\to 2abx`, :math:`\mathbf{b}^\top\mathbf{X}^\top\mathbf{X}\mathbf{a}\to \mathbf{X}(\mathbf{a}\mathbf{b}^\top+\mathbf{b}\mathbf{a}^\top)`
+	:math:`x`, :math:`x`, , , :math:`1`, :math:`1`
+	:math:`x`, :math:`ax`, , , :math:`a`, :math:`a`
+	:math:`x`, :math:`x^2`, , , :math:`2x`, :math:`2x`
+	:math:`x`, :math:`ax^2`, , , :math:`2ax`, :math:`2ax`
+	:math:`x`, :math:`(ax)^2`, , , :math:`2a^2x`, :math:`2a^2x`
+	:math:`\mathbf{x}`, :math:`\mathbf{x}`, , , :math:`\mathbf{1}^T`, :math:`\mathbf{1}`
+	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{a}=\mathbf{a}^T\mathbf{x}`, , ,:math:`\mathbf{a}^T`, :math:`\mathbf{a}`
+	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{x}=||\mathbf{x}||_2^2`, , ,:math:`2\mathbf{x}^T`, :math:`2\mathbf{x}`
+	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{A}\mathbf{x}`, , ,:math:`\mathbf{x}^T(\mathbf{A}+\mathbf{A}^T)`, :math:`(\mathbf{A}+\mathbf{A}^T)\mathbf{x}`
+	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{A}^T\mathbf{A}\mathbf{x}=||\mathbf{A}\mathbf{x}||_2^2`, , , , 
+	:math:`\mathbf{x}`, , :math:`\mathbf{A}\mathbf{x}`, ,:math:`\mathbf{A}`, :math:`\mathbf{A}^T`
 
 .. seealso::
 	* Plethora of useful results: `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
