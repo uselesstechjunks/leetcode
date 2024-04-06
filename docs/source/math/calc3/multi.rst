@@ -289,7 +289,7 @@ Useful Derivatives
 	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{A}^T\mathbf{A}\mathbf{x}=||\mathbf{A}\mathbf{x}||_2^2`, , , :math:`2\mathbf{x}^T\mathbf{A}^T\mathbf{A}`, :math:`2\mathbf{A}^T\mathbf{A}\mathbf{x}`
 	:math:`\mathbf{x}`, , :math:`\mathbf{A}\mathbf{x}`, ,:math:`\mathbf{A}`, :math:`\mathbf{A}^T`
 	:math:`\mathbf{x}`, , , :math:`\mathbf{x}\mathbf{x}^T`, , :math:`\mathbf{x}\otimes\mathbb{I}+\mathbb{I}\otimes\mathbf{x}`
-	:math:`\mathbf{X}`, , ,:math:`\mathbf{X}`, :math:`\mathbb{I}\otimes\mathbb{I}, :math:`\mathbb{I}\otimes\mathbb{I}`
+	:math:`\mathbf{X}`, , ,:math:`\mathbf{X}`, :math:`\mathbb{I}\otimes\mathbb{I}`, :math:`\mathbb{I}\otimes\mathbb{I}`
 	:math:`\mathbf{X}`, , :math:`\mathbf{X}\mathbf{a}`, , , :math:`\mathbf{a}^T\otimes\mathbb{I}`
 	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}\mathbf{b}=\mathbf{b}^T\mathbf{X}\mathbf{a}`, , , :math:`\mathbf{b}\mathbf{a}^T`, :math:`\mathbf{a}\mathbf{b}^T`
 	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}^T\mathbf{b}=\mathbf{b}^T\mathbf{X}^T\mathbf{a}`, , , :math:`\mathbf{a}\mathbf{b}^T`, :math:`\mathbf{b}\mathbf{a}^T`
