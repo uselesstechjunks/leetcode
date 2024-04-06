@@ -285,8 +285,13 @@ Useful Derivatives
 	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{a}=\mathbf{a}^T\mathbf{x}`, , ,:math:`\mathbf{a}^T`, :math:`\mathbf{a}`
 	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{x}=||\mathbf{x}||_2^2`, , ,:math:`2\mathbf{x}^T`, :math:`2\mathbf{x}`
 	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{A}\mathbf{x}`, , ,:math:`\mathbf{x}^T(\mathbf{A}+\mathbf{A}^T)`, :math:`(\mathbf{A}+\mathbf{A}^T)\mathbf{x}`
+	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{B}^T\mathbf{A}\mathbf{x}=(\mathbf{B}\mathbf{x})^T(\mathbf{A}\mathbf{x})`, , , , 
 	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{A}^T\mathbf{A}\mathbf{x}=||\mathbf{A}\mathbf{x}||_2^2`, , , , 
 	:math:`\mathbf{x}`, , :math:`\mathbf{A}\mathbf{x}`, ,:math:`\mathbf{A}`, :math:`\mathbf{A}^T`
+	:math:`\mathbf{X}`, , ,:math:`\mathbf{X}`, :math:`\mathbb{I}`, :math:`\mathbb{I}`
+	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}\mathbf{b}=\mathbf{b}^T\mathbf{X}\mathbf{a}`, , , :math:`\mathbf{b}\mathbf{a}^T`, :math:`\mathbf{a}\mathbf{b}^T`
+	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}^T\mathbf{b}=\mathbf{b}^T\mathbf{X}^T\mathbf{a}`, , , :math:`\mathbf{a}\mathbf{b}^T`, :math:`\mathbf{b}\mathbf{a}^T`
+	:math:`\mathbf{X}`, :math:`\mathbf{b}^T\mathbf{X}^T\mathbf{X}\mathbf{a}=(\mathbf{X}\mathbf{b})^T(\mathbf{X}\mathbf{a})`, , , (\mathbf{a}\mathbf{b}^T+\mathbf{b}\mathbf{a}^T)\mathbf{X}^T, \mathbf{X}(\mathbf{a}\mathbf{b}^T+\mathbf{b}\mathbf{a}^T)
 
 .. seealso::
 	* Plethora of useful results: `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
