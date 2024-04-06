@@ -296,6 +296,7 @@ Useful Derivatives
 .. seealso::
 	* Plethora of useful results: `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
 	* `The Matrix Calculus You Need For Deep Learning <https://arxiv.org/abs/1802.01528>`_
+	* `matrixcalculus.org <https://www.matrixcalculus.org/>`_
 
 **********************************************************
 Integration
