@@ -281,7 +281,7 @@ Useful Derivatives
 	:math:`x`, :math:`x^2`, , , :math:`2x`, :math:`2x`
 	:math:`x`, :math:`ax^2`, , , :math:`2ax`, :math:`2ax`
 	:math:`x`, :math:`(ax)^2`, , , :math:`2a^2x`, :math:`2a^2x`
-	:math:`\mathbf{x}`, :math:`\mathbf{x}`, , , :math:`\mathbf{1}^T`, :math:`\mathbf{1}`
+	:math:`\mathbf{x}`, , :math:`\mathbf{x}`, , :math:`\mathbf{1}^T`, :math:`\mathbf{1}`
 	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{a}=\mathbf{a}^T\mathbf{x}`, , ,:math:`\mathbf{a}^T`, :math:`\mathbf{a}`
 	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{x}=||\mathbf{x}||_2^2`, , ,:math:`2\mathbf{x}^T`, :math:`2\mathbf{x}`
 	:math:`\mathbf{x}`, :math:`\mathbf{x}^T\mathbf{A}\mathbf{x}`, , ,:math:`\mathbf{x}^T(\mathbf{A}+\mathbf{A}^T)`, :math:`(\mathbf{A}+\mathbf{A}^T)\mathbf{x}`
