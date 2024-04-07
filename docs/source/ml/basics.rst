@@ -87,15 +87,6 @@ Two Random Variables
 
 Regression
 ==================================================================================
-.. note::
-	* We're interested in finding an estimator for :math:`Y`
-
-		.. math:: \hat{Y}=f(X)
-	* Estimation error: :math:`\tilde{Y}=\hat{Y}-Y`
-	* Bias: :math:`\mathbb{E}_Y[\tilde{Y}]`
-	* Standard error (se): :math:`\sqrt{\mathbb{V}_Y(\hat{Y})}`
-	* Mean-squared error (mse): :math:`\mathbb{E}_Y[\tilde{Y}^2]`
-
 Bayes Estimator
 ----------------------------------------------------------------------------------
 .. note::
@@ -134,7 +125,6 @@ Explicit assumption from a model
 
 Classification
 ==================================================================================
-
 Bayes Classifier
 ----------------------------------------------------------------------------------
 
