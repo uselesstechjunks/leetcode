@@ -36,7 +36,7 @@ Analytic Solutions
 Single Random Variable
 ----------------------------------------------------------------------------------
 .. tip::
-	* We have a single real-valued rv :math:`X` from an unknown distribution.
+	* We have a single real-valued rv :math:`X`.
 	* We consider the estimation problem where we find an estimate :math:`\hat{x}`, a single value, for any future observation of :math:`X`.
 
 		* We define Prediction Error (PE): The rv :math:`\tilde{X}=X-\hat{x}`, which has the same pdf as :math:`X`.
