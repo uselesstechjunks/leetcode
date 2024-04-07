@@ -31,7 +31,30 @@ Statistical Decision Theory
 **********************************************************************************
 This puts the prediction task under a statistical inference paradigm.
 
-.. tip::	
+Analytic Solutions
+==================================================================================
+Single Random Variable
+----------------------------------------------------------------------------------
+.. tip::
+	* We have a single real-valued rv :math:`X` from an unknown distribution.
+	* We consider the estimation problem where we find an estimate :math:`\hat{x}`, a constant, for any future observation of :math:`X`.
+
+		* We define Prediction Error (PE): The rv :math:`\tilde{X}=X-\hat{x}`, which has the same pdf as :math:`X`.
+	* The **optimality** of our estimate is defined with the help of a **loss function**.
+	
+		* If MSE loss function is used
+			
+			* Expected Prediction Error (EPE): :math:`\mathbb{E}_X[\tilde{X}^2]=\mathbb{E}_X[(X-\hat{x})^2]=\mathbb{E}_X[X^2]-2\mathbb{E}_X[X]\hat{x}+\hat{x}^2`
+	* To find :math:`\hat{x}`, we can differentiate w.r.t. :math:`\hat{x}` to minimize EPE.
+
+		* Note that :math:`\mathbb{E}_X[X^2]` and :math:`\mathbb{E}_X[X]` are unknown constants.
+		* Therefore
+
+			.. math:: \frac{\partial}{\mathop{\partial\hat{x}}}\mathbb{E}_X[(X-\hat{x})^2]=-2\mathbb{E}_X[X]+2\hat{x}\implies\hat{x}_{\text{OPT}}=\mathbb{E}_X[X]
+
+Two Random Variables
+----------------------------------------------------------------------------------
+.. note::
 	* We assume that the :math:`X` and the :math:`Y/G` are distributed per some **unknown joint distribution**
 
 		* [Regression] :math:`X,Y\sim F_{X,Y}(x,y)`
@@ -60,8 +83,8 @@ This puts the prediction task under a statistical inference paradigm.
 			* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
 	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
 
-		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}[Y|X=x]`.
-		* [Classification] If 0-1 loss is used, then :math:`\hat{G}(x)` corresponds to the predicted class with highest probability.
+		* [Regression] If MSE loss is used, then :math:`\hat{Y}=f(x)=\mathbb{E}_{Y|X}[Y|X=x]`, **mean of the conditional pdf**.
+		* [Classification] If 0-1 loss is used, then :math:`\hat{G}=g(x)` corresponds to the **mode of the conditional pmf**.
 
 Regression
 ==================================================================================
