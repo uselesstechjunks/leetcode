@@ -77,11 +77,9 @@ Two Random Variables
 		* [Classification] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}|X]\right]`
 	* Since :math:`L` is non-negative, this quantity is minimised when it's minimum at each point :math:`X=x`.
 		
-		* As we're fixing :math:`X` to a constant, the outer expectation :math:`\mathbb{E}_X` goes away.
-		* Therefore, the minimization problem becomes:
-		
-			* [Regression] :math:`\hat{y}_{\text{OPT}}=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,\hat{y}|X=x]\right)`
-			* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
+		* As we're fixing :math:`X` to a constant, the outer expectation :math:`\mathbb{E}_X` goes away.		
+		* [Regression] :math:`\hat{y}_{\text{OPT}}=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,\hat{y}|X=x]\right)`
+		* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
 	* For particular choice of loss functions, we arrive as **optimal (Bayes) estimator** definitions
 
 		* [Regression] If MSE loss is used, then :math:`\hat{Y}=\mathbb{E}_{Y|X}[Y|X]`, **mean of the conditional pdf**.
