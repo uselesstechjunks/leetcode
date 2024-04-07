@@ -36,24 +36,28 @@ This puts the prediction task under a statistical inference paradigm.
 
 		* [Regression] :math:`X,Y\sim F_{X,Y}(x,y)`
 		* [Classification] :math:`X,G\sim F_{X,G}(x,g)`
-	* The task is to find a predictor as function of data, :math:`\hat{Y}(X)` or :math:`\hat{G}(X)`.
-	* We associate a **misprediction penalty**, L, for making an error in prediction.
+	* The task is to find an estimator as function of data, :math:`\hat{Y}=f(X)` or :math:`\hat{G}=g(X)`.
 
-		* [Regression] :math:`L(Y,\hat{Y}(X))`
-		* [Classification] :math:`L(G,\hat{G}(X))`
-	* We wish the predictors to have minimal expected prediction error (EPE) over the joint.
+		* For a given obs :math:`X=x`, this gives predictors :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
+	* We associate a non-negative **misprediction penalty**, :math:`L`, for making an error in prediction.
 
-		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))`
-		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
+		* [Regression] :math:`L(Y,\hat{Y})`
+		* [Classification] :math:`L(G,\hat{G})`
+	* We wish the predictors to have minimal expected prediction error (EPE) **over the joint**.
+
+		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y})`
+		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G})`
 	* EPE can be reformulated as conditional expectation on observed input variables :math:`X`.
 
-		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[L(Y,\hat{Y}(X)|X]\right]=\int_x \mathbb{E}_{Y|X}[L(Y,\hat{Y}(X)|X=x]f_{Y|X}(y|x)\mathop{dx}`
-		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}(X)|X]\right]=\int_x \mathbb{E}_{G|X}[L(G,\hat{Y}(X)|X=x]f_{G|X}(y|x)\mathop{dx}`
-	* This quantity is minimised pointwise (i.e. at each point :math:`X=x`)
-
-		* (Informally, to minimise, we take derivative of EPE which removes the integral).
-		* [Regression] :math:`\hat{Y}(x)=\underset{f}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,f(X)|X=x]\right)`
-		* [Classification] :math:`\hat{G}(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,g(X)|X=x]\right)`.
+		* [Regression] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[L(Y,\hat{Y}|X]\right]`
+		* [Classification] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}|X]\right]`
+	* Since :math:`L` is non-negative, this quantity is minimised when it's minimum at each point :math:`X=x`.
+		
+		* As we're fixing :math:`X` to a constant, the outer expectation :math:`\mathbb{E}_X` goes away.
+		* Therefore, the minimization problem becomes:
+		
+			* [Regression] :math:`\hat{y}_{\text{OPT}}=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,\hat{y}|X=x]\right)`
+			* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
 	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
 
 		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}[Y|X=x]`.
