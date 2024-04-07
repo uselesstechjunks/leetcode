@@ -121,7 +121,7 @@ Assuming locally constant nature of the fucntion
 
 		* replacing expectation with sample average
 		* approximating the point :math:`X=x` with a neighbourhood :math:`N(x)` where :math:`|N(x)|=k`
-	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\frac{1}{k}\sum_{x_i\in N(x)} y_i`
+	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\text{Avg}(y_i|x_i\in N(x))`
 	* The implicit assumption is that the function behaves locally constant around each point :math:`x`
 	* Therefore, it can be estimated with the average value of the target :math:`y_i` for each data point in the neighbourhood :math:`x_i`.
 
@@ -129,10 +129,10 @@ Explicit assumption from a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* In linear regression approach, we explicitly assume that the estimator is affine in :math:`X_j`.
-	* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx x^T\beta + \beta_0`
+	* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x + \beta_0`
 	* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function instead
 
-		.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx x^T\beta
+		.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
 
 Classification
 ==================================================================================
