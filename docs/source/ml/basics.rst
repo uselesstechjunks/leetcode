@@ -37,14 +37,15 @@ Single Random Variable
 ----------------------------------------------------------------------------------
 .. tip::
 	* We have a single real-valued rv :math:`X` from an unknown distribution.
-	* We consider the estimation problem where we find an estimate :math:`\hat{x}`, a constant, for any future observation of :math:`X`.
+	* We consider the estimation problem where we find an estimate :math:`\hat{x}`, a single value, for any future observation of :math:`X`.
 
 		* We define Prediction Error (PE): The rv :math:`\tilde{X}=X-\hat{x}`, which has the same pdf as :math:`X`.
 	* The **optimality** of our estimate is defined with the help of a **loss function**.
-	
-		* If MSE loss function is used
-			
-			* Expected Prediction Error (EPE): :math:`\mathbb{E}_X[\tilde{X}^2]=\mathbb{E}_X[(X-\hat{x})^2]=\mathbb{E}_X[X^2]-2\mathbb{E}_X[X]\hat{x}+\hat{x}^2`
+
+		* Loss function is usually some function of PE.
+		* MSE loss function is defined as
+
+			.. math:: \mathbb{E}_X[\tilde{X}^2]=\mathbb{E}_X[(X-\hat{x})^2]=\mathbb{E}_X[X^2]-2\mathbb{E}_X[X]\hat{x}+\hat{x}^2
 	* To find :math:`\hat{x}`, we can differentiate w.r.t. :math:`\hat{x}` to minimize EPE.
 
 		* Note that :math:`\mathbb{E}_X[X^2]` and :math:`\mathbb{E}_X[X]` are unknown constants.
