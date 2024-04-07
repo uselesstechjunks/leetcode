@@ -82,10 +82,10 @@ Two Random Variables
 		
 			* [Regression] :math:`\hat{y}_{\text{OPT}}=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,\hat{y}|X=x]\right)`
 			* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
-	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
+	* For particular choice of loss functions, we arrive as **optimal (Bayes) estimator** definitions
 
-		* [Regression] If MSE loss is used, then :math:`\hat{Y}=f(x)=\mathbb{E}_{Y|X}[Y|X=x]`, **mean of the conditional pdf**.
-		* [Classification] If 0-1 loss is used, then :math:`\hat{G}=g(x)` corresponds to the **mode of the conditional pmf**.
+		* [Regression] If MSE loss is used, then :math:`\hat{Y}=\mathbb{E}_{Y|X}[Y|X]`, **mean of the conditional pdf**.
+		* [Classification] If 0-1 loss is used, then :math:`\hat{G}` corresponds to the **mode of the conditional pmf**.
 
 Regression
 ==================================================================================
@@ -101,13 +101,15 @@ Regression
 Bayes Estimator
 ----------------------------------------------------------------------------------
 .. note::
-	* This is the estimator which minimises mse.
+	* This is the estimator which minimises mse for each point :math:`X=x`.
 
-		.. math:: f^*=\underset{f}{\arg\min}\left(\mathbb{E}_{X,Y}[(f(X)-Y)^2]\right)=\underset{f}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(f(X)-Y)^2]|X\right]\right)
-	* This minimisation problem is equivalent to finding a pointwise minimum, such that, for each :math:`X=x`, 
+		.. math:: L(Y,\hat{y})=\mathbb{E}_{Y|X}[(Y-\hat{y})^2|X=x]
+	* To find minimum, we differentiate w.r.t :math:`\hat{y}=f(x)`, a single value
 
-		.. math:: f(x)=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(\hat{y}-Y)^2]|X=x\right]\right)
-	* [WHY??] The solution is :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]` which is the conditional expectation estimator or Bayes estimator.
+		.. math:: \frac{\partial}{\mathop{\partial\hat{y}}}L(Y,\hat{y})=\frac{\partial}{\mathop{\partial\hat{y}}}\left(\mathbb{E}_{Y|X}[Y^2|X=x]-2\mathbb{E}_{Y|X}[Y|X=x]\hat{y}+\hat{y}^2\right)=-2\mathbb{E}_{Y|X}[Y|X=x]+2\hat{y}
+	* Therefore, the optimal estimator is given by
+
+		.. math:: \hat{y}=f(x)=\mathbb{E}_{Y|X}[Y|X=x]
 	* We note that this estimator is unbiased.
 
 Approximating The Bayes Estimator
