@@ -50,7 +50,7 @@ Two Random Variables
 	* The task is to **find an estimator for the target as function of data**, :math:`\hat{Y}=f(X)` **or** :math:`\hat{G}=g(X)`.
 	
 		* We use these to **predict future values for the target** as :math:`\hat{y}=f(x)` and :math:`\hat{g}=g(x)`.
-	* The **optimality** of our estimate is again defined with the help of a non-negative **loss function**, :math:`L`.
+	* The **optimality** of our estimate is defined with a non-negative **loss function**, :math:`L`.
 
 		* [Regression] :math:`\hat{Y}_{\text{OPT}}=\underset{\hat{Y}}{\arg\min} L(Y,\hat{Y})`
 		* [Classification] :math:`\hat{G}_{\text{OPT}}=\underset{\hat{G}}{\arg\min} L(G,\hat{G})`
