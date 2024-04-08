@@ -119,7 +119,7 @@ Assuming locally constant nature of the fucntion
 		* replacing expectation with sample average
 		* approximating the point :math:`X=x` with a neighbourhood :math:`N(x)` where :math:`|N(x)|=k`
 		* The parameter :math:`k` is chosen using model selection approaches.
-		* Usually the choice of :math:`k` determines the **roughness** of this model - larger values resulting in smoother model.
+		* Usually the choice of :math:`k` determines the **roughness** of this model, with larger values resulting in smoother model.
 	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\text{Avg}(y_i|x_i\in N(x))`
 	* The implicit assumption is that the function behaves locally constant around each point :math:`x`
 	* Therefore, it can be estimated with the average value of the target :math:`y_i` for each data point in the neighbourhood :math:`x_i`.
@@ -135,7 +135,7 @@ Explicit assumption from a model
 		.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
 	* We can still have a linear model after taking some transform :math:`h(x)\in\mathbb{R}^M` (basis expansion) of :math:`x`.
 
-		* Example: :math:`\mathbf{x}=[x_1,x_2]^T\in\mathbb{R}^2\mapsto\mathbf{h}(\mathbf{x})=[1,x_1,x_2,x_1x_2,x_1^2,x_2^2]^T\in\mathbb{R}^6`
+		* Example: :math:`x=(x_1,x_2)^T\overset{h}{\longrightarrow}(1,x_1,x_2,x_1x_2,x_1^2,x_2^2)^T`
 		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T h(x)`
 
 Classification
