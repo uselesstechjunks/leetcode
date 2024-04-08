@@ -40,13 +40,13 @@ Single Random Variable
 Two Random Variables
 ----------------------------------------------------------------------------------
 .. note::
-	* We assume that the :math:`X` and the :math:`Y/G` are distributed per some **unknown joint distribution**
+	* We assume that the data :math:`X` and the target :math:`Y/G` are distributed per a **joint distribution**
 
 		* [Regression] :math:`X,Y\sim F_{X,Y}(x,y)`
 		* [Classification] :math:`X,G\sim F_{X,G}(x,g)`
-	* The task is to **find an estimator as function of data**, :math:`\hat{Y}=f(X)` **or** :math:`\hat{G}=g(X)`.
-
-		* For a given obs :math:`X=x`, this gives predictors :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
+	* We assume that we'll have access to future realisations of :math:`X=x` but not the target.
+	* The task is to **find an estimator for the target as function of data**, :math:`\hat{Y}=f(X)` **or** :math:`\hat{G}=g(X)`.
+	* With the help of these predictors, we can **predict future values for the target from a future realisations of the data** as :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
 	* We associate a non-negative **misprediction penalty**, :math:`L`, for making an error in prediction.
 
 		* [Regression] :math:`L(Y,\hat{Y})`
