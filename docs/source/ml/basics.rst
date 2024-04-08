@@ -87,24 +87,27 @@ Two Random Variables
 		* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
 	* For particular choice of loss functions, we arrive as **optimal (Bayes) estimator** definitions
 
-		* [Regression] If MSE loss is used, then :math:`\hat{Y}=\mathbb{E}_{Y|X}[Y|X]`, **mean of the conditional pdf**.
-		* [Classification] If 0-1 loss is used, then :math:`\hat{G}` corresponds to the **mode of the conditional pmf**.
+		* [Regression] With MSE loss, :math:`\hat{Y}=\mathbb{E}_{Y|X}[Y|X]`, **mean of the conditional pdf**.
+		* [Classification] With 0-1 loss, :math:`\hat{G}` corresponds to the **mode of the conditional pmf**.
 
 Regression
 ==================================================================================
 Bayes Estimator
 ----------------------------------------------------------------------------------
 .. note::
-	* This is the estimator which minimises mse for each point :math:`X=x`.
+	* This is the estimator which minimises MSE for each point :math:`X=x`.
 
 		.. math:: L(Y,\hat{y})=\mathbb{E}_{Y|X}[(Y-\hat{y})^2|X=x]
 	* To find minimum, we differentiate w.r.t :math:`\hat{y}=f(x)`, a single value
 
 		.. math:: \frac{\partial}{\mathop{\partial\hat{y}}}L(Y,\hat{y})=\frac{\partial}{\mathop{\partial\hat{y}}}\left(\mathbb{E}_{Y|X}[Y^2|X=x]-2\mathbb{E}_{Y|X}[Y|X=x]\hat{y}+\hat{y}^2\right)=-2\mathbb{E}_{Y|X}[Y|X=x]+2\hat{y}
-	* Therefore, the optimal estimator is given by
+	* Therefore, the optimal estimator at each realisation :math:`X=x` is given by
 
 		.. math:: \hat{y}=f(x)=\mathbb{E}_{Y|X}[Y|X=x]
 	* We note that this estimator is unbiased.
+
+.. note::
+	TODO - Alternate proof from Sayed and orthogonality conditions !!!IMPORTANT!!!
 
 Approximating The Bayes Estimator
 ----------------------------------------------------------------------------------
@@ -115,6 +118,8 @@ Assuming locally constant nature of the fucntion
 
 		* replacing expectation with sample average
 		* approximating the point :math:`X=x` with a neighbourhood :math:`N(x)` where :math:`|N(x)|=k`
+		* The parameter :math:`k` is chosen using model selection approaches.
+		* Usually the choice of :math:`k` determines the **roughness** of this model - larger values resulting in smoother model.
 	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\text{Avg}(y_i|x_i\in N(x))`
 	* The implicit assumption is that the function behaves locally constant around each point :math:`x`
 	* Therefore, it can be estimated with the average value of the target :math:`y_i` for each data point in the neighbourhood :math:`x_i`.
@@ -123,10 +128,15 @@ Explicit assumption from a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* In linear regression approach, we explicitly assume that the estimator is affine in :math:`X_j`.
-	* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x + \beta_0`
+	
+		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x + \beta_0`
 	* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function instead
 
 		.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
+	* We can still have a linear model after taking some transform :math:`h(x)\in\mathbb{R}^M` (basis expansion) of :math:`x`.
+
+		* Example: :math:`\mathbf{x}=[x_1,x_2]^T\in\mathbb{R}^2\mapsto\mathbf{h}(\mathbf{x})=[1,x_1,x_2,x_1x_2,x_1^2,x_2^2]^T\in\mathbb{R}^6`
+		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T h(x)`
 
 Classification
 ==================================================================================
