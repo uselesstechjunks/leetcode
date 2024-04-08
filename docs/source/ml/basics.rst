@@ -3,6 +3,135 @@ Fundamentals
 ##################################################################################
 
 **********************************************************************************
+Statistical Decision Theory
+**********************************************************************************
+This puts the prediction task under a statistical inference paradigm.
+
+Analytic Solutions
+==================================================================================
+.. warning::
+	* Under this paradigm, the **data is a realisation of some underlying random process**. 
+	* We define the prediction problem under this framework. 
+	* The optimal solutions under this often rely on having access to the underlying distribution or some other quantities involving the distribution. 
+	* We also discuss ways to define the notion of optimality.
+
+Single Random Variable
+----------------------------------------------------------------------------------
+.. note::
+	* We have a single real-valued rv :math:`X`.
+	* We consider the estimation problem where we **find an estimate :math:`\hat{x}`, a single value, for any future observation of :math:`X`**.
+
+		* We define Prediction Error (PE): The rv :math:`\tilde{X}=X-\hat{x}`, which has the same pdf as :math:`X`.
+	* The **optimality** of our estimate is defined with the help of a **loss function**.
+
+		* Loss function is usually some function of PE.
+		* MSE loss function is defined as
+
+			.. math:: \mathbb{E}_X[\tilde{X}^2]=\mathbb{E}_X[(X-\hat{x})^2]=\mathbb{E}_X[X^2]-2\mathbb{E}_X[X]\hat{x}+\hat{x}^2
+
+.. tip::
+	* To find :math:`\hat{x}`, we can differentiate w.r.t. :math:`\hat{x}` to minimize EPE.
+
+		* Note that :math:`\mathbb{E}_X[X^2]` and :math:`\mathbb{E}_X[X]` are unknown constants.
+		* Therefore
+
+			.. math:: \frac{\partial}{\mathop{\partial\hat{x}}}\mathbb{E}_X[(X-\hat{x})^2]=-2\mathbb{E}_X[X]+2\hat{x}\implies\hat{x}_{\text{OPT}}=\mathbb{E}_X[X]
+
+Two Random Variables
+----------------------------------------------------------------------------------
+.. note::
+	* We assume that the :math:`X` and the :math:`Y/G` are distributed per some **unknown joint distribution**
+
+		* [Regression] :math:`X,Y\sim F_{X,Y}(x,y)`
+		* [Classification] :math:`X,G\sim F_{X,G}(x,g)`
+	* The task is to **find an estimator as function of data, :math:`\hat{Y}=f(X)` or :math:`\hat{G}=g(X)`**.
+
+		* For a given obs :math:`X=x`, this gives predictors :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
+	* We associate a non-negative **misprediction penalty**, :math:`L`, for making an error in prediction.
+
+		* [Regression] :math:`L(Y,\hat{Y})`
+		* [Classification] :math:`L(G,\hat{G})`
+	* We wish the predictors to have minimal expected prediction error (EPE) **over the joint**.
+
+		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y})`
+		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G})`
+	* EPE can be reformulated as conditional expectation on observed input variables :math:`X`.
+
+		* [Regression] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[L(Y,\hat{Y}|X]\right]`
+		* [Classification] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}|X]\right]`
+
+.. tip::
+	* Since :math:`L` is non-negative, this quantity is minimised when it's minimum at each point :math:`X=x`.
+		
+		* As we're fixing :math:`X` to a constant, the outer expectation :math:`\mathbb{E}_X` goes away.		
+		* [Regression] :math:`\hat{y}_{\text{OPT}}=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,\hat{y}|X=x]\right)`
+		* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
+	* For particular choice of loss functions, we arrive as **optimal (Bayes) estimator** definitions
+
+		* [Regression] With MSE loss, :math:`\hat{Y}=\mathbb{E}_{Y|X}[Y|X]`, **mean of the conditional pdf**.
+		* [Classification] With 0-1 loss, :math:`\hat{G}` corresponds to the **mode of the conditional pmf**.
+
+Regression
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bayes Estimator
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+	* This is the estimator which minimises MSE for each point :math:`X=x`.
+
+		.. math:: L(Y,\hat{y})=\mathbb{E}_{Y|X}[(Y-\hat{y})^2|X=x]
+	* To find minimum, we differentiate w.r.t :math:`\hat{y}=f(x)`, a single value
+
+		.. math:: \frac{\partial}{\mathop{\partial\hat{y}}}L(Y,\hat{y})=\frac{\partial}{\mathop{\partial\hat{y}}}\left(\mathbb{E}_{Y|X}[Y^2|X=x]-2\mathbb{E}_{Y|X}[Y|X=x]\hat{y}+\hat{y}^2\right)=-2\mathbb{E}_{Y|X}[Y|X=x]+2\hat{y}
+	* Therefore, the optimal estimator at each realisation :math:`X=x` is given by
+
+		.. math:: \hat{y}=f(x)=\mathbb{E}_{Y|X}[Y|X=x]
+	* We note that this estimator is unbiased.
+
+.. note::
+	TODO - Alternate proof from Sayed and orthogonality conditions !!!IMPORTANT!!!
+
+Classification
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bayes Classifier
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Approximating The Analytic Solutions
+==================================================================================
+.. warning::
+	* In practical problems, we often don't have access to the underlying distribution. 
+	* In such cases, we resort to the approximation framework that tries to mimic the optimal solution.
+	* We use statistical inference to estimate the unknowns of our model.
+
+Regression
+----------------------------------------------------------------------------------
+Assuming locally constant nature of the fucntion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* In kNN regression approach, we approximate Bayes estimator by 
+
+		* replacing expectation with sample average
+		* approximating the point :math:`X=x` with a neighbourhood :math:`N(x)` where :math:`|N(x)|=k`
+		* The parameter :math:`k` is chosen using model selection approaches.
+		* Usually the choice of :math:`k` determines the **roughness** of this model, with larger values resulting in smoother model.
+	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\text{Avg}(y_i|x_i\in N(x))`
+	* The implicit assumption is that the function behaves locally constant around each point :math:`x`
+	* Therefore, it can be estimated with the average value of the target :math:`y_i` for each data point in the neighbourhood :math:`x_i`.
+
+Explicit assumption from a model
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* In linear regression, we explicitly assume that the estimator is affine in :math:`X_j`.
+	
+		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x + \beta_0`
+		* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function
+
+			.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
+	* In basis expansion, we assume that the estimator is an affine in some transform :math:`h(x)\in\mathbb{R}^M`.
+
+		* Example: :math:`x=(x_1,x_2)^T\overset{h}{\longrightarrow}(1,x_1,x_2,x_1x_2,x_1^2,x_2^2)^T`
+		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T h(x)`
+
+**********************************************************************************
 Notation
 **********************************************************************************
 .. warning::
@@ -32,118 +161,6 @@ Notation
 	* For :math:`K> 1`, we can also associate the target with the row vector form, :math:`y_i^T\in\mathbb{R}_{1\times K}` [regression] or :math:`g_i^T\in\mathcal{G}_{1\times K}` [classification].
 
 **********************************************************************************
-Statistical Decision Theory
-**********************************************************************************
-This puts the prediction task under a statistical inference paradigm.
-
-Analytic Solutions
-==================================================================================
-Single Random Variable
-----------------------------------------------------------------------------------
-.. tip::
-	* We have a single real-valued rv :math:`X`.
-	* We consider the estimation problem where we find an estimate :math:`\hat{x}`, a single value, for any future observation of :math:`X`.
-
-		* We define Prediction Error (PE): The rv :math:`\tilde{X}=X-\hat{x}`, which has the same pdf as :math:`X`.
-	* The **optimality** of our estimate is defined with the help of a **loss function**.
-
-		* Loss function is usually some function of PE.
-		* MSE loss function is defined as
-
-			.. math:: \mathbb{E}_X[\tilde{X}^2]=\mathbb{E}_X[(X-\hat{x})^2]=\mathbb{E}_X[X^2]-2\mathbb{E}_X[X]\hat{x}+\hat{x}^2
-	* To find :math:`\hat{x}`, we can differentiate w.r.t. :math:`\hat{x}` to minimize EPE.
-
-		* Note that :math:`\mathbb{E}_X[X^2]` and :math:`\mathbb{E}_X[X]` are unknown constants.
-		* Therefore
-
-			.. math:: \frac{\partial}{\mathop{\partial\hat{x}}}\mathbb{E}_X[(X-\hat{x})^2]=-2\mathbb{E}_X[X]+2\hat{x}\implies\hat{x}_{\text{OPT}}=\mathbb{E}_X[X]
-
-Two Random Variables
-----------------------------------------------------------------------------------
-.. note::
-	* We assume that the :math:`X` and the :math:`Y/G` are distributed per some **unknown joint distribution**
-
-		* [Regression] :math:`X,Y\sim F_{X,Y}(x,y)`
-		* [Classification] :math:`X,G\sim F_{X,G}(x,g)`
-	* The task is to find an estimator as function of data, :math:`\hat{Y}=f(X)` or :math:`\hat{G}=g(X)`.
-
-		* For a given obs :math:`X=x`, this gives predictors :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
-	* We associate a non-negative **misprediction penalty**, :math:`L`, for making an error in prediction.
-
-		* [Regression] :math:`L(Y,\hat{Y})`
-		* [Classification] :math:`L(G,\hat{G})`
-	* We wish the predictors to have minimal expected prediction error (EPE) **over the joint**.
-
-		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y})`
-		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G})`
-	* EPE can be reformulated as conditional expectation on observed input variables :math:`X`.
-
-		* [Regression] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[L(Y,\hat{Y}|X]\right]`
-		* [Classification] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}|X]\right]`
-	* Since :math:`L` is non-negative, this quantity is minimised when it's minimum at each point :math:`X=x`.
-		
-		* As we're fixing :math:`X` to a constant, the outer expectation :math:`\mathbb{E}_X` goes away.		
-		* [Regression] :math:`\hat{y}_{\text{OPT}}=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,\hat{y}|X=x]\right)`
-		* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
-	* For particular choice of loss functions, we arrive as **optimal (Bayes) estimator** definitions
-
-		* [Regression] With MSE loss, :math:`\hat{Y}=\mathbb{E}_{Y|X}[Y|X]`, **mean of the conditional pdf**.
-		* [Classification] With 0-1 loss, :math:`\hat{G}` corresponds to the **mode of the conditional pmf**.
-
-Regression
-==================================================================================
-Bayes Estimator
-----------------------------------------------------------------------------------
-.. note::
-	* This is the estimator which minimises MSE for each point :math:`X=x`.
-
-		.. math:: L(Y,\hat{y})=\mathbb{E}_{Y|X}[(Y-\hat{y})^2|X=x]
-	* To find minimum, we differentiate w.r.t :math:`\hat{y}=f(x)`, a single value
-
-		.. math:: \frac{\partial}{\mathop{\partial\hat{y}}}L(Y,\hat{y})=\frac{\partial}{\mathop{\partial\hat{y}}}\left(\mathbb{E}_{Y|X}[Y^2|X=x]-2\mathbb{E}_{Y|X}[Y|X=x]\hat{y}+\hat{y}^2\right)=-2\mathbb{E}_{Y|X}[Y|X=x]+2\hat{y}
-	* Therefore, the optimal estimator at each realisation :math:`X=x` is given by
-
-		.. math:: \hat{y}=f(x)=\mathbb{E}_{Y|X}[Y|X=x]
-	* We note that this estimator is unbiased.
-
-.. note::
-	TODO - Alternate proof from Sayed and orthogonality conditions !!!IMPORTANT!!!
-
-Approximating The Bayes Estimator
-----------------------------------------------------------------------------------
-Assuming locally constant nature of the fucntion
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* In kNN regression approach, we approximate Bayes estimator by 
-
-		* replacing expectation with sample average
-		* approximating the point :math:`X=x` with a neighbourhood :math:`N(x)` where :math:`|N(x)|=k`
-		* The parameter :math:`k` is chosen using model selection approaches.
-		* Usually the choice of :math:`k` determines the **roughness** of this model, with larger values resulting in smoother model.
-	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\text{Avg}(y_i|x_i\in N(x))`
-	* The implicit assumption is that the function behaves locally constant around each point :math:`x`
-	* Therefore, it can be estimated with the average value of the target :math:`y_i` for each data point in the neighbourhood :math:`x_i`.
-
-Explicit assumption from a model
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* In linear regression, we explicitly assume that the estimator is affine in :math:`X_j`.
-	
-		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x + \beta_0`
-		* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function
-
-			.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
-	* In basis expansion, we assume that the estimator is an affine in some transform :math:`h(x)\in\mathbb{R}^M`.
-
-		* Example: :math:`x=(x_1,x_2)^T\overset{h}{\longrightarrow}(1,x_1,x_2,x_1x_2,x_1^2,x_2^2)^T`
-		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T h(x)`
-
-Classification
-==================================================================================
-Bayes Classifier
-----------------------------------------------------------------------------------
-
-**********************************************************************************
 Curse of Dimensionality
 **********************************************************************************
 .. note::
@@ -159,9 +176,3 @@ Curse of Dimensionality
 		* `On the Surprising Behavior of Distance Metrics in High Dimensional Space <https://bib.dbvis.de/uploadedFiles/155.pdf>`_
 		* `When Is "Nearest Neighbor" Meaningful? <https://members.loria.fr/MOBerger/Enseignement/Master2/Exposes/beyer.pdf>`_
 		* `Fractional Norms and Quasinorms Do Not Help to Overcome the Curse of Dimensionality <https://www.mdpi.com/1099-4300/22/10/1105/pdf?version=1603175755>`_
-
-**********************************************************************************
-Statistical Models
-**********************************************************************************
-Linear Regression
-kNN Classification
