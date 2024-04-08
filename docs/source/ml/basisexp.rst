@@ -26,7 +26,6 @@ Polynomial
 	* [`Taylor's series <https://en.wikipedia.org/wiki/Taylor_series>`_] An infinite power series can arbitrarily approximate any real-valued infinitely differentiable function around a point :math:`a`.
 
 		.. math:: f(x)=f(a)+\frac{f'(a)}{2!}(x-a)+\frac{f''(a)}{3!}(x-a)^2+\cdots
-
 	* [`Lagrange Polynomial <https://en.wikipedia.org/wiki/Lagrange_polynomial>`_] A polynomial of degree :math`n` can be fit to pass through exactly :math:`n` points (interpolation)
 
 		* Say, we have a dataset :math:`\mathbf{X}=[x_1,\cdots,x_N]^T` and target :math:`\mathbf{y}=[y_1,\cdots,y_N]^T`.
