@@ -127,13 +127,13 @@ Assuming locally constant nature of the fucntion
 Explicit assumption from a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* In linear regression approach, we explicitly assume that the estimator is affine in :math:`X_j`.
+	* In linear regression, we explicitly assume that the estimator is affine in :math:`X_j`.
 	
 		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x + \beta_0`
-	* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function instead
+		* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function instead
 
-		.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
-	* We can still have a linear model after taking some transform :math:`h(x)\in\mathbb{R}^M` (basis expansion) of :math:`x`.
+			.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
+	* In basis expansion, we assume that the estimator is an affine in some transform :math:`h(x)\in\mathbb{R}^M`.
 
 		* Example: :math:`x=(x_1,x_2)^T\overset{h}{\longrightarrow}(1,x_1,x_2,x_1x_2,x_1^2,x_2^2)^T`
 		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T h(x)`
