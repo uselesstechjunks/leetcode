@@ -22,7 +22,9 @@ Single Random Variable
 	* We consider the estimation problem where we **find an estimate** :math:`\hat{x}`, **a single value, for any future observation of** :math:`X`.
 
 		* We define Prediction Error (PE): The rv :math:`\tilde{X}=X-\hat{x}`, which has the same pdf as :math:`X`.
-	* The **optimality** of our estimate is defined with the help of a **loss function**.
+	* The **optimality** of our estimate is defined with the help of a **loss function** such that
+
+		.. math:: \hat{X}_{\text{OPT}}=\underset{\hat{X}}{\arg\min} L(X,\hat{X})
 
 		* Loss function is usually some function of PE.
 		* MSE loss function is defined as
@@ -48,10 +50,10 @@ Two Random Variables
 	* The task is to **find an estimator for the target as function of data**, :math:`\hat{Y}=f(X)` **or** :math:`\hat{G}=g(X)`.
 	
 		* We use these to **predict future values for the target** as :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
-	* We associate a non-negative **misprediction penalty**, :math:`L`, for making an error in prediction.
+	* The **optimality** of our estimate is again defined with the help of a non-negative **loss function**, :math:`L`.
 
-		* [Regression] :math:`L(Y,\hat{Y})`
-		* [Classification] :math:`L(G,\hat{G})`
+		* [Regression] :math:`\hat{Y}_{\text{OPT}}=\underset{\hat{Y}}{\arg\min} L(Y,\hat{Y})`
+		* [Classification] :math:`\hat{G}_{\text{OPT}}=\underset{\hat{G}}{\arg\min} L(G,\hat{G})`
 	* We wish the predictors to have minimal expected prediction error (EPE) **over the joint**.
 
 		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y})`
