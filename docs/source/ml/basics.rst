@@ -32,9 +32,9 @@ Single Random Variable
 			.. math:: \mathbb{E}_X[\tilde{X}^2]=\mathbb{E}_X[(X-\hat{x})^2]=\mathbb{E}_X[X^2]-2\mathbb{E}_X[X]\hat{x}+\hat{x}^2
 
 .. tip::
-	* To find :math:`\hat{x}`, we can differentiate w.r.t. :math:`\hat{x}` to minimize EPE.
+	* To find :math:`\hat{x}`, we can differentiate w.r.t. :math:`\hat{x}` to minimize MSE.
 
-		* Note that :math:`\mathbb{E}_X[X^2]` and :math:`\mathbb{E}_X[X]` are unknown constants.
+		* Note that :math:`\mathbb{E}_X[X^2]` and :math:`\mathbb{E}_X[X]` are constants.
 		* Therefore
 
 			.. math:: \frac{\partial}{\mathop{\partial\hat{x}}}\mathbb{E}_X[(X-\hat{x})^2]=-2\mathbb{E}_X[X]+2\hat{x}\implies\hat{x}_{\text{OPT}}=\mathbb{E}_X[X]
