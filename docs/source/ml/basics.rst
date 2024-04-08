@@ -46,7 +46,8 @@ Two Random Variables
 		* [Classification] :math:`X,G\sim F_{X,G}(x,g)`
 	* We assume that we'll have access to future realisations of :math:`X=x` but not the target.
 	* The task is to **find an estimator for the target as function of data**, :math:`\hat{Y}=f(X)` **or** :math:`\hat{G}=g(X)`.
-	* With the help of these predictors, we can **predict future values for the target from a future realisations of the data** as :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
+	
+		* We use these to **predict future values for the target** as :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
 	* We associate a non-negative **misprediction penalty**, :math:`L`, for making an error in prediction.
 
 		* [Regression] :math:`L(Y,\hat{Y})`
