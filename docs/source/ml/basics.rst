@@ -10,10 +10,9 @@ Notation
 	* For row-representation, we use the transpose notation.
 
 .. note::
-	* The data is associated with a random variable :math:`X`.
-
-		* It might also be a random vector for some :math:`d> 1`, in which case, individual components can referred to as :math:`X_j` and :math:`X=(X_1,\cdots,X_d)`.
-	* For observed data points are instances of the rv, :math:`X=x\in\mathbb{R}^d` for some :math:`d\geq 1`.
+	* Data is associated with a random variable :math:`X`.		
+	* Observed data points are instances of the rv, :math:`X=x\in\mathbb{R}^d` for some :math:`d\geq 1`.
+	* If :math:`d> 1`, :math:`X` is a random vector, in which case, individual components can referred to as :math:`X_j` and :math:`X=(X_1,\cdots,X_d)`.
 	* [Regression] The target quantity is associated with a continuous rv :math:`Y\in\mathbb{R}`. 
 
 		* It might also be a random vector, with :math:`Y=(Y_1,\cdots,Y_K)`, for some :math:`K\geq 1`.
