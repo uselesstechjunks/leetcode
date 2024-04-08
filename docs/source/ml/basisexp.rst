@@ -2,9 +2,9 @@
 Basis Expansion
 ##################################################################################
 .. warning::
-	* We can use the framework for linear models to move beyond linearity just by using non-linear transforms on the features.
-	* We define the transforms as functions :math:`h:\mathbb{R}^d\mapsto\mathcal{F}` where :math:`\mathcal{F}` can be finite or infinite dimensional.
-	* Since these methods expand the basis from :math:`d`-dimensions to :math:`\dim\mathcal{F}`, these methods are called **basis expansion** methods.
+	* We can use the established framework for linear models to move beyond linearity just by using non-linear transforms on the features.
+	* We define the transforms as functions :math:`h:\mathbb{R}^d\mapsto\mathcal{\Phi}` where :math:`\mathcal{\Phi}` can be finite or infinite dimensional.
+	* Since these methods expand the basis from :math:`d`-dimensions to :math:`\dim\mathcal{\Phi}`, these methods are called **basis expansion** methods.
 
 .. tip::
 	* For most of the methods, we consider the case where :math:`d=1`.
@@ -26,13 +26,13 @@ Polynomial
 	* [`Taylor's series <https://en.wikipedia.org/wiki/Taylor_series>`_] An infinite power series can arbitrarily approximate any real-valued infinitely differentiable function around a point :math:`a`.
 
 		.. math:: f(x)=f(a)+\frac{f'(a)}{2!}(x-a)+\frac{f''(a)}{3!}(x-a)^2+\cdots
-	* [`Lagrange Polynomial <https://en.wikipedia.org/wiki/Lagrange_polynomial>`_] A polynomial of degree :math`n` can be fit to pass through exactly :math:`n` points (interpolation)
+	* [`Lagrange Polynomial <https://en.wikipedia.org/wiki/Lagrange_polynomial>`_] A polynomial of degree :math:`n` can be fit to pass through exactly :math:`n` points.
 
 		* Say, we have a dataset :math:`\mathbf{X}=[x_1,\cdots,x_N]^T` and target :math:`\mathbf{y}=[y_1,\cdots,y_N]^T`.
 		* For each point :math:`(x_k,y_k)`, we create the Lagrange coefficients
 
 			.. math:: l_k(x)=\frac{(x-x_1)(x-x_2)\cdots(x-x_{k-1})(x-x_{k+1})\cdots(x-x_{N-1})(x-x_N)}{(x_k-x_1)(x_k-x_2)\cdots(x_k-x_{k-1})(x_k-x_{k+1})\cdots(x_k-x_{N-1})(x_k-x_N)}
-		* The polynomial passing through all these points are given by
+		* The polynomial passing through all these points (interpolation) is given by
 
 			.. math:: f(x)=\sum_{i=1}^N y_1 l_i(x)
 
@@ -41,7 +41,7 @@ Polynomial
 	* With real data, often not all the turns are utilised for the points in the interior regions.
 	* With no other constraints applied, polynomials of such higher degrees oscilate crazily towards the left/right extremes where the data density is usually low.
 	* Therefore, in those regions, it provides very poor generalisation of the model.
-	* The situation is often worsen if we move to higher dimensions, as the proportion of points around the exterior increases in higher dimension.
+	* The situation is often worse if we move to higher dimensions, as the proportion of points around the exterior increases in higher dimension.
 
 .. note::
 	* With these in mind, a polynomial of smaller order often works best, such as cubic polynomials.
