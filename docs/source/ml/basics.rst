@@ -49,7 +49,7 @@ Two Random Variables
 	* We assume that we'll have access to future realisations of :math:`X=x` but not the target.
 	* The task is to **find an estimator for the target as function of data**, :math:`\hat{Y}=f(X)` **or** :math:`\hat{G}=g(X)`.
 	
-		* We use these to **predict future values for the target** as :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
+		* We use these to **predict future values for the target** as :math:`\hat{y}=f(x)` and :math:`\hat{g}=g(x)`.
 	* The **optimality** of our estimate is again defined with the help of a non-negative **loss function**, :math:`L`.
 
 		* [Regression] :math:`\hat{Y}_{\text{OPT}}=\underset{\hat{Y}}{\arg\min} L(Y,\hat{Y})`
