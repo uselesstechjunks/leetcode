@@ -10,14 +10,20 @@ Notation
 	* For row-representation, we use the transpose notation.
 
 .. note::
-	* Data is associated with a random variable :math:`X`.		
+	* Data is associated with a random variable :math:`X`.
 	* Observed data points are instances of the rv, :math:`X=x\in\mathbb{R}^d` for some :math:`d\geq 1`.
-	* If :math:`d> 1`, :math:`X` is a random vector, in which case, individual components can referred to as :math:`X_j` and :math:`X=(X_1,\cdots,X_d)`.
-	* [Regression] The target quantity is associated with a continuous rv :math:`Y\in\mathbb{R}`. 
+	
+		* If :math:`d> 1`, :math:`X` is a random vector.
+		* In this case, individual components can referred to as :math:`X_j` and :math:`X=(X_1,\cdots,X_d)`.
 
-		* It might also be a random vector, with :math:`Y=(Y_1,\cdots,Y_K)`, for some :math:`K\geq 1`.
-		* Single dimensional observations for target are usually written as :math:`Y=y\in\mathbb{R}`.		
-	* [Classification] The target quantity is associated with a discrete rv :math:`G\in\mathcal{G}` with :math:`|\mathcal{G}|=K`.		
+.. note::
+	* [Regression] The target quantity is associated with a continuous rv :math:`Y` taking values :math:`Y=y\in\mathbb{R}^K`, for some :math:`K\geq 1`.
+
+		* It might also be a random vector, with :math:`Y=(Y_1,\cdots,Y_K)`.
+		* Single dimensional observations for target are usually written as :math:`Y=y\in\mathbb{R}`.
+	* [Classification] The target quantity is associated with a discrete rv :math:`G\in\mathcal{G}` with :math:`|\mathcal{G}|=K`.
+
+.. note::
 	* We have a total of :math:`N` observations, and all the observations together are taken in the matrix form
 
 		.. math:: \mathbf{X}_{N\times d}=\begin{bmatrix}-& x_1^T & - \\ \vdots & \vdots & \vdots \\ -& x_N^T & -\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\ \mathbf{x}_1 & \cdots & \mathbf{x}_d \\ |&\cdots&|\end{bmatrix}
