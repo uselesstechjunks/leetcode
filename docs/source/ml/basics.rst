@@ -130,7 +130,7 @@ Explicit assumption from a model
 	* In linear regression, we explicitly assume that the estimator is affine in :math:`X_j`.
 	
 		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x + \beta_0`
-		* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function instead
+		* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function
 
 			.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
 	* In basis expansion, we assume that the estimator is an affine in some transform :math:`h(x)\in\mathbb{R}^M`.
