@@ -22,7 +22,7 @@ Finite Dimensional Expansion
 
 Polynomial
 ==================================================================================
-.. info::
+.. tip::
 	* [`Taylor's series <https://en.wikipedia.org/wiki/Taylor_series>`_] An infinite power series can arbitrarily approximate any real-valued infinitely differentiable function around a point :math:`a`.
 
 		.. math:: f(x)=f(a)+\frac{f'(a)}{2!}(x-a)+\frac{f''(a)}{3!}(x-a)^2+\cdots
