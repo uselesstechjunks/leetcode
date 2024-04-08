@@ -19,7 +19,7 @@ Single Random Variable
 ----------------------------------------------------------------------------------
 .. note::
 	* We have a single real-valued rv :math:`X`.
-	* We consider the estimation problem where we **find an estimate :math:`\hat{x}`, a single value, for any future observation of :math:`X`**.
+	* We consider the estimation problem where we **find an estimate** :math:`\hat{x}`, **a single value, for any future observation of** :math:`X`.
 
 		* We define Prediction Error (PE): The rv :math:`\tilde{X}=X-\hat{x}`, which has the same pdf as :math:`X`.
 	* The **optimality** of our estimate is defined with the help of a **loss function**.
@@ -44,7 +44,7 @@ Two Random Variables
 
 		* [Regression] :math:`X,Y\sim F_{X,Y}(x,y)`
 		* [Classification] :math:`X,G\sim F_{X,G}(x,g)`
-	* The task is to **find an estimator as function of data, :math:`\hat{Y}=f(X)` or :math:`\hat{G}=g(X)`**.
+	* The task is to **find an estimator as function of data**, :math:`\hat{Y}=f(X)` **or** :math:`\hat{G}=g(X)`.
 
 		* For a given obs :math:`X=x`, this gives predictors :math:`\hat{Y}=\hat{y}=f(x)` and :math:`\hat{G}=\hat{g}=g(x)`.
 	* We associate a non-negative **misprediction penalty**, :math:`L`, for making an error in prediction.
@@ -102,7 +102,7 @@ Approximating The Analytic Solutions
 	* In such cases, we resort to the approximation framework that tries to mimic the optimal solution.
 	* We use statistical inference to estimate the unknowns of our model.
 
-Regression
+Regression - Approximating The Conditional Mean
 ----------------------------------------------------------------------------------
 Assuming locally constant nature of the fucntion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
