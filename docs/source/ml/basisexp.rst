@@ -91,9 +91,9 @@ Polynomial Spline
 
 		* :math:`h_1(x)=1`
 		* :math:`h_2(x)=x`
-		* :math:`h_2(x)=x^2`
-		* :math:`h_2(x)=x^3`
-		* :math:`h_{k+2}(x)=(x-\xi_k)^3_+`, for :math:`k=1,\cdots,M` where
+		* :math:`h_3(x)=x^2`
+		* :math:`h_4(x)=x^3`
+		* :math:`h_{k+4}(x)=(x-\xi_k)^3_+`, for :math:`k=1,\cdots,M` where
 
 			.. math:: (x-\xi_k)^3_+=\begin{cases}0 & \text{if } x < \xi_k\\ (x-\xi_k)^3 & \text{if } x \ge \xi_k\end{cases}
 
