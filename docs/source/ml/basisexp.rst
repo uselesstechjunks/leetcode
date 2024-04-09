@@ -53,10 +53,11 @@ Piece-wise Functions
 ==================================================================================
 .. note::
 	* We can split the input domain into :math:`M` regions using **knots**, :math:`\xi_1,\cdots,\xi_{M-1}`.
-	* We choose a function family :math:`h` and fit it separately as :math:`h_i` in each region :math:`(\xi_{i-1},\xi_i)`.
+	* We choose a function family :math:`\mathcal{H}` and fit it separately as :math:`h_i` in each region :math:`(\xi_{i-1},\xi_i)`.
 
 .. warning::
-	* In all such cases, the functions often becomes discontinuous at the knot which is undesirable for generalisation.
+	* The knot-selection problem has to be taken care of separately.
+	* In all such cases, the functions often becomes discontinuous at the knot points which is undesirable for generalisation.
 
 One-hot encoding for regions
 ----------------------------------------------------------------------------------
@@ -70,14 +71,19 @@ One-hot encoding for regions
 
 		.. math:: \hat{\beta_i}=\frac{\sum_{x_k\in(\xi_{i-1},\xi_i)}y_k}{|x_k\in(\xi_{i-1},\xi_i)|}
 
-Linear function for regions
+Polynomial function for regions
 ----------------------------------------------------------------------------------
+.. note::
+	* We can also design polynomials of any degree :math:`\mathcal{P}(n)` to each of these regions.
 
-Polynomial for regions
-----------------------------------------------------------------------------------
+		* :math:`h_1=I(x < \xi_1)\mathcal{P}_1(n)`
+		* For :math:`i=2,\cdots,M-1, h_i(x)=I(\xi_{i-1} < x < \xi_i)\mathcal{P}_i(n)`
+		* :math:`h_M(x)=I(\xi_M < x)\mathcal{P}_M(n)`
 
 Polynomial Spline
 ==================================================================================
+.. tip::
+	* For splines we design the functions for each region in such a way so that the function becomes continuous at the knot points.
 
 Natural Spine
 ==================================================================================
