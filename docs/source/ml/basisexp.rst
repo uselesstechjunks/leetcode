@@ -167,15 +167,20 @@ Kernel Ridge Regression
 		* We note that the kernel of a transform is found by inner products of the basis functions.
 		* Therefore, assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
 
-			.. math:: K(x,y)=\sum_{i=1}^\infty \lambda_i\phi_i(x)\phi_i(y)
+			.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
 		* Here, the eigenvalues 
 	
-			* are positive, i.e. :math:`\lambda_i\ge 0`, and 
-			* have bounded sum, i.e. :math:`\sum_{i=1}^infty \lamda_i < \infty
-	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
-	* Each datapoint, :math:`x`, therefore, is mapped to an infinite dimensional function
+			* are positive, i.e. :math:`\gamma_i\ge 0`, and 
+			* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
+		* Any function in :math:`\mathcal{H}_K` can be expressed as a linear combination of the eigenfunctions
 
-		.. math:: x\overset{h}\mapsto\sum_{m=1,x'\in\mathbb{R}^d}^\infty\alpha_m K(x,x')
+			.. math:: f(x)=\sum_{i=1}^\infty c_i\phi_i(x)
+	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
+	* Each datapoint, :math:`x`, therefore, is mapped to an function (infinite dimensional vector)
+
+		.. math:: x\overset{h}\mapsto f(x)
 
 .. note::
-	* TODO eigenfunctions
+	* We use the function norm as the regulariser as this controls how vigorously the function oscilate along the direction of a particular eigenfunction
+
+		.. math:: ||f||^2_{\mathcal{H}_K}\overset{\text{def}}=\sum_{i=1}^\infty c_i/\gamma_i < \infty
