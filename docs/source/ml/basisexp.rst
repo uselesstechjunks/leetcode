@@ -39,7 +39,7 @@ Polynomial
 .. warning::
 	* A polynomial of degree :math:`n` has :math:`n-1` turns.
 	* With real data, often not all the turns are utilised for the points in the interior regions.
-	* With no other constraints applied, polynomials of such higher degrees oscilate crazily towards the left/right extremes where the data density is usually low.
+	* With no other constraints applied, polynomials of such higher degrees oscilate crazily towards the extremes where the data density is usually low.
 	* Therefore, in those regions, it provides very poor generalisation of the model.
 	* The situation is often worse if we move to higher dimensions, as the proportion of points around the exterior increases in higher dimension.
 
@@ -49,8 +49,32 @@ Polynomial
 		.. math:: x\overset{h}\mapsto[1,x,x^2,x^3]
 	* However, lower degree polynomials fit to the entire data shows higher error rate due to increased bias.
 
-Piece-wise Polynomial
+Piece-wise Functions
 ==================================================================================
+.. note::
+	* We can split the input region in pieces using **knots**, :math:`\xi_1,\cdots,\xi_{M-1}`.
+	* We choose a function family :math:`h` and fit it separately as :math:`h_i` in each region :math:`(\xi_{i-1},\xi_i)`.
+
+.. warning::
+	* In all such cases, the functions often becomes discontinuous at the knot which is undesirable for generalisation.
+
+One-hot encoding for regions
+----------------------------------------------------------------------------------
+.. note::
+	* In this case, the basis expansion works with indicator functions
+
+		* :math:`h_1=I(x < \xi_1)`
+		* For :math:`i=2,\cdots,M-1, h_i(x)=I(\xi_{i-1} < x < \xi_i)`
+		* :math:`h_M(x)=I(\xi_M < x)`
+	* For regression problems, the fitted co-efficients are the average of the observation in the current piece.
+
+		.. math:: \hat{\beta_i}=\frac{\sum_{x_k\in(\xi_{i-1},\xi_i)}y_k}{|x_k\in(\xi_{i-1},\xi_i)|}
+
+Linear function for regions
+----------------------------------------------------------------------------------
+
+Polynomial for regions
+----------------------------------------------------------------------------------
 
 Polynomial Spline
 ==================================================================================
