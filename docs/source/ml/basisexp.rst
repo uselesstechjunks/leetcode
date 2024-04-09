@@ -127,7 +127,7 @@ Smoothing Spline
 .. note::
 	* [TODO: Proof?] The solution for this is Natural splines
 
-		.. math:: f(x)=\sum_{i=1}^N \beta_iN_i(x)=\mathbf{N}\boldsymbol{\beta}
+		.. math:: f(x)=\sum_{i=1}^N \beta_iN_i(x)
 	* We have :math:`f''(z)=\sum_{i=1}^N \beta_iN''_i(z)` and 
 
 		.. math:: \int\left(f''(z)\right)^2\mathop{dz}=\sum_{i=1}^N \sum_{j=1}^N\beta_i\beta_j\int N''_i(z)N''_j(z)\mathop{dz}=\boldsymbol{\beta}^T\boldsymbol{\Omega}_N\boldsymbol{\beta}
@@ -145,6 +145,8 @@ Non-linear Classification
 **********************************************************************************
 Infinite Dimensional Expansion
 **********************************************************************************
+.. note::
+	* Regression problems can be formulated using 
 
 Kernel Ridge Regression
 ==================================================================================
