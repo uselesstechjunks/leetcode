@@ -143,13 +143,18 @@ Non-linear Classification
 .. note::
 	* TODO
 
+Moving Beyond 1 Dimension
+==================================================================================
+.. note::
+	* TODO Tensor product
+
 **********************************************************************************
 Infinite Dimensional Expansion
 **********************************************************************************
 .. note::
 	* More general regression problems can be formulated using a similar framework for the smoothing splines
 
-		.. math:: \min_{f\in\mathcal{H}}\left[\sum_{i=1}^NL(y,\hat{f}(x))+\lambda J(f)\right]
+		.. math:: \hat{f}=\min_{f\in\mathcal{H}}\left[\sum_{i=1}^NL(y,f(x))+\lambda J(f)\right]
 	* Here :math:`\mathcal{H}` is a function class (hypothesis space) (e.g. Sobolev space for smoothing splines).
 	* :math:`J(f)` is a regulariser which penalises functions for being too complex (to avoid overfitting).
 	* :math:`\lambda` is the regulariser parameter which controls the trade-off between the bias and the variance.
@@ -158,6 +163,15 @@ Kernel Ridge Regression
 ==================================================================================
 .. note::
 	* We restrict our function class to be an `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ :math:`\mathcal{H}_K` whose basis functions are defined using a kernel :math:`K`.
+
+		* We note that the kernel of a transform is found by inner products of the basis functions.
+		* Therefore, assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
+
+			.. math:: K(x,y)=\sum_{i=1}^\infty \lambda_i\phi_i(x)\phi_i(y)
+		* Here, the eigenvalues 
+	
+			* are positive, i.e. :math:`\lambda_i\ge 0`, and 
+			* have bounded sum, i.e. :math:`\sum_{i=1}^infty \lamda_i < \infty
 	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
 	* Each datapoint, :math:`x`, therefore, is mapped to an infinite dimensional function
 
