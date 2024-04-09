@@ -130,11 +130,11 @@ Smoothing Spline
 		.. math:: f(x)=\sum_{i=1}^N \beta_iN_i(x)=\mathbf{N}\boldsymbol{\beta}
 	* We have :math:`f''(z)=\sum_{i=1}^N \beta_iN''_i(z)` and 
 
-		.. math:: \int\left(f''(z)\right)^2\mathop{dz}=\sum_{i=1}^N \sum_{j=1}^N\beta_i\beta_j\int N''_i(z)N''_j(z)\mathop{dz}=\boldsymbol{\beta}^T\boldsymbol{\Omega}\boldsymbol{\beta}
-	* Here :math:`\boldsymbol{\Omega}_{i,j}=\int N''_i(z)N''_j(z)\mathop{dz}`
+		.. math:: \int\left(f''(z)\right)^2\mathop{dz}=\sum_{i=1}^N \sum_{j=1}^N\beta_i\beta_j\int N''_i(z)N''_j(z)\mathop{dz}=\boldsymbol{\beta}^T\boldsymbol{\Omega}_N\boldsymbol{\beta}
+	* Here :math:`\{\boldsymbol{\Omega}_N\}_{i,j}=\int N''_i(z)N''_j(z)\mathop{dz}`
 	* The objective function can therefore be written as a generalised ridge regression
 
-		.. math:: L(\mathbf{y},\hat{\mathbf{y}})=(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})+\lambda\boldsymbol{\beta}^T\boldsymbol{\Omega}\boldsymbol{\beta}
+		.. math:: L(\mathbf{y},\hat{\mathbf{y}})=(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})+\lambda\boldsymbol{\beta}^T\boldsymbol{\Omega}_N\boldsymbol{\beta}
 	* [TODO: Write the final solution]
 
 **********************************************************************************
