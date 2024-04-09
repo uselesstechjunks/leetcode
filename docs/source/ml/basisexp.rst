@@ -181,7 +181,7 @@ Kernel Ridge Regression
 		.. math:: x\overset{h}\mapsto f(x)
 
 .. note::
-	* We use the function norm as the regulariser as this controls how vigorously the function oscilate along the direction of a particular eigenfunction
+	* We use the function norm as the regulariser as this captures how vigorously the function oscilate along the direction of each eigenfunctions.
 
 		.. math:: ||f||^2_{\mathcal{H}_K}\overset{\text{def}}=\sum_{i=1}^\infty c_i^2/\gamma_i < \infty
 
