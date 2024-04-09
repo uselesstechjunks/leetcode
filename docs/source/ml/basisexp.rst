@@ -137,6 +137,11 @@ Smoothing Spline
 		.. math:: L(\mathbf{y},\hat{\mathbf{y}})=(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})+\lambda\boldsymbol{\beta}^T\boldsymbol{\Omega}_N\boldsymbol{\beta}
 	* [TODO: Write the final solution]
 
+Non-linear Classification
+==================================================================================
+.. note::
+	* TODO
+
 **********************************************************************************
 Infinite Dimensional Expansion
 **********************************************************************************
