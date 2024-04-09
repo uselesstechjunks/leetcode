@@ -176,11 +176,19 @@ Kernel Ridge Regression
 
 			.. math:: f(x)=\sum_{i=1}^\infty c_i\phi_i(x)
 	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
-	* Each datapoint, :math:`x`, therefore, is mapped to an function (infinite dimensional vector)
+	* Each datapoint, :math:`x`, therefore, is mapped to a function (infinite dimensional vector)
 
 		.. math:: x\overset{h}\mapsto f(x)
 
 .. note::
 	* We use the function norm as the regulariser as this controls how vigorously the function oscilate along the direction of a particular eigenfunction
 
-		.. math:: ||f||^2_{\mathcal{H}_K}\overset{\text{def}}=\sum_{i=1}^\infty c_i/\gamma_i < \infty
+		.. math:: ||f||^2_{\mathcal{H}_K}\overset{\text{def}}=\sum_{i=1}^\infty c_i^2/\gamma_i < \infty
+
+.. note::
+	* The ridge regression problem using functions from kernel family can be expressed as 
+
+		.. math:: \hat{f}=\min_{f\in\mathcal{H}}\left[\sum_{i=1}^N L(y,f(x))+\lambda ||f||^2_{\mathcal{H}_K}\right]
+	* This reduces to 
+
+		.. math:: \hat{f}=\min_{(c_k)_{i=1}^\infty}\left[\sum_{i=1}^N L(y,\left(\sum_{k=1}^\infty c_k\phi_k(x)\right))+\lambda \sum_{k=1}^\infty c_i^2/\gamma_i\right]
