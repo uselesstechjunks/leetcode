@@ -118,7 +118,8 @@ Smoothing Spline
 	* The functions are restricted to be twice-differentiable (Sobolev space).
 	* The objective function is defined as
 
-		.. math:: L(y,\hat{y})=\sum_{i=1}^N(y-f(x))^2+\lambda\int\left(f''(z)\right)^2\mathop{dz}
+		.. math:: \hat{f}=\min_{f\in \text{Sob}}\left[\sum_{i=1}^N(y-f(x))^2+\lambda\int\left(f''(z)\right)^2\mathop{dz}\right]
+	* The smoothness is captured in the double-derivative since it represents curvature.
 	* :math:`\lambda\in[0,\infty)` is a smoothing parameter which controls the model complexity
 
 		* :math:`\lambda=0`: Rough fit, equivalent to interpolation using a Lagrange polynomial.
@@ -134,7 +135,7 @@ Smoothing Spline
 	* Here :math:`\{\boldsymbol{\Omega}_N\}_{i,j}=\int N''_i(z)N''_j(z)\mathop{dz}`
 	* The objective function can therefore be written as a generalised ridge regression
 
-		.. math:: L(\mathbf{y},\hat{\mathbf{y}})=(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})+\lambda\boldsymbol{\beta}^T\boldsymbol{\Omega}_N\boldsymbol{\beta}
+		.. math:: \min_\beta\left[(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})+\lambda\boldsymbol{\beta}^T\boldsymbol{\Omega}_N\boldsymbol{\beta}\right]
 	* [TODO: Write the final solution]
 
 Non-linear Classification
@@ -146,7 +147,9 @@ Non-linear Classification
 Infinite Dimensional Expansion
 **********************************************************************************
 .. note::
-	* Regression problems can be formulated using 
+	* Regression problems can be formulated using the framework
+
+		.. math:: \text{Obj}=
 
 Kernel Ridge Regression
 ==================================================================================
