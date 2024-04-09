@@ -162,13 +162,13 @@ Infinite Dimensional Expansion
 Kernel Ridge Regression
 ==================================================================================
 .. note::
-	* We restrict our function class to be an `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ :math:`\mathcal{H}_K` whose basis functions are defined using a kernel :math:`K`.
+	* We restrict our functions to be an `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ :math:`\mathcal{H}_K` whose basis functions are defined using a kernel :math:`K`.
 
-		* We note that the kernel of a transform is found by inner products of the basis functions.
+		* We note that if we had access to the basis functions, then the kernel of a transform is found by inner products of those.
 		* Therefore, assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
 
 			.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
-		* Here, the eigenvalues 
+		* Since kernels are symmetric and positive definite, the eigenvalues 
 	
 			* are positive, i.e. :math:`\gamma_i\ge 0`, and 
 			* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
