@@ -52,7 +52,7 @@ Polynomial
 Piece-wise Functions
 ==================================================================================
 .. note::
-	* We can split the input region in pieces using **knots**, :math:`\xi_1,\cdots,\xi_{M-1}`.
+	* We can split the input domain into :math:`M` regions using **knots**, :math:`\xi_1,\cdots,\xi_{M-1}`.
 	* We choose a function family :math:`h` and fit it separately as :math:`h_i` in each region :math:`(\xi_{i-1},\xi_i)`.
 
 .. warning::
