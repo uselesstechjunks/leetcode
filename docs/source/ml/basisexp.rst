@@ -147,9 +147,21 @@ Non-linear Classification
 Infinite Dimensional Expansion
 **********************************************************************************
 .. note::
-	* Regression problems can be formulated using the framework
+	* More general regression problems can be formulated using a similar framework for the smoothing splines
 
-		.. math:: \text{Obj}=
+		.. math:: \min_{f\in\mathcal{H}}\left[\sum_{i=1}^NL(y,\hat{f}(x))+\lambda J(f)\right]
+	* Here :math:`\mathcal{H}` is a function class (hypothesis space) (e.g. Sobolev space for smoothing splines).
+	* :math:`J(f)` is a regulariser which penalises functions for being too complex (to avoid overfitting).
+	* :math:`\lambda` is the regulariser parameter which controls the trade-off between the bias and the variance.
 
 Kernel Ridge Regression
 ==================================================================================
+.. note::
+	* We restrict our function class to be an `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ :math:`\mathcal{H}_K` whose basis functions are defined using a kernel :math:`K`.
+	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
+	* Each datapoint, :math:`x`, therefore, is mapped to an infinite dimensional function
+
+		.. math:: x\overset{h}\mapsto\sum_{m=1,x'\in\mathbb{R}^d}^\infty\alpha_m K(x,x')
+
+.. note::
+	* TODO eigenfunctions
