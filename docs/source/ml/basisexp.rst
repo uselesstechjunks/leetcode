@@ -102,7 +102,7 @@ Natural Spline
 .. note::
 	* Since each region of a polynomial spline is fit with less data, often they show crazier behaviour near the boundaries than global polynomials.
 	* To alleviate these problems, **natural splines** model the function as a linear function for the left of the leftmost and the right of the rightmost knot points.
-	* We use the notation :math:`N_i(x)` instead of :math:`h_i(x)` to emphasis that we're working with a natural spline.
+	* We use the notation :math:`N_i(x)` instead of :math:`h_i(x)` to emphasize that we're working with natural splines.
 
 .. tip::
 	[TODO] Note on the number of parameters and degrees of freedom.
@@ -111,8 +111,8 @@ Smoothing Spline
 ==================================================================================
 .. tip::
 	* For each of the piece-wise fitting approaches, knot selection remains a key-issue.
-	* Smoothing splines addresses this by allowing a knot at **every single data-point**.
-	* Since this approach creates a much higher degree polynomial, the complexity of the model is controlled via regularisation.
+	* Smoothing splines address this by allowing a knot at **every single data-point**.
+	* Since this approach can potentially create a much higher degree polynomial, the complexity of the model is controlled via regularisation.
 
 .. note::
 	* The functions are restricted to be twice-differentiable (Sobolev space).
@@ -120,10 +120,10 @@ Smoothing Spline
 
 		.. math:: \hat{f}=\min_{f\in \text{Sob}}\left[\sum_{i=1}^N(y-f(x))^2+\lambda\int\left(f''(z)\right)^2\mathop{dz}\right]
 	* The smoothness is captured in the double-derivative since it represents curvature.
-	* :math:`\lambda\in[0,\infty)` is a smoothing parameter which controls the model complexity
+	* :math:`\lambda\in[0,\infty]` is a smoothing parameter which controls the model complexity
 
 		* :math:`\lambda=0`: Rough fit, equivalent to interpolation using a Lagrange polynomial.
-		* :math:`\lambda=\infty`: Smooth linear fit since it reduces to an OLS problem with MSE loss.
+		* :math:`\lambda=\infty`: Linear fit since it reduces to an OLS problem with MSE loss.
 
 .. note::
 	* [TODO: Proof?] The solution for this is Natural splines
@@ -162,9 +162,13 @@ Infinite Dimensional Expansion
 Kernel Ridge Regression
 ==================================================================================
 .. note::
-	* We restrict our functions to be an `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ :math:`\mathcal{H}_K` whose basis functions are defined using a kernel :math:`K`.
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ function class, :math:`\mathcal{H}_K`, whose basis functions, :math:`h_i`, are defined using a kernel :math:`K`
+
+		.. math:: h_i(x)=K(x,x_i)
 
 		* We note that if we had access to the basis functions, then the kernel of a transform is found by inner products of those.
+
+			.. math:: K(x_i,x_j)=\langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}
 		* Therefore, assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
 
 			.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
@@ -176,9 +180,6 @@ Kernel Ridge Regression
 
 			.. math:: f(x)=\sum_{i=1}^\infty c_i\phi_i(x)
 	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
-	* Each datapoint, :math:`x`, therefore, is mapped to a function (infinite dimensional vector)
-
-		.. math:: x\overset{h}\mapsto f(x)
 
 .. note::
 	* We use the function norm as the regulariser as this captures how vigorously the function oscilate along the direction of each eigenfunctions.
@@ -188,7 +189,11 @@ Kernel Ridge Regression
 .. note::
 	* The ridge regression problem using functions from kernel family can be expressed as 
 
-		.. math:: \hat{f}=\min_{f\in\mathcal{H}}\left[\sum_{i=1}^N L(y,f(x))+\lambda ||f||^2_{\mathcal{H}_K}\right]
+		.. math:: \hat{f}=\min_{f\in\mathcal{H}}\left[\sum_{i=1}^N L(y,f(x_i))+\lambda ||f||^2_{\mathcal{H}_K}\right]
 	* This reduces to 
 
-		.. math:: \hat{f}=\min_{(c_k)_{i=1}^\infty}\left[\sum_{i=1}^N L(y,\left(\sum_{k=1}^\infty c_k\phi_k(x)\right))+\lambda \sum_{k=1}^\infty c_i^2/\gamma_i\right]
+		.. math:: \hat{f}=\min_{(c_k)_{k=1}^\infty}\left[\sum_{i=1}^N L(y,\left(\sum_{k=1}^\infty c_k\phi_k(x_i)\right))+\lambda \sum_{k=1}^\infty c_i^2/\gamma_i\right]
+	* On a face-value, it seems that we'd need to estimate an infinite number of parameters.
+	* [TODO: Proof?] However, the solution is finite dimensional
+
+		.. math:: f(x)=\sum_{i=1}^N\alpha_iK(x,x_i)
