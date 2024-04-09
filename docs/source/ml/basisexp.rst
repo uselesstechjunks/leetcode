@@ -79,17 +79,63 @@ Polynomial function for regions
 		* :math:`h_1=I(x < \xi_1)\mathcal{P}_1(n)`
 		* For :math:`i=2,\cdots,M-1, h_i(x)=I(\xi_{i-1} < x < \xi_i)\mathcal{P}_i(n)`
 		* :math:`h_M(x)=I(\xi_M < x)\mathcal{P}_M(n)`
+	* Fitting this model with MSE for regression fits a separate polynomial in each region.
+	* The fitted function is often discontinuous at the knot points.
 
 Polynomial Spline
 ==================================================================================
-.. tip::
-	* For splines we design the functions for each region in such a way so that the function becomes continuous at the knot points.
+.. note::
+	* Here we design the functions for each region in such a way so that the function becomes continuous at each of the knot points.
+	* The key idea is to define functions in such a way that stays 0 to the left of a knot-point but becomes continuously non-zero on the right of it.
+	* For cubic splines, the functions are defined as:
 
-Natural Spine
+		* :math:`h_1(x)=1`
+		* :math:`h_2(x)=x`
+		* :math:`h_2(x)=x^2`
+		* :math:`h_2(x)=x^3`
+		* :math:`h_{k+2}(x)=(x-\xi_k)^3_+`, for :math:`k=1,\cdots,M` where
+
+			.. math:: (x-\xi_k)^3_+=\begin{cases}0 & \text{if } x < \xi_k\\ (x-\xi_k)^3 & \text{if } x \ge \xi_k\end{cases}
+
+Natural Spline
 ==================================================================================
+.. note::
+	* Since each region of a polynomia spline is fit with less data, often they show even more crazier behaviour near the boundaries than global polynomials.
+	* To alleviate these problems, **natural splines** model the function as a linear function for the leftmost and the rightmost knot points.
+	* We use the notation :math:`N_i(x)` instead of :math:`h_i(x)` to emphasis that we're working with a natural spline.
+
+.. tip::
+	[TODO] Note on the number of parameters and degrees of freedom.
 
 Smoothing Spline
 ==================================================================================
+.. tip::
+	* For each of the piece-wise fitting approaches, knot selection remains a key-issue.
+	* Smoothing splines addresses this by allowing a knot at every single data-point (i.e. :math:`M=N-1`).
+	* Since this approach creates a much higher degree polynomial, the complexity of the model is controlled via regularisation.
+
+.. note::
+	* The functions are restricted to be twice-differentiable (Sobolev space).
+	* The objective function is defined as
+
+		.. math:: L(y,\hat{y})=\sum_{i=1}^N(y-f(x))^2+\lambda\int\left(f''(z)\right)^2\mathop{dz}
+	* :math:`\lambda\in[0,\infty)` is a smoothing parameter which controls the model complexity
+
+		* :math:`\lambda=0`: Rough fit, equivalent to interpolation using a Lagrange polynomial.
+		* :math:`\lambda=\infty`: Smooth linear fit since it reduces to an OLS problem with MSE loss.
+
+.. note::
+	* [TODO: Proof?] The solution for this is Natural splines
+
+		.. math:: f(x)=\sum_{i=1}^N \beta_iN_i(x)=\mathbf{N}\boldsymbol{\beta}
+	* We have :math:`f''(z)=\sum_{i=1}^N \beta_iN''_i(z)` and 
+
+		.. math:: \int\left(f''(z)\right)^2\mathop{dz}=\sum_{i=1}^N \sum_{j=1}^N\beta_i\beta_j\int N''_i(z)N''_j(z)\mathop{dz}=\boldsymbol{\beta}^T\boldsymbol{\Omega}\boldsymbol{\beta}
+	* Here :math:`\boldsymbol{\Omega}_{i,j}=\int N''_i(z)N''_j(z)\mathop{dz}`
+	* The objective function can therefore be written as a generalised ridge regression
+
+		.. math:: L(\mathbf{y},\hat{\mathbf{y}})=(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})^T(\mathbf{y}-\mathbf{N}\boldsymbol{\beta})+\lambda\boldsymbol{\beta}^T\boldsymbol{\Omega}\boldsymbol{\beta}
+	* [TODO: Write the final solution]
 
 **********************************************************************************
 Infinite Dimensional Expansion
