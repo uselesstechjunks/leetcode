@@ -100,8 +100,8 @@ Polynomial Spline
 Natural Spline
 ==================================================================================
 .. note::
-	* Since each region of a polynomia spline is fit with less data, often they show even more crazier behaviour near the boundaries than global polynomials.
-	* To alleviate these problems, **natural splines** model the function as a linear function for the leftmost and the rightmost knot points.
+	* Since each region of a polynomial spline is fit with less data, often they show crazier behaviour near the boundaries than global polynomials.
+	* To alleviate these problems, **natural splines** model the function as a linear function for the left of the leftmost and the right of the rightmost knot points.
 	* We use the notation :math:`N_i(x)` instead of :math:`h_i(x)` to emphasis that we're working with a natural spline.
 
 .. tip::
@@ -111,7 +111,7 @@ Smoothing Spline
 ==================================================================================
 .. tip::
 	* For each of the piece-wise fitting approaches, knot selection remains a key-issue.
-	* Smoothing splines addresses this by allowing a knot at every single data-point (i.e. :math:`M=N-1`).
+	* Smoothing splines addresses this by allowing a knot at **every single data-point**.
 	* Since this approach creates a much higher degree polynomial, the complexity of the model is controlled via regularisation.
 
 .. note::
