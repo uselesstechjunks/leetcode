@@ -86,7 +86,7 @@ Polynomial Spline
 ==================================================================================
 .. note::
 	* Here we design the functions for each region in such a way so that the function becomes continuous at each of the knot points.
-	* The key idea is to define functions in such a way that stays 0 to the left of a knot-point but becomes continuously non-zero on the right of it.
+	* The key idea is to **define additional polynomials of the same target degree** in such a way that stays 0 to the left of a given knot-point but becomes continuously non-zero on the right of it.
 	* For cubic splines, the functions are defined as:
 
 		* :math:`h_1(x)=1`
