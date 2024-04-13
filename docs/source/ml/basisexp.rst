@@ -172,9 +172,9 @@ A point mapping to a function
 			.. math:: \delta_x(t)=\begin{cases}+\infty & t=x \\ 0 & t\neq x\end{cases}
 		* This impulse has an infinitely sharp peak at :math:`x` and dies off immediately everywhere.
 		* [Side-node] This is a special case of `generaised functions <https://en.wikipedia.org/wiki/Generalized_function>`_
-	* We can think of this impulse as a limit to a sequence of functions, such as Gaussian bumps around the point :math:`x`.
+	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\lambda\downarrow 0} f_\lambda`, such as Gaussian bumps around the point :math:`x`.
 
-		.. math:: \lim_\limits{\lambda\downarrow 0}\left(f_\lambda=\exp(\frac{||x-x'||^2}{\lambda})\right)
+		.. math:: f_\lambda=\exp(\frac{||x-x'||^2}{\lambda})
 	* While thinking of a map from a point to a function, we're essentially going backwards from the limit to a bump with a finite width.
 
 .. note::
