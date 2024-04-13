@@ -44,12 +44,12 @@ Polynomial
 	* The situation is often worse if we move to higher dimensions, as the proportion of points around the exterior increases in higher dimension.
 
 .. note::
-	* With these in mind, a polynomial of smaller order often works best, such as cubic polynomials.
+	* With these in mind, a polynomial of smaller degree often works best, such as cubic polynomials.
 
 		.. math:: x\overset{h}\mapsto[1,x,x^2,x^3]
-	* However, lower degree polynomials fit to the entire data shows higher error rate due to increased bias.
+	* However, they often show higher error rate due to increased bias.
 
-Piece-wise Functions
+Piece-wise Polynomials
 ==================================================================================
 .. note::
 	* We can split the input domain into :math:`M` regions using **knots**, :math:`\xi_1,\cdots,\xi_{M-1}`.
@@ -86,7 +86,7 @@ Polynomial Spline
 ==================================================================================
 .. note::
 	* Here we design the functions for each region in such a way so that the function becomes continuous at each of the knot points.
-	* The key idea is to **define additional polynomials of the same target degree** in such a way that stays 0 to the left of a given knot-point but becomes continuously non-zero on the right of it.
+	* The key idea is to **define additional polynomials of the same target degree** in such a way that, for any given knot-point, the function stays 0 to the left of it but continuously becomes non-zero on the right of it.
 	* For cubic splines, the functions are defined as:
 
 		* :math:`h_1(x)=1`
@@ -111,14 +111,16 @@ Smoothing Spline
 ==================================================================================
 .. tip::
 	* For each of the piece-wise fitting approaches, knot selection remains a key-issue.
-	* Smoothing splines address this by allowing a knot at **every single data-point**.
-	* Since this approach can potentially create a much higher degree polynomial, the complexity of the model is controlled via regularisation.
+	* Smoothing splines address this by implicitly **allowing a knot at every single data-point**.
+	* Since this approach can potentially create much higher degree polynomials, the complexity of the model is controlled via regularisation.
 
 .. note::
-	* The functions are restricted to be twice-differentiable (Sobolev space).
+	* The functions are restricted to be twice-differentiable equipped with norm (e.g. `Sobolev space <https://en.wikipedia.org/wiki/Sobolev_space>`_ :math:`W^{k=2,p=2}`).
+
+		* [Side note]: A function :math:`f\in W^{k,p}` and its (weak) derivatives up to order :math:`k` have a finite :math:`L_p` norm.
 	* The objective function is defined as
 
-		.. math:: \hat{f}=\min_{f\in \text{Sob}}\left[\sum_{i=1}^N(y-f(x))^2+\lambda\int\left(f''(z)\right)^2\mathop{dz}\right]
+		.. math:: \hat{f}=\min_{f\in W^{k=2,p=2}}\left[\sum_{i=1}^N(y-f(x))^2+\lambda\int\left(f''(z)\right)^2\mathop{dz}\right]
 	* The smoothness is captured in the double-derivative since it represents curvature.
 	* :math:`\lambda\in[0,\infty]` is a smoothing parameter which controls the model complexity
 
