@@ -174,7 +174,7 @@ A point mapping to a function
 		* [Side-node] This is a special case of `generaised functions <https://en.wikipedia.org/wiki/Generalized_function>`_
 	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\lambda\downarrow 0} f_\lambda`, such as Gaussian bumps around the point :math:`x`.
 
-		.. math:: f_\lambda=\exp(\frac{||x-x'||^2}{\lambda})
+		.. math:: f_\lambda=\exp\left(-\frac{||x-x'||^2}{\lambda}\right)
 	* While thinking of a map from a point to a function, we're essentially going backwards from the limit to a bump with a finite width.
 
 .. note::
