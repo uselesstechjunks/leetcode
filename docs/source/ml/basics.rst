@@ -3,86 +3,109 @@ Fundamentals
 ##################################################################################
 
 **********************************************************************************
-Notation
-**********************************************************************************
-.. warning::
-	* All vectors are named for their column vector form. 
-	* For row-representation, we use the transpose notation.
-
-.. note::
-	* The data is associated with a random variable :math:`X`.
-
-		* It might also be a random vector for some :math:`d> 1`, in which case, individual components can referred to as :math:`X_j` and :math:`X=(X_1,\cdots,X_d)`.
-	* For observed data points are instances of the rv, :math:`X=x\in\mathbb{R}^d` for some :math:`d\geq 1`.
-	* [Regression] The target quantity is associated with a continuous rv :math:`Y\in\mathbb{R}`. 
-
-		* It might also be a random vector, with :math:`Y=(Y_1,\cdots,Y_K)`, for some :math:`K\geq 1`.
-		* Single dimensional observations for target are usually written as :math:`Y=y\in\mathbb{R}`.		
-	* [Classification] The target quantity is associated with a discrete rv :math:`G\in\mathcal{G}` with :math:`|\mathcal{G}|=K`.		
-	* We have a total of :math:`N` observations, and all the observations together are taken in the matrix form
-
-		.. math:: \mathbf{X}_{N\times d}=\begin{bmatrix}-& x_1^T & - \\ \vdots & \vdots & \vdots \\ -& x_N^T & -\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\ \mathbf{x}_1 & \cdots & \mathbf{x}_d \\ |&\cdots&|\end{bmatrix}
-	* The vector :math:`\mathbf{x}_j\in\mathbb{R}^N` represents the column vector for all the observations for rv :math:`X_j`.
-	* A particular observation for :math:`X=x_i\in\mathbb{R}^d` is taken in the row-vector form, :math:`x_i^T\in\mathbb{R}_{1\times d}`.
-	* For :math:`K> 1`, we can also associate the target with the row vector form, :math:`y_i^T\in\mathbb{R}_{1\times K}` [regression] or :math:`g_i^T\in\mathcal{G}_{1\times K}` [classification].
-
-**********************************************************************************
 Statistical Decision Theory
 **********************************************************************************
 This puts the prediction task under a statistical inference paradigm.
 
-.. tip::	
-	* We assume that the :math:`X` and the :math:`Y/G` are distributed per some **unknown joint distribution**
+Analytic Solutions
+==================================================================================
+.. warning::
+	* Under this paradigm, the **data is a realisation of some underlying random process**. 
+	* We define the prediction problem under this framework. 
+	* The optimal solutions under this often rely on having access to the underlying distribution or some other quantities involving the distribution. 
+	* We also discuss ways to define the notion of optimality.
+
+Single Random Variable
+----------------------------------------------------------------------------------
+.. note::
+	* We have a single real-valued rv :math:`X`.
+	* We consider the estimation problem where we **find an estimate** :math:`\hat{x}`, **a single value, for any future observation of** :math:`X`.
+
+		* We define Prediction Error (PE): The rv :math:`\tilde{X}=X-\hat{x}`, which has the same pdf as :math:`X`.
+	* The **optimality** of our estimate is defined with the help of a **loss function** such that
+
+		.. math:: \hat{X}_{\text{OPT}}=\underset{\hat{X}}{\arg\min} L(X,\hat{X})
+
+		* Loss function is usually some function of PE.
+		* MSE loss function is defined as
+
+			.. math:: \mathbb{E}_X[\tilde{X}^2]=\mathbb{E}_X[(X-\hat{x})^2]=\mathbb{E}_X[X^2]-2\mathbb{E}_X[X]\hat{x}+\hat{x}^2
+
+.. tip::
+	* To find :math:`\hat{x}`, we can differentiate w.r.t. :math:`\hat{x}` to minimize MSE.
+
+		* Note that :math:`\mathbb{E}_X[X^2]` and :math:`\mathbb{E}_X[X]` are constants.
+		* Therefore
+
+			.. math:: \frac{\partial}{\mathop{\partial\hat{x}}}\mathbb{E}_X[(X-\hat{x})^2]=-2\mathbb{E}_X[X]+2\hat{x}\implies\hat{x}_{\text{OPT}}=\mathbb{E}_X[X]
+
+Two Random Variables
+----------------------------------------------------------------------------------
+.. note::
+	* We assume that the data :math:`X` and the target :math:`Y/G` are distributed per a **joint distribution**
 
 		* [Regression] :math:`X,Y\sim F_{X,Y}(x,y)`
 		* [Classification] :math:`X,G\sim F_{X,G}(x,g)`
-	* The task is to find a predictor as function of data, :math:`\hat{Y}(X)` or :math:`\hat{G}(X)`.
-	* We associate a **misprediction penalty**, L, for making an error in prediction.
+	* We assume that we'll have access to future realisations of :math:`X=x` but not the target.
+	* The task is to **find an estimator for the target as function of data**, :math:`\hat{Y}=f(X)` **or** :math:`\hat{G}=g(X)`.
+	
+		* We use these to **predict future values for the target** as :math:`\hat{y}=f(x)` and :math:`\hat{g}=g(x)`.
+	* The **optimality** of our estimate is defined with a non-negative **loss function**, :math:`L`.
 
-		* [Regression] :math:`L(Y,\hat{Y}(X))`
-		* [Classification] :math:`L(G,\hat{G}(X))`
-	* We wish the predictors to have minimal expected prediction error (EPE) over the joint.
+		* [Regression] :math:`\hat{Y}_{\text{OPT}}=\underset{\hat{Y}}{\arg\min} L(Y,\hat{Y})`
+		* [Classification] :math:`\hat{G}_{\text{OPT}}=\underset{\hat{G}}{\arg\min} L(G,\hat{G})`
+	* We wish the predictors to have minimal expected prediction error (EPE) **over the joint**.
 
-		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))`
-		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))`
+		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y})`
+		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G})`
 	* EPE can be reformulated as conditional expectation on observed input variables :math:`X`.
 
-		* [Regression] :math:`EPE=\mathbb{E}_{X,Y} L(Y,\hat{Y}(X))=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[L(Y,\hat{Y}(X)|X]\right]=\int_x \mathbb{E}_{Y|X}[L(Y,\hat{Y}(X)|X=x]f_{Y|X}(y|x)\mathop{dx}`
-		* [Classification] :math:`EPE=\mathbb{E}_{X,G} L(G,\hat{G}(X))=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}(X)|X]\right]=\int_x \mathbb{E}_{G|X}[L(G,\hat{Y}(X)|X=x]f_{G|X}(y|x)\mathop{dx}`
-	* This quantity is minimised pointwise (i.e. at each point :math:`X=x`)
+		* [Regression] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{Y|X}[L(Y,\hat{Y}|X]\right]`
+		* [Classification] :math:`EPE=\mathbb{E}_X\left[\mathbb{E}_{G|X}[L(G,\hat{G}|X]\right]`
 
-		* (Informally, to minimise, we take derivative of EPE which removes the integral).
-		* [Regression] :math:`\hat{Y}(x)=\underset{f}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,f(X)|X=x]\right)`
-		* [Classification] :math:`\hat{G}(x)=\underset{g}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,g(X)|X=x]\right)`.
-	* For particular choice of loss functions, we arrive as optimal (Bayes) estimator definitions
+.. tip::
+	* Since :math:`L` is non-negative, this quantity is minimised when it's minimum at each point :math:`X=x`.
+		
+		* As we're fixing :math:`X` to a constant, the outer expectation :math:`\mathbb{E}_X` goes away.		
+		* [Regression] :math:`\hat{y}_{\text{OPT}}=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_{Y|X}[L(Y,\hat{y}|X=x]\right)`
+		* [Classification] :math:`\hat{g}_{\text{OPT}}=\underset{\hat{g}}{\arg\min}\left(\mathbb{E}_{G|X}[L(G,\hat{g}|X=x]\right)`.
+	* For particular choice of loss functions, we arrive as **optimal (Bayes) estimator** definitions
 
-		* [Regression] If MSE loss is used, then :math:`\hat{Y}(x)=\mathbb{E}_{Y|X}[Y|X=x]`.
-		* [Classification] If 0-1 loss is used, then :math:`\hat{G}(x)` corresponds to the predicted class with highest probability.
+		* [Regression] With MSE loss, :math:`\hat{Y}=\mathbb{E}_{Y|X}[Y|X]`, **mean of the conditional pdf**.
+		* [Classification] With 0-1 loss, :math:`\hat{G}` corresponds to the **mode of the conditional pmf**.
 
 Regression
-==================================================================================
-.. note::
-	* We're interested in finding an estimator for :math:`Y`
-
-		.. math:: \hat{Y}=f(X)
-	* Estimation error: :math:`\tilde{Y}=\hat{Y}-Y`
-	* Bias: :math:`\mathbb{E}_Y[\tilde{Y}]`
-	* Standard error (se): :math:`\sqrt{\mathbb{V}_Y(\hat{Y})}`
-	* Mean-squared error (mse): :math:`\mathbb{E}_Y[\tilde{Y}^2]`
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Bayes Estimator
-----------------------------------------------------------------------------------
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. note::
-	* This is the estimator which minimises mse.
+	* This is the estimator which minimises MSE for each point :math:`X=x`.
 
-		.. math:: f^*=\underset{f}{\arg\min}\left(\mathbb{E}_{X,Y}[(f(X)-Y)^2]\right)=\underset{f}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(f(X)-Y)^2]|X\right]\right)
-	* This minimisation problem is equivalent to finding a pointwise minimum, such that, for each :math:`X=x`, 
+		.. math:: L(Y,\hat{y})=\mathbb{E}_{Y|X}[(Y-\hat{y})^2|X=x]
+	* To find minimum, we differentiate w.r.t :math:`\hat{y}=f(x)`, a single value
 
-		.. math:: f(x)=\underset{\hat{y}}{\arg\min}\left(\mathbb{E}_X\left[\mathbb{E}_{Y|X}[(\hat{y}-Y)^2]|X=x\right]\right)
-	* [WHY??] The solution is :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]` which is the conditional expectation estimator or Bayes estimator.
+		.. math:: \frac{\partial}{\mathop{\partial\hat{y}}}L(Y,\hat{y})=\frac{\partial}{\mathop{\partial\hat{y}}}\left(\mathbb{E}_{Y|X}[Y^2|X=x]-2\mathbb{E}_{Y|X}[Y|X=x]\hat{y}+\hat{y}^2\right)=-2\mathbb{E}_{Y|X}[Y|X=x]+2\hat{y}
+	* Therefore, the optimal estimator at each realisation :math:`X=x` is given by
+
+		.. math:: \hat{y}=f(x)=\mathbb{E}_{Y|X}[Y|X=x]
 	* We note that this estimator is unbiased.
 
-Approximating The Bayes Estimator
+.. note::
+	TODO - Alternate proof from Sayed and orthogonality conditions !!!IMPORTANT!!!
+
+Classification
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bayes Classifier
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Approximating The Analytic Solutions
+==================================================================================
+.. warning::
+	* In practical problems, we often don't have access to the underlying distribution. 
+	* In such cases, we resort to the approximation framework that tries to mimic the optimal solution.
+	* We use statistical inference to estimate the unknowns of our model.
+
+Regression - Approximating The Conditional Mean
 ----------------------------------------------------------------------------------
 Assuming locally constant nature of the fucntion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,24 +114,54 @@ Assuming locally constant nature of the fucntion
 
 		* replacing expectation with sample average
 		* approximating the point :math:`X=x` with a neighbourhood :math:`N(x)` where :math:`|N(x)|=k`
-	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\frac{1}{k}\sum_{x_i\in N(x)} y_i`
+		* The parameter :math:`k` is chosen using model selection approaches.
+		* Usually the choice of :math:`k` determines the **roughness** of this model, with larger values resulting in smoother model.
+	* In this case :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx\text{Avg}(y_i|x_i\in N(x))`
 	* The implicit assumption is that the function behaves locally constant around each point :math:`x`
 	* Therefore, it can be estimated with the average value of the target :math:`y_i` for each data point in the neighbourhood :math:`x_i`.
 
 Explicit assumption from a model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* In linear regression approach, we explicitly assume that the estimator is affine in :math:`X_j`.
-	* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx x^T\beta + \beta_0`
-	* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function instead
+	* In linear regression, we explicitly assume that the estimator is affine in :math:`X_j`.
+	
+		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x + \beta_0`
+		* We usually add a dummy variable :math:`X_0=1` in :math:`X` and write this as a linear function
 
-		.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx x^T\beta
+			.. math:: f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T x
+	* In basis expansion, we assume that the estimator is an affine in some transform :math:`h(x)\in\mathbb{R}^M`.
 
-Classification
-==================================================================================
+		* Example: :math:`x=(x_1,x_2)^T\overset{h}{\longrightarrow}(1,x_1,x_2,x_1x_2,x_1^2,x_2^2)^T`
+		* In this case, :math:`f(x)=\mathbb{E}_{Y|X}[Y|X=x]\approx \beta^T h(x)`
 
-Bayes Classifier
-----------------------------------------------------------------------------------
+**********************************************************************************
+Notation
+**********************************************************************************
+.. warning::
+	* All vectors are named for their column vector form. 
+	* For row-representation, we use the transpose notation.
+
+.. note::
+	* Data is associated with a random variable :math:`X`.
+	* Observed data points are instances of the rv, :math:`X=x\in\mathbb{R}^d` for some :math:`d\geq 1`.
+	
+		* If :math:`d> 1`, :math:`X` is a random vector.
+		* In this case, individual components can referred to as :math:`X_j` and :math:`X=(X_1,\cdots,X_d)`.
+
+.. note::
+	* [Regression] The target quantity is associated with a continuous rv :math:`Y` taking values :math:`Y=y\in\mathbb{R}^K`, for some :math:`K\geq 1`.
+
+		* It might also be a random vector, with :math:`Y=(Y_1,\cdots,Y_K)`.
+		* Single dimensional observations for target are usually written as :math:`Y=y\in\mathbb{R}`.
+	* [Classification] The target quantity is associated with a discrete rv :math:`G\in\mathcal{G}` with :math:`|\mathcal{G}|=K`.
+
+.. note::
+	* We have a total of :math:`N` observations, and all the observations together are taken in the matrix form
+
+		.. math:: \mathbf{X}_{N\times d}=\begin{bmatrix}-& x_1^T & - \\ \vdots & \vdots & \vdots \\ -& x_N^T & -\end{bmatrix}=\begin{bmatrix}|&\cdots&|\\ \mathbf{x}_1 & \cdots & \mathbf{x}_d \\ |&\cdots&|\end{bmatrix}
+	* The vector :math:`\mathbf{x}_j\in\mathbb{R}^N` represents the column vector for all the observations for rv :math:`X_j`.
+	* A particular observation for :math:`X=x_i\in\mathbb{R}^d` is taken in the row-vector form, :math:`x_i^T\in\mathbb{R}_{1\times d}`.
+	* For :math:`K> 1`, we can also associate the target with the row vector form, :math:`y_i^T\in\mathbb{R}_{1\times K}` [regression] or :math:`g_i^T\in\mathcal{G}_{1\times K}` [classification].
 
 **********************************************************************************
 Curse of Dimensionality
@@ -126,9 +179,3 @@ Curse of Dimensionality
 		* `On the Surprising Behavior of Distance Metrics in High Dimensional Space <https://bib.dbvis.de/uploadedFiles/155.pdf>`_
 		* `When Is "Nearest Neighbor" Meaningful? <https://members.loria.fr/MOBerger/Enseignement/Master2/Exposes/beyer.pdf>`_
 		* `Fractional Norms and Quasinorms Do Not Help to Overcome the Curse of Dimensionality <https://www.mdpi.com/1099-4300/22/10/1105/pdf?version=1603175755>`_
-
-**********************************************************************************
-Statistical Models
-**********************************************************************************
-Linear Regression
-kNN Classification
