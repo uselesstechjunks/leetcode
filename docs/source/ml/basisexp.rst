@@ -175,7 +175,8 @@ A point mapping to a function
 	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\lambda\downarrow 0} f_\lambda`, such as Gaussian bumps around the point :math:`x`.
 
 		.. math:: f_\lambda=\exp\left(-\frac{||x-x'||^2}{\lambda}\right)
-	* While thinking of a map from a point to a function, we're essentially going backwards from the limit to a bump with a finite width.
+	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse to a bump with a finite width.
+	* This allows for some uncertainty about the exact location of the point with respect to others.
 
 .. note::
 	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K`, we define basis functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
