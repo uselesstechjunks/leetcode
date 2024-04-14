@@ -161,28 +161,42 @@ Infinite Dimensional Expansion
 	* :math:`J(f)` is a regulariser which penalises functions for being too complex (to avoid overfitting).
 	* :math:`\lambda` is the regulariser parameter which controls the trade-off between the bias and the variance.
 
-Kernel Ridge Regression
+A point mapping to a function
 ==================================================================================
+.. tip::
+	* A point :math:`x\in\mathbb{R}^d` can be thought of as an impulse like `Dirac-delta function <https://en.wikipedia.org/wiki/Dirac_delta_function>`_.
+
+		.. math:: \delta_x(t)=\begin{cases}+\infty & t=x \\ 0 & t\neq x\end{cases}
+
+		* It has an infinitely sharp peak at :math:`x` and dies off immediately everywhere else.
+		* [Side-node] This is a special case of `generalised functions <https://en.wikipedia.org/wiki/Generalized_function>`_.
+	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\lambda\downarrow 0} f_\lambda`, such as Gaussian bumps around the point :math:`x`.
+
+		.. math:: f_\lambda=\exp\left(-\frac{||x-x'||^2}{\lambda}\right)
+	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse to a bump with a finite width.
+	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
+
 .. note::
-	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ function class, :math:`\mathcal{H}_K`, whose basis functions, :math:`h_i`, are defined using a kernel :math:`K`
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K` to define functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
 
-		.. math:: h_i(x)=K(x,x_i)
+		.. math:: h_i(\cdot)=K(\cdot,x_i)
+	* We note the inner products of these is found using the kernel.
 
-		* We note that if we had access to the basis functions, then the kernel of a transform is found by inner products of those.
+		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
+	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
 
-			.. math:: K(x_i,x_j)=\langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}
-		* Therefore, assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
+		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
+	* Since kernels are symmetric and positive definite, the eigenvalues 
 
-			.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
-		* Since kernels are symmetric and positive definite, the eigenvalues 
-	
-			* are positive, i.e. :math:`\gamma_i\ge 0`, and 
-			* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
-		* Any function in :math:`\mathcal{H}_K` can be expressed as a linear combination of the eigenfunctions
+		* are positive, i.e. :math:`\gamma_i\ge 0`, and 
+		* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
+	* Any function in :math:`\mathcal{H}_K` can be expressed as a linear combination of the eigenfunctions
 
-			.. math:: f(x)=\sum_{i=1}^\infty c_i\phi_i(x)
+		.. math:: h(x)=\sum_{i=1}^\infty c_i\phi_i(x)
 	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
 
+Kernel Ridge Regression
+==================================================================================
 .. note::
 	* We use the function norm as the regulariser as this captures how vigorously the function oscilate along the direction of each eigenfunctions.
 
