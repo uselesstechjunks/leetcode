@@ -170,9 +170,9 @@ A point mapping to a function
 
 		* It has an infinitely sharp peak at :math:`x` and dies off immediately everywhere else.
 		* [Side-node] This is a special case of `generalised functions <https://en.wikipedia.org/wiki/Generalized_function>`_.
-	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\lambda\downarrow 0} f_\lambda`, such as Gaussian bumps around the point :math:`x`.
+	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\gamma\downarrow 0} f_\gamma`, such as Gaussian bumps around the point :math:`x`.
 
-		.. math:: f_\lambda=\exp\left(-\frac{||x-x'||^2}{\lambda}\right)
+		.. math:: f_\gamma=\exp\left(-\frac{||x-x'||^2}{\gamma}\right)
 	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse to a bump with a finite width.
 	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
 
