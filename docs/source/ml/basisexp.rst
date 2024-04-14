@@ -117,7 +117,7 @@ Smoothing Spline
 .. note::
 	* The functions are restricted to be twice-differentiable equipped with norm (e.g. `Sobolev space <https://en.wikipedia.org/wiki/Sobolev_space>`_ :math:`W^{k=2,p=2}`).
 
-		* [Side note]: A function :math:`f\in W^{k,p}` and its (weak) derivatives up to order :math:`k` have a finite :math:`L_p` norm.
+		* Any :math:`f\in W^{k,p}` and its (`weak <https://en.wikipedia.org/wiki/Weak_derivative>`_) derivatives up to order :math:`k` have a finite :math:`L_p` norm.
 	* The objective function is defined as
 
 		.. math:: \hat{f}=\min_{f\in W^{k=2,p=2}}\left[\sum_{i=1}^N(y-f(x))^2+\lambda\int\left(f''(z)\right)^2\mathop{dz}\right]
