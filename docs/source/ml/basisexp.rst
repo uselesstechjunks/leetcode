@@ -177,7 +177,7 @@ A point mapping to a function
 	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
 
 .. note::
-	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K`, we define functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K` to define functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
 
 		.. math:: h_i(\cdot)=K(\cdot,x_i)
 	* We note the inner products of these is found using the kernel.
