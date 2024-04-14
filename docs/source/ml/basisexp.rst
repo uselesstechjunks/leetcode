@@ -177,13 +177,13 @@ A point mapping to a function
 	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
 
 .. note::
-	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K`, we define basis functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K`, we define functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
 
-		.. math:: h_i(x)=K(x,x_i)
-	* We note that the kernel is found by inner products of those.
+		.. math:: h_i(\cdot)=K(\cdot,x_i)
+	* We note the inner products of these is found using the kernel.
 
-		.. math:: K(x_i,x_j)=\langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}
-	* Therefore, assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
+		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
+	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
 	* Since kernels are symmetric and positive definite, the eigenvalues 
@@ -192,7 +192,7 @@ A point mapping to a function
 		* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
 	* Any function in :math:`\mathcal{H}_K` can be expressed as a linear combination of the eigenfunctions
 
-		.. math:: f(x)=\sum_{i=1}^\infty c_i\phi_i(x)
+		.. math:: h(x)=\sum_{i=1}^\infty c_i\phi_i(x)
 	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
 
 Kernel Ridge Regression
