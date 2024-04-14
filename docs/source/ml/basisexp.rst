@@ -164,19 +164,17 @@ Infinite Dimensional Expansion
 A point mapping to a function
 ==================================================================================
 .. tip::
-	* Note that this intuition is not mathematically rigorous [yet?].
-	* A different way to think about a point is to think of it as an impulse like `Dirac-delta function <https://en.wikipedia.org/wiki/Dirac_delta_function>`_ centred around it.
+	* A point :math:`x\in\mathbb{R}^d` can be thought of as an impulse like `Dirac-delta function <https://en.wikipedia.org/wiki/Dirac_delta_function>`_.
 
-		* A point :math:`x\in\mathbb{R}^d` can be associated with an impulse 
+		.. math:: \delta_x(t)=\begin{cases}+\infty & t=x \\ 0 & t\neq x\end{cases}
 
-			.. math:: \delta_x(t)=\begin{cases}+\infty & t=x \\ 0 & t\neq x\end{cases}
-		* This impulse has an infinitely sharp peak at :math:`x` and dies off immediately everywhere.
-		* [Side-node] This is a special case of `generaised functions <https://en.wikipedia.org/wiki/Generalized_function>`_
+		* It has an infinitely sharp peak at :math:`x` and dies off immediately everywhere else.
+		* [Side-node] This is a special case of `generalised functions <https://en.wikipedia.org/wiki/Generalized_function>`_.
 	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\lambda\downarrow 0} f_\lambda`, such as Gaussian bumps around the point :math:`x`.
 
 		.. math:: f_\lambda=\exp\left(-\frac{||x-x'||^2}{\lambda}\right)
 	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse to a bump with a finite width.
-	* This allows for some uncertainty about the exact location of the point with respect to others.
+	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
 
 .. note::
 	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K`, we define basis functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
