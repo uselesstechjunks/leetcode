@@ -248,6 +248,7 @@ Kernel Ridge Regression
 	* The regulariser term is defined as
 
 		.. math:: \lambda||f||_{\mathcal{H}_K}^2=\lambda\langle f,f\rangle_{\mathcal{H}_K}=\sum_{i=1}^N\sum_{j=1}^N K(x_i,x_j)\alpha_i\alpha_j=\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
-	* The minimization problem therefore reduces to a generalised ridge regression problem
+	* The minimization problem therefore becomes
 
 		.. math:: \hat{f}=\min_{\boldsymbol{\alpha}}L(\mathbf{y}, \mathbf{K}\boldsymbol{\alpha})+\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
+	* We note that for MSE loss, this reduces to a generalised ridge regression problem.
