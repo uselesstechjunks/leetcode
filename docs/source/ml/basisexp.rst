@@ -164,26 +164,33 @@ Infinite Dimensional Expansion
 A point mapping to a function
 ==================================================================================
 .. tip::
-	* A point :math:`x\in\mathbb{R}^d` can be thought of as an impulse like `Dirac-delta function <https://en.wikipedia.org/wiki/Dirac_delta_function>`_.
+	* We usually think of points on the number line or in a higher dimensional space (:math:`x\in\mathbb{R}^d`) as a discrete entity.
+	* Instead, a point can be thought of as an impulse like `Dirac-delta function <https://en.wikipedia.org/wiki/Dirac_delta_function>`_, which has infinitely high probability of being found at it's location.
 
 		.. math:: \delta_x(t)=\begin{cases}+\infty & t=x \\ 0 & t\neq x\end{cases}
 
-		* It has an infinitely sharp peak at :math:`x` and dies off immediately everywhere else.
-		* [Side-node] This is a special case of `generalised functions <https://en.wikipedia.org/wiki/Generalized_function>`_.
-	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\gamma\downarrow 0} f_\gamma`, such as Gaussian bumps around the point :math:`x`.
+		* It has an infinitely sharp peak at :math:`x` but that dies off immediately to :math:`0` everywhere else.
+		* [Side-node] This is a special case of `generalised functions <https://en.wikipedia.org/wiki/Generalized_function>`_ or distributions.
+	* We can think of this impulse as a limit of a sequence of functions, :math:`\lim_\limits{\gamma\downarrow 0} f_\gamma`, such as Gaussian bumps around the point :math:`x`.
 
 		.. math:: f_\gamma=\exp\left(-\frac{||x-x'||^2}{\gamma}\right)
 	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse limit to a bump with a non-zero width.
 	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
 
 .. note::
-	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K` to define functions, :math:`h_i`, for each point :math:`x_i` using a kernel, :math:`K`.
+	* For each point :math:`x_i\in\mathbf{X}`, we map it to a basis function :math:`h_i`.
+
+		* Note that functions are, essentially, infinite dimensional vectors.
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ to be the function class, such that every :math:`h_i` can be defined using a kernel, :math:`K`.
 
 		.. math:: h_i(\cdot)=K(\cdot,x_i)
-	* We note the inner products of these is found using the kernel.
+	* We note the kernel also is the tool for us to calculate the inner products (and, hence, similarity measure via a metric) of these basis functions with one another.
 
 		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
 	* The space of functions obtained by an arbitrary linear combinations of all such data points then becomes
+
+.. note::
+	* TODO: more exposition
 	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
