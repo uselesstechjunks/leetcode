@@ -187,7 +187,20 @@ A point mapping to a function
 	* We note the kernel also is the tool for us to calculate the inner products (and, hence, similarity measure via a metric) of these basis functions with one another.
 
 		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
-	* The space of functions obtained by an arbitrary linear combinations of all such data points then becomes
+	* We consider the function space spanned by linear combination of these basis functions as a candidate of our estimator.
+	* For intuitive understanding, here is an example:
+
+		* We have 1-dimensioanl data matrix :math:`\mathbf{X}=\begin{bmatrix}x_1=1.1 \\ x_2=1.5 \\ x_3=2.1\end{bmatrix}`.
+		* We define the map :math:`x_i\overset{\mathcal{H}_K}\mapsto h_i(\cdot)` using `Gaussian RBF kernel <https://en.wikipedia.org/wiki/Radial_basis_function_kernel>`_
+
+			.. math:: \mathbf{H}=\begin{bmatrix}h_1(x)=\exp(-\frac{||x-1.1||^2}{0.05}) \\ h_2(x)=\exp(-\frac{||x-1.5||^2}{0.05}) \\ h_3(x)=\exp(-\frac{||x-2.1||^2}{0.05})\end{bmatrix}
+		* One linear combination of these functions is shown here in yellow.
+
+			.. math:: f(x)=3h_1(x)+2h_2(x)-h_3(x)
+
+		.. image:: img/003prep.drawio.png
+  		:width: 600
+  		:alt: A linear combination of functions
 
 .. note::
 	* TODO: more exposition
