@@ -242,6 +242,12 @@ Kernel Ridge Regression
 
 		.. math:: \hat{f}=\min_{(c_k)_{k=1}^\infty}\left[\sum_{i=1}^N L(y,\left(\sum_{k=1}^\infty c_k\phi_k(x_i)\right))+\lambda \sum_{k=1}^\infty c_i^2/\gamma_i\right]
 	* On a face-value, it seems that we'd need to estimate an infinite number of parameters.
-	* [TODO: Proof?] However, the solution is finite dimensional
+	* [TODO: Proof?] However, the solution reduces to a finite dimensional one from a potentially uncountable one
 
-		.. math:: f(x)=\sum_{i=1}^N\alpha_iK(x,x_i)
+		.. math:: f(x)=\sum_{i=1}^N\alpha_iK(x,x_i)=\mathbf{K}\boldsymbol{\alpha}
+	* The regulariser term is defined as
+
+		.. math:: \lambda||f||_{\mathcal{H}_K}^2=\lambda\langle f,f\rangle_{\mathcal{H}_K}=\sum_{i=1}^N\sum_{j=1}^N K(x_i,x_j)\alpha_i\alpha_j=\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
+	* The minimization problem therefore reduces to a generalised ridge regression problem
+
+		.. math:: \hat{f}=\min_{\boldsymbol{\alpha}}L(\mathbf{y}, \mathbf{K}\boldsymbol{\alpha})+\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
