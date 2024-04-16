@@ -206,9 +206,9 @@ Reproducing Kernel Hilbert Space
 	  :alt: A linear combination of functions
 
 .. warning::
-	* Reproducing Property: Having an inner product of the function with the reproducing kernel around a point gives back the given function evaluated at that point.
+	* Reproducing Property: Having an inner product of the function :math:`f` with the reproducing kernel around a point :math:`x` gives back the given function evaluated at that point.
 
-		.. math:: \langle K(\cdot,x),f\rangle_{\mathcal{H}_K}=\langle K(\cdot,x),\sum_{i=1}^\infty \alpha_i K(\cdot,x)\rangle_{\mathcal{H}_K}=f(x)
+		.. math:: \langle K(\cdot,x),f\rangle_{\mathcal{H}_K}=\langle K(\cdot,x),\sum_{i\in\mathcal{I}} \alpha_i K(\cdot,x)\rangle_{\mathcal{H}_K}=f(x)
 	* `Riesz representation theorem <https://en.wikipedia.org/wiki/Riesz_representation_theorem>`_: For each :math:`x`, the above holds true only for a unique :math:`K(\cdot,x)`.
 
 Eigen-decomposition of Linear Space Spanned by Kernel Functions
