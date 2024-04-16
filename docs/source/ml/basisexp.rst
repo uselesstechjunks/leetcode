@@ -117,7 +117,7 @@ Smoothing Spline
 .. note::
 	* The functions are restricted to be twice-differentiable equipped with norm (e.g. `Sobolev space <https://en.wikipedia.org/wiki/Sobolev_space>`_ :math:`W^{k=2,p=2}`).
 
-		* [Side note]: A function :math:`f\in W^{k,p}` and its (weak) derivatives up to order :math:`k` have a finite :math:`L_p` norm.
+		* Any :math:`f\in W^{k,p}` and its (`weak <https://en.wikipedia.org/wiki/Weak_derivative>`_) derivatives up to order :math:`k` have a finite :math:`L_p` norm.
 	* The objective function is defined as
 
 		.. math:: \hat{f}=\min_{f\in W^{k=2,p=2}}\left[\sum_{i=1}^N(y-f(x))^2+\lambda\int\left(f''(z)\right)^2\mathop{dz}\right]
@@ -161,39 +161,71 @@ Infinite Dimensional Expansion
 	* :math:`J(f)` is a regulariser which penalises functions for being too complex (to avoid overfitting).
 	* :math:`\lambda` is the regulariser parameter which controls the trade-off between the bias and the variance.
 
-A point mapping to a function
+A Point Mapping to a Function
 ==================================================================================
 .. tip::
-	* A point :math:`x\in\mathbb{R}^d` can be thought of as an impulse like `Dirac-delta function <https://en.wikipedia.org/wiki/Dirac_delta_function>`_.
+	* We usually think of points on the number line or in a higher dimensional space (:math:`x\in\mathbb{R}^d`) as a discrete entity.
+	* Instead, a point can be thought of as an impulse like `Dirac-delta function <https://en.wikipedia.org/wiki/Dirac_delta_function>`_, which has infinitely high probability of being found at it's location.
 
 		.. math:: \delta_x(t)=\begin{cases}+\infty & t=x \\ 0 & t\neq x\end{cases}
 
-		* It has an infinitely sharp peak at :math:`x` and dies off immediately everywhere else.
-		* [Side-node] This is a special case of `generalised functions <https://en.wikipedia.org/wiki/Generalized_function>`_.
-	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\lambda\downarrow 0} f_\lambda`, such as Gaussian bumps around the point :math:`x`.
+		* It has an infinitely sharp peak at :math:`x` but that dies off immediately to :math:`0` everywhere else.
+		* [Side-node] This is a special case of `generalised functions <https://en.wikipedia.org/wiki/Generalized_function>`_ or distributions.
+	* We can think of this impulse as a limit of a sequence of functions, :math:`\lim_\limits{\gamma\downarrow 0} f_\gamma`, such as Gaussian bumps around the point :math:`x`.
 
-		.. math:: f_\lambda=\exp\left(-\frac{||x-x'||^2}{\lambda}\right)
-	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse to a bump with a finite width.
+		.. math:: f_\gamma=\exp\left(-\gamma||x-x'||^2\right)
+	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse limit to a bump with a non-zero width.
 	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
 
+Reproducing Kernel Hilbert Space
+----------------------------------------------------------------------------------
 .. note::
-	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K` to define functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
+	* For each point :math:`x_i\in\mathbf{X}`, we map it to a basis function :math:`h_i`.
+	* We note that functions are, essentially, infinite dimensional vectors.
+	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ to be the function class, so that every :math:`h_i` can be defined using a kernel, :math:`K`.
 
 		.. math:: h_i(\cdot)=K(\cdot,x_i)
-	* We note the inner products of these is found using the kernel.
+	* We note the kernel also is the tool for us to calculate the inner products (and, hence, similarity measure via a metric) of these basis functions with one another.
 
 		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
-	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
+	* We consider the function space spanned by linear combination of an infinitely many, possibly uncountable, potential basis functions as a candidate of our estimator.
+
+		.. math:: f(x)=\sum_{i\in\mathcal{I}}\alpha_i h_i(x)=\sum_{i\in\mathcal{I}}\alpha_i K(x,x_i)
+	* For intuitive understanding, here is an example:
+
+		* We have 1-dimensioanl data matrix :math:`\mathbf{X}=\begin{bmatrix}x_1=1.1 \\ x_2=1.5 \\ x_3=2.1\end{bmatrix}`.
+		* We define the map :math:`x_i\overset{\mathcal{H}_K}\mapsto h_i(\cdot)` using `Gaussian RBF kernel <https://en.wikipedia.org/wiki/Radial_basis_function_kernel>`_
+
+			.. math:: \mathbf{H}=\begin{bmatrix}h_1(x)=\exp(-\frac{||x-1.1||^2}{0.05}) \\ h_2(x)=\exp(-\frac{||x-1.5||^2}{0.05}) \\ h_3(x)=\exp(-\frac{||x-2.1||^2}{0.05})\end{bmatrix}
+		* One linear combination of these functions is shown here in yellow.
+
+			.. math:: f(x)=3h_1(x)+2h_2(x)-h_3(x)
+
+	.. image:: ../img/3.png
+	  :width: 600
+	  :alt: A linear combination of functions
+
+.. warning::
+	* Reproducing Property: Having an inner product of the function :math:`f` with the reproducing kernel around a point :math:`x` gives back the given function evaluated at that point.
+
+		.. math:: \langle K(\cdot,x),f\rangle_{\mathcal{H}_K}=\langle K(\cdot,x),\sum_{i\in\mathcal{I}} \alpha_i K(x_i,x)\rangle_{\mathcal{H}_K}=f(x)
+	* `Riesz representation theorem <https://en.wikipedia.org/wiki/Riesz_representation_theorem>`_: For each :math:`x`, the above holds true only for a unique :math:`K(\cdot,x)`.
+
+Eigen-decomposition of Linear Space Spanned by Kernel Functions
+----------------------------------------------------------------------------------
+.. note::
+	* From a potentially uncountable number of basis functions, eigen-decomposition reduces the basis functions to a countable case.
+	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel also be written in term of these
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
-	* Since kernels are symmetric and positive definite, the eigenvalues 
+	* Since kernels are **symmetric and positive definite**, the eigenvalues 
 
 		* are positive, i.e. :math:`\gamma_i\ge 0`, and 
 		* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
-	* Any function in :math:`\mathcal{H}_K` can be expressed as a linear combination of the eigenfunctions
+	* Any function :math:`h\in\mathcal{H}_K` can be expressed as a linear combination of the countable eigenfunctions
 
 		.. math:: h(x)=\sum_{i=1}^\infty c_i\phi_i(x)
-	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
 
 Kernel Ridge Regression
 ==================================================================================
@@ -210,6 +242,13 @@ Kernel Ridge Regression
 
 		.. math:: \hat{f}=\min_{(c_k)_{k=1}^\infty}\left[\sum_{i=1}^N L(y,\left(\sum_{k=1}^\infty c_k\phi_k(x_i)\right))+\lambda \sum_{k=1}^\infty c_i^2/\gamma_i\right]
 	* On a face-value, it seems that we'd need to estimate an infinite number of parameters.
-	* [TODO: Proof?] However, the solution is finite dimensional
+	* [TODO: Proof?] However, the solution reduces to a finite dimensional one from a potentially uncountable one
 
-		.. math:: f(x)=\sum_{i=1}^N\alpha_iK(x,x_i)
+		.. math:: f(x)=\sum_{i=1}^N\alpha_iK(x,x_i)=\mathbf{K}\boldsymbol{\alpha}
+	* The regulariser term is defined as
+
+		.. math:: \lambda||f||_{\mathcal{H}_K}^2=\lambda\langle f,f\rangle_{\mathcal{H}_K}=\sum_{i=1}^N\sum_{j=1}^N K(x_i,x_j)\alpha_i\alpha_j=\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
+	* The minimization problem therefore becomes
+
+		.. math:: \hat{f}=\min_{\boldsymbol{\alpha}}L(\mathbf{y}, \mathbf{K}\boldsymbol{\alpha})+\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
+	* We note that for MSE loss, this reduces to a generalised ridge regression problem.
