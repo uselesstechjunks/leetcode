@@ -214,14 +214,15 @@ Reproducing Kernel Hilbert Space
 Eigen-decomposition of Linear Space Spanned by Kernel Functions
 ----------------------------------------------------------------------------------
 .. note::
-	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel also be written as in terms of eigen-basis functions
+	* From a potentially uncountable number of basis functions, eigen-decomposition reduces the basis functions to a countable case.
+	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel also be written in term of these
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
 	* Since kernels are symmetric and positive definite, the eigenvalues 
 
 		* are positive, i.e. :math:`\gamma_i\ge 0`, and 
 		* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
-	* Any function in :math:`\mathcal{H}_K` can be expressed as a linear combination of the eigenfunctions
+	* Any function :math:`h\in\mathcal{H}_K` can be expressed as a linear combination of the countable eigenfunctions
 
 		.. math:: h(x)=\sum_{i=1}^\infty c_i\phi_i(x)
 	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
