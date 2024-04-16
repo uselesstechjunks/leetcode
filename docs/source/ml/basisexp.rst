@@ -198,7 +198,7 @@ A point mapping to a function
 
 			.. math:: f(x)=3h_1(x)+2h_2(x)-h_3(x)
 
-		.. image:: img/003prep.drawio.png
+		.. image:: ../img/003.png
   		:width: 600
   		:alt: A linear combination of functions
 
