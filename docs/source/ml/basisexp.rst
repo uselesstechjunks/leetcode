@@ -179,8 +179,7 @@ A point mapping to a function
 
 .. note::
 	* For each point :math:`x_i\in\mathbf{X}`, we map it to a basis function :math:`h_i`.
-
-		* Note that functions are, essentially, infinite dimensional vectors.
+	* We note that functions are, essentially, infinite dimensional vectors.
 	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ to be the function class, such that every :math:`h_i` can be defined using a kernel, :math:`K`.
 
 		.. math:: h_i(\cdot)=K(\cdot,x_i)
@@ -198,7 +197,7 @@ A point mapping to a function
 
 			.. math:: f(x)=3h_1(x)+2h_2(x)-h_3(x)
 
-	.. image:: ../img/003.png
+	.. image:: ../img/3.png
 	  :width: 600
 	  :alt: A linear combination of functions
 
