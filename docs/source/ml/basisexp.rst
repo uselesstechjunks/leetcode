@@ -188,9 +188,9 @@ Reproducing Kernel Hilbert Space
 	* We note the kernel also is the tool for us to calculate the inner products (and, hence, similarity measure via a metric) of these basis functions with one another.
 
 		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
-	* We consider the function space spanned by linear combination of an infinitely many potential basis functions as a candidate of our estimator.
+	* We consider the function space spanned by linear combination of an infinitely many, possibly uncountable, potential basis functions as a candidate of our estimator.
 
-		.. math:: f(x)=\sum_{i=1}^\infty \alpha_i h_i(x)=\sum_{i=1}^\infty \alpha_i K(x,x_i)
+		.. math:: f(x)=\sum_{i\in\mathcal{I}}\alpha_i h_i(x)=\sum_{i\in\mathcal{I}}\alpha_i K(x,x_i)
 	* For intuitive understanding, here is an example:
 
 		* We have 1-dimensioanl data matrix :math:`\mathbf{X}=\begin{bmatrix}x_1=1.1 \\ x_2=1.5 \\ x_3=2.1\end{bmatrix}`.
@@ -206,7 +206,7 @@ Reproducing Kernel Hilbert Space
 	  :alt: A linear combination of functions
 
 .. warning::
-	* Reproducing Property: Assuming that the basis functions are orthogonal, having an inner product of the function with it's linear expansion form gives back the single function evaluated at it's centre point.
+	* Reproducing Property: Having an inner product of the function with the reproducing kernel around a point gives back the given function evaluated at that point.
 
 		.. math:: \langle K(\cdot,x),f\rangle_{\mathcal{H}_K}=\langle K(\cdot,x),\sum_{i=1}^\infty \alpha_i K(\cdot,x)\rangle_{\mathcal{H}_K}=f(x)
 	* `Riesz representation theorem <https://en.wikipedia.org/wiki/Riesz_representation_theorem>`_: For each :math:`x`, the above holds true only for a unique :math:`K(\cdot,x)`.
