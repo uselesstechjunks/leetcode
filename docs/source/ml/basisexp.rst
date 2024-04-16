@@ -161,7 +161,7 @@ Infinite Dimensional Expansion
 	* :math:`J(f)` is a regulariser which penalises functions for being too complex (to avoid overfitting).
 	* :math:`\lambda` is the regulariser parameter which controls the trade-off between the bias and the variance.
 
-A point mapping to a function
+A Point Mapping to a Function
 ==================================================================================
 .. tip::
 	* We usually think of points on the number line or in a higher dimensional space (:math:`x\in\mathbb{R}^d`) as a discrete entity.
@@ -173,10 +173,12 @@ A point mapping to a function
 		* [Side-node] This is a special case of `generalised functions <https://en.wikipedia.org/wiki/Generalized_function>`_ or distributions.
 	* We can think of this impulse as a limit of a sequence of functions, :math:`\lim_\limits{\gamma\downarrow 0} f_\gamma`, such as Gaussian bumps around the point :math:`x`.
 
-		.. math:: f_\gamma=\exp\left(-\frac{||x-x'||^2}{\gamma}\right)
+		.. math:: f_\gamma=\exp\left(-\gamma||x-x'||^2\right)
 	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse limit to a bump with a non-zero width.
 	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
 
+Reproducing Kernel Hilbert Space
+----------------------------------------------------------------------------------
 .. note::
 	* For each point :math:`x_i\in\mathbf{X}`, we map it to a basis function :math:`h_i`.
 	* We note that functions are, essentially, infinite dimensional vectors.
@@ -186,7 +188,9 @@ A point mapping to a function
 	* We note the kernel also is the tool for us to calculate the inner products (and, hence, similarity measure via a metric) of these basis functions with one another.
 
 		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
-	* We consider the function space spanned by linear combination of these basis functions as a candidate of our estimator.
+	* We consider the function space spanned by linear combination of an infinitely many potential basis functions as a candidate of our estimator.
+
+		.. math:: f(x)=\sum_{i=1}^\infty \alpha_i h_i(x)=\sum_{i=1}^\infty \alpha_i K(x,x_i)
 	* For intuitive understanding, here is an example:
 
 		* We have 1-dimensioanl data matrix :math:`\mathbf{X}=\begin{bmatrix}x_1=1.1 \\ x_2=1.5 \\ x_3=2.1\end{bmatrix}`.
@@ -201,9 +205,16 @@ A point mapping to a function
 	  :width: 600
 	  :alt: A linear combination of functions
 
+.. warning::
+	* Reproducing Property: Assuming that the basis functions are orthogonal, having an inner product of the function with it's linear expansion form gives back the single function evaluated at it's centre point.
+
+		.. math:: \langle K(\cdot,x),f\rangle_{\mathcal{H}_K}=\langle K(\cdot,x),\sum_{i=1}^\infty \alpha_i K(\cdot,x)\rangle_{\mathcal{H}_K}=f(x)
+	* `Riesz representation theorem <https://en.wikipedia.org/wiki/Riesz_representation_theorem>`_: For each :math:`x`, the above holds true only for a unique :math:`K(\cdot,x)`.
+
+Eigen-decomposition of Linear Space Spanned by Kernel Functions
+----------------------------------------------------------------------------------
 .. note::
-	* TODO: more exposition
-	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
+	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel also be written as in terms of eigen-basis functions
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
 	* Since kernels are symmetric and positive definite, the eigenvalues 
