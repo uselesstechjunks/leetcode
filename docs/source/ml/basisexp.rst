@@ -180,7 +180,7 @@ A point mapping to a function
 .. note::
 	* For each point :math:`x_i\in\mathbf{X}`, we map it to a basis function :math:`h_i`.
 	* We note that functions are, essentially, infinite dimensional vectors.
-	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ to be the function class, such that every :math:`h_i` can be defined using a kernel, :math:`K`.
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ to be the function class, so that every :math:`h_i` can be defined using a kernel, :math:`K`.
 
 		.. math:: h_i(\cdot)=K(\cdot,x_i)
 	* We note the kernel also is the tool for us to calculate the inner products (and, hence, similarity measure via a metric) of these basis functions with one another.
