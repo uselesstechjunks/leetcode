@@ -208,7 +208,7 @@ Reproducing Kernel Hilbert Space
 .. warning::
 	* Reproducing Property: Having an inner product of the function :math:`f` with the reproducing kernel around a point :math:`x` gives back the given function evaluated at that point.
 
-		.. math:: \langle K(\cdot,x),f\rangle_{\mathcal{H}_K}=\langle K(\cdot,x),\sum_{i\in\mathcal{I}} \alpha_i K(x,x_i)\rangle_{\mathcal{H}_K}=f(x)
+		.. math:: \langle K(\cdot,x),f\rangle_{\mathcal{H}_K}=\langle K(\cdot,x),\sum_{i\in\mathcal{I}} \alpha_i K(x_i,x)\rangle_{\mathcal{H}_K}=f(x)
 	* `Riesz representation theorem <https://en.wikipedia.org/wiki/Riesz_representation_theorem>`_: For each :math:`x`, the above holds true only for a unique :math:`K(\cdot,x)`.
 
 Eigen-decomposition of Linear Space Spanned by Kernel Functions
@@ -218,7 +218,7 @@ Eigen-decomposition of Linear Space Spanned by Kernel Functions
 	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel also be written in term of these
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
-	* Since kernels are symmetric and positive definite, the eigenvalues 
+	* Since kernels are **symmetric and positive definite**, the eigenvalues 
 
 		* are positive, i.e. :math:`\gamma_i\ge 0`, and 
 		* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
