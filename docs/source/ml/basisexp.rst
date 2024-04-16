@@ -182,6 +182,7 @@ Reproducing Kernel Hilbert Space
 .. note::
 	* For each point :math:`x_i\in\mathbf{X}`, we map it to a basis function :math:`h_i`.
 	* We note that functions are, essentially, infinite dimensional vectors.
+	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
 	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ to be the function class, so that every :math:`h_i` can be defined using a kernel, :math:`K`.
 
 		.. math:: h_i(\cdot)=K(\cdot,x_i)
@@ -225,7 +226,6 @@ Eigen-decomposition of Linear Space Spanned by Kernel Functions
 	* Any function :math:`h\in\mathcal{H}_K` can be expressed as a linear combination of the countable eigenfunctions
 
 		.. math:: h(x)=\sum_{i=1}^\infty c_i\phi_i(x)
-	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
 
 Kernel Ridge Regression
 ==================================================================================
