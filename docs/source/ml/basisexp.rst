@@ -173,16 +173,17 @@ A point mapping to a function
 	* We can think of this impulse as a limit to a sequence of functions, :math:`\lim_\limits{\gamma\downarrow 0} f_\gamma`, such as Gaussian bumps around the point :math:`x`.
 
 		.. math:: f_\gamma=\exp\left(-\frac{||x-x'||^2}{\gamma}\right)
-	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse to a bump with a finite width.
+	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse limit to a bump with a non-zero width.
 	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
 
 .. note::
-	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K` to define functions :math:`h_i` for each point :math:`x_i` using a kernel :math:`K`
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_, :math:`\mathcal{H}_K` to define functions, :math:`h_i`, for each point :math:`x_i` using a kernel, :math:`K`.
 
 		.. math:: h_i(\cdot)=K(\cdot,x_i)
 	* We note the inner products of these is found using the kernel.
 
 		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
+	* The space of functions obtained by an arbitrary linear combinations of all such data points then becomes
 	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel can be written as
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
