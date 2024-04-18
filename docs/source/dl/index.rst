@@ -10,3 +10,4 @@ Deep Learning
 	rg
 	ntk
 	nlp
+	image
