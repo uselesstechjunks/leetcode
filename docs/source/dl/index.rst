@@ -11,3 +11,4 @@ Deep Learning
 	theory/ntk
 	nlp
 	image
+	cp
