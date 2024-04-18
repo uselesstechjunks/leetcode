@@ -6,8 +6,8 @@ Deep Learning
 	:maxdepth: 3
 
 	basics
-	perturb
-	rg
-	ntk
+	theory/perturb
+	theory/rg
+	theory/ntk
 	nlp
 	image
