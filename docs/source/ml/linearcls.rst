@@ -194,8 +194,15 @@ Comparison Between LDA and Logistic Regression
 **************************************************************************************
 Hyperplane Classifiers
 **************************************************************************************
+Here, instead of relying on a discriminator function, we directly model the separation boundary as a piece-wise hyperplane between classes.
+
 .. note::
-	* Here, instead of relying on a discriminator function, we directly model the separation boundary as a piece-wise hyperplane between classes.
+	* Easier to work with the case where :math:`\mathbf{x}\in\mathbb{R}^2`.
+	* For a hyperplane :math:`f(\mathbf(x))=\beta_0+\boldsymbol{\beta}^T\mathbf{x}`, we consider the affine set 
+
+		.. math:: L=\{\mathbf{x} | f(\mathbf{x}=0\}
+	* This set traces a line on the :math:`X-Y` plane.
+	* The co-efficient vector :math:`\boldsymbol{\beta}` is orthogonal to this line.
 
 Perceptron
 ======================================================================================
