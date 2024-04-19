@@ -207,7 +207,7 @@ Here, instead of relying on a discriminator function, we directly model the sepa
 Perceptron
 ======================================================================================
 
-Optimal Hyperplane Classifier
+Max-Margin Classifier
 ======================================================================================
 Separable Case
 --------------------------------------------------------------------------------------
