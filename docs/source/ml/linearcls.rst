@@ -197,12 +197,29 @@ Hyperplane Classifiers
 Here, instead of relying on a discriminator function, we directly model the separation boundary as a piece-wise hyperplane between classes.
 
 .. note::
-	* Easier to work with the case where :math:`\mathbf{x}\in\mathbb{R}^2`.
-	* For a hyperplane :math:`f(\mathbf(x))=\beta_0+\boldsymbol{\beta}^T\mathbf{x}`, we consider the affine set 
+	* For a hyperplane :math:`f(\mathbf{x})=\beta_0+\boldsymbol{\beta}^T\mathbf{x}`, we consider the affine set 
 
-		.. math:: L=\{\mathbf{x} | f(\mathbf{x}=0\}
-	* This set traces a line on the :math:`X-Y` plane.
+		.. math:: L=\{\mathbf{x}\mathop{|}f(\mathbf{x})=0\}
+	* If :math:`\mathbf{x}\in\mathbb{R}^2`, this set traces a line on the :math:`X-Y` plane.
+
+.. warning::
 	* The co-efficient vector :math:`\boldsymbol{\beta}` is orthogonal to this line.
+
+		* Proof: If :math:`\mathbf{x_1}` and :math:`\mathbf{x_2}` are two point in :math:`L`, then the vector joining the two is given by
+
+			.. math:: \Delta\mathbf{x}=\mathbf{x_2}-\mathbf{x_1}
+		* Taking dot product with the co-efficient vector
+
+			.. math:: \boldsymbol{\beta}^T\Delta\mathbf{x}=\boldsymbol{\beta}^T(\mathbf{x_2}-\mathbf{x_1})=-\beta_0+\beta_0=0
+		* The normalised vector is written as :math:`\boldsymbol{\beta}^*=\frac{1}{||\boldsymbol{\beta}||}\boldsymbol{\beta}`.
+	* The distance of the intersect point from origin along the co-efficient vector is the intercept.
+
+		* Proof: We can take any point on :math:`L` and project onto the co-efficient vector to find the distance, which evaluates to :math:`-\beta_0`
+	* The function value at any point :math:`X-Y` plane is proportional to the signed distance of that point from the set `L`
+
+		* Proof: We can take any point :math:`\mathbf{x}'\in\mathbb{R}^2` and any point in :math:`L`, :math:`\mathbf{x}_0`. The signed distance of :math:`\mathbf{x}'` from :math:`L` is given by
+
+			.. math:: \delta(\mathbf{x}',L)=\boldsymbol{\beta}^*(\mathbf{x}'-\mathbf{x_0})=\frac{1}{||\boldsymbol{\beta}||}(\boldsymbol{\beta}^T\mathbf{x}'-\boldsymbol{\beta}^T\mathbf{x}_0)=\frac{1}{||\boldsymbol{\beta}||}(\boldsymbol{\beta}^T\mathbf{x}'+\beta_0)=\frac{1}{||f'||}f(\mathbf{x}')
 
 Perceptron
 ======================================================================================
