@@ -202,6 +202,10 @@ Here, instead of relying on a discriminator function, we directly model the sepa
 		.. math:: L=\{\mathbf{x}\mathop{|}f(\mathbf{x})=0\}
 	* If :math:`\mathbf{x}\in\mathbb{R}^2`, this set traces a line on the :math:`X-Y` plane.
 
+	.. image:: ../img/4.png
+	  :width: 600
+	  :alt: Understanding Hyperplanes
+
 .. warning::
 	* The co-efficient vector :math:`\boldsymbol{\beta}` is orthogonal to this line.
 
