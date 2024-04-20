@@ -197,3 +197,5 @@ Constrained Optimisation
 .. note::
 	* We're interested in finding the minimum :math:`\min_{\mathbf{x}\in S\subseteq \mathbb{R}^d}f(\mathbf{x})`.
 
+.. note::
+	`Convex Optimization Playlist by Visully Explained <https://www.youtube.com/playlist?list=PLqwozWPBo-FuPu4d9pFOobsCF1vDGdY_I>`_
