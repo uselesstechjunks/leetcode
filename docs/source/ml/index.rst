@@ -9,3 +9,4 @@ Statistical Machine Learning
    linearreg
    linearcls
    basisexp
+   qb
