@@ -252,3 +252,6 @@ Kernel Ridge Regression
 
 		.. math:: \hat{f}=\min_{\boldsymbol{\alpha}}L(\mathbf{y}, \mathbf{K}\boldsymbol{\alpha})+\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
 	* We note that for MSE loss, this reduces to a generalised ridge regression problem.
+
+Kernel Support Vector Machine
+==================================================================================

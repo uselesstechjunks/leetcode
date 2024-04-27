@@ -6,7 +6,9 @@ Deep Learning
 	:maxdepth: 3
 
 	basics
-	perturb
-	rg
-	ntk
-	transformer
+	theory/perturb
+	theory/rg
+	theory/ntk
+	nlp
+	image
+	cp
