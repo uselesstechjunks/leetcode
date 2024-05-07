@@ -2,7 +2,7 @@
 Advanced Topics
 #####################################################################################
 
-note::
+.. note::
 	* Generative Adversarial Network
 	* Normalising Flow
 	* Autoencoders
