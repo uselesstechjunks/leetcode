@@ -3,8 +3,10 @@ Gradient Descent
 ###################################################################################
 
 .. note::
+	* Taylor's series
 	* Local linear approximation information captured by gradient.
 	* Local quadratic approximation information captured by Hessian.
+	* First order approximation of the gradient near a point
 
 ***********************************************************************************
 Nature of Stationary Point
