@@ -12,4 +12,4 @@ Deep Learning
 	nlp
 	image
 	cp
-	advanced/indes
+	advanced/index
