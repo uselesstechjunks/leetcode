@@ -3,7 +3,7 @@ Deep Learning
 #######################################################################
 
 .. toctree::
-	:maxdepth: 3
+	:maxdepth: 1
 
 	basics
 	theory/index
