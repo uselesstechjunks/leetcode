@@ -6,6 +6,6 @@ Deep Learning
 	:maxdepth: 1
 
 	basics
-	theory/index
 	application/index
 	advanced/index
+	theory/index
