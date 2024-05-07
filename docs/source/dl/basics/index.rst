@@ -6,5 +6,5 @@ Fundamentals of Deep Learning
 	:maxdepth: 3
 
 	gd
-  backprop
-  reg
+	backprop
+	reg
