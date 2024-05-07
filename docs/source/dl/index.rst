@@ -9,7 +9,5 @@ Deep Learning
 	theory/perturb
 	theory/rg
 	theory/ntk
-	nlp
-	image
-	cp
+	application/index
 	advanced/index
