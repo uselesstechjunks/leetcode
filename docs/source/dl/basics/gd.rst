@@ -13,6 +13,13 @@ Nature of Stationary Point
 	* Understanding the nature of local stationary point (maxima/minima/saddle point) with the help of Hessian.
 
 ***********************************************************************************
+Approximating Gradient
+***********************************************************************************
+.. note::
+	* Stochastic Gradient Descent
+	* Mini-batch Gradient Descent
+
+***********************************************************************************
 Learning-Rate Schedule
 ***********************************************************************************
 .. note::
