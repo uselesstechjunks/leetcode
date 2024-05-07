@@ -6,8 +6,6 @@ Deep Learning
 	:maxdepth: 3
 
 	basics
-	theory/perturb
-	theory/rg
-	theory/ntk
+	theory/index
 	application/index
 	advanced/index
