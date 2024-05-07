@@ -31,17 +31,26 @@ Mini-batch Gradient Descent
 Convergence
 ***********************************************************************************
 .. warning::
-	* With fixed learning rate - takes infinitely many steps to reach the minimum
+	* With fixed learning rate, convergence is not guaranteed.
+
+		* Learning-Rate should be less than (TODO: derive) a function of the condition number to ensure convergent behaviour.
+		* Assuming that the LR is set accordingly, it takes infinitely many steps to reach the minimum.
+		* Need to set the threshold somewhere.
 	* TODO: proof
 
 Learning-Rate Schedule
 ===================================================================================
+.. warning::
+	Key idea: Larger LR at the beginning, smaller towards the end.
+
 .. note::
-	Larger LR at the beginning, smaller towards the end.
+	* Linear decay
+	* Exponential decay
+	* Power-law decay
 
 Faster Covergence with Momentum
 ===================================================================================
-.. note::
+.. warning::
 	Carry on a little bit extra along the previous direction before stopping and changing direction again.
 
 Normal Momentum
@@ -51,15 +60,23 @@ Nesterov Momentum
 
 Adaptive Learning Rate
 ===================================================================================
-.. note::
-	Allow different LR along different Eigen-direction (essentially simulating Newton's Method)
+.. warning::
+	Allow different LR along different Eigen-direction (making up for Newton's Method without having to compute Hessian)
 
 AdaGrad
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+	Keep a running weighted average of the gradient magnitudes to set up the LR
+
 RMSProp
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+	Keep more importance to recently computed gradients.
+
 Adam
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+	RMSProp with momentum
 
 ***********************************************************************************
 Managing Numerical Issues with Gradients
