@@ -12,37 +12,59 @@ Nature of Stationary Point
 .. note::
 	* Understanding the nature of local stationary point (maxima/minima/saddle point) with the help of Hessian.
 
+.. warning::
+	Largest eigenvalue = direction of slowest descent
+
 ***********************************************************************************
 Approximating Gradient
 ***********************************************************************************
-.. note::
-	* Stochastic Gradient Descent
-	* Mini-batch Gradient Descent
+Stochastic Gradient Descent
+===================================================================================
+Mini-batch Gradient Descent
+===================================================================================
 
 ***********************************************************************************
 Learning-Rate Schedule
 ***********************************************************************************
-.. note::
+.. warning::
 	* With fixed learning rate - takes infinitely many steps to reach the minimum
+	* TODO: proof
+
+.. note::
+	Larger LR at the beginning, smaller towards the end.
 
 ***********************************************************************************
-Momentum
+Faster Covergence with Momentum
 ***********************************************************************************
 .. note::
-	* Normal Momentum
-	* Nesterov Momentum
+	Carry on a little bit extra along the previous direction before stopping and changing direction again.
+
+Normal Momentum
+===================================================================================
+Nesterov Momentum
+===================================================================================
 
 ***********************************************************************************
 Adaptive Learning Rate
 ***********************************************************************************
 .. note::
-	* RMSProp
-	* Adam
+	Allow different LR along different Eigen-direction (essentially simulating Newton's Method)
+
+AdaGrad
+===================================================================================
+RMSProp
+===================================================================================
+Adam
+===================================================================================
 
 ***********************************************************************************
 Managing Vanishing/Exploding Gradients
 ***********************************************************************************
-.. note::
-	* Input data normalisation
-	* Weight normalisation: Batch Normalisation
-	* Weight normalisation: Layer Normalisation
+Input normalisation
+===================================================================================
+Weight normalisation
+===================================================================================
+Batch Normalisation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Layer Normalisation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
