@@ -12,3 +12,4 @@ Deep Learning
 	nlp
 	image
 	cp
+	advanced/indes
