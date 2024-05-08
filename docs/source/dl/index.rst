@@ -3,12 +3,9 @@ Deep Learning
 #######################################################################
 
 .. toctree::
-	:maxdepth: 3
+	:maxdepth: 1
 
-	basics
-	theory/perturb
-	theory/rg
-	theory/ntk
-	nlp
-	image
-	cp
+	basics/index
+	application/index
+	advanced/index
+	theory/index

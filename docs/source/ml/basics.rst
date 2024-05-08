@@ -2,6 +2,26 @@
 Fundamentals
 ##################################################################################
 
+Statistical machine learning deals with the problem of prediction by using existing data to form a model. There are two distinct aspects of such a task
+
+.. note::
+	* Inference:
+
+		* Since the model space can be arbitrarily complex, we assume some structure to the model.
+		* The model can be a simplistic mathematical model which predicts a deterministic outcome given an unknown input.
+		* The model can also be a probabilistic model which aims at learning the joint or the conditional distribution.
+		* The task of inference (learning) is to use data to come up with an optimal model through some meaning of optimality.
+	* Prediction:
+
+		* Once we have the model, the task of prediction is simplified if our model is a deterministic one.
+		* When our model is probabilistic, then we must instantiate (draw a sample) the outcome to a fixed value given an unknown input.
+		* Statistical decision theory deals with the prediction problem which has it's own notion of optimality, usually defined with the help of a loss function.
+
+**********************************************************************************
+Statistical Inference
+**********************************************************************************
+This is defined separately for regression and classification problem.
+
 **********************************************************************************
 Statistical Decision Theory
 **********************************************************************************
