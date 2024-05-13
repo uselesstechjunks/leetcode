@@ -41,7 +41,7 @@ Probabilistic Classifiers
 .. warning::
 	* We note that in theory we can just create a table for the conditional pmf enumerating all possible probabilities
 
-		.. math: p_{G|X}(k|x)=\mathbb{P}(G=k|X=x)=\text{Multinoulli}(p_1(x),\cdots,p_K(x))
+		.. math:: p_{G|X}(k|x)=\mathbb{P}(G=k|X=x)=\text{Multinoulli}(p_1(x),\cdots,p_K(x))
 
 	  and use MLE to estimate the parameters from data.
 	* However, doing so would require estimating :math:`K-1` parameters each Multinoulli distribution separately for every single value that :math:`X` can take.
