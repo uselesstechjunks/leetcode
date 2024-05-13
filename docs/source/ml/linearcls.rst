@@ -10,7 +10,7 @@ Linear Methods for Classification
 	* We can extend linear classifier to create non-linear decision boundary in the original input space by using transforms, such as basis expansion.
 
 **************************************************************************************
-Probabilistic Classifiers
+Discriminant Classifiers
 **************************************************************************************
 .. note::
 	* We can define a **discriminant function** :math:`\delta_k(x)` for each class :math:`k`.
@@ -23,6 +23,11 @@ Probabilistic Classifiers
 		* The decision boundary between :math:`k=1` and :math:`k=K` is given by the surface where
 
 			.. math:: h(\delta_1(x))-h(\delta_K(x))=0
+
+**************************************************************************************
+Probabilistic Classifiers
+**************************************************************************************
+.. note::
 	* For probabilistic classifiers, the discriminant function is usually defined as the posterior probability.
 
 		.. math:: \delta_k(x)=\mathbb{P}(G=k|X=x)
@@ -33,6 +38,68 @@ Probabilistic Classifiers
 		* At the decision boundary, the posterior probabilities are equal.
 
 			.. math:: \log\delta_1(x)-\log\delta_K(x)=0
+
+Discriminative Models
+======================================================================================
+.. note::
+	* Here, instead of invoking Bayes theorem, we can directly focus on modeling the logit as a linear function of :math:`x`.
+	* For each class :math:`k=1,2,\cdots,K-1`, we can define the logits in terms of a set of linear equations
+
+		.. math:: \log\frac{\mathbb{P}(G=k|X=x)}{\mathbb{P}(G=K|X=x)}=\beta_{0,k}+\beta_{1:,k}^Tx
+
+		* Here, each :math:`\beta_{0,k}\in\mathbb{R}` is the bias (intercept) term and :math:`\beta_{1:,k}\in\mathbb{R}^d` is the weight vector.
+		* We can use the notation :math:`\beta_k=(\beta_{0,k}, \beta_{1:,k})^T\in\mathbb{R}^{d+1}`.
+	* This can be achieved if we define the density as the softmax, i.e. for :math:`k=1,2,\cdots,K-1`
+
+		.. math:: \mathbb{P}(G=k|X=x)=\frac{\exp(\beta_{0,k}+\beta_{1:,k}^Tx)}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
+	* The final probability can just be defined in terms of others
+
+		.. math:: \mathbb{P}(G=K|X=x)=\frac{1}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
+	* This formulation too defines a multinoulli probability distribution for the output variable once we observe :math:`x`
+
+		.. math:: G\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)
+	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be parameterised in terms of
+
+		.. math:: p_k=p_G(k|x;\theta)=\mathbb{P}(G=k|X=x)
+
+Estimation
+--------------------------------------------------------------------------------------
+.. warning::
+	* For discriminative models, we usually consider the conditional likelihood
+
+		.. math:: \mathbb{P}(G_1=g_i,\cdots,G_N=g_N|X_1=x_1,\cdots,X_N=x_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i|X=x_i)=\prod_{i=1}^{N}p_G(g_i|x_i;\theta)
+	* We use MLE to estimate the parameters :math:`\theta`.
+
+Prediction
+--------------------------------------------------------------------------------------
+.. tip::
+	.. math:: \hat{g}=\underset{k}{\arg\max}\left(\hat{p}_k\right) 
+
+Logistic Regression
+--------------------------------------------------------------------------------------
+.. note::
+	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p_x(\beta))` with :math:`p_G(1|x;\theta)=p_x(\beta)` and :math:`p_G(2|x;\theta)=1-p_x(\beta)` where 
+
+		* :math:`\beta=(\beta_{0,1},\beta_{1:,1})^T` and
+		* :math:`p_x(\beta)=\frac{\exp(\beta^Tx)}{1+\exp(\beta^Tx)}` is the **sigmoid function**.
+	* We introduce a dummy output variable :math:`y` such that
+
+		* :math:`y_i=1\iff g_i=1`
+		* :math:`y_i=0\iff g_i=2`
+	* The log likelihood in this case can be written as
+
+		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_{x_i}(\beta))+(1-y_i)\log(1-p_{x_i}(\beta))=f(\beta)
+	* This is the Binary Cross Entropy (BCE) loss.
+
+.. tip::
+	* To estimate, we need to maximise the MLE.
+
+		.. math:: \frac{\partial f}{\partial \beta}=\frac{\partial}{\partial \beta}\left(\sum_{i=1}^{N}y_i\log(\frac{\exp(\beta^Tx_i)}{1+\exp(\beta^Tx_i)})+(1-y_i)\log(\frac{1}{1+\exp(\beta^Tx_i)})\right)=\sum_{i=1}^N x_i(y_i-p_{x_i}(\beta))
+	* This can be rewritten in terms of matrix equations as :math:`\mathbf{X}^T(\mathbf{y}-\mathbf{p})`.
+	* We can perform gradient descent, or even Newton's method which involves computing the second derivative
+
+		.. math:: \frac{\partial^2 f}{\mathop{\partial\beta}\mathop{\partial\beta^T}}=-\sum_{i=1}^N x_ix_i^Tp_{x_i}(\beta)(y_i-p_{x_i}(\beta))=-\mathbf{X}^T\mathbf{W}\mathbf{X}
+	* Here :math:`\mathbf{W}` is the diagonal matrix with entries of :math:`p_{x_i}(\beta)(y_i-p_{x_i}(\beta))`.
 
 Generative Models
 ======================================================================================
@@ -48,10 +115,8 @@ Generative Models
 	* We note that since we're interested in the arg max, we won't be needing to compute the normalisation constant in the denominator as that's the same for all classes.
 	* If we assume that the in-class data density is Gaussian, then we have LDA and QDA classifiers.
 
-Inference
---------------------------------------------------------------------------------------
 Estimation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------------------------
 .. warning::
 	* For generative models, we usually consider the joint likelihood
 
@@ -62,7 +127,7 @@ Estimation
 	* Otherwise. we resort to non-parametric density estimation methods to estimate :math:`\hat{f}_k(x)`.
 
 Prediction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------------------------
 .. tip::
 	.. math:: \hat{g}=\underset{k}{\arg\max}\left(\hat{\pi}_k\times \hat{f}_k(x)\right) 
 
@@ -116,70 +181,6 @@ Regularised Discriminator Analysis
 
 		.. math:: \hat{\boldsymbol{\Sigma}}(\gamma)=\gamma\hat{\boldsymbol{\Sigma}}+(1-\gamma)\hat{\sigma}^2\mathbf{I}
 	* Both these versions form a regularised version of the QDA with :math:`\alpha` and :math:`\gamma` as hyperparameters.
-
-Discriminative Models
-======================================================================================
-.. note::
-	* Here, instead of invoking Bayes theorem, we can directly focus on modeling the logit as a linear function of :math:`x`.
-	* For each class :math:`k=1,2,\cdots,K-1`, we can define the logits in terms of a set of linear equations
-
-		.. math:: \log\frac{\mathbb{P}(G=k|X=x)}{\mathbb{P}(G=K|X=x)}=\beta_{0,k}+\beta_{1:,k}^Tx
-
-		* Here, each :math:`\beta_{0,k}\in\mathbb{R}` is the bias (intercept) term and :math:`\beta_{1:,k}\in\mathbb{R}^d` is the weight vector.
-		* We can use the notation :math:`\beta_k=(\beta_{0,k}, \beta_{1:,k})^T\in\mathbb{R}^{d+1}`.
-	* This can be achieved if we define the density as the softmax, i.e. for :math:`k=1,2,\cdots,K-1`
-
-		.. math:: \mathbb{P}(G=k|X=x)=\frac{\exp(\beta_{0,k}+\beta_{1:,k}^Tx)}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
-	* The final probability can just be defined in terms of others
-
-		.. math:: \mathbb{P}(G=K|X=x)=\frac{1}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
-	* This formulation too defines a multinoulli probability distribution for the output variable once we observe :math:`x`
-
-		.. math:: G\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)
-	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be parameterised in terms of
-
-		.. math:: p_k=p_G(k|x;\theta)=\mathbb{P}(G=k|X=x)
-
-Inference
---------------------------------------------------------------------------------------
-Estimation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. warning::
-	* For discriminative models, we usually consider the conditional likelihood
-
-		.. math:: \mathbb{P}(G_1=g_i,\cdots,G_N=g_N|X_1=x_1,\cdots,X_N=x_N)=\prod_{i=1}^{N}\mathbb{P}(G_i=g_i|X=x_i)=\prod_{i=1}^{N}p_G(g_i|x_i;\theta)
-	* We use MLE to estimate the parameters :math:`\theta`.
-
-Prediction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. tip::
-	.. math:: \hat{g}=\underset{k}{\arg\max}\left(\hat{p}_k\right) 
-
-Logistic Regression
---------------------------------------------------------------------------------------
-.. note::
-	* For :math:`|\mathcal{G}|=2` (binary classification), :math:`G\sim\text{Bernoulli}(p_x(\beta))` with :math:`p_G(1|x;\theta)=p_x(\beta)` and :math:`p_G(2|x;\theta)=1-p_x(\beta)` where 
-
-		* :math:`\beta=(\beta_{0,1},\beta_{1:,1})^T` and
-		* :math:`p_x(\beta)=\frac{\exp(\beta^Tx)}{1+\exp(\beta^Tx)}` is the **sigmoid function**.
-	* We introduce a dummy output variable :math:`y` such that
-
-		* :math:`y_i=1\iff g_i=1`
-		* :math:`y_i=0\iff g_i=2`
-	* The log likelihood in this case can be written as
-
-		.. math:: l(\theta)=\sum_{i=1}^{N}\log(p_G(g_i|x_i;\theta))=\sum_{i=1}^{N}y_i\log(p_{x_i}(\beta))+(1-y_i)\log(1-p_{x_i}(\beta))=f(\beta)
-	* This is the Binary Cross Entropy (BCE) loss.
-
-.. tip::
-	* To estimate, we need to maximise the MLE.
-
-		.. math:: \frac{\partial f}{\partial \beta}=\frac{\partial}{\partial \beta}\left(\sum_{i=1}^{N}y_i\log(\frac{\exp(\beta^Tx_i)}{1+\exp(\beta^Tx_i)})+(1-y_i)\log(\frac{1}{1+\exp(\beta^Tx_i)})\right)=\sum_{i=1}^N x_i(y_i-p_{x_i}(\beta))
-	* This can be rewritten in terms of matrix equations as :math:`\mathbf{X}^T(\mathbf{y}-\mathbf{p})`.
-	* We can perform gradient descent, or even Newton's method which involves computing the second derivative
-
-		.. math:: \frac{\partial^2 f}{\mathop{\partial\beta}\mathop{\partial\beta^T}}=-\sum_{i=1}^N x_ix_i^Tp_{x_i}(\beta)(y_i-p_{x_i}(\beta))=-\mathbf{X}^T\mathbf{W}\mathbf{X}
-	* Here :math:`\mathbf{W}` is the diagonal matrix with entries of :math:`p_{x_i}(\beta)(y_i-p_{x_i}(\beta))`.
 
 Comparison Between LDA and Logistic Regression
 ======================================================================================
