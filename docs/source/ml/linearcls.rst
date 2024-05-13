@@ -84,12 +84,11 @@ Linear Discriminative Models
 		.. math:: \mathbb{P}(G=k|X=x)=\frac{\exp(\beta_k^Tx)}{\sum_{j=1}^{K-1}\exp(\beta_j^Tx)}
 
 .. note::
-	* This formulation defines a multinoulli for the output variable once we observe :math:`x`
+	* This formulation defines a multinoulli for the output variable once we observe :math:`x`.
+	* We use the notation where :math:`\boldsymbol{\theta}=(\beta_0,\cdots,\beta_{K-1})` represents the param vector.
+	* Thus, the posterior density can be expressed as
 
-		.. math:: G\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)
-	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be parameterised in terms of
-
-		.. math:: p_k=p_G(k|x;\theta)=\mathbb{P}(G=k|X=x)
+		.. math:: p_k(x)=p_{G|X}(k|x)\approx f(\boldsymbol{\theta},x)=\mathrm{softmax}(\beta_k^Tx)
 
 Estimation
 --------------------------------------------------------------------------------------
