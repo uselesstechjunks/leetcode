@@ -41,7 +41,7 @@ Probabilistic Classifiers
 .. warning::
 	* We note that in theory we can just create a table for the conditional pmf enumerating all possible probabilities
 
-		.. math:: p_{G|X}(k|x)=\mathbb{P}(G=k|X=x)=\text{Multinoulli}(p_1(x),\cdots,p_K(x))
+		.. math:: p_{G|X}(k|x)=\mathbb{P}(G=k|X=x)=\mathrm{Multinoulli}(p_1(x),\cdots,p_K(x))
 
 	  and use MLE to estimate the parameters from data.
 	* However, doing so would require estimating :math:`K-1` parameters each Multinoulli distribution separately for every single value that :math:`X` can take.
@@ -55,7 +55,7 @@ Discriminative Models
 	* Here, we confine ourselves to a smaller subspace of possible probabilities which can be specified with a manageable number of parameters.
 
 		.. math:: p_{G|X}(k|x)\approx f(\beta_k,x)
-	* For binary classification, the posterior can be defined with :math:`\text{Ber}(p)` such that
+	* For binary classification, the posterior can be defined with :math:`\mathrm{Ber}(p)` such that
 
 		.. math:: \mathbb{P}(G=y|X=x)=f(\beta,x)^y(1-f(\beta,x))^{1-y}
 
@@ -65,17 +65,26 @@ Linear Discriminative Models
 	* Here, we model the logit as a linear function of :math:`x`.
 	* For each class :math:`k=1,2,\cdots,K-1`, we can define the logits in terms of a set of linear equations
 
-		.. math:: \log\frac{\mathbb{P}(G=k|X=x)}{\mathbb{P}(G=K|X=x)}=\beta_{0,k}+\beta_{1:,k}^Tx
+		.. math:: \log\frac{\mathbb{P}(G=k|X=x)}{\mathbb{P}(G=K|X=x)}=\beta_{k,0}+\beta_{k,1:}^Tx
 
-		* Here, each :math:`\beta_{0,k}\in\mathbb{R}` is the bias (intercept) term and :math:`\beta_{1:,k}\in\mathbb{R}^d` is the weight vector.
-		* We can use the notation :math:`\beta_k=(\beta_{0,k}, \beta_{1:,k})^T\in\mathbb{R}^{d+1}`.
-	* This can be achieved if we define the density as the softmax, i.e. for :math:`k=1,2,\cdots,K-1`
+		* Here, each :math:`\beta_{k,0}\in\mathbb{R}` is the bias (intercept) term and :math:`\beta_{k,1:}\in\mathbb{R}^d` is the weight vector.
+		* We can use the notation :math:`\beta_k=\text{concat}(\beta_{0,k}, \beta_{1:,k})^T\in\mathbb{R}^{d+1}`.
+	* This can be achieved if we define the density as the softmax
 
-		.. math:: \mathbb{P}(G=k|X=x)=\frac{\exp(\beta_{0,k}+\beta_{1:,k}^Tx)}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
-	* The final probability can just be defined in terms of others
+		* For :math:`k=1,2,\cdots,K-1`
 
-		.. math:: \mathbb{P}(G=K|X=x)=\frac{1}{1+\sum_{j=1}^{K-1}\exp(\beta_{0,j}+\beta_{1:,j}^Tx)}
-	* This formulation too defines a multinoulli probability distribution for the output variable once we observe :math:`x`
+			.. math:: \mathbb{P}(G=k|X=x)=\frac{\exp(\beta_k^Tx)}{1+\sum_{j=1}^{K-1}\exp(\beta_j^Tx)}
+		* The final probability can just be defined in terms of others
+
+			.. math:: \mathbb{P}(G=K|X=x)=\frac{1}{1+\sum_{j=1}^{K-1}\exp(\beta_j^Tx)}
+
+.. tip::
+	* For the sake of simplicity, we can simply use :math:`K` parameters instead of :math:`K-1` and use
+
+		.. math:: \mathbb{P}(G=k|X=x)=\frac{\exp(\beta_k^Tx)}{\sum_{j=1}^{K-1}\exp(\beta_j^Tx)}
+
+.. note::
+	* This formulation defines a multinoulli for the output variable once we observe :math:`x`
 
 		.. math:: G\sim\mathrm{Multinoulli}(p_1,\cdots,p_k)
 	* If we use the notation where :math:`\theta=(\beta_0,\cdots,\beta_{K-1})` represents the param vector, then this multinoulli density can be parameterised in terms of
