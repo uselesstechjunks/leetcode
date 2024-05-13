@@ -54,7 +54,7 @@ Discriminative Models
 .. note::
 	* Here, we confine ourselves to a smaller subspace of possible probabilities which can be specified with a manageable number of parameters.
 
-		.. math:: p_{G|X}(k|x)\approx f(\beta,x)
+		.. math:: p_{G|X}(k|x)\approx f(\beta_k,x)
 	* As an example, for binary classification problem, the posterior can be defined as :math:`\text{Ber}(p=f(\beta,x))` such that
 
 		.. math:: \mathbb{P}(G=y|X=x)=f(\beta,x)^y(1-f(\beta,x))^{1-y}
