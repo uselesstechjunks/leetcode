@@ -24,9 +24,8 @@ Discriminant Classifiers
 
 			.. math:: h(\delta_1(x))-h(\delta_K(x))=0
 
-**************************************************************************************
 Probabilistic Classifiers
-**************************************************************************************
+=======================================================================================
 .. note::
 	* For probabilistic classifiers, the discriminant function is usually defined as the posterior probability.
 
@@ -39,10 +38,31 @@ Probabilistic Classifiers
 
 			.. math:: \log\delta_1(x)-\log\delta_K(x)=0
 
+.. warning::
+	* We note that in theory we can just create a table for the conditional pmf enumerating all possible probabilities
+
+		.. math: p_{G|X}(k|x)=\mathbb{P}(G=k|X=x)=\text{Multinoulli}(p_1(x),\cdots,p_K(x))
+
+	  and use MLE to estimate the parameters from data.
+	* However, doing so would require estimating :math:`K-1` parameters each Multinoulli distribution separately for every single value that :math:`X` can take.
+	
+		* This becomes prohibitive when :math:`x` is a continuous real or vector. 
+		* Even when :math:`x` takes finite values, the task becomes tough with the dimension of :math:`x`.
+
 Discriminative Models
-======================================================================================
+=======================================================================================
 .. note::
-	* Here, instead of invoking Bayes theorem, we can directly focus on modeling the logit as a linear function of :math:`x`.
+	* Here, we confine ourselves to a smaller subspace of possible probabilities which can be specified with a manageable number of parameters.
+
+		.. math:: p_{G|X}(k|x)\approx f(\beta,x)
+	* As an example, for binary classification problem, the posterior can be defined as :math:`\text{Ber}(p=f(\beta,x))` such that
+
+		.. math:: \mathbb{P}(G=y|X=x)=f(\beta,x)^y(1-f(\beta,x))^{1-y}
+
+Linear Discriminative Models
+------------------------------------------------------------------------------------------
+.. note::
+	* Here, we model the logit as a linear function of :math:`x`.
 	* For each class :math:`k=1,2,\cdots,K-1`, we can define the logits in terms of a set of linear equations
 
 		.. math:: \log\frac{\mathbb{P}(G=k|X=x)}{\mathbb{P}(G=K|X=x)}=\beta_{0,k}+\beta_{1:,k}^Tx
