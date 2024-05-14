@@ -9,3 +9,4 @@ Deep Learning
 	application/index
 	advanced/index
 	theory/index
+	qb
