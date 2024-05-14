@@ -54,3 +54,4 @@ Links
 	* `Amazon Interview Experience for Applied Scientist <https://www.geeksforgeeks.org/amazon-interview-experience-for-applied-scientist/>`_
 	* `Amazon data scientist interview (questions, process, prep) <https://igotanoffer.com/blogs/tech/amazon-data-science-interview>`_
 	* `Amazon | Senior Applied Scientist L6 | Seattle <https://leetcode.com/discuss/compensation/685178/amazon-senior-applied-scientist-l6-seattle>`_
+	* `Leadership Principles <https://www.amazon.jobs/content/en/our-workplace/leadership-principles>`_
