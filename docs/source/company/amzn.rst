@@ -37,4 +37,5 @@ An intriguing component of the interview process was the Tech Talk, a platform f
 Links
 **************************************************************************
 .. note::
-  * `Amazon Interview Experience for Applied Scientist <https://www.geeksforgeeks.org/amazon-interview-experience-for-applied-scientist/>`_
+	* `Amazon Interview Experience for Applied Scientist <https://www.geeksforgeeks.org/amazon-interview-experience-for-applied-scientist/>`_
+	* `Amazon data scientist interview (questions, process, prep) <https://igotanoffer.com/blogs/tech/amazon-data-science-interview>`_
