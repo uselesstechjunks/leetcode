@@ -5,8 +5,13 @@ Amazon
 **************************************************************************
 Science Breadth
 **************************************************************************
+In the ML Breadth round, the focus was on assessing the depth of my understanding across machine learning concepts. I encountered a mix of theoretical questions and practical scenarios related to applied science at Amazon. It tested my ability to grasp a broad spectrum of ML topics, showcasing the importance of a well-rounded foundation in machine learning. This would include topics in supervised and unsupervised learning 
 
-In the ML Breadth round, the focus was on assessing the depth of my understanding across machine learning concepts. I encountered a mix of theoretical questions and practical scenarios related to applied science at Amazon. It tested my ability to grasp a broad spectrum of ML topics, showcasing the importance of a well-rounded foundation in machine learning. This would include topics in supervised and unsupervised learning — KNN, logistic regression, SVM, Naive Bayes, Decision Trees, Random Forests, Ensemble Models, Boosting, Feature Engineering, Overfitting, Regularization, Dimensionality Reduction, best practices for hyperparameter tuning, Evaluation metrics, Regression, Clustering, Neural Networks, RNNs, CNNs, Transformers.
+.. note::
+	* KNN, logistic regression, SVM, Naive Bayes, Decision Trees, Random Forests, Ensemble Models, Boosting, 
+	* Regression, Clustering, Dimensionality Reduction
+	* Feature Engineering, Overfitting, Regularization, best practices for hyperparameter tuning, Evaluation metrics
+	* Neural Networks, RNNs, CNNs, Transformers.
 
 **************************************************************************
 Science Depth
@@ -26,7 +31,16 @@ The Behavioral Style questions in the Leadership Principles round were designed 
 **************************************************************************
 Coding
 **************************************************************************
-The Coding segment comprised LeetCode-style Data Structures and Algorithms questions. This component tested my coding proficiency and problem-solving abilities. Topics would include Data Structures — Arrays, Hash maps, Graphs, Trees, Heaps, Linked List, Stack, Queue and algorithms — Binary Search, Sliding Window, Two Pointer, Backtracking, Recursion, Dynamic Programming, Greedy. Data Manipulation libraries — Pandas and SQL. Coding concepts from Machine Learning, Probability and Statistics.
+The Coding segment comprised LeetCode-style Data Structures and Algorithms questions. This component tested my coding proficiency and problem-solving abilities. Topics would include 
+
+.. note::
+	* Data Structures
+		* Arrays, Hash maps, Graphs, Trees, Heaps, Linked List, Stack, Queue
+	* Algorithms
+		* Binary Search, Sliding Window, Two Pointer, Backtracking, Recursion, Dynamic Programming, Greedy. 
+	* Data Manipulation libraries
+		* Pandas and SQL.
+	* Coding concepts from Machine Learning, Probability and Statistics.
 
 **************************************************************************
 Tech Talk
