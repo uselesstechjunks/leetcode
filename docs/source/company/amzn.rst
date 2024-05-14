@@ -32,3 +32,9 @@ The Coding segment comprised LeetCode-style Data Structures and Algorithms quest
 Tech Talk
 **************************************************************************
 An intriguing component of the interview process was the Tech Talk, a platform for me to showcase one of my previous projects. This session involved a 45-minute presentation, allowing me to delve into the details of the project, its objectives, methodologies employed, and, most importantly, the outcomes achieved. This presentation was a chance to demonstrate my communication skills, presenting complex technical information in an accessible manner. Following the presentation, the last 15 minutes were dedicated to a Q&A session facilitated by the panelists.
+
+**************************************************************************
+Links
+**************************************************************************
+.. note::
+  * `Amazon Interview Experience for Applied Scientist <https://www.geeksforgeeks.org/amazon-interview-experience-for-applied-scientist/>`_
