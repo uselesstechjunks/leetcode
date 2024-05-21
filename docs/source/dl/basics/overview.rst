@@ -48,7 +48,7 @@ Variables of higher dimensions
 =========================================================================
 .. note::
 
-Using the Framework
+Usage of the Framework
 *************************************************************************
 .. note::
 	* We can use this framework to estimate some quantities of interest from the distribution e.g. 
@@ -56,3 +56,9 @@ Using the Framework
 		* predict the mean :math:`\mathbb{E}_{S\sim F_S}[S]` [regression framework]
 		* predict the mode :math:`s^*=\underset{s}{\arg\max} f_S(s)` [classification framework]
 		* generate samples :math:`s^*=s\sim F_S` [generative framework]	
+
+Utilising the Observations
+*************************************************************************
+
+The Inference (Learning) Problem
+=========================================================================
