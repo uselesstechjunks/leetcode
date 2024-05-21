@@ -17,7 +17,7 @@ Defining the Framework
 			* distribution :math:`F_S(s)=\mathbb{P}(S\leq s)` or a
 			* density :math:`f_S(s)` such that 
 
-				.. math:: F_S(s)=\int\limits_{-\infty}^s f_S(t)\mathop{d\mu(t)}
+				.. math:: F_S(s)=\int\limits_{-\infty}^s f_S(t)\mathop{dt}
 	* The types of items that can be in the set :math:`\Omega` can be quite diverse, and therefore the associated rv can have the range which can confront to different types of mathematical structures.
 
 		* A single binary variable, :math:`S\in\{0,1\}`.
