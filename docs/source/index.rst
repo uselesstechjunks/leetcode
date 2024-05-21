@@ -26,6 +26,7 @@ Contents
    dsalgo
    sysdes
    mldes
+   mlcasestudy
    behave
    studytips
    dsalgosol
@@ -33,5 +34,6 @@ Contents
    rtfm
    kurzgesagt
    readlist
+   company/amzn
 
 Self Study Guide has its documentation hosted on Read the Docs.

@@ -10,4 +10,5 @@ Statistical Machine Learning
    linearcls
    basisexp
    dt
+   graph   
    qb

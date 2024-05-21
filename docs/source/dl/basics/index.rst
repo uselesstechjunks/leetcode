@@ -1,10 +1,11 @@
 #####################################################################
-Fundamentals of Deep Learning
+The Fundamentals
 #####################################################################
 
 .. toctree::
 	:maxdepth: 3
 
+	overview
 	gd
 	backprop
 	reg
