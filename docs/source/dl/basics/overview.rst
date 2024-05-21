@@ -23,7 +23,7 @@ Defining the Framework
 		* A single binary variable, :math:`S\in\{0,1\}`.
 		* A categorical variable, :math:`S\in\{1,\cdots,K\}`.
 		* Real number :math:`S\in\mathbb{R}`
-		* Finite dimensional Euclidean vectors :math:`\mathbf{S}\in\mathbb{R}^d` with a common practice of associate each dimension with its own separate rv such that :math:`S_i\in\mathbf{R}`.
+		* Finite dimensional Euclidean vectors :math:`\mathbf{S}\in\mathbb{R}^d` with a common practice of associating each dimension with its own separate rv such that :math:`S_i\in\mathbf{R}`.
 		* Infinite sequences :math:`(S)_{i=1}^\infty` where each :math:`S_i\in\mathbb{R}`.
 
 Using the Framework
