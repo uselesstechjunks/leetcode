@@ -26,6 +26,7 @@ Contents
    dsalgo
    sysdes
    mldes
+   mlcasestudy
    behave
    studytips
    dsalgosol
