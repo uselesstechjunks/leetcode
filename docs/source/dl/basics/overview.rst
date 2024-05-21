@@ -26,7 +26,7 @@ Probabilistic Framework
 			* Real number :math:`S\in\mathbb{R}`
 		* Variables of higher dimensions
 		
-			* Finite dimensional Euclidean vectors :math:`\mathbf{S}\in\mathbb{R}^d` with a common practice of associating each dimension with its own separate rv such that :math:`S_i\in\mathbf{R}`.
+			* Finite dimensional Euclidean vectors :math:`\mathbf{S}\in\mathbb{R}^d` with a common practice of associating each dimension with its own separate rv such that :math:`S_i\in\mathbb{R}`.
 			* Infinite sequences :math:`(S)_{i=1}^\infty` where each :math:`S_i\in\mathbb{R}`.
 
 Defining the Probabilities
@@ -36,9 +36,11 @@ Discrete variables
 .. note::
 	* For discrete variables, we can enumerate the class-marginal probabilities in using a finite set of parameters
 	* Bernoulli, :math:`S\sim\mathrm{Ber}(p)`
-			.. math: f_S(s=\{0,1\})=p^s(1-p)^{1-s}
+
+		.. math: f_S(s=\{0,1\})=p^s(1-p)^{1-s}
 	* Multinoulli, :math:`S\sim\mathrm{Mult}(\pi_1\cdots\pi_K)`
-			.. math: f_S(s=(s_1,\cdots,s_K))=\prod_{k=1}^K\pi_k^{s_k}
+
+		.. math: f_S(s=(s_1,\cdots,s_K))=\prod_{k=1}^K\pi_k^{s_k}
 
 Continuous variables
 =========================================================================
