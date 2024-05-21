@@ -5,6 +5,7 @@ Fundamentals of Deep Learning
 .. toctree::
 	:maxdepth: 3
 
+	overview
 	gd
 	backprop
 	reg
