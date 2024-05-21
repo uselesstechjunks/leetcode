@@ -1,6 +1,47 @@
 Reading List
 ##############################
 
+Ilya's Paper List
+***********************************
+- Fundamentals
+  * The Annotated Transformer
+  * The First Law of Complexodynamics
+  * The Unreasonable Effectiveness of RNNs
+  * Understanding LSTM Networks
+  * Recurrent Neural Network Regularization
+  * Keeping Neural Networks Simple by Minimizing the Description Length of the Weights
+  * Pointer Networks
+  * ImageNet Classification with Deep CNNs
+  * Order Matters: Sequence to Sequence for Sets
+  * GPipe: Efficient Training of Giant Neural Networks
+  * Deep Residual Learning for Image Recognition
+  * Multi-Scale Context Aggregation by Dilated Convolutions
+  * Neural Quantum Chemistry
+  * Attention Is All You Need
+  * Neural Machine Translation by Jointly Learning to Align and Translate
+  * Identity Mappings in Deep Residual Networks
+  * A Simple NN Module for Relational Reasoning
+  * Variational Lossy Autoencoder
+  * Relational RNNs
+  * Quantifying the Rise and Fall of Complexity in Closed Systems
+  * Neural Turing Machines
+  * Deep Speech 2: End-to-End Speech Recognition in English and Mandarin
+  * Scaling Laws for Neural LMs (arxiv.org)
+  * A Tutorial Introduction to the Minimum Description Length Principle (arxiv.org)
+  * Machine Super Intelligence Dissertation (vetta.org)
+  * PAGE 434 onwards: Komogrov Complexity (lirmm.fr)
+  * CS231n Convolutional Neural Networks for Visual Recognition (cs231n.github.io)
+
+- Additional Resources
+  * [GPT-1](https://lnkd.in/gJ5Pe3HG)
+  * [GPT-2](https://lnkd.in/gatQi8Ud)
+  * [GPT-3](https://lnkd.in/g43GzYfZ)
+  * [GPT-4](https://lnkd.in/ga_xEpEj)
+  * [Llama-2](https://lnkd.in/gutaGW8h)
+  * [Tools](https://lnkd.in/gqJ3aXpS)
+  * [Gemini-Pro-1.5](https://lnkd.in/gbDcYp89)
+  * [Agentic Patterns Series](https://lnkd.in/gphZ6Y5s)
+
 Linear Algebra
 ***********************************
 
