@@ -37,16 +37,34 @@ Discrete variables
 	* For discrete variables, we can enumerate the class-marginal probabilities in using a finite set of parameters
 	* Bernoulli, :math:`S\sim\mathrm{Ber}(p)`
 
-		.. math: f_S(s=\{0,1\})=p^s(1-p)^{1-s}
+		.. math:: f_S(s=\{0,1\})=p^s(1-p)^{1-s}
 	* Multinoulli, :math:`S\sim\mathrm{Mult}(\pi_1\cdots\pi_K)`
 
-		.. math: f_S(s=(s_1,\cdots,s_K))=\prod_{k=1}^K\pi_k^{s_k}
+		.. math:: f_S(s=(s_1,\cdots,s_K))=\prod_{k=1}^K\pi_k^{s_k}
 
 Continuous variables
 =========================================================================
+.. note::
+	* For continuous case, explicit definition of the infinite dimensional density function is impossible.
+	* We often therefore resort to some known parametric family of distributions
+
+		* Example: Exponential family
 
 Variables of higher dimensions
 =========================================================================
+Discrete case
+-------------------------------------------------------------------------
+.. note::
+	* TODO - splitting the joint distribution by product of conditionals
+	* Mention that enumerating the table is exponential in the number of variables
+	* Mention conditional indedepence
+
+Continuous case
+-------------------------------------------------------------------------
+.. note::
+	* Mention conditional independence and using it to define parametric family (GMM)
+	* Mention Markov property for sequence models
+	* Mention the lower manifold in the data space
 
 Usage of the Framework
 *************************************************************************
@@ -59,6 +77,11 @@ Usage of the Framework
 
 Utilising the Observations
 *************************************************************************
+.. note::
+	* Data can be provided to help learn the parameters of the probability models
+	* [Important] For regression and classification :math:`S=Y` and for generative models :math:`S=X`.
 
 The Inference (Learning) Problem
 =========================================================================
+.. note::
+	* Importance of the MLE framework to be able to learn the distributions through means of statistical inference.
