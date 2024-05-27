@@ -91,3 +91,11 @@ Batch Normalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Layer Normalisation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Resources
+===================================================================================
+.. note::
+	* `[Prof Ganesh Ramakrishnan] CS769 Optimization in Machine Learning IIT Bombay 2024 <https://www.cse.iitb.ac.in/%7Eganesh/cs769/>`_
+
+		* `Full Playlist on YT <https://www.youtube.com/playlist?list=PLyo3HAXSZD3yhIPf7Luk_ZHM_ss2fFCVV>`_
+		* `Unified all GD variants <https://youtu.be/2QNquvof1WA?list=PLyo3HAXSZD3yhIPf7Luk_ZHM_ss2fFCVV&t=865>`_
