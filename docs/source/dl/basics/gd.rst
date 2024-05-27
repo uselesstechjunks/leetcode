@@ -99,3 +99,4 @@ Resources
 
 		* `Full Playlist on YT <https://www.youtube.com/playlist?list=PLyo3HAXSZD3yhIPf7Luk_ZHM_ss2fFCVV>`_
 		* `Unified all GD variants <https://youtu.be/2QNquvof1WA?list=PLyo3HAXSZD3yhIPf7Luk_ZHM_ss2fFCVV&t=865>`_
+	* `[ruder.io] An overview of gradient descent optimization algorithms <https://www.ruder.io/optimizing-gradient-descent/>`_
