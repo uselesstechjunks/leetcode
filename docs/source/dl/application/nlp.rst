@@ -89,3 +89,4 @@ Resources
 	* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
 
 		* `[magazine.sebastianraschka.com] Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
+	* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
