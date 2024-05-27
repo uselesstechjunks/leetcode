@@ -73,7 +73,7 @@ Generic Equation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. math:: w_{t+1}=w_t-\underbrace{\alpha_tH_t^{-1}\widehat{\nabla E_t}(w_t+\gamma_t(w_t-w_{t-1}))}_\text{adaptive gradient component}+\underbrace{\beta_tH_t^{-1}H_{t-1}(w_t-w_{t-1})}_\text{adaptive momemtum component}
 
-.. notes::
+.. note::
 	* :math:`\widehat{\nabla E_t}` is an estimate of the gradient (stochastic/mini-batch estimate)
 	* :math:`H_t=\sqrt{G_t}` is a diagonal matrix where :math:`G_t` is an approximation of the Hessian (only along major axes)
 	* With :math:`H_t=I` we recover NAG.
