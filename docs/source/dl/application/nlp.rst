@@ -80,3 +80,8 @@ Prompt Engineering
 =========================================================================================
 Prompt Tuning
 =========================================================================================
+
+Resources
+.. note::
+	* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
+	* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
