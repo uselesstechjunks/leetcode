@@ -80,3 +80,13 @@ Prompt Engineering
 =========================================================================================
 Prompt Tuning
 =========================================================================================
+
+Resources
+=========================================================================================
+.. note::
+	* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
+	* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
+	* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
+
+		* `[magazine.sebastianraschka.com] Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
+	* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
