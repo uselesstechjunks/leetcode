@@ -58,6 +58,7 @@ Decoder [GPT]
 =========================================================================================
 .. note::
 	* `[jalammar.github.io] The Illustrated GPT-2 <https://jalammar.github.io/illustrated-gpt2/>`_
+	* `[cameronrwolfe.substack.com] Decoder-Only Transformers: The Workhorse of Generative LLMs <https://cameronrwolfe.substack.com/p/decoder-only-transformers-the-workhorse>`_
 	* GPT-2: Language Models are Unsupervised Multitask Learners
 	* GPT-3: Language Models are Few-Shot Learners
 
