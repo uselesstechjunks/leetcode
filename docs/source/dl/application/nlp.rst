@@ -34,6 +34,7 @@ Attention
 Position Encoding
 *****************************************************************************************
 .. note::
+	* Position Information in Transformers: An Overview
 	* Rethinking Positional Encoding in Language Pre-training
 
 *****************************************************************************************
