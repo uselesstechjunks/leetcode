@@ -61,6 +61,11 @@ Encoder-Decoder [T5]
 .. note::
 	* T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
 
+Autoencoder
+=========================================================================================
+.. note::
+	* BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension
+
 Cross-Lingual
 =========================================================================================
 .. note::
@@ -68,6 +73,7 @@ Cross-Lingual
 	* [Encoder] XLM-R [Roberta]: Unsupervised Cross-lingual Representation Learning at Scale
 	* [Decoder] XGLM [GPT-3]: Few-shot Learning with Multilingual Generative Language Models
 	* [Encoder-Decoder] mT5 [T5]: A Massively Multilingual Pre-trained Text-to-Text Transformer
+	* [Autoencoder] mBART [BART]: Multilingual Denoising Pre-training for Neural Machine Translation
 
 *****************************************************************************************
 Training
