@@ -15,24 +15,53 @@ Byte-Pair Encoding (BPE)
 =========================================================================================
 
 *****************************************************************************************
+Word Embeddings
+*****************************************************************************************
+.. note::
+	* Word2Vec: Efficient Estimation of Word Representations in Vector Space
+	* GloVe: Global Vectors forWord Representation
+	* Evaluation methods for unsupervised word embeddings
+
+*****************************************************************************************
 Attention
 *****************************************************************************************
-Basic Attention
-=========================================================================================
-Self-Attention
-=========================================================================================
-Multi-Head Attention
-=========================================================================================
+.. note::
+	* `[jalammar.github.io] The Illustrated Transformer <https://jalammar.github.io/illustrated-transformer/>`_
+	* `[lilianweng.github.io] Attention? Attention! <https://lilianweng.github.io/posts/2018-06-24-attention/>`_
+	* Attention Is All You Need
 
 *****************************************************************************************
 Architecture
 *****************************************************************************************
+RNN
+=========================================================================================
+.. note::
+	* On the diculty of training Recurrent Neural Networks
+	* Sequence to Sequence Learning with Neural Networks
+	* NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE
+
 Encoder [BERT]
 =========================================================================================
+.. note::
+	* BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+	* A Primer in BERTology: What we know about how BERT works
+	* RoBERTa: A Robustly Optimized BERT Pretraining Approach
+	* XLM: Cross-lingual Language Model Pretraining
+	* XLM-R: Unsupervised Cross-lingual Representation Learning at Scale
+	* TwinBERT: Distilling Knowledge to Twin-Structured BERT Models for Eicient Retrieval
+
 Decoder [GPT]
 =========================================================================================
+.. note::
+	* `[jalammar.github.io] The Illustrated GPT-2 <https://jalammar.github.io/illustrated-gpt2/>`_
+	* GPT-2: Language Models are Unsupervised Multitask Learners
+	* GPT-3: Language Models are Few-Shot Learners
+
 Encoder-Decoder [T5]
 =========================================================================================
+.. note::
+	* T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+	* mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer
 
 *****************************************************************************************
 Training
@@ -49,12 +78,11 @@ Cross-Entropy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Contrastive Loss
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 *****************************************************************************************
 Special Techniques
 *****************************************************************************************
 Low-Rank Approximations (LoRA)
-=========================================================================================
-Layer Normalisation
 =========================================================================================
 Reinforcement Learning with Human Feedback (RLHF)
 =========================================================================================
@@ -64,8 +92,9 @@ Task Specific Setup
 *****************************************************************************************
 Text Generation
 =========================================================================================
-Beam Search
------------------------------------------------------------------------------------------
+.. note::
+	* `[mlabonne.github.io] Decoding Strategies in Large Language Models <https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html>`_
+
 Text Classification
 =========================================================================================
 Finding Similar Items
