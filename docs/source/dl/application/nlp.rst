@@ -68,6 +68,10 @@ Training
 *****************************************************************************************
 Pretraining
 =========================================================================================
+.. note::
+	* Improving Language Understanding by Generative Pre-Training
+	* Universal Language Model Fine-tuning for Text Classification
+
 Domain-Adaptation
 =========================================================================================
 Fine-Tuning
