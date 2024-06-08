@@ -15,13 +15,13 @@ Study Framework
 
 		* Theoretical framework & motivation.
 		* Mathematical derivation of training objective (loss) with boundary conditions.
-		* What-if scenarios where training fails - mathematical issues.
+		* What-if scenarios where training fails - mathematical issues (check stack-exchange).
 	* Training and Validation
 
-		* Training algorithm
+		* Design the training algorithm
 		* Implementation and computational considerations including complexity.
-		* What-if scenarios where training fails - computational issues.
 		* How to check if algorithm converged.
+		* What-if scenarios where training fails - computational issues (check stack-exchange).		
 	* Testing and Model Selection
 
 		* How to check for overfitting/underfitting. Remedies?
@@ -72,8 +72,11 @@ Study Framework
 	* Step 2: Solve the key problem and identify subproblems.
 	* Step 3: Assume simplest solution to the subproblems and solve the key problem end-to-end.
 	* Step 4: Talk about metrics, practical issues and hosting.
-	* Step 5: Iterate over the subproblems and identify ones that can be solved by ML.
-	* Step 6: Solve the ML subproblems using step 2-6 in repeat until there are none left.
+	* Step 5: Subproblems
+
+		* Step 5a: Iterate over the subproblems and identify ones that can be solved by ML.
+		* Step 5b: Solve the ML subproblems using step 2-6 in repeat until there are none left.
+	* Step 6: Identify model degradation over time.
 
 Problem Domains
 ================================================================================
