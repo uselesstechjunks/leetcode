@@ -1,6 +1,104 @@
 ################################################################################
-Sample Questions
+ML Interview Prep Guide
 ################################################################################
+
+********************************************************************************
+ML Breadth
+********************************************************************************
+Study Framework
+================================================================================
+.. note::
+	* Problem
+
+		* Problem description and assumptions for simplicity.
+	* Approach and Assumptions
+
+		* Theoretical framework & motivation.
+		* Mathematical derivation of training objective (loss) with boundary conditions.
+		* What-if scenarios where training fails - mathematical issues (check stack-exchange).
+	* Training and Validation
+
+		* Design the training algorithm
+		* Implementation and computational considerations including complexity.
+		* How to check if algorithm converged.
+		* What-if scenarios where training fails - computational issues (check stack-exchange).		
+	* Testing and Model Selection
+
+		* How to check for overfitting/underfitting. Remedies?
+		* Metrics to check - different choices and trade-offs.
+		* How to tune hyperparameters and perform model selection.
+	* Inference
+
+		* Computational considerations.
+		* Identify signs for model degradation over time. Remedies?
+
+Key Topics
+================================================================================
+.. warning::
+	* Feature Engineering
+	* Linear Regression and variants
+	* Boosted Trees, Random Forest
+	* Naive Bayes
+	* Logistic Regression	
+	* Support Vector Machines
+
+Esoteric Topics
+================================================================================
+.. warning::
+	* Ordinal Regression - predicts a class label/score (check `this <https://home.ttic.edu/~nati/Publications/RennieSrebroIJCAI05.pdf>`_)
+	* Learning To Rank - predicts a relative-order (MAP, DCG/NDCG, Precision@n, Recall@n, MRR)
+	* Dimensionality Reduction - t-SNE, Spectral Clustering, PCA, Latent-variable models, NMF
+	* Clustering & Anomaly Detection - DBSCAN, HDBSCAN, Hierarchical Clustering, Self-Organizing Maps, Isolation Forest, K-Means
+	* Bayesian linear regression
+	* Gaussian Processes
+	* Graphical Models, Variational Inference, Belief Propagation, Deep Belief Net, LDA, CRF
+	* NER, Pos-tagging, ULMFit
+	* FaceNet, YOLO
+	* Reinforcement learning: SARSA, explore-exploit,  bandits (eps-greedy, UCB, Thompson sampling), Q-learning, DQN - applications
+
+********************************************************************************
+ML Depth
+********************************************************************************
+Study Framework
+================================================================================
+
+********************************************************************************
+ML Applications: Framework
+********************************************************************************
+Study Framework
+================================================================================
+.. note::
+	* Step 1: Identify the key problem and formulate it as ML problem. Ensure that solving it would achieve the goal.
+	* Step 2: Solve the key problem and identify subproblems.
+	* Step 3: Assume simplest solution to the subproblems and solve the key problem end-to-end.
+	* Step 4: Talk about metrics, practical issues and hosting.
+	* Step 5: Subproblems
+
+		* Step 5a: Iterate over the subproblems and identify ones that can be solved by ML.
+		* Step 5b: Solve the ML subproblems using step 2-6 in repeat until there are none left.
+	* Step 6: Identify model degradation over time.
+
+Problem Domains
+================================================================================
+.. warning::
+	* Classification 
+	* Generative modeling 
+	* Regression 
+	* Clustering 
+	* Dimensionality reduction 
+	* Density estimation 
+	* Anomaly detection 
+	* Data cleaning 
+	* AutoML 
+	* Association rules 
+	* Semantic analysis 
+	* Structured prediction 
+	* Feature engineering 
+	* Feature learning 
+	* Learning to rank 
+	* Grammar induction 
+	* Ontology learning 
+	* Multimodal learning
 
 ********************************************************************************
 Theoretical Background
@@ -33,13 +131,6 @@ Classical ML: Optimisation
 
 		* How does that work for non-convex error surfaces?
 		* How do you identify that you're in a local minima?
-
-Deep Learning
-================================================================================
-
-********************************************************************************
-Designing ML Systems
-********************************************************************************
 
 ********************************************************************************
 Related StackExchanges
