@@ -37,7 +37,6 @@ Expectation: Candidates are expected to exhibit mastery in their specific area o
 - Deep Dives: Evaluation should examine whether candidates delved deeply into projects where relevant, such as investigating outliers, misclassified examples, and edge cases.
 - Model Evaluation: Candidates should elaborate on how they evaluated their models, including rationale behind specific trade-offs and methods used to identify key model dynamics.
 - Fundamentals: Assessment should cover candidates' understanding of the fundamental principles in their field.
-- The Science (AS/RS) job family encompasses a broad spectrum of disciplines. It's crucial to identify candidates' potential areas of expertise through resume review and phone screening to ensure proper interview allocation, as not every interviewer may have expertise in every RS domain.
 
 Scrapped from the Internet
 ==========================================================================
@@ -51,56 +50,55 @@ Data Preprocessing and Handling:
 
 Supervised Learning:
 --------------------------------------------------------------------------
-6. State the applications of supervised machine learning in modern businesses.
-7. How will you determine which machine learning algorithm to use for a classification problem?
-8. How does the Amazon recommendation engine work when recommending other things to buy?
-9. Differentiate between logistic regression and support vector machines.
-10. Give an example of using logistic regression over SVM and vice versa.
-11. What does the F1 score represent?
-12. How do the results change if we use logistic regression over the decision tree in a random forest?
-13. Describe linear regression vs. logistic regression.
-14. How would you define log loss in the context of model evaluation?
+1. State the applications of supervised machine learning in modern businesses.
+2. How will you determine which machine learning algorithm to use for a classification problem?
+3. How does the Amazon recommendation engine work when recommending other things to buy?
+4. Differentiate between logistic regression and support vector machines.
+5. Give an example of using logistic regression over SVM and vice versa.
+6. What does the F1 score represent?
+7. How do the results change if we use logistic regression over the decision tree in a random forest?
+8. Describe linear regression vs. logistic regression.
+9. How would you define log loss in the context of model evaluation?
+10. Could you discuss the key assumptions that govern linear regression models and explain the significance of taking these assumptions into account when interpreting statistical results?
 
 Ensemble Learning:
 --------------------------------------------------------------------------
-15. Explain the ensemble learning technique in machine learning.
-16. Differentiate between bagging and boosting.
-17. What distinguishes the model performance between bagging and boosting?
-18. Can you elaborate on how gradient boost is used in machine learning and how it works?
-19. How does the assumption of error in linear regression influence the accuracy of our models, and what does it entail?
+1. Explain the ensemble learning technique in machine learning.
+2. Differentiate between bagging and boosting.
+3. What distinguishes the model performance between bagging and boosting?
+4. Can you elaborate on how gradient boost is used in machine learning and how it works?
+5. How does the assumption of error in linear regression influence the accuracy of our models, and what does it entail?
+6. How do you perceive the role of DMatrix in XGBoost, and how does it differ from other gradient boosting data structures?
 
 Clustering and Dimensionality Reduction:
 --------------------------------------------------------------------------
-20. How is KNN different from K-means clustering?
-21. Explain the K-means and K Nearest Neighbor algorithms and differentiate between them.
-22. How are PCA with a polynomial kernel and a single layer autoencoder related?
-23. Differentiate between Lasso and Ridge regression.
-24. Explain ICA, CCA, and PCA.
-25. State some ways of reducing dimensionality.
-26. How would you get a CCA objective function from PCA?
+1. How is KNN different from K-means clustering?
+2. Explain the K-means and K Nearest Neighbor algorithms and differentiate between them.
+3. How are PCA with a polynomial kernel and a single layer autoencoder related?
+4. Differentiate between Lasso and Ridge regression.
+5. Explain ICA, CCA, and PCA.
+6. State some ways of reducing dimensionality.
+7. How would you get a CCA objective function from PCA?
 
 Model Evaluation and Performance:
 --------------------------------------------------------------------------
-27. Considering that you already have labelled data for your clustering project, what are some of the methods that you can use to evaluate model performance?
-28. What does an ROC curve tell you about a model’s performance?
-29. What does a ROC area under the curve as an integral represent?
-30. Could you define the concepts of overfitting and underfitting in machine learning, and explain their relevance in model development?
+1. Considering that you already have labeled data for your clustering project, what are some of the methods that you can use to evaluate model performance?
+2. What does an ROC curve tell you about a model’s performance?
+3. Could you define the concepts of overfitting and underfitting in machine learning, and explain their relevance in model development?
 
 Deep Learning and Neural Networks:
 --------------------------------------------------------------------------
-31. Could you discuss the key assumptions that govern linear regression models and explain the significance of taking these assumptions into account when interpreting statistical results?
-32. Could you elaborate on what an attention model entails?
-33. Can you differentiate between batch normalisation and instance normalisation and their respective uses?
-34. Can you walk me through the functioning of a 1D CNN?
-35. How do you perceive the role of DMatrix in XGBoost, and how does it differ from other gradient boosting data structures?
-36. Can you describe the difference in application between RNNs and LSTMs?
+1. Can you elaborate on what an attention model entails?
+2. Can you differentiate between batch normalization and instance normalization and their respective uses?
+3. Can you walk me through the functioning of a 1D CNN?
+4. Can you describe the difference in application between RNNs and LSTMs?
 
 Miscellaneous:
 --------------------------------------------------------------------------
-37. Design an Email Spam Filter.
-38. What steps would you take to ensure a scalable, efficient architecture for Bing's image search system?
-39. How can you perform a dot product operation on two sparse matrices?
-40. Walk me through a Monte Carlo simulation to estimate Pi.
+1. Design an Email Spam Filter.
+2. What steps would you take to ensure a scalable, efficient architecture for Bing’s image search system?
+3. How can you perform a dot product operation on two sparse matrices?
+4. Walk me through a Monte Carlo simulation to estimate Pi.
 
 **************************************************************************
 Interview Experience (Scrapped from the Internet)
