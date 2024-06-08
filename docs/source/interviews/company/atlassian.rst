@@ -2,10 +2,8 @@
 Atlassian
 #############################################################################
 
-Certainly! Let's tailor the problem statement to focus on a specific Atlassian product and a particular aspect of its functionality:
-
-**Question: Design a Large Language Model (LLM) to enhance the search and recommendation features in Jira Cloud.**
-
+Question: Design a Large Language Model (LLM) to enhance the search and recommendation features in Jira Cloud
+************************************************************************************************************************************
 **Problem Statement:**
 Jira Cloud, Atlassian's flagship product for agile project management, aims to improve user productivity and collaboration. One common pain point reported by users is the challenge of finding relevant information quickly and receiving personalized recommendations for tasks and workflows within Jira. Design a system using Large Language Models (LLMs) to address these issues and enhance the search and recommendation capabilities of Jira Cloud.
 
@@ -43,10 +41,8 @@ Jira Cloud, Atlassian's flagship product for agile project management, aims to i
 - **User-Centric Design (4/5):** Considers usability, relevance, and user feedback mechanisms in the design process.
 - **Business Impact (4/5):** Identifies potential benefits of the proposed solution in terms of user satisfaction, productivity gains, and competitive advantage for Atlassian.
 
-Certainly! Let's consider another Atlassian product and frame a problem statement around it:
-
-**Question: Design a Real-time Streaming ML System for improving user engagement in Bitbucket Cloud.**
-
+Question: Design a Real-time Streaming ML System for improving user engagement in Bitbucket Cloud
+************************************************************************************************************************************
 **Problem Statement:**
 Bitbucket Cloud, Atlassian's Git repository management solution, aims to facilitate seamless collaboration and code management for software development teams. One area of interest is enhancing user engagement by providing real-time insights and actionable recommendations to users as they interact with repositories and workflows. Design a streaming ML system to analyze user behavior, detect patterns, and deliver personalized recommendations for improving productivity and code quality within Bitbucket Cloud.
 
@@ -84,11 +80,8 @@ Bitbucket Cloud, Atlassian's Git repository management solution, aims to facilit
 - **User-Centric Design (4/5):** Considers usability, relevance, and contextualization of recommendations to enhance user experience.
 - **Impact Assessment (4/5):** Identifies potential benefits of the streaming ML system in terms of increased user engagement, code quality, and developer productivity within Bitbucket Cloud.
 
-
-Certainly! Let's consider another Atlassian product and formulate a problem statement around it:
-
-**Question: Design an Intelligent Q&A System for improving knowledge sharing in Confluence Cloud.**
-
+Question: Design an Intelligent Q&A System for improving knowledge sharing in Confluence Cloud
+************************************************************************************************************************************
 **Problem Statement:**
 Confluence Cloud, Atlassian's collaboration software, serves as a central knowledge base for teams to document and share information. However, users often face challenges in finding relevant answers to their questions buried within Confluence pages. Design an intelligent Q&A system that leverages natural language processing (NLP) and machine learning (ML) techniques to enhance knowledge discovery and facilitate seamless information retrieval within Confluence Cloud.
 
@@ -128,11 +121,8 @@ Confluence Cloud, Atlassian's collaboration software, serves as a central knowle
 
 By focusing on enhancing knowledge sharing and information retrieval within Confluence Cloud, this problem statement highlights the importance of leveraging NLP and ML techniques to deliver intelligent solutions that align with Atlassian's mission of empowering teams to work smarter and more efficiently.
 
-
-Of course! Let's explore a problem statement related to another Atlassian product:
-
-**Question: Design a Recommendation Engine for improving task management in Trello.**
-
+Question: Design a Recommendation Engine for improving task management in Trello
+************************************************************************************************************************************
 **Problem Statement:**
 Trello, Atlassian's visual collaboration tool, is widely used for managing tasks, projects, and workflows. However, users often struggle to prioritize tasks and allocate resources effectively within their Trello boards. Design a recommendation engine that leverages machine learning algorithms to analyze user behavior, task attributes, and board dynamics, in order to provide intelligent recommendations for task prioritization, assignment, and scheduling within Trello.
 
@@ -172,10 +162,8 @@ Trello, Atlassian's visual collaboration tool, is widely used for managing tasks
 
 This problem statement focuses on leveraging machine learning techniques to enhance task management and productivity within Trello, aligning with Atlassian's commitment to empowering teams with intelligent tools and insights.
 
-Certainly! Let's consider a problem statement related to ChatGPT, Atlassian's conversational AI platform:
-
-**Question: Design an Intelligent Chatbot for improving customer support in Jira Service Management.**
-
+Question: Design an Intelligent Chatbot for improving customer support in Jira Service Management
+************************************************************************************************************************************
 **Problem Statement:**
 Jira Service Management, Atlassian's service desk solution, is used by organizations to manage IT service requests, incidents, and support tickets. However, users often experience delays and inefficiencies in resolving issues due to long response times and repetitive queries. Design an intelligent chatbot powered by natural language processing (NLP) and machine learning (ML) techniques to provide proactive assistance, automate routine tasks, and streamline customer support interactions within Jira Service Management.
 
@@ -215,11 +203,8 @@ Jira Service Management, Atlassian's service desk solution, is used by organizat
 
 This problem statement focuses on leveraging conversational AI technologies to enhance customer support capabilities within Jira Service Management, aligning with Atlassian's commitment to delivering intelligent solutions that empower teams to work more efficiently and effectively.
 
-
-Certainly! Let's consider a problem statement related to Atlassian's product, Confluence:
-
-**Question: Design a Content Recommendation System for enhancing knowledge discovery in Confluence Cloud.**
-
+Question: Design a Content Recommendation System for enhancing knowledge discovery in Confluence Cloud
+************************************************************************************************************************************
 **Problem Statement:**
 Confluence Cloud serves as a central repository for documentation, wikis, and collaborative content creation within organizations. However, users often struggle to discover relevant content amidst the vast amount of information stored in Confluence pages. Design a content recommendation system that leverages machine learning algorithms to analyze user behavior, content attributes, and collaboration patterns, in order to provide personalized recommendations for knowledge discovery and exploration within Confluence Cloud.
 
