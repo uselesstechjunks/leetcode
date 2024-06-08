@@ -3,6 +3,53 @@ Sample Questions
 ################################################################################
 
 ********************************************************************************
+ML Breadth: Study Framework
+********************************************************************************
+For each technique, follow this framework for studying.
+
+.. note::
+	* Problem
+
+		* Problem description and assumptions for simplicity.
+	* Approach and Assumptions
+
+		* Theoretical framework & motivation.
+		* Mathematical derivation of training objective (loss) with boundary conditions.
+		* What-if scenarios where training fails - mathematical issues.
+	* Training and Validation
+
+		* Training algorithm
+		* Implementation and computational considerations including complexity.
+		* What-if scenarios where training fails - computational issues.
+		* How to check if algorithm converged.
+	* Testing and Model Selection
+
+		* How to check for overfitting/underfitting. Remedies?
+		* Metrics to check - different choices and trade-offs.
+		* How to tune hyperparameters and perform model selection.
+	* Inference
+
+		* Computational considerations.
+		* Identify signs for model degradation over time. Remedies?
+
+Key Topics:
+================================================================================
+.. warning::	
+	* Linear Regression and variants
+	* Boosted Trees
+	* Naive Bayes
+	* Logistic Regression
+	* Support Vector Machines
+
+********************************************************************************
+ML Depth: Study Framework
+********************************************************************************
+
+********************************************************************************
+ML Applications: Framework
+********************************************************************************
+
+********************************************************************************
 Theoretical Background
 ********************************************************************************
 
@@ -33,13 +80,6 @@ Classical ML: Optimisation
 
 		* How does that work for non-convex error surfaces?
 		* How do you identify that you're in a local minima?
-
-Deep Learning
-================================================================================
-
-********************************************************************************
-Designing ML Systems
-********************************************************************************
 
 ********************************************************************************
 Related StackExchanges
