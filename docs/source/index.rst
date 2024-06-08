@@ -34,6 +34,6 @@ Contents
    rtfm
    kurzgesagt
    readlist
-   interviews
+   interviews/index
 
 Self Study Guide has its documentation hosted on Read the Docs.
