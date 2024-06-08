@@ -1,5 +1,5 @@
 #######################################################################
-Machine Learning Application and System Design
+ML Application and System Design
 #######################################################################
 
 .. toctree::
