@@ -3,10 +3,10 @@ Sample Questions
 ################################################################################
 
 ********************************************************************************
-ML Breadth: Study Framework
+ML Breadth
 ********************************************************************************
-For each technique, follow this framework for studying.
-
+Study Framework
+================================================================================
 .. note::
 	* Problem
 
@@ -32,22 +32,70 @@ For each technique, follow this framework for studying.
 		* Computational considerations.
 		* Identify signs for model degradation over time. Remedies?
 
-Key Topics:
+Key Topics
 ================================================================================
-.. warning::	
+.. warning::
+	* Feature Engineering
 	* Linear Regression and variants
-	* Boosted Trees
+	* Boosted Trees, Random Forest
 	* Naive Bayes
-	* Logistic Regression
+	* Logistic Regression	
 	* Support Vector Machines
 
+Esoteric Topics
+================================================================================
+.. warning::
+	* Ordinal Regression - predicts a class label/score (check `this <https://home.ttic.edu/~nati/Publications/RennieSrebroIJCAI05.pdf>`_)
+	* Learning To Rank - predicts a relative-order (MAP, DCG/NDCG, Precision@n, Recall@n, MRR)
+	* Dimensionality Reduction - t-SNE, Spectral Clustering, PCA, Latent-variable models, NMF
+	* Clustering & Anomaly Detection - DBSCAN, HDBSCAN, Hierarchical Clustering, Self-Organizing Maps, Isolation Forest, K-Means
+	* Bayesian linear regression
+	* Gaussian Processes
+	* Graphical Models, Variational Inference, Belief Propagation, Deep Belief Net, LDA, CRF
+	* NER, Pos-tagging, ULMFit
+	* FaceNet, YOLO
+	* Reinforcement learning: SARSA, explore-exploit,  bandits (eps-greedy, UCB, Thompson sampling), Q-learning, DQN - applications
+
 ********************************************************************************
-ML Depth: Study Framework
+ML Depth
 ********************************************************************************
+Study Framework
+================================================================================
 
 ********************************************************************************
 ML Applications: Framework
 ********************************************************************************
+Study Framework
+================================================================================
+.. note::
+	* Step 1: Identify the key problem and formulate it as ML problem. Ensure that solving it would achieve the goal.
+	* Step 2: Solve the key problem and identify subproblems.
+	* Step 3: Assume simplest solution to the subproblems and solve the key problem end-to-end.
+	* Step 4: Talk about metrics, practical issues and hosting.
+	* Step 5: Iterate over the subproblems and identify ones that can be solved by ML.
+	* Step 6: Solve the ML subproblems using step 2-6 in repeat until there are none left.
+
+Problem Domains
+================================================================================
+.. warning::
+	* Classification 
+	* Generative modeling 
+	* Regression 
+	* Clustering 
+	* Dimensionality reduction 
+	* Density estimation 
+	* Anomaly detection 
+	* Data cleaning 
+	* AutoML 
+	* Association rules 
+	* Semantic analysis 
+	* Structured prediction 
+	* Feature engineering 
+	* Feature learning 
+	* Learning to rank 
+	* Grammar induction 
+	* Ontology learning 
+	* Multimodal learning
 
 ********************************************************************************
 Theoretical Background
