@@ -5,4 +5,6 @@ Machine Learning Interviews
 .. toctree::
 	:maxdepth: 3
 
-	company/index
+	breadth
+	depth
+	design
