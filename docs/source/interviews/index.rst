@@ -8,3 +8,4 @@ ML Interview Prep Guide
 	breadth
 	depth
 	design
+	leadership
