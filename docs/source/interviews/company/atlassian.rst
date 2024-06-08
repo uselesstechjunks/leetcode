@@ -47,20 +47,55 @@ Behavioral and Team Dynamics:
 *****************************************************************************
 Products and ML Problems
 *****************************************************************************
-1. **Jira Software:**
+1. **Confluence:**
+=============================================================================================================================
+Design a Contextual Search Enhancement System for Confluence Cloud:
+
+- How would you enhance the existing search functionality in Confluence using contextual information to improve search results?
+- What techniques or algorithms would you employ to understand the context of user queries and documents?
+
+Design an Intelligent Q&A System for improving knowledge sharing in Confluence Cloud:
+
+- Discuss your approach to designing a system that intelligently retrieves answers to user questions from the vast repository of knowledge stored in Confluence.
+- How would you incorporate natural language understanding and reasoning capabilities to ensure accurate and relevant responses to diverse user queries?
+- What strategies would you employ to handle ambiguity, synonymy, and variability in user questions and document content effectively?
+
+Design a Collaborative Filtering Recommendation System for Confluence Cloud:
+
+- Explain how you would implement a collaborative filtering recommendation system to suggest relevant content to users in Confluence.
+- How would you address challenges such as sparsity of user interactions and cold start problems?
+
+Design an Adaptive Document Summarization System for Confluence Cloud:
+
+- How would you approach building a system that generates concise summaries of lengthy documents stored in Confluence?
+- What strategies would you employ to ensure the summaries capture the essential information while maintaining coherence and relevance?
+
+Design a Dynamic Content Tagging System for Confluence Cloud:
+
+- Discuss your approach to developing a system that automatically tags content in Confluence based on its context and relevance.
+- How would you handle the challenge of dynamically updating tags as the content evolves over time?
+
+Design a Multi-modal Content Understanding System for Confluence Cloud:
+
+- How would you integrate text, images, and other modalities of content to enhance understanding and retrieval in Confluence?
+- What techniques or architectures would you consider for handling multi-modal data effectively?
+
+Design a Continuous Learning System for Confluence Cloud:
+
+- Describe how you would build a system that continuously learns from user interactions and feedback to improve its recommendations and search results in Confluence.
+- What mechanisms would you employ to ensure the system remains up-to-date and adaptable to changing user preferences and content dynamics?
+
+Design an Explainable AI Framework for Content Recommendations in Confluence Cloud:
+
+- Discuss the importance of explainability in AI-driven content recommendation systems for enterprise applications like Confluence.
+- How would you design a framework that provides transparent explanations for the recommendations made to users?
+
+2. **Jira Software:**
 =============================================================================================================================
 - **Issue Prioritization:** ML can be used to analyze historical data on issue resolution times, dependencies, and user feedback to prioritize tasks and allocate resources more effectively.
 - **Sprint Planning:** ML algorithms can assist in predicting the completion time for tasks and recommending optimal task assignments for sprint planning sessions.
 - **Automated Ticket Categorization:** ML algorithms can classify incoming support tickets based on their content, urgency, and potential impact, enabling faster ticket routing and resolution.
 - **Customer Sentiment Analysis:** ML-powered sentiment analysis can analyze customer interactions and feedback within tickets to detect sentiment trends and identify areas for improvement in service quality.
-
-2. **Confluence:**
-=============================================================================================================================
-- **Content Recommendations:** ML can analyze user behavior, content attributes, and collaboration patterns to provide personalized content recommendations, making it easier for users to discover relevant information.
-- **Content Moderation:** ML algorithms can help identify and flag inappropriate content or potential policy violations within Confluence pages, facilitating content moderation and compliance efforts.
-- **Content Quality Assessment:** ML algorithms can analyze content contributions, user feedback, and engagement metrics to assess the quality and relevance of content within Confluence pages, helping users identify trustworthy and valuable information.
-- **Semantic Search Enhancement:** ML-powered search algorithms can understand user queries in natural language, infer user intent, and deliver more relevant search results by leveraging semantic understanding and context-aware ranking techniques.
-- **Content Summarization:** ML techniques can automatically summarize lengthy Confluence pages or documents, providing users with concise overviews and key insights to facilitate faster information consumption.
 
 3. **Bitbucket:**
 =============================================================================================================================
