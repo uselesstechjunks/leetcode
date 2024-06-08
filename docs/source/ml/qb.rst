@@ -40,3 +40,11 @@ Deep Learning
 ********************************************************************************
 Designing ML Systems
 ********************************************************************************
+
+********************************************************************************
+Related StackExchanges
+********************************************************************************
+.. note::
+	* `stats.stackexchange <https://stats.stackexchange.com/>`_
+	* `datascience.stackexchange <https://datascience.stackexchange.com/>`_
+	* `ai.stackexchange <https://ai.stackexchange.com/>`_
