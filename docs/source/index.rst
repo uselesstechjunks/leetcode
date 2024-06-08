@@ -34,6 +34,6 @@ Contents
    rtfm
    kurzgesagt
    readlist
-   company/amzn
+   interviews
 
 Self Study Guide has its documentation hosted on Read the Docs.
