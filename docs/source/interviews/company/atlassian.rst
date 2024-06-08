@@ -2,6 +2,49 @@
 Atlassian
 #############################################################################
 *****************************************************************************
+Sample Questions
+*****************************************************************************
+Scrapped from the Internet
+=============================================================================
+Machine Learning Concepts:
+-----------------------------------------------------------------------------
+1. How would you distinguish an RNN from an LSTM in terms of structure and function?
+2. Would you mind explaining the Random Forest model and its significance in predictive analytics?
+3. How do you handle skewed data when evaluating model performance, and what are some common metrics used in such cases?
+
+Dimensionality Reduction:
+-----------------------------------------------------------------------------
+4. Could you describe some methods for reducing dimensionality and how they're used in Machine Learning?
+
+Predictive Modeling and Data Analysis:
+-----------------------------------------------------------------------------
+5. Considering your experience with data analysis and client buying behaviors, can you walk me through how you would make predictions around whether future clients would purchase a certain software? What pieces of information would be important to include in your dataset?
+
+System Architecture and Design:
+-----------------------------------------------------------------------------
+6. Describe the components and design principles you would incorporate into the Bing image search architecture.
+
+Programming and Algorithmic Skills:
+-----------------------------------------------------------------------------
+7. Can you construct a function that generates a random normal distribution and then plot it?
+8. Consider an array of sorted integers from 0 to n. Your task is to find the integer that introduces a problem. Write a function that accomplishes this task with a time complexity of O(log n).
+9. Can you demonstrate how to reverse a binary tree in a selected programming language?
+10. Given an array of integers and a target sum, find the smallest subarray with a sum greater than or equal to the target sum using the greedy approach.
+11. What method would you use to find the dot product between two sparse matrices?
+
+Behavioral and Team Dynamics:
+-----------------------------------------------------------------------------
+12. What is the reason behind your search for a new job?
+13. What would be your ideal team to join in Atlassian?
+14. Have you ever had to object to a team member's approach? Can you walk me through it?
+15. Can you tell us about a time where you received unpleasant feedback?
+16. In what ways are your experiences aligned with Atlassian's values?
+17. What are your long-term career goals, and how do you see yourself achieving them over the next five years?
+18. So far, what has been your biggest accomplishment?
+19. Describe a time that you took a risk?
+20. Tell me about a time when you assisted a colleague in his work. What was the result?
+
+*****************************************************************************
 Products and ML Problems
 *****************************************************************************
 1. **Jira Software:**
