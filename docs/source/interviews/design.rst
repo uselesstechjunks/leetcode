@@ -14,6 +14,7 @@ Study Framework
 		* Step 5a: Iterate over the subproblems and identify ones that can be solved by ML.
 		* Step 5b: Solve the ML subproblems using step 2-6 in repeat until there are none left.
 	* Step 6: Identify model degradation over time.
+
 ********************************************************************************
 Problem Domains
 ********************************************************************************
