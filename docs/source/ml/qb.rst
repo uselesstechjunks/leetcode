@@ -1,7 +1,6 @@
 ################################################################################
 ML Interview Prep Guide
 ################################################################################
-
 ********************************************************************************
 ML Breadth
 ********************************************************************************
@@ -56,14 +55,122 @@ Esoteric Topics
 	* FaceNet, YOLO
 	* Reinforcement learning: SARSA, explore-exploit,  bandits (eps-greedy, UCB, Thompson sampling), Q-learning, DQN - applications
 
+Sample Questions
+================================================================================
+Feature Engineering
+--------------------------------------------------------------------------------
+* When do we need to scale features?
+* How to handle categorical features for
+
+	* categories with a small number of possible values
+	* categories with a very large number of possible values
+	* ordinal categories (an order associated with them)
+
+Mathematics
+--------------------------------------------------------------------------------
+* Different types of matrix factorizations. 
+* How are eigenvalues related to singular values.
+
+Statistics
+--------------------------------------------------------------------------------
+* You have 3 features, X, Y, Z. X and Y are correlated, Y and Z are correlated. Should X and Z also be correlated always?
+
+Classical ML
+--------------------------------------------------------------------------------
+* Regression
+
+	* What are the different ways to measure performance of a linear regression model.
+* Naive Bayes
+
+	* Some zero problem on Naive Bayes
+* Trees
+
+	* Difference between gradient boosting and XGBoost.
+
+Related StackExchanges
+================================================================================
+.. note::
+	* `stats.stackexchange <https://stats.stackexchange.com/>`_
+	* `datascience.stackexchange <https://datascience.stackexchange.com/>`_
+	* `ai.stackexchange <https://ai.stackexchange.com/>`_
+
 ********************************************************************************
 ML Depth
 ********************************************************************************
 Study Framework
 ================================================================================
+Sample Questions
+================================================================================
+Generic
+--------------------------------------------------------------------------------
+* Can you explain how you handle scenarios with low data availability?
+* Could you elaborate on the different sampling techniques you are familiar with?
+* Can you explain the teacher-student paradigm in machine learning? When is a separate teacher model needed?
+* Explain a portion from your paper.
+
+Click Prediction
+--------------------------------------------------------------------------------
+* Can you discuss the pros and cons of Gradient Boosting Decision Trees (GBDT) with respect to Deep Neural Networks (DNNs)?
+* Can you explain the personalization aspect of your Click Prediction model? 
+* Can you use a collaborative Filtering approach to solve the Click Prediction problem?
+* What are the key metrics that you consider when evaluating your CP model? 
+* How do you determine when it needs retraining?
+* How do you identify when things fail in your model or system?
+* How did you handle categorical and ordinal features in your CP problem? 
+* Why did you frame online-ranking as a CP problem for ranking and not as a learning to rank problem?
+
+Encoder
+--------------------------------------------------------------------------------
+* Can you explain how BERT is trained? 
+* How does BERT differ from models like GPT or T5? 
+* Can you use BERT for text generation?
+* What are the different BERT variants that you have experimented with? 
+* How do you fine-tune a BERT-based model for your specific domain?
+* What is a Sentence-BERT (SBERT) model? How is it different from normal BERT?
+* How is SBERT trained and how do you evaluate its quality? 
+* Other than BERT, what other Encoder Models do you know of?
+
+Multilingual
+--------------------------------------------------------------------------------
+* How would you approach training a multilingual model?
+* What are the key challenges and why this is hard to do?
+
+Offline Ranking
+--------------------------------------------------------------------------------
+* Can you discuss the simulation strategy you used for offline ranking? 
+* What are the pros and cons of the marginalization you had to perform? 
+
+Personalization
+--------------------------------------------------------------------------------
+* Can you discuss the pros and cons of using a similarity score between a user’s history and an item to represent user interest?
+
+GAN
+--------------------------------------------------------------------------------
+* How did you use the MMD estimator as a discriminator in a GAN? 
+* What are the difficulties in training and using GANs? Are there better alternatives out there?
+
+LLM
+--------------------------------------------------------------------------------
+* How do you go about fine-tuning a large language model?
+* How did you select which prompts to use in your model? 
+* Could you share some prompts that didn’t work and how you came up with better ones?
+
+Statistics
+--------------------------------------------------------------------------------
+* Can you explain what non-parametric two-sample tests are and how they differ from parametric ones? 
+* Could you provide the intuition behind the Maximum Mean Discrepancy (MMD) estimator that you used? 
+* Do you know about Bayesian testing? Is Bayesian the same as non-parametric?
+
+Linear Algebra
+--------------------------------------------------------------------------------
+* Can you list the linear algebra algorithms you are familiar with? 
+* What is a rational approximation of an operation function? 
+* Can you discuss the feature selection algorithms that you implemented? 
+* What are linear operators? How do they differ from non-linear operators? 
+* Can you explain the estimation strategy that you used in the approximation algorithm?
 
 ********************************************************************************
-ML Applications: Framework
+ML Applications
 ********************************************************************************
 Study Framework
 ================================================================================
@@ -99,80 +206,3 @@ Problem Domains
 	* Grammar induction 
 	* Ontology learning 
 	* Multimodal learning
-
-********************************************************************************
-Theoretical Background
-********************************************************************************
-
-Statistical Learning: Probability, Statistics, Learning Theory
-================================================================================
-.. note::
-	* You're given a sample from :math:`F_X` of size :math:`N`, and I give you an estimator :math:`\hat{x}`. Write down the MSE expression and break it down into bias and variance terms.
-	* Suppose you know the underlying data distribution, :math:`F_X`. What estimator would you choose so that it minimizes MSE?
-	* I explain to you the conditional mean estimator for regression. I give you two ways to approximate this by averaging.
-
-		* For every point :math:`x`, check it's :math:`K` neighbours, check their values and average them. The average becomes your estimate.
-		* You define some rectangular regions, with some homogeneaty criteria - points that fall within the same region more or less have very similar values.
-
-	  which one of thse would have higher bias than the other? Can you explain the trends in bias vs variance if I allow you to have tiny rectangular regions, vs larger rectangular regions?
-	* I explain to you the MAP estimator for conditional density for classification. Say, you have sample from two joint distributions and you want to build a MAP estimate classifier. I tell you to model the densities as Gaussian. Can you explain how do you come up with the classification rule? If those Gaussians share their covariance, does that simplify things?
-	* I give you a system where you can have trees only upto 10 nodes. But you have the option to get multiple of them running in parallel. Can you use this system to do better than individual ones? What type of error would your approach reduce?
-
-Classical ML: Optimisation
-================================================================================
-.. note::
-	* Max-Margin classifiers
-
-		* Constrained convex optimisation - KKT conditions
-		* Separable non-separable case.
-	* Linear regression - ridge, LASSO.
-	* How do you move beyond linearity? Basis expansion. Infinite dimensional expansion using kernels.
-	* Explain gradient descent, stochastic gradient descent, co-ordinate descent
-
-		* How does that work for non-convex error surfaces?
-		* How do you identify that you're in a local minima?
-
-********************************************************************************
-Related StackExchanges
-********************************************************************************
-.. note::
-	* `stats.stackexchange <https://stats.stackexchange.com/>`_
-	* `datascience.stackexchange <https://datascience.stackexchange.com/>`_
-	* `ai.stackexchange <https://ai.stackexchange.com/>`_
-
-********************************************************************************
-Sample Questions
-********************************************************************************
-Feature Engineering
-================================================================================
-.. note::
-	* When do we need to scale features?
-	* How to handle categorical features for
-
-		* categories with a small number of possible values
-		* categories with a very large number of possible values
-		* ordinal categories (an order associated with them)
-
-Mathematics
-================================================================================
-.. note::
-	* Different types of matrix factorizations. 
-	* How are eigenvalues related to singular values.
-
-Statistics
-================================================================================
-.. note::
-	* You have 3 features, X, Y, Z. X and Y are correlated, Y and Z are correlated. Should X and Z also be correlated always?
-
-Classical ML
-================================================================================
-.. note::
-	* Regression
-
-		* What are the different ways to measure performance of a linear regression model.
-	* Naive Bayes
-
-		* Some zero problem on Naive Bayes
-	* Trees
-
-		* Difference between gradient boosting and XGBoost.
