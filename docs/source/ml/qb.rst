@@ -6,7 +6,7 @@ Sample Questions
 Theoretical Background
 ********************************************************************************
 
-Statistical Learning Principles: Probability, Statistics, Learning Theory
+Statistical Learning: Probability, Statistics, Learning Theory
 ================================================================================
 .. note::
 	* You're given a sample from :math:`F_X` of size :math:`N`, and I give you an estimator :math:`\hat{x}`. Write down the MSE expression and break it down into bias and variance terms.
@@ -48,3 +48,40 @@ Related StackExchanges
 	* `stats.stackexchange <https://stats.stackexchange.com/>`_
 	* `datascience.stackexchange <https://datascience.stackexchange.com/>`_
 	* `ai.stackexchange <https://ai.stackexchange.com/>`_
+
+********************************************************************************
+Sample Questions
+********************************************************************************
+Feature Engineering
+================================================================================
+.. note::
+	* When do we need to scale features?
+	* How to handle categorical features for
+
+		* categories with a small number of possible values
+		* categories with a very large number of possible values
+		* ordinal categories (an order associated with them)
+
+Mathematics
+================================================================================
+.. note::
+	* Different types of matrix factorizations. 
+	* How are eigenvalues related to singular values.
+
+Statistics
+================================================================================
+.. note::
+	* You have 3 features, X, Y, Z. X and Y are correlated, Y and Z are correlated. Should X and Z also be correlated always?
+
+Classical ML
+================================================================================
+.. note::
+	* Regression
+
+		* What are the different ways to measure performance of a linear regression model.
+	* Naive Bayes
+
+		* Some zero problem on Naive Bayes
+	* Trees
+
+		* Difference between gradient boosting and XGBoost.
