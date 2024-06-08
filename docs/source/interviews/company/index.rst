@@ -5,6 +5,6 @@ Company Specific Questions
 .. toctree::
 	:maxdepth: 3
 
+	generic
 	amzn
 	atlassian
-	generic
