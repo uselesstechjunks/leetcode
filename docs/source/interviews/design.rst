@@ -5,5 +5,5 @@ Machine Learning Application and System Design
 .. toctree::
 	:maxdepth: 3
 
-	generic
+	company/generic
 	company/index
