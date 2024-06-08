@@ -8,10 +8,7 @@ Shared by Recruiter
 ==========================================================================
 ML Breadth
 --------------------------------------------------------------------------
-Expectation: Candidates should demonstrate a solid understanding of standard methods relevant to their scientific field. A good measure of suitable breadth includes the ability to 
-
-* discuss concepts/methods commonly covered in relevant graduate-level university courses
-* apply these methods to construct a functional, scalable system. 
+Expectation: Candidates should demonstrate a solid understanding of standard methods relevant to their scientific field. A good measure of suitable breadth includes the ability to discuss concepts/methods commonly covered in relevant graduate-level university courses and apply these methods to construct a functional, scalable system. 
 
 Additionally, familiarity with concepts such as experimental design, system evaluation, and optimal decision making across various scientific domains is important. The evaluation process can incorporate the following approaches:
 
