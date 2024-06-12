@@ -2,6 +2,77 @@
 Amazon
 ##########################################################################
 **************************************************************************
+Understanding the Product
+**************************************************************************
+Homepage
+==========================================================================
+Non-logged in users
+--------------------------------------------------------------------------
+UX Design
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PCT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+	* Icon image: One per page
+	* Segments: Interleaved
+
+		* Mixture of categories: list of tiles, each tile with 4 or less products (depends on thumbnail size)
+		* Category specific: list of horizontally scrollable product
+
+Mobile
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+	* TODO
+
+UX Layout:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* Top: Icon image of a product
+	* List: Each contains a Segment Title (usually split by a title-separator) and a set of images
+	
+		* Mixture of categories [4 or less product listsings per category block, scrollable row]
+		* Category specific [1 product listing at each row, scrollable row]
+		* Category specific
+	* Segment 2
+
+		* Mixture of categories
+		* Category specific
+		* Category specific
+	* Segment 3
+	
+		* Mixture of categories
+		* Category specific
+		* Category specific
+	* Segment 4
+
+		* Mixture of categories
+		* Category specific
+	
+Logged in users
+---------------------------------------------------------------------------
+
+Product Page
+==========================================================================
+
+**************************************************************************
+Important Topics
+**************************************************************************
+.. warning::
+	* Design query embeddings for ads - downstream task: ranking, classification, automted ad generation
+	
+		* Design a query-keyword/query-product matching algorithm from scratch
+		* Design a system for dynamic ad generation system based on user query
+		* Finetune using ratings, reviews, purchase data
+	* Design listing embeddings
+	
+		* Use them in recommendation system (currently visiting a product, suggest new products)
+		* Finetune using ratings, reviews, purchase data
+	* Create a home-page recommendation for non-logged in users (we know geolocation, time-of-the-day)
+	* Design user embeddings
+	
+		* Create a personalized home-page recommendation ("suggested items for you" page, without query - based on user history)
+
+**************************************************************************
 Sample Questions
 **************************************************************************
 Shared by Recruiter

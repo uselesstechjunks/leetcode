@@ -49,3 +49,10 @@ Gradient Boosting: Algorithm Outline
 ===================================================================================
 Relative Feature Importance
 -----------------------------------------------------------------------------------
+
+***********************************************************************************
+Resources
+***********************************************************************************
+.. note::
+	* Trees: https://scikit-learn.org/stable/modules/tree.html
+	* Ensemble: https://scikit-learn.org/stable/modules/ensemble.html
