@@ -10,16 +10,17 @@ Non-logged in users
 --------------------------------------------------------------------------
 UX Design
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-PCT:
-
+PCT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. note::
 	* Icon image: One per page
 	* Segments: Interleaved
 
 		* Mixture of categories: list of tiles, each tile with 4 or less products (depends on thumbnail size)
 		* Category specific: list of horizontally scrollable product
-Mobile:
 
+Mobile
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 .. note::
 	* TODO
 
