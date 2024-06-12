@@ -26,11 +26,11 @@ Mobile:
 UX Layout:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
-	* Segment 0: Icon image of a product
-	* Segment 1
+	* Top: Icon image of a product
+	* List: Each contains a Segment Title (usually split by a title-separator) and a set of images
 	
-		* Mixture of categories
-		* Category specific
+		* Mixture of categories [4 or less product listsings per category block, scrollable row]
+		* Category specific [1 product listing at each row, scrollable row]
 		* Category specific
 	* Segment 2
 
