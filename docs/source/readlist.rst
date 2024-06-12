@@ -3,44 +3,55 @@ Reading List
 
 Ilya's Paper List
 ***********************************
-- Fundamentals
-  * The Annotated Transformer
-  * The First Law of Complexodynamics
-  * The Unreasonable Effectiveness of RNNs
-  * Understanding LSTM Networks
-  * Recurrent Neural Network Regularization
-  * Keeping Neural Networks Simple by Minimizing the Description Length of the Weights
-  * Pointer Networks
-  * ImageNet Classification with Deep CNNs
-  * Order Matters: Sequence to Sequence for Sets
-  * GPipe: Efficient Training of Giant Neural Networks
-  * Deep Residual Learning for Image Recognition
-  * Multi-Scale Context Aggregation by Dilated Convolutions
-  * Neural Quantum Chemistry
-  * Attention Is All You Need
-  * Neural Machine Translation by Jointly Learning to Align and Translate
-  * Identity Mappings in Deep Residual Networks
-  * A Simple NN Module for Relational Reasoning
-  * Variational Lossy Autoencoder
-  * Relational RNNs
-  * Quantifying the Rise and Fall of Complexity in Closed Systems
-  * Neural Turing Machines
-  * Deep Speech 2: End-to-End Speech Recognition in English and Mandarin
-  * Scaling Laws for Neural LMs (arxiv.org)
-  * A Tutorial Introduction to the Minimum Description Length Principle (arxiv.org)
-  * Machine Super Intelligence Dissertation (vetta.org)
-  * PAGE 434 onwards: Komogrov Complexity (lirmm.fr)
-  * CS231n Convolutional Neural Networks for Visual Recognition (cs231n.github.io)
+* Fundamentals
 
-- Additional Resources
-  * [GPT-1](https://lnkd.in/gJ5Pe3HG)
-  * [GPT-2](https://lnkd.in/gatQi8Ud)
-  * [GPT-3](https://lnkd.in/g43GzYfZ)
-  * [GPT-4](https://lnkd.in/ga_xEpEj)
-  * [Llama-2](https://lnkd.in/gutaGW8h)
-  * [Tools](https://lnkd.in/gqJ3aXpS)
-  * [Gemini-Pro-1.5](https://lnkd.in/gbDcYp89)
-  * [Agentic Patterns Series](https://lnkd.in/gphZ6Y5s)
+	* The Annotated Transformer
+	* The First Law of Complexodynamics
+	* The Unreasonable Effectiveness of RNNs
+	* Understanding LSTM Networks
+	* Recurrent Neural Network Regularization
+	* Keeping Neural Networks Simple by Minimizing the Description Length of the Weights
+	* Pointer Networks
+	* ImageNet Classification with Deep CNNs
+	* Order Matters: Sequence to Sequence for Sets
+	* GPipe: Efficient Training of Giant Neural Networks
+	* Deep Residual Learning for Image Recognition
+	* Multi-Scale Context Aggregation by Dilated Convolutions
+	* Neural Quantum Chemistry
+	* Attention Is All You Need
+	* Neural Machine Translation by Jointly Learning to Align and Translate
+	* Identity Mappings in Deep Residual Networks
+	* A Simple NN Module for Relational Reasoning
+	* Variational Lossy Autoencoder
+	* Relational RNNs
+	* Quantifying the Rise and Fall of Complexity in Closed Systems
+	* Neural Turing Machines
+	* Deep Speech 2: End-to-End Speech Recognition in English and Mandarin
+	* Scaling Laws for Neural LMs (arxiv.org)
+	* A Tutorial Introduction to the Minimum Description Length Principle (arxiv.org)
+	* Machine Super Intelligence Dissertation (vetta.org)
+	* PAGE 434 onwards: Komogrov Complexity (lirmm.fr)
+	* CS231n Convolutional Neural Networks for Visual Recognition (cs231n.github.io)
+
+* Additional Resources
+
+	* [GPT-1](https://lnkd.in/gJ5Pe3HG)
+	* [GPT-2](https://lnkd.in/gatQi8Ud)
+	* [GPT-3](https://lnkd.in/g43GzYfZ)
+	* [GPT-4](https://lnkd.in/ga_xEpEj)
+	* [Llama-2](https://lnkd.in/gutaGW8h)
+	* [Tools](https://lnkd.in/gqJ3aXpS)
+	* [Gemini-Pro-1.5](https://lnkd.in/gbDcYp89)
+	* [Agentic Patterns Series](https://lnkd.in/gphZ6Y5s)
+
+Stanford courses
+***********************************
+* Natural Language Processing - https://web.stanford.edu/class/cs224n/
+* Transformers United - https://web.stanford.edu/class/cs25/
+* Deep generative models - https://deepgenerativemodels.github.io/
+* Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
+* Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
+* Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
 
 Linear Algebra
 ***********************************
@@ -62,7 +73,6 @@ Probability & Statistics
 * [CMU] `36-705 - Intermediate Statistics <https://www.youtube.com/playlist?list=PLt2Pd5kunvJ6-wpJG9hlWlk47c76bm9L6>`_
 * [statisticsmatt] `Introduction to Mathematical Statistics with Illustrations using R <https://www.youtube.com/playlist?list=PLmM_3MA2HWpan-KlYp-QCbPHxMj5FK0TB>`_
 * `Mathematician uncovers methods to shrink sampling errors in large-dimensional data sets <https://phys.org/news/2023-03-mathematician-uncovers-methods-sampling-errors.html>`_
-
 
 Analysis
 ***********************************
