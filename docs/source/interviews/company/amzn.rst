@@ -2,6 +2,18 @@
 Amazon
 ##########################################################################
 **************************************************************************
+Important Topics
+**************************************************************************
+.. warning::
+	* Generate query embeddings for ads - downstream task: ranking, classification, automted ad generation
+	* Design a query-keyword/query-product matching algorithm from scratch
+	* Generate listing embeddings
+	* Use them in recommendation system (currently visiting a product, suggest new products)
+	* Finetune using ratings, reviews, purchase data
+	* Generate user embeddings
+	* Create a personalized home-page recommendation ("suggested items for you" page, without query - based on user history)
+
+**************************************************************************
 Sample Questions
 **************************************************************************
 Shared by Recruiter
