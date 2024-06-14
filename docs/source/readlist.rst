@@ -52,6 +52,7 @@ Stanford courses
 * Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
 * Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
 * Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
+* Mining Massive Dataset - https://web.stanford.edu/class/cs246/
 
 Linear Algebra
 ***********************************
