@@ -2,6 +2,11 @@
 ML Application and System Design
 #######################################################################
 ********************************************************************************
+Benchmark
+********************************************************************************
+(a) https://www.youtube.com/watch?v=jkKAeIx7F8c
+
+********************************************************************************
 Framework
 ********************************************************************************
 .. note::
@@ -39,6 +44,24 @@ Framework
 		* Identify shortcomings:
 	
 			- Parts that can be iterated on.
+
+********************************************************************************
+Recommendation and Search
+********************************************************************************
+Retrieval
+================================================================================
+(a) retrieval based on query - query can be text or images (image search)
+(b) query-less personalised retrieval for homepage reco (Netflix/YT/Spotify/FB/Amzn homepage)
+(c) item-specific recommendation for "suggested items similar to this"
+
+Ranking
+================================================================================
+(d) context-aware online ranking (CP model or some ranking model)
+
+Policy Enforcement
+================================================================================
+(e) fraud detection
+(f) policy compliance models (age restriction, geo restriction, banned-item restriction) 
 
 ********************************************************************************
 Problem Domains
