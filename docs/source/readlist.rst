@@ -35,6 +35,7 @@ Ilya's Paper List
 
 * Additional Resources
 
+	* `arc.net/folder <https://arc.net/folder/D0472A20-9C20-4D3F-B145-D2865C0A9FEE>`_
 	* [GPT-1](https://lnkd.in/gJ5Pe3HG)
 	* [GPT-2](https://lnkd.in/gatQi8Ud)
 	* [GPT-3](https://lnkd.in/g43GzYfZ)
@@ -52,6 +53,7 @@ Stanford courses
 * Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
 * Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
 * Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
+* Mining Massive Dataset - https://web.stanford.edu/class/cs246/
 
 Linear Algebra
 ***********************************
@@ -99,7 +101,8 @@ ML Theory
 * `Gradients are Not All You Need <https://arxiv.org/pdf/2111.05803.pdf>`_
 * `The Decade of Deep Learning <https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/>`_
 * `Long-Tailed Learning Requires Feature Learning <https://openreview.net/pdf?id=S-h1oFv-mq>`_
-
+* `[MIT] Statistical Learning Theory and Applications <https://cbmm.mit.edu/lh-9-520/syllabus>`_
+* `[GPSS] Gaussian Process Summer School <https://gpss.cc/gpss23/program>`_
 
 ML Practical
 ***********************************
@@ -179,6 +182,7 @@ Applied ML
 LLMs
 ***********************************
 
+* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
 * `Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
 * `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
 * `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
