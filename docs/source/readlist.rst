@@ -101,7 +101,7 @@ ML Theory
 * `The Decade of Deep Learning <https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/>`_
 * `Long-Tailed Learning Requires Feature Learning <https://openreview.net/pdf?id=S-h1oFv-mq>`_
 * `[MIT] Statistical Learning Theory and Applications <https://cbmm.mit.edu/lh-9-520/syllabus>`_
-
+* `[GPSS] Gaussian Process Summer School <https://gpss.cc/gpss23/program>`_
 
 ML Practical
 ***********************************
