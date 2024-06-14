@@ -100,6 +100,7 @@ ML Theory
 * `Gradients are Not All You Need <https://arxiv.org/pdf/2111.05803.pdf>`_
 * `The Decade of Deep Learning <https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/>`_
 * `Long-Tailed Learning Requires Feature Learning <https://openreview.net/pdf?id=S-h1oFv-mq>`_
+* `[MIT] Statistical Learning Theory and Applications <https://cbmm.mit.edu/lh-9-520/syllabus>`_
 
 
 ML Practical
