@@ -35,6 +35,7 @@ Ilya's Paper List
 
 * Additional Resources
 
+	* `arc.net/folder <https://arc.net/folder/D0472A20-9C20-4D3F-B145-D2865C0A9FEE>`_
 	* [GPT-1](https://lnkd.in/gJ5Pe3HG)
 	* [GPT-2](https://lnkd.in/gatQi8Ud)
 	* [GPT-3](https://lnkd.in/g43GzYfZ)
