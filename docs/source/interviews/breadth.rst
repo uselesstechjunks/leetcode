@@ -29,6 +29,14 @@ Study Framework
 		* Computational considerations.
 		* Identify signs for model degradation over time. Remedies?
 
+Sample Questions
+================================================================================
+(a) https://www.geeksforgeeks.org/machine-learning-interview-questions/
+(b) https://www.turing.com/interview-questions/machine-learning
+(c) https://www.interviewbit.com/machine-learning-interview-questions/
+(d) https://anywhere.epam.com/en/blog/machine-learning-interview-questions
+(e) https://www.mygreatlearning.com/blog/machine-learning-interview-questions/
+
 Topics
 ********************************************************************************
 Key Topics
