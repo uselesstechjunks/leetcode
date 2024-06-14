@@ -202,6 +202,7 @@ LLMs
 Applied LLMs
 ***********************************
 
+* `[Github] LLM4Rec: Collection of papers <https://github.com/WLiK/LLM4Rec-Awesome-Papers>`_
 * `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
 * `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
 * `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
@@ -214,7 +215,6 @@ Applied LLMs
 * `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
 * `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
 * [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
-
 
 ML Papers
 ***********************************
