@@ -176,6 +176,7 @@ Applied ML
 * `From Deep to Long Learning? <https://hazyresearch.stanford.edu/blog/2023-03-27-long-learning>`_
 * [CMU] `Graham Neubig's Teaching <https://www.phontron.com/teaching.php>`_
 * [Princeton] `Against Predictive Optimization <https://predictive-optimization.cs.princeton.edu/>`_
+* [Github] Must Read Papers on Pre-Training <https://github.com/thunlp/PLMpapers>`_
 * `NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers <https://speechresearch.github.io/naturalspeech2/>`_
 
 
