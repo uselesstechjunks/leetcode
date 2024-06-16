@@ -184,12 +184,12 @@ Reproducing Kernel Hilbert Space
 	* We define the basis expansion as a mapping from the original domain to this function space, :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K`.
 
 		.. math:: x\in\mathbb{R}^d\mapsto (f:\mathbb{R}^d\mapsto\mathbb{R})\in\mathcal{H}_K
-	* For each point :math:`x_i\in\mathbf{X}`, we map it to a function :math:`f_i(\cdot)\mathcal{H}_K` with a free parameter.
+	* For each point :math:`x_i\in\mathbf{X}`, we map it to a function :math:`f_i(\cdot)\in\mathcal{H}_K` with a free parameter.
 
 .. warning::
 	* Let :math:`K` be the kernel of :math:`\mathcal{H}_K`. Therefore, every :math:`f\in\mathcal{H}_K` can be expressed as
 
-		.. math:: f_i(\cdot)=K(\cdot,x_i)
+		.. math:: f(\cdot)=K(\cdot,x)
 	* The kernel provides the tool to calculate the inner products (and, hence, similarity measure via a metric) between the points.
 
 		.. math:: \langle f_i(\cdot), f_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
