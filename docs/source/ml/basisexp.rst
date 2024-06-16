@@ -180,32 +180,26 @@ A Point Mapping to a Function
 Reproducing Kernel Hilbert Space
 ----------------------------------------------------------------------------------
 .. note::
-	* For each point :math:`x_i\in\mathbf{X}`, we map it to a basis function :math:`h_i`.
-	* We note that functions are, essentially, infinite dimensional vectors.
-	* The basis expansion in this case is defined as :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K` where :math:`\mathcal{H}_K` is a infinite dimensional function space.
-	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ to be the function class, so that every :math:`h_i` can be defined using a kernel, :math:`K`.
+	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ (:math:`\mathcal{H}_K`) to be our function class.
+	* We define the basis expansion as a mapping from the original domain to this function space, :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K`.
 
-		.. math:: h_i(\cdot)=K(\cdot,x_i)
-	* We note the kernel also is the tool for us to calculate the inner products (and, hence, similarity measure via a metric) of these basis functions with one another.
+		.. math:: x\in\mathbb{R}^d\mapsto (f:\mathbb{R}^d\mapsto\mathbb{R})\in\mathcal{H}_K
+	* For each point :math:`x_i\in\mathbf{X}`, we map it to a function :math:`f_i(\cdot)\in\mathcal{H}_K` with a free parameter.
 
-		.. math:: \langle h_i(\cdot), h_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
-	* We consider the function space spanned by linear combination of an infinitely many, possibly uncountable, potential basis functions as a candidate of our estimator.
+.. warning::
+	* Let :math:`K` be the kernel of :math:`\mathcal{H}_K`. Therefore, every :math:`f\in\mathcal{H}_K` can be expressed as
 
-		.. math:: f(x)=\sum_{i\in\mathcal{I}}\alpha_i h_i(x)=\sum_{i\in\mathcal{I}}\alpha_i K(x,x_i)
-	* For intuitive understanding, here is an example:
+		.. math:: f(\cdot)=K(\cdot,x)
+	* The kernel provides the tool to calculate the inner products (and, hence, similarity measure via a metric) between the points.
 
-		* We have 1-dimensioanl data matrix :math:`\mathbf{X}=\begin{bmatrix}x_1=1.1 \\ x_2=1.5 \\ x_3=2.1\end{bmatrix}`.
-		* We define the map :math:`x_i\overset{\mathcal{H}_K}\mapsto h_i(\cdot)` using `Gaussian RBF kernel <https://en.wikipedia.org/wiki/Radial_basis_function_kernel>`_
+		.. math:: \langle f_i(\cdot), f_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
 
-			.. math:: \mathbf{H}=\begin{bmatrix}h_1(x)=\exp(-\frac{||x-1.1||^2}{0.05}) \\ h_2(x)=\exp(-\frac{||x-1.5||^2}{0.05}) \\ h_3(x)=\exp(-\frac{||x-2.1||^2}{0.05})\end{bmatrix}
-		* One linear combination of these functions is shown here in yellow.
+.. note::
+	* :math:`\mathcal{H}_K` contains (uncountably) infinitely many basis functions :math:`K(\cdot,x_i)` for :math:`i\in\mathcal{I}`.
+	* Every function :math:`f\in\mathcal{H}_K` can be expressed using those basis
 
-			.. math:: f(x)=3h_1(x)+2h_2(x)-h_3(x)
-
-	.. image:: ../img/3.png
-	  :width: 600
-	  :alt: A linear combination of functions
-
+		.. math:: f(\cdot)=\sum_{i\in\mathcal{I}}\alpha_i K(\cdot,x_i)
+	
 .. warning::
 	* Reproducing Property: Having an inner product of the function :math:`f` with the reproducing kernel around a point :math:`x` gives back the given function evaluated at that point.
 
@@ -223,9 +217,9 @@ Eigen-decomposition of Linear Space Spanned by Kernel Functions
 
 		* are positive, i.e. :math:`\gamma_i\ge 0`, and 
 		* have bounded sum, i.e. :math:`\sum_{i=1}^\infty \gamma_i < \infty`
-	* Any function :math:`h\in\mathcal{H}_K` can be expressed as a linear combination of the countable eigenfunctions
+	* Any function :math:`f\in\mathcal{H}_K` can be expressed as a linear combination of the countable eigenfunctions
 
-		.. math:: h(x)=\sum_{i=1}^\infty c_i\phi_i(x)
+		.. math:: f(x)=\sum_{i=1}^\infty c_i\phi_i(x)
 
 Kernel Ridge Regression
 ==================================================================================
@@ -252,6 +246,24 @@ Kernel Ridge Regression
 
 		.. math:: \hat{f}=\min_{\boldsymbol{\alpha}}L(\mathbf{y}, \mathbf{K}\boldsymbol{\alpha})+\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
 	* We note that for MSE loss, this reduces to a generalised ridge regression problem.
+
+.. seealso::
+	* For intuitive understanding, here is an example:
+
+		* We have 1-dimensioanl data matrix :math:`\mathbf{X}=\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=\begin{bmatrix}1.1\\1.5\\2.1\end{bmatrix}`.
+		* We define the map :math:`x_i\overset{h}\mapsto f_i(\cdot)` using `Gaussian RBF kernel <https://en.wikipedia.org/wiki/Radial_basis_function_kernel>`_.
+		* We define our 3 basis functions as
+
+			.. math:: \mathbf{h}=[K(\cdot,x_1),K(\cdot,x_2),K(\cdot,x_3)]=\begin{bmatrix}\exp(-\frac{||x-1.1||^2}{0.05}),\exp(-\frac{||x-1.5||^2}{0.05}),\exp(-\frac{||x-2.1||^2}{0.05})\end{bmatrix}
+			
+			* One linear combination of these functions is shown here in yellow.
+
+				.. math:: f(x)=3h_1(x)+2h_2(x)-h_3(x)
+
+			.. image:: ../img/3.png
+			  :width: 600
+			  :alt: A linear combination of functions
+		* Each datapoint :math:`x_i` is the mapped to :math:`\mathbf{h_i}=[K(x_i,x_1),K(x_i,x_2),K(x_i,x_3)]`.
 
 Kernel Support Vector Machine
 ==================================================================================
