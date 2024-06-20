@@ -37,6 +37,26 @@ Sample Questions
 (d) https://anywhere.epam.com/en/blog/machine-learning-interview-questions
 (e) https://www.mygreatlearning.com/blog/machine-learning-interview-questions/
 
+.. note::
+	1. What is convolution Operation? Code it up.
+	2. What is self attention?
+	3. Derive gradient descent update rule for non negative matrix factorisation.
+	4. Code non negative matrix factorisation.
+	5. Derive gradient descent update rule for linear/logistic regression.
+	6. Code stochastic gradient descent in linear/logistic regression setting.
+	7. Code AUC.
+	8. Questions related to my projects/thesis.
+	9. One question from statistics: was related to Bayes theorem.
+	10. Bias-variance tradeoff.
+	11. Design questions: i remember only one, let's say some countries don't allow showing ads for knife, gun, etc, how would you go about building a system that can classify safe queries vs unsafe queries?
+	12. What's a language model?
+	13. Explain the working of any click prediction model.
+	14. A couple of questions related to indexing in search engine.
+	15. Convolution vs feedforward.
+	16. Clustering evaluation.
+	17. How does batch norm help in faster convergence?
+	18. Why does inference take less memory than training?
+
 Topics
 ********************************************************************************
 Key Topics
