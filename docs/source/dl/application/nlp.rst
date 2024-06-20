@@ -11,7 +11,7 @@ RNN
 =========================================================================================
 .. collapse:: RNN implementation in PyTorch
 
-   .. literalinclude:: code/rnn.py
+   .. literalinclude:: ../../code/rnn.py
       :language: python
       :linenos:
 
@@ -24,7 +24,7 @@ LSTM
 =========================================================================================
 .. collapse:: LSTM implementation in PyTorch
 
-   .. literalinclude:: code/lstm.py
+   .. literalinclude:: ../../code/lstm.py
       :language: python
       :linenos:
 
