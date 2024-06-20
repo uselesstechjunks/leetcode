@@ -53,8 +53,8 @@ Sample Questions
 	13. Explain the working of any click prediction model.
 	14. A couple of questions related to indexing in search engine.
 	15. Convolution vs feedforward.
-	16. Clustering evaluation.
-	17. How does batch norm help in faster convergence?
+	16. `Clustering evaluation. <https://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation>`_
+	17. How does batch norm help in faster convergence? [`Interesting read <https://blog.paperspace.com/busting-the-myths-about-batch-normalization/>`_]
 	18. Why does inference take less memory than training?
 
 Topics
