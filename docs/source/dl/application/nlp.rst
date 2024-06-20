@@ -5,6 +5,33 @@ Natural Language Processing
 	Goal: Write summary of key ideas and summary of papers
 
 *****************************************************************************************
+Sequence Modeling
+*****************************************************************************************
+RNN
+=========================================================================================
+.. collapse:: RNN implementation in PyTorch
+
+   .. literalinclude:: code/rnn.py
+      :language: python
+      :linenos:
+
+.. note::
+	* On the diffculty of training Recurrent Neural Networks
+	* Sequence to Sequence Learning with Neural Networks
+	* NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE
+
+LSTM
+=========================================================================================
+.. collapse:: LSTM implementation in PyTorch
+
+   .. literalinclude:: code/lstm.py
+      :language: python
+      :linenos:
+
+.. note::
+	* `StatQuest on LSTM <https://www.youtube.com/watch?v=YCzL96nL7j0>`_
+
+*****************************************************************************************
 Tokenizers
 *****************************************************************************************
 .. warning::
@@ -43,29 +70,6 @@ Position Encoding
 *****************************************************************************************
 Architecture
 *****************************************************************************************
-RNN
-=========================================================================================
-Hidden-to-Hidden Recurrence
------------------------------------------------------------------------------------------
-.. collapse:: RNN implementation in PyTorch
-
-   .. literalinclude:: code/rnn.py
-      :language: python
-      :linenos:
-
-.. note::
-	* On the diffculty of training Recurrent Neural Networks
-	* Sequence to Sequence Learning with Neural Networks
-	* NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE
-
-Long Short-Term Memory (LSTM)
------------------------------------------------------------------------------------------
-.. collapse:: LSTM implementation in PyTorch
-
-   .. literalinclude:: code/lstm.py
-      :language: python
-      :linenos:
-
 Encoder [BERT]
 =========================================================================================
 .. note::
