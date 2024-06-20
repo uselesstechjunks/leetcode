@@ -45,10 +45,26 @@ Architecture
 *****************************************************************************************
 RNN
 =========================================================================================
+Hidden-to-Hidden Recurrence
+-----------------------------------------------------------------------------------------
+.. collapse:: RNN implementation in PyTorch
+
+   .. literalinclude:: code/rnn.py
+      :language: python
+      :linenos:
+
 .. note::
-	* On the diculty of training Recurrent Neural Networks
+	* On the diffculty of training Recurrent Neural Networks
 	* Sequence to Sequence Learning with Neural Networks
 	* NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE
+
+Long Short-Term Memory (LSTM)
+-----------------------------------------------------------------------------------------
+.. collapse:: LSTM implementation in PyTorch
+
+   .. literalinclude:: code/lstm.py
+      :language: python
+      :linenos:
 
 Encoder [BERT]
 =========================================================================================
