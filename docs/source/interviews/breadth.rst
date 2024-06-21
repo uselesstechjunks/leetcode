@@ -63,6 +63,21 @@ Sample Questions
 	17. How does batch norm help in faster convergence? [`Interesting read <https://blog.paperspace.com/busting-the-myths-about-batch-normalization/>`_]
 	18. Why does inference take less memory than training?
 
+.. note::
+	1. Explain one project where you faced a challenging or ambiguous problem statement and solved it. What was the business impact?
+	2. How do you decide between the model complexity vs the latency budget (I mentioned this during my explanation)?
+	3. What is SFT and why it is needed?
+	4. What do you understand by PPO in RLHF?
+	5. What are LoRA and QLoRA?
+	6. Have you worked with other types of generative models like GAN or VAE?
+	7. Tell me how GANs are trained. Objective function?
+	8. What are some of the problems in training GANs? Said Mode Collapse and Vanishing Gradient (too string discriminator). Asked me to explain both.
+	9. How are VAEs different from vanilla autoencoders?
+	10. Explain the reparameterisation trick.
+	11. For classification trees, what is the splitting criteria?
+	12. How are Random Forests different from normal classification trees?
+	13. What is regularisation and why do we need it? Explained in RR and DNN? What type of regulariser is used in RR? What is the L1 version called?
+
 Topics
 ********************************************************************************
 Key Topics
