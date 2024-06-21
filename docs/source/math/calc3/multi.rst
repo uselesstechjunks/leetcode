@@ -291,8 +291,8 @@ Useful Derivatives
 	:math:`\mathbf{x}`, , , :math:`\mathbf{x}\mathbf{x}^T`, , :math:`\mathbf{x}\otimes\mathbb{I}+\mathbb{I}\otimes\mathbf{x}`
 	:math:`\mathbf{X}`, , ,:math:`\mathbf{X}`, :math:`\mathbb{I}\otimes\mathbb{I}`, :math:`\mathbb{I}\otimes\mathbb{I}`
 	:math:`\mathbf{X}`, , :math:`\mathbf{X}\mathbf{a}`, , , :math:`\mathbf{a}^T\otimes\mathbb{I}`
-	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}\mathbf{b}=\mathbf{b}^T\mathbf{X}\mathbf{a}`, , , :math:`\mathbf{b}\mathbf{a}^T`, :math:`\mathbf{a}\mathbf{b}^T`
-	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}^T\mathbf{b}=\mathbf{b}^T\mathbf{X}^T\mathbf{a}`, , , :math:`\mathbf{a}\mathbf{b}^T`, :math:`\mathbf{b}\mathbf{a}^T`
+	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}\mathbf{b}=\mathbf{b}^T\mathbf{X}^T\mathbf{a}`, , , :math:`\mathbf{b}\mathbf{a}^T`, :math:`\mathbf{a}\mathbf{b}^T`
+	:math:`\mathbf{X}`, :math:`\mathbf{a}^T\mathbf{X}^T\mathbf{b}=\mathbf{b}^T\mathbf{X}\mathbf{a}`, , , :math:`\mathbf{a}\mathbf{b}^T`, :math:`\mathbf{b}\mathbf{a}^T`
 	:math:`\mathbf{X}`, :math:`\mathbf{b}^T\mathbf{X}^T\mathbf{X}\mathbf{a}=(\mathbf{X}\mathbf{b})^T(\mathbf{X}\mathbf{a})`, , , :math:`(\mathbf{a}\mathbf{b}^T+\mathbf{b}\mathbf{a}^T)\mathbf{X}^T`, :math:`\mathbf{X}(\mathbf{a}\mathbf{b}^T+\mathbf{b}\mathbf{a}^T)`
 
 .. seealso::
