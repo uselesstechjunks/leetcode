@@ -87,6 +87,7 @@ Must Read Papers
 		LLM, SFT+RLHF: Learning to summarize from human feedback
 		LLM, DPO: Direct Preference Optimization: Your Language Model is Secretly a Reward Model
 		LLM, D2PO: Discriminator-Guided DPO with Response Evaluation Models
+		LLM, RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
 		Efficiency, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
 		Efficiency, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
 		Efficiency, LoRA Low-Rank Adaptation of Large Language Models
