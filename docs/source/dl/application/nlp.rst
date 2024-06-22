@@ -273,6 +273,7 @@ Embedding Retrieval: Vector DB
 Retrieval Augmented Generation (RAG)
 -----------------------------------------------------------------------------------------
 .. note::
+	* [Stanford Lecture] `Stanford CS25: V3 I Retrieval Augmented Language Models <https://www.youtube.com/watch?v=mE7IDf2SmJg>`_
 	* [Huggingface] `Rag Doc <https://huggingface.co/docs/transformers/main/en/model_doc/rag#rag>`_
 	* [Nvidia] `RAG 101: Demystifying Retrieval-Augmented Generation Pipelines <https://resources.nvidia.com/en-us-ai-large-language-models/demystifying-rag-blog>`_
 	* [Nvidia] `RAG 101: Retrieval-Augmented Generation Questions Answered <https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/>`_
