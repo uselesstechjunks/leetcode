@@ -247,8 +247,8 @@ Embedding Generation and Eval
 	* [TechTarget] `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_	
 	* Evaluation Metrics:
 
-		* BEIR - `paper link <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
-		* MTEB - `paper link <https://arxiv.org/pdf/2210.07316>`_
+		* `BEIR <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
+		* `MTEB <https://arxiv.org/pdf/2210.07316>`_
 		* For speech and vision, refer to the guide above from TechTarget.
 
 Model Architecture
