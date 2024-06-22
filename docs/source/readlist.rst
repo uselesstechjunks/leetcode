@@ -215,8 +215,8 @@ Applied ML
 LLMs
 ***********************************
 
+* `[Excellent Blog Post by Sebastian Rachka] Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
 * `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
-* `Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
 * `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
 * `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
 * `Jarvis/HuggingGPT <https://github.com/microsoft/JARVIS>`_
