@@ -80,6 +80,7 @@ Must Read Papers
 		Multilingual, mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
+		IR, DPR: Dense Passage Retrieval for Open-Domain Question Answering
 		LLM, Aligning language models to follow instructions
 		LLM, Scaling Instruction-Finetuned Language Models
 		LLM, InstructGpt: Training language models to follow instructions with human feedback
