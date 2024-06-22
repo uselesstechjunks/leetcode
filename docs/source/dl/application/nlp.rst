@@ -215,15 +215,20 @@ Task Specific Setup
 *****************************************************************************************
 .. note::
 	* Text Generation
+
 		* `[mlabonne.github.io] Decoding Strategies in Large Language Models <https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html>`_
 
 	* Text Classification
+
 		* Token Classification
 		* Sentence Classification
+
 			* Sentiment Analysis
 
 	* Language Understanding
+
 		* Finding Similar Items
+
 			* Approximate Nearest Neighbour Search [DiskANN]
 
 		* Document Summarization
@@ -232,17 +237,27 @@ Task Specific Setup
 	* Machine Translation
 
 *****************************************************************************************
-LLM Technology
+LLM Technology Stack
 *****************************************************************************************
-.. note::
+.. note::	
+	* Embeddings
+
+		* `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
+	* Vector DB
+
+		* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
+		* `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
 	* Prompt Engineering
 	* Prompt Tuning
+	* RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
+	* `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
+	* `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
 	* RAG
-	* DPO
 
 Resources
 =========================================================================================
 .. note::
+	* `OpenAI Docs <https://platform.openai.com/docs/overview>`_
 	* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
 	* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
 	* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
