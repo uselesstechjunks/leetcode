@@ -246,14 +246,18 @@ LLM Technology Stack
 	* Vector DB
 
 		* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
+		* `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
 	* Prompt Engineering
 	* Prompt Tuning
+	* RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
+	* `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
+	* `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
 	* RAG
-	* DPO
 
 Resources
 =========================================================================================
 .. note::
+	* `OpenAI Docs <https://platform.openai.com/docs/overview>`_
 	* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
 	* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
 	* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
