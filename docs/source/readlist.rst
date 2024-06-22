@@ -49,11 +49,43 @@ Stanford courses
 ***********************************
 * Natural Language Processing - https://web.stanford.edu/class/cs224n/
 * Transformers United - https://web.stanford.edu/class/cs25/
-* Deep generative models - https://deepgenerativemodels.github.io/
-* Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
 * Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
 * Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
+* Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
+* Deep generative models - https://deepgenerativemodels.github.io/
+* Systems for Machine Learning - https://cs229s.stanford.edu/fall2023/
+* Stanford MLSys Seminar - https://mlsys.stanford.edu/
 * Mining Massive Dataset - https://web.stanford.edu/class/cs246/
+
+Must Read Papers
+***********************************
+.. csv-table:: 
+	:header: "Tag", "Title", "Link"
+	:align: center
+	
+		Transformer,Attention Is All You Need,
+		MLM, BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,
+		MLM, RoBERTa: A Robustly Optimized BERT Pretraining Approach,
+		MLM, TwinBERT: Distilling Knowledge to Twin-Structured BERT Models for Efficient Retrieval,
+		CLM, GPT2: Language Models are Unsupervised Multitask Learners,
+		CLM, GPT3: Language Models are Few-Shot Learners,
+		CLM, LLaMA: Open and Efficient Foundation Language Models,
+		CLM, Llama 2: Open Foundation and Fine-Tuned Chat Models,
+		CLM, Mixtral: Mixtral of Experts,
+		PLM, XLNet: Generalized Autoregressive Pretraining for Language Understanding,
+		Seq2Seq, BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation Translation and Comprehension,
+		Seq2Seq, T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer,
+		Multilingual, XLM: Cross-lingual Language Model Pretraining,
+		Multilingual, XLM-R: Unsupervised Cross-lingual Representation Learning at Scale,
+		Multilingual, mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer,
+		Efficiency, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale,
+		Efficiency, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,
+		Efficiency, LoRA Low-Rank Adaptation of Large Language Models,
+		Efficiency, QLORA: Efficient Finetuning of Quantized LLMs,
+		LLM, InstructGpt: Training language models to follow instructions with human feedback,
+		LLM, PPO: Proximal Policy Optimization Algorithms,
+		LLM, SFT+RLHF: Learning to summarize from human feedback,
+		LLM, DPO: Direct Preference Optimization: Your Language Model is Secretly a Reward Model,
 
 Linear Algebra
 ***********************************
