@@ -239,14 +239,17 @@ Task Specific Setup
 *****************************************************************************************
 LLM Technology Stack
 *****************************************************************************************
-.. note::
+.. note::	
+	* Embeddings
+
+		* `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
+	* Vector DB
+
+		* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
 	* Prompt Engineering
 	* Prompt Tuning
 	* RAG
 	* DPO
-	* Vector DB
-
-		* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
 
 Resources
 =========================================================================================
