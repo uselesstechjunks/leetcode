@@ -49,10 +49,12 @@ Stanford courses
 ***********************************
 * Natural Language Processing - https://web.stanford.edu/class/cs224n/
 * Transformers United - https://web.stanford.edu/class/cs25/
-* Deep generative models - https://deepgenerativemodels.github.io/
-* Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
 * Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
 * Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
+* Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
+* Deep generative models - https://deepgenerativemodels.github.io/
+* Systems for Machine Learning - https://cs229s.stanford.edu/fall2023/
+* Stanford MLSys Seminar - https://mlsys.stanford.edu/
 * Mining Massive Dataset - https://web.stanford.edu/class/cs246/
 
 Must Read Papers
