@@ -215,15 +215,20 @@ Task Specific Setup
 *****************************************************************************************
 .. note::
 	* Text Generation
+
 		* `[mlabonne.github.io] Decoding Strategies in Large Language Models <https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html>`_
 
 	* Text Classification
+
 		* Token Classification
 		* Sentence Classification
+
 			* Sentiment Analysis
 
 	* Language Understanding
+
 		* Finding Similar Items
+
 			* Approximate Nearest Neighbour Search [DiskANN]
 
 		* Document Summarization
