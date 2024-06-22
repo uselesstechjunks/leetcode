@@ -239,15 +239,39 @@ Task Specific Setup
 *****************************************************************************************
 LLM Technology Stack
 *****************************************************************************************
-.. note::	
-	* Embeddings
+Embeddings for Search and Retrieval
+=========================================================================================
+Embedding Generation and Eval
+-----------------------------------------------------------------------------------------
+.. note::
+	* [TechTarget] `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_	
+	* Evaluation Metrics:
 
-		* `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
-		* `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_
-	* Vector DB
+		* BEIR - `paper link <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
+		* MTEB - `paper link <https://arxiv.org/pdf/2210.07316>`_
+		* For speech and vision, refer to the guide above from TechTarget.
 
-		* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
-		* `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
+Model Architecture
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* [Huggingface] `SBERT <https://sbert.net/docs/sentence_transformer/pretrained_models.html>`_
+	* [Google GTR - T5 Based] `Large Dual Encoders Are Generalizable Retrievers <https://arxiv.org/pdf/2112.07899>`_
+	* [`Microsoft E5 <https://github.com/microsoft/unilm/tree/master/e5>`_] `Improving Text Embeddings with Large Language Models <https://arxiv.org/pdf/2401.00368>`_
+	* [Cohere - Better Perf on RAG] `Embed v3 <https://cohere.com/blog/introducing-embed-v3>`_
+
+Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
+
+Embedding Retrieval: Vector DB
+-----------------------------------------------------------------------------------------
+.. note::
+	* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
+	* `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
+
+[TODO: Classify Later] Other Topics
+=========================================================================================
 	* Prompt Engineering
 	* Prompt Tuning
 	* RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
