@@ -232,13 +232,16 @@ Task Specific Setup
 	* Machine Translation
 
 *****************************************************************************************
-LLM Technology
+LLM Technology Stack
 *****************************************************************************************
 .. note::
 	* Prompt Engineering
 	* Prompt Tuning
 	* RAG
 	* DPO
+	* Vector DB
+
+		* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
 
 Resources
 =========================================================================================
