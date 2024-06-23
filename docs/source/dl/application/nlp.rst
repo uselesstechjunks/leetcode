@@ -303,9 +303,10 @@ Trained RAG
 	* [FAIR] kNN-LM: `Generalization through Memorization: Nearest Neighbor Language Models <https://arxiv.org/pdf/1911.00172>`_
 	* [DeepMind] Retro: `Improving language models by retrieving from trillions of tokens <https://arxiv.org/pdf/2112.04426>`_
 	* [Nvidia] Retro++: `InstructRetro: Instruction Tuning post Retrieval-Augmented Pretraining <https://arxiv.org/pdf/2310.07713v2>`_
-	* [Google Research] `REALM: Retrieval-Augmented Language Model Pre-Training <https://arxiv.org/pdf/2002.08909>`_
+	* [Google] `REALM: Retrieval-Augmented Language Model Pre-Training <https://arxiv.org/pdf/2002.08909>`_
 	* [FAIR] `Atlas: Few-shot Learning with Retrieval Augmented Language Models <https://arxiv.org/pdf/2208.03299>`_
 	* [FAIR] FLARE: `Active Retrieval Augmented Generation <https://arxiv.org/pdf/2305.06983>`_
+	* [FAIR] `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
 	* `SILO Language Models: Isolating Legal Risk In a Nonparametric Datastore <https://arxiv.org/pdf/2308.04430>`_
 	* Issue with Frozen RAG: `Lost in the Middle: How Language Models Use Long Contexts <https://arxiv.org/pdf/2307.03172>`_
 	* `Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection <https://arxiv.org/pdf/2310.11511>`_
