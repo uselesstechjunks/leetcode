@@ -414,7 +414,16 @@ Summary
 =========================================================================================
 * Prompt Engineering
 * Prompt Tuning
-* Instructio Finetuning dataset: https://github.com/allenai/natural-instructions/
+* Dataset search tool by google: https://datasetsearch.research.google.com
+* Instruction Finetuning datasets
+
+	* NaturalInstructions: https://github.com/allenai/natural-instructions/
+* Supervised Finetuning datasets
+
+	* UltraChat: https://github.com/thunlp/UltraChat
+* RLHF/DPO datasets
+
+	* Ultrafeedback: https://huggingface.co/datasets/argilla/ultrafeedback-curated
 * Evaluation of instruction tuned/pre-trained models
 
 	* MMLU
