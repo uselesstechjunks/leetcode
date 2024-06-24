@@ -347,78 +347,87 @@ Summary
 	* z = doc
 	* y = output
 
-.. note::
-	* Frozen RAG:
+* Frozen RAG:
 
-		- In-context:
+	- In-context:
 
-			(a) In context RALM:
+		(a) In context RALM:
 
-				- Retrieve k documents Z_k.
-				- Rerank the docs using (1) zero-shot LM or (2) dedicated trained ranker.
-				- Select top doc Z_top.
-				- Prepend top doc in textual format as-is to the query as a part of the prompt for the LM to generate.
-				- What we pass to the decoder: prompt with Z_top in it.
-				- Issues: problematic for multiple docs (!)
-		- In-context or in Seq2Seq or in decoder:
+			- Retrieve k documents Z_k.
+			- Rerank the docs using (1) zero-shot LM or (2) dedicated trained ranker.
+			- Select top doc Z_top.
+			- Prepend top doc in textual format as-is to the query as a part of the prompt for the LM to generate.
+			- What we pass to the decoder: prompt with Z_top in it.
+			- Issues: problematic for multiple docs (!)
+	- In-context or in Seq2Seq or in decoder:
 
-			(b) RePLUG:
+		(b) RePLUG:
 
-				- Retrieve k documents.
-				- Use cosine similarity score to compute p(Z_k | X).
-				- What we pass to the decoder: concat{Z_k, X} or prompt with Z_k in it.
-				- Make k forward passes in the decoder for each token to compute the likelihood over vocab using softmax p(Y_i | concat{Z_k, X}, Y_1..{i-1}).
-				- Rescale the softmax with p(Z_k | X) and marginalize.
-				- Pass the marginalized softmax to the decoder.
-				- Issues: k forward passes at each token.
-		- Just decoder:
+			- Retrieve k documents.
+			- Use cosine similarity score to compute p(Z_k | X).
+			- What we pass to the decoder: concat{Z_k, X} or prompt with Z_k in it.
+			- Make k forward passes in the decoder for each token to compute the likelihood over vocab using softmax p(Y_i | concat{Z_k, X}, Y_1..{i-1}).
+			- Rescale the softmax with p(Z_k | X) and marginalize.
+			- Pass the marginalized softmax to the decoder.
+			- Issues: k forward passes at each token.
+	- Just decoder:
 
-			(c) kNN-LN:
+		(c) kNN-LN:
 
-				- For the current token consider X = encode(Y_1...Y_{i-1}).
-				- Retrieve k documents Z_k matching X.
-				- Make k forward passes in the decoder with the matching doc p_k(Y_i | Z_1..{i-1}).
-				- Rescale p_k(Y_i | Z_1..{i-1}) over k and marginalize over the next token Y_i.
-				- Do the same in the original sequence p_decode(Y_i | Z_1..{i-1}).
-				- Interpolate between these using a hyperparameter.
-				- Issues: k forward passes + retrieval at each token.
-	* Retriever trainable RAG:
+			- For the current token consider X = encode(Y_1...Y_{i-1}).
+			- Retrieve k documents Z_k matching X.
+			- Make k forward passes in the decoder with the matching doc p_k(Y_i | Z_1..{i-1}).
+			- Rescale p_k(Y_i | Z_1..{i-1}) over k and marginalize over the next token Y_i.
+			- Do the same in the original sequence p_decode(Y_i | Z_1..{i-1}).
+			- Interpolate between these using a hyperparameter.
+			- Issues: k forward passes + retrieval at each token.
+* Retriever trainable RAG:
 
-		- Seq2Seq:
+	- Seq2Seq:
 
-			(a) RePLUG-LSR:
+		(a) RePLUG-LSR:
 
-				- Uses the parametric LM's output to update the retriever.
-				- Loss: KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
-	* E2E trainable RAG:
+			- Uses the parametric LM's output to update the retriever.
+			- Loss: KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
+* E2E trainable RAG:
 
-		- Seq2Seq:
+	- Seq2Seq:
 
-			(a) RAG:
+		(a) RAG:
 
-				- Per token: same as RePLUG - output probability is marginalised at the time of generation of each token, pass it to beam decoder.
-				- Per sequence: output probability is marginalised for the entire sequence.
+			- Per token: same as RePLUG - output probability is marginalised at the time of generation of each token, pass it to beam decoder.
+			- Per sequence: output probability is marginalised for the entire sequence.
 
-					- Results in #Y generated sequences.
-					- Might require additional passes.
+				- Results in #Y generated sequences.
+				- Might require additional passes.
 
-				- Training - NLL loss across predicted tokens.
-				- Issues: E2E training makes doc index update problematic, solution: just update the query encoder.
-			(b) Atlas:
+			- Training - NLL loss across predicted tokens.
+			- Issues: E2E training makes doc index update problematic, solution: just update the query encoder.
+		(b) Atlas:
 
-				- Multiple choice for updating the retriever - simple RePLUG-LSR type formulation based on the KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
-				- Pre-training: same objective as the Seq2Seq (prefixLM or MLM) or decoder-only objective works well.
-				- Training:
-				- Issues:
+			- Multiple choice for updating the retriever - simple RePLUG-LSR type formulation based on the KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
+			- Pre-training: same objective as the Seq2Seq (prefixLM or MLM) or decoder-only objective works well.
+			- Training:
+			- Issues:
 
 [TODO: Classify Later] Other Topics
 =========================================================================================
-	* Prompt Engineering
-	* Prompt Tuning
-	* RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
-	* `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
-	* `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
-	* RAG
+* Prompt Engineering
+* Prompt Tuning
+* Instructio Finetuning dataset: https://github.com/allenai/natural-instructions/
+* Evaluation of instruction tuned/pre-trained models
+
+	* MMLU
+
+		* Paper: `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
+		* Dataset: https://huggingface.co/datasets/cais/mmlu
+	* Big-Bench
+
+		* Paper: `Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models <https://arxiv.org/pdf/2206.04615>`_
+		* Dataset: https://github.com/google/BIG-bench
+* RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
+* `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
+* `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
 
 Resources
 =========================================================================================
