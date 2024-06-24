@@ -343,9 +343,9 @@ Tech Stack
 Summary
 -----------------------------------------------------------------------------------------
 .. note::
-	X = query
-	Z = doc
-	Y = output
+	* x = query
+	* z = doc
+	* y = output
 
 .. note::
 	* Frozen RAG:
@@ -359,7 +359,7 @@ Summary
 				- Select top doc Z_top.
 				- Prepend top doc in textual format as-is to the query as a part of the prompt for the LM to generate.
 				- What we pass to the decoder: prompt with Z_top in it.
-				Issues: problematic for multiple docs (!)
+				- Issues: problematic for multiple docs (!)
 		- In-context or in Seq2Seq or in decoder:
 
 			(b) RePLUG:
@@ -370,7 +370,7 @@ Summary
 				- Make k forward passes in the decoder for each token to compute the likelihood over vocab using softmax p(Y_i | concat{Z_k, X}, Y_1..{i-1}).
 				- Rescale the softmax with p(Z_k | X) and marginalize.
 				- Pass the marginalized softmax to the decoder.
-				Issues: k forward passes at each token.
+				- Issues: k forward passes at each token.
 		- Just decoder:
 
 			(c) kNN-LN:
@@ -381,8 +381,7 @@ Summary
 				- Rescale p_k(Y_i | Z_1..{i-1}) over k and marginalize over the next token Y_i.
 				- Do the same in the original sequence p_decode(Y_i | Z_1..{i-1}).
 				- Interpolate between these using a hyperparameter.
-				Issues: k forward passes + retrieval at each token.
-				
+				- Issues: k forward passes + retrieval at each token.
 	* Retriever trainable RAG:
 
 		- Seq2Seq:
@@ -391,7 +390,6 @@ Summary
 
 				- Uses the parametric LM's output to update the retriever.
 				- Loss: KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
-	
 	* E2E trainable RAG:
 
 		- Seq2Seq:
@@ -400,16 +398,18 @@ Summary
 
 				- Per token: same as RePLUG - output probability is marginalised at the time of generation of each token, pass it to beam decoder.
 				- Per sequence: output probability is marginalised for the entire sequence.
-					- Results in |Y| generated sequences.
+
+					- Results in #Y generated sequences.
 					- Might require additional passes.
-				Training - NLL loss across predicted tokens.
-				Issues: E2E training makes doc index update problematic, solution: just update the query encoder.
+
+				- Training - NLL loss across predicted tokens.
+				- Issues: E2E training makes doc index update problematic, solution: just update the query encoder.
 			(b) Atlas:
 
 				- Multiple choice for updating the retriever - simple RePLUG-LSR type formulation based on the KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
 				- Pre-training: same objective as the Seq2Seq (prefixLM or MLM) or decoder-only objective works well.
-				Training:
-				Issues:
+				- Training:
+				- Issues:
 
 [TODO: Classify Later] Other Topics
 =========================================================================================
