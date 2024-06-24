@@ -241,6 +241,10 @@ LLM Technology Stack
 *****************************************************************************************
 Embeddings for Search and Retrieval
 =========================================================================================
+.. note::
+	* SPLADE: `SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval <https://arxiv.org/pdf/2109.10086>`_
+	* [Meta] DRAGON: `How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval <https://arxiv.org/pdf/2302.07452>`_
+
 Embedding Generation and Eval
 -----------------------------------------------------------------------------------------
 .. note::
