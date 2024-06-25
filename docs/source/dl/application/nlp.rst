@@ -413,6 +413,8 @@ Summary
 [TODO: Classify Later] Other Topics
 =========================================================================================
 * Prompt Engineering
+
+	* https://www.prompthub.us/blog
 * Prompt Tuning
 * Dataset search tool by google: https://datasetsearch.research.google.com
 * Instruction Finetuning datasets
