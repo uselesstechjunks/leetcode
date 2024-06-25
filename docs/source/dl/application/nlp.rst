@@ -415,6 +415,7 @@ Summary
 * Prompt Engineering
 
 	* https://www.prompthub.us/blog
+	* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
 * Prompt Tuning
 * Dataset search tool by google: https://datasetsearch.research.google.com
 * Instruction Finetuning datasets
