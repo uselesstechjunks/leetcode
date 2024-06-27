@@ -5,47 +5,48 @@ Reading List
 ******************************************************************************************
 Ilya's Paper List
 ******************************************************************************************
-* Fundamentals
+* `arc.net/folder <https://arc.net/folder/D0472A20-9C20-4D3F-B145-D2865C0A9FEE>`_
 
-	* The Annotated Transformer
-	* The First Law of Complexodynamics
-	* The Unreasonable Effectiveness of RNNs
-	* Understanding LSTM Networks
-	* Recurrent Neural Network Regularization
-	* Keeping Neural Networks Simple by Minimizing the Description Length of the Weights
-	* Pointer Networks
-	* ImageNet Classification with Deep CNNs
-	* Order Matters: Sequence to Sequence for Sets
-	* GPipe: Efficient Training of Giant Neural Networks
-	* Deep Residual Learning for Image Recognition
-	* Multi-Scale Context Aggregation by Dilated Convolutions
-	* Neural Quantum Chemistry
-	* Attention Is All You Need
-	* Neural Machine Translation by Jointly Learning to Align and Translate
-	* Identity Mappings in Deep Residual Networks
-	* A Simple NN Module for Relational Reasoning
-	* Variational Lossy Autoencoder
-	* Relational RNNs
-	* Quantifying the Rise and Fall of Complexity in Closed Systems
-	* Neural Turing Machines
-	* Deep Speech 2: End-to-End Speech Recognition in English and Mandarin
-	* Scaling Laws for Neural LMs (arxiv.org)
-	* A Tutorial Introduction to the Minimum Description Length Principle (arxiv.org)
-	* Machine Super Intelligence Dissertation (vetta.org)
-	* PAGE 434 onwards: Komogrov Complexity (lirmm.fr)
-	* CS231n Convolutional Neural Networks for Visual Recognition (cs231n.github.io)
+Fundamentals
+------------------------------------------------------------------------------------------
+* The Annotated Transformer
+* The First Law of Complexodynamics
+* The Unreasonable Effectiveness of RNNs
+* Understanding LSTM Networks
+* Recurrent Neural Network Regularization
+* Keeping Neural Networks Simple by Minimizing the Description Length of the Weights
+* Pointer Networks
+* ImageNet Classification with Deep CNNs
+* Order Matters: Sequence to Sequence for Sets
+* GPipe: Efficient Training of Giant Neural Networks
+* Deep Residual Learning for Image Recognition
+* Multi-Scale Context Aggregation by Dilated Convolutions
+* Neural Quantum Chemistry
+* Attention Is All You Need
+* Neural Machine Translation by Jointly Learning to Align and Translate
+* Identity Mappings in Deep Residual Networks
+* A Simple NN Module for Relational Reasoning
+* Variational Lossy Autoencoder
+* Relational RNNs
+* Quantifying the Rise and Fall of Complexity in Closed Systems
+* Neural Turing Machines
+* Deep Speech 2: End-to-End Speech Recognition in English and Mandarin
+* Scaling Laws for Neural LMs (arxiv.org)
+* A Tutorial Introduction to the Minimum Description Length Principle (arxiv.org)
+* Machine Super Intelligence Dissertation (vetta.org)
+* PAGE 434 onwards: Komogrov Complexity (lirmm.fr)
+* CS231n Convolutional Neural Networks for Visual Recognition (cs231n.github.io)
 
-* Additional Resources
-
-	* `arc.net/folder <https://arc.net/folder/D0472A20-9C20-4D3F-B145-D2865C0A9FEE>`_
-	* [GPT-1](https://lnkd.in/gJ5Pe3HG)
-	* [GPT-2](https://lnkd.in/gatQi8Ud)
-	* [GPT-3](https://lnkd.in/g43GzYfZ)
-	* [GPT-4](https://lnkd.in/ga_xEpEj)
-	* [Llama-2](https://lnkd.in/gutaGW8h)
-	* [Tools](https://lnkd.in/gqJ3aXpS)
-	* [Gemini-Pro-1.5](https://lnkd.in/gbDcYp89)
-	* [Agentic Patterns Series](https://lnkd.in/gphZ6Y5s)
+Additional Resources
+------------------------------------------------------------------------------------------
+* [GPT-1](https://lnkd.in/gJ5Pe3HG)
+* [GPT-2](https://lnkd.in/gatQi8Ud)
+* [GPT-3](https://lnkd.in/g43GzYfZ)
+* [GPT-4](https://lnkd.in/ga_xEpEj)
+* [Llama-2](https://lnkd.in/gutaGW8h)
+* [Tools](https://lnkd.in/gqJ3aXpS)
+* [Gemini-Pro-1.5](https://lnkd.in/gbDcYp89)
+* [Agentic Patterns Series](https://lnkd.in/gphZ6Y5s)
 
 ******************************************************************************************
 University courses
@@ -64,43 +65,47 @@ University courses
 ******************************************************************************************
 LLMs
 ******************************************************************************************
+.. note::
+	* [Sebastian Rachka] `Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
+	* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
+	* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
+	* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
+	* `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
+	* `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
 
-* `[Excellent Blog Post by Sebastian Rachka] Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
-* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
-* `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
-* `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
-* `Jarvis/HuggingGPT <https://github.com/microsoft/JARVIS>`_
-* `Sparks of Artificial General Intelligence <https://arxiv.org/pdf/2303.12712.pdf>`_
-* `Reflexion: an autonomous agent with dynamic memory and self-reflection <https://arxiv.org/pdf/2303.11366.pdf>`_
-* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
-* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
-* `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
-* `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
-* `Hyena Hierarchy: Towards Larger Convolutional Language Models <https://arxiv.org/pdf/2302.10866.pdf>`_
-* `Scaling Transformer to 1M tokens and beyond with RMT <https://arxiv.org/pdf/2304.11062.pdf>`_
-* `AI/ML/LLM/Transformer Models Timeline and List <https://ai.v-gar.de/ml/transformer/timeline/>`_
-* `Think Before You Act: Unified Policy for Interleaving Language Reasoning with Actions <https://arxiv.org/pdf/2304.11063.pdf>`_
+.. seealso::
+	* `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
+	* `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
+	* `Jarvis/HuggingGPT <https://github.com/microsoft/JARVIS>`_
+	* `Sparks of Artificial General Intelligence <https://arxiv.org/pdf/2303.12712.pdf>`_
+	* `Reflexion: an autonomous agent with dynamic memory and self-reflection <https://arxiv.org/pdf/2303.11366.pdf>`_
+	* `Hyena Hierarchy: Towards Larger Convolutional Language Models <https://arxiv.org/pdf/2302.10866.pdf>`_
+	* `Scaling Transformer to 1M tokens and beyond with RMT <https://arxiv.org/pdf/2304.11062.pdf>`_
+	* `AI/ML/LLM/Transformer Models Timeline and List <https://ai.v-gar.de/ml/transformer/timeline/>`_
+	* `Think Before You Act: Unified Policy for Interleaving Language Reasoning with Actions <https://arxiv.org/pdf/2304.11063.pdf>`_
 
 ******************************************************************************************
 Applied LLMs
 ******************************************************************************************
+.. note::
+	* [Blog] `eugeneyan.com <https://eugeneyan.com/>`_
+	* [Blog] `sh-reya.com <https://www.sh-reya.com/blog>`_
+	* [Blog] `hamel.dev <https://hamel.dev/>`_
+	* [Github] `LLM4Rec: Collection of papers <https://github.com/WLiK/LLM4Rec-Awesome-Papers>`_
+	* [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
 
-* `[Blog] eugeneyan.com <https://eugeneyan.com/>`_
-
-	* `HN Discussion Forum <https://news.ycombinator.com/item?id=36965993>`_
-* `[Github] LLM4Rec: Collection of papers <https://github.com/WLiK/LLM4Rec-Awesome-Papers>`_
-* `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
-* `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
-* `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
-* `Man and machine: GPT for second brains <https://reasonabledeviations.com/2023/02/05/gpt-for-second-brain/>`_
-* `Learn Prompting <https://learnprompting.org/>`_
-* `Prompt Engineering vs. Blind Prompting <https://mitchellh.com/writing/prompt-engineering-vs-blind-prompting>`_
-* `An example of LLM prompting for programming <https://martinfowler.com/articles/2023-chatgpt-xu-hao.html>`_
-* `Chat with any PDF <https://www.chatpdf.com/>`_
-* `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
-* `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
-* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
-* [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
+.. seealso::
+	* `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
+	* `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
+	* `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
+	* `Man and machine: GPT for second brains <https://reasonabledeviations.com/2023/02/05/gpt-for-second-brain/>`_
+	* `Learn Prompting <https://learnprompting.org/>`_
+	* `Prompt Engineering vs. Blind Prompting <https://mitchellh.com/writing/prompt-engineering-vs-blind-prompting>`_
+	* `An example of LLM prompting for programming <https://martinfowler.com/articles/2023-chatgpt-xu-hao.html>`_
+	* `Chat with any PDF <https://www.chatpdf.com/>`_
+	* `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
+	* `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
+	* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
 
 ******************************************************************************************
 Must Read Papers
