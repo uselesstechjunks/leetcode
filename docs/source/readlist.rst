@@ -1,8 +1,10 @@
+##########################################################################################
 Reading List
-##############################
+##########################################################################################
 
+******************************************************************************************
 Ilya's Paper List
-***********************************
+******************************************************************************************
 * Fundamentals
 
 	* The Annotated Transformer
@@ -45,20 +47,64 @@ Ilya's Paper List
 	* [Gemini-Pro-1.5](https://lnkd.in/gbDcYp89)
 	* [Agentic Patterns Series](https://lnkd.in/gphZ6Y5s)
 
-Stanford courses
-***********************************
-* Natural Language Processing - https://web.stanford.edu/class/cs224n/
-* Transformers United - https://web.stanford.edu/class/cs25/
-* Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
-* Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
-* Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
-* Deep generative models - https://deepgenerativemodels.github.io/
-* Systems for Machine Learning - https://cs229s.stanford.edu/fall2023/
-* Stanford MLSys Seminar - https://mlsys.stanford.edu/
-* Mining Massive Dataset - https://web.stanford.edu/class/cs246/
+******************************************************************************************
+University courses
+******************************************************************************************
+* [Stanford] Natural Language Processing - https://web.stanford.edu/class/cs224n/
+* [Stanford] Transformers United - https://web.stanford.edu/class/cs25/
+* [Stanford] Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
+* [Stanford] Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
+* [Stanford] Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
+* [Stanford] Deep generative models - https://deepgenerativemodels.github.io/
+* [Stanford] Systems for Machine Learning - https://cs229s.stanford.edu/fall2023/
+* [Stanford] Stanford MLSys Seminar - https://mlsys.stanford.edu/
+* [Stanford] Mining Massive Dataset - https://web.stanford.edu/class/cs246/
+* [CMU] Large Language Model Systems - https://llmsystem.github.io/llmsystem2024spring/
 
+******************************************************************************************
+LLMs
+******************************************************************************************
+
+* `[Excellent Blog Post by Sebastian Rachka] Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
+* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
+* `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
+* `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
+* `Jarvis/HuggingGPT <https://github.com/microsoft/JARVIS>`_
+* `Sparks of Artificial General Intelligence <https://arxiv.org/pdf/2303.12712.pdf>`_
+* `Reflexion: an autonomous agent with dynamic memory and self-reflection <https://arxiv.org/pdf/2303.11366.pdf>`_
+* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
+* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
+* `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
+* `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
+* `Hyena Hierarchy: Towards Larger Convolutional Language Models <https://arxiv.org/pdf/2302.10866.pdf>`_
+* `Scaling Transformer to 1M tokens and beyond with RMT <https://arxiv.org/pdf/2304.11062.pdf>`_
+* `AI/ML/LLM/Transformer Models Timeline and List <https://ai.v-gar.de/ml/transformer/timeline/>`_
+* `Think Before You Act: Unified Policy for Interleaving Language Reasoning with Actions <https://arxiv.org/pdf/2304.11063.pdf>`_
+
+******************************************************************************************
+Applied LLMs
+******************************************************************************************
+
+* `[Blog] eugeneyan.com <https://eugeneyan.com/>`_
+
+	* `HN Discussion Forum <https://news.ycombinator.com/item?id=36965993>`_
+* `[Github] LLM4Rec: Collection of papers <https://github.com/WLiK/LLM4Rec-Awesome-Papers>`_
+* `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
+* `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
+* `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
+* `Man and machine: GPT for second brains <https://reasonabledeviations.com/2023/02/05/gpt-for-second-brain/>`_
+* `Learn Prompting <https://learnprompting.org/>`_
+* `Prompt Engineering vs. Blind Prompting <https://mitchellh.com/writing/prompt-engineering-vs-blind-prompting>`_
+* `An example of LLM prompting for programming <https://martinfowler.com/articles/2023-chatgpt-xu-hao.html>`_
+* `Chat with any PDF <https://www.chatpdf.com/>`_
+* `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
+* `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
+* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
+* [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
+
+******************************************************************************************
 Must Read Papers
-***********************************
+******************************************************************************************
 .. csv-table:: 
 	:header: "Tag", "Title"
 	:align: center
@@ -94,39 +140,45 @@ Must Read Papers
 		Efficiency, LoRA Low-Rank Adaptation of Large Language Models
 		Efficiency, QLORA: Efficient Finetuning of Quantized LLMs		
 
+******************************************************************************************
 Linear Algebra
-***********************************
+******************************************************************************************
 
 * [3Blue1Brown] `Essence of linear algebra <https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab>`_
 * [MIT] `18.065 - Matrix Methods for Data Analysis <https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k>`_
 
+******************************************************************************************
 Calculus
-***********************************
+******************************************************************************************
 
 * [3Blue1Brown] `Essence of calculus <https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr>`_
 * [Khan Academy] `Multivariable calculus <https://www.khanacademy.org/math/multivariable-calculus>`_
 * [University of Victoria] `MATH200: Calculus III: Multivariable Calculus <https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc_CvEy7xBKRQr6I214QJcd>`_
 
+******************************************************************************************
 Probability & Statistics
-***********************************
+******************************************************************************************
 
 * [MIT] `RES.6-012 Introduction to Probability <https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6>`_
 * [CMU] `36-705 - Intermediate Statistics <https://www.youtube.com/playlist?list=PLt2Pd5kunvJ6-wpJG9hlWlk47c76bm9L6>`_
 * [statisticsmatt] `Introduction to Mathematical Statistics with Illustrations using R <https://www.youtube.com/playlist?list=PLmM_3MA2HWpan-KlYp-QCbPHxMj5FK0TB>`_
 * `Mathematician uncovers methods to shrink sampling errors in large-dimensional data sets <https://phys.org/news/2023-03-mathematician-uncovers-methods-sampling-errors.html>`_
 
+******************************************************************************************
 Analysis
-***********************************
+******************************************************************************************
 
 * [SO] `Pointwise vs. Uniform Convergence <https://math.stackexchange.com/questions/597765/pointwise-vs-uniform-convergence#915867>`_
 
+******************************************************************************************
 Complex Analysis
-***********************************
+******************************************************************************************
 
 * `Visual Complex Analysis <https://complex-analysis.com/content/table_of_contents.html>`_
 
+******************************************************************************************
 ML Theory
-***********************************
+******************************************************************************************
 
 * [Goodfellow] `Deep Learning <https://www.deeplearningbook.org/>`_
 * [Roberts] `The Principles of Deep Learning Theory <https://arxiv.org/abs/2106.10165>`_
@@ -143,8 +195,9 @@ ML Theory
 * `[MIT] Statistical Learning Theory and Applications <https://cbmm.mit.edu/lh-9-520/syllabus>`_
 * `[GPSS] Gaussian Process Summer School <https://gpss.cc/gpss23/program>`_
 
+******************************************************************************************
 ML Practical
-***********************************
+******************************************************************************************
 
 * [Andrej Karpathy] `Neural Networks: Zero to Hero <https://karpathy.ai/zero-to-hero.html>`_
 * `pytorch-internals <http://blog.ezyang.com/2019/05/pytorch-internals/>`_
@@ -159,9 +212,9 @@ ML Practical
 * [Microsoft Research] `LMOps <https://github.com/microsoft/LMOps>`_
 * `Data Centric AI Cource <https://github.com/dcai-course/dcai-course>`_
 
-
+******************************************************************************************
 ML Design General Principle
-***********************************
+******************************************************************************************
 
 * [Andrew Ng] `Machine Learning Yearning <https://www.mlyearning.org/>`_
 * [Chip Huyen] Designing Machine Learning Systems
@@ -170,32 +223,32 @@ ML Design General Principle
 * [Lakshmanan] Machine Learning Design Patterns
 * [UCB] System Design for Large Scale Machine Learning
 
-
+******************************************************************************************
 ML Math
-***********************************
+******************************************************************************************
 
 * [Gutmann] Pen and Paper Exercise in ML
 * `Steve Brunton Playlist <https://www.youtube.com/@Eigensteve/playlists>`_
 * `Matrix Calculus <https://www.matrixcalculus.org/>`_
 
-
+******************************************************************************************
 ML Algorithms
-***********************************
+******************************************************************************************
 
 * [Naumann] The Art of Differentiating Computer Programs
 
-
+******************************************************************************************
 ML Related Theory
-***********************************
+******************************************************************************************
 
 * [MacKay] Information Throry Inference and Learning Algorithms
 * [Brunton Kutz] Data Driven Science and Engineering
 * [CUP] Probabilistic Numerics
 * [Easley Kleinberg] Networks Crowds and Markets - Reasoning About a Highly Connected World
 
-
+******************************************************************************************
 Applied ML
-***********************************
+******************************************************************************************
 
 * [Liu] Learning to Rank for Information Retrieval
 * [MSR] A Short Introduction to Learning to Rank
@@ -218,46 +271,9 @@ Applied ML
 * [Github] Must Read Papers on Pre-Training <https://github.com/thunlp/PLMpapers>`_
 * `NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers <https://speechresearch.github.io/naturalspeech2/>`_
 
-
-LLMs
-***********************************
-
-* `[Excellent Blog Post by Sebastian Rachka] Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
-* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
-* `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
-* `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
-* `Jarvis/HuggingGPT <https://github.com/microsoft/JARVIS>`_
-* `Sparks of Artificial General Intelligence <https://arxiv.org/pdf/2303.12712.pdf>`_
-* `Reflexion: an autonomous agent with dynamic memory and self-reflection <https://arxiv.org/pdf/2303.11366.pdf>`_
-* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
-* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
-* `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
-* `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
-* `Hyena Hierarchy: Towards Larger Convolutional Language Models <https://arxiv.org/pdf/2302.10866.pdf>`_
-* `Scaling Transformer to 1M tokens and beyond with RMT <https://arxiv.org/pdf/2304.11062.pdf>`_
-* `AI/ML/LLM/Transformer Models Timeline and List <https://ai.v-gar.de/ml/transformer/timeline/>`_
-* `Think Before You Act: Unified Policy for Interleaving Language Reasoning with Actions <https://arxiv.org/pdf/2304.11063.pdf>`_
-
-
-Applied LLMs
-***********************************
-
-* `[Github] LLM4Rec: Collection of papers <https://github.com/WLiK/LLM4Rec-Awesome-Papers>`_
-* `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
-* `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
-* `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
-* `Man and machine: GPT for second brains <https://reasonabledeviations.com/2023/02/05/gpt-for-second-brain/>`_
-* `Learn Prompting <https://learnprompting.org/>`_
-* `Prompt Engineering vs. Blind Prompting <https://mitchellh.com/writing/prompt-engineering-vs-blind-prompting>`_
-* `An example of LLM prompting for programming <https://martinfowler.com/articles/2023-chatgpt-xu-hao.html>`_
-* `Chat with any PDF <https://www.chatpdf.com/>`_
-* `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
-* `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
-* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
-* [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
-
+******************************************************************************************
 ML Papers
-***********************************
+******************************************************************************************
 
 * [dair-ai] `ML-Papers-Explained <https://github.com/dair-ai/ML-Papers-Explained>`_
 * `Transformer models: an introduction and catalog — 2023 Edition <https://amatriain.net/blog/transformer-models-an-introduction-and-catalog-2d1e9039f376/>`_
@@ -266,9 +282,9 @@ ML Papers
 * [HM] `ML papers to implement <https://news.ycombinator.com/item?id=34503362>`_
 * [ICLR2023] `Diffusion Models already have a Semantic Latent Space <https://arxiv.org/pdf/2210.10960.pdf>`_
 
-
+******************************************************************************************
 MLE Papers
-***********************************
+******************************************************************************************
 
 * [ACM] DNN for YouTube Recommendations
 * [FB] Local Search
@@ -280,21 +296,21 @@ MLE Papers
 * [RecSys] Recommending What Video to Watch Next
 * `91% of ML Models Degrade in Time <https://www.nannyml.com/blog/91-of-ml-perfomance-degrade-in-time>`_
 
-
+******************************************************************************************
 MLOps
-***********************************
+******************************************************************************************
 
 * `The big dictionary of MLOps <https://www.hopsworks.ai/mlops-dictionary>`_
 
-
+******************************************************************************************
 ML Interviews
-***********************************
+******************************************************************************************
 
 * [Kashan] Deep Learning Interviews
 
-
+******************************************************************************************
 System Design General Principles
-***********************************
+******************************************************************************************
 
 * [Kleppmann] Designing Data-Intensive Applications
 * [Alex Xu] System Design Interview - An Insiders Guide
@@ -304,30 +320,30 @@ System Design General Principles
 * [Educative] `Grokking Modern System Design Interview for Engineers & Managers <https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers>`_
 * `A Senior Engineer's Guide to System Design Interview <https://interviewing.io/guides/system-design-interview>`_
 
-
+******************************************************************************************
 System Design Algorithms
-***********************************
+******************************************************************************************
 
 * [Gakhov] Probabilistic Data Structures and Algorithms
 * [Tyler Neylon] `Introduction to Locality-Sensitive Hashing <https://tylerneylon.com/a/lsh1/lsh_post1.html>`_
 
-
+******************************************************************************************
 System Design Practical
-***********************************
+******************************************************************************************
 
 * `Build Your Own Redis with C/C++ <https://build-your-own.org/redis/>`_
 * `Build Your Own Database <https://build-your-own.org/blog/20230420_byodb_done/>`_
 * `The Inner Workings of Distributed Databases <https://questdb.io/blog/inner-workings-distributed-databases/>`_
 
-
+******************************************************************************************
 Layoffs
-***********************************
+******************************************************************************************
 
 * `Effective Immediately <https://github.com/Effective-Immediately/effective-immediately>`_
 
-
+******************************************************************************************
 Misc
-***********************
+******************************************************************************************
 
 * `Sampling - Interesting post on LinkedIn <https://www.linkedin.com/posts/sahil0094_sampling-trainingdata-machinelearnig-activity-7043559310324285440-58h2>`_
 * [Developer-Y] `CS Video Courses <https://github.com/Developer-Y/cs-video-courses>`_
