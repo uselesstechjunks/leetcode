@@ -1,13 +1,21 @@
-#######################################################################
-ML Application and System Design
-#######################################################################
+################################################################################
+ML Application
+################################################################################
 ********************************************************************************
 Benchmark
 ********************************************************************************
 (a) https://www.youtube.com/watch?v=jkKAeIx7F8c
 
+Sample Questions
+================================================================================
+.. note::
+	* Design a system for QA where a user would be able to search with a query and the system answers from an internal knowledge-base.
+
+		* What would you do to reduce the latency in the system further?
+		* How would you apply a content restriction policy in the system (not all users would be able to search through all the knowledge-base).
+
 ********************************************************************************
-Framework
+Framework [Needs Revision]
 ********************************************************************************
 .. note::
 	* Problem Understanding:
