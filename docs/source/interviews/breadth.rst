@@ -82,27 +82,33 @@ Topics
 ********************************************************************************
 Key Topics
 ================================================================================
-.. warning::
-	* Feature Engineering
-	* Linear Regression and variants
-	* Boosted Trees, Random Forest
-	* Naive Bayes
-	* Logistic Regression	
-	* Support Vector Machines
+* Feature Engineering
+* Linear Regression and variants
+* Boosted Trees, Random Forest
+* Naive Bayes
+* Logistic Regression	
+* Support Vector Machines
 
 Esoteric Topics
 ================================================================================
-.. warning::
-	* Ordinal Regression - predicts a class label/score (check `this <https://home.ttic.edu/~nati/Publications/RennieSrebroIJCAI05.pdf>`_)
-	* Learning To Rank - predicts a relative-order (MAP, DCG/NDCG, Precision@n, Recall@n, MRR)
-	* Dimensionality Reduction - t-SNE, Spectral Clustering, PCA, Latent-variable models, NMF
-	* Clustering & Anomaly Detection - DBSCAN, HDBSCAN, Hierarchical Clustering, Self-Organizing Maps, Isolation Forest, K-Means
-	* Bayesian linear regression
-	* Gaussian Processes
-	* Graphical Models, Variational Inference, Belief Propagation, Deep Belief Net, LDA, CRF
-	* NER, Pos-tagging, ULMFit
-	* FaceNet, YOLO
-	* Reinforcement learning: SARSA, explore-exploit,  bandits (eps-greedy, UCB, Thompson sampling), Q-learning, DQN - applications
+* Ordinal Regression - predicts a class label/score (check `this <https://home.ttic.edu/~nati/Publications/RennieSrebroIJCAI05.pdf>`_)
+* Learning To Rank - predicts a relative-order (MAP, DCG/NDCG, Precision@n, Recall@n, MRR)
+* Dimensionality Reduction - t-SNE, Spectral Clustering, PCA, Latent-variable models, NMF
+* Clustering & Anomaly Detection - DBSCAN, HDBSCAN, Hierarchical Clustering, Self-Organizing Maps, Isolation Forest, K-Means
+* Bayesian linear regression
+* Gaussian Processes
+* Graphical Models, Variational Inference, Belief Propagation, Deep Belief Net, LDA, CRF
+* NER, Pos-tagging, ULMFit
+* FaceNet, YOLO
+* Reinforcement learning: SARSA, explore-exploit,  bandits (eps-greedy, UCB, Thompson sampling), Q-learning, DQN - applications
+
+Even more esoteric topics
+================================================================================
+* Causal reasoning and diagnostics
+* Recommender systems
+* Learning latent representations
+* Neural networks
+* Causal networks
 
 Sample Questions
 ********************************************************************************
