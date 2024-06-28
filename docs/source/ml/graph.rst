@@ -19,6 +19,7 @@ Resources
     - `Lecture Videos <https://www.youtube.com/playlist?list=PLxq_lXOUlvQAoWZEqhRqHNezS30lI49G->`_
 
 * [CMU 36-708] `Statistical Methods for Machine Learning <https://www.stat.cmu.edu/~larry/=sml/>`_; `Causation <https://www.stat.cmu.edu/~larry/=sml/Causation.pdf>`_
+* [MIT 6.S897] `Machine Learning for Healthcare <https://youtube.com/playlist?list=PLUl4u3cNGP60B0PQXVQyGNdCyCTDU1Q5j&si=FHRX57NhPGrayv8D>`_
 * [Larry Wasserman] `Articles on arXiv <https://arxiv.org/a/wasserman_l_1.html>`_
 * [Larry Wasserman] `Blog: Normal Deviate - Causation <https://normaldeviate.wordpress.com/2012/06/18/48/>`_
 * [CMU] `Machine Learning for Structured Data <https://www.cs.cmu.edu/~mgormley/courses/10418/schedule.html>`_
