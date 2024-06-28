@@ -29,4 +29,5 @@ Resources
 
 Papers
 -----------------------------------------------------------------------------------
+* `Uri Shalit papers <https://scholar.google.com/citations?user=aeGDj-IAAAAJ&hl=en>`_
 * `MEMENTO: Neural Model for Estimating Individual Treatment Effects for Multiple Treatments <https://dl.acm.org/doi/pdf/10.1145/3511808.3557125>`_
