@@ -1,3 +1,26 @@
 ###################################################################################
-Probabilistic Graphical Models
+Latent Variable Models and Causal Inference
 ###################################################################################
+
+***********************************************************************************
+Graphical Models
+***********************************************************************************
+
+***********************************************************************************
+Causal Inference
+***********************************************************************************
+Resources
+-----------------------------------------------------------------------------------
+* STATS 361: Causal Inference 
+
+    - `Notes <https://web.stanford.edu/~swager/stats361.pdf>`_
+* ECON 293 / MGTECON 634: Machine Learning and Causal Inference
+
+    - `Lecture Videos <https://www.youtube.com/playlist?list=PLxq_lXOUlvQAoWZEqhRqHNezS30lI49G->`_
+    
+* [Larry Wasserman] `Articles on arXiv <https://arxiv.org/a/wasserman_l_1.html>`_
+* [Larry Wasserman] `Blog: Normal Deviate - Causation <https://normaldeviate.wordpress.com/2012/06/18/48/>`_
+
+Papers
+-----------------------------------------------------------------------------------
+* `MEMENTO: Neural Model for Estimating Individual Treatment Effects for Multiple Treatments <https://dl.acm.org/doi/pdf/10.1145/3511808.3557125>`_
