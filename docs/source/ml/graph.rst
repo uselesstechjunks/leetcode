@@ -22,6 +22,7 @@ Resources
 * [Larry Wasserman] `Articles on arXiv <https://arxiv.org/a/wasserman_l_1.html>`_
 * [Larry Wasserman] `Blog: Normal Deviate - Causation <https://normaldeviate.wordpress.com/2012/06/18/48/>`_
 * [CMU] `Machine Learning for Structured Data <https://www.cs.cmu.edu/~mgormley/courses/10418/schedule.html>`_
+* [Workshop] `Bayesian Causal Inference <https://bcirwis2021.github.io/index.html>`_
 
 Papers
 -----------------------------------------------------------------------------------
