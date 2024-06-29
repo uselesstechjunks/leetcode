@@ -11,6 +11,7 @@ Causal Inference
 ***********************************************************************************
 Resources
 -----------------------------------------------------------------------------------
+* [UCL] `Arthur Gretton's Course <https://www.gatsby.ucl.ac.uk/~gretton/coursefiles/columbiaCourse23.html>`_
 * STATS 361: Causal Inference 
 
     - `Notes <https://web.stanford.edu/~swager/stats361.pdf>`_
