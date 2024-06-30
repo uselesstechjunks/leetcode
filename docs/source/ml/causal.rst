@@ -41,6 +41,11 @@ Course Plan
 -----------------------------------------------------------------------------------
    - *Concepts*: Understand fundamental concepts such as causality, counterfactuals, treatment effects, and causal graphs (Directed Acyclic Graphs - DAGs).
    - *Techniques*: Familiarize yourself with techniques like matching methods, instrumental variables, difference-in-differences, and regression discontinuity designs.
+   - Papers
+
+        * Instrumental Variables in Causal Inference and Machine Learning: A Survey
+        * Matching Methods for Causal Inference: A Review and a Look Forward
+        * Regression discontinuity design
 
 Resources for Causal Inference:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
