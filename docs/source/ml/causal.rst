@@ -24,6 +24,9 @@ Causal Inference
 ***********************************************************************************
 Resources
 ===================================================================================
+* [Stanford] Daphne Koller - `Probabilistic Graphical Model <http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ProbabilisticGraphicalModels>`_
+
+    * `Graphical Models in a Nutshell <http://robotics.stanford.edu/~koller/Papers/Koller+al:SRL07.pdf>`_
 * [Blog] `Causal Inference for The Brave and True <https://matheusfacure.github.io/python-causality-handbook/landing-page.html>`_
 * [Blog] `ML beyond Curve Fitting: An Intro to Causal Inference and do-Calculus <https://www.inference.vc/untitled/>`_
 
