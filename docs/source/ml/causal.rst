@@ -3,8 +3,21 @@ Causal Inference
 ###################################################################################
 
 ***********************************************************************************
-Graphical Models
+Explanatory Models
 ***********************************************************************************
+* Explanatory modeling aims to understand relationships within data and explain why certain outcomes occur. 
+* It focuses on identifying causal relationships and understanding the underlying mechanisms.
+* Methodology: 
+
+   * Models are evaluated based on their interpretability and how well they explain the relationships between variables. 
+   * Statistical significance of features and coefficients is often considered.
+* Techniques: 
+
+   * Linear models (linear regression, generalized linear models)
+   * Structural equation modeling (SEM)
+   * Bayesian networks, and 
+   * Certain types of decision trees can be used.
+* Feature Selection: Features are selected based on their ability to explain the phenomenon being studied. Domain knowledge and causal inference play a significant role.
 
 ***********************************************************************************
 Causal Inference
