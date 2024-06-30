@@ -1,5 +1,5 @@
 ###################################################################################
-Latent Variable Models and Causal Inference
+Causal Inference
 ###################################################################################
 
 ***********************************************************************************
@@ -11,6 +11,8 @@ Causal Inference
 ***********************************************************************************
 Resources
 ===================================================================================
+* [Blog] `Causal Inference for The Brave and True <https://matheusfacure.github.io/python-causality-handbook/landing-page.html>`_
+* [Blog] `ML beyond Curve Fitting: An Intro to Causal Inference and do-Calculus <https://www.inference.vc/untitled/>`_
 * [UCL] `Arthur Gretton's Course <https://www.gatsby.ucl.ac.uk/~gretton/coursefiles/columbiaCourse23.html>`_
 * STATS 361: Causal Inference 
 
