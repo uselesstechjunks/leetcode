@@ -35,8 +35,6 @@ Papers
 
 Course Plan
 ===================================================================================
-Preparing for a senior applied machine learning scientist role at Amazon focusing on explanatory modeling for automated inventory management involves understanding key concepts and techniques in causal inference and related fields. Here’s a structured approach to get yourself up to speed:
-
 1. Causal Inference Basics:
 -----------------------------------------------------------------------------------
    - *Concepts*: Understand fundamental concepts such as causality, counterfactuals, treatment effects, and causal graphs (Directed Acyclic Graphs - DAGs).
