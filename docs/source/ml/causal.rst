@@ -49,6 +49,7 @@ Resources
 * [CMU] `Machine Learning for Structured Data <https://www.cs.cmu.edu/~mgormley/courses/10418/schedule.html>`_
 * [Workshop] `Bayesian Causal Inference <https://bcirwis2021.github.io/index.html>`_
 * https://github.com/kathoffman/causal-inference-visual-guides
+
 Papers
 -----------------------------------------------------------------------------------
 * `Uri Shalit papers <https://scholar.google.com/citations?user=aeGDj-IAAAAJ&hl=en>`_
