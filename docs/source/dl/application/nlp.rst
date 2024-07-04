@@ -77,10 +77,11 @@ Transformer
 	* [Karpathy] `LLM101n: Let's build a Storyteller <https://github.com/karpathy/LLM101n>`_
 	* [MoE] `Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity <https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf>`_
 
-.. seealso::
-	* [d2l] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
+.. note::
+	* [Harvard] `The Annotated Transformer <https://nlp.seas.harvard.edu/annotated-transformer/>`_
 	* [jalammar.github.io] `The Illustrated Transformer <https://jalammar.github.io/illustrated-transformer/>`_
 	* [lilianweng.github.io] `Attention? Attention! <https://lilianweng.github.io/posts/2018-06-24-attention/>`_
+	* [d2l] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
 
 *****************************************************************************************
 Normalisation
