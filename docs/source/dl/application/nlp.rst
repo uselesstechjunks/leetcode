@@ -142,6 +142,7 @@ Position Encoding
 .. note::
 	* Position Information in Transformers: An Overview
 	* Rethinking Positional Encoding in Language Pre-training
+	* `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`
 
 *****************************************************************************************
 Architecture
