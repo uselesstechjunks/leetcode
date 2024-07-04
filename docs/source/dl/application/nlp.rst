@@ -5,38 +5,6 @@ Natural Language Processing
 	Goal: Write summary of key ideas and summary of papers
 
 *****************************************************************************************
-Sequence Modeling
-*****************************************************************************************
-RNN
-=========================================================================================
-.. collapse:: RNN implementation in PyTorch
-
-   .. literalinclude:: ../../code/rnn.py
-      :language: python
-      :linenos:
-
-.. note::
-	* On the diffculty of training Recurrent Neural Networks
-	* Sequence to Sequence Learning with Neural Networks
-	* NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE
-
-LSTM
-=========================================================================================
-.. collapse:: LSTM implementation in PyTorch
-
-   .. literalinclude:: ../../code/lstm.py
-      :language: python
-      :linenos:
-
-.. note::
-	* `StatQuest on LSTM <https://www.youtube.com/watch?v=YCzL96nL7j0>`_
-
-Transformer
-=========================================================================================
-.. seealso::
-	[d2l] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
-
-*****************************************************************************************
 Tokenizers
 *****************************************************************************************
 WordPiece
@@ -63,11 +31,55 @@ Word Embeddings
 	* Evaluation methods for unsupervised word embeddings
 
 *****************************************************************************************
+Sequence Modeling
+*****************************************************************************************
+RNN
+=========================================================================================
+.. collapse:: RNN implementation in PyTorch
+
+   .. literalinclude:: ../../code/rnn.py
+      :language: python
+      :linenos:
+
+.. note::
+	* On the diffculty of training Recurrent Neural Networks
+	* Sequence to Sequence Learning with Neural Networks
+	* NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE
+
+LSTM
+=========================================================================================
+.. collapse:: LSTM implementation in PyTorch
+
+   .. literalinclude:: ../../code/lstm.py
+      :language: python
+      :linenos:
+
+.. note::
+	* `StatQuest on LSTM <https://www.youtube.com/watch?v=YCzL96nL7j0>`_
+
+*****************************************************************************************
 Attention
 *****************************************************************************************
 .. note::
-	* `[jalammar.github.io] The Illustrated Transformer <https://jalammar.github.io/illustrated-transformer/>`_
-	* `[lilianweng.github.io] Attention? Attention! <https://lilianweng.github.io/posts/2018-06-24-attention/>`_
+	* [MHA] `Attention Is All You Need <https://arxiv.org/abs/1706.03762v7>`_
+	* [MQA] `Fast Transformer Decoding: One Write-Head is All You Need <https://arxiv.org/abs/1911.02150>`_
+	* [GQA] `GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints <https://arxiv.org/abs/2305.13245v3>`_
+
+*****************************************************************************************
+Activations
+*****************************************************************************************
+.. note::
+	* [Noam] `GLU Variants Improve Transformer <https://arxiv.org/pdf/2002.05202v1>`_
+
+Transformer
+=========================================================================================
+.. seealso::
+	* [d2l] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
+	* [jalammar.github.io] `The Illustrated Transformer <https://jalammar.github.io/illustrated-transformer/>`_
+	* [lilianweng.github.io] `Attention? Attention! <https://lilianweng.github.io/posts/2018-06-24-attention/>`_
+
+.. warning::
+	* [MoE] `Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity <https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf>`_
 
 *****************************************************************************************
 Normalisation
