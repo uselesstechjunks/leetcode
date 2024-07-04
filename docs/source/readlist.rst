@@ -134,7 +134,7 @@ Must Read Papers
 		Multilingual, XLM-R: Unsupervised Cross-lingual Representation Learning at Scale
 		Multilingual, mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer
 		DiT, Scalable Diffusion Models with Transformers
-		ViT, Patch n' Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution
+		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
 		IR, DPR: Dense Passage Retrieval for Open-Domain Question Answering
