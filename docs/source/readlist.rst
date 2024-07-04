@@ -66,6 +66,7 @@ University courses
 LLMs
 ******************************************************************************************
 .. note::
+	* [Practical] `The Large Language Model Playbook <https://cyrilzakka.github.io/llm-playbook/index.html>`_
 	* [Sebastian Rachka] `Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
 	* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
 	* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
@@ -106,6 +107,7 @@ Applied LLMs
 	* `AI prompt-to-storyboard videos w/ GPT, Coqui voices, StabilityAI images <https://meyer.id/>`_
 	* `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
 	* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
+	* [Paper] `AI Agents That Matter <https://arxiv.org/pdf/2407.01502>`_
 
 ******************************************************************************************
 Must Read Papers
@@ -124,11 +126,14 @@ Must Read Papers
 		CLM, Llama 2: Open Foundation and Fine-Tuned Chat Models
 		CLM, Mixtral: Mixtral of Experts
 		PLM, XLNet: Generalized Autoregressive Pretraining for Language Understanding
+		GLM, GLM: General Language Model Pretraining with Autoregressive Blank Infilling
 		Seq2Seq, BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation Translation and Comprehension
 		Seq2Seq, T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
 		Multilingual, XLM: Cross-lingual Language Model Pretraining
 		Multilingual, XLM-R: Unsupervised Cross-lingual Representation Learning at Scale
 		Multilingual, mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer
+		DiT, Scalable Diffusion Models with Transformers
+		ViT, Patch n' Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
 		IR, DPR: Dense Passage Retrieval for Open-Domain Question Answering
