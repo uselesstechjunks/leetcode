@@ -129,6 +129,7 @@ Must Read Papers
 		GLM, GLM: General Language Model Pretraining with Autoregressive Blank Infilling
 		Seq2Seq, BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation Translation and Comprehension
 		Seq2Seq, T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+		PE, RoFormer: Enhanced Transformer with Rotary Position Embedding
 		Multilingual, XLM: Cross-lingual Language Model Pretraining
 		Multilingual, XLM-R: Unsupervised Cross-lingual Representation Learning at Scale
 		Multilingual, mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer
