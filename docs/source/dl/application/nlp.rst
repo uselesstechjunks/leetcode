@@ -5,6 +5,12 @@ Natural Language Processing
 	Goal: Write summary of key ideas and summary of papers
 
 *****************************************************************************************
+Practical
+*****************************************************************************************
+.. note::
+	* `What Every User Should Know About Mixed Precision Training in PyTorch <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/>`_
+
+*****************************************************************************************
 Tokenizers
 *****************************************************************************************
 WordPiece
