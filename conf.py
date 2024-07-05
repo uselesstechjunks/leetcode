@@ -1,5 +1,6 @@
+import sphinx_rtd_dark_mode
+
 extensions = ['sphinx_rtd_dark_mode',
-              'sphinx_rtd_theme',
               'sphinx.ext.autosectionlabel']
 
 html_theme = 'sphinx_rtd_dark_mode'
