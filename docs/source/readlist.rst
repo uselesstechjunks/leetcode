@@ -116,7 +116,13 @@ Must Read Papers
 	:header: "Tag", "Title"
 	:align: center
 	
-		Transformer,Attention Is All You Need
+		Attention,MHA: Attention Is All You Need
+		Attention,MQA: Fast Transformer Decoding: One Write-Head is All You Need
+		Attention,GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints
+		Activation,GLU Variants Improve Transformer
+		Norm,Layer Normalization
+		Norm,Root Mean Square Layer Normalization
+		PE,RoFormer: Enhanced Transformer with Rotary Position Embedding
 		MLM, BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 		MLM, RoBERTa: A Robustly Optimized BERT Pretraining Approach
 		MLM, TwinBERT: Distilling Knowledge to Twin-Structured BERT Models for Efficient Retrieval
@@ -124,12 +130,12 @@ Must Read Papers
 		CLM, GPT3: Language Models are Few-Shot Learners
 		CLM, LLaMA: Open and Efficient Foundation Language Models
 		CLM, Llama 2: Open Foundation and Fine-Tuned Chat Models
-		CLM, Mixtral: Mixtral of Experts
 		PLM, XLNet: Generalized Autoregressive Pretraining for Language Understanding
 		GLM, GLM: General Language Model Pretraining with Autoregressive Blank Infilling
+		MoE,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
+		MoE, Mixtral: Mixtral of Experts
 		Seq2Seq, BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation Translation and Comprehension
 		Seq2Seq, T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
-		PE, RoFormer: Enhanced Transformer with Rotary Position Embedding
 		Multilingual, XLM: Cross-lingual Language Model Pretraining
 		Multilingual, XLM-R: Unsupervised Cross-lingual Representation Learning at Scale
 		Multilingual, mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer
