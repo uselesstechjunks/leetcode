@@ -74,6 +74,7 @@ Dot product Attention (single query)
       :language: python
       :linenos:
 
+
 Multi-head Attention (single query)
 =========================================================================================
 .. collapse:: Multi-head Attention (single query) implementation in PyTorch
@@ -81,6 +82,16 @@ Multi-head Attention (single query)
    .. literalinclude:: ../../code/multiheadattn.py
       :language: python
       :linenos:
+
+
+Masked Multi-head Attention (parallel query)
+=========================================================================================
+.. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
+
+   .. literalinclude:: ../../code/maskedmhapar.py
+      :language: python
+      :linenos:
+
 
 Resources
 =========================================================================================
