@@ -139,8 +139,7 @@ Must Read Papers
 		Multilingual, XLM: Cross-lingual Language Model Pretraining
 		Multilingual, XLM-R: Unsupervised Cross-lingual Representation Learning at Scale
 		Multilingual, mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer
-		DiT, Scalable Diffusion Models with Transformers
-		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
+		Generalisation,Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
 		IR, DPR: Dense Passage Retrieval for Open-Domain Question Answering
@@ -152,10 +151,12 @@ Must Read Papers
 		LLM, DPO: Direct Preference Optimization: Your Language Model is Secretly a Reward Model
 		LLM, D2PO: Discriminator-Guided DPO with Response Evaluation Models
 		LLM, RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+		DiT, Scalable Diffusion Models with Transformers
+		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
 		Efficiency, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
 		Efficiency, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
 		Efficiency, LoRA Low-Rank Adaptation of Large Language Models
-		Efficiency, QLORA: Efficient Finetuning of Quantized LLMs		
+		Efficiency, QLORA: Efficient Finetuning of Quantized LLMs
 
 ******************************************************************************************
 Linear Algebra
