@@ -22,7 +22,7 @@ class Attention(torch.nn.Module):
 		returns:
 		y: vector with shape [v]
 		"""
-		q = torch.einsum('d,mk->k', x, Wq)
+		q = torch.einsum('d,dk->k', x, Wq)
 		K = torch.einsum('md,dk->mk', M, Wk)
 		V = torch.einsum('md,dv->mv', M, Wv)
 		y = self.dot_prod_attn(q, K, V)
