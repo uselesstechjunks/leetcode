@@ -66,10 +66,27 @@ LSTM
 *****************************************************************************************
 Attention
 *****************************************************************************************
-.. note::
-	* [MHA] `Attention Is All You Need <https://arxiv.org/abs/1706.03762v7>`_
-	* [MQA] `Fast Transformer Decoding: One Write-Head is All You Need <https://arxiv.org/abs/1911.02150>`_
-	* [GQA] `GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints <https://arxiv.org/abs/2305.13245v3>`_
+Dot product Attention (single query)
+=========================================================================================
+.. collapse:: Dot product Attention (single query) implementation in PyTorch
+
+   .. literalinclude:: ../../code/attn.py
+      :language: python
+      :linenos:
+
+Multi-head Attention (single query)
+=========================================================================================
+.. collapse:: Multi-head Attention (single query) implementation in PyTorch
+
+   .. literalinclude:: ../../code/multiheadattn.py
+      :language: python
+      :linenos:
+
+Resources
+=========================================================================================
+* [MHA] `Attention Is All You Need <https://arxiv.org/abs/1706.03762v7>`_
+* [MQA] `Fast Transformer Decoding: One Write-Head is All You Need <https://arxiv.org/abs/1911.02150>`_
+* [GQA] `GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints <https://arxiv.org/abs/2305.13245v3>`_
 
 *****************************************************************************************
 Activations
