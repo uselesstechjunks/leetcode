@@ -1,8 +1,4 @@
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-def mh_attn(q,K,V):
+def mha(q,K,V):
     """
     args:
         q: [h,k]
@@ -28,19 +24,6 @@ class MultiHeadAttention(torch.nn.Module):
         q = torch.einsum('d,hdk->hk', x, self.Wq)
         K = torch.einsum('md,hdk->hmk', M, self.Wk)
         V = torch.einsum('md,hdv->hmv', M, self.Wv)
-        o = mh_attn(q, K, V)
+        o = mha(q, K, V)
         y = torch.einsum('hv,hvd->d', o, self.Wo)
         return y
-
-if __name__ == '__main__':
-    d = 16
-    k = 8
-    m = 10
-    v = 8
-    h = 2
-
-    M = torch.randn((m,d))
-
-    model = MultiHeadAttention(h,d,k,v)
-    y = model(M[0],M)
-    print(y)
