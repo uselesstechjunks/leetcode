@@ -119,6 +119,7 @@ Must Read Papers
 		Attention,MHA: Attention Is All You Need
 		Attention,MQA: Fast Transformer Decoding: One Write-Head is All You Need
 		Attention,GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints
+		Decoding,Fast Inference from Transformers via Speculative Decoding
 		Activation,GLU Variants Improve Transformer
 		Norm,Layer Normalization
 		Norm,Root Mean Square Layer Normalization
