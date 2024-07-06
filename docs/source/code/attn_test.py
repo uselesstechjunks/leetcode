@@ -1,3 +1,32 @@
+"""
+Sample output:
+--------------------------------------
+tensor([ -3.0437,  -5.3354,  -2.7996,   4.7690,   6.1953,  -3.1872,   2.4339,
+         -4.9126,  -0.5149,  -3.6056,   1.6128, -14.4580,  -2.2639,  -2.7896,
+         -0.7055,   6.9216], grad_fn=<ViewBackward0>)
+The following outputs should be the exact same with fixed seed.
+MultiHeadAttention
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], grad_fn=<ViewBackward0>)
+MultiHeadAttentionSequential
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], grad_fn=<ViewBackward0>)
+MaskedMultiHeadAttentionParallel
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
+MaskedMultiHeadAttentionParallelBatched
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
+MultiHeadAttentionSequentialBatched
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
+"""
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -58,8 +87,8 @@ def mha_batched(q,K,V):
     """
     logits = torch.einsum('bhk,bhmk->bhm',q,K)
     weights = F.softmax(logits, dim=-1)
-    O = torch.einsum('bhm,bhmv->bhv', weights, V)
-    return O
+    o = torch.einsum('bhm,bhmv->bhv', weights, V)
+    return o
 
 def mha_par_batched(Q,K,V,mask):
     """
@@ -185,12 +214,12 @@ class MultiHeadAttentionSequentialBatched(torch.nn.Module):
         V: [b,h,m+1,v]
     '''
     def forward(self, x, prev_K, prev_V):
-        Q = torch.einsum('bd,hdk->bhk', x, self.Wq)
+        q = torch.einsum('bd,hdk->bhk', x, self.Wq)
         K = torch.cat((prev_K, torch.einsum('bd,hdk->bhk', x, self.Wk).unsqueeze(-2)), dim=-2)
         V = torch.cat((prev_V, torch.einsum('bd,hdv->bhv', x, self.Wv).unsqueeze(-2)), dim=-2)
-        O = mha_batched(Q, K, V)
-        Y = torch.einsum('bhv,hvd->bd', O, self.Wo)
-        return Y, K, V
+        o = mha_batched(q, K, V)
+        y = torch.einsum('bhv,hvd->bd', o, self.Wo)
+        return y, K, V
 
 if __name__ == '__main__':
     d = 16
