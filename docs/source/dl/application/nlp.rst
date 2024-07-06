@@ -79,19 +79,33 @@ Multi-head Attention (single query)
 =========================================================================================
 .. collapse:: Multi-head Attention (single query) implementation in PyTorch
 
-   .. literalinclude:: ../../code/multiheadattn.py
+   .. literalinclude:: ../../code/mha.py
       :language: python
       :linenos:
-
 
 Masked Multi-head Attention (parallel query)
 =========================================================================================
 .. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
 
-   .. literalinclude:: ../../code/maskedmhapar.py
+   .. literalinclude:: ../../code/mha_par.py
       :language: python
       :linenos:
 
+Masked Multi-head Attention Batched (parallel query)
+=========================================================================================
+.. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
+
+   .. literalinclude:: ../../code/mha_par_batched.py
+      :language: python
+      :linenos:
+
+Test Implementation
+=========================================================================================
+.. collapse:: Attention in PyTorch
+
+   .. literalinclude:: ../../code/attn_test.py
+      :language: python
+      :linenos:
 
 Resources
 =========================================================================================
