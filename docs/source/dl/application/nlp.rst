@@ -42,7 +42,7 @@ Sequence Modeling
 RNN
 =========================================================================================
 .. seealso::
-	.. collapse:: RNN implementation in PyTorch
+	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../../code/rnn.py
 	      :language: python
@@ -56,7 +56,7 @@ RNN
 LSTM
 =========================================================================================
 .. seealso::
-	.. collapse:: LSTM implementation in PyTorch
+	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../../code/lstm.py
 	      :language: python
@@ -85,7 +85,7 @@ Attention
 Dot product Attention (single query)
 -----------------------------------------------------------------------------------------
 .. note::
-	.. collapse:: Dot product Attention (single query) implementation in PyTorch
+	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../../code/attn.py
 	      :language: python
@@ -94,7 +94,7 @@ Dot product Attention (single query)
 Multi-head Attention (single query)
 -----------------------------------------------------------------------------------------
 .. note::
-	.. collapse:: Multi-head Attention (single query) implementation in PyTorch
+	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../../code/mha.py
 	      :language: python
@@ -103,7 +103,7 @@ Multi-head Attention (single query)
 Multi-head Attention (sequential query)
 -----------------------------------------------------------------------------------------
 .. note::
-	.. collapse:: Multi-head Attention (sequential query) implementation in PyTorch
+	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../../code/mha_seq.py
 	      :language: python
@@ -112,7 +112,7 @@ Multi-head Attention (sequential query)
 Masked Multi-head Attention (parallel query)
 -----------------------------------------------------------------------------------------
 .. note::
-	.. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
+	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../../code/mha_par.py
 	      :language: python
@@ -121,7 +121,7 @@ Masked Multi-head Attention (parallel query)
 Masked Multi-head Attention Batched (parallel query)
 -----------------------------------------------------------------------------------------
 .. note::
-	.. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
+	.. collapse:: Expand Code
 	
 	   .. literalinclude:: ../../code/mha_par_batched.py
 	      :language: python
@@ -130,9 +130,27 @@ Masked Multi-head Attention Batched (parallel query)
 Multi-head Attention Batched (sequential query)
 -----------------------------------------------------------------------------------------
 .. note::
-	.. collapse:: Multi-head Attention (sequential query) implementation in PyTorch
+	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../../code/mha_seq_batched.py
+	      :language: python
+	      :linenos:
+
+Masked Multi-query Attention Batched (parallel query)
+-----------------------------------------------------------------------------------------
+.. note::
+	.. collapse:: Expand Code
+	
+	   .. literalinclude:: ../../code/mqa_par_batched.py
+	      :language: python
+	      :linenos:
+
+Multi-query Attention Batched (sequential query)
+-----------------------------------------------------------------------------------------
+.. note::
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/mqa_seq_batched.py
 	      :language: python
 	      :linenos:
 
