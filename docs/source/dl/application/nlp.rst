@@ -126,8 +126,8 @@ Multi-head Attention Batched (sequential query)
 
 UnitTest
 -----------------------------------------------------------------------------------------
-.. warning::
-	.. collapse:: Attention in PyTorch
+.. seealso::
+	.. collapse:: UnitTest of implementation
 
 	   .. literalinclude:: ../../code/attn_test.py
 	      :language: python
