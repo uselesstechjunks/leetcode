@@ -1,7 +1,3 @@
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
 def attn(q,K,V):
     """
     args:
@@ -28,16 +24,3 @@ class Attention(torch.nn.Module):
         K = torch.einsum('md,dk->mk', M, self.Wk)
         V = torch.einsum('md,dv->mv', M, self.Wv)
         return attn(q,K,V)
-
-if __name__ == '__main__':
-    d = 16
-    k = 8
-    m = 10
-    v = 8
-    h = 2
-
-    M = torch.randn((m,d))
-
-    model = Attention(d,k,d)
-    y = model(M[0],M)
-    print(y)
