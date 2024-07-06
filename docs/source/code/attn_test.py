@@ -30,7 +30,7 @@ def mha(q,K,V):
     o = torch.einsum('hm,hmv->hv', weights, V)
     return o
 
-def mha_masked(Q,K,V,mask):
+def mha_par(Q,K,V,mask):
     """
     args:
         Q: [h,n,k]
@@ -61,7 +61,7 @@ def mha_batched(q,K,V):
     O = torch.einsum('bhm,bhmv->bhv', weights, V)
     return O
 
-def mha_masked_batched(Q,K,V,mask):
+def mha_par_batched(Q,K,V,mask):
     """
     args:
         Q: [b,h,n,k]
@@ -120,7 +120,7 @@ class MaskedMultiHeadAttentionParallel(torch.nn.Module):
         Q = torch.einsum('nd,hdk->hnk', X, self.Wq)
         K = torch.einsum('md,hdk->hmk', M, self.Wk)
         V = torch.einsum('md,hdv->hmv', M, self.Wv)
-        O = mha_masked(Q, K, V, mask)
+        O = mha_par(Q, K, V, mask)
         Y = torch.einsum('hnv,hvd->nd', O, self.Wo)
         return Y
 
@@ -136,7 +136,7 @@ class MaskedMultiHeadAttentionParallelBatched(torch.nn.Module):
         Q = torch.einsum('bnd,hdk->bhnk', X, self.Wq)
         K = torch.einsum('bmd,hdk->bhmk', M, self.Wk)
         V = torch.einsum('bmd,hdv->bhmv', M, self.Wv)
-        O = mha_masked_batched(Q,K,V,mask)
+        O = mha_par_batched(Q,K,V,mask)
         Y = torch.einsum('bhnv,hvd->bnd', O, self.Wo)
         return Y
 
@@ -255,30 +255,3 @@ if __name__ == '__main__':
     with torch.no_grad():
         y = Y.squeeze(0)
         print(f'MultiHeadAttentionSequentialBatched\n{y}')
-"""
-In [332]: run attn.py
-tensor([ -3.0437,  -5.3354,  -2.7996,   4.7690,   6.1953,  -3.1872,   2.4339,
-         -4.9126,  -0.5149,  -3.6056,   1.6128, -14.4580,  -2.2639,  -2.7896,
-         -0.7055,   6.9216], grad_fn=<ViewBackward0>)
-The following outputs should be the exact same with fixed seed.
-MultiHeadAttention
-tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
-         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
-         -1.9368, -15.8990], grad_fn=<ViewBackward0>)
-MultiHeadAttentionSequential
-tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
-         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
-         -1.9368, -15.8990], grad_fn=<ViewBackward0>)
-MaskedMultiHeadAttentionParallel
-tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
-         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
-         -1.9368, -15.8990], requires_grad=True)
-MaskedMultiHeadAttentionParallelBatched
-tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
-         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
-         -1.9368, -15.8990], requires_grad=True)
-MultiHeadAttentionSequentialBatched
-tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
-         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
-         -1.9368, -15.8990], requires_grad=True)
-"""
