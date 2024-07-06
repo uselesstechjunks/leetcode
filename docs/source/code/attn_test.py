@@ -1,37 +1,46 @@
 """
 Sample output:
 --------------------------------------
-tensor([-6.1852,  4.9277, -7.1767, -5.7050,  3.5045,  1.6870,  5.5653, -2.3704,
-         2.2934,  1.3846,  2.3040, -5.1264,  2.2573, -1.0059, -3.2234, -0.6346],
-       grad_fn=<ViewBackward0>)
+Attention
+tensor([ -3.0437,  -5.3354,  -2.7996,   4.7690,   6.1953,  -3.1872,   2.4339,
+         -4.9126,  -0.5149,  -3.6056,   1.6128, -14.4580,  -2.2639,  -2.7896,
+         -0.7055,   6.9216], grad_fn=<ViewBackward0>)
 MultiHeadAttention
-tensor([ -1.9919, -18.8973, -11.5190,  -3.5315, -25.3034, -26.6213,  26.3794,
-        -19.0316, -11.3692, -25.6988,  -5.5753,  11.8805,   2.4946,  27.0999,
-         -5.6713,   4.9562], grad_fn=<ViewBackward0>)
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], grad_fn=<ViewBackward0>)
 MultiHeadAttentionSequential
-tensor([ -1.9919, -18.8973, -11.5190,  -3.5315, -25.3034, -26.6213,  26.3794,
-        -19.0316, -11.3692, -25.6988,  -5.5753,  11.8805,   2.4946,  27.0999,
-         -5.6713,   4.9562], grad_fn=<ViewBackward0>)
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], grad_fn=<ViewBackward0>)
 MaskedMultiHeadAttentionParallel
-tensor([ -1.9919, -18.8973, -11.5190,  -3.5315, -25.3034, -26.6213,  26.3794,
-        -19.0316, -11.3692, -25.6988,  -5.5753,  11.8805,   2.4946,  27.0999,
-         -5.6712,   4.9562], requires_grad=True)
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
 MultiHeadAttentionSequentialBatched
-tensor([ -1.9919, -18.8973, -11.5190,  -3.5315, -25.3034, -26.6213,  26.3794,
-        -19.0316, -11.3692, -25.6988,  -5.5753,  11.8805,   2.4946,  27.0999,
-         -5.6713,   4.9562], requires_grad=True)
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
 MaskedMultiHeadAttentionParallelBatched
-tensor([ -1.9919, -18.8973, -11.5190,  -3.5315, -25.3034, -26.6213,  26.3794,
-        -19.0316, -11.3692, -25.6988,  -5.5753,  11.8805,   2.4946,  27.0999,
-         -5.6712,   4.9562], requires_grad=True)
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
 MultiQueryAttentionSequentialBatched
-tensor([  1.2325, -17.5478,   2.6610,  19.4804,   1.7672, -54.5261, -12.6656,
-         -4.2605,   3.6807,   3.2058,  29.4352, -23.4512,   9.5014,  22.9171,
-         50.5439,  11.1721], requires_grad=True)
+tensor([ -6.9532,  16.7457, -11.2753,  -6.5196,  22.5019,  13.0422,  -6.6303,
+         -6.5617,   2.0252,   2.2950,   1.2324,  15.0855, -20.8858,  17.2391,
+         -8.0939,  -1.4088], requires_grad=True)
 MaskedMultiQueryAttentionParallelBatched
-tensor([  1.2325, -17.5478,   2.6610,  19.4804,   1.7672, -54.5261, -12.6656,
-         -4.2605,   3.6807,   3.2058,  29.4352, -23.4512,   9.5014,  22.9171,
-         50.5439,  11.1721], requires_grad=True)
+tensor([ -6.9532,  16.7457, -11.2753,  -6.5196,  22.5018,  13.0422,  -6.6303,
+         -6.5617,   2.0252,   2.2950,   1.2324,  15.0855, -20.8858,  17.2391,
+         -8.0938,  -1.4088], requires_grad=True)
+GroupedQueryAttentionSequentialBatched(g=1)
+tensor([ -6.9532,  16.7457, -11.2753,  -6.5196,  22.5019,  13.0422,  -6.6303,
+         -6.5617,   2.0252,   2.2950,   1.2324,  15.0855, -20.8858,  17.2391,
+         -8.0939,  -1.4088], requires_grad=True)
+GroupedQueryAttentionSequentialBatched(g=2)
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
 """
 import torch
 import torch.nn as nn
@@ -94,6 +103,24 @@ def mha_batched(q,K,V):
     logits = torch.einsum('bhk,bhmk->bhm',q,K)
     weights = F.softmax(logits, dim=-1)
     o = torch.einsum('bhm,bhmv->bhv', weights, V)
+    return o
+
+def gqa_batched(q,K,V):
+    """
+    Args:
+        q: [b,h,k]
+        K: [b,g,m,k]
+        V: [b,g,m,v]
+    Returns:
+        O: [b,h,v]
+    """
+    # TODO: fixit
+    h = q.shape[-2]
+    g = K.shape[-3]
+    r = int(h/g)
+    K = torch.cat([K]*r,dim=-3) # back to dim
+    V = torch.cat([V]*r,dim=-3) # back to dim
+    o = mha_batched(q,K,V)
     return o
 
 def mqa_batched(q,K,V):
@@ -258,6 +285,32 @@ class MultiHeadAttentionSequentialBatched(torch.nn.Module):
         y = torch.einsum('bhv,hvd->bd', o, self.Wo)
         return y, K, V
 
+class GroupedQueryAttentionSequentialBatched(torch.nn.Module):
+    def __init__(self, h, g, d, k, v):
+        super(GroupedQueryAttentionSequentialBatched, self).__init__()
+        self.Wq = nn.Parameter(torch.randn(h,d,k))
+        self.Wk = nn.Parameter(torch.randn(g,d,k))
+        self.Wv = nn.Parameter(torch.randn(g,d,v))
+        self.Wo = nn.Parameter(torch.randn(h,v,d))
+
+    def forward(self, x, prev_K, prev_V):
+        """
+        Args:
+            x: [b,d]
+            prev_K: [b,g,m,k]
+            prev_V: [b,g,m,v]
+        Returns:
+            y: [b,d]
+            K: [b,m+1,k]
+            V: [b,m+1,v]
+        """
+        q = torch.einsum('bd,hdk->bhk', x, self.Wq)
+        K = torch.cat((prev_K, torch.einsum('bd,gdk->bgk', x, self.Wk).unsqueeze(-2)), dim=-2)
+        V = torch.cat((prev_V, torch.einsum('bd,gdv->bgv', x, self.Wv).unsqueeze(-2)), dim=-2)
+        o = gqa_batched(q, K, V)
+        y = torch.einsum('bhv,hvd->bd', o, self.Wo)
+        return y, K, V
+
 class MaskedMultiQueryAttentionParallelBatched(torch.nn.Module):
     def __init__(self, h, d, k, v):
         super(MaskedMultiQueryAttentionParallelBatched, self).__init__()
@@ -307,6 +360,11 @@ class MultiQueryAttentionSequentialBatched(torch.nn.Module):
         o = mqa_batched(q, K, V)
         y = torch.einsum('bhv,hvd->bd', o, self.Wo)
         return y, K, V
+
+def test_attn(Attention, d, k, M):
+    model = Attention(d,k,d)
+    y = model(M[0],M)
+    print(f'Attention\n{y}')
 
 def test_mha(MultiHeadAttention, d, k, v, h, M):
     torch.manual_seed(42)
@@ -381,10 +439,40 @@ def test_mqa_seq_batched(MultiQueryAttentionSequentialBatched, d, k, v, h, M):
         y = y.squeeze(0)
         print(f'MultiQueryAttentionSequentialBatched\n{y}')
 
-if __name__ == '__main__':
+def test_gqa1_seq_batched(GroupedQueryAttentionSequentialBatched, d, k, v, h, M):
+    torch.manual_seed(42)
+    g = 1
+    model = GroupedQueryAttentionSequentialBatched(h,g,d,k,v)
+    prev_K = torch.FloatTensor(1,g,0,k)
+    prev_V = torch.FloatTensor(1,g,0,v)
+    y = None
+
+    for x in M:
+        y, prev_K, prev_V = model(x.unsqueeze(0), prev_K, prev_V)
+
+    with torch.no_grad():
+        y = y.squeeze(0)
+        print(f'GroupedQueryAttentionSequentialBatched(g={g})\n{y}')
+
+def test_gqah_seq_batched(GroupedQueryAttentionSequentialBatched, d, k, v, h, M):
+    torch.manual_seed(42)
+    g = h
+    model = GroupedQueryAttentionSequentialBatched(h,g,d,k,v)
+    prev_K = torch.FloatTensor(1,g,0,k)
+    prev_V = torch.FloatTensor(1,g,0,v)
+    y = None
+
+    for x in M:
+        y, prev_K, prev_V = model(x.unsqueeze(0), prev_K, prev_V)
+
+    with torch.no_grad():
+        y = y.squeeze(0)
+        print(f'GroupedQueryAttentionSequentialBatched(g={g})\n{y}')
+
+if __name__ == '__main__':    
+    m = 10
     d = 16
     k = 8
-    m = 10
     v = 8
     h = 2
 
@@ -396,9 +484,7 @@ if __name__ == '__main__':
     #########################################
     # SHA
     #########################################
-    model = Attention(d,k,d)
-    y = model(M[0],M)
-    print(y)
+    test_attn(Attention, d, k, M)
 
     #########################################
     # MHA
@@ -414,3 +500,9 @@ if __name__ == '__main__':
     #########################################    
     test_mqa_seq_batched(MultiQueryAttentionSequentialBatched, d, k, v, h, M)
     test_mqa_par_batched(MaskedMultiQueryAttentionParallelBatched, d, k, v, h, M, mask)
+
+    #########################################
+    # GQA
+    #########################################    
+    test_gqa1_seq_batched(GroupedQueryAttentionSequentialBatched, d, k, v, h, M)
+    test_gqah_seq_batched(GroupedQueryAttentionSequentialBatched, d, k, v, h, M)
