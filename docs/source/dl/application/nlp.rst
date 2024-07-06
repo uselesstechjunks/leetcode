@@ -41,11 +41,12 @@ Sequence Modeling
 *****************************************************************************************
 RNN
 =========================================================================================
-.. collapse:: RNN implementation in PyTorch
+.. warning::
+	.. collapse:: RNN implementation in PyTorch
 
-   .. literalinclude:: ../../code/rnn.py
-      :language: python
-      :linenos:
+	   .. literalinclude:: ../../code/rnn.py
+	      :language: python
+	      :linenos:
 
 .. note::
 	* On the diffculty of training Recurrent Neural Networks
@@ -54,11 +55,12 @@ RNN
 
 LSTM
 =========================================================================================
-.. collapse:: LSTM implementation in PyTorch
+.. warning::
+	.. collapse:: LSTM implementation in PyTorch
 
-   .. literalinclude:: ../../code/lstm.py
-      :language: python
-      :linenos:
+	   .. literalinclude:: ../../code/lstm.py
+	      :language: python
+	      :linenos:
 
 .. note::
 	* `StatQuest on LSTM <https://www.youtube.com/watch?v=YCzL96nL7j0>`_
