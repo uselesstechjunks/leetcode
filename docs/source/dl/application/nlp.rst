@@ -66,25 +66,34 @@ LSTM
 *****************************************************************************************
 Attention
 *****************************************************************************************
-Dot product Attention (single query)
+PyTorch Implementation
 =========================================================================================
+Dot product Attention (single query)
+-----------------------------------------------------------------------------------------
 .. collapse:: Dot product Attention (single query) implementation in PyTorch
 
    .. literalinclude:: ../../code/attn.py
       :language: python
       :linenos:
 
-
 Multi-head Attention (single query)
-=========================================================================================
+-----------------------------------------------------------------------------------------
 .. collapse:: Multi-head Attention (single query) implementation in PyTorch
 
    .. literalinclude:: ../../code/mha.py
       :language: python
       :linenos:
 
+Multi-head Attention (sequential query)
+-----------------------------------------------------------------------------------------
+.. collapse:: Multi-head Attention (sequential query) implementation in PyTorch
+
+   .. literalinclude:: ../../code/mha_seq.py
+      :language: python
+      :linenos:
+
 Masked Multi-head Attention (parallel query)
-=========================================================================================
+-----------------------------------------------------------------------------------------
 .. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
 
    .. literalinclude:: ../../code/mha_par.py
@@ -92,7 +101,7 @@ Masked Multi-head Attention (parallel query)
       :linenos:
 
 Masked Multi-head Attention Batched (parallel query)
-=========================================================================================
+-----------------------------------------------------------------------------------------
 .. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
 
    .. literalinclude:: ../../code/mha_par_batched.py
@@ -100,7 +109,7 @@ Masked Multi-head Attention Batched (parallel query)
       :linenos:
 
 Test Implementation
-=========================================================================================
+-----------------------------------------------------------------------------------------
 .. collapse:: Attention in PyTorch
 
    .. literalinclude:: ../../code/attn_test.py
