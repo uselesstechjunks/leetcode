@@ -75,7 +75,8 @@ class Attention(torch.nn.Module):
         q = torch.einsum('d,dk->k', x, self.Wq)
         K = torch.einsum('md,dk->mk', M, self.Wk)
         V = torch.einsum('md,dv->mv', M, self.Wv)
-        return attn(q,K,V)
+        y = attn(q,K,V)
+        return y
 
 class MultiHeadAttention(torch.nn.Module):
     def __init__(self, h, d, k, v):
@@ -138,20 +139,47 @@ if __name__ == '__main__':
     y = model(M[0],M)
     print(y)
 
+    print('The following 3 outputs should be the exact same with fixed seed.')
+
     torch.manual_seed(42)
     model = MultiHeadAttention(h,d,k,v)
     y = model(M[-1],M)
-    print(y)
+    with torch.no_grad():
+        print(f'MultiHeadAttention\n{y}')
 
+    # triangular mask mimicing the decoder
+    # same code can be reused for encoder with all bits on
     mask = torch.tril(torch.ones(M.shape[0],M.shape[0]))
     
     torch.manual_seed(42)
     model = MaskedMultiHeadAttentionParallel(h,d,k,v)
-    y = model(M,M,mask)
-    print(y)
+    Y = model(M,M,mask)
+    with torch.no_grad():
+        print(f'MaskedMultiHeadAttentionParallel\n{Y[-1]}')
 
     torch.manual_seed(42)
     model = MaskedMultiHeadAttentionParallelBatched(h,d,k,v)
     X = M.unsqueeze(0)
-    y = model(X,X,mask)
-    print(y)
+    Y = model(X,X,mask)
+    with torch.no_grad():
+        Y = Y.squeeze(0)
+        print(f'MaskedMultiHeadAttentionParallelBatched\n{Y[-1]}')
+
+"""
+tensor([ -3.0437,  -5.3354,  -2.7996,   4.7690,   6.1953,  -3.1872,   2.4339,
+         -4.9126,  -0.5149,  -3.6056,   1.6128, -14.4580,  -2.2639,  -2.7896,
+         -0.7055,   6.9216], grad_fn=<ViewBackward0>)
+The following 3 outputs should be the exact same with fixed seed.
+MultiHeadAttention
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], grad_fn=<ViewBackward0>)
+MaskedMultiHeadAttentionParallel
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
+MaskedMultiHeadAttentionParallelBatched
+tensor([-18.4005,  11.4970,   5.9840,   9.8845, -15.3181,   1.3615,  -2.5959,
+         17.3029, -11.3590,  25.8750, -14.3187,  -3.3374,   2.2135, -13.3058,
+         -1.9368, -15.8990], requires_grad=True)
+"""
