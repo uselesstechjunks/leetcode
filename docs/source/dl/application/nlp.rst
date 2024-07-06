@@ -41,7 +41,7 @@ Sequence Modeling
 *****************************************************************************************
 RNN
 =========================================================================================
-.. warning::
+.. seealso::
 	.. collapse:: RNN implementation in PyTorch
 
 	   .. literalinclude:: ../../code/rnn.py
@@ -55,7 +55,7 @@ RNN
 
 LSTM
 =========================================================================================
-.. warning::
+.. seealso::
 	.. collapse:: LSTM implementation in PyTorch
 
 	   .. literalinclude:: ../../code/lstm.py
@@ -66,13 +66,25 @@ LSTM
 	* `StatQuest on LSTM <https://www.youtube.com/watch?v=YCzL96nL7j0>`_
 
 *****************************************************************************************
-Attention
+Transformer
 *****************************************************************************************
-PyTorch Implementation
+Resources
+=========================================================================================
+.. warning::
+	* [Karpathy] `LLM101n: Let's build a Storyteller <https://github.com/karpathy/LLM101n>`_
+	* [MoE] `Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity <https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf>`_
+
+.. note::
+	* [Harvard] `The Annotated Transformer <https://nlp.seas.harvard.edu/annotated-transformer/>`_
+	* [jalammar.github.io] `The Illustrated Transformer <https://jalammar.github.io/illustrated-transformer/>`_
+	* [lilianweng.github.io] `Attention? Attention! <https://lilianweng.github.io/posts/2018-06-24-attention/>`_
+	* [d2l] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
+
+Attention
 =========================================================================================
 Dot product Attention (single query)
 -----------------------------------------------------------------------------------------
-.. warning::
+.. note::
 	.. collapse:: Dot product Attention (single query) implementation in PyTorch
 
 	   .. literalinclude:: ../../code/attn.py
@@ -81,7 +93,7 @@ Dot product Attention (single query)
 
 Multi-head Attention (single query)
 -----------------------------------------------------------------------------------------
-.. warning::
+.. note::
 	.. collapse:: Multi-head Attention (single query) implementation in PyTorch
 
 	   .. literalinclude:: ../../code/mha.py
@@ -90,7 +102,7 @@ Multi-head Attention (single query)
 
 Multi-head Attention (sequential query)
 -----------------------------------------------------------------------------------------
-.. warning::
+.. note::
 	.. collapse:: Multi-head Attention (sequential query) implementation in PyTorch
 
 	   .. literalinclude:: ../../code/mha_seq.py
@@ -99,7 +111,7 @@ Multi-head Attention (sequential query)
 
 Masked Multi-head Attention (parallel query)
 -----------------------------------------------------------------------------------------
-.. warning::
+.. note::
 	.. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
 
 	   .. literalinclude:: ../../code/mha_par.py
@@ -108,7 +120,7 @@ Masked Multi-head Attention (parallel query)
 
 Masked Multi-head Attention Batched (parallel query)
 -----------------------------------------------------------------------------------------
-.. warning::
+.. note::
 	.. collapse:: Masked Multi-head Attention (parallel query) implementation in PyTorch
 	
 	   .. literalinclude:: ../../code/mha_par_batched.py
@@ -117,7 +129,7 @@ Masked Multi-head Attention Batched (parallel query)
 
 Multi-head Attention Batched (sequential query)
 -----------------------------------------------------------------------------------------
-.. warning::
+.. note::
 	.. collapse:: Multi-head Attention (sequential query) implementation in PyTorch
 
 	   .. literalinclude:: ../../code/mha_seq_batched.py
@@ -134,46 +146,31 @@ UnitTest
 	      :linenos:
 
 Resources
-=========================================================================================
+-----------------------------------------------------------------------------------------
 * [MHA] `Attention Is All You Need <https://arxiv.org/abs/1706.03762v7>`_
 * [MQA] `Fast Transformer Decoding: One Write-Head is All You Need <https://arxiv.org/abs/1911.02150>`_
 * [GQA] `GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints <https://arxiv.org/abs/2305.13245v3>`_
 
-*****************************************************************************************
 Activations
-*****************************************************************************************
+=========================================================================================
 .. note::
 	* [Noam] `GLU Variants Improve Transformer <https://arxiv.org/pdf/2002.05202v1>`_
 
-Transformer
-=========================================================================================
-.. warning::
-	* [Karpathy] `LLM101n: Let's build a Storyteller <https://github.com/karpathy/LLM101n>`_
-	* [MoE] `Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity <https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf>`_
-
-.. note::
-	* [Harvard] `The Annotated Transformer <https://nlp.seas.harvard.edu/annotated-transformer/>`_
-	* [jalammar.github.io] `The Illustrated Transformer <https://jalammar.github.io/illustrated-transformer/>`_
-	* [lilianweng.github.io] `Attention? Attention! <https://lilianweng.github.io/posts/2018-06-24-attention/>`_
-	* [d2l] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
-
-*****************************************************************************************
 Normalisation
-*****************************************************************************************
-.. note::
-	* `Layer Normalization <https://arxiv.org/abs/1607.06450>`_
-	* `Root Mean Square Layer Normalization <https://arxiv.org/abs/1910.07467>`_
+=========================================================================================
+* `Layer Normalization <https://arxiv.org/abs/1607.06450>`_
+* [RMSNorm] `Root Mean Square Layer Normalization <https://arxiv.org/abs/1910.07467>`_
+* [PreNorm] `On Layer Normalization in the Transformer Architecture <https://arxiv.org/abs/2002.04745>`_
 
-*****************************************************************************************
 Position Encoding
-*****************************************************************************************
+=========================================================================================
 .. note::
 	* `Position Information in Transformers: An Overview <https://arxiv.org/abs/2102.11090>`_
 	* `Rethinking Positional Encoding in Language Pre-training <https://arxiv.org/abs/2006.15595>`_
 	* `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
 
 *****************************************************************************************
-Architecture
+Transformer Architecture
 *****************************************************************************************
 Encoder [BERT]
 =========================================================================================
@@ -196,10 +193,6 @@ Encoder-Decoder [T5]
 =========================================================================================
 .. note::
 	* T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
-
-Autoencoder
-=========================================================================================
-.. note::
 	* BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension
 
 Cross-Lingual
