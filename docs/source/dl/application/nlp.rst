@@ -49,9 +49,9 @@ RNN
 	      :linenos:
 
 .. note::
-	* On the diffculty of training Recurrent Neural Networks
-	* Sequence to Sequence Learning with Neural Networks
-	* NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE
+	* `On the diffculty of training Recurrent Neural Networks <https://arxiv.org/abs/1211.5063>`_
+	* `Sequence to Sequence Learning with Neural Networks <https://arxiv.org/abs/1409.3215>`_
+	* `Neural Machine Translation by Jointly Learning to Align and Translate <https://arxiv.org/abs/1409.0473>`_
 
 LSTM
 =========================================================================================
