@@ -13,6 +13,7 @@ Practical
 	* [Video] `Profiling PyTorch Models for NVIDIA GPUs <https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31644/>`_	
 	* [pytorch.org] `What Every User Should Know About Mixed Precision Training in PyTorch <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/>`_
 	* [pytorch.org] `Performance Tuning Guide <https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html>`_
+	* [pytorch.org] `PyTorch Profiler <https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html>`_
 
 .. note::
 	* [Paper] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
