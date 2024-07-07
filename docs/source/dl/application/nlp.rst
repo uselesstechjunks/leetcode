@@ -90,6 +90,15 @@ Resources
 
 Attention
 =========================================================================================
+Understanding Einsum
+-----------------------------------------------------------------------------------------
+.. warning::
+	.. collapse:: Expand Code
+	
+	   .. literalinclude:: ../../code/einsum.py
+	      :language: python
+	      :linenos:
+
 Dot product Attention (single query)
 -----------------------------------------------------------------------------------------
 .. note::
