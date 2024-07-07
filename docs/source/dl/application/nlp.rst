@@ -7,8 +7,9 @@ Natural Language Processing
 *****************************************************************************************
 Practical
 *****************************************************************************************
-.. note::
+.. warning::
 	* `What Every User Should Know About Mixed Precision Training in PyTorch <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/>`_
+	* [Paper] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
 
 *****************************************************************************************
 Tokenizers
