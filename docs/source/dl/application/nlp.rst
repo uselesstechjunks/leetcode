@@ -176,16 +176,17 @@ Activations
 
 Normalisation
 =========================================================================================
-* `Layer Normalization <https://arxiv.org/abs/1607.06450>`_
+* [LN] `Layer Normalization <https://arxiv.org/abs/1607.06450>`_
 * [RMSNorm] `Root Mean Square Layer Normalization <https://arxiv.org/abs/1910.07467>`_
-* [PreNorm] `On Layer Normalization in the Transformer Architecture <https://arxiv.org/abs/2002.04745>`_
+* [PreLN] `On Layer Normalization in the Transformer Architecture <https://arxiv.org/abs/2002.04745>`_
 
 Position Encoding
 =========================================================================================
 .. note::
 	* `Position Information in Transformers: An Overview <https://arxiv.org/abs/2102.11090>`_
 	* `Rethinking Positional Encoding in Language Pre-training <https://arxiv.org/abs/2006.15595>`_
-	* `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
+	* [Blog] `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
+	* RoFormer: `Enhanced Transformer with Rotary Position Embedding <https://arxiv.org/abs/2104.09864>`_
 
 *****************************************************************************************
 Transformer Architecture
@@ -193,34 +194,40 @@ Transformer Architecture
 Encoder [BERT]
 =========================================================================================
 .. note::
-	* BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
-	* A Primer in BERTology: What we know about how BERT works
-	* RoBERTa: A Robustly Optimized BERT Pretraining Approach
-	* XLM: Cross-lingual Language Model Pretraining
-	* TwinBERT: Distilling Knowledge to Twin-Structured BERT Models for Eicient Retrieval
+	* BERT: `Pre-training of Deep Bidirectional Transformers for Language Understanding <https://arxiv.org/abs/1810.04805>`_
+	* `A Primer in BERTology: What we know about how BERT works <https://arxiv.org/abs/2002.12327>`_
+	* RoBERTa: `A Robustly Optimized BERT Pretraining Approach <https://arxiv.org/abs/1907.11692>`_
+	* XLM: `Cross-lingual Language Model Pretraining <https://arxiv.org/abs/1901.07291>`_
+	* TwinBERT: `Distilling Knowledge to Twin-Structured BERT Models for Efficient Retrieval <https://arxiv.org/abs/2002.06275>`_
 
 Decoder [GPT]
 =========================================================================================
 .. note::
 	* `[jalammar.github.io] The Illustrated GPT-2 <https://jalammar.github.io/illustrated-gpt2/>`_
 	* `[cameronrwolfe.substack.com] Decoder-Only Transformers: The Workhorse of Generative LLMs <https://cameronrwolfe.substack.com/p/decoder-only-transformers-the-workhorse>`_
-	* GPT-2: Language Models are Unsupervised Multitask Learners
-	* GPT-3: Language Models are Few-Shot Learners
+	* GPT-2: `Language Models are Unsupervised Multitask Learners <https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf>`_
+	* GPT-3: `Language Models are Few-Shot Learners <https://arxiv.org/abs/2005.14165>`_
 
 Encoder-Decoder [T5]
 =========================================================================================
 .. note::
-	* T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
-	* BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension
+	* T5: `Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer <https://arxiv.org/abs/1910.10683>`_
+
+Autoencoder [BART]
+=========================================================================================
+.. note::
+	* BART: `Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension <https://arxiv.org/abs/1910.13461>`_
 
 Cross-Lingual
 =========================================================================================
 .. note::
+	* [Encoder] XLM-R [Roberta]: `Unsupervised Cross-lingual Representation Learning at Scale <https://arxiv.org/abs/1911.02116>`_
+	* [Decoder] XGLM [GPT-3]: `Few-shot Learning with Multilingual Generative Language Models <https://arxiv.org/abs/2112.10668>`_
+	* [Encoder-Decoder] mT5 [T5]: `A Massively Multilingual Pre-trained Text-to-Text Transformer <https://arxiv.org/abs/2010.11934>`_
+	* [Autoencoder] mBART [BART]: `Multilingual Denoising Pre-training for Neural Machine Translation <https://arxiv.org/abs/2001.08210>`_
+
+.. seealso::
 	* `[ruder.io] The State of Multilingual AI <https://www.ruder.io/state-of-multilingual-ai/>`_
-	* [Encoder] XLM-R [Roberta]: Unsupervised Cross-lingual Representation Learning at Scale
-	* [Decoder] XGLM [GPT-3]: Few-shot Learning with Multilingual Generative Language Models
-	* [Encoder-Decoder] mT5 [T5]: A Massively Multilingual Pre-trained Text-to-Text Transformer
-	* [Autoencoder] mBART [BART]: Multilingual Denoising Pre-training for Neural Machine Translation
 
 *****************************************************************************************
 Training
