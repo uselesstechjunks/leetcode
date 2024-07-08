@@ -1,4 +1,5 @@
 import torch
+import torch.nn.functional as F
 
 """
 Rule of thumb:
@@ -113,9 +114,63 @@ def test_matmul_reduce_all():
 
     assert(torch.all(torch.isclose(Expected, Actual)))
 
+###################################################
+# Test with multi-head attention code
+###################################################
+def mha_par_batched(Q,K,V):
+    """
+    args:
+        Q: [b,h,n,k]
+        K: [b,h,m,k]
+        V: [b,h,m,v]
+    returns:
+        O: [b,h,n,v]
+    """
+    logits = torch.einsum('bhnk,bhmk->bhnm', Q, K)
+    weights = F.softmax(logits, dim=-1)
+    O = torch.einsum('bhnm,bhmv->bhnv', weights, V)
+    return logits, O
+
+def mha_par_batched_impl(Q,K,V):
+    _b = Q.shape[0]
+    _h = Q.shape[1]
+    _n = Q.shape[2]
+    _m = K.shape[2]
+    _v = V.shape[-1]
+    logits = torch.zeros(_b,_h,_n,_m)
+    for b in torch.arange(_b):
+        for h in torch.arange(_h):
+            for n in torch.arange(_n):
+                for m in torch.arange(_m):
+                    logits[b,h,n,m] = torch.dot(Q[b,h,n,:], K[b,h,m,:])
+    weights = F.softmax(logits, dim=-1)
+    O = torch.zeros(_b,_h,_n,_v)
+    for b in torch.arange(_b):
+        for h in torch.arange(_h):
+            for n in torch.arange(_n):
+                for v in torch.arange(_v):
+                    O[b,h,n,v] = torch.dot(weights[b,h,n,:], V[b,h,:,v])
+    return logits, O
+
+def test_mha_par_batched():
+    torch.manual_seed(42)
+    b = 5
+    h = 2
+    n = m = 4
+    k = v = 4
+    Q = torch.randn((b,h,n,k))
+    K = torch.randn((b,h,m,k))
+    V = torch.randn((b,h,m,v))
+    logits_expected, O_expected = mha_par_batched(Q,K,V)
+    logits_actual, O_actual = mha_par_batched_impl(Q,K,V)
+
+    assert(torch.all(torch.isclose(logits_expected, logits_actual)))
+    assert(torch.all(torch.isclose(O_expected, O_actual)))
+
 if __name__ == '__main__':
     test_matmul()
     test_matmul_reduce_k()
     test_matmul_reduce_i()
     test_matmul_reduce_j()
     test_matmul_reduce_all()
+    test_mha_par_batched()
