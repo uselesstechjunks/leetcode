@@ -1,5 +1,17 @@
 import torch
 
+"""
+Rule of thumb:
+------------------------------------------------------------------------
+(a) dimensions that appear in the output would appear in the outer-loop.
+    we'll fill in for these dimensions element-wise.
+(b) dimensions that appear in both the inputs (common dimensions) 
+    are multiplied element-wise.
+(c) dimensions that appear in the inputs but not on the output are summed over.
+    this means for dimensions that satisfy both (b) and (c) are first multiplied
+    and then summer over.
+"""
+
 def test_matmul():
     torch.manual_seed(42)
     X = torch.randn((4,5)) # matrix 4x5
