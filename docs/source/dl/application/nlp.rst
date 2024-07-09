@@ -189,6 +189,7 @@ Resources
 Activations
 =========================================================================================
 .. note::
+	* [GELU] `Gaussian Error Linear Units <https://arxiv.org/abs/1606.08415>`_
 	* [Noam] `GLU Variants Improve Transformer <https://arxiv.org/pdf/2002.05202v1>`_
 
 Normalisation
