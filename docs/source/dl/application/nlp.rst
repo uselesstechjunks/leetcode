@@ -184,6 +184,7 @@ Activations
 .. note::
 	* [GELU] `Gaussian Error Linear Units <https://arxiv.org/abs/1606.08415>`_
 	* [Swish] `Searching for Activation Functions <https://arxiv.org/pdf/1710.05941v2>`_
+	* [Medium] `On the Disparity Between Swish and GELU <https://towardsdatascience.com/on-the-disparity-between-swish-and-gelu-1ddde902d64b>`_
 	* [Noam] `GLU Variants Improve Transformer <https://arxiv.org/pdf/2002.05202v1>`_
 
 Normalisation
