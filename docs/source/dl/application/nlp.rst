@@ -80,7 +80,7 @@ Resources
 =========================================================================================
 .. warning::
 	* [Karpathy] `LLM101n: Let's build a Storyteller <https://github.com/karpathy/LLM101n>`_
-	* [MoE] `Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity <https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf>`_
+		* [MoE] `Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity <https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf>`_
 
 .. note::
 	* [Harvard] `The Annotated Transformer <https://nlp.seas.harvard.edu/annotated-transformer/>`_
@@ -99,77 +99,70 @@ Understanding Einsum
 	      :language: python
 	      :linenos:
 
-Dot product Attention (single query)
------------------------------------------------------------------------------------------
 .. note::
-	.. collapse:: Expand Code
+	* Dot product Attention (single query)
 
-	   .. literalinclude:: ../../code/attn.py
-	      :language: python
-	      :linenos:
+		.. collapse:: Expand Code
 
-Multi-head Attention (single query)
------------------------------------------------------------------------------------------
-.. note::
-	.. collapse:: Expand Code
+		   .. literalinclude:: ../../code/attn.py
+		      :language: python
+		      :linenos:
 
-	   .. literalinclude:: ../../code/mha.py
-	      :language: python
-	      :linenos:
+	* Multi-head Attention (single query)
 
-Multi-head Attention (sequential query)
------------------------------------------------------------------------------------------
-.. note::
-	.. collapse:: Expand Code
+		.. collapse:: Expand Code
 
-	   .. literalinclude:: ../../code/mha_seq.py
-	      :language: python
-	      :linenos:
+		   .. literalinclude:: ../../code/mha.py
+		      :language: python
+		      :linenos:
 
-Masked Multi-head Attention (parallel query)
------------------------------------------------------------------------------------------
-.. note::
-	.. collapse:: Expand Code
+	* Multi-head Attention (sequential query)
 
-	   .. literalinclude:: ../../code/mha_par.py
-	      :language: python
-	      :linenos:
+		.. collapse:: Expand Code
 
-Masked Multi-head Attention Batched (parallel query)
------------------------------------------------------------------------------------------
-.. note::
-	.. collapse:: Expand Code
-	
-	   .. literalinclude:: ../../code/mha_par_batched.py
-	      :language: python
-	      :linenos:
+		   .. literalinclude:: ../../code/mha_seq.py
+		      :language: python
+		      :linenos:
 
-Multi-head Attention Batched (sequential query)
------------------------------------------------------------------------------------------
-.. note::
-	.. collapse:: Expand Code
+	* Masked Multi-head Attention (parallel query)
 
-	   .. literalinclude:: ../../code/mha_seq_batched.py
-	      :language: python
-	      :linenos:
+		.. collapse:: Expand Code
 
-Masked Multi-query Attention Batched (parallel query)
------------------------------------------------------------------------------------------
-.. note::
-	.. collapse:: Expand Code
-	
-	   .. literalinclude:: ../../code/mqa_par_batched.py
-	      :language: python
-	      :linenos:
+		   .. literalinclude:: ../../code/mha_par.py
+		      :language: python
+		      :linenos:
 
-Multi-query Attention Batched (sequential query)
------------------------------------------------------------------------------------------
-.. note::
-	.. collapse:: Expand Code
+	* Masked Multi-head Attention Batched (parallel query)
 
-	   .. literalinclude:: ../../code/mqa_seq_batched.py
-	      :language: python
-	      :linenos:
+		.. collapse:: Expand Code
+
+		   .. literalinclude:: ../../code/mha_par_batched.py
+		      :language: python
+		      :linenos:
+
+	* Multi-head Attention Batched (sequential query)
+
+		.. collapse:: Expand Code
+
+		   .. literalinclude:: ../../code/mha_seq_batched.py
+		      :language: python
+		      :linenos:
+
+	* Masked Multi-query Attention Batched (parallel query)
+
+		.. collapse:: Expand Code
+
+		   .. literalinclude:: ../../code/mqa_par_batched.py
+		      :language: python
+		      :linenos:
+
+	* Multi-query Attention Batched (sequential query)
+
+		.. collapse:: Expand Code
+
+		   .. literalinclude:: ../../code/mqa_seq_batched.py
+		      :language: python
+		      :linenos:
 
 UnitTest
 -----------------------------------------------------------------------------------------
@@ -190,6 +183,7 @@ Activations
 =========================================================================================
 .. note::
 	* [GELU] `Gaussian Error Linear Units <https://arxiv.org/abs/1606.08415>`_
+	* [Swish] `Searching for Activation Functions <https://arxiv.org/pdf/1710.05941v2>`_
 	* [Noam] `GLU Variants Improve Transformer <https://arxiv.org/pdf/2002.05202v1>`_
 
 Normalisation
