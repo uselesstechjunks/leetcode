@@ -19,6 +19,27 @@ Practical
 	* [Paper] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
 
 *****************************************************************************************
+Activations
+*****************************************************************************************
+.. note::
+	* [SiL] `Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning <https://arxiv.org/abs/1702.03118>`_
+	* [GELU] `Gaussian Error Linear Units <https://arxiv.org/abs/1606.08415>`_
+	* [Swish] `Searching for Activation Functions <https://arxiv.org/pdf/1710.05941v2>`_	
+	* [Medium] `On the Disparity Between Swish and GELU <https://towardsdatascience.com/on-the-disparity-between-swish-and-gelu-1ddde902d64b>`_
+	* [Noam] `GLU Variants Improve Transformer <https://arxiv.org/pdf/2002.05202v1>`_
+
+*****************************************************************************************
+Normalisation
+*****************************************************************************************
+* [Internal Covariate Shift][BN] `Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift <https://arxiv.org/abs/1502.03167>`_
+* [LN] `Layer Normalization <https://arxiv.org/abs/1607.06450>`_
+* [RMSNorm] `Root Mean Square Layer Normalization <https://arxiv.org/abs/1910.07467>`_
+* [PreLN][Detailed Study with Mean-Field Theory] `On Layer Normalization in the Transformer Architecture <https://arxiv.org/abs/2002.04745>`_
+
+.. warning::
+	For theoretical understanding of MFT and NTK, start from this MLSS video `here <https://youtu.be/rzPHnBGmr_E?si=JifFfB9r0Ax373VR>`_.
+
+*****************************************************************************************
 Tokenizers
 *****************************************************************************************
 WordPiece
@@ -87,6 +108,14 @@ Resources
 	* [jalammar.github.io] `The Illustrated Transformer <https://jalammar.github.io/illustrated-transformer/>`_
 	* [lilianweng.github.io] `Attention? Attention! <https://lilianweng.github.io/posts/2018-06-24-attention/>`_
 	* [d2l] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
+
+Position Encoding
+=========================================================================================
+.. note::
+	* `Position Information in Transformers: An Overview <https://arxiv.org/abs/2102.11090>`_
+	* `Rethinking Positional Encoding in Language Pre-training <https://arxiv.org/abs/2006.15595>`_
+	* [Blog] `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
+	* RoFormer: `Enhanced Transformer with Rotary Position Embedding <https://arxiv.org/abs/2104.09864>`_
 
 Attention
 =========================================================================================
@@ -178,29 +207,6 @@ Resources
 * [MHA] `Attention Is All You Need <https://arxiv.org/abs/1706.03762v7>`_
 * [MQA] `Fast Transformer Decoding: One Write-Head is All You Need <https://arxiv.org/abs/1911.02150>`_
 * [GQA] `GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints <https://arxiv.org/abs/2305.13245v3>`_
-
-Activations
-=========================================================================================
-.. note::
-	* [SiL] `Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning <https://arxiv.org/abs/1702.03118>`_
-	* [GELU] `Gaussian Error Linear Units <https://arxiv.org/abs/1606.08415>`_
-	* [Swish] `Searching for Activation Functions <https://arxiv.org/pdf/1710.05941v2>`_	
-	* [Medium] `On the Disparity Between Swish and GELU <https://towardsdatascience.com/on-the-disparity-between-swish-and-gelu-1ddde902d64b>`_
-	* [Noam] `GLU Variants Improve Transformer <https://arxiv.org/pdf/2002.05202v1>`_
-
-Normalisation
-=========================================================================================
-* [LN] `Layer Normalization <https://arxiv.org/abs/1607.06450>`_
-* [RMSNorm] `Root Mean Square Layer Normalization <https://arxiv.org/abs/1910.07467>`_
-* [PreLN] `On Layer Normalization in the Transformer Architecture <https://arxiv.org/abs/2002.04745>`_
-
-Position Encoding
-=========================================================================================
-.. note::
-	* `Position Information in Transformers: An Overview <https://arxiv.org/abs/2102.11090>`_
-	* `Rethinking Positional Encoding in Language Pre-training <https://arxiv.org/abs/2006.15595>`_
-	* [Blog] `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
-	* RoFormer: `Enhanced Transformer with Rotary Position Embedding <https://arxiv.org/abs/2104.09864>`_
 
 *****************************************************************************************
 Transformer Architecture
