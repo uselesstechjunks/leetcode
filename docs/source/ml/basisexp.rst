@@ -175,7 +175,7 @@ A Point Mapping to a Function
 
 		.. math:: f_\gamma=\exp\left(-\gamma||x-x'||^2\right)
 	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse limit to a bump with a non-zero width.
-	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
+	* Intuitively, this allows for some uncertainty about the exact location of the point.
 
 Reproducing Kernel Hilbert Space
 ----------------------------------------------------------------------------------
@@ -214,7 +214,7 @@ Mercer Kernels: Eigen-decomposition of Linear Space Spanned by Kernel Functions
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
 
-		* Note that :math:`\varphi(x)\neq phi(x)`, and therefore, this produces a different feature map.
+		* We note that :math:`\varphi(x)\neq \phi(x)`, and therefore, this produces a different feature map.
 	* Since kernels are **symmetric and positive definite**, the eigenvalues 
 
 		* are positive, i.e. :math:`\gamma_i\ge 0`, and 
@@ -248,6 +248,11 @@ Kernel Ridge Regression
 
 		.. math:: \hat{f}=\min_{\boldsymbol{\alpha}}L(\mathbf{y}, \mathbf{K}\boldsymbol{\alpha})+\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
 	* We note that for MSE loss, this reduces to a generalised ridge regression problem.
+
+Connection to Smoothness
+----------------------------------------------------------------------------------
+.. warning::
+	[TODO] Intuition: Lesser weights to more wiggly component functions in the solution.
 
 .. seealso::
 	* For intuitive understanding, here is an example:
