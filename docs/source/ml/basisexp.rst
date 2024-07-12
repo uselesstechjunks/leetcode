@@ -183,14 +183,18 @@ Reproducing Kernel Hilbert Space
 	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ (:math:`\mathcal{H}_K`) to be our function class.
 	* We define the basis expansion as a mapping from the original domain to this function space, :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K`.
 
-		.. math:: x\in\mathbb{R}^d\mapsto (f:\mathbb{R}^d\mapsto\mathbb{R})\in\mathcal{H}_K
+		.. math:: x\in\mathbb{R}^d\overset{h}\longmapsto  (f_{\delta_x}:\mathbb{R}^d\mapsto\mathbb{R})\in\mathcal{H}_K
 	* For each point :math:`x_i\in\mathbf{X}`, we map it to a function :math:`f_i(\cdot)\in\mathcal{H}_K` with a free parameter.
 
 .. warning::
-	* Let :math:`K` be the kernel of :math:`\mathcal{H}_K`. Therefore, every :math:`f\in\mathcal{H}_K` can be expressed as
+	* Let :math:`K` be the reproducing kernel of :math:`\mathcal{H}_K` with an evaluation functional :math:`\delta_x:\mathcal{H}_K\mapsto\mathbb{R}`.
+	* This means, for any :math:`f\in \mathcal{H}_K`, 
 
-		.. math:: f(\cdot)=K(\cdot,x)
-	* The kernel provides the tool to calculate the inner products (and, hence, similarity measure via a metric) between the points.
+		.. math:: \delta_x(f)=\langle K(\cdot,x), f\rangle_{\mathcal{H}_K}=f(x)
+	* We choose a specific mapping :math:`\varphi:\mathbb{R}^d\mapsto\mathcal{H}_K` such that it maps each point :math:`x` to this specific type of functions (canonical feature maps)
+
+		.. math:: \varphi(x)=f_{\delta_x}=K(\cdot,x)
+	* We note that the kernel also provides the tool to calculate the inner products (and, hence, similarity measure via a metric) between the points.
 
 		.. math:: \langle f_i(\cdot), f_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
 
