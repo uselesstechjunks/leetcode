@@ -175,44 +175,46 @@ A Point Mapping to a Function
 
 		.. math:: f_\gamma=\exp\left(-\gamma||x-x'||^2\right)
 	* While thinking of a map from a point to a function, we're essentially going backwards from the impulse limit to a bump with a non-zero width.
-	* Intuitively, this allows for some uncertainty about the exact location of the point with respect to others.
+	* Intuitively, this allows for some uncertainty about the exact location of the point.
 
 Reproducing Kernel Hilbert Space
 ----------------------------------------------------------------------------------
 .. note::
 	* We choose `RKHS <https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space>`_ (:math:`\mathcal{H}_K`) to be our function class.
-	* We define the basis expansion as a mapping from the original domain to this function space, :math:`h:\mathbb{R}^d\mapsto\mathcal{H}_K`.
+	* We define the basis expansion as a mapping from the original domain to this function space
 
-		.. math:: x\in\mathbb{R}^d\mapsto (f:\mathbb{R}^d\mapsto\mathbb{R})\in\mathcal{H}_K
+		.. math:: x\in\mathbb{R}^d\overset{h}\longmapsto  (f:\mathbb{R}^d\mapsto\mathbb{R})\in\mathcal{H}_K
 	* For each point :math:`x_i\in\mathbf{X}`, we map it to a function :math:`f_i(\cdot)\in\mathcal{H}_K` with a free parameter.
 
 .. warning::
-	* Let :math:`K` be the kernel of :math:`\mathcal{H}_K`. Therefore, every :math:`f\in\mathcal{H}_K` can be expressed as
+	* Let :math:`K` be the reproducing kernel of :math:`\mathcal{H}_K` with Dirac evaluation functional :math:`\delta_x:\mathcal{H}_K\mapsto\mathbb{R}`.
+	* This means, for any :math:`f\in \mathcal{H}_K`, 
 
-		.. math:: f(\cdot)=K(\cdot,x)
-	* The kernel provides the tool to calculate the inner products (and, hence, similarity measure via a metric) between the points.
+		.. math:: \delta_x(f)=\langle K(\cdot,x), f\rangle_{\mathcal{H}_K}=f(x)
+	* We choose a specific mapping :math:`\varphi:\mathbb{R}^d\mapsto\mathcal{H}_K` such that it maps each point :math:`x` to this specific type of functions (canonical feature maps)
 
-		.. math:: \langle f_i(\cdot), f_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
+		.. math:: \varphi(x)=f_{\delta_x}=K(\cdot,x)
+	* We note that the kernel also provides the tool to calculate the inner products (and, hence, similarity measure via a metric) between the points.
+
+		.. math:: \langle \varphi_i(\cdot), \varphi_j(\cdot)\rangle_{{\mathcal{H}}_K}=\langle K(\cdot,x_i), K(\cdot,x_j)\rangle_{{\mathcal{H}}_K}=K(x_i,x_j)
 
 .. note::
-	* :math:`\mathcal{H}_K` contains (uncountably) infinitely many basis functions :math:`K(\cdot,x_i)` for :math:`i\in\mathcal{I}`.
+	* :math:`\mathcal{H}_K` contains (uncountably) infinite number of basis functions :math:`K(\cdot,x_i)` for :math:`i\in\mathcal{I}`.
 	* Every function :math:`f\in\mathcal{H}_K` can be expressed using those basis
 
 		.. math:: f(\cdot)=\sum_{i\in\mathcal{I}}\alpha_i K(\cdot,x_i)
-	
-.. warning::
-	* Reproducing Property: Having an inner product of the function :math:`f` with the reproducing kernel around a point :math:`x` gives back the given function evaluated at that point.
 
-		.. math:: \langle K(\cdot,x),f\rangle_{\mathcal{H}_K}=\langle K(\cdot,x),\sum_{i\in\mathcal{I}} \alpha_i K(x_i,x)\rangle_{\mathcal{H}_K}=f(x)
-	* `Riesz representation theorem <https://en.wikipedia.org/wiki/Riesz_representation_theorem>`_: For each :math:`x`, the above holds true only for a unique :math:`K(\cdot,x)`.
-
-Eigen-decomposition of Linear Space Spanned by Kernel Functions
+Mercer Kernels: Eigen-decomposition of Linear Space Spanned by Kernel Functions
 ----------------------------------------------------------------------------------
 .. note::
 	* From a potentially uncountable number of basis functions, eigen-decomposition reduces the basis functions to a countable case.
+
+		* Requires added structural assumption on the domain of :math:`x` and on the continuity of :math:`K`.
 	* Assuming that the kernel has an eigen-decomposition with eigenfunctions :math:`(\phi_i)_{i=1}^\infty\in\mathcal{H}_K`, the kernel also be written in term of these
 
 		.. math:: K(x,y)=\sum_{i=1}^\infty \gamma_i\phi_i(x)\phi_i(y)
+
+		* We note that :math:`\varphi(x)\neq \phi(x)`, and therefore, this produces a different feature map.
 	* Since kernels are **symmetric and positive definite**, the eigenvalues 
 
 		* are positive, i.e. :math:`\gamma_i\ge 0`, and 
@@ -246,6 +248,11 @@ Kernel Ridge Regression
 
 		.. math:: \hat{f}=\min_{\boldsymbol{\alpha}}L(\mathbf{y}, \mathbf{K}\boldsymbol{\alpha})+\lambda\boldsymbol{\alpha}^T\mathbf{K}\boldsymbol{\alpha}
 	* We note that for MSE loss, this reduces to a generalised ridge regression problem.
+
+Connection to Smoothness
+----------------------------------------------------------------------------------
+.. warning::
+	[TODO] Intuition: Lesser weights to more wiggly component functions in the solution.
 
 .. seealso::
 	* For intuitive understanding, here is an example:
