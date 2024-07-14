@@ -2,6 +2,11 @@
 Advanced Topics
 #####################################################################################
 
+.. warning::
+	* [mbernste.github.io] `The evidence lower bound (ELBO) <https://mbernste.github.io/posts/elbo/>`_
+	* [mbernste.github.io] `Expectation-maximization: theory and intuition <https://mbernste.github.io/posts/em/>`_
+	* [mbernste.github.io] `Variational inference <https://mbernste.github.io/posts/variational_inference/>`_
+
 *************************************************************************************
 Generative Adversarial Network
 *************************************************************************************
@@ -25,7 +30,6 @@ Variational Autoencoders
 	* [VQ-VAE2] `Generating Diverse High-Fidelity Images with VQ-VAE-2 <https://arxiv.org/abs/1906.00446>`_
 
 .. seealso::
-	* [Blog] `The evidence lower bound (ELBO) <https://mbernste.github.io/posts/elbo/>`_
 	* [Dall-E] `Zero-Shot Text-to-Image Generation <https://arxiv.org/abs/2102.12092>`_
 
 *************************************************************************************
