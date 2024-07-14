@@ -21,6 +21,7 @@ Variational Autoencoders
 	* [VAE] `An Introduction to Variational Autoencoders <https://arxiv.org/abs/1906.02691>`_
 	* [dVAE] `The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables <https://arxiv.org/abs/1611.00712>`_
 	* [VQ-VAE] `Neural Discrete Representation Learning <https://arxiv.org/abs/1711.00937>`_
+	* [VQ-VAE2] `Generating Diverse High-Fidelity Images with VQ-VAE-2 <https://arxiv.org/abs/1906.00446>`_
 
 .. seealso::
 	* [Blog] `The evidence lower bound (ELBO) <https://mbernste.github.io/posts/elbo/>`_
