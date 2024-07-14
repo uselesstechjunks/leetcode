@@ -41,6 +41,7 @@ Diffusion
 	* [DiT] `Scalable Diffusion Models with Transformers <https://arxiv.org/abs/2212.09748>`_
 
 .. seealso::
+	* [mbernste.github.io] Denoising diffusion probabilistic models `Part 1 <>`_, `Part 2 <>`_
 	* [jalammar.github.io] `The Illustrated Stable Diffusion <https://jalammar.github.io/illustrated-stable-diffusion/>`_
 	* [stability.ai] `Generative Models by Stability AI <https://github.com/Stability-AI/generative-models>`_
 	* [Github] `Stable Diffusion Repo <https://github.com/CompVis/stable-diffusion>`_
