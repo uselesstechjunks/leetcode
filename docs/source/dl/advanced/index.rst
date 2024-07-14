@@ -30,6 +30,7 @@ Variational Autoencoders
 	* [VQ-VAE2] `Generating Diverse High-Fidelity Images with VQ-VAE-2 <https://arxiv.org/abs/1906.00446>`_
 
 .. seealso::
+	* [mbernste.github.io] `Variational autoencoders <https://mbernste.github.io/posts/vae/>`_
 	* [Dall-E] `Zero-Shot Text-to-Image Generation <https://arxiv.org/abs/2102.12092>`_
 
 *************************************************************************************
@@ -41,6 +42,7 @@ Diffusion
 	* [DiT] `Scalable Diffusion Models with Transformers <https://arxiv.org/abs/2212.09748>`_
 
 .. seealso::
+	* [mbernste.github.io] Denoising diffusion probabilistic models `Part 1 <https://mbernste.github.io/posts/diffusion_part1/>`_, `Part 2 <https://mbernste.github.io/posts/diffusion_part2/>`_
 	* [jalammar.github.io] `The Illustrated Stable Diffusion <https://jalammar.github.io/illustrated-stable-diffusion/>`_
 	* [stability.ai] `Generative Models by Stability AI <https://github.com/Stability-AI/generative-models>`_
 	* [Github] `Stable Diffusion Repo <https://github.com/CompVis/stable-diffusion>`_
