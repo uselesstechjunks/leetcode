@@ -15,6 +15,7 @@ Autoencoders
 *************************************************************************************
 .. seealso::
 	* [VQ-VAE] `Neural Discrete Representation Learning <https://arxiv.org/abs/1711.00937>`_
+	* [Blog] `The evidence lower bound (ELBO) <https://mbernste.github.io/posts/elbo/>`_
 
 *************************************************************************************
 Stable Diffusion
