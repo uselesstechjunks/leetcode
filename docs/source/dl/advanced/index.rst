@@ -7,6 +7,10 @@ Advanced Topics
 	* [mbernste.github.io] `Expectation-maximization: theory and intuition <https://mbernste.github.io/posts/em/>`_
 	* [mbernste.github.io] `Variational inference <https://mbernste.github.io/posts/variational_inference/>`_
 
+Energy Based Model
+.. note::
+	* `Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One <https://arxiv.org/abs/1912.03263>`_
+
 *************************************************************************************
 Generative Adversarial Network
 *************************************************************************************
