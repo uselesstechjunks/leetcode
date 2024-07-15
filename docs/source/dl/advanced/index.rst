@@ -8,6 +8,13 @@ Advanced Topics
 	* [mbernste.github.io] `Variational inference <https://mbernste.github.io/posts/variational_inference/>`_
 
 *************************************************************************************
+Energy Based Model
+*************************************************************************************
+.. note::
+	* `How to Train Your Energy-Based Models <https://arxiv.org/abs/2101.03288>`_
+	* `Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One <https://arxiv.org/abs/1912.03263>`_
+
+*************************************************************************************
 Generative Adversarial Network
 *************************************************************************************
 .. note::
