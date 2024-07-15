@@ -38,6 +38,7 @@ Diffusion
 *************************************************************************************
 .. note::
 	* [DDPM] `Denoising Diffusion Probabilistic Models <https://arxiv.org/abs/2006.11239>`_
+	* [OpenAI] `Improved Denoising Diffusion Probabilistic Models <https://arxiv.org/abs/2102.09672>`_
 	* [LDM] `High-Resolution Image Synthesis with Latent Diffusion Models <https://arxiv.org/abs/2112.10752>`_
 	* [DiT] `Scalable Diffusion Models with Transformers <https://arxiv.org/abs/2212.09748>`_
 
