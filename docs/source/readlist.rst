@@ -127,6 +127,7 @@ Must Read Papers
 		MLM, BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 		MLM, RoBERTa: A Robustly Optimized BERT Pretraining Approach
 		MLM, TwinBERT: Distilling Knowledge to Twin-Structured BERT Models for Efficient Retrieval
+		RTD, Electra: Pre-training Text Encoders as Discriminators Rather Than Generators
 		CLM, GPT2: Language Models are Unsupervised Multitask Learners
 		CLM, GPT3: Language Models are Few-Shot Learners
 		CLM, LLaMA: Open and Efficient Foundation Language Models
