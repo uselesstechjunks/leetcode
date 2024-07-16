@@ -2,6 +2,30 @@
 Amazon
 ##########################################################################
 **************************************************************************
+Leadership Principles
+**************************************************************************
+.. csv-table:: 
+	:header: "Rank","Vertical","Desc","Relevancy"
+	:align: center
+
+		5,2. **Ownership**:,Think long-term; act on behalf; embrace responsibility.,Taking ownership ensures accountability and long-term strategic thinking; which are essential for developing and deploying ML models.
+		5,3. **Invent and Simplify**:,Innovate; simplify; encourage external ideas.,Innovation and simplification are core to developing effective ML algorithms and systems.
+		5,5. **Learn and Be Curious**:,Continuous learning; explore new ideas.,Continuous learning is critical in the rapidly evolving field of machine learning.
+		5,11. **Earn Trust**:,Listen; speak candidly; benchmark against best.,Trust is crucial for collaboration and acceptance of ML solutions.
+		5,12. **Dive Deep**:,Stay connected to details; skeptical of metrics.,Understanding technical details deeply is essential for effective ML modeling and problem-solving.
+		5,14. **Deliver Results**:,Focus on key inputs; timely delivery; quality.,Ultimately; delivering results is the goal of applied machine learning projects.
+		4,1. **Customer Obsession**:,Start with customer; earn trust; obsess over needs,Understanding and addressing customer needs is crucial for developing impactful machine learning solutions.
+		4,4. **Are Right; A Lot**:,Strong judgment; seek diverse perspectives.,Having strong judgment and seeking diverse perspectives aids in making informed decisions in ML research and application.
+		4,7. **Insist on the Highest Standards**:,High expectations; drive quality.,High standards ensure quality in ML model development and deployment.
+		4,8. **Think Big**:,Bold vision; inspire innovation; think differently.,Thinking big helps in envisioning impactful applications of machine learning.
+		4,9. **Bias for Action**:,Value speed; encourage calculated risk.,Speed in experimentation and prototyping is beneficial in agile ML development.
+		4,13. **Have Backbone; Disagree and Commit**:,Challenge respectfully; commit wholly.,Respectful disagreement and commitment to decisions are important in collaborative ML research.
+		3,6. **Hire and Develop the Best**:,Raise performance; develop leaders; coach.,While important; direct leadership of teams may be less relevant compared to technical expertise in this role.
+		3,16. **Success and Scale Bring Broad Responsibility**:,Be humble; impact positively; improve daily.,Awareness of broader impacts is important; though less directly tied to day-to-day ML tasks.
+		2,10. **Frugality**:,Resourceful; accomplish more with less.,Resourcefulness is valuable; but excessive frugality may hinder innovation in machine learning.
+		2,15. **Strive to be Earth’s Best Employer**:,Create safe; productive; empathetic environment.,While a positive work environment is important; the direct impact on machine learning work may be indirect.
+
+**************************************************************************
 Understanding the Product
 **************************************************************************
 Kindle
