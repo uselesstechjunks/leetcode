@@ -283,3 +283,57 @@ Moment Generating Function
 
 .. seealso::
 	Find the expectation, variance and the transform of the sum of independent rvs where the number of terms is also a rv.
+
+Integral Transforms
+==========================================================================================
+Let :math:`p` and :math:`q` be two densities over rv :math:`x\in\mathcal{X}` with finite Borel measure.
+
+KL Divergence
+------------------------------------------------------------------------------------------
+.. math:: D_{KL}(p\parallel q)=\mathbb{E}_{x\sim p}\left[\log\frac{p(x)}{q(x)}\right]
+
+.. note::
+	* :math:`D_{KL}(p\parallel q)\geq 0` (proof follows from Jensen's inequality since :math:`-\log` is a convex function).
+	* :math:`p=q\implies D_{KL}(p\parallel q)= 0` (other direction does not hold)
+	* This is not a metric as :math:`D_{KL}(p\parallel q)\neq D_{KL}(q\parallel p)`.
+
+.. seealso::
+	* Note that entropy :math:`H(p)` and cross-entropy :math:`H(p, q)` can be defined as
+
+		* :math:`H(p)=-\mathbb{E}_{x\sim p}[\log p(x)]`
+		* :math:`H(p\parallel q)=-\mathbb{E}_{x\sim p}[\log q(x)]`
+	* Therefore :math:`D_{KL}(p\parallel q)=H(p\parallel q)-H(p)`
+	* [Gibb's inequality] :math:`D_{KL}(p\parallel q)\geq 0\implies H(p\parallel q)\ge H(p)`
+
+.. attention::
+	* Say :math:`x\sim p` but unknown, and we approximate :math:`p` with some :math:`q^*\in\mathcal{Q}` such that
+
+		.. math:: q^*=\underset{q\in\mathcal{Q}}{\arg\min}\left(D_{KL}(p\parallel q)\right)
+	* We disregard the inherent randomness associated with :math:`p` itself (i.e. :math:`H(p)`).
+	* Minimising :math:`H(p\parallel q)` is the same as minimising :math:`D_{KL}(p\parallel q)`.
+	* Finite sample case:
+
+		* We use the empirical distribution :math:`\hat{p}` from a iid sample :math:`\{x_i\}_{i=1}^N`.
+		* Using WLLN, as :math:`N\to\infty`, :math:`H(\hat{p},q)\overset{P}\to H(p\parallel q)`.
+		* :math:`H(p\parallel q)` then becomes the same as negative log-likelihood (NLL)
+	
+			.. math:: H(p\parallel q)\approx H(\hat{p},q)=-\mathbb{E}_{x\sim \hat{p}}[\log q(x)]=-\frac{1}{N}\sum_{i=1}^N\log q(x_i)
+
+For jointly distributed rvs :math:`x,y\sim p(x,y)`, we define
+
+.. note::
+	* Conditional entropy
+
+		.. math:: H(X∣Y)=−\mathbb{E}_{x,y\sim p(x,y)}​[\log p(x|y)]=-\mathbb{E}_{y\sim p(y)}\left[\mathbb{E}_{x\sim x|y}\left[\log p(x|y)\right]\right]
+	* Mutual information 
+
+		.. math:: I(X;Y)=H(X)−H(X∣Y)
+
+Integral Probability Metric: Wasserstein Distance
+------------------------------------------------------------------------------------------
+
+Integral Probability Metric: Maximum Mean Discrepancy (MMD)
+------------------------------------------------------------------------------------------
+
+.. seealso::
+	`Divergence measures <https://www.desmos.com/calculator/2sboqbhler>`_
