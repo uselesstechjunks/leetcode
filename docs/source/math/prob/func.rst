@@ -297,6 +297,25 @@ KL Divergence
 	* :math:`p=q\implies D_{KL}(p\parallel q)= 0` (other direction does not hold)
 	* This is not a metric as :math:`D_{KL}(p\parallel q)\neq D_{KL}(q\parallel p)`.
 
+.. attention::
+	* Note that entropy :math:`H(p)` and cross-entropy :math:`H(p, q)` can be defined as
+
+		* :math:`H(p)=-\mathbb{E}_{x\sim p}[\log p(x)]`
+		* :math:`H(p,q)=-\mathbb{E}_{x\sim p}[\log q(x)]`
+		* Therefore :math:`D_{KL}(p\parallel q)=H(p,q)-H(p)`
+		* [Gibb's inequality] :math:`D_{KL}(p\parallel q)\geq 0\implies H(p,q)\ge H(p)`
+
+.. warning::
+	* Say :math:`x\sim p` and we're approximating :math:`p` with another distribution :math:`q`. 
+	* Minimising :math:`D_{KL}(p\parallel q)` is our objective here.
+	* However, we need to disregard the inherent randomness associated with :math:`p` itself (i.e. :math:`H(p)`).
+	* Therefore, minimising the cross-entropy term is the same as minimising :math:`D_{KL}(p\parallel q)`.
+	* If true :math:`p` is unknown, then we can use the empirical distribution :math:`\hat{p}` given a finite iid sample of size :math:`N`.
+	* The cross-entropy term then becomes the same as negative log-likelihood
+
+		.. math:: H(p,q)\approx H(\hat{p},q)=-\mathbb{E}_{x\sim \hat{p}}[\log q(x)]=-\frac{1}{N}\sum_{i=1}^N\log q(x_i)
+	* Using WLLN, as :math:`N\to\infty`, :math:`H(\hat{p},q)\to H(p,q)`
+
 Integral Probability Metric: Wasserstein Distance
 ------------------------------------------------------------------------------------------
 
