@@ -283,3 +283,22 @@ Moment Generating Function
 
 .. seealso::
 	Find the expectation, variance and the transform of the sum of independent rvs where the number of terms is also a rv.
+
+Integral Transforms
+==========================================================================================
+Let :math:`p` and :math:`q` be two densities.
+
+KL Divergence
+------------------------------------------------------------------------------------------
+.. math:: D_{KL}(p\parallel q)=\mathbb{E}_{X\sim p}\left[log\frac{p(X)}{q(X)}\right]
+
+.. note::
+	* :math:`D_{KL}(p\parallel q)\geq 0` (proof follows from Jensen's inequality since :math:`-\log` is a convex function).
+	* :math:`p=q\implies D_{KL}(p\parallel q)= 0` (other direction does not hold)
+	* This is not a metric as :math:`D_{KL}(p,q)\neq D_{KL}(q,p)`.
+
+Integral Probability Metric: Wasserstein Distance
+------------------------------------------------------------------------------------------
+
+Integral Probability Metric: Maximum Mean Discrepancy (MMD)
+------------------------------------------------------------------------------------------
