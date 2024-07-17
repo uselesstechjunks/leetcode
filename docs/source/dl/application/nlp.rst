@@ -14,6 +14,8 @@ Practical
 	* [pytorch.org] `What Every User Should Know About Mixed Precision Training in PyTorch <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/>`_
 	* [pytorch.org] `Performance Tuning Guide <https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html>`_
 	* [pytorch.org] `PyTorch Profiler <https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html>`_
+	* [tinkerd.net] `Distributed Training and DeepSpeed <https://tinkerd.net/blog/machine-learning/distributed-training/>`_
+	* [tinkerd.net] `Writing CUDA Kernels for PyTorch <https://tinkerd.net/blog/machine-learning/cuda-basics/>`_
 
 .. note::
 	* [Paper] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
@@ -207,6 +209,7 @@ Resources
 * [MHA] `Attention Is All You Need <https://arxiv.org/abs/1706.03762v7>`_
 * [MQA] `Fast Transformer Decoding: One Write-Head is All You Need <https://arxiv.org/abs/1911.02150>`_
 * [GQA] `GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints <https://arxiv.org/abs/2305.13245v3>`_
+* [tinkerd.net] `Multi-Query & Grouped-Query Attention <https://tinkerd.net/blog/machine-learning/multi-query-attention/>`_
 
 *****************************************************************************************
 Transformer Architecture
@@ -215,6 +218,8 @@ Encoder [BERT]
 =========================================================================================
 .. note::
 	* BERT: `Pre-training of Deep Bidirectional Transformers for Language Understanding <https://arxiv.org/abs/1810.04805>`_
+
+		* [tinkerd.net] Additional Resources: `BERT Tokenization <https://tinkerd.net/blog/machine-learning/bert-tokenization/>`_, `BERT Embeddings <https://tinkerd.net/blog/machine-learning/bert-embeddings/>`_, `BERT Encoder Layer <https://tinkerd.net/blog/machine-learning/bert-encoder/>`_
 	* `A Primer in BERTology: What we know about how BERT works <https://arxiv.org/abs/2002.12327>`_
 	* RoBERTa: `A Robustly Optimized BERT Pretraining Approach <https://arxiv.org/abs/1907.11692>`_
 	* XLM: `Cross-lingual Language Model Pretraining <https://arxiv.org/abs/1901.07291>`_
@@ -249,6 +254,18 @@ Cross-Lingual
 .. seealso::
 	* `[ruder.io] The State of Multilingual AI <https://www.ruder.io/state-of-multilingual-ai/>`_
 
+MOE
+=========================================================================================
+.. note::
+	* `Mixture of Experts Pattern for Transformer Models <https://tinkerd.net/blog/machine-learning/mixture-of-experts/>`_
+
+*****************************************************************************************
+State-Space Model
+*****************************************************************************************
+.. note::
+	* [Mamba] `Linear-Time Sequence Modeling with Selective State Spaces <https://arxiv.org/abs/2312.00752>`_
+	* `Understanding State Space Models <https://tinkerd.net/blog/machine-learning/state-space-models/>`_
+
 *****************************************************************************************
 Training
 *****************************************************************************************
@@ -274,6 +291,9 @@ Special Techniques
 *****************************************************************************************
 Low-Rank Approximations (LoRA)
 =========================================================================================
+.. note::
+	* [tinkerd.net]: `Language Model Fine-Tuning with LoRA <https://tinkerd.net/blog/machine-learning/lora/>`_
+
 Reinforcement Learning with Human Feedback (RLHF)
 =========================================================================================
 
