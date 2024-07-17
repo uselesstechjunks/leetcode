@@ -37,6 +37,44 @@ Sample Questions
 (d) https://anywhere.epam.com/en/blog/machine-learning-interview-questions
 (e) https://www.mygreatlearning.com/blog/machine-learning-interview-questions/
 
+.. warning::
+	* Set 1
+
+		1. Explain one project where you faced a challenging or ambiguous problem statement and solved it. What was the business impact?
+		2. How do you decide between the model complexity vs the latency budget (I mentioned this during my explanation)?
+		3. What is SFT and why it is needed?
+		4. What do you understand by PPO in RLHF?
+		5. What are LoRA and QLoRA?
+		6. Have you worked with other types of generative models like GAN or VAE?
+		7. Tell me how GANs are trained. Objective function?
+		8. What are some of the problems in training GANs? Said Mode Collapse and Vanishing Gradient (too string discriminator). Asked me to explain both.
+		9. How are VAEs different from vanilla autoencoders?
+		10. Explain the reparameterisation trick.
+		11. For classification trees, what is the splitting criteria?
+		12. How are Random Forests different from normal classification trees?
+		13. What is regularisation and why do we need it? Explained in RR and DNN? What type of regulariser is used in RR? What is the L1 version called?
+	* Set 2
+
+		1. Do you have experience with LLMs?
+		2. Explain offline selection problem in detail.
+		3. What is the difference between offline selection and online ranking?
+		4. What are the inputs and outputs of your triplet BERT model?
+		5. Explain triplet BERT architecture, how is it different from normal BERT? Why do you need 3 copies of the identical towers and not just concatenate text with SEP token?
+		6. How do you tackle embeddings of 3 different embeddings? 
+		7. What is the meaning of doing a max-pooling over the features in terms of individual dimensions? 
+		8. How is max-pooling different than doing concatenation first and then projection?
+		9. Walk me through the entire BERT encoding process from input sequence in natural text to final the layer.
+		10. Embedding matrix dimension.
+		11. Why do we need positional encodings? Which part in the transformer layer requires this positional information?
+		12. Why do we need to divide QK^T by sqrt(d_k)?
+		13. Why do we need softmax?
+		14. Why do we need residual connection?
+		15. Explain the FC layer.
+		16. What are your evaluation metrics and why do you use them?
+		17. Do you know about metrics that are used for generation?
+		18. Tell me some shortcomings of BLEU and ROUGE. What other metric can we use? How is perplexity defined?
+		19. Do you know about Reflection? How would you evaluate LLM outputs for hallucination and other mistakes?
+
 .. note::
 	1. What is convolution Operation? Code it up.
 	2. What is self attention?
@@ -53,30 +91,17 @@ Sample Questions
 	13. Explain the working of any click prediction model.
 	14. A couple of questions related to indexing in search engine.
 	15. Convolution vs feedforward.
-	16. `Clustering evaluation. <https://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation>`_
+
+.. seealso::
+	1. `Clustering evaluation. <https://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation>`_
 
 		- `Silhouette Coefficient <https://scikit-learn.org/stable/modules/clustering.html#silhouette-coefficient>`_
 		- `CH Index <https://scikit-learn.org/stable/modules/clustering.html#calinski-harabasz-index>`_
 		- `DB Index <https://scikit-learn.org/stable/modules/clustering.html#davies-bouldin-index>`_
 		- `Rand Index <https://scikit-learn.org/stable/modules/clustering.html#rand-index>`_
 		
-	17. How does batch norm help in faster convergence? [`Interesting read <https://blog.paperspace.com/busting-the-myths-about-batch-normalization/>`_]
-	18. Why does inference take less memory than training?
-
-.. note::
-	1. Explain one project where you faced a challenging or ambiguous problem statement and solved it. What was the business impact?
-	2. How do you decide between the model complexity vs the latency budget (I mentioned this during my explanation)?
-	3. What is SFT and why it is needed?
-	4. What do you understand by PPO in RLHF?
-	5. What are LoRA and QLoRA?
-	6. Have you worked with other types of generative models like GAN or VAE?
-	7. Tell me how GANs are trained. Objective function?
-	8. What are some of the problems in training GANs? Said Mode Collapse and Vanishing Gradient (too string discriminator). Asked me to explain both.
-	9. How are VAEs different from vanilla autoencoders?
-	10. Explain the reparameterisation trick.
-	11. For classification trees, what is the splitting criteria?
-	12. How are Random Forests different from normal classification trees?
-	13. What is regularisation and why do we need it? Explained in RR and DNN? What type of regulariser is used in RR? What is the L1 version called?
+	2. How does batch norm help in faster convergence? [`Interesting read <https://blog.paperspace.com/busting-the-myths-about-batch-normalization/>`_]
+	3. Why does inference take less memory than training?
 
 Topics
 ********************************************************************************
