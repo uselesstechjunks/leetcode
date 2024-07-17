@@ -64,7 +64,7 @@ Sample Questions
 		7. What is the meaning of doing a max-pooling over the features in terms of individual dimensions? 
 		8. How is max-pooling different than doing concatenation first and then projection?
 		9. Walk me through the entire BERT encoding process from input sequence in natural text to final the layer.
-		10. Embedding matrix dimension.
+		10. Explain how wordpiece works. Explain the Embedding matrix. What are its dimensions?
 		11. Why do we need positional encodings? Which part in the transformer layer requires this positional information?
 		12. Why do we need to divide QK^T by sqrt(d_k)?
 		13. Why do we need softmax?
