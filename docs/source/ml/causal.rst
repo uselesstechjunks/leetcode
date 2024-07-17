@@ -4,6 +4,7 @@ Causal Inference
 
 .. note::
 	* Strong ignorability `SO post <https://stats.stackexchange.com/a/474619>`_
+	* [Larry] `DAGs <https://www.stat.cmu.edu/%7Elarry/=sml/DAGs.pdf>`
 
 ***********************************************************************************
 Explanatory Models
