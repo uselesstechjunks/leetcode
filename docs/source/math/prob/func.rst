@@ -309,12 +309,12 @@ KL Divergence
 	* Say :math:`x\sim p` and we're approximating :math:`p` with another distribution :math:`q`. 
 	* Minimising :math:`D_{KL}(p\parallel q)` is our objective here.
 	* However, we need to disregard the inherent randomness associated with :math:`p` itself (i.e. :math:`H(p)`).
-	* Therefore, minimising the cross-entropy term is the same as minimising :math:`D_{KL}(p\parallel q)`.
-	* If true :math:`p` is unknown, then we can use the empirical distribution :math:`\hat{p}` given a finite iid sample of size :math:`N`.
-	* The cross-entropy term then becomes the same as negative log-likelihood
+	* Therefore, minimising :math:`H(p,q)` is the same as minimising :math:`D_{KL}(p\parallel q)`.
+	* If :math:`p` is unknown, we use the empirical distribution :math:`\hat{p}` from a iid sample :math:`\{x_i\}_{i=1}^N`.
+	* Using WLLN, as :math:`N\to\infty`, :math:`H(\hat{p},q)\overset{P}\to H(p,q)`.
+	* :math:`H(p,q)` then becomes the same as negative log-likelihood (NLL)
 
-		.. math:: H(p,q)\approx H(\hat{p},q)=-\mathbb{E}_{x\sim \hat{p}}[\log q(x)]=-\frac{1}{N}\sum_{i=1}^N\log q(x_i)
-	* Using WLLN, as :math:`N\to\infty`, :math:`H(\hat{p},q)\to H(p,q)`
+		.. math:: H(p,q)\approx H(\hat{p},q)=-\mathbb{E}_{x\sim \hat{p}}[\log q(x)]=-\frac{1}{N}\sum_{i=1}^N\log q(x_i)	
 
 Integral Probability Metric: Wasserstein Distance
 ------------------------------------------------------------------------------------------
