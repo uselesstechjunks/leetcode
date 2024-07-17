@@ -286,11 +286,11 @@ Moment Generating Function
 
 Integral Transforms
 ==========================================================================================
-Let :math:`p` and :math:`q` be two densities over rv :math:`X=x\in\mathcal{X}` with finite Borel measure.
+Let :math:`p` and :math:`q` be two densities over rv :math:`x\in\mathcal{X}` with finite Borel measure.
 
 KL Divergence
 ------------------------------------------------------------------------------------------
-.. math:: D_{KL}(p\parallel q)=\mathbb{E}_{X\sim p}\left[\log\frac{p(X)}{q(X)}\right]
+.. math:: D_{KL}(p\parallel q)=\mathbb{E}_{x\sim p}\left[\log\frac{p(x)}{q(x)}\right]
 
 .. note::
 	* :math:`D_{KL}(p\parallel q)\geq 0` (proof follows from Jensen's inequality since :math:`-\log` is a convex function).
