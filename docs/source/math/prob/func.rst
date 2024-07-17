@@ -321,3 +321,6 @@ Integral Probability Metric: Wasserstein Distance
 
 Integral Probability Metric: Maximum Mean Discrepancy (MMD)
 ------------------------------------------------------------------------------------------
+
+.. seealso::
+	`Divergence measures <https://www.desmos.com/calculator/2sboqbhler>`_
