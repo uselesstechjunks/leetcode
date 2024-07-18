@@ -10,5 +10,6 @@ Statistical Machine Learning
    linearcls
    basisexp
    dt
+   cluster
    causal   
    qb
