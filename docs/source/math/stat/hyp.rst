@@ -5,6 +5,7 @@ Hypothesis Testing
 .. note::	
 	* [wiki] `A/B testing <https://en.wikipedia.org/wiki/A/B_testing>`_
 	* [paper] `Top Challenges from the first Practical Online Controlled Experiments Summit <https://assets.amazon.science/aa/77/f51fed7541779e7844c64933799e/top-challenges-from-the-first-practical-online-controlled-experiments-summit.pdf>`_
+	* `Amazon papers <https://www.amazon.science/tag/a-b-testing>`_
 	* useless [interviewquery.com] `Statistics & A/B Testing Interview Questions <https://www.interviewquery.com/p/statistics-ab-testing-interview-questions>`_
 	* [chrisstucchio.com] `Bayesian Bandits - optimizing click throughs with statistics <https://www.chrisstucchio.com/blog/2013/bayesian_bandit.html>`_
 	* [nathanieldake.com] `Bayesian A/B Testing <https://www.nathanieldake.com/Machine_Learning/08-Bayesian_Machine_Learning-02-Bayesian-AB-Testing.html>`_
