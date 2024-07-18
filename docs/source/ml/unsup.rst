@@ -43,6 +43,7 @@ K-Means
 	    def predict(self, X):
 	        distances = np.linalg.norm(self.centroids[:, np.newaxis] - X, axis=2)
 	        return np.argmin(distances, axis=0)
+
 Spectral Clustering
 -----------------------------------------------------------------------------------
 .. code-block:: python
