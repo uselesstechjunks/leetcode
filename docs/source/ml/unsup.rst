@@ -45,6 +45,54 @@ K-Means
 	        return np.argmin(distances, axis=0)
 Spectral Clustering
 -----------------------------------------------------------------------------------
+.. code-block:: python
+
+	class SpectralClustering:
+	    def __init__(self, n_clusters, n_neighbors=10, sigma=1.0):
+	        self.n_clusters = n_clusters
+	        self.n_neighbors = n_neighbors
+	        self.sigma = sigma
+	        self.labels_ = None
+	    
+	    def fit_predict(self, X):
+	        # Step 1: Construct the k-nearest neighbors graph
+	        W = self._construct_knn_graph(X)
+	        
+	        # Step 2: Compute the graph Laplacian (normalized)
+	        L = self._compute_laplacian(W)
+	        
+	        # Step 3: Perform eigen decomposition
+	        eigenvalues, eigenvectors = np.linalg.eigh(L)
+	        
+	        # Step 4: Extract the eigenvectors corresponding to the smallest eigenvalues
+	        embedding = eigenvectors[:, 1:self.n_clusters + 1]  # Exclude the first eigenvalue/eigenvector
+	        
+	        # Step 5: Cluster the embedded points using K-means
+	        from sklearn.cluster import KMeans
+	        kmeans = KMeans(n_clusters=self.n_clusters, random_state=0)
+	        self.labels_ = kmeans.fit_predict(embedding)
+	        
+	        return self.labels_
+	    
+	    def _construct_knn_graph(self, X):
+	        n_samples = X.shape[0]
+	        W = np.zeros((n_samples, n_samples))
+	        
+	        for i in range(n_samples):
+	            dists = np.linalg.norm(X - X[i], axis=1)
+	            idx = np.argsort(dists)[:self.n_neighbors]
+	            W[i, idx] = np.exp(-dists[idx] ** 2 / (2 * self.sigma ** 2))
+	        
+	        return W
+	    
+	    def _compute_laplacian(self, W):
+	        D = np.diag(np.sum(W, axis=1))  # Degree matrix
+	        L = D - W  # Unnormalized Laplacian
+	        D_inv_sqrt = np.diag(1 / np.sqrt(np.diag(D) + 1e-8))  # Avoid division by zero
+	        L_normalized = np.dot(np.dot(D_inv_sqrt, L), D_inv_sqrt)  # Normalized Laplacian
+	        
+	        return L_normalized
+
 Density Based
 ===================================================================================
 DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
