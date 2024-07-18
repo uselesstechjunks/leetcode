@@ -19,6 +19,8 @@ Metric Based
 ===================================================================================
 K-Means
 -----------------------------------------------------------------------------------
+Spectral Clustering
+-----------------------------------------------------------------------------------
 Density Based
 ===================================================================================
 DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
@@ -33,6 +35,20 @@ Classifier Based
 ===================================================================================
 Isolation Forest
 -----------------------------------------------------------------------------------
+Algorithm:
+
+	- randomly assign a covariate to a note
+	- randomly split between the [min, max] range of that covariate
+	- stops when all the points are similar or just 1 point left within a region
+
+Intuition: 
+
+	- for isolated points, we'd need lesser number of cuts to isolate them to a region
+
+Score:
+
+	- average height of the tree for a given point, lower indicates outliers
+
 One-Class SVM
 -----------------------------------------------------------------------------------
 Density Based
