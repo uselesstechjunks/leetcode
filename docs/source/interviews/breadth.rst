@@ -75,6 +75,27 @@ Sample Questions
 		18. Tell me some shortcomings of BLEU and ROUGE. What other metric can we use? How is perplexity defined?
 		19. Do you know about Reflection? How would you evaluate LLM outputs for hallucination and other mistakes?
 
+	* Set 3
+
+		1. What are the areas you're familiar with?
+		2. Tell me a few dimensionality reduction mechanisms - PCA and autoencoders.
+		3. Explain PCA and probabilistic PCA.
+		4. What is the reconstruction loss in terms of eigenvalues?
+		5. Why are eigenvalues positive in this case? Can you prove that the variance-covariance matrix is PSD?
+		6. How would you select the number of dimensions in PCA?
+		7. Think of an autoencoder with just 1 hidden layer. How would you select the dimension in this case?
+		8. Can you think of a justification for why we'd see a diminishing return as we increase the hidden dimension?
+		9. Is autoencoder related to kernel-PCA?
+		10. What is the loss function for VAE? Explain ELBO and the KL term.
+		11. If we split ELBO further, a reconstruction loss term and another KL term comes out. How is that KL term defined? What are those corresponding distributions?
+		12. Why do we use Gaussians in VAE? Why standard Gaussians? Why assuming standard Gaussian in the latent space doesn't hurt?
+		13. What does this prior signify from a Bayesian perspective?
+		14. How about discrete VAE? How does the reparameterization work in that case?		
+		15. How would you determine if your click-prediction model has gone bad over time?
+		16. If you cannot afford an A/B test, could you still evaluate this? What is the framework for these types of analysis? G-formula and propensity-score reweighting in causal inference.
+		17. Tell me about a work where you've done an innovation. MMD implementation in kernel two-sample test. Explain how it works.
+		18. Tell me about a time you've had a conflict where you convinced them that what you're thinking is the right thing to do. How did it unfold?
+
 .. note::
 	1. What is convolution Operation? Code it up.
 	2. What is self attention?
