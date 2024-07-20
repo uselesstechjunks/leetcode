@@ -6,6 +6,7 @@ Multimodal
 Text-to-Image/Video
 ******************************************************************************************
 .. note::
+	* Yann LeCun `Google Scholar Page <https://scholar.google.com/citations?hl=en&user=WLN3QrAAAAAJ&view_op=list_works&sortby=pubdate>`_
 	* OpenAI
 
 		* [DALL·E]: `Creating images from text <https://openai.com/index/dall-e/>`_
