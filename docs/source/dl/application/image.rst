@@ -11,8 +11,7 @@ Text-to-Image/Video
 .. csv-table:: 
 	:header: "Year","Paper"
 	:align: center
-	
-		Year,Paper
+
 		2023,Align your latents: High-resolution video synthesis with latent diffusion models
 		2023,Photorealistic video generation with diffusion models
 		2023,Patch n'Pack: NaViT a Vision Transformer for any Aspect Ratio and Resolution
