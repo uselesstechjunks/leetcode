@@ -6,7 +6,9 @@ Multimodal
 Text-to-Image/Video
 ******************************************************************************************
 .. note::
-	* `Video generation models as world simulators <https://openai.com/index/video-generation-models-as-world-simulators/>`_
+	* [DALL·E]: `Creating images from text <https://openai.com/index/dall-e/>`_
+	* [SoRa]: `Video generation models as world simulators <https://openai.com/index/video-generation-models-as-world-simulators/>`_
+	* `DALL·E 2 <https://openai.com/index/dall-e-2/>`_
 
 .. csv-table:: 
 	:header: "Year","Paper"
