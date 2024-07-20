@@ -6,10 +6,19 @@ Multimodal
 Text-to-Image/Video
 ******************************************************************************************
 .. note::
-	* [DALL·E]: `Creating images from text <https://openai.com/index/dall-e/>`_
-	* [SoRa]: `Video generation models as world simulators <https://openai.com/index/video-generation-models-as-world-simulators/>`_
-	* `DALL·E 2 <https://openai.com/index/dall-e-2/>`_
-	* [Amazon Science] `Computer vision <https://www.amazon.science/research-areas/computer-vision>`_
+	* OpenAI
+
+		* [DALL·E]: `Creating images from text <https://openai.com/index/dall-e/>`_
+		* [SoRa]: `Video generation models as world simulators <https://openai.com/index/video-generation-models-as-world-simulators/>`_
+		* `DALL·E 2 <https://openai.com/index/dall-e-2/>`_
+	* Amazon Science 
+
+		* `A quick guide to Amazon’s papers at ICML 2024 <https://www.amazon.science/blog/a-quick-guide-to-amazons-papers-at-icml-2024>`_
+		* `List of publications <https://www.amazon.science/publications>`_
+		* `Conversational AI <https://www.amazon.science/research-areas/conversational-ai-natural-language-processing>`_
+		* `Large language models (LLMs) <https://www.amazon.science/tag/large-language-models>`_
+		* `Computer vision <https://www.amazon.science/research-areas/computer-vision>`_
+		* `Code and datasets <https://www.amazon.science/code-and-datasets>`_
 
 .. csv-table:: 
 	:header: "Year","Paper"
