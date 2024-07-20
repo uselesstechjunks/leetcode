@@ -9,6 +9,7 @@ Text-to-Image/Video
 	* [DALL·E]: `Creating images from text <https://openai.com/index/dall-e/>`_
 	* [SoRa]: `Video generation models as world simulators <https://openai.com/index/video-generation-models-as-world-simulators/>`_
 	* `DALL·E 2 <https://openai.com/index/dall-e-2/>`_
+	* [Amazon Science] `Computer vision <https://www.amazon.science/research-areas/computer-vision>`_
 
 .. csv-table:: 
 	:header: "Year","Paper"
