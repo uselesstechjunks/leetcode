@@ -126,10 +126,11 @@ Must Read Papers
 		PE,RoFormer: Enhanced Transformer with Rotary Position Embedding
 		MLM, BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 		MLM, RoBERTa: A Robustly Optimized BERT Pretraining Approach
-		MLM, TwinBERT: Distilling Knowledge to Twin-Structured BERT Models for Efficient Retrieval
+		MLM, TwinBERT: Distilling Knowledge to Twin-Structured BERT Models for Efficient Retrieval		
 		RTD, Electra: Pre-training Text Encoders as Discriminators Rather Than Generators
 		CLM, GPT2: Language Models are Unsupervised Multitask Learners
 		CLM, GPT3: Language Models are Few-Shot Learners
+		CLM, Finetuned Language Models Are Zero-Shot Learners
 		CLM, LLaMA: Open and Efficient Foundation Language Models
 		CLM, Llama 2: Open Foundation and Fine-Tuned Chat Models
 		PLM, XLNet: Generalized Autoregressive Pretraining for Language Understanding
@@ -144,21 +145,44 @@ Must Read Papers
 		Generalisation,Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
-		IR, DPR: Dense Passage Retrieval for Open-Domain Question Answering
+		IR, Text Embeddings by Weakly-Supervised Contrastive Pre-training
+		IR, E5: ense Passage Retrieval for Open-Domain Question Answering
 		LLM, Aligning language models to follow instructions
 		LLM, Scaling Instruction-Finetuned Language Models
 		LLM, InstructGpt: Training language models to follow instructions with human feedback
+		LLM, Injecting New Knowledge into Large Language Models via Supervised Fine-Tuning
+		LLM, The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions
 		LLM, PPO: Proximal Policy Optimization Algorithms
 		LLM, SFT+RLHF: Learning to summarize from human feedback
+		LLM, RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment
+		LLM, On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes
 		LLM, DPO: Direct Preference Optimization: Your Language Model is Secretly a Reward Model
 		LLM, D2PO: Discriminator-Guided DPO with Response Evaluation Models
 		LLM, RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+		LLM, Large Language Models Are Latent Variable Models
+		Representation, Scaling and evaluating sparse autoencoders
+		Representation, Probabilistic Topic Modelling with Transformer Representations
+		Representation, Matryoshka Representation Learning
+		Context, Long Context Transfer from Language to Vision
+		Context, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
+		Context, FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
+		Context, FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision
+		Context, Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention
+		Context, Ring Attention with Blockwise Transformers for Near-Infinite Context
+		Context, Lost in the Middle: How Language Models Use Long Contexts
+		Context, Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding
+		Context, Data Engineering for Scaling Language Models to 128K Context
+		Context, LongAlign: A Recipe for Long Context Alignment of Large Language Models		
+		Memory, MemoryBank: Enhancing Large Language Models with Long-Term Memory
+		Memory, Augmenting Language Models with Long-Term Memory
+		Quant, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
+		Quant, LoRA Low-Rank Adaptation of Large Language Models
+		Quant, QLORA: Efficient Finetuning of Quantized LLMs
+		Quant, SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
 		DiT, Scalable Diffusion Models with Transformers
+		DiT, Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
 		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
-		Efficiency, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
-		Efficiency, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
-		Efficiency, LoRA Low-Rank Adaptation of Large Language Models
-		Efficiency, QLORA: Efficient Finetuning of Quantized LLMs
+		Eval, To Believe or Not to Believe Your LLM
 
 ******************************************************************************************
 Linear Algebra
