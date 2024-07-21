@@ -6,7 +6,10 @@ Multimodal
 Text-to-Image/Video
 ******************************************************************************************
 .. note::
-	* Yann LeCun `Google Scholar Page <https://scholar.google.com/citations?hl=en&user=WLN3QrAAAAAJ&view_op=list_works&sortby=pubdate>`_
+	* Yann LeCun
+
+		* `Google Scholar Page <https://scholar.google.com/citations?hl=en&user=WLN3QrAAAAAJ&view_op=list_works&sortby=pubdate>`_
+		* `Arxiv Page <https://arxiv.org/find/all/1/all:+AND+yann+lecun/0/1/0/all/0/1>`_
 	* OpenAI
 
 		* [DALL·E]: `Creating images from text <https://openai.com/index/dall-e/>`_
@@ -31,7 +34,7 @@ Text-to-Image/Video
 		2023,Scalable diffusion models with transformers
 		2023,Improving image generation with better captions
 		2022,Generating long videos of dynamic scenes
-		2022,NÃ¼wa: Visual synthesis pre-training for neural visual world creation
+		2022,NUwa: Visual synthesis pre-training for neural visual world creation
 		2022,Imagen video: High definition video generation with diffusion models
 		2022,Masked autoencoders are scalable vision learners
 		2022,High-resolution image synthesis with latent diffusion models
