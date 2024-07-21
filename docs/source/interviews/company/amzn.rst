@@ -34,6 +34,29 @@ Resources
 --------------------------------------------------------------------------
 - How Many Words in a Novel? `reedsy <https://blog.reedsy.com/how-many-words-in-a-novel/>`_, `thewritelife <https://thewritelife.com/how-many-words-in-a-novel/>`_
 
+.. csv-table:: 
+	:header: "Genre","Min Word Count","Max Word Count"
+	:align: center
+
+		Flash Fiction,300,1500
+		Short Story,1,500,30,000
+		Novellas,30,000,50,000
+		Novels,50,000,110,000
+		Mainstream Romance,70,000,100,000
+		Subgenre Romance,40,000,100,000
+		Science Fiction / Fantasy,90,000,150,000
+		Historical Fiction,80,000,100,000
+		Thrillers / Horror / Mysteries / Crime,70,000,90,000
+		Young Adult,50,000,80,000
+		Picture Books,300,800
+		Early Readers,200,3500
+		Chapter Books,4,000,10,000
+		Middle Grade,25,000,40,000
+		Standard Nonfiction,70,000,80,000
+		Memoir,80,000,100,000
+		Biography,80,000,200,000
+		Self-Help,40,000,50,000
+
 1. Reading Experience
 --------------------------------------------------------------------------
 	- Intelligent Chapter Summaries: Enhances reader engagement by providing a preview of content and facilitates easier navigation within books.
