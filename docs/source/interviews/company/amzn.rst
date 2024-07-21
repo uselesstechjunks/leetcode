@@ -30,6 +30,10 @@ Understanding the Product
 **************************************************************************
 Kindle
 ==========================================================================
+Resources
+--------------------------------------------------------------------------
+- How Many Words in a Novel? `reedsy <https://blog.reedsy.com/how-many-words-in-a-novel/>`_, `thewritelife <https://thewritelife.com/how-many-words-in-a-novel/>`_
+
 1. Reading Experience
 --------------------------------------------------------------------------
 	- Intelligent Chapter Summaries: Enhances reader engagement by providing a preview of content and facilitates easier navigation within books.
