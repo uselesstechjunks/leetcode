@@ -158,34 +158,7 @@ Must Read Papers
 		Efficiency, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
 		Efficiency, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
 		Efficiency, LoRA Low-Rank Adaptation of Large Language Models
-		Efficiency, QLORA: Efficient Finetuning of Quantized LLMs	
-
-******************************************************************************************
-Papers on Different Topics
-******************************************************************************************
-.. csv-table:: 
-	:header: "Category","Sub-category","Name of the paper","Year"
-	:align: center
-
-		Natural Language Processing (NLP),Transformers and BERT-like Models,PaLM: Scaling Language Modeling with Pathways,2022
-		Natural Language Processing (NLP),Transformers and BERT-like Models,GLM-130B: An Open Bilingual Pre-trained Model,2022
-		Natural Language Processing (NLP),Entity Recognition and Relationship Extraction,SpanBERT: Improving Pre-training by Representing and Predicting Spans,2020
-		Natural Language Processing (NLP),Entity Recognition and Relationship Extraction,LUKE: Deep Contextualized Entity Representations with Entity-aware Self-attention,2020
-		Representation Learning,Embeddings and Semantic Representations,ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators,2020
-		Representation Learning,Embeddings and Semantic Representations,T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer,2020
-		Representation Learning,Graph-based Representations,Graphormer: Relational Reasoning with Multi-hop Attention,2021
-		Representation Learning,Graph-based Representations,Graph Attention Networks (GATs): The State of the Art on Node Classification Benchmark Tasks,2021
-		Generative Models,GANs and Variational Autoencoders (VAEs),StyleGAN3: Alias-Free Generative Adversarial Networks,2021
-		Generative Models,GANs and Variational Autoencoders (VAEs),Diffusion Models Beat GANs on Image Synthesis,2021
-		Generative Models,Text Generation and Summarization,GPT-3: Language Models are Few-Shot Learners,2020
-		Generative Models,Text Generation and Summarization,PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization,2020
-		Computer Vision,Image Understanding and Object Detection,Swin Transformer: Hierarchical Vision Transformer using Shifted Windows,2021
-		Computer Vision,Image Understanding and Object Detection,YOLOv4: Optimal Speed and Accuracy of Object Detection,2020
-		Computer Vision,Multi-modal Learning,FLAVA: A Foundational Language And Vision Alignment Model,2022
-		Computer Vision,Multi-modal Learning,CLIP: Learning Transferable Visual Models From Natural Language Supervision,2021
-		Reinforcement Learning,Applications in Sequential Decision Making,"Muzero: Mastering Go, Chess, Shogi and Atari without Rules",2020
-		Reinforcement Learning,Applications in Sequential Decision Making,R2D2: Recurrent Experience Replay in Distributed Reinforcement Learning,2019
-
+		Efficiency, QLORA: Efficient Finetuning of Quantized LLMs
 
 ******************************************************************************************
 Linear Algebra
