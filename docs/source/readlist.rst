@@ -145,8 +145,8 @@ Must Read Papers
 		Generalisation,Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
-		IR, Text Embeddings by Weakly-Supervised Contrastive Pre-training
-		IR, E5: ense Passage Retrieval for Open-Domain Question Answering
+		IR, E5: Text Embeddings by Weakly-Supervised Contrastive Pre-training
+		IR, Dense Passage Retrieval for Open-Domain Question Answering
 		LLM, Aligning language models to follow instructions
 		LLM, Scaling Instruction-Finetuned Language Models
 		LLM, InstructGpt: Training language models to follow instructions with human feedback
