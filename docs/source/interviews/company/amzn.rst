@@ -158,13 +158,14 @@ Design a system that can generate relevant illustrations or suggest image placem
 Develop a model to predict reader engagement and completion rates for books based on various factors like writing style, genre, length, and historical user data.
 
 For each of these problems, you should be prepared to discuss:
-- Clarifying questions about the specific goals and constraints
-- Potential data sources and annotation strategies
-- Suitable modeling approaches (e.g., which ML/NLP techniques might be appropriate)
-- Evaluation metrics and methodologies
-- Potential challenges and pitfalls in implementation
-- Ethical considerations and biases to be aware of
-- Trade-offs between different approaches or model architectures
+
+	- Clarifying questions about the specific goals and constraints
+	- Potential data sources and annotation strategies
+	- Suitable modeling approaches (e.g., which ML/NLP techniques might be appropriate)
+	- Evaluation metrics and methodologies
+	- Potential challenges and pitfalls in implementation
+	- Ethical considerations and biases to be aware of
+	- Trade-offs between different approaches or model architectures
 
 GPT Generated Problem List
 --------------------------------------------------------------------------
