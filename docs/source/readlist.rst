@@ -154,6 +154,7 @@ Must Read Papers
 		LLM, The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions
 		LLM, PPO: Proximal Policy Optimization Algorithms
 		LLM, SFT+RLHF: Learning to summarize from human feedback
+		LLM, Reflexion: Language Agents with Verbal Reinforcement Learning
 		LLM, RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment
 		LLM, On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes
 		LLM, DPO: Direct Preference Optimization: Your Language Model is Secretly a Reward Model
