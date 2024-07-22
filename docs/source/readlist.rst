@@ -163,7 +163,7 @@ Must Read Papers
 		Representation, Scaling and evaluating sparse autoencoders
 		Representation, Probabilistic Topic Modelling with Transformer Representations
 		Representation, Matryoshka Representation Learning
-		Context, Long Context Transfer from Language to Vision
+		Context, Scaling Transformer to 1M tokens and beyond with RMT
 		Context, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
 		Context, FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
 		Context, FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision
@@ -174,6 +174,7 @@ Must Read Papers
 		Context, Data Engineering for Scaling Language Models to 128K Context
 		Context, LongAlign: A Recipe for Long Context Alignment of Large Language Models
 		Context, ChatQA 2: Bridging the Gap to Proprietary LLMs in Long Context and RAG Capabilities
+		Context, Long Context Transfer from Language to Vision
 		Memory, MemoryBank: Enhancing Large Language Models with Long-Term Memory
 		Memory, Augmenting Language Models with Long-Term Memory
 		Quant, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
