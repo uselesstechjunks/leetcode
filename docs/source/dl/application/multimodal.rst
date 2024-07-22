@@ -4,7 +4,7 @@ Multimodal
 ******************************************************************************************
 Models in focus
 ******************************************************************************************
-	* `Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
+	* `Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Claude on Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
 
 		* `Towards Monosemanticity: Decomposing Language Models With Dictionary Learning <https://transformer-circuits.pub/2023/monosemantic-features>`_
 		* `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
@@ -14,8 +14,9 @@ Models in focus
 		* `Simple probes can catch sleeper agents <https://www.anthropic.com/research/probes-catch-sleeper-agents>`_
 		* `Challenges in evaluating AI systems <https://www.anthropic.com/research/evaluating-ai-systems>`_
 		* `AI Governance and Accountability: An Analysis of Anthropic's Claude <https://arxiv.org/pdf/2407.01557v1>`_
-	* `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_
-	* `Llama <https://ai.meta.com/blog/meta-llama-3/>`_
+	* `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_ (`Mixtral on Bedrock <https://aws.amazon.com/bedrock/mistral/>`_)
+	* `Llama <https://ai.meta.com/blog/meta-llama-3/>`_ (`Llama on Bedrock <https://aws.amazon.com/bedrock/llama/>`_)
+	* `Stable Diffusion <https://stability.ai/news/stable-diffusion-3-research-paper>`_ (`Stable Diffusion on Bedrock <https://aws.amazon.com/bedrock/stable-diffusion/>`_)
 	* `Gemini <https://blog.google/technology/ai/google-gemini-ai/>`_
 	* `GPT-4o <https://openai.com/index/hello-gpt-4o/>`_
 
