@@ -26,9 +26,67 @@ Leadership Principles
 		2,15. **Strive to be Earth’s Best Employer**:,Create safe; productive; empathetic environment.,While a positive work environment is important; the direct impact on machine learning work may be indirect.
 
 **************************************************************************
-Understanding the Product
-**************************************************************************
 Kindle
+**************************************************************************
+Understanding the Tech Stack
+==========================================================================
+22/07: LLM long-context model capabilities awareness
+
+	- Review Amazon Bedrock models: Claude (Anthropic), Titan (Amazon), and Jurassic-2 (AI21 Labs)
+	- Study long-context capabilities: context window sizes, attention mechanisms
+	- Explore techniques like sliding window attention, sparse attention, and recursive chunking
+	- Understand the implications of long-context models for book analysis and summarization
+
+23/07: LLM eval and pitfall awareness
+
+	- Study evaluation metrics: perplexity, BLEU, ROUGE, BERTScore
+	- Explore Amazon's SageMaker for model evaluation
+	- Review common LLM pitfalls: hallucination, bias, toxicity
+	- Understand techniques for prompt engineering and few-shot learning
+	- Study ethical considerations in LLM deployment
+
+24/07: e2e ML pipeline awareness
+
+	- Review Amazon SageMaker for end-to-end ML workflows
+	- Study data preprocessing techniques for text data
+	- Explore model fine-tuning strategies on Amazon Bedrock
+	- Understand deployment options: batch inference vs. real-time inference
+	- Review monitoring and maintenance of ML models in production
+
+25/07: Brainstorm on key potential applications
+
+	- Retrieval Augmented Generation (RAG) for enhanced book recommendations
+	- Few-shot learning for genre classification
+	- Zero-shot learning for content moderation
+	- Multi-task learning for simultaneous summary generation and sentiment analysis
+	- Explore potential applications of diffusion models for book cover generation
+	- Consider state-space models for time series analysis of reading patterns
+
+26/07: Design actual systems, review all previous days, code for transformer
+
+	- Design a complete system for automated book categorization using Amazon Bedrock
+	- Review key concepts from previous days
+	- Implement a basic transformer model using PyTorch or TensorFlow
+	- Explore Amazon SageMaker's built-in algorithms for NLP tasks
+	- Study integration of custom models with Amazon Bedrock
+
+Additional topics to consider throughout:
+
+	1. Stable Diffusion (available on Amazon Bedrock) for image generation tasks
+	2. Amazon Textract for extracting text and data from scanned documents
+	3. Amazon Comprehend for natural language processing tasks
+	4. Amazon Polly for text-to-speech capabilities
+	5. Amazon Kendra for intelligent search applications
+
+LLM design patterns to explore:
+
+	1. In-context learning and prompt engineering
+	2. Chain-of-thought prompting for complex reasoning tasks
+	3. Constitutional AI for safer and more controlled LLM outputs
+	4. Retrieval-augmented generation (RAG) for grounding LLMs in factual data
+	5. Fine-tuning strategies for domain-specific tasks
+
+Understanding the Domain
 ==========================================================================
 Resources
 --------------------------------------------------------------------------
@@ -57,7 +115,7 @@ Resources
 		Biography,80000,200000
 		Self-Help,40000,50000
 
-Problem List
+Claude Generated Problem List
 --------------------------------------------------------------------------
 1. Automated Book Categorization:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,8 +166,10 @@ For each of these problems, you should be prepared to discuss:
 - Ethical considerations and biases to be aware of
 - Trade-offs between different approaches or model architectures
 
-1. Reading Experience
+GPT Generated Problem List
 --------------------------------------------------------------------------
+1. Reading Experience
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Intelligent Chapter Summaries: Enhances reader engagement by providing a preview of content and facilitates easier navigation within books.
 	- Description: Using AI to generate concise summaries of chapters or sections within book. This helps readers quickly grasp key points and decide if they want to delve deeper into specific parts.
 
@@ -117,7 +177,7 @@ For each of these problems, you should be prepared to discuss:
 	- Description: AI algorithms analyze reader preferences and behavior to suggest books within KDP's library that match their interests.
 
 2. Publishing (Creation of Books Process)
---------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Automated Genre Classification: Streamlines the publishing process for authors by automatically assigning accurate genres, aiding in better metadata tagging and targeting specific reader demographics.
 	Description: AI categorizes manuscripts into specific genres (e.g., mystery, romance, sci-fi) based on semantic analysis of content.
 
@@ -125,7 +185,7 @@ For each of these problems, you should be prepared to discuss:
 	Description: AI-powered tools assist authors in refining their manuscripts by suggesting improvements in writing style, grammar, and structure, improving readability and engagement.
 
 3. Reporting (Improvement through Sales & Business Growth)
---------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Predictive Sales Analytics: Empowers authors with insights into potential sales trajectories, allowing them to make informed decisions on marketing strategies and promotions.
 	Description: AI models forecast book sales based on historical data, market trends, and content analysis.
 
@@ -133,7 +193,7 @@ For each of these problems, you should be prepared to discuss:
 	Description: AI algorithms analyze reader reviews, engagement metrics, and sales data to provide authors with actionable insights for improving their books.
 
 4. Cross-Cutting Ideas
---------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - AI-driven Content Translation: Expands the reach of books to international markets, increasing sales potential and accessibility for diverse readers.
 	Description: Utilizing AI for accurate and context-aware translation of books into multiple languages, preserving the author's voice and style.
 
@@ -141,7 +201,7 @@ For each of these problems, you should be prepared to discuss:
 	Description: AI identifies and enhances visual elements (images, graphics) within eBooks, ensuring optimal display across different devices and formats.
 
 5. Vague Ideas
---------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Content Moderation and Quality Assurance:
 	Description: Develop AI systems for automatic content moderation, ensuring adherence to publishing standards and identifying potentially problematic content.
 
