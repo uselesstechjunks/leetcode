@@ -23,6 +23,11 @@ Text-to-Image/Video
 		* `Large language models (LLMs) <https://www.amazon.science/tag/large-language-models>`_
 		* `Computer vision <https://www.amazon.science/research-areas/computer-vision>`_
 		* `Code and datasets <https://www.amazon.science/code-and-datasets>`_
+		* `AWS News Blog <https://aws.amazon.com/blogs/aws/>`_:
+
+			* `Category: Amazon Bedrock <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/>`_
+			* `Category: Amazon Machine Learning <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/amazon-machine-learning/>`_
+			* `Category: Generative AI <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/generative-ai/>`_
 
 .. csv-table:: 
 	:header: "Year","Paper"
