@@ -13,6 +13,7 @@ Models in focus
 		* `Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training <https://arxiv.org/abs/2401.05566>`_
 		* `Simple probes can catch sleeper agents <https://www.anthropic.com/research/probes-catch-sleeper-agents>`_
 		* `Challenges in evaluating AI systems <https://www.anthropic.com/research/evaluating-ai-systems>`_
+		* `AI Governance and Accountability: An Analysis of Anthropic's Claude <https://arxiv.org/pdf/2407.01557v1>`_
 	* `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_
 	* `Llama <https://ai.meta.com/blog/meta-llama-3/>`_
 	* `Gemini <https://blog.google/technology/ai/google-gemini-ai/>`_
