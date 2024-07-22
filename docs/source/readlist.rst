@@ -172,7 +172,8 @@ Must Read Papers
 		Context, Lost in the Middle: How Language Models Use Long Contexts
 		Context, Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding
 		Context, Data Engineering for Scaling Language Models to 128K Context
-		Context, LongAlign: A Recipe for Long Context Alignment of Large Language Models		
+		Context, LongAlign: A Recipe for Long Context Alignment of Large Language Models
+		Context, ChatQA 2: Bridging the Gap to Proprietary LLMs in Long Context and RAG Capabilities
 		Memory, MemoryBank: Enhancing Large Language Models with Long-Term Memory
 		Memory, Augmenting Language Models with Long-Term Memory
 		Quant, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
