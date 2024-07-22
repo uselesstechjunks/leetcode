@@ -5,6 +5,14 @@ Multimodal
 Models in focus
 ******************************************************************************************
 	* `Claude <https://www.anthropic.com/news/claude-3-family>`_ 
+
+		* `Towards Monosemanticity: Decomposing Language Models With Dictionary Learning <https://transformer-circuits.pub/2023/monosemantic-features>`_
+		* `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
+		* `Towards Understanding Sycophancy in Language Models <https://arxiv.org/abs/2310.13548>`_
+		* `Specific versus General Principles for Constitutional AI <https://arxiv.org/abs/2310.13798>`_
+		* `Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training <https://arxiv.org/abs/2401.05566>`_
+		* `Simple probes can catch sleeper agents <https://www.anthropic.com/research/probes-catch-sleeper-agents>`_
+		* `Challenges in evaluating AI systems <https://www.anthropic.com/research/evaluating-ai-systems>`_
 	* `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_
 	* `Llama <https://ai.meta.com/blog/meta-llama-3/>`_
 	* `Gemini <https://blog.google/technology/ai/google-gemini-ai/>`_
