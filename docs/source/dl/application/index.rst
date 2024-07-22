@@ -6,5 +6,5 @@ Applied Deep Learning
 	:maxdepth: 3
 
 	nlp
-	image
+	multimodal
 	cp
