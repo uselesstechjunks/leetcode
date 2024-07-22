@@ -32,7 +32,7 @@ Understanding the Tech Stack
 ==========================================================================
 22/07: LLM long-context model capabilities awareness
 
-	- Review Amazon Bedrock models: Claude (Anthropic), Titan (Amazon), and Jurassic-2 (AI21 Labs)
+	- Review `Amazon Bedrock <https://aws.amazon.com/bedrock/>`_ models: `Claude <https://aws.amazon.com/bedrock/claude/>`_ (Anthropic), `Titan <https://aws.amazon.com/bedrock/titan/>`_ (Amazon), and `Jurassic-2 <https://aws.amazon.com/bedrock/ai21/>`_ (AI21 Labs)
 	- Study long-context capabilities: context window sizes, attention mechanisms
 	- Explore techniques like sliding window attention, sparse attention, and recursive chunking
 	- Understand the implications of long-context models for book analysis and summarization
@@ -40,7 +40,7 @@ Understanding the Tech Stack
 23/07: LLM eval and pitfall awareness
 
 	- Study evaluation metrics: perplexity, BLEU, ROUGE, BERTScore
-	- Explore Amazon's SageMaker for model evaluation
+	- Explore `Amazon's SageMaker <https://aws.amazon.com/sagemaker/>`_ for model evaluation
 	- Review common LLM pitfalls: hallucination, bias, toxicity
 	- Understand techniques for prompt engineering and few-shot learning
 	- Study ethical considerations in LLM deployment
@@ -72,11 +72,11 @@ Understanding the Tech Stack
 
 Additional topics to consider throughout:
 
-	1. Stable Diffusion (available on Amazon Bedrock) for image generation tasks
-	2. Amazon Textract for extracting text and data from scanned documents
-	3. Amazon Comprehend for natural language processing tasks
-	4. Amazon Polly for text-to-speech capabilities
-	5. Amazon Kendra for intelligent search applications
+	1. `Stable Diffusion <https://aws.amazon.com/bedrock/stable-diffusion/>`_ for image generation tasks
+	2. `Amazon Textract <https://aws.amazon.com/textract/>`_ for extracting text and data from scanned documents
+	3. `Amazon Comprehend <https://aws.amazon.com/comprehend/>`_ for natural language processing tasks
+	4. `Amazon Polly <https://aws.amazon.com/polly/>`_ for text-to-speech capabilities
+	5. `Amazon Kendra <https://aws.amazon.com/kendra/>`_ for intelligent search applications
 
 LLM design patterns to explore:
 
