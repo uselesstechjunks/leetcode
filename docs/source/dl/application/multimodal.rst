@@ -1,10 +1,17 @@
 ##############################################################################
 Multimodal
 ##############################################################################
+******************************************************************************************
+Models in focus
+******************************************************************************************
+	* `Claude <https://www.anthropic.com/news/claude-3-family>`_ 
+	* `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_
+	* `Llama <https://ai.meta.com/blog/meta-llama-3/>`_
+	* `Gemini <https://blog.google/technology/ai/google-gemini-ai/>`_
+	* `GPT-4o <https://openai.com/index/hello-gpt-4o/>`_
 
-******************************************************************************************
-Text-to-Image/Video
-******************************************************************************************
+Resources
+==============================================================================
 .. note::
 	* Yann LeCun
 
@@ -15,7 +22,7 @@ Text-to-Image/Video
 		* [DALL·E]: `Creating images from text <https://openai.com/index/dall-e/>`_
 		* [SoRa]: `Video generation models as world simulators <https://openai.com/index/video-generation-models-as-world-simulators/>`_
 		* `DALL·E 2 <https://openai.com/index/dall-e-2/>`_
-	* Amazon Science 
+	* Amazon Science: `ML <https://aws.amazon.com/ai/machine-learning/>`_, `GenAI <https://aws.amazon.com/ai/generative-ai/>`_
 
 		* `A quick guide to Amazon’s papers at ICML 2024 <https://www.amazon.science/blog/a-quick-guide-to-amazons-papers-at-icml-2024>`_
 		* `List of publications <https://www.amazon.science/publications>`_
@@ -25,7 +32,6 @@ Text-to-Image/Video
 		* `Code and datasets <https://www.amazon.science/code-and-datasets>`_
 		* `AWS News Blog <https://aws.amazon.com/blogs/aws/>`_:
 
-			* `Category: Amazon Bedrock <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/>`_
 			* `Category: Amazon Machine Learning <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/amazon-machine-learning/>`_
 			* `Category: Generative AI <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/generative-ai/>`_
 	* `Anthropic Research <https://www.anthropic.com/research>`_
