@@ -32,7 +32,7 @@ Understanding the Tech Stack
 ==========================================================================
 22/07: LLM long-context model capabilities awareness
 
-	- Review `Amazon Bedrock <https://aws.amazon.com/bedrock/>`_ models: `Claude <https://aws.amazon.com/bedrock/claude/>`_ (Anthropic), `Titan <https://aws.amazon.com/bedrock/titan/>`_ (Amazon), and `Jurassic-2 <https://aws.amazon.com/bedrock/ai21/>`_ (AI21 Labs)
+	- Review `Amazon Bedrock User Guide <https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html>`_ for models: `Claude <https://aws.amazon.com/bedrock/claude/>`_ (Anthropic), `Titan <https://aws.amazon.com/bedrock/titan/>`_ (Amazon), and `Jurassic-2 <https://aws.amazon.com/bedrock/ai21/>`_ (AI21 Labs)
 	- Study long-context capabilities: context window sizes, attention mechanisms
 	- Explore techniques like sliding window attention, sparse attention, and recursive chunking
 	- Understand the implications of long-context models for book analysis and summarization
