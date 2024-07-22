@@ -4,7 +4,7 @@ Multimodal
 ******************************************************************************************
 Models in focus
 ******************************************************************************************
-	* `Claude <https://www.anthropic.com/news/claude-3-family>`_ 
+	* `Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
 
 		* `Towards Monosemanticity: Decomposing Language Models With Dictionary Learning <https://transformer-circuits.pub/2023/monosemantic-features>`_
 		* `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
