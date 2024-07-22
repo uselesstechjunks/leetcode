@@ -292,6 +292,19 @@ MOE
 
 Long Context
 =========================================================================================
+.. csv-table:: 
+	:header: "Category","Model","Max sequence length"
+	:align: center
+
+		Full Attention,Flash Attention,Not specified
+		Augmented Attention,Transformer-XL,Up to 16k tokens (depends on the segment length)
+		Augmented Attention,Longformer,Up to 4k tokens
+		Recurrence,RMT,Not specified
+		Recurrence,xLSTM,Not specified
+		Recurrence,Feedback Attention,Not specified
+		State Space,Mamba,Not specified
+		State Space,Jamba,Not specified
+
 Optimized Full Attention
 -----------------------------------------------------------------------------------------
 * Flash Attention
