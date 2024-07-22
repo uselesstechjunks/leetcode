@@ -182,7 +182,13 @@ Must Read Papers
 		DiT, Scalable Diffusion Models with Transformers
 		DiT, Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
 		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
-		Eval, To Believe or Not to Believe Your LLM
+		Eval, HELM: Holistic Evaluation of Language Models
+		Hallucination, SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
+		Hallucination, A Survey of Hallucination in Large Foundation Models
+		Hallucination, Hallucination Detection and Hallucination Mitigation: An Investigation
+		Hallucination, MASSIVE Multilingual Abstract Meaning Representation: A Dataset and Baselines for Hallucination Detection
+		Hallucination, Hallucination Detection: Robustly Discerning Reliable Answers in Large Language Models
+		Hallucination, To Believe or Not to Believe Your LLM
 
 ******************************************************************************************
 Linear Algebra
