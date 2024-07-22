@@ -28,6 +28,7 @@ Text-to-Image/Video
 			* `Category: Amazon Bedrock <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/>`_
 			* `Category: Amazon Machine Learning <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/amazon-machine-learning/>`_
 			* `Category: Generative AI <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/generative-ai/>`_
+	* `Anthropic Research <https://www.anthropic.com/research>`_
 
 .. csv-table:: 
 	:header: "Year","Paper"
