@@ -164,6 +164,7 @@ Must Read Papers
 		Representation, Scaling and evaluating sparse autoencoders
 		Representation, Probabilistic Topic Modelling with Transformer Representations
 		Representation, Matryoshka Representation Learning
+		Representation, Not All Language Model Features Are Linear
 		Context: Full, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
 		Context: Full, FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
 		Context: Full, FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision
