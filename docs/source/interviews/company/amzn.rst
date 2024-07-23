@@ -126,6 +126,7 @@ Existing Features
 - Key KPIs: X-Ray usage rate, time spent using X-Ray features
 - ML Metrics: F1 score for entity and relation extraction, ROUGE scores for generated content
 - Quality Metrics: Accuracy of information, relevance to reader's current position in the book
+- [WordDumb] `Calibre Plugin <https://xxyzz.github.io/WordDumb/index.html>`_ (could possibly be useful)
 
 2. Book Content Quality Improvement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
