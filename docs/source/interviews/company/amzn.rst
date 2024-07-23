@@ -127,6 +127,7 @@ Existing Features
 - ML Metrics: F1 score for entity and relation extraction, ROUGE scores for generated content
 - Quality Metrics: Accuracy of information, relevance to reader's current position in the book
 - [WordDumb] `Calibre Plugin <https://xxyzz.github.io/WordDumb/index.html>`_ (could possibly be useful)
+- [PapersWithCode] `Natural Language Processing <https://paperswithcode.com/area/natural-language-processing>`_ (check all relevant subcategories)
 
 2. Book Content Quality Improvement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
