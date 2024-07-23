@@ -122,12 +122,15 @@ Existing Features
 - Product Name: Intelligent X-Ray Content Generation
 - ML Problem Description: Automatically generating and enhancing X-Ray content for books
 - Data Sources: Book content, existing X-Ray data, user interactions with X-Ray features
-- Modeling Approach: Named Entity Recognition, Relation Extraction, Summarization models
+- Modeling Approach: Named Entity Recognition (e.g. `GENRE <https://github.com/facebookresearch/GENRE>`_, Relation Extraction, Summarization models
 - Key KPIs: X-Ray usage rate, time spent using X-Ray features
 - ML Metrics: F1 score for entity and relation extraction, ROUGE scores for generated content
 - Quality Metrics: Accuracy of information, relevance to reader's current position in the book
-- [WordDumb] `Calibre Plugin <https://xxyzz.github.io/WordDumb/index.html>`_ (could possibly be useful)
-- [PapersWithCode] `Natural Language Processing <https://paperswithcode.com/area/natural-language-processing>`_ (check all relevant subcategories)
+- Resources:
+
+	- [WordDumb] `Calibre Plugin <https://xxyzz.github.io/WordDumb/index.html>`_ (could possibly be useful)
+	- Large Language Models for Generative Information Extraction: `Awesome-LLM4IE-Papers <https://github.com/quqxui/Awesome-LLM4IE-Papers>`_
+	- [PapersWithCode] `Natural Language Processing <https://paperswithcode.com/area/natural-language-processing>`_ (check all relevant subcategories)
 
 2. Book Content Quality Improvement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
