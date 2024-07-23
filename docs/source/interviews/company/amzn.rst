@@ -122,7 +122,7 @@ Existing Features
 - Product Name: Intelligent X-Ray Content Generation
 - ML Problem Description: Automatically generating and enhancing X-Ray content for books
 - Data Sources: Book content, existing X-Ray data, user interactions with X-Ray features
-- Modeling Approach: Named Entity Recognition (e.g. `GENRE <https://github.com/facebookresearch/GENRE>`_, Relation Extraction, Summarization models
+- Modeling Approach: Named Entity Recognition (`GENRE <https://github.com/facebookresearch/GENRE>`_), Relation Extraction, Summarization models
 - Key KPIs: X-Ray usage rate, time spent using X-Ray features
 - ML Metrics: F1 score for entity and relation extraction, ROUGE scores for generated content
 - Quality Metrics: Accuracy of information, relevance to reader's current position in the book
