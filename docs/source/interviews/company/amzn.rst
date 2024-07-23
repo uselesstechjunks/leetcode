@@ -130,6 +130,7 @@ Existing Features
 
 	- [WordDumb] `Calibre Plugin <https://xxyzz.github.io/WordDumb/index.html>`_ (could possibly be useful)
 	- Large Language Models for Generative Information Extraction: `Awesome-LLM4IE-Papers <https://github.com/quqxui/Awesome-LLM4IE-Papers>`_
+	- Knowledge graphs (KGs) and large language models (LLMs): `KG-LLM-Papers <https://github.com/zjukg/KG-LLM-Papers>`_
 	- [PapersWithCode] `Natural Language Processing <https://paperswithcode.com/area/natural-language-processing>`_ (check all relevant subcategories)
 
 2. Book Content Quality Improvement
