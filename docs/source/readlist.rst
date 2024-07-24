@@ -156,6 +156,7 @@ Must Read Papers
 		LLM, InstructGpt: Training language models to follow instructions with human feedback
 		LLM, Injecting New Knowledge into Large Language Models via Supervised Fine-Tuning
 		LLM, The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions
+		LLM, Self-instruct: Aligning language model with self generated instructions
 		LLM, PPO: Proximal Policy Optimization Algorithms
 		LLM, SFT+RLHF: Learning to summarize from human feedback
 		LLM, Reflexion: Language Agents with Verbal Reinforcement Learning
