@@ -18,6 +18,7 @@ Practical
 
 .. note::
 	* [Paper] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
+	* [PapersWithCode] `Natural Language Processing <https://paperswithcode.com/area/natural-language-processing>`_ (check all relevant subcategories)
 
 *****************************************************************************************
 Activations
