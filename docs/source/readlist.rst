@@ -172,6 +172,7 @@ Must Read Papers
 		Context: Full, FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
 		Context: Full, FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
 		Context: Full, FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision
+		Context: Full, Effective Long-Context Scaling of Foundation Models
 		Context: Sparse, Longformer: The Long-Document Transformer
 		Context: Sparse, Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context
 		Context, Ring Attention with Blockwise Transformers for Near-Infinite Context
