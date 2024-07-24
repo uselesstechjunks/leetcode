@@ -197,6 +197,8 @@ Must Read Papers
 		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
 		ViT, Long Context Transfer from Language to Vision
 		Eval, HELM: Holistic Evaluation of Language Models
+		Eval, MMLU: Measuring Massive Multitask Language Understanding
+		Eval, MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI
 		Hallucination, SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
 		Hallucination, G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment
 		Hallucination, To Believe or Not to Believe Your LLM
