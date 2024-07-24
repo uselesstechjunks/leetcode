@@ -126,13 +126,7 @@ Existing Features
 - Key KPIs: X-Ray usage rate, time spent using X-Ray features
 - ML Metrics: F1 score for entity and relation extraction, ROUGE scores for generated content
 - Quality Metrics: Accuracy of information, relevance to reader's current position in the book
-- Resources:
-
-	- [WordDumb] `Calibre Plugin <https://xxyzz.github.io/WordDumb/index.html>`_ (could possibly be useful)
-	- Large Language Models for Generative Information Extraction: `Awesome-LLM4IE-Papers <https://github.com/quqxui/Awesome-LLM4IE-Papers>`_
-	- Large Language Models Meet NLP: `Awesome-LLM-for-NLP <https://github.com/LightChen233/Awesome-LLM-for-NLP>`_
-	- Knowledge graphs (KGs) and large language models (LLMs): `KG-LLM-Papers <https://github.com/zjukg/KG-LLM-Papers>`_
-	- [PapersWithCode] `Natural Language Processing <https://paperswithcode.com/area/natural-language-processing>`_ (check all relevant subcategories)
+- Resources: [WordDumb] `Calibre Plugin <https://xxyzz.github.io/WordDumb/index.html>`_ (could possibly be useful)
 
 2. Book Content Quality Improvement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
