@@ -93,6 +93,9 @@ Applied LLMs
 	* [Blog] `sh-reya.com <https://www.sh-reya.com/blog>`_
 	* [Blog] `hamel.dev <https://hamel.dev/>`_
 	* [Github] `LLM4Rec: Collection of papers <https://github.com/WLiK/LLM4Rec-Awesome-Papers>`_
+	* [Github] Large Language Models for Generative Information Extraction: `Awesome-LLM4IE-Papers <https://github.com/quqxui/Awesome-LLM4IE-Papers>`_
+	* [Github] Large Language Models Meet NLP: `Awesome-LLM-for-NLP <https://github.com/LightChen233/Awesome-LLM-for-NLP>`_
+	* [Github] Knowledge graphs (KGs) and large language models (LLMs): `KG-LLM-Papers <https://github.com/zjukg/KG-LLM-Papers>`_
 	* [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
 
 .. seealso::
