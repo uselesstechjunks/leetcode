@@ -45,6 +45,7 @@ Resources
 			* `Category: Amazon Machine Learning <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/amazon-machine-learning/>`_
 			* `Category: Generative AI <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/generative-ai/>`_
 	* `Anthropic Research <https://www.anthropic.com/research>`_
+	* [neptune.ai] `6 GAN Architectures You Really Should Know  <https://neptune.ai/blog/6-gan-architectures>`_
 
 .. csv-table:: 
 	:header: "Year","Paper"
