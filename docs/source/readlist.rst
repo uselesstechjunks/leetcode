@@ -130,10 +130,10 @@ Must Read Papers
 		MLM, BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 		MLM, RoBERTa: A Robustly Optimized BERT Pretraining Approach
 		MLM, TwinBERT: Distilling Knowledge to Twin-Structured BERT Models for Efficient Retrieval		
+		MLM, Finetuned Language Models Are Zero-Shot Learners
 		RTD, Electra: Pre-training Text Encoders as Discriminators Rather Than Generators
 		CLM, GPT2: Language Models are Unsupervised Multitask Learners
-		CLM, GPT3: Language Models are Few-Shot Learners
-		CLM, Finetuned Language Models Are Zero-Shot Learners
+		CLM, GPT3: Language Models are Few-Shot Learners		
 		CLM, LLaMA: Open and Efficient Foundation Language Models
 		CLM, Llama 2: Open Foundation and Fine-Tuned Chat Models
 		PLM, XLNet: Generalized Autoregressive Pretraining for Language Understanding
@@ -148,7 +148,8 @@ Must Read Papers
 		Generalisation,Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
-		IR, E5: Text Embeddings by Weakly-Supervised Contrastive Pre-training
+		Contrastive, E5: Text Embeddings by Weakly-Supervised Contrastive Pre-training
+		Contrastive, Unsupervised Dense Information Retrieval with Contrastive Learning
 		IR, Dense Passage Retrieval for Open-Domain Question Answering
 		LLM, Aligning language models to follow instructions
 		LLM, Scaling Instruction-Finetuned Language Models
@@ -173,14 +174,14 @@ Must Read Papers
 		Context: Full, FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision
 		Context: Sparse, Longformer: The Long-Document Transformer
 		Context: Sparse, Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context
-		Context, ChatQA 2: Bridging the Gap to Proprietary LLMs in Long Context and RAG Capabilities
-		Context, Data Engineering for Scaling Language Models to 128K Context
-		Context, Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention
 		Context, Ring Attention with Blockwise Transformers for Near-Infinite Context
 		Context, Lost in the Middle: How Language Models Use Long Contexts
-		Context, Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding
-		Context, LongAlign: A Recipe for Long Context Alignment of Large Language Models
-		Context, Long Context Transfer from Language to Vision
+		Long Context, ChatQA 2: Bridging the Gap to Proprietary LLMs in Long Context and RAG Capabilities
+		Long Context, LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models
+		Long Context, YaRN: Efficient Context Window Extension of Large Language Models
+		Long Context, Data Engineering for Scaling Language Models to 128K Context
+		Long Context, Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention				
+		Long Context, LongAlign: A Recipe for Long Context Alignment of Large Language Models
 		Memory, MemoryBank: Enhancing Large Language Models with Long-Term Memory
 		Memory, Augmenting Language Models with Long-Term Memory
 		Memory, Recurrent Memory Transformer
@@ -193,12 +194,10 @@ Must Read Papers
 		DiT, Scalable Diffusion Models with Transformers
 		DiT, Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
 		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
+		ViT, Long Context Transfer from Language to Vision
 		Eval, HELM: Holistic Evaluation of Language Models
 		Hallucination, SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
-		Hallucination, A Survey of Hallucination in Large Foundation Models
-		Hallucination, Hallucination Detection and Hallucination Mitigation: An Investigation
-		Hallucination, MASSIVE Multilingual Abstract Meaning Representation: A Dataset and Baselines for Hallucination Detection
-		Hallucination, Hallucination Detection: Robustly Discerning Reliable Answers in Large Language Models
+		Hallucination, G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment
 		Hallucination, To Believe or Not to Believe Your LLM
 
 ******************************************************************************************
