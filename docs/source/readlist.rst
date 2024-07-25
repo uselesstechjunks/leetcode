@@ -151,6 +151,7 @@ Must Read Papers
 		Contrastive, E5: Text Embeddings by Weakly-Supervised Contrastive Pre-training
 		Contrastive, Unsupervised Dense Information Retrieval with Contrastive Learning
 		IR, Dense Passage Retrieval for Open-Domain Question Answering
+		IE:NER, UniversalNER: Targeted Distillation from Large Language Models for Open Named Entity Recognition
 		LLM, Aligning language models to follow instructions
 		LLM, Scaling Instruction-Finetuned Language Models
 		LLM, InstructGpt: Training language models to follow instructions with human feedback
