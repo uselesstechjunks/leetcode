@@ -518,27 +518,364 @@ Summary
 *****************************************************************************************
 Task Specific Setup
 *****************************************************************************************
+Classification Tasks
+=========================================================================================
+1. Sentiment Analysis
+-----------------------------------------------------------------------------------------
+Description:
+Sentiment analysis involves determining the sentiment or emotional tone behind a piece of text, typically classified as positive, negative, or neutral.
+
+Example:
+
+- Input: "I love this product!"
+- Output: "Positive"
+
+Evaluation Metrics:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+
+Benchmark Datasets:
+
+- IMDb Movie Reviews
+- Sentiment140
+- SST (Stanford Sentiment Treebank)
+
+Example Prompt:
+"Determine the sentiment of the following text: 'I love this product!'"
+
+Information Retrieval (IR) Tasks
+=========================================================================================
+1. Document Retrieval
+-----------------------------------------------------------------------------------------
+Description:
+Document retrieval involves finding and ranking relevant documents from a large corpus in response to a user's query.
+
+Example:
+
+- Input: Query: "What are the symptoms of COVID-19?"
+- Output: [List of relevant documents about COVID-19 symptoms]
+
+Evaluation Metrics:
+
+- Precision at k (P@k)
+- Mean Average Precision (MAP)
+- Normalized Discounted Cumulative Gain (NDCG)
+
+Benchmark Datasets:
+
+- TREC (Text REtrieval Conference)
+- CLEF (Conference and Labs of the Evaluation Forum)
+- MSMARCO
+
+Example Prompt:
+"Retrieve the top 5 documents related to the query: 'What are the symptoms of COVID-19?'"
+
+2. Passage Retrieval
+-----------------------------------------------------------------------------------------
+Description:
+Passage retrieval involves finding and ranking relevant passages or sections within documents in response to a user's query.
+
+Example:
+
+- Input: Query: "What is the capital of France?"
+- Output: [List of passages containing information about the capital of France]
+
+Evaluation Metrics:
+
+- Precision at k (P@k)
+- Mean Average Precision (MAP)
+- Normalized Discounted Cumulative Gain (NDCG)
+
+Benchmark Datasets:
+
+- MSMARCO Passage Ranking
+- TREC Deep Learning
+
+Example Prompt:
+"Retrieve the top 5 passages related to the query: 'What is the capital of France?'"
+
+3. Query Expansion
+-----------------------------------------------------------------------------------------
+Description:
+Query expansion involves modifying a user's query by adding additional terms to improve retrieval performance.
+
+Example:
+
+- Input: Query: "COVID-19"
+- Output: Expanded Query: "COVID-19 coronavirus symptoms pandemic"
+
+Evaluation Metrics:
+
+- Precision
+- Recall
+- Mean Average Precision (MAP)
+
+Benchmark Datasets:
+
+- TREC
+- CLEF
+
+Example Prompt:
+"Expand the following query to improve search results: 'COVID-19'"
+
+4. Question Answering (QA)
+-----------------------------------------------------------------------------------------
+Description:
+QA involves retrieving answers to questions posed in natural language, often using information from a large corpus.
+
+Example:
+
+- Input: Question: "What is the tallest mountain in the world?"
+- Output: "Mount Everest"
+
+Evaluation Metrics:
+
+- Exact Match (EM)
+- F1 Score
+
+Benchmark Datasets:
+
+- SQuAD (Stanford Question Answering Dataset)
+- Natural Questions
+- TriviaQA
+
+Example Prompt:
+"Answer the following question: 'What is the tallest mountain in the world?'"
+
+Information Extraction (IE) Tasks
+=========================================================================================
+1. Named Entity Recognition (NER)
+-----------------------------------------------------------------------------------------
+Description:
+NER involves identifying and classifying entities in text into predefined categories such as names of people, organizations, locations, dates, etc.
+
+Example:
+
+- Input: "Barack Obama was born in Hawaii."
+- Output: [("Barack Obama", "PERSON"), ("Hawaii", "LOCATION")]
+
+Evaluation Metrics:
+
+- Precision
+- Recall
+- F1 Score
+
+Benchmark Datasets:
+
+- CoNLL-2003
+- OntoNotes
+- WNUT 2017
+
+Example Prompt:
+"Identify and classify named entities in the following sentence: 'Barack Obama was born in Hawaii.'"
+
+2. Relation Extraction
+-----------------------------------------------------------------------------------------
+Description:
+Relation extraction involves identifying and classifying the relationships between entities in text.
+
+Example:
+
+- Input: "Barack Obama was born in Hawaii."
+- Output: ("Barack Obama", "born in", "Hawaii")
+
+Evaluation Metrics:
+
+- Precision
+- Recall
+- F1 Score
+
+Benchmark Datasets:
+
+- TACRED
+- SemEval
+- ACE 2005
+
+Example Prompt:
+"Identify the relationship between entities in the following sentence: 'Barack Obama was born in Hawaii.'"
+
+3. Event Extraction
+-----------------------------------------------------------------------------------------
+Description:
+Event extraction involves identifying events in text and their participants, attributes, and the context in which they occur.
+
+Example:
+
+- Input: "An earthquake of magnitude 6.5 struck California yesterday."
+- Output: [("earthquake", "magnitude 6.5", "California", "yesterday")]
+
+Evaluation Metrics:
+
+- Precision
+- Recall
+- F1 Score
+
+Benchmark Datasets:
+
+- ACE 2005
+- MUC-4
+- TAC KBP
+
+Example Prompt:
+"Extract events and their details from the following text: 'An earthquake of magnitude 6.5 struck California yesterday.'"
+
+4. Coreference Resolution
+-----------------------------------------------------------------------------------------
+Description:
+Coreference resolution involves identifying when different expressions in a text refer to the same entity.
+
+Example:
+
+- Input: "Jane went to the market. She bought apples."
+- Output: [("Jane", "She")]
+
+Evaluation Metrics:
+
+- Precision
+- Recall
+- F1 Score
+
+Benchmark Datasets:
+
+- CoNLL-2012 Shared Task
+- OntoNotes
+
+Example Prompt:
+"Identify coreferences in the following text: 'Jane went to the market. She bought apples.'"
+
+Sequence to Sequence Tasks
+=========================================================================================
+1. Machine Translation
+-----------------------------------------------------------------------------------------
+Description:
+Machine translation involves translating text from one language to another.
+
+Example:
+
+- Input: "Hello, how are you?" (English)
+- Output: "Hola, ¿cómo estás?" (Spanish)
+
+Evaluation Metrics:
+
+- BLEU Score
+- METEOR
+- TER
+
+Benchmark Datasets:
+
+- WMT (Workshop on Machine Translation)
+- IWSLT (International Workshop on Spoken Language Translation)
+
+Example Prompt:
+"Translate the following text from English to Spanish: 'Hello, how are you?'"
+
+2. Text Summarization
+-----------------------------------------------------------------------------------------
+Description:
+Text summarization involves generating a concise summary of a longer document while preserving key information.
+
+Example:
+
+- Input: "Artificial intelligence is a branch of computer science that aims to create intelligent machines. It has become an essential part of the technology industry."
+- Output: "AI is a branch of computer science aiming to create intelligent machines, essential in technology."
+
+Evaluation Metrics:
+
+- ROUGE Score
+- BLEU Score
+
+Benchmark Datasets:
+
+- CNN/Daily Mail
+- XSum
+- Gigaword
+
+Example Prompt:
+"Summarize the following text: 'Artificial intelligence is a branch of computer science that aims to create intelligent machines. It has become an essential part of the technology industry.'"
+
+3. Text Generation
+-----------------------------------------------------------------------------------------
+Description:
+Text generation involves creating new text that is coherent and contextually relevant based on a given input prompt.
+
+Example:
+
+- Input: "Once upon a time"
+- Output: "Once upon a time, in a small village, there lived a brave young girl named Ella."
+
+Evaluation Metrics:
+
+- Perplexity
+- BLEU Score
+- Human Evaluation
+
+Benchmark Datasets:
+
+- OpenAI GPT-3 Playground
+- EleutherAI's Pile
+- WikiText
+
+Example Prompt:
+"Generate a continuation for the following text: 'Once upon a time, in a small village, there lived a brave young girl named Ella.'"
+
+Multimodal Tasks
+=========================================================================================
+1. Text-to-Speech (TTS)
+-----------------------------------------------------------------------------------------
+Description:
+TTS involves converting written text into spoken words.
+
+Example:
+
+- Input: "Good morning, everyone."
+- Output: [Audio clip saying "Good morning, everyone."]
+
+Evaluation Metrics:
+
+- Mean Opinion Score (MOS)
+- Word Error Rate (WER)
+- Naturalness
+
+Benchmark Datasets:
+
+- LJSpeech
+- LibriSpeech
+- VCTK
+
+Example Prompt:
+"Convert the following text to speech: 'Good morning, everyone.'"
+
+2. Speech Recognition
+-----------------------------------------------------------------------------------------
+Description:
+Speech recognition involves converting spoken language into written text.
+
+Example:
+
+- Input: [Audio clip saying "Hello, world!"]
+- Output: "Hello, world!"
+
+Evaluation Metrics:
+
+- Word Error Rate (WER)
+- Sentence Error Rate (SER)
+
+Benchmark Datasets:
+
+- LibriSpeech
+- TED-LIUM
+- Common Voice
+
+Example Prompt:
+"Transcribe the following audio clip: [Audio clip saying 'Hello, world!']"
+
 Extending Vocab for Domain-Adaptation or Fine-Tuning
 =========================================================================================
-Problem Statement:
------------------------------------------------------------------------------------------
-I develop ranking and recommendation systems for my customers. I want to leverage an LLM to improve the performance of the ranking and recommendation systems. In particular, I am planning to use the embeddings from the LLM for my downstream tasks.
-
-I am planning to take a pre-trained, publicly available LLM which is an autoregressive model, as in, it is pre-trained to predict the next token in a sequence given previous tokens in that sequence. I plan to adapt it for my specific domain by performing continuous training with the same pre-training objective as the original LLM. 
-
-Here is the issue. The data that I work with contains a lot of domain-specific terms which might have no been seen by the original LLM's tokenizer (which uses byte-pair encoding tokenizer and is trained on publicly available datasets). Therefore, many of these domain-specific terms from my data would get assigned to a common UNKNOWN token and therefore, the embeddings for those terms would be useless for my downstream task.
-
-Question (a) How would I incorporate my domain specific terms into the LLM's tokenizer vocabulary? How should I rescale the original LLM's input Embedding matrix to accomodate for these new tokens? 
-Question (b) I want to keep the original token embeddings intact. For the new tokens that I'll add in this process, the model would learn embeddings from the end-to-end pretraining objective.
-
-Solution:
------------------------------------------------------------------------------------------
-To incorporate domain-specific terms into the tokenizer vocabulary of a pre-trained autoregressive Language Model (LLM) and subsequently adjust the embedding matrix while preserving the original embeddings, you can follow these steps. Let's break it down:
-
 1. Extend the Tokenizer Vocabulary
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-First, you need to extend the tokenizer's vocabulary to include your domain-specific terms. Since you mentioned using a pre-trained LLM with a byte-pair encoding (BPE) tokenizer (e.g., GPT-3), you'll need to add your terms to this tokenizer.
-
+-----------------------------------------------------------------------------------------
 .. code-block:: python
 
 	from transformers import GPT2Tokenizer, GPT2Model
@@ -559,9 +896,7 @@ First, you need to extend the tokenizer's vocabulary to include your domain-spec
 	* model.resize_token_embeddings(len(tokenizer)): This adjusts the model's embedding layer to accommodate the new tokens. This step is crucial if you plan to fine-tune the model with these new tokens.
 
 2. Tinkering with the Embedding Matrix
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Since you want to preserve the original token embeddings for continuous training and only allow the model to learn embeddings for the new tokens from scratch, you need to handle the embedding matrix carefully:
-
+-----------------------------------------------------------------------------------------
 .. code-block:: python
 
 	import torch
@@ -589,7 +924,7 @@ Since you want to preserve the original token embeddings for continuous training
 	* torch.cat([original_embeddings, new_token_embeddings], dim=0): Concatenates the original embeddings with the new token embeddings.
 
 Notes:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------------------------------------------
 * Tokenizer Vocabulary: Ensure that after extending the tokenizer vocabulary, you save it or use it consistently across your tasks.
 * Embedding Adjustment: The approach here adds new tokens and initializes their embeddings separately from the pre-trained embeddings. This keeps the original embeddings intact while allowing new tokens to have their embeddings learned during fine-tuning.
 * Fine-Tuning: If you plan to fine-tune the model on your specific tasks, you would then proceed with training using your domain-specific data, where the model will adapt not only to the new tokens but also to the specific patterns in your data.
@@ -624,6 +959,171 @@ Notes:
 * RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
 * `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
 * `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
+
+TODO
+- constitutional ai
+- guardrails
+
+https://github.com/microsoft/unilm
+
+- eval for ie tasks - open vs supervised
+- llm evals: https://github.com/openai/evals
+- multimodal ie
+- multimodal: text + image
+	- classification: 
+		- clip: https://github.com/openai/CLIP
+			Learning Transferable Visual Models From Natural Language Supervision
+		- cnn
+	- generation: 
+		- dall-e: https://github.com/openai/dall-e
+			Zero-Shot Text-to-Image Generation
+		- latent-diffusion: https://github.com/CompVis/latent-diffusion
+			- High-Resolution Image Synthesis with Latent Diffusion Models
+			- Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models
+		- stable diffusion: https://github.com/CompVis/stable-diffusion
+			- Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
+		- vision transformers and diffusion models 
+	- eval
+- cnn:
+	- image classification
+	- object detection (bounding box): 
+		https://paperswithcode.com/task/object-detection
+		YOLOv4: Optimal Speed and Accuracy of Object Detection
+	- image segmentation:
+		- GeminiFusion: Efficient Pixel-wise Multimodal Fusion for Vision Transformer
+- recsys - context based (in session rec - llm), interaction based (collaborative filtering - mf, gcn)
+- nlp downstream tasks
+- hardware p40, v100, a100 - arch, cost
+
+training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment and preference optim (rhlf/dpo)
+
+design e2e: integrate user feedback
+
+- prompt best guide: Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
+	- Zero-shot
+	- Random few-shot
+	- Random few-shot, chain-of-thought
+	- kNN, few-shot, chain-of-though
+	- Ensemble w/ choice shuffle
+- domain understanding
+
+1. information retrieval (q/a, summarization, retrieval)
+	- MLM based: BERT, T5
+	- RTD based: Electra
+	- Contrastive Learning based:
+		- image: OG image and distorted image form pos-pairs
+		- text: contriever
+			- contrastive learning based embeddings
+			- infonce loss: softmax over 1 positive and K negative
+			- getting positive: 
+				(a) Inverse Cloze Task (contiguous segment as query, rest as doc) - relates with closure of a query
+				(b) Independent cropping - sample two independent contiguous pieces of text
+			- getting negatives:
+				(a) in-batch negatives
+				(b) negs from previous batch docs - called keys. either not updated or updated slowly with different parameterization including momentum (moco)
+		- text: e5
+
+- monosemanticity
+	- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
+	- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
+	- towards monosemanticity:
+		(1) creating models without superposition, perhaps by encouraging activation sparsity; 
+		(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
+		(3) hybrid approaches relying on a combination of the two.
+	- developed counterexamples which persuaded us that the 
+		- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
+		- standard dictionary learning methods (approach 2) had significant issues with overfitting.
+	- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
+
+- "lost in the middle" using longer context (primacy bias, recency bias) - U-shaped curve
+	-> if using only a decoder model, due to masked attention, put the question at the end 
+	-> instruction tuned is much better
+	-> relevance order of the retriever matters a lot
+
+- extending context length
+	- needle in a haystack
+	- l-eval, novelqa, infty-bench
+	- nocha (fictional, unseen books with true/false q/a pairs 
+		- performs better when fact is present in the book at sentence level
+		- performs worse if requires global reasoning or if contains extensive world building
+	(a) position embeddings 
+		- change the angle hyperparameter in RoPE to deal with longer sequences
+	(b) efficient attention 
+		- full attention with hardware-aware algorithm design - flash attention
+		- sparse attention techniques: sliding window attention, block attention
+	(c) data engineering - replicate larger model perf using 7b/13b llama
+		continuous pretraining
+		- 1-5B new tokens for 
+		- upsampling longer sequences
+		- same #tokens per batch (adjusted as per sequence length and batch size)
+		- 2e-5 lr cosine schedule
+		- 2x8 a100 gpu, 7 day training, flashattention (3x time for 80k vs 4k, majority time goes in cpu<->gpu, gpu<->gpu, and hbm<->sm)
+		instruction tuning: rlhf data + self instruct
+		- (a) chunk long doc (b) from long doc formulate q/a (c) use OG doc and q/a pair as training
+		- 1e-5 lr constant
+		- lora/qlora
+	- incorporating some form of recurrance relation - transformer-xl, longformer, rmt
+
+- rag based solution
+	- baseline rag struggles
+		- answering a question requires traversing disparate pieces of information through their shared attributes
+		- holistically understand summarized semantic concepts over large data collections or even singular large documents.
+	- graph rag: https://microsoft.github.io/graphrag/
+		- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
+		- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
+		- At query time, both of these structures are used to provide materials for the LLM context window when answering a question. 
+		eval:
+			comprehensiveness (completeness within the framing of the implied context of the question)
+			human enfranchisement (provision of supporting source material or other contextual information)
+			diversity (provision of differing viewpoints or angles on the question posed)
+			selfcheckgpt
+- chain-of-agents
+
+issues:
+- hallucination detection and mitigation
+	supervised: translation, summarization, image captioning
+		- n-gram (bleu/rouge, meteor)
+			issues:
+				- reference dependent, usually only one reference
+				- often coarse or granular
+				- unable to capture semantics: fail to adapt to stylistic changes in the reference
+		- ask gpt (selfcheckgpt, g-eval)
+			evaluate on (a) adherence (b) correctness
+			issues:
+				- blackbox, unexplainable
+				- expensive
+	unsupervised:
+		- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
+			issues:
+				- too granular, represents confusion - not hallucination in particular, often red herring
+				- not always available
+
+- sycophany
+
+- alignment and preference
+	- rlhf
+	- dpo
+	- reflexion
+
+2. information extraction: **UniversalNER, **GLiNER
+	- (entity) NER: named entity recognition, entity-linking
+		- predefined entity-classes: location (LOC), organizations (ORG), person (PER) and Miscellaneous (MISC). 
+			https://huggingface.co/dslim/bert-base-NER
+			https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english			
+		- open entity-classes: 
+			UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
+			GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
+			GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
+
+		- Open IE eval: Preserving Knowledge Invariance: Rethinking Robustness Evaluation of Open Information Extraction (https://github.com/qijimrc/ROBUST/tree/master)		
+		- LLMaAA: Making Large Language Models as Active Annotators https://github.com/ridiculouz/LLMaAA/tree/main
+		- A Deep Learning Based Knowledge Extraction Toolkit for Knowledge Graph Construction (https://github.com/zjunlp/DeepKE)
+
+	- (relationship) RE: relationship extraction
+		- QA4RE: Aligning Instruction Tasks Unlocks Large Language Models as Zero-Shot Relation Extractors (ZS Pr) https://github.com/OSU-NLP-Group/QA4RE
+		- DocGNRE: Semi-automatic Data Enhancement for Document-Level Relation Extraction with Distant Supervision from Large Language Models (https://github.com/bigai-nlco/DocGNRE)
+
+	- (event) EE: event extraction
 
 Resources
 =========================================================================================
