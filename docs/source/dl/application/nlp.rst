@@ -959,11 +959,10 @@ Notes:
 * `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
 
 TODO
+-----------------------------------------------------------------------------------------
 - constitutional ai
 - guardrails
-
-https://github.com/microsoft/unilm
-
+- https://github.com/microsoft/unilm
 - eval for ie tasks - open vs supervised
 - llm evals: https://github.com/openai/evals
 - multimodal ie
@@ -992,10 +991,9 @@ https://github.com/microsoft/unilm
 - recsys - context based (in session rec - llm), interaction based (collaborative filtering - mf, gcn)
 - nlp downstream tasks
 - hardware p40, v100, a100 - arch, cost
-
-training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment and preference optim (rhlf/dpo)
-
-design e2e: integrate user feedback
+- training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment and preference optim (rhlf/dpo)
+- domain understanding
+- design e2e: integrate user feedback
 
 Prompt best guide
 -----------------------------------------------------------------------------------------
@@ -1005,7 +1003,6 @@ Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study i
 	- Random few-shot, chain-of-thought
 	- kNN, few-shot, chain-of-though
 	- Ensemble w/ choice shuffle
-- domain understanding
 
 Issues with LLMs
 -----------------------------------------------------------------------------------------
