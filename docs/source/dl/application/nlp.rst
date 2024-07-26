@@ -932,7 +932,6 @@ Notes:
 [TODO: Classify Later] Other Topics
 =========================================================================================
 * Prompt Engineering
-
 	* https://www.prompthub.us/blog
 	* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
 * Prompt Tuning
@@ -947,7 +946,6 @@ Notes:
 
 	* Ultrafeedback: https://huggingface.co/datasets/argilla/ultrafeedback-curated
 * Evaluation of instruction tuned/pre-trained models
-
 	* MMLU
 
 		* Paper: `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
@@ -961,11 +959,10 @@ Notes:
 * `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
 
 TODO
+-----------------------------------------------------------------------------------------
 - constitutional ai
 - guardrails
-
-https://github.com/microsoft/unilm
-
+- https://github.com/microsoft/unilm
 - eval for ie tasks - open vs supervised
 - llm evals: https://github.com/openai/evals
 - multimodal ie
@@ -994,20 +991,59 @@ https://github.com/microsoft/unilm
 - recsys - context based (in session rec - llm), interaction based (collaborative filtering - mf, gcn)
 - nlp downstream tasks
 - hardware p40, v100, a100 - arch, cost
+- training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment and preference optim (rhlf/dpo)
+- domain understanding
+- design e2e: integrate user feedback
 
-training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment and preference optim (rhlf/dpo)
-
-design e2e: integrate user feedback
-
-- prompt best guide: Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
+Prompt best guide
+-----------------------------------------------------------------------------------------
+Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
 	- Zero-shot
 	- Random few-shot
 	- Random few-shot, chain-of-thought
 	- kNN, few-shot, chain-of-though
 	- Ensemble w/ choice shuffle
-- domain understanding
 
-1. information retrieval (q/a, summarization, retrieval)
+Issues with LLMs
+-----------------------------------------------------------------------------------------
+	- hallucination 
+		- detection and mitigation
+		- supervised: translation, summarization, image captioning
+			- n-gram (bleu/rouge, meteor)
+				- issues:
+					- reference dependent, usually only one reference
+					- often coarse or granular
+					- unable to capture semantics: fail to adapt to stylistic changes in the reference
+			- ask gpt (selfcheckgpt, g-eval)
+				- evaluate on (a) adherence (b) correctness
+				- issues:
+					- blackbox, unexplainable
+					- expensive
+		- unsupervised:
+			- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
+				- issues:
+					- too granular, represents confusion - not hallucination in particular, often red herring
+					- not always available
+	
+	- sycophany
+	- monosemanticity
+		- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
+		- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
+		- towards monosemanticity:
+			(1) creating models without superposition, perhaps by encouraging activation sparsity; 
+			(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
+			(3) hybrid approaches relying on a combination of the two.
+		- developed counterexamples which persuaded us that the 
+			- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
+			- standard dictionary learning methods (approach 2) had significant issues with overfitting.
+		- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
+	- alignment and preference
+		- rlhf
+		- dpo
+		- reflexion
+
+Information Retrieval
+-----------------------------------------------------------------------------------------
 	- MLM based: BERT, T5
 	- RTD based: Electra
 	- Contrastive Learning based:
@@ -1022,108 +1058,69 @@ design e2e: integrate user feedback
 				(a) in-batch negatives
 				(b) negs from previous batch docs - called keys. either not updated or updated slowly with different parameterization including momentum (moco)
 		- text: e5
+	- Long Context
+		- "lost in the middle" using longer context (primacy bias, recency bias) - U-shaped curve
+			-> if using only a decoder model, due to masked attention, put the question at the end 
+			-> instruction tuned is much better
+			-> relevance order of the retriever matters a lot
+		
+		- extending context length
+			- needle in a haystack
+			- l-eval, novelqa, infty-bench
+			- nocha (fictional, unseen books with true/false q/a pairs 
+				- performs better when fact is present in the book at sentence level
+				- performs worse if requires global reasoning or if contains extensive world building
+			- position embeddings 
+				- change the angle hyperparameter in RoPE to deal with longer sequences
+			- efficient attention 
+				- full attention with hardware-aware algorithm design - flash attention
+				- sparse attention techniques: sliding window attention, block attention
+			- data engineering - replicate larger model perf using 7b/13b llama
+				- continuous pretraining
+					- 1-5B new tokens for 
+					- upsampling longer sequences
+					- same #tokens per batch (adjusted as per sequence length and batch size)
+					- 2e-5 lr cosine schedule
+					- 2x8 a100 gpu, 7 day training, flashattention (3x time for 80k vs 4k, majority time goes in cpu<->gpu, gpu<->gpu, and hbm<->sm)
+				- instruction tuning: rlhf data + self instruct
+					- (a) chunk long doc (b) from long doc formulate q/a (c) use OG doc and q/a pair as training
+					- 1e-5 lr constant
+					- lora/qlora
+			- incorporating some form of recurrance relation - transformer-xl, longformer, rmt
 
-- monosemanticity
-	- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
-	- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
-	- towards monosemanticity:
-		(1) creating models without superposition, perhaps by encouraging activation sparsity; 
-		(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
-		(3) hybrid approaches relying on a combination of the two.
-	- developed counterexamples which persuaded us that the 
-		- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
-		- standard dictionary learning methods (approach 2) had significant issues with overfitting.
-	- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
+	- rag based solution
+		- baseline rag struggles
+			- answering a question requires traversing disparate pieces of information through their shared attributes
+			- holistically understand summarized semantic concepts over large data collections or even singular large documents.
+		- graph rag: https://microsoft.github.io/graphrag/
+			- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
+			- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
+			- At query time, both of these structures are used to provide materials for the LLM context window when answering a question. 
+			- eval:
+				- comprehensiveness (completeness within the framing of the implied context of the question)
+				- human enfranchisement (provision of supporting source material or other contextual information)
+				- diversity (provision of differing viewpoints or angles on the question posed)
+				- selfcheckgpt
+	- chain-of-agents
 
-- "lost in the middle" using longer context (primacy bias, recency bias) - U-shaped curve
-	-> if using only a decoder model, due to masked attention, put the question at the end 
-	-> instruction tuned is much better
-	-> relevance order of the retriever matters a lot
-
-- extending context length
-	- needle in a haystack
-	- l-eval, novelqa, infty-bench
-	- nocha (fictional, unseen books with true/false q/a pairs 
-		- performs better when fact is present in the book at sentence level
-		- performs worse if requires global reasoning or if contains extensive world building
-	(a) position embeddings 
-		- change the angle hyperparameter in RoPE to deal with longer sequences
-	(b) efficient attention 
-		- full attention with hardware-aware algorithm design - flash attention
-		- sparse attention techniques: sliding window attention, block attention
-	(c) data engineering - replicate larger model perf using 7b/13b llama
-		continuous pretraining
-		- 1-5B new tokens for 
-		- upsampling longer sequences
-		- same #tokens per batch (adjusted as per sequence length and batch size)
-		- 2e-5 lr cosine schedule
-		- 2x8 a100 gpu, 7 day training, flashattention (3x time for 80k vs 4k, majority time goes in cpu<->gpu, gpu<->gpu, and hbm<->sm)
-		instruction tuning: rlhf data + self instruct
-		- (a) chunk long doc (b) from long doc formulate q/a (c) use OG doc and q/a pair as training
-		- 1e-5 lr constant
-		- lora/qlora
-	- incorporating some form of recurrance relation - transformer-xl, longformer, rmt
-
-- rag based solution
-	- baseline rag struggles
-		- answering a question requires traversing disparate pieces of information through their shared attributes
-		- holistically understand summarized semantic concepts over large data collections or even singular large documents.
-	- graph rag: https://microsoft.github.io/graphrag/
-		- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
-		- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
-		- At query time, both of these structures are used to provide materials for the LLM context window when answering a question. 
-		eval:
-			comprehensiveness (completeness within the framing of the implied context of the question)
-			human enfranchisement (provision of supporting source material or other contextual information)
-			diversity (provision of differing viewpoints or angles on the question posed)
-			selfcheckgpt
-- chain-of-agents
-
-issues:
-- hallucination detection and mitigation
-	supervised: translation, summarization, image captioning
-		- n-gram (bleu/rouge, meteor)
-			issues:
-				- reference dependent, usually only one reference
-				- often coarse or granular
-				- unable to capture semantics: fail to adapt to stylistic changes in the reference
-		- ask gpt (selfcheckgpt, g-eval)
-			evaluate on (a) adherence (b) correctness
-			issues:
-				- blackbox, unexplainable
-				- expensive
-	unsupervised:
-		- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
-			issues:
-				- too granular, represents confusion - not hallucination in particular, often red herring
-				- not always available
-
-- sycophany
-
-- alignment and preference
-	- rlhf
-	- dpo
-	- reflexion
-
-2. information extraction: **UniversalNER, **GLiNER
-	- (entity) NER: named entity recognition, entity-linking
+Information Extraction
+-----------------------------------------------------------------------------------------
+	- NER: named entity recognition, entity-linking
 		- predefined entity-classes: location (LOC), organizations (ORG), person (PER) and Miscellaneous (MISC). 
-			https://huggingface.co/dslim/bert-base-NER
-			https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english			
+			- https://huggingface.co/dslim/bert-base-NER
+			- https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english			
 		- open entity-classes: 
-			UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
-			GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
-			GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
-
+			- UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
+			- GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
+			- GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
 		- Open IE eval: Preserving Knowledge Invariance: Rethinking Robustness Evaluation of Open Information Extraction (https://github.com/qijimrc/ROBUST/tree/master)		
 		- LLMaAA: Making Large Language Models as Active Annotators https://github.com/ridiculouz/LLMaAA/tree/main
 		- A Deep Learning Based Knowledge Extraction Toolkit for Knowledge Graph Construction (https://github.com/zjunlp/DeepKE)
-
-	- (relationship) RE: relationship extraction
+	- RE: relationship extraction
 		- QA4RE: Aligning Instruction Tasks Unlocks Large Language Models as Zero-Shot Relation Extractors (ZS Pr) https://github.com/OSU-NLP-Group/QA4RE
 		- DocGNRE: Semi-automatic Data Enhancement for Document-Level Relation Extraction with Distant Supervision from Large Language Models (https://github.com/bigai-nlco/DocGNRE)
-
-	- (event) EE: event extraction
+	- EE: event extraction
+	- Papers to read: UniversalNER, GLiNER
 
 Resources
 =========================================================================================
