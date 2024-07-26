@@ -1046,22 +1046,22 @@ design e2e: integrate user feedback
 	- nocha (fictional, unseen books with true/false q/a pairs 
 		- performs better when fact is present in the book at sentence level
 		- performs worse if requires global reasoning or if contains extensive world building
-	(a) position embeddings 
+	- position embeddings 
 		- change the angle hyperparameter in RoPE to deal with longer sequences
-	(b) efficient attention 
+	- efficient attention 
 		- full attention with hardware-aware algorithm design - flash attention
 		- sparse attention techniques: sliding window attention, block attention
-	(c) data engineering - replicate larger model perf using 7b/13b llama
-		continuous pretraining
-		- 1-5B new tokens for 
-		- upsampling longer sequences
-		- same #tokens per batch (adjusted as per sequence length and batch size)
-		- 2e-5 lr cosine schedule
-		- 2x8 a100 gpu, 7 day training, flashattention (3x time for 80k vs 4k, majority time goes in cpu<->gpu, gpu<->gpu, and hbm<->sm)
-		instruction tuning: rlhf data + self instruct
-		- (a) chunk long doc (b) from long doc formulate q/a (c) use OG doc and q/a pair as training
-		- 1e-5 lr constant
-		- lora/qlora
+	- data engineering - replicate larger model perf using 7b/13b llama
+		- continuous pretraining
+			- 1-5B new tokens for 
+			- upsampling longer sequences
+			- same #tokens per batch (adjusted as per sequence length and batch size)
+			- 2e-5 lr cosine schedule
+			- 2x8 a100 gpu, 7 day training, flashattention (3x time for 80k vs 4k, majority time goes in cpu<->gpu, gpu<->gpu, and hbm<->sm)
+		- instruction tuning: rlhf data + self instruct
+			- (a) chunk long doc (b) from long doc formulate q/a (c) use OG doc and q/a pair as training
+			- 1e-5 lr constant
+			- lora/qlora
 	- incorporating some form of recurrance relation - transformer-xl, longformer, rmt
 
 - rag based solution
@@ -1108,12 +1108,12 @@ issues:
 2. information extraction: **UniversalNER, **GLiNER
 	- (entity) NER: named entity recognition, entity-linking
 		- predefined entity-classes: location (LOC), organizations (ORG), person (PER) and Miscellaneous (MISC). 
-			https://huggingface.co/dslim/bert-base-NER
-			https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english			
+			- https://huggingface.co/dslim/bert-base-NER
+			- https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english			
 		- open entity-classes: 
-			UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
-			GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
-			GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
+			- UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
+			- GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
+			- GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
 
 		- Open IE eval: Preserving Knowledge Invariance: Rethinking Robustness Evaluation of Open Information Extraction (https://github.com/qijimrc/ROBUST/tree/master)		
 		- LLMaAA: Making Large Language Models as Active Annotators https://github.com/ridiculouz/LLMaAA/tree/main
