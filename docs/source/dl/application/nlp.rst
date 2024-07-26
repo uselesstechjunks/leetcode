@@ -1219,6 +1219,7 @@ Information Retrieval
 
 					- Prepare community summaries: Shuffle and split into chunks to avoid concentration of information and therefore lost in the middle.
 					- Map-Reduce community summaries
+
 			- eval:
 				- comprehensiveness (completeness within the framing of the implied context of the question)
 				- human enfranchisement (provision of supporting source material or other contextual information)
