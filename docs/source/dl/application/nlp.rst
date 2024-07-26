@@ -1004,6 +1004,101 @@ Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study i
 	- kNN, few-shot, chain-of-though
 	- Ensemble w/ choice shuffle
 
+Logit Bias
+-----------------------------------------------------------------------------------------
+A logit bias can be used to influence the output probabilities of a language model (LLM) to steer it towards a desired output, such as a "yes" or "no" answer. Here's how it works:
+
+What is Logit Bias?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In the context of language models, logits are the raw, unnormalized scores that a model outputs before applying the softmax function to obtain probabilities. Logit bias refers to the adjustment of these logits to favor or disfavor certain tokens.
+
+How Logit Bias Works
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Logit Adjustment:
+   - Each token in the vocabulary has an associated logit value.
+   - By adding a bias to the logits of specific tokens, you can increase or decrease the likelihood that those tokens will be selected when the model generates text.
+
+2. Softmax Function:
+   - After adjusting the logits, the softmax function is applied to convert these logits into probabilities.
+   - Tokens with higher logits will have higher probabilities of being selected.
+
+Forcing a Yes/No Answer with Logit Bias
+
+To force an LLM into a yes/no answer, you can adjust the logits for the "yes" and "no" tokens.
+
+Steps to Apply Logit Bias
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Identify Token IDs:
+   - Determine the token IDs for "yes" and "no" in the model's vocabulary. For instance, suppose "yes" is token ID 345 and "no" is token ID 678.
+
+2. Apply Bias:
+   - Adjust the logits for these tokens. Typically, you would add a positive bias to both "yes" and "no" tokens to increase their probabilities and/or subtract a bias from all other tokens to decrease their probabilities.
+
+3. Implementing the Bias:
+   - If using an API or library that supports logit bias (e.g., OpenAI GPT-3), you can specify the bias directly in the request.
+
+Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Here's an example of how you might apply a logit bias in a request using a hypothetical API:
+
+.. code-block:: json
+
+	{
+	  "prompt": "Is the sky blue?",
+	  "logit_bias": {
+		"345": 10,  // Bias for "yes"
+		"678": 10   // Bias for "no"
+	  }
+	}
+
+Practical Considerations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Magnitude of Bias:
+   - The magnitude of the bias determines how strongly the model will favor "yes" or "no." A larger bias will make the model more likely to choose these tokens.
+
+2. Context Sensitivity:
+   - The model may still consider the context of the prompt. If the context strongly indicates one answer over the other, the model may lean towards that answer even with a bias.
+
+3. Balanced Bias:
+   - If you want the model to have an equal chance of saying "yes" or "no," you can apply equal positive biases to both tokens. If you want to skew the response towards one answer, apply a larger bias to that token.
+
+Example in Practice
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Consider a scenario where you want the model to respond with "yes" or "no" to the question "Is the sky blue?"
+
+.. code-block:: text
+
+	- Prompt: "Is the sky blue?"
+	- Logit Bias:
+	  - Yes token (ID 345): +10
+	  - No token (ID 678): +10
+
+This setup ensures that the model will highly favor "yes" and "no" as possible outputs. The prompt and biases are designed so that "yes" or "no" are the most likely completions.
+
+API Implementation Example (Pseudo-Code)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Here's a pseudo-code example of how you might implement this with an API:
+
+.. code-block:: python
+
+	import openai
+
+	response = openai.Completion.create(
+	  engine="text-davinci-003",
+	  prompt="Is the sky blue?",
+	  max_tokens=1,
+	  logit_bias={"345": 10, "678": 10}
+	)
+
+	print(response.choices[0].text.strip())
+
+In this example:
+- The `prompt` is set to "Is the sky blue?"
+- The `logit_bias` dictionary adjusts the logits for the "yes" and "no" tokens to be higher.
+- The `max_tokens` is set to 1 to ensure only one word is generated.
+
+By using logit bias in this way, you can guide the LLM to produce a "yes" or "no" answer more reliably.
+
 Issues with LLMs
 -----------------------------------------------------------------------------------------
 	- hallucination 
@@ -1093,9 +1188,16 @@ Information Retrieval
 			- answering a question requires traversing disparate pieces of information through their shared attributes
 			- holistically understand summarized semantic concepts over large data collections or even singular large documents.
 		- graph rag: https://microsoft.github.io/graphrag/
+			- Summarisation tasks
+				- Abstractive vs extractive
+				- Generic vs query-focused
+				- Single document vs multi-document
 			- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
 			- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
 			- At query time, both of these structures are used to provide materials for the LLM context window when answering a question. 
+			- Steps:
+				- Source documents -> Text Chunks: Note: Tradeoff P/R in chunk-size with number of LLM calls vs quality of extraction (due to lost in the middle)
+				- Text Chunks -> Element Instances: 
 			- eval:
 				- comprehensiveness (completeness within the framing of the implied context of the question)
 				- human enfranchisement (provision of supporting source material or other contextual information)
