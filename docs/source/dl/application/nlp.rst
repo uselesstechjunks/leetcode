@@ -1072,29 +1072,29 @@ design e2e: integrate user feedback
 		- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
 		- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
 		- At query time, both of these structures are used to provide materials for the LLM context window when answering a question. 
-		eval:
-			comprehensiveness (completeness within the framing of the implied context of the question)
-			human enfranchisement (provision of supporting source material or other contextual information)
-			diversity (provision of differing viewpoints or angles on the question posed)
-			selfcheckgpt
+		- eval:
+			- comprehensiveness (completeness within the framing of the implied context of the question)
+			- human enfranchisement (provision of supporting source material or other contextual information)
+			- diversity (provision of differing viewpoints or angles on the question posed)
+			- selfcheckgpt
 - chain-of-agents
 
 issues:
 - hallucination detection and mitigation
-	supervised: translation, summarization, image captioning
+	- supervised: translation, summarization, image captioning
 		- n-gram (bleu/rouge, meteor)
-			issues:
+			- issues:
 				- reference dependent, usually only one reference
 				- often coarse or granular
 				- unable to capture semantics: fail to adapt to stylistic changes in the reference
 		- ask gpt (selfcheckgpt, g-eval)
-			evaluate on (a) adherence (b) correctness
-			issues:
+			- evaluate on (a) adherence (b) correctness
+			- issues:
 				- blackbox, unexplainable
 				- expensive
-	unsupervised:
+	- unsupervised:
 		- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
-			issues:
+			- issues:
 				- too granular, represents confusion - not hallucination in particular, often red herring
 				- not always available
 
