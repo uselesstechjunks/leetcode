@@ -1188,16 +1188,37 @@ Information Retrieval
 			- answering a question requires traversing disparate pieces of information through their shared attributes
 			- holistically understand summarized semantic concepts over large data collections or even singular large documents.
 		- graph rag: https://microsoft.github.io/graphrag/
+
 			- Summarisation tasks
+
 				- Abstractive vs extractive
 				- Generic vs query-focused
 				- Single document vs multi-document
+
 			- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
 			- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
-			- At query time, both of these structures are used to provide materials for the LLM context window when answering a question. 
-			- Steps:
+			- At query time, both of these structures are used to provide materials for the LLM context window when answering a question.
+
+			.. note::
+
+				- Steps:
 				- Source documents -> Text Chunks: Note: Tradeoff P/R in chunk-size with number of LLM calls vs quality of extraction (due to lost in the middle)
 				- Text Chunks -> Element Instances: 
+				
+					- Multipart LLM prompt for (a) Entity and then (b) Relationship. Extract descriptions as well.
+					- Tailor prompt for each domain with FS example. 
+					- Additional extraction covariates (e.g. events). 
+					- Multiple rounds of gleaning - detect additional entities with high logit bias for yes/no. Prepend "MANY entities were missed".
+				- Element Instances -> Element Summaries
+				- Element Summaries -> Graph Communities
+				- Graph Communities -> Community Summaries
+
+					- Leaf level communities
+					- Higher level communities
+				- Community Summaries -> Community Answers -> Global Answer
+
+					- Prepare community summaries: Shuffle and split into chunks to avoid concentration of information and therefore lost in the middle.
+					- Map-Reduce community summaries
 			- eval:
 				- comprehensiveness (completeness within the framing of the implied context of the question)
 				- human enfranchisement (provision of supporting source material or other contextual information)
