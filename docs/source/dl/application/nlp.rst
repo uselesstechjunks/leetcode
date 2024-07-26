@@ -932,7 +932,6 @@ Notes:
 [TODO: Classify Later] Other Topics
 =========================================================================================
 * Prompt Engineering
-
 	* https://www.prompthub.us/blog
 	* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
 * Prompt Tuning
@@ -947,7 +946,6 @@ Notes:
 
 	* Ultrafeedback: https://huggingface.co/datasets/argilla/ultrafeedback-curated
 * Evaluation of instruction tuned/pre-trained models
-
 	* MMLU
 
 		* Paper: `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
@@ -999,7 +997,9 @@ training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment
 
 design e2e: integrate user feedback
 
-- prompt best guide: Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
+Prompt best guide
+-----------------------------------------------------------------------------------------
+Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
 	- Zero-shot
 	- Random few-shot
 	- Random few-shot, chain-of-thought
@@ -1007,7 +1007,8 @@ design e2e: integrate user feedback
 	- Ensemble w/ choice shuffle
 - domain understanding
 
-issues:
+Issues with LLMs
+-----------------------------------------------------------------------------------------
 	- hallucination 
 		- detection and mitigation
 		- supervised: translation, summarization, image captioning
@@ -1044,7 +1045,8 @@ issues:
 		- dpo
 		- reflexion
 
-1. information retrieval (q/a, summarization, retrieval)
+Information Retrieval
+-----------------------------------------------------------------------------------------
 	- MLM based: BERT, T5
 	- RTD based: Electra
 	- Contrastive Learning based:
@@ -1104,7 +1106,8 @@ issues:
 				- selfcheckgpt
 	- chain-of-agents
 
-2. information extraction: **UniversalNER, **GLiNER
+Information Extraction
+-----------------------------------------------------------------------------------------
 	- NER: named entity recognition, entity-linking
 		- predefined entity-classes: location (LOC), organizations (ORG), person (PER) and Miscellaneous (MISC). 
 			- https://huggingface.co/dslim/bert-base-NER
@@ -1113,16 +1116,14 @@ issues:
 			- UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
 			- GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
 			- GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
-
 		- Open IE eval: Preserving Knowledge Invariance: Rethinking Robustness Evaluation of Open Information Extraction (https://github.com/qijimrc/ROBUST/tree/master)		
 		- LLMaAA: Making Large Language Models as Active Annotators https://github.com/ridiculouz/LLMaAA/tree/main
 		- A Deep Learning Based Knowledge Extraction Toolkit for Knowledge Graph Construction (https://github.com/zjunlp/DeepKE)
-
 	- RE: relationship extraction
 		- QA4RE: Aligning Instruction Tasks Unlocks Large Language Models as Zero-Shot Relation Extractors (ZS Pr) https://github.com/OSU-NLP-Group/QA4RE
 		- DocGNRE: Semi-automatic Data Enhancement for Document-Level Relation Extraction with Distant Supervision from Large Language Models (https://github.com/bigai-nlco/DocGNRE)
-
 	- EE: event extraction
+	- Papers to read: UniversalNER, GLiNER
 
 Resources
 =========================================================================================
