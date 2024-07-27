@@ -71,99 +71,53 @@ Preparation Strategy
 *****************************************************************************
 Sample ML Problems
 *****************************************************************************
-Design a Large Language Model (LLM) to enhance the search and recommendation features in Jira Cloud
+Design a Content Recommendation System for enhancing knowledge discovery in Confluence Cloud
 =============================================================================================================================
 Problem Statement:
 -----------------------------------------------------------------------------
-Jira Cloud, Atlassian's flagship product for agile project management, aims to improve user productivity and collaboration. One common pain point reported by users is the challenge of finding relevant information quickly and receiving personalized recommendations for tasks and workflows within Jira. Design a system using Large Language Models (LLMs) to address these issues and enhance the search and recommendation capabilities of Jira Cloud.
+Confluence Cloud serves as a central repository for documentation, wikis, and collaborative content creation within organizations. However, users often struggle to discover relevant content amidst the vast amount of information stored in Confluence pages. Design a content recommendation system that leverages machine learning algorithms to analyze user behavior, content attributes, and collaboration patterns, in order to provide personalized recommendations for knowledge discovery and exploration within Confluence Cloud.
 
 Key Insights and Signals:
 -----------------------------------------------------------------------------
-1. Understanding of Jira Cloud's Functionality:
+1. Understanding of Confluence Cloud's Content Ecosystem:
 
-	- Does the candidate have a clear understanding of the features and workflows within Jira Cloud?
-	- Can they identify specific use cases where improved search and recommendation capabilities would benefit users?
+	- Does the candidate have a comprehensive understanding of how content is structured and organized within Confluence Cloud?
+	- Can they identify common challenges faced by users in navigating, searching, and accessing relevant information within Confluence pages?
 
-2. Domain-specific Knowledge:
+2. User Behavior Analysis:
 
-	- Does the candidate demonstrate familiarity with agile project management concepts and terminology?
-	- Are they able to tailor the LLM-based solution to the unique requirements of Jira Cloud users?
+	- How does the candidate propose to capture and analyze user interactions, content views, and collaboration activities within Confluence Cloud?
+	- Are they familiar with techniques such as user profiling, session tracking, and content affinity modeling for extracting meaningful insights from user data?
 
-3. User Intent Recognition:
+3. Content Attributes and Metadata Extraction:
 
-	- How does the candidate propose to interpret user queries and understand their intent within the context of Jira tasks and projects?
-	- Can they suggest techniques for semantic understanding and contextual relevance in search results and recommendations?
+	- What features does the candidate suggest extracting from Confluence pages, including titles, tags, labels, and attachments, to characterize content attributes?
+	- Can they incorporate contextual information such as page categories, author expertise, and viewer preferences to improve recommendation relevance?
+
+4. Recommendation Algorithms:
+
+	- Does the candidate propose algorithms for generating personalized content recommendations based on user interests, content relevance, and collaborative filtering?
+	- Are they able to balance between popularity-based recommendations and more personalized approaches to cater to diverse user preferences?
+
+5. Integration with Confluence Cloud Interface:
 	
-4. Personalization and Contextualization:
-
-	- Does the candidate address the challenge of providing personalized recommendations based on user preferences, project history, and collaboration patterns?
-	- Are they able to incorporate contextual information such as project metadata, user roles, and task dependencies to improve recommendation accuracy?
-
-5. Integration with Jira Cloud Infrastructure:
-
-	- How does the candidate plan to integrate the LLM-based search and recommendation system seamlessly into the Jira Cloud platform?
-	- Can they propose APIs, webhooks, or other integration mechanisms to ensure interoperability with existing features and workflows?
-
-6. Performance and Scalability:
-
-	- What measures does the candidate suggest for optimizing the performance and scalability of the LLM-based system within the Jira Cloud environment?
-	- Are they able to balance computational resource constraints with real-time responsiveness and user experience?
-
-Rating Criteria:
------------------------------------------------------------------------------
-- Domain Expertise (5/5): Demonstrates in-depth knowledge of Jira Cloud's functionalities and user needs.
-- Customization and Personalization (4/5): Provides innovative solutions for tailoring search and recommendations to individual user contexts.
-- Technical Feasibility (4/5): Proposes realistic approaches for integrating LLM technology into Jira Cloud's infrastructure.
-- User-Centric Design (4/5): Considers usability, relevance, and user feedback mechanisms in the design process.
-- Business Impact (4/5): Identifies potential benefits of the proposed solution in terms of user satisfaction, productivity gains, and competitive advantage for Atlassian.
-
-Design a Real-time Streaming ML System for improving user engagement in Bitbucket Cloud
-=============================================================================================================================
-Problem Statement:
------------------------------------------------------------------------------
-Bitbucket Cloud, Atlassian's Git repository management solution, aims to facilitate seamless collaboration and code management for software development teams. One area of interest is enhancing user engagement by providing real-time insights and actionable recommendations to users as they interact with repositories and workflows. Design a streaming ML system to analyze user behavior, detect patterns, and deliver personalized recommendations for improving productivity and code quality within Bitbucket Cloud.
-
-Key Insights and Signals:
------------------------------------------------------------------------------
-1. Understanding of Bitbucket Cloud's Workflow:
-
-	- Does the candidate have a clear understanding of the features and workflows within Bitbucket Cloud, including code repository management, pull requests, and code review processes?
-	- Can they identify specific points in the user journey where real-time insights and recommendations would add value?
-
-2. Real-time Data Processing:
-
-	- How does the candidate propose to ingest and process streaming data from Bitbucket Cloud's event logs and user interactions?
-	- Are they familiar with technologies like Apache Kafka, Apache Flink, or AWS Kinesis for real-time data processing and analysis?
-
-3. Feature Engineering and Model Selection:
-
-	- What features does the candidate suggest extracting from user activity data to capture relevant signals for engagement and code quality?
-	- Can they recommend suitable machine learning models for tasks such as user segmentation, anomaly detection, and recommendation generation?
-
-4. Personalized Recommendations:
-
-	- Does the candidate address the challenge of delivering personalized recommendations tailored to individual users' preferences, coding styles, and project contexts?
-	- Are they able to propose techniques for collaborative filtering, content-based filtering, or hybrid recommendation systems?
-
-5. Integration with Bitbucket Cloud Infrastructure:
-
-	- How does the candidate plan to integrate the streaming ML system with Bitbucket Cloud's architecture and APIs?
-	- Can they ensure minimal latency and overhead in delivering real-time insights and recommendations directly within the user interface?
+	- How does the candidate plan to integrate the content recommendation system seamlessly into the Confluence Cloud user interface and search functionality?
+	- Can they propose widgets, plugins, or search extensions for delivering recommendations directly within Confluence pages and search results?
 
 6. Evaluation and Feedback Loop:
 
-	- What metrics does the candidate propose for evaluating the effectiveness of the streaming ML system in driving user engagement and code quality improvements?
-	- Are they able to incorporate mechanisms for collecting user feedback and iteratively refining the recommendation algorithms?
+	- What metrics does the candidate suggest for evaluating the effectiveness and utility of the content recommendation system in facilitating knowledge discovery?
+	- Are they able to incorporate mechanisms for collecting user feedback, measuring recommendation relevance, and iteratively refining the recommendation algorithms based on user engagement metrics?
 
 Rating Criteria:
 -----------------------------------------------------------------------------
-- Technical Proficiency (5/5): Demonstrates expertise in real-time data processing, machine learning algorithms, and system integration.
-- Innovative Solutions (4/5): Provides creative approaches for extracting insights and delivering personalized recommendations within Bitbucket Cloud.
-- Scalability and Performance (4/5): Addresses scalability challenges and ensures efficient utilization of resources in a real-time streaming environment.
-- User-Centric Design (4/5): Considers usability, relevance, and contextualization of recommendations to enhance user experience.
-- Impact Assessment (4/5): Identifies potential benefits of the streaming ML system in terms of increased user engagement, code quality, and developer productivity within Bitbucket Cloud.
+- Content Understanding (5/5): Demonstrates deep knowledge of Confluence Cloud's content ecosystem, user needs, and information retrieval challenges.
+- Personalization Techniques (4/5): Provides innovative approaches for generating personalized content recommendations tailored to individual users and usage contexts.
+- Integration and Usability (4/5): Addresses technical challenges in integrating the recommendation system with Confluence Cloud's architecture and UI for seamless interaction and exploration.
+- User-Centric Design (4/5): Considers usability, relevance, and contextualization of recommendations to enhance user experience and knowledge discovery in Confluence Cloud.
+- Impact Assessment (4/5): Identifies potential benefits of the content recommendation system in terms of improved content discoverability, collaboration, and productivity within Confluence Cloud.
 
-Design an Intelligent Q&A System for improving knowledge sharing in Confluence Cloud
+Intelligent Q&A System for improving knowledge sharing in Confluence Cloud
 =============================================================================================================================
 Problem Statement:
 -----------------------------------------------------------------------------
@@ -209,51 +163,51 @@ Rating Criteria:
 - Integration and Interoperability (4/5): Addresses technical challenges in integrating the Q&A system with Confluence Cloud's architecture and APIs.
 - Impact Assessment (4/5): Identifies potential benefits of the intelligent Q&A system in terms of improved knowledge discovery, collaboration, and productivity within Confluence Cloud.
 
-Design a Recommendation Engine for improving task management in Trello
+Enhance the search and recommendation features in Jira Cloud
 =============================================================================================================================
 Problem Statement:
 -----------------------------------------------------------------------------
-Trello, Atlassian's visual collaboration tool, is widely used for managing tasks, projects, and workflows. However, users often struggle to prioritize tasks and allocate resources effectively within their Trello boards. Design a recommendation engine that leverages machine learning algorithms to analyze user behavior, task attributes, and board dynamics, in order to provide intelligent recommendations for task prioritization, assignment, and scheduling within Trello.
+Jira Cloud, Atlassian's flagship product for agile project management, aims to improve user productivity and collaboration. One common pain point reported by users is the challenge of finding relevant information quickly and receiving personalized recommendations for tasks and workflows within Jira. Design a system using Large Language Models (LLMs) to address these issues and enhance the search and recommendation capabilities of Jira Cloud.
 
 Key Insights and Signals:
 -----------------------------------------------------------------------------
-1. Understanding of Trello's Usage Patterns:
+1. Understanding of Jira Cloud's Functionality:
 
-	- Does the candidate have a comprehensive understanding of how Trello boards are structured and used for task management?
-	- Can they identify common challenges faced by users in organizing, prioritizing, and tracking tasks within Trello?
+	- Does the candidate have a clear understanding of the features and workflows within Jira Cloud?
+	- Can they identify specific use cases where improved search and recommendation capabilities would benefit users?
 
-2. User Behavior Analysis:
+2. Domain-specific Knowledge:
 
-	- How does the candidate propose to capture and analyze user interactions, task updates, and board activities within Trello?
-	- Are they familiar with techniques such as user clustering, behavioral segmentation, and sequence modeling for extracting meaningful insights from user data?
+	- Does the candidate demonstrate familiarity with agile project management concepts and terminology?
+	- Are they able to tailor the LLM-based solution to the unique requirements of Jira Cloud users?
 
-3. Task Attributes and Contextual Information:
+3. User Intent Recognition:
 
-	- What features does the candidate suggest extracting from task cards, including due dates, labels, descriptions, and attachments, to characterize task attributes?
-	- Can they incorporate contextual information such as board categories, team roles, and project deadlines to improve recommendation relevance?
-
-4. Recommendation Algorithms:
-
-	- Does the candidate propose algorithms for generating personalized recommendations for task prioritization, assignment, and scheduling based on user preferences and board context?
-	- Are they able to balance between simple heuristic-based approaches and more sophisticated machine learning models to ensure practical feasibility and effectiveness?
-
-5. Integration with Trello Platform:
-
-	- How does the candidate plan to integrate the recommendation engine seamlessly into the Trello user interface and workflow?
-	- Can they propose API endpoints, webhooks, or browser extensions for delivering recommendations directly within Trello boards?
-
-6. Evaluation and Feedback Loop:
+	- How does the candidate propose to interpret user queries and understand their intent within the context of Jira tasks and projects?
+	- Can they suggest techniques for semantic understanding and contextual relevance in search results and recommendations?
 	
-	- What metrics does the candidate suggest for evaluating the quality and impact of the recommendation engine on user productivity and task completion rates?
-	- Are they able to incorporate mechanisms for collecting user feedback and iteratively refining the recommendation algorithms based on user preferences and performance metrics?
+4. Personalization and Contextualization:
+
+	- Does the candidate address the challenge of providing personalized recommendations based on user preferences, project history, and collaboration patterns?
+	- Are they able to incorporate contextual information such as project metadata, user roles, and task dependencies to improve recommendation accuracy?
+
+5. Integration with Jira Cloud Infrastructure:
+
+	- How does the candidate plan to integrate the LLM-based search and recommendation system seamlessly into the Jira Cloud platform?
+	- Can they propose APIs, webhooks, or other integration mechanisms to ensure interoperability with existing features and workflows?
+
+6. Performance and Scalability:
+
+	- What measures does the candidate suggest for optimizing the performance and scalability of the LLM-based system within the Jira Cloud environment?
+	- Are they able to balance computational resource constraints with real-time responsiveness and user experience?
 
 Rating Criteria:
 -----------------------------------------------------------------------------
-- Trello Expertise (5/5): Demonstrates deep knowledge of Trello's features, usage patterns, and user needs in task management.
-- Recommendation Algorithm Design (4/5): Provides innovative approaches for generating personalized recommendations tailored to individual users and board contexts.
-- Practical Feasibility (4/5): Addresses technical challenges in implementing the recommendation engine within the Trello platform while ensuring scalability and performance.
-- User-Centric Design (4/5): Considers usability, relevance, and integration with existing Trello features to enhance user experience and task productivity.
-- Impact Assessment (4/5): Identifies potential benefits of the recommendation engine in terms of improved task prioritization, resource allocation, and team collaboration within Trello.
+- Domain Expertise (5/5): Demonstrates in-depth knowledge of Jira Cloud's functionalities and user needs.
+- Customization and Personalization (4/5): Provides innovative solutions for tailoring search and recommendations to individual user contexts.
+- Technical Feasibility (4/5): Proposes realistic approaches for integrating LLM technology into Jira Cloud's infrastructure.
+- User-Centric Design (4/5): Considers usability, relevance, and user feedback mechanisms in the design process.
+- Business Impact (4/5): Identifies potential benefits of the proposed solution in terms of user satisfaction, productivity gains, and competitive advantage for Atlassian.
 
 Design an Intelligent Chatbot for improving customer support in Jira Service Management
 =============================================================================================================================
@@ -301,94 +255,94 @@ Rating Criteria:
 - User-Centric Design (4/5): Considers usability, context sensitivity, and personalized assistance to enhance user experience and satisfaction with customer support interactions.
 - Impact Assessment (4/5): Identifies potential benefits of the chatbot in terms of reduced ticket resolution times, improved first-contact resolution rates, and enhanced customer satisfaction scores within Jira Service Management.
 
-Design a Content Recommendation System for enhancing knowledge discovery in Confluence Cloud
+Design a Recommendation Engine for improving task management in Trello
 =============================================================================================================================
 Problem Statement:
 -----------------------------------------------------------------------------
-Confluence Cloud serves as a central repository for documentation, wikis, and collaborative content creation within organizations. However, users often struggle to discover relevant content amidst the vast amount of information stored in Confluence pages. Design a content recommendation system that leverages machine learning algorithms to analyze user behavior, content attributes, and collaboration patterns, in order to provide personalized recommendations for knowledge discovery and exploration within Confluence Cloud.
+Trello, Atlassian's visual collaboration tool, is widely used for managing tasks, projects, and workflows. However, users often struggle to prioritize tasks and allocate resources effectively within their Trello boards. Design a recommendation engine that leverages machine learning algorithms to analyze user behavior, task attributes, and board dynamics, in order to provide intelligent recommendations for task prioritization, assignment, and scheduling within Trello.
 
 Key Insights and Signals:
 -----------------------------------------------------------------------------
-1. Understanding of Confluence Cloud's Content Ecosystem:
+1. Understanding of Trello's Usage Patterns:
 
-	- Does the candidate have a comprehensive understanding of how content is structured and organized within Confluence Cloud?
-	- Can they identify common challenges faced by users in navigating, searching, and accessing relevant information within Confluence pages?
+	- Does the candidate have a comprehensive understanding of how Trello boards are structured and used for task management?
+	- Can they identify common challenges faced by users in organizing, prioritizing, and tracking tasks within Trello?
 
 2. User Behavior Analysis:
 
-	- How does the candidate propose to capture and analyze user interactions, content views, and collaboration activities within Confluence Cloud?
-	- Are they familiar with techniques such as user profiling, session tracking, and content affinity modeling for extracting meaningful insights from user data?
+	- How does the candidate propose to capture and analyze user interactions, task updates, and board activities within Trello?
+	- Are they familiar with techniques such as user clustering, behavioral segmentation, and sequence modeling for extracting meaningful insights from user data?
 
-3. Content Attributes and Metadata Extraction:
+3. Task Attributes and Contextual Information:
 
-	- What features does the candidate suggest extracting from Confluence pages, including titles, tags, labels, and attachments, to characterize content attributes?
-	- Can they incorporate contextual information such as page categories, author expertise, and viewer preferences to improve recommendation relevance?
+	- What features does the candidate suggest extracting from task cards, including due dates, labels, descriptions, and attachments, to characterize task attributes?
+	- Can they incorporate contextual information such as board categories, team roles, and project deadlines to improve recommendation relevance?
 
 4. Recommendation Algorithms:
 
-	- Does the candidate propose algorithms for generating personalized content recommendations based on user interests, content relevance, and collaborative filtering?
-	- Are they able to balance between popularity-based recommendations and more personalized approaches to cater to diverse user preferences?
+	- Does the candidate propose algorithms for generating personalized recommendations for task prioritization, assignment, and scheduling based on user preferences and board context?
+	- Are they able to balance between simple heuristic-based approaches and more sophisticated machine learning models to ensure practical feasibility and effectiveness?
 
-5. Integration with Confluence Cloud Interface:
-	
-	- How does the candidate plan to integrate the content recommendation system seamlessly into the Confluence Cloud user interface and search functionality?
-	- Can they propose widgets, plugins, or search extensions for delivering recommendations directly within Confluence pages and search results?
+5. Integration with Trello Platform:
+
+	- How does the candidate plan to integrate the recommendation engine seamlessly into the Trello user interface and workflow?
+	- Can they propose API endpoints, webhooks, or browser extensions for delivering recommendations directly within Trello boards?
 
 6. Evaluation and Feedback Loop:
-
-	- What metrics does the candidate suggest for evaluating the effectiveness and utility of the content recommendation system in facilitating knowledge discovery?
-	- Are they able to incorporate mechanisms for collecting user feedback, measuring recommendation relevance, and iteratively refining the recommendation algorithms based on user engagement metrics?
+	
+	- What metrics does the candidate suggest for evaluating the quality and impact of the recommendation engine on user productivity and task completion rates?
+	- Are they able to incorporate mechanisms for collecting user feedback and iteratively refining the recommendation algorithms based on user preferences and performance metrics?
 
 Rating Criteria:
 -----------------------------------------------------------------------------
-- Content Understanding (5/5): Demonstrates deep knowledge of Confluence Cloud's content ecosystem, user needs, and information retrieval challenges.
-- Personalization Techniques (4/5): Provides innovative approaches for generating personalized content recommendations tailored to individual users and usage contexts.
-- Integration and Usability (4/5): Addresses technical challenges in integrating the recommendation system with Confluence Cloud's architecture and UI for seamless interaction and exploration.
-- User-Centric Design (4/5): Considers usability, relevance, and contextualization of recommendations to enhance user experience and knowledge discovery in Confluence Cloud.
-- Impact Assessment (4/5): Identifies potential benefits of the content recommendation system in terms of improved content discoverability, collaboration, and productivity within Confluence Cloud.
+- Trello Expertise (5/5): Demonstrates deep knowledge of Trello's features, usage patterns, and user needs in task management.
+- Recommendation Algorithm Design (4/5): Provides innovative approaches for generating personalized recommendations tailored to individual users and board contexts.
+- Practical Feasibility (4/5): Addresses technical challenges in implementing the recommendation engine within the Trello platform while ensuring scalability and performance.
+- User-Centric Design (4/5): Considers usability, relevance, and integration with existing Trello features to enhance user experience and task productivity.
+- Impact Assessment (4/5): Identifies potential benefits of the recommendation engine in terms of improved task prioritization, resource allocation, and team collaboration within Trello.
 
 *****************************************************************************
 Products and ML Problems
 *****************************************************************************
 1. Confluence:
 =============================================================================================================================
-Design a Contextual Search Enhancement System for Confluence Cloud:
+Contextual Search Enhancement System for Confluence Cloud:
 -----------------------------------------------------------------------------
 - How would you enhance the existing search functionality in Confluence using contextual information to improve search results?
 - What techniques or algorithms would you employ to understand the context of user queries and documents?
 
-Design an Intelligent Q&A System for improving knowledge sharing in Confluence Cloud:
+Intelligent Q&A System for improving knowledge sharing in Confluence Cloud:
 -----------------------------------------------------------------------------
 - Discuss your approach to designing a system that intelligently retrieves answers to user questions from the vast repository of knowledge stored in Confluence.
 - How would you incorporate natural language understanding and reasoning capabilities to ensure accurate and relevant responses to diverse user queries?
 - What strategies would you employ to handle ambiguity, synonymy, and variability in user questions and document content effectively?
 
-Design a Collaborative Filtering Recommendation System for Confluence Cloud:
+Collaborative Filtering Recommendation System for Confluence Cloud:
 -----------------------------------------------------------------------------
 - Explain how you would implement a collaborative filtering recommendation system to suggest relevant content to users in Confluence.
 - How would you address challenges such as sparsity of user interactions and cold start problems?
 
-Design an Adaptive Document Summarization System for Confluence Cloud:
+Adaptive Document Summarization System for Confluence Cloud:
 -----------------------------------------------------------------------------
 - How would you approach building a system that generates concise summaries of lengthy documents stored in Confluence?
 - What strategies would you employ to ensure the summaries capture the essential information while maintaining coherence and relevance?
 
-Design a Dynamic Content Tagging System for Confluence Cloud:
+Dynamic Content Tagging System for Confluence Cloud:
 -----------------------------------------------------------------------------
 - Discuss your approach to developing a system that automatically tags content in Confluence based on its context and relevance.
 - How would you handle the challenge of dynamically updating tags as the content evolves over time?
 
-Design a Multi-modal Content Understanding System for Confluence Cloud:
+Multi-modal Content Understanding System for Confluence Cloud:
 -----------------------------------------------------------------------------
 - How would you integrate text, images, and other modalities of content to enhance understanding and retrieval in Confluence?
 - What techniques or architectures would you consider for handling multi-modal data effectively?
 
-Design a Continuous Learning System for Confluence Cloud:
+Continuous Learning System for Confluence Cloud:
 -----------------------------------------------------------------------------
 - Describe how you would build a system that continuously learns from user interactions and feedback to improve its recommendations and search results in Confluence.
 - What mechanisms would you employ to ensure the system remains up-to-date and adaptable to changing user preferences and content dynamics?
 
-Design an Explainable AI Framework for Content Recommendations in Confluence Cloud:
+Explainable AI Framework for Content Recommendations in Confluence Cloud:
 -----------------------------------------------------------------------------
 - Discuss the importance of explainability in AI-driven content recommendation systems for enterprise applications like Confluence.
 - How would you design a framework that provides transparent explanations for the recommendations made to users?
