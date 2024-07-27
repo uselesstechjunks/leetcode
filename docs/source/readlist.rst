@@ -167,6 +167,20 @@ Must Read Papers
 		LLM, D2PO: Discriminator-Guided DPO with Response Evaluation Models
 		LLM, RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
 		LLM, Large Language Models Are Latent Variable Models
+		Quant, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
+		Quant, LoRA Low-Rank Adaptation of Large Language Models
+		Quant, QLORA: Efficient Finetuning of Quantized LLMs
+		Quant, SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
+		DiT, Scalable Diffusion Models with Transformers
+		DiT, Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
+		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
+		ViT, Long Context Transfer from Language to Vision
+		Eval, HELM: Holistic Evaluation of Language Models
+		Eval, MMLU: Measuring Massive Multitask Language Understanding
+		Eval, MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI
+		Hallucination, SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
+		Hallucination, G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment
+		Hallucination, To Believe or Not to Believe Your LLM
 		Representation, Scaling and evaluating sparse autoencoders
 		Representation, Probabilistic Topic Modelling with Transformer Representations
 		Representation, Matryoshka Representation Learning
@@ -185,25 +199,19 @@ Must Read Papers
 		Long Context, Data Engineering for Scaling Language Models to 128K Context
 		Long Context, Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention				
 		Long Context, LongAlign: A Recipe for Long Context Alignment of Large Language Models
+		Long Context, Chain of Agents: Large Language Models Collaborating on Long-Context Tasks
 		Memory, MemoryBank: Enhancing Large Language Models with Long-Term Memory
 		Memory, Augmenting Language Models with Long-Term Memory
 		Memory, Recurrent Memory Transformer
 		Memory, Scaling Transformer to 1M tokens and beyond with RMT
 		Memory, Beyond Attention: Breaking the Limits of Transformer Context Length with Recurrent Memory
-		Quant, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
-		Quant, LoRA Low-Rank Adaptation of Large Language Models
-		Quant, QLORA: Efficient Finetuning of Quantized LLMs
-		Quant, SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
-		DiT, Scalable Diffusion Models with Transformers
-		DiT, Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
-		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
-		ViT, Long Context Transfer from Language to Vision
-		Eval, HELM: Holistic Evaluation of Language Models
-		Eval, MMLU: Measuring Massive Multitask Language Understanding
-		Eval, MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI
-		Hallucination, SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
-		Hallucination, G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment
-		Hallucination, To Believe or Not to Believe Your LLM
+		KG, Language Models as Knowledge Bases?
+		KG, Language Models are Open Knowledge Graphs
+		KG, Unifying Large Language Models and Knowledge Graphs: A Roadmap
+		KG, QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering
+		KG, SimKGC: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models
+		KG, Give Us the Facts: Enhancing Large Language Models with Knowledge Graphs for Fact-aware Language Modeling
+		KG, Knowledge Graph Large Language Model (KG-LLM) for Link Prediction
 
 ******************************************************************************************
 Linear Algebra
