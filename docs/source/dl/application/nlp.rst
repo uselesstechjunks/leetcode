@@ -445,6 +445,40 @@ Tech Stack
 	* [Huggingface] `RAG Evaluation <https://huggingface.co/learn/cookbook/en/rag_evaluation>`_
 	* [Huggingface] `Building A RAG Ebook “Librarian” Using LlamaIndex <https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian>`_
 
+LLM and KG
+=========================================================================================
+.. seealso::
+	* Unifying Large Language Models and Knowledge Graphs: A Roadmap
+	* QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering
+	* SimKGC: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models
+
+KG-enhanced LLMs
+-----------------------------------------------------------------------------------------
+- pre-training:
+
+	- ERNIE: Enhanced language representation with informative entities
+	- Knowledge-aware language model pretraining
+- inference time:
+
+	- Retrieval-augmented generation for knowledge intensive nlp tasks
+- KG for facts LLM for reasoning:
+
+	- Language models as knowledge bases?
+	- KagNet: Knowledgeaware graph networks for commonsense reasoning
+
+LLM enhanced KGs: KG completion and KG reasoning
+-----------------------------------------------------------------------------------------
+- LLMs for Knowledge Graph Construction and Reasoning
+- Pretrain-KGE: Learning Knowledge Representation from Pretrained Language Models
+- From Discrimination to Generation: Knowledge Graph Completion with Generative Transformer
+
+Synergized KG LLM
+-----------------------------------------------------------------------------------------
+- KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation
+- Search: LaMDA: Language Models for Dialog Applications
+- RecSys: Is chatgpt a good recommender? a preliminary study
+- AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
+
 Summary
 -----------------------------------------------------------------------------------------
 .. note::
@@ -514,6 +548,53 @@ Summary
 			- Pre-training: same objective as the Seq2Seq (prefixLM or MLM) or decoder-only objective works well.
 			- Training:
 			- Issues:
+
+* RAG for Gloval Knowledge
+
+	- baseline rag struggles
+
+		- answering a question requires traversing disparate pieces of information through their shared attributes
+		- holistically understand summarized semantic concepts over large data collections or even singular large documents.
+
+	- graph rag: https://microsoft.github.io/graphrag/
+
+		.. note::
+
+			Steps:
+	
+			- Source documents -> Text Chunks: Note: Tradeoff P/R in chunk-size with number of LLM calls vs quality of extraction (due to lost in the middle)
+			- Text Chunks -> Element Instances: 
+			
+				- Multipart LLM prompt for (a) Entity and then (b) Relationship. Extract descriptions as well.
+				- Tailor prompt for each domain with FS example. 
+				- Additional extraction covariates (e.g. events). 
+				- Multiple rounds of gleaning - detect additional entities with high logit bias for yes/no. Prepend "MANY entities were missed".
+			- Element Instances -> Element Summaries
+			- Element Summaries -> Graph Communities
+			- Graph Communities -> Community Summaries
+	
+				- Leaf level communities
+				- Higher level communities
+			- Community Summaries -> Community Answers -> Global Answer
+	
+				- Prepare community summaries: Shuffle and split into chunks to avoid concentration of information and therefore lost in the middle.
+				- Map-Reduce community summaries
+	
+			- Summarisation tasks
+	
+				- Abstractive vs extractive
+				- Generic vs query-focused
+				- Single document vs multi-document
+
+		- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
+		- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
+		- At query time, both of these structures are used to provide materials for the LLM context window when answering a question.	
+		- eval:
+
+			- comprehensiveness (completeness within the framing of the implied context of the question)
+			- human enfranchisement (provision of supporting source material or other contextual information)
+			- diversity (provision of differing viewpoints or angles on the question posed)
+			- selfcheckgpt
 
 *****************************************************************************************
 Task Specific Setup
@@ -1182,49 +1263,7 @@ Information Retrieval
 					- 1e-5 lr constant
 					- lora/qlora
 			- incorporating some form of recurrance relation - transformer-xl, longformer, rmt
-
-	- rag based solution
-		- baseline rag struggles
-			- answering a question requires traversing disparate pieces of information through their shared attributes
-			- holistically understand summarized semantic concepts over large data collections or even singular large documents.
-		- graph rag: https://microsoft.github.io/graphrag/
-
-			- Summarisation tasks
-
-				- Abstractive vs extractive
-				- Generic vs query-focused
-				- Single document vs multi-document
-
-			- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
-			- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
-			- At query time, both of these structures are used to provide materials for the LLM context window when answering a question.
-
-			.. note::
-
-				- Steps:
-				- Source documents -> Text Chunks: Note: Tradeoff P/R in chunk-size with number of LLM calls vs quality of extraction (due to lost in the middle)
-				- Text Chunks -> Element Instances: 
-				
-					- Multipart LLM prompt for (a) Entity and then (b) Relationship. Extract descriptions as well.
-					- Tailor prompt for each domain with FS example. 
-					- Additional extraction covariates (e.g. events). 
-					- Multiple rounds of gleaning - detect additional entities with high logit bias for yes/no. Prepend "MANY entities were missed".
-				- Element Instances -> Element Summaries
-				- Element Summaries -> Graph Communities
-				- Graph Communities -> Community Summaries
-
-					- Leaf level communities
-					- Higher level communities
-				- Community Summaries -> Community Answers -> Global Answer
-
-					- Prepare community summaries: Shuffle and split into chunks to avoid concentration of information and therefore lost in the middle.
-					- Map-Reduce community summaries
-
-			- eval:
-				- comprehensiveness (completeness within the framing of the implied context of the question)
-				- human enfranchisement (provision of supporting source material or other contextual information)
-				- diversity (provision of differing viewpoints or angles on the question posed)
-				- selfcheckgpt
+	
 	- chain-of-agents
 
 Information Extraction
