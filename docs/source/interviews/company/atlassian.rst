@@ -71,15 +71,15 @@ Metrics and Evaluation
 
 MUST KNOW Research Papers in the Past 3 Years
 =============================================================================
-1. "Attention is All You Need" by Vaswani et al. (2017): Foundational paper on the Transformer architecture.
-2. "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" by Devlin et al. (2018): Introduction of BERT.
-4. "T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" by Raffel et al. (2019): Insights into the T5 model.
-3. "GPT-3: Language Models are Few-Shot Learners" by Brown et al. (2020): Overview of GPT-3 capabilities.
-4. "InstructGPT: Training language models to follow instructions with human feedback"
-6. "LaMDA: Language Models for Dialog Applications"
-7. "PaLM: Scaling Language Modeling with Pathways" by Chowdhery et al. (2022): New scaling strategies for large language models.
-8. "FLAN: Few-Shot Learning with Task Descriptions" by Wei et al. (2021): Few-shot learning with instructions.
-9. "Low-Rank Adaptation of Large Language Models" (LoRA) by Hu et al. (2021): Discusses low-rank adaptation techniques.
+1. Attention is All You Need
+2. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+3. T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+4. GPT-3: Language Models are Few-Shot Learners
+5. InstructGPT: Training language models to follow instructions with human feedback
+6. LaMDA: Language Models for Dialog Applications
+7. PaLM: Scaling Language Modeling with Pathways
+8. FLAN: Few-Shot Learning with Task Descriptions
+9. Low-Rank Adaptation of Large Language Models
 
 *****************************************************************************
 Sample ML Problems
