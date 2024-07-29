@@ -135,7 +135,8 @@ Must Read Papers
 		CLM, GPT2: Language Models are Unsupervised Multitask Learners
 		CLM, GPT3: Language Models are Few-Shot Learners		
 		CLM, LLaMA: Open and Efficient Foundation Language Models
-		CLM, Llama 2: Open Foundation and Fine-Tuned Chat Models
+		CLM, LLaMA 2: Open Foundation and Fine-Tuned Chat Models
+		CLM, LLaMA 3: The Llama 3 Herd of Models
 		PLM, XLNet: Generalized Autoregressive Pretraining for Language Understanding
 		GLM, GLM: General Language Model Pretraining with Autoregressive Blank Infilling
 		MoE,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
