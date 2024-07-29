@@ -4,69 +4,82 @@ Atlassian
 *****************************************************************************
 Preparation Guide
 *****************************************************************************
+Preparation Strategy
+============================================================================
+.. warning::
+
+	* Detailed understanding of fine-tuning processes, especially LoRA and other parameter-efficient methods.
+	* Practical considerations for deploying LLMs in enterprise environments (like Atlassian's products).
+	* Techniques for improving efficiency and reducing computational costs in LLM applications.
+	* Methods for ensuring data privacy and security when using LLMs with potentially sensitive enterprise data.
+	* Strategies for continual learning and model updates in production environments.
+
+.. seealso::
+	1. Understand the Problem: Start by asking clarifying questions to fully understand the problem during the interview.
+	2. Communicate Clearly: Explain your thought process and the rationale behind each decision you make.
+	3. Draw from Experience: Relate your design to past projects and experiences.
+	4. Focus on Training Process: Spend time detailing the training process, including data preparation, model training, and fine-tuning techniques.
+	5. Practice Design Problems: Practice designing systems on a whiteboard or paper to simulate the interview environment.
+
 LLM Application Area
 =============================================================================
-1. Document Understanding: Techniques for extracting and summarizing information from large documents.
+1. Document Understanding: Document classification and information retrieval, Text summarization
 2. Question Answering Systems: Advanced methods for generating accurate and contextually relevant answers.
-3. Text Generation: Creating human-like text for various purposes, including content generation and chatbots.
-4. Code Generation: Assisting in code writing and debugging by understanding natural language instructions.
-5. Sentiment Analysis and Customer Support: Analyzing customer feedback and automating support responses.
+3. Text Generation: Chatbots and conversational AI
+4. Code Generation: Code generation and completion
 
 Atlassian Products Using This Tech
 =============================================================================
-1. Confluence: Enhancing collaborative documentation with better search, summarization, and Q/A capabilities.
-2. Jira: Improving issue tracking and project management with automated insights and intelligent recommendations.
-3. Trello: Enabling smarter task management and prioritization through NLP-driven features.
-4. Bitbucket: Assisting in code review and repository management with advanced code understanding.
+1. Confluence: Enhanced search and Q&A capabilities
+2. Jira: Automated ticket classification and routing
+3. Trello: Natural language task creation and management
+4. Bitbucket: Code review assistance and documentation generation
 
 Things You Must Know About This Tech
 =============================================================================
-1. Transformer Architecture: Understanding the basics and the inner workings of models like BERT, GPT, T5.
-2. Fine-Tuning Techniques: Supervised fine-tuning, LoRA (Low-Rank Adaptation), and transfer learning methods.
-3. Data Preprocessing: Tokenization, handling large datasets, and preprocessing text data for LLMs.
-4. Model Deployment: Efficiently deploying large models, handling latency issues, and scaling.
+1. Transformer architecture
+2. Pre-training and fine-tuning techniques
+3. Prompt engineering
+4. Few-shot and zero-shot learning
+5. Retrieval-Augmented Generation (RAG)
+6. Parameter-efficient fine-tuning methods (e.g., LoRA, Adapters)
 
 ML Theory You Must Know
 =============================================================================
-1. Attention Mechanism: Detailed understanding of self-attention and multi-head attention.
-2. Sequence-to-Sequence Models: Concepts of encoder-decoder architecture.
-3. Loss Functions: Cross-entropy loss, token-level vs. sequence-level loss.
-4. Optimization Techniques: Adam optimizer, learning rate schedules, gradient clipping.
+1. Attention mechanisms
+2. Transfer learning
+3. Tokenization strategies
+4. Embedding techniques
+5. Overfitting and regularization in large language models
+6. Optimization algorithms for large-scale training
 
 Trade-offs in Different Modeling Choices
 =============================================================================
-1. Model Size vs. Performance: Balancing between larger models (better performance) and smaller models (faster inference).
-2. Pre-trained vs. Custom Models: Using pre-trained models vs. training from scratch.
-3. Fine-Tuning vs. Feature Extraction: When to fine-tune entire models vs. extracting features from pre-trained models.
-4. Inference Speed vs. Accuracy: Techniques to optimize inference speed without significant loss of accuracy.
+1. Model size vs. inference speed
+2. Fine-tuning vs. prompt engineering
+3. Generative vs. discriminative approaches
+4. Open-source vs. proprietary models
+5. On-premise vs. cloud deployment
 
 Metrics and Evaluation
 =============================================================================
-1. Accuracy: Overall correctness of the predictions.
-2. Precision, Recall, F1-Score: For tasks like classification and information retrieval.
-3. BLEU, ROUGE: For evaluating text generation tasks.
-4. Perplexity: Common metric for language models to measure uncertainty.
-5. Human Evaluation: User studies to evaluate the effectiveness of the generated text or answers.
+1. Perplexity: Common metric for language models to measure uncertainty.
+2. BLEU, ROUGE, METEOR: for text generation
+3. Precision, Recall, F1-Score: For tasks like classification and information retrieval.
+4. Human evaluation metrics (e.g., coherence, relevance)
+5. Bias and fairness metrics
 
 MUST KNOW Research Papers in the Past 3 Years
 =============================================================================
 1. "Attention is All You Need" by Vaswani et al. (2017): Foundational paper on the Transformer architecture.
 2. "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" by Devlin et al. (2018): Introduction of BERT.
-3. "GPT-3: Language Models are Few-Shot Learners" by Brown et al. (2020): Overview of GPT-3 capabilities.
 4. "T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" by Raffel et al. (2019): Insights into the T5 model.
-5. "Low-Rank Adaptation of Large Language Models" (LoRA) by Hu et al. (2021): Discusses low-rank adaptation techniques.
-6. "The EleutherAI GPT-3 Model Family: Performance and Analysis" (2021): Analysis of GPT-3 and related models.
-7. "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism" (2021): Techniques for scaling LLMs.
-8. "PaLM: Scaling Language Modeling with Pathways" by Chowdhery et al. (2022): New scaling strategies for large language models.
-9. "FLAN: Few-Shot Learning with Task Descriptions" by Wei et al. (2021): Few-shot learning with instructions.
-
-Preparation Strategy
-=============================================================================
-1. Understand the Problem: Start by asking clarifying questions to fully understand the problem during the interview.
-2. Communicate Clearly: Explain your thought process and the rationale behind each decision you make.
-3. Draw from Experience: Relate your design to past projects and experiences.
-4. Focus on Training Process: Spend time detailing the training process, including data preparation, model training, and fine-tuning techniques.
-5. Practice Design Problems: Practice designing systems on a whiteboard or paper to simulate the interview environment.
+3. "GPT-3: Language Models are Few-Shot Learners" by Brown et al. (2020): Overview of GPT-3 capabilities.
+4. "InstructGPT: Training language models to follow instructions with human feedback"
+6. "LaMDA: Language Models for Dialog Applications"
+7. "PaLM: Scaling Language Modeling with Pathways" by Chowdhery et al. (2022): New scaling strategies for large language models.
+8. "FLAN: Few-Shot Learning with Task Descriptions" by Wei et al. (2021): Few-shot learning with instructions.
+9. "Low-Rank Adaptation of Large Language Models" (LoRA) by Hu et al. (2021): Discusses low-rank adaptation techniques.
 
 *****************************************************************************
 Sample ML Problems
