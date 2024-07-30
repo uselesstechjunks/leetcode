@@ -7,20 +7,23 @@ Preparation Guide
 Preparation Strategy
 ============================================================================
 1. Focus on ML Infrastructure:  Discuss various aspects of building and maintaining ML systems at scale. This includes topics like:
-
-   - Distributed training architectures
-   - Model serving and deployment strategies
-   - Data pipeline design and management
-   - MLOps practices
+	
+	.. note::
+	
+		- Distributed training architectures
+		- Model serving and deployment strategies
+		- Data pipeline design and management
+		- MLOps practices
 
 2. Deep Learning Optimization: Be prepared to discuss:
-
-   - Different attention mechanisms (self-attention, cross-attention, multi-head attention)
-   - Hardware bottlenecks in training and inference (memory bandwidth, compute limitations)
-   - Optimization strategies for large language models
-   - Best practices for Supervised Fine-Tuning (SFT), Proximal Policy Optimization (PPO), and Direct Preference Optimization (DPO)
-   - Advanced techniques like Flash Attention and Paged Attention
-   - Quantization techniques and their trade-offs
+	
+	.. note::
+		- Different attention mechanisms (self-attention, cross-attention, multi-head attention)
+		- Hardware bottlenecks in training and inference (memory bandwidth, compute limitations)
+		- Optimization strategies for large language models
+		- Best practices for Supervised Fine-Tuning (SFT), Proximal Policy Optimization (PPO), and Direct Preference Optimization (DPO)
+		- Advanced techniques like Flash Attention and Paged Attention
+		- Quantization techniques and their trade-offs
 
 3. AI Acceleration: Be prepared to discuss strategies for rapid AI adoption and integration within an enterprise setting.
 4. Scalability and Performance: Be ready to discuss how to design systems that can handle large amounts of data and users efficiently.
