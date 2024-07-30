@@ -6,6 +6,42 @@ Preparation Guide
 *****************************************************************************
 Preparation Strategy
 ============================================================================
+1. Focus on ML Infrastructure:  Discuss various aspects of building and maintaining ML systems at scale. This includes topics like:
+
+   - Distributed training architectures
+   - Model serving and deployment strategies
+   - Data pipeline design and management
+   - MLOps practices
+
+2. Deep Learning Optimization: Be prepared to discuss:
+
+   - Different attention mechanisms (self-attention, cross-attention, multi-head attention)
+   - Hardware bottlenecks in training and inference (memory bandwidth, compute limitations)
+   - Optimization strategies for large language models
+   - Best practices for Supervised Fine-Tuning (SFT), Proximal Policy Optimization (PPO), and Direct Preference Optimization (DPO)
+   - Advanced techniques like Flash Attention and Paged Attention
+   - Quantization techniques and their trade-offs
+
+3. AI Acceleration: Be prepared to discuss strategies for rapid AI adoption and integration within an enterprise setting.
+4. Scalability and Performance: Be ready to discuss how to design systems that can handle large amounts of data and users efficiently.
+
+Depth of technical discussion:
+============================================================================
+While the ML design round will likely focus on solving a particular business problem, given the job description, you should be prepared to go into significant technical depth if asked. However, remember to balance this with high-level system design and business considerations.
+
+Here's how I suggest you approach the interview:
+
+	1. Start with the high-level business problem and system design.
+	2. As you explain your solution, be prepared to dive deep into technical details, especially around ML infrastructure and optimization techniques.
+	3. Don't proactively go into extreme technical depth unless asked, but have that knowledge ready to demonstrate when prompted.
+	4. Always tie your technical decisions back to business impact and user experience.
+
+The interviewer will be evaluating not just your technical knowledge, but also your ability to communicate complex ideas clearly and your understanding of how technical decisions impact business outcomes.
+
+Be prepared to discuss the implementation details of LLMs, including attention mechanisms, optimization strategies, and advanced techniques like flash attention and quantization. However, don't force these topics into the conversation if they're not directly relevant to the problem at hand. Instead, use them to demonstrate depth of knowledge when appropriate or when specifically asked about them.
+
+Key Areas
+============================================================================
 .. warning::
 
 	* Detailed understanding of fine-tuning processes, especially LoRA and other parameter-efficient methods.
