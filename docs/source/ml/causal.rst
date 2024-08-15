@@ -154,7 +154,7 @@ where:
 
 Estimating ITE is more challenging because it involves counterfactual reasoning: for each individual, we need to know both what happened and what would have happened in the alternate scenario. This often requires **generative models** to simulate the counterfactual outcomes. Methods like **Bayesian Additive Regression Trees (BART)**, **Causal Forests**, **Gaussian Processes**, and **Deep Learning approaches (e.g., TARNet, CFRNet)** are used to estimate ITE by modeling the outcome distribution under different treatment conditions.
 
-### Summary of Techniques
+Summary of Techniques
 ===================================================================================
 - **ATE Estimation Techniques:**
   - **Propensity Score Matching (PSM):** Matches treated and untreated units with similar covariates.
@@ -166,10 +166,8 @@ Estimating ITE is more challenging because it involves counterfactual reasoning:
   - **Causal Forests:** An extension of random forests designed for causal inference.
   - **Deep Learning Methods:** Neural networks designed for estimating individual treatment effects (e.g., TARNet, CFRNet).
 
-### Correctness of Understanding
-===================================================================================
-Your understanding is partially correct:
-- **ATE** can indeed be obtained using techniques like do-calculus by manipulating the causal graph and using statistical methods to adjust for confounders.
-- **ITE** generally requires modeling counterfactual outcomes, often through generative models or advanced machine learning techniques to infer the individual-specific treatment effects. 
+.. note::
+	- **ATE** can indeed be obtained using techniques like do-calculus by manipulating the causal graph and using statistical methods to adjust for confounders.
+	- **ITE** generally requires modeling counterfactual outcomes, often through generative models or advanced machine learning techniques to infer the individual-specific treatment effects. 
 
 However, both ATE and ITE can be estimated using various methods depending on the available data and the assumptions we can reasonably make. The choice of method often depends on the context, the quality of the data, and the underlying assumptions we are willing to accept.
