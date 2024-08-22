@@ -37,6 +37,10 @@ Fundamentals
 * PAGE 434 onwards: Komogrov Complexity (lirmm.fr)
 * CS231n Convolutional Neural Networks for Visual Recognition (cs231n.github.io)
 
+Foundations and Trends® in Machine Learning
+------------------------------------------------------------------------------------------
+`https://www.nowpublishers.com/MAL <https://www.nowpublishers.com/MAL>`_
+
 Additional Resources
 ------------------------------------------------------------------------------------------
 * [GPT-1](https://lnkd.in/gJ5Pe3HG)
