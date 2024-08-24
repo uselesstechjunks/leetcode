@@ -9,6 +9,10 @@ Defining the Objective
 	* Prerequisies:
 
 		* Matrix Algebra and Calculus - Geometric View, Identities
+
+			* Matrix Cookbook
+			* [Graybill] Matrices with Applications in Statistics
+			* [Springer] Matrix Tricks for Linear Statistical Models
 		* Probability Theory - Exponential Family, Graphical Models
 		* Point Estimation Theory - MLE
 		* Information Theory
