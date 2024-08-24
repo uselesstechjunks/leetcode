@@ -10,9 +10,9 @@ Defining the Objective
 
 		* Matrix Algebra and Calculus - Geometric View, Identities
 
-			* [Graybill] Matrices with Applications in Statistics - [1] Chapter 4 Geometric Interpretation
-			* [Springer] Matrix Tricks for Linear Statistical Models - [2] Chapters Introduction, 1 (ColSpace), 2 (Projector), 3 (Correlation)
-			* Matrix Cookbook - All Things Multinomial and Normal
+			* [Graybill] Matrices with Applications in Statistics - Chapter 4 Geometric Interpretation
+			* [Springer] Matrix Tricks for Linear Statistical Models - Chapter Introduction
+			* Matrix Cookbook - Identities - All Things Multinomial and Normal
 		* Probability Theory - Exponential Family, Graphical Models
 		* Point Estimation
 
