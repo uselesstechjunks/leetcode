@@ -10,11 +10,13 @@ Defining the Objective
 
 		* Matrix Algebra and Calculus - Geometric View, Identities
 
-			* Matrix Cookbook
-			* [Graybill] Matrices with Applications in Statistics
-			* [Springer] Matrix Tricks for Linear Statistical Models
+			* [Graybill] Matrices with Applications in Statistics - [1] Chapter 4 Geometric Interpretation
+			* [Springer] Matrix Tricks for Linear Statistical Models - [2] Chapters Introduction, 1 (ColSpace), 2 (Projector), 3 (Correlation)
+			* Matrix Cookbook - All Things Multinomial and Normal
 		* Probability Theory - Exponential Family, Graphical Models
-		* Point Estimation Theory - MLE
+		* Point Estimation
+
+			* [Lehaman] Theory of Point Estimation - Chapter 1 Preparations
 		* Information Theory
 	* Estimating Densities
 
@@ -30,8 +32,8 @@ Defining the Objective
 				* Variational Lower Bounds
 				* Gaussian Mixture Models
 				* Probabilistic PCA
-				* VAE
-				* Diffusion
+				* Variational Autoencoder
+				* Denoising Probabilistic Diffusion
 		* Integral Probability Metrics
 
 			* MMD
