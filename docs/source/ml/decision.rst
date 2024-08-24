@@ -1,6 +1,7 @@
 ##################################################################################
-Fundamentals
+Statistical Decision Theory
 ##################################################################################
+This puts the prediction task under a statistical inference paradigm.
 
 Statistical machine learning deals with the problem of prediction by using existing data to form a model. There are two distinct aspects of such a task
 
@@ -21,11 +22,6 @@ Statistical machine learning deals with the problem of prediction by using exist
 Statistical Inference
 **********************************************************************************
 This is defined separately for regression and classification problem.
-
-**********************************************************************************
-Statistical Decision Theory
-**********************************************************************************
-This puts the prediction task under a statistical inference paradigm.
 
 Analytic Solutions
 ==================================================================================
