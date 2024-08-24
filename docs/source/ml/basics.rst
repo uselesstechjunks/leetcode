@@ -14,6 +14,8 @@ Defining the Objective
 			* [Springer] Matrix Tricks for Linear Statistical Models - Chapter Introduction
 			* Matrix Cookbook - Identities - All Things Multinomial and Normal
 		* Probability Theory - Exponential Family, Graphical Models
+
+			* [Bishop] Pattern Recognition and Machine Learning
 		* Point Estimation
 
 			* [Lehaman] Theory of Point Estimation - Chapter 1 Preparations
