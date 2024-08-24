@@ -6,6 +6,7 @@ Statistical Machine Learning
    :maxdepth: 3
 
    basics
+   decision
    linearreg
    linearcls
    basisexp
