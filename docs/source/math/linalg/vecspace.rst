@@ -17,6 +17,7 @@ Let :math:`\mathcal{F}` be a scalar **field** (such as :math:`\mathbb{R}` or :ma
 
 		* :math:`\forall a\in \mathcal{F},\mathbf{u}\in V_\mathcal{F}\implies a\cdot\mathbf{u}\in V_\mathcal{F}`
 		* :math:`\mathbf{u},\mathbf{v}\in V_\mathcal{F}\implies \mathbf{u}+\mathbf{v}\in V_\mathcal{F}`
+	
 	with the following properties:
 
 		* [Commutative Addition]: :math:`\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}`
@@ -26,7 +27,7 @@ Let :math:`\mathcal{F}` be a scalar **field** (such as :math:`\mathbb{R}` or :ma
 			* :math:`\mathbf{u}+\mathbf{0}=\mathbf{0}+\mathbf{u}=\mathbf{u}`
 		* [Inverse Element]: :math:`\forall\mathbf{u}\in V_\mathcal{F},\exists\mathbf{v}\in V_\mathcal{F}` (represented as :math:`-\mathbf{u}) such that
 
-			* :math:`\mathbf{u}+\mathbf{v}=\mathbf{0}`
+			:math:`\mathbf{u}+\mathbf{v}=\mathbf{0}`
 
 .. attention::
 	Vector spaces are Abelian groups w.r.t :math:`+` but the addition of scalar multiplication provides an even richer structure.
