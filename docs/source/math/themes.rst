@@ -59,20 +59,21 @@ Sem 3
 
 	- Multivariate Analysis - Dineen
 	- Group Theory - Dummit Foote, Artin
+	- Probability - Lanchier, Feller, Pitman, Ross
 	- Statistical Inference - Casella Berger, Lehamann
 
 Sem 4
 
 	- Topology - Munkres, Janich
 	- Rings and Modules - Dummit Foote, Artin
-	- Ordinary Differential Equations - ??
+	- Stochastic Process - Lanchier
 	- Linear Models and Regression - Rao, Weisberg
+	- Ordinary Differential Equations - ??
 
 Sem 5
 
 	- Function Spaces - ??
 	- Field and Galois Theory - Dummit Foote, Artin
-	- Probability - Lanchier, Feller, Pitman, Ross
 	- Information Theory - Cover & Thomas, Kullback	
 	- Statistical Methods - Lehmann Nonparametrics, Berger Statistical Decision Theory, Gelman Bayesian Data Analysis
 	- Algebraic Geometry - ??
@@ -82,10 +83,9 @@ Sem 6
 
 	- Complex Analysis - Conway, Needham
 	- Optimization - Boyd, Bertsekas, Rockafeller
-	- Stochastic Process - Lanchier
 	- Mathematics for Data Science - Vershynin, Wainwright, Hastie, Blum, Murphy
 	- Differential Geometry - ??
-	- Differential Topoligy - ??
+	- Differential Topology - ??
 	- Dynamical System - ??
 
 Grad School
