@@ -11,9 +11,9 @@ Vector Space
 		* Field refers to the algebraic definition with properly defined addition and multiplication operators on them. 
 		* Not to be confused with **scalar fields** which represents functionals that maps vectors into scalers.
 
-.. definitions::
+.. admonition:: Definition: Vector Space
 
-	:math:`V_\mathcal{F}` is a vector space over :math:`\mathcal{F}` iff we have **scalar multiplication** and a **commutative addition** defined as follows:
+	:math:`V_\mathcal{F}` is a vector space over :math:`\mathcal{F}` **iff** we have **scalar multiplication** and a **commutative addition** defined as follows:
 
 	* Scalar Multiplication:
 
