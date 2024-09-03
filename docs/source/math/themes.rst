@@ -34,3 +34,91 @@ The techniques that we use to explore a core concept are often useful for some o
 Engineering
 *********************************************************************
 This refers to the application to *real-world* problems. For example, we can compute PageRank using matrix exponentiation.
+
+*********************************************************************
+North Star
+*********************************************************************
+Undergrad
+=====================================================================
+Based on `ISI B.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/bmath_new.pdf>`_ Curricula
+
+Sem 1
+
+	- Real Analysis [single variable] - Apostol, Tao [up to integration]
+	- Linear Algebra - Rao [chapter 1], Horn & Johnson, Axler
+	- Probabilty - Feller [text] Pitman [problems], Ross
+	- Number Theory - Niven
+Sem 2
+
+	- Real Analysis [single variable] - Apostol, Tao [integration onwards]
+	- Linear Algebra - Rao [chapter 1], Horn & Johnson, Axler
+	- Probabilty - Feller [text] Pitman [problems], Ross
+Sem 3
+
+	- Multivariate Analysis - Dineen
+	- Group Theory - Dummit Foote, Artin
+	- Statistical Inference - Casella Berger, Lehamann
+Sem 4
+
+	- Topology - Munkres, Janich
+	- Rings and Modules - Dummit Foote, Artin
+	- Ordinary Differential Equations - ??
+	- Linear Models and Regression - Rao, Weisberg
+Sem 5
+
+	- Function Spaces - ??
+	- Field and Galois Theory - Dummit Foote, Artin
+	- Probability - Lanchier, Feller, Pitman, Ross
+	- Information Theory - Cover & Thomas, Kullback	
+	- Statistical Methods - Lehmann Nonparametrics, Berger Statistical Decision Theory, Gelman Bayesian Data Analysis
+	- Algebraic Geometry - ??
+	- Algebraic Topology - ??
+Sem 6
+
+	- Complex Analysis - Conway, Needham
+	- Optimization - Boyd, Bertsekas, Rockafeller
+	- Stochastic Process - Lanchier
+	- Mathematics for Data Science - Vershynin, Wainwright, Hastie, Blum, Murphy
+	- Differential Geometry - ??
+	- Differential Topoligy - ??
+	- Dynamical System - ??
+
+Grad School
+=====================================================================
+Based on `ISI M.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/mmath_new.pdf>`_ Curricula
+
+Sem 1
+
+	- Measure Theory - Royden
+	- Linear Algebra - Halmos Finite Dimensional Vector Spaces
+	- Algebra - Lang
+	- Topology - ??
+	- Multivariate Analysis - Spivak, Mukherjea
+Sem 2
+
+	- Complex Analysis - Ahlfros, Stein Shakarchi
+	- Functional Analysis - Rudin, Conway
+	- Topology - ??
+	- Algebra - Rotman
+	- Number Theory - ??
+Sem 3
+
+	- Differential Geometry - ??
+	- Probabilty - Durret, Billingsley
+	- Fourier Analysis - Stein Shakarchi, Rudin
+	- Topics in Discrete Probabilty - ??
+	- Advanced Functional Analysis - ??
+Sem 4
+
+	- Partial Differential Equations - ??
+	- Differential Topology - ??
+	- Random Measures and Geometry - ??
+	- Dynamical System - ??
+	- Topics in Gaussian Processes - ??
+
+Esoteric
+
+	- Martingle Theory - ??
+	- Theory of Large Deviations - ??
+	- Brownian Motion and Diffusions - ??
+	- Weak Convergence and Empirical Processes - ??
