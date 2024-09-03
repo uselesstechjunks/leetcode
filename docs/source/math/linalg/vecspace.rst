@@ -60,6 +60,18 @@ These defintions and theorems are based on Graybill.
 
 	If :math:`S_n` is a subset of the vector space :math:`V_n` such that, for every two vectors, :math:`\mathbf{s}_1` and :math:`\mathbf{s}_2` in :math:`S_n`, :math:`a_1\mathbf{s}_1+a_2\mathbf{s}_2` is in :math:`S_n` for all real numbers :math:`a_1` and :math:`a_2`, then :math:`S_n` is a vector subspace of :math:`V_n`.
 
+.. admonition:: Theorem
+
+	The set :math:`\{\mathbf{0}\}` where :math:`\mathbf{0}` is the :math:`n\times 1` null-vector, is a subspace of every vector space :math:`V_n`. Every vector space :math:`V_n` is a subspace of itself.
+
+.. admonition:: [Definition] Linear Dependence and Independence
+
+	Let :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_m\}` be a set of :math:`m` vectors each with :math:`n` components, so that :math:`\mathbf{v}_i\in\R_n;i=1,\cdots,m`. This set is defined to be linearly dependent if and only if there exists a set of scalars :math:`\{c_1,\cdots,c_m\}`, at least one of which is not equal to zero, such that
+
+	.. math:: \sum_{i=1}^m c_i\mathbf{v_i}=\mathbf{0}
+
+	If the only set of scalars that satisfies the above is :math:`\{0,\cdots,0\}`, then the set of vectors is called linearly independent.
+
 ********************************************************************************
 Affine Sets in Euclidean Vector Space
 ********************************************************************************
