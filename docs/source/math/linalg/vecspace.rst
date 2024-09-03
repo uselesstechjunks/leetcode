@@ -199,7 +199,7 @@ Inner Product and Orthogonality of Vectors
 
 .. admonition:: Theorem
 
-	Let :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_q\}` be the set of basis for the vector space :math:`V_n (\neq \{\mathbf{0}\})`. Then the set of :math:`q` vectors :math:`\{\mathbf{z}_1,\cdots,\mathbf{z}_q\}` is also a basis vector for :math:`V_n`and they are an orthonormal set where they are defined as
+	Let :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_q\}` be the set of basis for the vector space :math:`V_n (\neq \{\mathbf{0}\})`. Then the set of :math:`q` vectors :math:`\{\mathbf{z}_1,\cdots,\mathbf{z}_q\}` is also a basis vector for :math:`V_n` and they are an orthonormal set where they are defined as
 
 	.. math:: \begin{matrix}\mathbf{y}_1=\mathbf{v}_1;&\mathbf{z}_1=\frac{\mathbf{y}_1}{\sqrt{\mathbf{y}_1^T\mathbf{y}_1}} \\ \mathbf{y}_2=\mathbf{v}_2-\frac{\mathbf{y}_1^T\mathbf{v}_2}{\mathbf{y}_1^T\mathbf{y}_1}\mathbf{y}_1;&\mathbf{z}_2=\frac{\mathbf{y}_2}{\sqrt{\mathbf{y}_2^T\mathbf{y}_2}} \\ \vdots&\vdots\\ \mathbf{y}_q=\mathbf{v}_q-\frac{\mathbf{y}_1^T\mathbf{v}_q}{\mathbf{y}_1^T\mathbf{y}_1}\mathbf{y}_1-\frac{\mathbf{y}_2^T\mathbf{v}_q}{\mathbf{y}_2^T\mathbf{y}_2}\mathbf{y}_2-\cdots-\frac{\mathbf{y}_{q-1}^T\mathbf{v}_q}{\mathbf{y}_{q-1}^T\mathbf{y}_{q-1}}\mathbf{y}_{q-1};&\mathbf{z}_q=\frac{\mathbf{y}_q}{\sqrt{\mathbf{y}_q^T\mathbf{y}_q}} \end{matrix}
 
