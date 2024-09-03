@@ -1,8 +1,8 @@
 ################################################################################
-Finite Dimensional Linear Transform
+Linear Transform
 ################################################################################
 ********************************************************************************
-Linear Transform
+Linear Transform in Vector Space
 ********************************************************************************
 .. note::
 	* Let :math:`U` and :math:`W` be two vector spaces over the same scalar field :math:`\mathcal{F}`.
@@ -84,16 +84,32 @@ Examples
 ================================================================================
 Scalar Multiplication as a Linear Transform
 --------------------------------------------------------------------------------
-.. attention::
+.. tip::
 	* For every scalar :math:`\alpha\in\mathbb{R}`, we can define a unique linear operator in :math:`L(\mathbb{R})` with its already defined multiplication operator as :math:`\alpha:\mathbb{R}\mapsto\mathbb{R}` where :math:`\forall x\in\mathbb{R}, \alpha(x)=\alpha\cdot x`.
 	* We note that
 
 		* :math:`\forall u,v\in \mathbb{R}, \alpha(u+v)=\alpha(u)+\alpha(v)`
 		* :math:`\forall c\in\mathbb{R},\forall u\in \mathbb{R}, \alpha(c\cdot u)=c\cdot\alpha(u)`
 
+Matrix-Vector Multiplication as Linear Transform
+--------------------------------------------------------------------------------
+.. tip::
+	* The matrix :math:`\mathbf{A}` is a linear transform which maps :math:`\mathbb{C}^n` dimensional vectors to :math:`\mathbb{C}^m` dimensional vectors.
+
+		.. math:: \mathbf{A}:\mathbb{C}^n\mapsto\mathbb{C}^m
+	* The range of this transform is the **column space** of this transform
+
+		.. math:: C(\mathbf{A})=\{\mathbf{A}\mathbf{x}\mathop{|}\forall \mathbf{x}\in\mathbb{C}^n\}
+	* The transposed matrix :math:`\mathbf{A}^\top` does the mapping the other way around (but it's not necessarily the inverse transform)
+
+		.. math:: \mathbf{A}^\top:\mathbb{C}^m\mapsto\mathbb{C}^n
+	* The range of the transpose transform is the **row space** of :math:`\mathbf{A}`
+
+		.. math:: C(\mathbf{A}^\top)=\{\mathbf{A}^\top\mathbf{y}\mathop{|}\forall \mathbf{y}\in\mathbb{C}^m\}
+
 Differentiation as a Linear Transform
 --------------------------------------------------------------------------------
-.. attention::
+.. tip::
 	* Let :math:`X` and :math:`Y` be two vector spaces over :math:`\mathbb{R}`.
 	* Let :math:`\mathcal{F}=\{f\mathop{|} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
 	* Let :math:`\mathcal{D}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **differentiable functions**.
@@ -109,7 +125,7 @@ Differentiation as a Linear Transform
 
 Integration as a Linear Transform
 --------------------------------------------------------------------------------
-.. attention::
+.. tip::
 	* Let :math:`X` and :math:`Y` be two vector spaces over :math:`\mathbb{R}`.
 	* Let :math:`\mathcal{F}=\{f\mathop{|} f:X\mapsto Y\}` be the set of all function from :math:`X` into :math:`Y`.
 	* Let :math:`\mathcal{I}=\{g\mathop{|} g:X\mapsto Y\}` be the set of all **integrable functions**.
@@ -122,23 +138,6 @@ Integration as a Linear Transform
 
 		* :math:`\forall g_1,g_2\in \mathcal{I}, I(g_1+g_2)=I(g_1)+I(g_2)`
 		* :math:`\forall c\in \mathbb{R},\forall g\in \mathcal{I}, I(c\cdot g)=c\cdot I(g)`
-
-********************************************************************************
-Matrix-Vector Multiplication as Linear Transform
-********************************************************************************
-.. tip::
-	* The matrix :math:`\mathbf{A}` is a linear transform which maps :math:`\mathbb{C}^n` dimensional vectors to :math:`\mathbb{C}^m` dimensional vectors.
-
-		.. math:: \mathbf{A}:\mathbb{C}^n\mapsto\mathbb{C}^m
-	* The range of this transform is the **column space** of this transform
-
-		.. math:: C(\mathbf{A})=\{\mathbf{A}\mathbf{x}\mathop{|}\forall \mathbf{x}\in\mathbb{C}^n\}
-	* The transposed matrix :math:`\mathbf{A}^\top` does the mapping the other way around (but it's not necessarily the inverse transform)
-
-		.. math:: \mathbf{A}^\top:\mathbb{C}^m\mapsto\mathbb{C}^n
-	* The range of the transpose transform is the **row space** of :math:`\mathbf{A}`
-
-		.. math:: C(\mathbf{A}^\top)=\{\mathbf{A}^\top\mathbf{y}\mathop{|}\forall \mathbf{y}\in\mathbb{C}^m\}
 
 ********************************************************************************
 Matrix-vector multiplication
