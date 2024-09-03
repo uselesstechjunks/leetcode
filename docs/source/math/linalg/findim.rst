@@ -122,8 +122,9 @@ Integration as a Linear Transform
 
 		* :math:`\forall g_1,g_2\in \mathcal{I}, I(g_1+g_2)=I(g_1)+I(g_2)`
 		* :math:`\forall c\in \mathbb{R},\forall g\in \mathcal{I}, I(c\cdot g)=c\cdot I(g)`
+
 ********************************************************************************
-Matrix as Linear Transform
+Matrix-Vector Multiplication as Linear Transform
 ********************************************************************************
 .. tip::
 	* The matrix :math:`\mathbf{A}` is a linear transform which maps :math:`\mathbb{C}^n` dimensional vectors to :math:`\mathbb{C}^m` dimensional vectors.
