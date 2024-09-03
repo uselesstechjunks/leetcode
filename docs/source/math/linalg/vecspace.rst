@@ -11,7 +11,7 @@ Let :math:`\mathcal{F}` be a scalar **field** (such as :math:`\mathbb{R}` or :ma
 	* Field refers to the algebraic definition with properly defined addition and multiplication operators on them. 
 	* Not to be confused with **scalar fields** which represents functionals that maps vectors into scalers.
 
-.. admonition:: Definition
+.. admonition:: [Definition] Vector Space
 
 	:math:`V_\mathcal{F}` is a vector space over :math:`\mathcal{F}` with :math:`0\in \mathcal{F}` **iff**:
 
@@ -39,6 +39,19 @@ Let :math:`\mathcal{F}` be a scalar **field** (such as :math:`\mathbb{R}` or :ma
 
 Euclidean Vector Space
 ================================================================================
+These defintions and theorems are based on Graybill.
+
+.. admonition:: [Definition] n-component Vector
+	Let :math:`n` be a positive integer and let :math:`a_1,\cdots,a_n` be elements from :math:`\mathcal{F}`. The ordered :math:`n`-tuple :math:`\mathbf{a}=(a_1,\cdots,a_n)^T` is defined as n-component (or :math:`n\times 1` vector)
+
+.. seealso::
+	Vector spaces with :math:`n\times 1` vectors are denoted here by :math:`V_n`.
+
+.. admonition:: Theorem
+	Let :math:`R_n` be the set of all :math:`n\times 1` vectors for a fixed positive integer :math:`n`. Then :math:`R_n` is a vector space.
+
+.. admonition:: [Definition] Vector Subspace
+	Let :math:`S_n` be the subset of vectors in the vector space :math:`V_n`. If the set :math:`S_n` itself is a vector space, then :math:`S_n` is called a vector subspace of :math:`V_n`.
 
 ********************************************************************************
 Affine Sets in Euclidean Vector Space
