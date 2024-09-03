@@ -25,7 +25,7 @@ Let :math:`\mathcal{F}` be a scalar **field** (such as :math:`\mathbb{R}` or :ma
 
 			* :math:`0\cdot\mathbf{u}=\mathbf{0}`
 			* :math:`\mathbf{u}+\mathbf{0}=\mathbf{0}+\mathbf{u}=\mathbf{u}`
-		* [Inverse Element]: :math:`\forall\mathbf{u}\in V_\mathcal{F},\exists\mathbf{v}\in V_\mathcal{F}` (represented as :math:`-\mathbf{u}) such that
+		* [Inverse Element]: :math:`\forall\mathbf{u}\in V_\mathcal{F},\exists\mathbf{v}\in V_\mathcal{F}` (represented as :math:`-\mathbf{u}`) such that
 
 			:math:`\mathbf{u}+\mathbf{v}=\mathbf{0}`
 
