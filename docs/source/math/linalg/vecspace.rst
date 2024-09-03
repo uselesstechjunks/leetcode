@@ -42,16 +42,23 @@ Euclidean Vector Space
 These defintions and theorems are based on Graybill.
 
 .. admonition:: [Definition] n-component Vector
+
 	Let :math:`n` be a positive integer and let :math:`a_1,\cdots,a_n` be elements from :math:`\mathcal{F}`. The ordered :math:`n`-tuple :math:`\mathbf{a}=(a_1,\cdots,a_n)^T` is defined as n-component (or :math:`n\times 1` vector)
 
 .. seealso::
 	Vector spaces with :math:`n\times 1` vectors are denoted here by :math:`V_n`.
 
 .. admonition:: Theorem
+
 	Let :math:`R_n` be the set of all :math:`n\times 1` vectors for a fixed positive integer :math:`n`. Then :math:`R_n` is a vector space.
 
 .. admonition:: [Definition] Vector Subspace
+
 	Let :math:`S_n` be the subset of vectors in the vector space :math:`V_n`. If the set :math:`S_n` itself is a vector space, then :math:`S_n` is called a vector subspace of :math:`V_n`.
+
+.. admonition:: Theorem
+
+	If :math:`S_n` is a subset of the vector space :math:`V_n` such that, for every two vectors, :math:`\mathbf{s}_1` and :math:`\mathbf{s}_2` in :math:`S_n`, :math:`a_1\mathbf{s}_1+a_2\mathbf{s}_2` is in :math:`S_n` for all real numbers :math:`a_1` and :math:`a_2`, then :math:`S_n` is a vector subspace of :math:`V_n`.
 
 ********************************************************************************
 Affine Sets in Euclidean Vector Space
