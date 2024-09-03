@@ -1,5 +1,5 @@
 ################################################################################
-Vector Space and Geometric View
+Vector Space and Geometry
 ################################################################################
 
 ********************************************************************************
@@ -162,7 +162,46 @@ Basis of a Vector Space
 
 Inner Product and Orthogonality of Vectors
 -------------------------------------------------------------------------------
+.. admonition:: [Definition] Inner Product
 
+	Let :math:`\mathbf{x}` and :math:`\mathbf{y}` be two vectors in :math:`V_n`. The inner product of :math:`\mathbf{x}` and :math:`\mathbf{y}`, :math:`\mathbf{x}\cdot\mathbf{y}` is defined to be the scalar :math:`\sum_{i=1}^nx_iy_i`. It is the scalar that is the element in the :math:`1\times 1` matrix :math:`\mathbf{x}^T\mathbf{y}`.
+
+.. admonition:: [Definition] Orthogonal Vectors
+
+	Let :math:`\mathbf{x}` and :math:`\mathbf{y}` be two vectors in :math:`V_n`. :math:`\mathbf{x}` and :math:`\mathbf{y}` are defined to be orthogonal if and only if the inner product is 0.
+
+.. tip::
+	:math:`\mathbf{0}` vector is orthogonal to every vector in :math:`V_n`.
+
+.. admonition:: [Definition] Normal Vectors
+
+	A vector :math:`\mathbf{x}` in :math:`V_n` is defined to be a normal vector if and only if the inner product of :math:`\mathbf{x}` with itself is equal to :math:`+1`. 
+
+.. admonition:: [Definition] Orthogonal and Orthonormal Basis
+
+	If :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_m\}` is a basis for :math:`V_n` such that :math:`\mathbf{v}_i^T\mathbf{v}_j` for all :math:`i\neq j=1,\cdots m`, then the basis is defined to be orthogonal basis for :math:`V_n`. If in addition, :math:`\mathbf{v}_i^T\mathbf{v}_i=1` for all :math:`i=1,\cdots m`, the basis is defined to be orthonormal basis.
+
+.. admonition:: Theorem
+
+	Every vector space has an orthogonal basis.
+
+.. admonition:: Theorem
+
+	Every vector space except :math:`\{\mathbf{0}\}` has an orthonormal basis.
+
+.. admonition:: Theorem
+
+	Let :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_m\}` be a set of vectors in :math:`V_n` such that each and every distinct pair of vectors is orthogonal; that is :math:`\mathbf{v}_i^T\mathbf{v}_j=0` for all :math:`i\neq j`. If none of the vectors is the zero vector, then the set of vectors is a linearly independent set.
+
+.. admonition:: Theorem
+
+	Any set of :math:`q` nonzero pairwise orthogonal vectors in :math:`V_n` is a subset of a basis for :math:`V_n`.
+
+.. admonition:: Theorem
+
+	Let :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_q\}` be the set of basis for the vector space :math:`V_n (\neq \{\mathbf{0}\})`. Then the set of :math:`q` vectors :math:`\{\mathbf{z}_1,\cdots,\mathbf{z}_q\}` is also a basis vector for :math:`V_n`and they are an orthonormal set where they are defined as
+
+	.. math:: \begin{matrix}\mathbf{y}_1=\mathbf{v}_1;&\mathbf{z}_1=\frac{\mathbf{y}_1}{\sqrt{\mathbf{y}_1^T\mathbf{y}_1}} \\ \mathbf{y}_2=\mathbf{v}_2-\frac{\mathbf{y}_1^T\mathbf{v}_2}{\mathbf{y}_1^T\mathbf{y}_1}\mathbf{y}_1;&\mathbf{z}_2=\frac{\mathbf{y}_2}{\sqrt{\mathbf{y}_2^T\mathbf{y}_2}} \\ \vdots&\vdots\\ \mathbf{y}_q=\mathbf{v}_q-\frac{\mathbf{y}_1^T\mathbf{v}_q}{\mathbf{y}_1^T\mathbf{y}_1}\mathbf{y}_1-\frac{\mathbf{y}_2^T\mathbf{v}_q}{\mathbf{y}_2^T\mathbf{y}_2}\mathbf{y}_2-\cdots-\frac{\mathbf{y}_{q-1}^T\mathbf{v}_q}{\mathbf{y}_{q-1}^T\mathbf{y}_{q-1}}\mathbf{y}_{q-1};&\mathbf{z}_q=\frac{\mathbf{y}_q}{\sqrt{\mathbf{y}_q^T\mathbf{y}_q}} \end{matrix}
 
 ********************************************************************************
 Affine Sets in Euclidean Vector Space
