@@ -48,22 +48,26 @@ Sem 1
 	- Linear Algebra - Rao [chapter 1], Horn & Johnson, Axler
 	- Probabilty - Feller [text] Pitman [problems], Ross
 	- Number Theory - Niven
+
 Sem 2
 
 	- Real Analysis [single variable] - Apostol, Tao [integration onwards]
 	- Linear Algebra - Rao [chapter 1], Horn & Johnson, Axler
 	- Probabilty - Feller [text] Pitman [problems], Ross
+
 Sem 3
 
 	- Multivariate Analysis - Dineen
 	- Group Theory - Dummit Foote, Artin
 	- Statistical Inference - Casella Berger, Lehamann
+
 Sem 4
 
 	- Topology - Munkres, Janich
 	- Rings and Modules - Dummit Foote, Artin
 	- Ordinary Differential Equations - ??
 	- Linear Models and Regression - Rao, Weisberg
+
 Sem 5
 
 	- Function Spaces - ??
@@ -73,6 +77,7 @@ Sem 5
 	- Statistical Methods - Lehmann Nonparametrics, Berger Statistical Decision Theory, Gelman Bayesian Data Analysis
 	- Algebraic Geometry - ??
 	- Algebraic Topology - ??
+
 Sem 6
 
 	- Complex Analysis - Conway, Needham
@@ -94,6 +99,7 @@ Sem 1
 	- Algebra - Lang
 	- Topology - ??
 	- Multivariate Analysis - Spivak, Mukherjea
+
 Sem 2
 
 	- Complex Analysis - Ahlfros, Stein Shakarchi
@@ -101,6 +107,7 @@ Sem 2
 	- Topology - ??
 	- Algebra - Rotman
 	- Number Theory - ??
+
 Sem 3
 
 	- Differential Geometry - ??
@@ -108,6 +115,7 @@ Sem 3
 	- Fourier Analysis - Stein Shakarchi, Rudin
 	- Topics in Discrete Probabilty - ??
 	- Advanced Functional Analysis - ??
+
 Sem 4
 
 	- Partial Differential Equations - ??
