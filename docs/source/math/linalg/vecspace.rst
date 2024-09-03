@@ -41,6 +41,8 @@ Euclidean Vector Space
 ================================================================================
 These defintions and theorems are based on Graybill.
 
+Vector Space
+-------------------------------------------------------------------------------
 .. admonition:: [Definition] n-component Vector
 
 	Let :math:`n` be a positive integer and let :math:`a_1,\cdots,a_n` be elements from :math:`\mathcal{F}`. The ordered :math:`n`-tuple :math:`\mathbf{a}=(a_1,\cdots,a_n)^T` is defined as n-component (or :math:`n\times 1` vector)
@@ -52,6 +54,8 @@ These defintions and theorems are based on Graybill.
 
 	Let :math:`R_n` be the set of all :math:`n\times 1` vectors for a fixed positive integer :math:`n`. Then :math:`R_n` is a vector space.
 
+Vector Subspace
+-------------------------------------------------------------------------------
 .. admonition:: [Definition] Vector Subspace
 
 	Let :math:`S_n` be the subset of vectors in the vector space :math:`V_n`. If the set :math:`S_n` itself is a vector space, then :math:`S_n` is called a vector subspace of :math:`V_n`.
@@ -64,13 +68,41 @@ These defintions and theorems are based on Graybill.
 
 	The set :math:`\{\mathbf{0}\}` where :math:`\mathbf{0}` is the :math:`n\times 1` null-vector, is a subspace of every vector space :math:`V_n`. Every vector space :math:`V_n` is a subspace of itself.
 
+Linear Dependence and Independence
+-------------------------------------------------------------------------------
 .. admonition:: [Definition] Linear Dependence and Independence
 
-	Let :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_m\}` be a set of :math:`m` vectors each with :math:`n` components, so that :math:`\mathbf{v}_i\in\R_n;i=1,\cdots,m`. This set is defined to be linearly dependent if and only if there exists a set of scalars :math:`\{c_1,\cdots,c_m\}`, at least one of which is not equal to zero, such that
+	Let :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_m\}` be a set of :math:`m` vectors each with :math:`n` components, so that :math:`\mathbf{v}_i\in R_n;i=1,\cdots,m`. This set is defined to be linearly dependent if and only if there exists a set of scalars :math:`\{c_1,\cdots,c_m\}`, at least one of which is not equal to zero, such that
 
 	.. math:: \sum_{i=1}^m c_i\mathbf{v_i}=\mathbf{0}
 
 	If the only set of scalars that satisfies the above is :math:`\{0,\cdots,0\}`, then the set of vectors is called linearly independent.
+
+.. admonition:: Theorem
+
+	If the vector :math:`\mathbf{0}` is included in a set of vectors, the set is linearly dependent.
+
+.. admonition:: Theorem
+
+	If :math:`m > 1` vectors are linearly dependent, it's always possible to express at least one of them as a linear combination of the others.
+
+.. admonition:: Theorem
+
+	In the set of :math:`m` vectors :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_m\}`, if there are :math:`s` vectors, :math:`s\le m`, that are linearly dependent, then the entire set of vectors is linearly dependent.
+
+.. admonition:: Theorem
+
+	If the set of :math:`m` vectors :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_m\}` is a linearly independent set, while the set of :math:`m+1` vectors :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_{m+1}\}` is a linearly dependent set, then :math:`\mathbf{v}_{m+1}` can be expressed as a linear combination of :math:`\mathbf{v}_1,\cdots,\mathbf{v}_m`.
+
+.. admonition:: Theorem
+
+	A necessary and sufficient condition for thet set of :math:`n\times 1` vectors :math:`\{\mathbf{v}_1,\cdots,\mathbf{v}_m\}` to be linearly dependent set is that the rank of the matrix formed by the vectors (as columns) is less than the number of vectors :math:`m`; that is :math:`r < m`.
+
+Basis of a Vector Space
+-------------------------------------------------------------------------------
+Inner Product and Orthogonality of Vectors
+-------------------------------------------------------------------------------
+
 
 ********************************************************************************
 Affine Sets in Euclidean Vector Space
