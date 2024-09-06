@@ -54,3 +54,9 @@ Einstein Summation
 	   .. literalinclude:: ../../code/einsum.py
 	      :language: python
 	      :linenos:
+
+********************************************************************************
+Resources
+********************************************************************************
+* `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
+* `Tensor Cookbook <https://tensorcookbook.com/>`_
