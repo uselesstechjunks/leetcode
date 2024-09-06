@@ -44,8 +44,6 @@ Matrix Identities
 ********************************************************************************
 Einstein Summation
 ********************************************************************************
-* `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
-* `Tensor Cookbook <https://tensorcookbook.com/>`_
 * `Einstein Summation in Numpy <https://obilaniu6266h16.wordpress.com/2016/02/04/einstein-summation-in-numpy/>`_
 * `A basic introduction to NumPy's einsum <https://ajcr.net/Basic-guide-to-einsum/>`_
 * `Einsum is All you Need - Einstein Summation in Deep Learning <https://rockt.github.io/2018/04/30/einsum>`_
@@ -56,3 +54,9 @@ Einstein Summation
 	   .. literalinclude:: ../../code/einsum.py
 	      :language: python
 	      :linenos:
+
+********************************************************************************
+Resources
+********************************************************************************
+* `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
+* `Tensor Cookbook <https://tensorcookbook.com/>`_
