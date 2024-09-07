@@ -257,10 +257,9 @@ Analysis
 * [SO] `Pointwise vs. Uniform Convergence <https://math.stackexchange.com/questions/597765/pointwise-vs-uniform-convergence#915867>`_
 
 ******************************************************************************************
-Complex Analysis
+ODE
 ******************************************************************************************
-
-* `Visual Complex Analysis <https://complex-analysis.com/content/table_of_contents.html>`_
+* [math.cornell.edu] `Linear ODE <https://e.math.cornell.edu/people/belk/writing/>`_
 
 ******************************************************************************************
 ML Theory
