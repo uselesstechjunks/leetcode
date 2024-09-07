@@ -4,7 +4,7 @@ Multimodal
 ******************************************************************************************
 Models in focus
 ******************************************************************************************
-	* `Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Claude on Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
+	* [anthropic.com] `Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Claude on Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
 
 		* `Towards Monosemanticity: Decomposing Language Models With Dictionary Learning <https://transformer-circuits.pub/2023/monosemantic-features>`_
 		* `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
@@ -14,11 +14,12 @@ Models in focus
 		* `Simple probes can catch sleeper agents <https://www.anthropic.com/research/probes-catch-sleeper-agents>`_
 		* `Challenges in evaluating AI systems <https://www.anthropic.com/research/evaluating-ai-systems>`_
 		* `AI Governance and Accountability: An Analysis of Anthropic's Claude <https://arxiv.org/pdf/2407.01557v1>`_
-	* `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_ (`Mixtral on Bedrock <https://aws.amazon.com/bedrock/mistral/>`_)
-	* `Llama <https://ai.meta.com/blog/meta-llama-3/>`_ (`Llama on Bedrock <https://aws.amazon.com/bedrock/llama/>`_)
-	* `Stable Diffusion <https://stability.ai/news/stable-diffusion-3-research-paper>`_ (`Stable Diffusion on Bedrock <https://aws.amazon.com/bedrock/stable-diffusion/>`_)
-	* `Gemini <https://blog.google/technology/ai/google-gemini-ai/>`_
-	* `GPT-4o <https://openai.com/index/hello-gpt-4o/>`_
+	* [mistral.ai] `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_ (`Mixtral on Bedrock <https://aws.amazon.com/bedrock/mistral/>`_)
+	* [ai.meta.com `Llama <https://ai.meta.com/blog/meta-llama-3/>`_ (`Llama on Bedrock <https://aws.amazon.com/bedrock/llama/>`_)
+	* [stability.ai] `Stable Diffusion <https://stability.ai/news/stable-diffusion-3-research-paper>`_ (`Stable Diffusion on Bedrock <https://aws.amazon.com/bedrock/stable-diffusion/>`_)
+	* [openai.com] `GPT-4o <https://openai.com/index/hello-gpt-4o/>`_
+	* [research.google] `Transformers in music recommendation <https://research.google/blog/transformers-in-music-recommendation/>`_
+	* [blog.google] `Gemini <https://blog.google/technology/ai/google-gemini-ai/>`_
 
 Resources
 ==============================================================================
@@ -46,6 +47,8 @@ Resources
 			* `Category: Generative AI <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/generative-ai/>`_
 	* `Anthropic Research <https://www.anthropic.com/research>`_
 	* [neptune.ai] `6 GAN Architectures You Really Should Know  <https://neptune.ai/blog/6-gan-architectures>`_
+	* [calvinyluo.com] `Understanding Diffusion Models: A Unified Perspective <https://www.calvinyluo.com/2022/08/26/diffusion-tutorial.html>`_
+	* `Diffusion Augmented Agents: A Framework for Efficient Exploration and Transfer Learning <https://arxiv.org/abs/2407.20798>`_
 
 .. csv-table:: 
 	:header: "Year","Paper"

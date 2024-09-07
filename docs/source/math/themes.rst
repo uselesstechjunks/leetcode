@@ -40,7 +40,9 @@ North Star
 *********************************************************************
 Undergrad
 =====================================================================
-Based on `ISI B.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/bmath_new.pdf>`_ Curricula
+.. important::
+	* Based on `ISI B.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/bmath_new.pdf>`_ Curricula
+	* `Indian Statistical Institute, ISI MMATH 2023 PMB Solutions & Discussions <https://fractionshub.com/i-s-i-m-math-2023-solutions/>`_
 
 Sem 1
 
@@ -90,7 +92,8 @@ Sem 6
 
 Grad School
 =====================================================================
-Based on `ISI M.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/mmath_new.pdf>`_ Curricula
+.. important::
+	* Based on `ISI M.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/mmath_new.pdf>`_ Curricula
 
 Sem 1
 

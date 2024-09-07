@@ -17,10 +17,12 @@ Practical
 	* [tinkerd.net] `Writing CUDA Kernels for PyTorch <https://tinkerd.net/blog/machine-learning/cuda-basics/>`_
 	* [spaCy] `Library for NLU/IE Tasks <https://spacy.io/usage/spacy-101>`_, `LLM-variants <https://spacy.io/usage/large-language-models>`_
 	* [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
+	* [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
 
 .. note::
 	* [Paper] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
 	* [PapersWithCode] `Natural Language Processing <https://paperswithcode.com/area/natural-language-processing>`_ (check all relevant subcategories)
+	* `Hardware Acceleration of LLMs: A comprehensive survey and comparison <https://arxiv.org/pdf/2409.03384>`_
 
 *****************************************************************************************
 Activations
@@ -119,6 +121,7 @@ Position Encoding
 	* `Position Information in Transformers: An Overview <https://arxiv.org/abs/2102.11090>`_
 	* `Rethinking Positional Encoding in Language Pre-training <https://arxiv.org/abs/2006.15595>`_
 	* [Blog] `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
+	* [MSR] `LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens <https://arxiv.org/abs/2402.13753>`_
 	* RoFormer: `Enhanced Transformer with Rotary Position Embedding <https://arxiv.org/abs/2104.09864>`_
 
 Attention
@@ -340,6 +343,10 @@ Retrieval Augmented
 	* Approximate Nearest Neighbour Search
 * Causal attention for decoder: GPT, Multimodal generation
 
+Pruning
+-----------------------------------------------------------------------------------------
+* LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference
+
 *****************************************************************************************
 LLM Technology Stack
 *****************************************************************************************
@@ -395,6 +402,7 @@ Retrieval Augmented Generation (RAG)
 	* [Nvidia] `RAG 101: Demystifying Retrieval-Augmented Generation Pipelines <https://resources.nvidia.com/en-us-ai-large-language-models/demystifying-rag-blog>`_
 	* [Nvidia] `RAG 101: Retrieval-Augmented Generation Questions Answered <https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/>`_
 	* [MSR] `From Local to Global: A Graph RAG Approach to Query-Focused Summarization <https://arxiv.org/pdf/2404.16130>`_
+	* [Neo4j] `The GraphRAG Manifesto: Adding Knowledge to GenAI <https://neo4j.com/blog/graphrag-manifesto/>`_
 
 Resources
 -----------------------------------------------------------------------------------------
@@ -433,6 +441,7 @@ LM Eval
 	* MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
 	* OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
 	* RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
+	* RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
 	* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
 
 .. seealso::

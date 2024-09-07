@@ -21,6 +21,7 @@ Principle Component Analysis
 
 .. attention::
 	* This approach minimises the perpendicular distance of each data point to the singular vector directions.
+	* [SO] `What exactly should be called "projection matrix" in the context of PCA? <https://stats.stackexchange.com/questions/362841/what-exactly-should-be-called-projection-matrix-in-the-context-of-pca>`_
 
 ********************************************************************************
 Matrix Identities
@@ -58,5 +59,7 @@ Einstein Summation
 ********************************************************************************
 Resources
 ********************************************************************************
-* `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
-* `Tensor Cookbook <https://tensorcookbook.com/>`_
+.. important::
+	* `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
+	* `Tensor Cookbook <https://tensorcookbook.com/>`_
+	* [Minka] `Old and New Matrix Algebra Useful for Statistics <https://tminka.github.io/papers/matrix/minka-matrix.pdf>`_

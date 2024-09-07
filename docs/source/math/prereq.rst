@@ -48,9 +48,9 @@ Binomial theorem for fractional and negative powers:
 ***********************************************
 Geometry
 ***********************************************
-
-.. seealso::
+.. important::
 	* On the general equation of second degree: `Notes at IMSc <https://www.imsc.res.in/~svis/eme13/kesavan-new.pdf>`_.
+	* [mathguy.us] `Math Handbook: Geometry <https://mathguy.us/Handbooks/GeometryHandbook.pdf>`_
 
 ***********************************************
 Lagrange polynomial
@@ -76,3 +76,9 @@ Lagrange polynomial
 
 Wavy Curve Method
 ===============================================================
+
+***********************************************
+Resources
+***********************************************
+.. note::
+	* [math.brown.edu] `Beyond the Third Dimension <https://www.math.brown.edu/tbanchof/Beyond3d/index.html>`_

@@ -10,3 +10,4 @@ Linear Algebra
 	factor
 	norm
 	applied
+	randla

@@ -55,30 +55,33 @@ Additional Resources
 ******************************************************************************************
 University courses
 ******************************************************************************************
-* [Stanford] Natural Language Processing - https://web.stanford.edu/class/cs224n/
-* [Stanford] Transformers United - https://web.stanford.edu/class/cs25/
-* [Stanford] Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
-* [Stanford] Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
-* [Stanford] Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
-* [Stanford] Deep generative models - https://deepgenerativemodels.github.io/
-* [Stanford] Systems for Machine Learning - https://cs229s.stanford.edu/fall2023/
-* [Stanford] Stanford MLSys Seminar - https://mlsys.stanford.edu/
-* [Stanford] Mining Massive Dataset - https://web.stanford.edu/class/cs246/
-* [CMU] Large Language Model Systems - https://llmsystem.github.io/llmsystem2024spring/
+* [stanford.edu] `cs224n Natural Language Processing <https://web.stanford.edu/class/cs224n/>`_
+* [stanford.edu] `cs25 Transformers United <https://web.stanford.edu/class/cs25/>`_
+* [stanford.edu] `cs330 Deep Multi-task and Meta Learning <https://cs330.stanford.edu/>`_
+* [stanford.edu] `cs224w Machine Learning with Graphs <https://web.stanford.edu/class/cs224w/>`_
+* [stanford.edu] `cs231n Convolutional Neural Networks for Visual Recognition <https://cs231n.github.io/>`_
+* [stanford.edu] `Deep generative models <https://deepgenerativemodels.github.io/>`_
+* [stanford.edu] `cs229s Systems for Machine Learning <https://cs229s.stanford.edu/fall2023/>`_
+* [stanford.edu] `Stanford MLSys Seminar <https://mlsys.stanford.edu/>`_
+* [stanford.edu] `cs246 Mining Massive Dataset <https://web.stanford.edu/class/cs246/>`_
+* [cs.cmu.edu] `Large Language Model Systems <https://llmsystem.github.io/llmsystem2024spring/>`_
+* [cs.cmu.edu] `15-496/15-859X: Computer Science Theory for the Information Age, Spring 2012 <https://www.cs.cmu.edu/~venkatg/teaching/CStheory-infoage/>`_
+* `aman.ai <https://aman.ai/>`_
 
 ******************************************************************************************
 LLMs
 ******************************************************************************************
 .. note::
 	* [Practical] `The Large Language Model Playbook <https://cyrilzakka.github.io/llm-playbook/index.html>`_
+	* [Practice] `masteringllm.com <https://www.masteringllm.com/#/home>`_
 	* [Sebastian Rachka] `Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
-	* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
+	* [pair.withgoogle.com] `Can Large Language Models Explain Their Internal Mechanisms? <https://pair.withgoogle.com/explorables/patchscopes/>`_
 	* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
-	* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
 	* `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
 	* `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
+	* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
 
-.. seealso::
+.. important::
 	* `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
 	* `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
 	* `Jarvis/HuggingGPT <https://github.com/microsoft/JARVIS>`_
@@ -88,6 +91,7 @@ LLMs
 	* `Scaling Transformer to 1M tokens and beyond with RMT <https://arxiv.org/pdf/2304.11062.pdf>`_
 	* `AI/ML/LLM/Transformer Models Timeline and List <https://ai.v-gar.de/ml/transformer/timeline/>`_
 	* `Think Before You Act: Unified Policy for Interleaving Language Reasoning with Actions <https://arxiv.org/pdf/2304.11063.pdf>`_
+	* `Generative Verifiers: Reward Modeling as Next-Token Prediction <https://arxiv.org/abs/2408.15240>`_
 
 ******************************************************************************************
 Applied LLMs
@@ -101,8 +105,9 @@ Applied LLMs
 	* [Github] Large Language Models Meet NLP: `Awesome-LLM-for-NLP <https://github.com/LightChen233/Awesome-LLM-for-NLP>`_
 	* [Github] Knowledge graphs (KGs) and large language models (LLMs): `KG-LLM-Papers <https://github.com/zjukg/KG-LLM-Papers>`_
 	* [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
+	* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
 
-.. seealso::
+.. important::
 	* `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
 	* `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
 	* `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
@@ -115,6 +120,12 @@ Applied LLMs
 	* `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
 	* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
 	* [Paper] `AI Agents That Matter <https://arxiv.org/pdf/2407.01502>`_
+	* `In Defense of RAG in the Era of Long-Context Language Models <https://arxiv.org/pdf/2409.01666>`_
+	* `Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach <https://arxiv.org/abs/2407.16833>`_
+	* `Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs <https://arxiv.org/abs/2408.00114>`_
+	* `Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting <https://arxiv.org/abs/2407.08223>`_
+	* `Graph Retrieval-Augmented Generation: A Survey <https://arxiv.org/abs/2408.08921>`_
+	* `Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering <https://arxiv.org/abs/2404.17723>`_
 
 ******************************************************************************************
 Must Read Papers
@@ -145,6 +156,7 @@ Must Read Papers
 		GLM, GLM: General Language Model Pretraining with Autoregressive Blank Infilling
 		MoE,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
 		MoE, Mixtral: Mixtral of Experts
+		MoE, OLMoE: Open Mixture-of-Experts Language Models
 		Seq2Seq, BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation Translation and Comprehension
 		Seq2Seq, T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
 		Multilingual, XLM: Cross-lingual Language Model Pretraining
@@ -153,6 +165,7 @@ Must Read Papers
 		Generalisation,Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
+		Scaling, Scaling Laws for Data Filtering -- Data Curation cannot be Compute Agnostic
 		Contrastive, E5: Text Embeddings by Weakly-Supervised Contrastive Pre-training
 		Contrastive, Unsupervised Dense Information Retrieval with Contrastive Learning
 		IR, Dense Passage Retrieval for Open-Domain Question Answering
@@ -169,7 +182,9 @@ Must Read Papers
 		LLM, RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment
 		LLM, On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes
 		LLM, DPO: Direct Preference Optimization: Your Language Model is Secretly a Reward Model
+		LLM, Understanding Reference Policies in Direct Preference Optimization
 		LLM, D2PO: Discriminator-Guided DPO with Response Evaluation Models
+		LLM, Aligning with Human Judgement: The Role of Pairwise Preference in Large Language Model Evaluators
 		LLM, RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
 		LLM, Large Language Models Are Latent Variable Models
 		Quant, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
@@ -178,8 +193,9 @@ Must Read Papers
 		Quant, SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
 		DiT, Scalable Diffusion Models with Transformers
 		DiT, Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
-		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
+		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution		
 		ViT, Long Context Transfer from Language to Vision
+		Multimodal, Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model
 		Eval, HELM: Holistic Evaluation of Language Models
 		Eval, MMLU: Measuring Massive Multitask Language Understanding
 		Eval, MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI
@@ -219,46 +235,26 @@ Must Read Papers
 		KG, Knowledge Graph Large Language Model (KG-LLM) for Link Prediction
 
 ******************************************************************************************
-Linear Algebra
+Math
 ******************************************************************************************
-
 * [3Blue1Brown] `Essence of linear algebra <https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab>`_
 * [MIT] `18.065 - Matrix Methods for Data Analysis <https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k>`_
-
-******************************************************************************************
-Calculus
-******************************************************************************************
-
 * [3Blue1Brown] `Essence of calculus <https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr>`_
+* [cs.princeton.edu] `High Dimensional Geometry, Curse of Dimensionality, Dimension Reduction <https://www.cs.princeton.edu/courses/archive/fall16/cos521/Lectures/lec9.pdf>`_
 * [Khan Academy] `Multivariable calculus <https://www.khanacademy.org/math/multivariable-calculus>`_
 * [University of Victoria] `MATH200: Calculus III: Multivariable Calculus <https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc_CvEy7xBKRQr6I214QJcd>`_
-
-******************************************************************************************
-Probability & Statistics
-******************************************************************************************
-
 * [MIT] `RES.6-012 Introduction to Probability <https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6>`_
 * [CMU] `36-705 - Intermediate Statistics <https://www.youtube.com/playlist?list=PLt2Pd5kunvJ6-wpJG9hlWlk47c76bm9L6>`_
 * [statisticsmatt] `Introduction to Mathematical Statistics with Illustrations using R <https://www.youtube.com/playlist?list=PLmM_3MA2HWpan-KlYp-QCbPHxMj5FK0TB>`_
-* `Mathematician uncovers methods to shrink sampling errors in large-dimensional data sets <https://phys.org/news/2023-03-mathematician-uncovers-methods-sampling-errors.html>`_
-
-******************************************************************************************
-Analysis
-******************************************************************************************
-
+* [phys.org] `Mathematician uncovers methods to shrink sampling errors in large-dimensional data sets <https://phys.org/news/2023-03-mathematician-uncovers-methods-sampling-errors.html>`_
 * [SO] `Pointwise vs. Uniform Convergence <https://math.stackexchange.com/questions/597765/pointwise-vs-uniform-convergence#915867>`_
-
-******************************************************************************************
-Complex Analysis
-******************************************************************************************
-
-* `Visual Complex Analysis <https://complex-analysis.com/content/table_of_contents.html>`_
+* [math.cornell.edu] `Linear ODE <https://e.math.cornell.edu/people/belk/writing/>`_
 
 ******************************************************************************************
 ML Theory
 ******************************************************************************************
-
 * [Goodfellow] `Deep Learning <https://www.deeplearningbook.org/>`_
+* [Dong] `Deep Reinforcement Learning <https://deepreinforcementlearningbook.org/>`_
 * [Roberts] `The Principles of Deep Learning Theory <https://arxiv.org/abs/2106.10165>`_
 * [Kevin Murphy] `Probabilistic Machine Learning book1 <https://probml.github.io/pml-book/book1.html>`_
 * [Kevin Murphy] `Probabilistic Machine Learning book2 <https://probml.github.io/pml-book/book2.html>`_
@@ -266,12 +262,14 @@ ML Theory
 * [Shwartz David] `Understanding Machine Learning - From Theory to Algorithms <https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf>`_
 * [Mohri] `Foundations of Machine Learning <https://cs.nyu.edu/~mohri/mlbook/>`_
 * [CMU] `11-785 Deep Learning <https://www.youtube.com/playlist?list=PLp-0K3kfddPxRmjgjm0P1WT6H-gTqE8j9>`_
+* [MIT] `Statistical Learning Theory and Applications <https://cbmm.mit.edu/lh-9-520/syllabus>`_
+* [GPSS] `Gaussian Process Summer School <https://gpss.cc/gpss23/program>`_
+* [NUS] `Graph Machine Learning course, 2023 <https://github.com/xbresson/GML2023>`_
 * `Yet Another Derivation of Backpropagation in Matrix Form <https://sudeepraja.github.io/BackpropAdjoints/>`_
 * `Gradients are Not All You Need <https://arxiv.org/pdf/2111.05803.pdf>`_
 * `The Decade of Deep Learning <https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/>`_
 * `Long-Tailed Learning Requires Feature Learning <https://openreview.net/pdf?id=S-h1oFv-mq>`_
-* `[MIT] Statistical Learning Theory and Applications <https://cbmm.mit.edu/lh-9-520/syllabus>`_
-* `[GPSS] Gaussian Process Summer School <https://gpss.cc/gpss23/program>`_
+* `A Survey on Deep Graph Generation: Methods and Applications <https://proceedings.mlr.press/v198/zhu22a.html>`_
 
 ******************************************************************************************
 ML Practical
@@ -318,7 +316,7 @@ ML Algorithms
 ******************************************************************************************
 ML Related Theory
 ******************************************************************************************
-
+* [nowpublishers.com] `Foundations and Trends® in Machine Learning <https://www.nowpublishers.com/MAL>`_
 * [MacKay] Information Throry Inference and Learning Algorithms
 * [Brunton Kutz] Data Driven Science and Engineering
 * [CUP] Probabilistic Numerics
@@ -423,7 +421,8 @@ Layoffs
 ******************************************************************************************
 Misc
 ******************************************************************************************
-
+* `Fully Dynamic k-Clustering with Fast Update Time and Small Recourse <https://arxiv.org/abs/2408.01325>`_
+* `Topology From The Ground Up: A Comic <https://processoveroutcome.substack.com/p/topology-from-the-ground-up?r=4irfl>`_
 * `Sampling - Interesting post on LinkedIn <https://www.linkedin.com/posts/sahil0094_sampling-trainingdata-machinelearnig-activity-7043559310324285440-58h2>`_
 * [Developer-Y] `CS Video Courses <https://github.com/Developer-Y/cs-video-courses>`_
 * `Openintro Statistics <https://www.openintro.org/book/os/>`_
