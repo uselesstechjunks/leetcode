@@ -434,6 +434,7 @@ LM Eval
 	* MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
 	* OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
 	* RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
+	* RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
 	* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
 
 .. seealso::
