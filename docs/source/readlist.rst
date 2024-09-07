@@ -182,6 +182,7 @@ Must Read Papers
 		LLM, RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment
 		LLM, On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes
 		LLM, DPO: Direct Preference Optimization: Your Language Model is Secretly a Reward Model
+		LLM, Understanding Reference Policies in Direct Preference Optimization
 		LLM, D2PO: Discriminator-Guided DPO with Response Evaluation Models
 		LLM, Aligning with Human Judgement: The Role of Pairwise Preference in Large Language Model Evaluators
 		LLM, RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
