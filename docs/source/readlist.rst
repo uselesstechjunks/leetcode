@@ -416,7 +416,7 @@ Layoffs
 ******************************************************************************************
 Misc
 ******************************************************************************************
-
+* `Fully Dynamic k-Clustering with Fast Update Time and Small Recourse <https://arxiv.org/abs/2408.01325>`_
 * `Topology From The Ground Up: A Comic <https://processoveroutcome.substack.com/p/topology-from-the-ground-up?r=4irfl>`_
 * `Sampling - Interesting post on LinkedIn <https://www.linkedin.com/posts/sahil0094_sampling-trainingdata-machinelearnig-activity-7043559310324285440-58h2>`_
 * [Developer-Y] `CS Video Courses <https://github.com/Developer-Y/cs-video-courses>`_
