@@ -145,6 +145,7 @@ Must Read Papers
 		GLM, GLM: General Language Model Pretraining with Autoregressive Blank Infilling
 		MoE,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
 		MoE, Mixtral: Mixtral of Experts
+		MoE, OLMoE: Open Mixture-of-Experts Language Models
 		Seq2Seq, BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation Translation and Comprehension
 		Seq2Seq, T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
 		Multilingual, XLM: Cross-lingual Language Model Pretraining
