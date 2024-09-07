@@ -157,6 +157,7 @@ Must Read Papers
 		Generalisation,Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets
 		Scaling, Scaling Laws for Neural Language Models
 		Scaling, Scaling Laws for Autoregressive Generative Modeling
+		Scaling, Scaling Laws for Data Filtering -- Data Curation cannot be Compute Agnostic
 		Contrastive, E5: Text Embeddings by Weakly-Supervised Contrastive Pre-training
 		Contrastive, Unsupervised Dense Information Retrieval with Contrastive Learning
 		IR, Dense Passage Retrieval for Open-Domain Question Answering
