@@ -89,6 +89,7 @@ LLMs
 	* `Scaling Transformer to 1M tokens and beyond with RMT <https://arxiv.org/pdf/2304.11062.pdf>`_
 	* `AI/ML/LLM/Transformer Models Timeline and List <https://ai.v-gar.de/ml/transformer/timeline/>`_
 	* `Think Before You Act: Unified Policy for Interleaving Language Reasoning with Actions <https://arxiv.org/pdf/2304.11063.pdf>`_
+	* `Generative Verifiers: Reward Modeling as Next-Token Prediction <https://arxiv.org/abs/2408.15240>`_
 
 ******************************************************************************************
 Applied LLMs
@@ -175,6 +176,7 @@ Must Read Papers
 		LLM, On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes
 		LLM, DPO: Direct Preference Optimization: Your Language Model is Secretly a Reward Model
 		LLM, D2PO: Discriminator-Guided DPO with Response Evaluation Models
+		LLM, Aligning with Human Judgement: The Role of Pairwise Preference in Large Language Model Evaluators
 		LLM, RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
 		LLM, Large Language Models Are Latent Variable Models
 		Quant, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
