@@ -21,6 +21,7 @@ Principle Component Analysis
 
 .. attention::
 	* This approach minimises the perpendicular distance of each data point to the singular vector directions.
+	* [SO] `What exactly should be called "projection matrix" in the context of PCA? <https://stats.stackexchange.com/questions/362841/what-exactly-should-be-called-projection-matrix-in-the-context-of-pca>`_
 
 ********************************************************************************
 Matrix Identities
