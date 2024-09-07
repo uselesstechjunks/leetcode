@@ -34,5 +34,6 @@ Entropy and Mutual Information
 	* As a special case of the above, :math:`H(X)\leq\lg(n)` and the equality holds when :math:`p_i=\frac{1}{n}` for all :math:`i`.
 
 
-.. seealso::
+.. important::
 	* Information Theory Notes from `Introduction To Renormalization <https://www.complexityexplorer.org/courses/67-introduction-to-renormalization/materials>`_
+	* [SO] `Estimate the Kullback–Leibler (KL) divergence with Monte Carlo <https://stats.stackexchange.com/questions/280885/estimate-the-kullback-leibler-kl-divergence-with-monte-carlo>`_
