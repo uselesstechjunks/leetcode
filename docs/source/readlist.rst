@@ -117,6 +117,7 @@ Applied LLMs
 	* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
 	* [Paper] `AI Agents That Matter <https://arxiv.org/pdf/2407.01502>`_
 	* `In Defense of RAG in the Era of Long-Context Language Models <https://arxiv.org/pdf/2409.01666>`_
+	* `Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs <https://arxiv.org/abs/2408.00114>`_
 
 ******************************************************************************************
 Must Read Papers
