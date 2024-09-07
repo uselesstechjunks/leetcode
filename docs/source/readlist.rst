@@ -227,38 +227,19 @@ Must Read Papers
 		KG, Knowledge Graph Large Language Model (KG-LLM) for Link Prediction
 
 ******************************************************************************************
-Linear Algebra
+Math
 ******************************************************************************************
-
 * [3Blue1Brown] `Essence of linear algebra <https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab>`_
 * [MIT] `18.065 - Matrix Methods for Data Analysis <https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k>`_
-
-******************************************************************************************
-Calculus
-******************************************************************************************
-
 * [3Blue1Brown] `Essence of calculus <https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr>`_
+* [cs.princeton.edu] `High Dimensional Geometry, Curse of Dimensionality, Dimension Reduction <https://www.cs.princeton.edu/courses/archive/fall16/cos521/Lectures/lec9.pdf>`_
 * [Khan Academy] `Multivariable calculus <https://www.khanacademy.org/math/multivariable-calculus>`_
 * [University of Victoria] `MATH200: Calculus III: Multivariable Calculus <https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc_CvEy7xBKRQr6I214QJcd>`_
-
-******************************************************************************************
-Probability & Statistics
-******************************************************************************************
-
 * [MIT] `RES.6-012 Introduction to Probability <https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6>`_
 * [CMU] `36-705 - Intermediate Statistics <https://www.youtube.com/playlist?list=PLt2Pd5kunvJ6-wpJG9hlWlk47c76bm9L6>`_
 * [statisticsmatt] `Introduction to Mathematical Statistics with Illustrations using R <https://www.youtube.com/playlist?list=PLmM_3MA2HWpan-KlYp-QCbPHxMj5FK0TB>`_
-* `Mathematician uncovers methods to shrink sampling errors in large-dimensional data sets <https://phys.org/news/2023-03-mathematician-uncovers-methods-sampling-errors.html>`_
-
-******************************************************************************************
-Analysis
-******************************************************************************************
-
+* [phys.org] `Mathematician uncovers methods to shrink sampling errors in large-dimensional data sets <https://phys.org/news/2023-03-mathematician-uncovers-methods-sampling-errors.html>`_
 * [SO] `Pointwise vs. Uniform Convergence <https://math.stackexchange.com/questions/597765/pointwise-vs-uniform-convergence#915867>`_
-
-******************************************************************************************
-ODE
-******************************************************************************************
 * [math.cornell.edu] `Linear ODE <https://e.math.cornell.edu/people/belk/writing/>`_
 
 ******************************************************************************************
