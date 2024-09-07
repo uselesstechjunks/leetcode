@@ -121,6 +121,7 @@ Applied LLMs
 	* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
 	* [Paper] `AI Agents That Matter <https://arxiv.org/pdf/2407.01502>`_
 	* `In Defense of RAG in the Era of Long-Context Language Models <https://arxiv.org/pdf/2409.01666>`_
+	* `Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach <https://arxiv.org/abs/2407.16833>`_
 	* `Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs <https://arxiv.org/abs/2408.00114>`_
 	* `Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting <https://arxiv.org/abs/2407.08223>`_
 	* `Graph Retrieval-Augmented Generation: A Survey <https://arxiv.org/abs/2408.08921>`_
