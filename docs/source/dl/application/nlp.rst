@@ -341,6 +341,10 @@ Retrieval Augmented
 	* Approximate Nearest Neighbour Search
 * Causal attention for decoder: GPT, Multimodal generation
 
+Pruning
+-----------------------------------------------------------------------------------------
+* LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference
+
 *****************************************************************************************
 LLM Technology Stack
 *****************************************************************************************
