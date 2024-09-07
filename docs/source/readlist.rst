@@ -55,16 +55,17 @@ Additional Resources
 ******************************************************************************************
 University courses
 ******************************************************************************************
-* [Stanford] Natural Language Processing - https://web.stanford.edu/class/cs224n/
-* [Stanford] Transformers United - https://web.stanford.edu/class/cs25/
-* [Stanford] Deep Multi-task and Meta Learning - https://cs330.stanford.edu/
-* [Stanford] Machine Learning with Graphs - https://web.stanford.edu/class/cs224w/
-* [Stanford] Convolutional Neural Networks for Visual Recognition - https://cs231n.github.io/
-* [Stanford] Deep generative models - https://deepgenerativemodels.github.io/
-* [Stanford] Systems for Machine Learning - https://cs229s.stanford.edu/fall2023/
-* [Stanford] Stanford MLSys Seminar - https://mlsys.stanford.edu/
-* [Stanford] Mining Massive Dataset - https://web.stanford.edu/class/cs246/
-* [CMU] Large Language Model Systems - https://llmsystem.github.io/llmsystem2024spring/
+* [stanford.edu] `cs224n Natural Language Processing <https://web.stanford.edu/class/cs224n/>`_
+* [stanford.edu] `cs25 Transformers United <https://web.stanford.edu/class/cs25/>`_
+* [stanford.edu] `cs330 Deep Multi-task and Meta Learning <https://cs330.stanford.edu/>`_
+* [stanford.edu] `cs224w Machine Learning with Graphs <https://web.stanford.edu/class/cs224w/>`_
+* [stanford.edu] `cs231n Convolutional Neural Networks for Visual Recognition <https://cs231n.github.io/>`_
+* [stanford.edu] `Deep generative models <https://deepgenerativemodels.github.io/>`_
+* [stanford.edu] `cs229s Systems for Machine Learning <https://cs229s.stanford.edu/fall2023/>`_
+* [stanford.edu] `Stanford MLSys Seminar <https://mlsys.stanford.edu/>`_
+* [stanford.edu] `cs246 Mining Massive Dataset <https://web.stanford.edu/class/cs246/>`_
+* [cs.cmu.edu] `Large Language Model Systems <https://llmsystem.github.io/llmsystem2024spring/>`_
+* [cs.cmu.edu] `15-496/15-859X: Computer Science Theory for the Information Age, Spring 2012 <https://www.cs.cmu.edu/~venkatg/teaching/CStheory-infoage/>`_
 * `aman.ai <https://aman.ai/>`_
 
 ******************************************************************************************
