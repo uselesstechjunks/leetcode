@@ -65,6 +65,7 @@ University courses
 * [Stanford] Stanford MLSys Seminar - https://mlsys.stanford.edu/
 * [Stanford] Mining Massive Dataset - https://web.stanford.edu/class/cs246/
 * [CMU] Large Language Model Systems - https://llmsystem.github.io/llmsystem2024spring/
+* `aman.ai <https://aman.ai/>`_
 
 ******************************************************************************************
 LLMs
