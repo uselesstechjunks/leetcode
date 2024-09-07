@@ -187,8 +187,9 @@ Must Read Papers
 		Quant, SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
 		DiT, Scalable Diffusion Models with Transformers
 		DiT, Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
-		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution
+		ViT, Patch n' Pack: NaViT - a Vision Transformer for any Aspect Ratio and Resolution		
 		ViT, Long Context Transfer from Language to Vision
+		Multimodal, Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model
 		Eval, HELM: Holistic Evaluation of Language Models
 		Eval, MMLU: Measuring Massive Multitask Language Understanding
 		Eval, MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI
