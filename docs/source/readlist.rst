@@ -249,8 +249,8 @@ Math
 ******************************************************************************************
 ML Theory
 ******************************************************************************************
-
 * [Goodfellow] `Deep Learning <https://www.deeplearningbook.org/>`_
+* [Dong] `Deep Reinforcement Learning <https://deepreinforcementlearningbook.org/>`_
 * [Roberts] `The Principles of Deep Learning Theory <https://arxiv.org/abs/2106.10165>`_
 * [Kevin Murphy] `Probabilistic Machine Learning book1 <https://probml.github.io/pml-book/book1.html>`_
 * [Kevin Murphy] `Probabilistic Machine Learning book2 <https://probml.github.io/pml-book/book2.html>`_
