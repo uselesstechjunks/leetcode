@@ -401,6 +401,7 @@ Retrieval Augmented Generation (RAG)
 	* [Nvidia] `RAG 101: Demystifying Retrieval-Augmented Generation Pipelines <https://resources.nvidia.com/en-us-ai-large-language-models/demystifying-rag-blog>`_
 	* [Nvidia] `RAG 101: Retrieval-Augmented Generation Questions Answered <https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/>`_
 	* [MSR] `From Local to Global: A Graph RAG Approach to Query-Focused Summarization <https://arxiv.org/pdf/2404.16130>`_
+	* [Neo4j] `The GraphRAG Manifesto: Adding Knowledge to GenAI <https://neo4j.com/blog/graphrag-manifesto/>`_
 
 Resources
 -----------------------------------------------------------------------------------------
