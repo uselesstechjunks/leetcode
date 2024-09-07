@@ -21,6 +21,7 @@ Practical
 .. note::
 	* [Paper] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
 	* [PapersWithCode] `Natural Language Processing <https://paperswithcode.com/area/natural-language-processing>`_ (check all relevant subcategories)
+	* `Hardware Acceleration of LLMs: A comprehensive survey and comparison <https://arxiv.org/pdf/2409.03384>`_
 
 *****************************************************************************************
 Activations
