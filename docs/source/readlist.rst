@@ -121,6 +121,8 @@ Applied LLMs
 	* [Paper] `AI Agents That Matter <https://arxiv.org/pdf/2407.01502>`_
 	* `In Defense of RAG in the Era of Long-Context Language Models <https://arxiv.org/pdf/2409.01666>`_
 	* `Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs <https://arxiv.org/abs/2408.00114>`_
+	* `Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting <https://arxiv.org/abs/2407.08223>`_
+	* `Graph Retrieval-Augmented Generation: A Survey <https://arxiv.org/abs/2408.08921>`_
 
 ******************************************************************************************
 Must Read Papers
@@ -256,12 +258,13 @@ ML Theory
 * [Shwartz David] `Understanding Machine Learning - From Theory to Algorithms <https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf>`_
 * [Mohri] `Foundations of Machine Learning <https://cs.nyu.edu/~mohri/mlbook/>`_
 * [CMU] `11-785 Deep Learning <https://www.youtube.com/playlist?list=PLp-0K3kfddPxRmjgjm0P1WT6H-gTqE8j9>`_
+* [MIT] `Statistical Learning Theory and Applications <https://cbmm.mit.edu/lh-9-520/syllabus>`_
+* [GPSS] `Gaussian Process Summer School <https://gpss.cc/gpss23/program>`_
+* [NUS] `Graph Machine Learning course, 2023 <https://github.com/xbresson/GML2023>`_
 * `Yet Another Derivation of Backpropagation in Matrix Form <https://sudeepraja.github.io/BackpropAdjoints/>`_
 * `Gradients are Not All You Need <https://arxiv.org/pdf/2111.05803.pdf>`_
 * `The Decade of Deep Learning <https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/>`_
 * `Long-Tailed Learning Requires Feature Learning <https://openreview.net/pdf?id=S-h1oFv-mq>`_
-* `[MIT] Statistical Learning Theory and Applications <https://cbmm.mit.edu/lh-9-520/syllabus>`_
-* `[GPSS] Gaussian Process Summer School <https://gpss.cc/gpss23/program>`_
 
 ******************************************************************************************
 ML Practical
