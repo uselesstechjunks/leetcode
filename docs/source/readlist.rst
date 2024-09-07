@@ -75,11 +75,11 @@ LLMs
 	* [Practical] `The Large Language Model Playbook <https://cyrilzakka.github.io/llm-playbook/index.html>`_
 	* [Practice] `masteringllm.com <https://www.masteringllm.com/#/home>`_
 	* [Sebastian Rachka] `Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
-	* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
+	* [pair.withgoogle.com] `Can Large Language Models Explain Their Internal Mechanisms? <https://pair.withgoogle.com/explorables/patchscopes/>`_
 	* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
-	* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
 	* `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
 	* `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
+	* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
 
 .. important::
 	* `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
@@ -105,6 +105,7 @@ Applied LLMs
 	* [Github] Large Language Models Meet NLP: `Awesome-LLM-for-NLP <https://github.com/LightChen233/Awesome-LLM-for-NLP>`_
 	* [Github] Knowledge graphs (KGs) and large language models (LLMs): `KG-LLM-Papers <https://github.com/zjukg/KG-LLM-Papers>`_
 	* [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
+	* [Stanford] `HELM - Holistic Evaluation of Language Models <https://crfm.stanford.edu/helm/latest/>`_
 
 .. important::
 	* `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
@@ -265,6 +266,7 @@ ML Theory
 * `Gradients are Not All You Need <https://arxiv.org/pdf/2111.05803.pdf>`_
 * `The Decade of Deep Learning <https://bmk.sh/2019/12/31/The-Decade-of-Deep-Learning/>`_
 * `Long-Tailed Learning Requires Feature Learning <https://openreview.net/pdf?id=S-h1oFv-mq>`_
+* `A Survey on Deep Graph Generation: Methods and Applications <https://proceedings.mlr.press/v198/zhu22a.html>`_
 
 ******************************************************************************************
 ML Practical
