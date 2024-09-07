@@ -48,6 +48,7 @@ Resources
 	* `Anthropic Research <https://www.anthropic.com/research>`_
 	* [neptune.ai] `6 GAN Architectures You Really Should Know  <https://neptune.ai/blog/6-gan-architectures>`_
 	* [calvinyluo.com] `Understanding Diffusion Models: A Unified Perspective <https://www.calvinyluo.com/2022/08/26/diffusion-tutorial.html>`_
+	* `Diffusion Augmented Agents: A Framework for Efficient Exploration and Transfer Learning <https://arxiv.org/abs/2407.20798>`_
 
 .. csv-table:: 
 	:header: "Year","Paper"
