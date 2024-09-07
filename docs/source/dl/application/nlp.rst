@@ -121,6 +121,7 @@ Position Encoding
 	* `Position Information in Transformers: An Overview <https://arxiv.org/abs/2102.11090>`_
 	* `Rethinking Positional Encoding in Language Pre-training <https://arxiv.org/abs/2006.15595>`_
 	* [Blog] `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
+	* [MSR] `LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens <https://arxiv.org/abs/2402.13753>`_
 	* RoFormer: `Enhanced Transformer with Rotary Position Embedding <https://arxiv.org/abs/2104.09864>`_
 
 Attention
