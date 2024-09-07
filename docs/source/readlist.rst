@@ -78,7 +78,7 @@ LLMs
 	* `Transformer Math 101 <https://blog.eleuther.ai/transformer-math/>`_
 	* `Large Language Models: Scaling Laws and Emergent Properties <https://cthiriet.com/articles/scaling-laws>`_
 
-.. seealso::
+.. important::
 	* `Generative Agents: Interactive Simulacra of Human Behavior <https://arxiv.org/pdf/2304.03442.pdf>`_
 	* `Locating and Editing Factual Associations in GPT <https://arxiv.org/pdf/2202.05262.pdf>`_
 	* `Jarvis/HuggingGPT <https://github.com/microsoft/JARVIS>`_
@@ -102,7 +102,7 @@ Applied LLMs
 	* [Github] Knowledge graphs (KGs) and large language models (LLMs): `KG-LLM-Papers <https://github.com/zjukg/KG-LLM-Papers>`_
 	* [Harvard] CS50 Tech Talk: `GPT-4 - How does it work, and how do I build apps with it? <https://www.youtube.com/watch?v=vw-KWfKwvTQ>`_
 
-.. seealso::
+.. important::
 	* `Freepik - A New Search for the New World <https://www.freepik.com/blog/new-search-new-world/>`_
 	* `Replacing my best friends with an LLM <https://www.izzy.co/blogs/robo-boys.html>`_
 	* `Become a 1000x engineer or die tryin <https://kadekillary.work/posts/1000x-eng/>`_
@@ -115,6 +115,7 @@ Applied LLMs
 	* `ChatGPT for your site <https://letterdrop.com/chatgpt?ref=hn>`_
 	* `Web LLM runs the vicuna-7b Large Language Model entirely in your browser <https://simonwillison.net/2023/Apr/16/web-llm/>`_
 	* [Paper] `AI Agents That Matter <https://arxiv.org/pdf/2407.01502>`_
+	* `In Defense of RAG in the Era of Long-Context Language Models <https://arxiv.org/pdf/2409.01666>`_
 
 ******************************************************************************************
 Must Read Papers
