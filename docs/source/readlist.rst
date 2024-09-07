@@ -308,7 +308,7 @@ ML Algorithms
 ******************************************************************************************
 ML Related Theory
 ******************************************************************************************
-
+* [nowpublishers.com] `Foundations and Trends® in Machine Learning <https://www.nowpublishers.com/MAL>`_
 * [MacKay] Information Throry Inference and Learning Algorithms
 * [Brunton Kutz] Data Driven Science and Engineering
 * [CUP] Probabilistic Numerics
