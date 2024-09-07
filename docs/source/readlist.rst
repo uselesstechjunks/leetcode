@@ -72,6 +72,7 @@ LLMs
 ******************************************************************************************
 .. note::
 	* [Practical] `The Large Language Model Playbook <https://cyrilzakka.github.io/llm-playbook/index.html>`_
+	* [Practice] `masteringllm.com <https://www.masteringllm.com/#/home>`_
 	* [Sebastian Rachka] `Understanding Large Language Models <https://magazine.sebastianraschka.com/p/understanding-large-language-models>`_
 	* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
 	* [MIT] `Self-Supervised Learning and Foundation Models <https://www.futureofai.mit.edu/>`_
