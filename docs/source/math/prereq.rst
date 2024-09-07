@@ -76,3 +76,9 @@ Lagrange polynomial
 
 Wavy Curve Method
 ===============================================================
+
+***********************************************
+Resources
+***********************************************
+.. note::
+	* [math.brown.edu] `Beyond the Third Dimension <https://www.math.brown.edu/tbanchof/Beyond3d/index.html>`_
