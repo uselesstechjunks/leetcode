@@ -17,6 +17,7 @@ Practical
 	* [tinkerd.net] `Writing CUDA Kernels for PyTorch <https://tinkerd.net/blog/machine-learning/cuda-basics/>`_
 	* [spaCy] `Library for NLU/IE Tasks <https://spacy.io/usage/spacy-101>`_, `LLM-variants <https://spacy.io/usage/large-language-models>`_
 	* [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
+	* [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
 
 .. note::
 	* [Paper] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
