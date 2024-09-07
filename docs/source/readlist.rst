@@ -125,6 +125,7 @@ Applied LLMs
 	* `Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs <https://arxiv.org/abs/2408.00114>`_
 	* `Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting <https://arxiv.org/abs/2407.08223>`_
 	* `Graph Retrieval-Augmented Generation: A Survey <https://arxiv.org/abs/2408.08921>`_
+	* `Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering <https://arxiv.org/abs/2404.17723>`_
 
 ******************************************************************************************
 Must Read Papers
