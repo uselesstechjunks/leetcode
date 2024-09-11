@@ -41,8 +41,9 @@ North Star
 Undergrad
 =====================================================================
 .. important::
-	* Based on `ISI B.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/bmath_new.pdf>`_ Curricula
-	* `Indian Statistical Institute, ISI MMATH 2023 PMB Solutions & Discussions <https://fractionshub.com/i-s-i-m-math-2023-solutions/>`_
+	* [Indian Statistical Institute] `B.Math Curricula <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/bmath_new.pdf>`_
+	* [Indian Statistical Institute] `MMATH 2023 PMB Solutions & Discussions <https://fractionshub.com/i-s-i-m-math-2023-solutions/>`_
+	* [ELLIS Society] `PhD & Postdoc Program <https://ellis.eu/phd-postdoc>`_
 
 Sem 1
 
