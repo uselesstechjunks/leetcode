@@ -26,7 +26,7 @@ Tech
 		* `Simple probes can catch sleeper agents <https://www.anthropic.com/research/probes-catch-sleeper-agents>`_
 		* `Challenges in evaluating AI systems <https://www.anthropic.com/research/evaluating-ai-systems>`_
 		* `AI Governance and Accountability: An Analysis of Anthropic's Claude <https://arxiv.org/pdf/2407.01557v1>`_
-		`Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Claude on Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
+		* `Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Claude on Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
 	* [mistral.ai] `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_ (`Mixtral on Bedrock <https://aws.amazon.com/bedrock/mistral/>`_)
 	* [ai.meta.com `Llama <https://ai.meta.com/blog/meta-llama-3/>`_ (`Llama on Bedrock <https://aws.amazon.com/bedrock/llama/>`_)
 	* [stability.ai] `Stable Diffusion <https://stability.ai/news/stable-diffusion-3-research-paper>`_ (`Stable Diffusion on Bedrock <https://aws.amazon.com/bedrock/stable-diffusion/>`_)
