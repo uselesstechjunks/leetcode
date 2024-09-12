@@ -2,10 +2,22 @@
 Multimodal
 ##############################################################################
 ******************************************************************************************
-Models in focus
+Diffusion
 ******************************************************************************************
-	* [anthropic.com] `Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Claude on Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
+.. important::
+	* [calvinyluo.com] `Understanding Diffusion Models: A Unified Perspective <https://www.calvinyluo.com/2022/08/26/diffusion-tutorial.html>`_
+	* [arxiv] `Tutorial on Diffusion Models for Imaging and Vision <https://arxiv.org/abs/2403.18103>`_
 
+.. seealso::
+	* `Diffusion Augmented Agents: A Framework for Efficient Exploration and Transfer Learning <https://arxiv.org/abs/2407.20798>`_
+
+******************************************************************************************
+Tech
+******************************************************************************************
+.. important::
+	* [anthropic.com] 
+
+		* `Anthropic Research <https://www.anthropic.com/research>`_
 		* `Towards Monosemanticity: Decomposing Language Models With Dictionary Learning <https://transformer-circuits.pub/2023/monosemantic-features>`_
 		* `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
 		* `Towards Understanding Sycophancy in Language Models <https://arxiv.org/abs/2310.13548>`_
@@ -14,22 +26,15 @@ Models in focus
 		* `Simple probes can catch sleeper agents <https://www.anthropic.com/research/probes-catch-sleeper-agents>`_
 		* `Challenges in evaluating AI systems <https://www.anthropic.com/research/evaluating-ai-systems>`_
 		* `AI Governance and Accountability: An Analysis of Anthropic's Claude <https://arxiv.org/pdf/2407.01557v1>`_
+		* `Claude <https://www.anthropic.com/news/claude-3-family>`_ (`Claude on Bedrock <https://aws.amazon.com/bedrock/claude/>`_)
 	* [mistral.ai] `Mixtral <https://mistral.ai/news/mixtral-of-experts/>`_ (`Mixtral on Bedrock <https://aws.amazon.com/bedrock/mistral/>`_)
 	* [ai.meta.com `Llama <https://ai.meta.com/blog/meta-llama-3/>`_ (`Llama on Bedrock <https://aws.amazon.com/bedrock/llama/>`_)
 	* [stability.ai] `Stable Diffusion <https://stability.ai/news/stable-diffusion-3-research-paper>`_ (`Stable Diffusion on Bedrock <https://aws.amazon.com/bedrock/stable-diffusion/>`_)
-	* [openai.com] `GPT-4o <https://openai.com/index/hello-gpt-4o/>`_
 	* [research.google] `Transformers in music recommendation <https://research.google/blog/transformers-in-music-recommendation/>`_
 	* [blog.google] `Gemini <https://blog.google/technology/ai/google-gemini-ai/>`_
+	* [openai.com]
 
-Resources
-==============================================================================
-.. note::
-	* Yann LeCun
-
-		* `Google Scholar Page <https://scholar.google.com/citations?hl=en&user=WLN3QrAAAAAJ&view_op=list_works&sortby=pubdate>`_
-		* `Arxiv Page <https://arxiv.org/find/all/1/all:+AND+yann+lecun/0/1/0/all/0/1>`_
-	* OpenAI
-
+		* `GPT-4o <https://openai.com/index/hello-gpt-4o/>`_
 		* [DALL·E]: `Creating images from text <https://openai.com/index/dall-e/>`_
 		* [SoRa]: `Video generation models as world simulators <https://openai.com/index/video-generation-models-as-world-simulators/>`_
 		* `DALL·E 2 <https://openai.com/index/dall-e-2/>`_
@@ -45,11 +50,22 @@ Resources
 
 			* `Category: Amazon Machine Learning <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/amazon-machine-learning/>`_
 			* `Category: Generative AI <https://aws.amazon.com/blogs/aws/category/artificial-intelligence/generative-ai/>`_
-	* `Anthropic Research <https://www.anthropic.com/research>`_
-	* [neptune.ai] `6 GAN Architectures You Really Should Know  <https://neptune.ai/blog/6-gan-architectures>`_
-	* [calvinyluo.com] `Understanding Diffusion Models: A Unified Perspective <https://www.calvinyluo.com/2022/08/26/diffusion-tutorial.html>`_
-	* `Diffusion Augmented Agents: A Framework for Efficient Exploration and Transfer Learning <https://arxiv.org/abs/2407.20798>`_
 
+******************************************************************************************
+Resources
+******************************************************************************************
+Misc
+==========================================================================================
+.. note::
+	* Yann LeCun
+
+		* `Google Scholar Page <https://scholar.google.com/citations?hl=en&user=WLN3QrAAAAAJ&view_op=list_works&sortby=pubdate>`_
+		* `Arxiv Page <https://arxiv.org/find/all/1/all:+AND+yann+lecun/0/1/0/all/0/1>`_
+		
+	* [neptune.ai] `6 GAN Architectures You Really Should Know  <https://neptune.ai/blog/6-gan-architectures>`_
+
+Paper List
+==========================================================================================
 .. csv-table:: 
 	:header: "Year","Paper"
 	:align: center
@@ -86,11 +102,3 @@ Resources
 		2015,Unsupervised learning of video representations using lstms
 		2015,Deep unsupervised learning using nonequilibrium thermodynamics
 		2013,Auto-encoding variational bayes
-
-******************************************************************************
-Vision
-******************************************************************************
-Image Classification
-==============================================================================
-Image Generation
-==============================================================================
