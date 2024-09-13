@@ -1,6 +1,9 @@
 How to math
 ##########################
 
+.. important::
+	* [reddit] `efrique's comment on [Q] Can you remember everything?  <https://www.reddit.com/r/statistics/s/69pahpYxkN>`_
+
 (From the book `How To Think Like a Mathematician - Kevin Houston <https://www.amazon.com/How-Think-Like-Mathematician-Undergraduate/dp/052171978X>`_)
 
 Basic reading suggestions
