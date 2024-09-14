@@ -64,6 +64,7 @@ University courses
 * [stanford.edu] `cs229s Systems for Machine Learning <https://cs229s.stanford.edu/fall2023/>`_
 * [stanford.edu] `Stanford MLSys Seminar <https://mlsys.stanford.edu/>`_
 * [stanford.edu] `cs246 Mining Massive Dataset <https://web.stanford.edu/class/cs246/>`_
+* [stanford.edu] `Math 104 Applied Matrix Theory <https://candes.su.domains/teaching/math104/>`_
 * [cs.cmu.edu] `Large Language Model Systems <https://llmsystem.github.io/llmsystem2024spring/>`_
 * [cs.cmu.edu] `15-496/15-859X: Computer Science Theory for the Information Age, Spring 2012 <https://www.cs.cmu.edu/~venkatg/teaching/CStheory-infoage/>`_
 * `aman.ai <https://aman.ai/>`_
