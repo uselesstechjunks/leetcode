@@ -38,100 +38,24 @@ This refers to the application to *real-world* problems. For example, we can com
 *********************************************************************
 North Star
 *********************************************************************
-Undergrad
+Broad Areas
 =====================================================================
+.. important::
+	* `Mathematical physics <https://en.wikipedia.org/wiki/Mathematical_physics>`_
+
+		* [ncatlab.org] `quantum field theory <https://ncatlab.org/nlab/show/quantum+field+theory>`_
+
+Minimal Base
+=====================================================================
+Undergrad Math
+---------------------------------------------------------------------
 .. important::
 	* [Indian Statistical Institute] `B.Math Curricula <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/bmath_new.pdf>`_
-	* [Indian Statistical Institute] `MMATH 2023 PMB Solutions & Discussions <https://fractionshub.com/i-s-i-m-math-2023-solutions/>`_
-	* [ELLIS Society] `PhD & Postdoc Program <https://ellis.eu/phd-postdoc>`_
-	* [Statistics HC{] `Online Course Offerings <https://statistics.stanford.edu/graduate-programs/statistics-ms/statistics-hcp-online-course-offerings>`_
+	* [Indian Statistical Institute] `MMATH 2023 PMB Solutions & Discussions <https://fractionshub.com/i-s-i-m-math-2023-solutions/>`_	
 
-Sem 1
-
-	- Real Analysis [single variable] - Apostol, Tao [up to integration]
-	- Linear Algebra - Rao [chapter 1], Horn & Johnson, Axler
-	- Probabilty - Feller [text] Pitman [problems], Ross
-	- Number Theory - Niven
-
-Sem 2
-
-	- Real Analysis [single variable] - Apostol, Tao [integration onwards]
-	- Linear Algebra - Rao [chapter 1], Horn & Johnson, Axler
-	- Probabilty - Feller [text] Pitman [problems], Ross
-
-Sem 3
-
-	- Multivariate Analysis - Dineen
-	- Group Theory - Dummit Foote, Artin
-	- Probability - Lanchier, Feller, Pitman, Ross
-	- Statistical Inference - Casella Berger, Lehamann
-
-Sem 4
-
-	- Topology - Munkres, Janich
-	- Rings and Modules - Dummit Foote, Artin
-	- Stochastic Process - Lanchier
-	- Linear Models and Regression - Rao, Weisberg
-	- Ordinary Differential Equations - ??
-
-Sem 5
-
-	- Function Spaces - ??
-	- Field and Galois Theory - Dummit Foote, Artin
-	- Information Theory - Cover & Thomas, Kullback	
-	- Statistical Methods - Lehmann Nonparametrics, Berger Statistical Decision Theory, Gelman Bayesian Data Analysis
-	- Algebraic Geometry - ??
-	- Algebraic Topology - ??
-
-Sem 6
-
-	- Complex Analysis - Conway, Needham
-	- Optimization - Boyd, Bertsekas, Rockafeller
-	- Mathematics for Data Science - Vershynin, Wainwright, Hastie, Blum, Murphy
-	- Differential Geometry - ??
-	- Differential Topology - ??
-	- Dynamical System - ??
-
-Grad School
-=====================================================================
+Grad Math
+---------------------------------------------------------------------
 .. important::
-	* Based on `ISI M.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/mmath_new.pdf>`_ Curricula
-
-Sem 1
-
-	- Measure Theory - Royden
-	- Linear Algebra - Halmos Finite Dimensional Vector Spaces
-	- Algebra - Lang
-	- Topology - ??
-	- Multivariate Analysis - Spivak, Mukherjea
-
-Sem 2
-
-	- Complex Analysis - Ahlfros, Stein Shakarchi
-	- Functional Analysis - Rudin, Conway
-	- Topology - ??
-	- Algebra - Rotman
-	- Number Theory - ??
-
-Sem 3
-
-	- Differential Geometry - ??
-	- Probabilty - Durret, Billingsley
-	- Fourier Analysis - Stein Shakarchi, Rudin
-	- Topics in Discrete Probabilty - ??
-	- Advanced Functional Analysis - ??
-
-Sem 4
-
-	- Partial Differential Equations - ??
-	- Differential Topology - ??
-	- Random Measures and Geometry - ??
-	- Dynamical System - ??
-	- Topics in Gaussian Processes - ??
-
-Esoteric
-
-	- Martingle Theory - ??
-	- Theory of Large Deviations - ??
-	- Brownian Motion and Diffusions - ??
-	- Weak Convergence and Empirical Processes - ??
+	* Based on `ISI M.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/mmath_new.pdf>`_ Curricula	
+	* [stanford.edu] `Online Course Offerings <https://statistics.stanford.edu/graduate-programs/statistics-ms/statistics-hcp-online-course-offerings>`_
+	* [ellis.eu] `PhD & Postdoc Program <https://ellis.eu/phd-postdoc>`_
