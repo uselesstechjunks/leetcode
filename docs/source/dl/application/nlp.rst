@@ -492,89 +492,93 @@ Synergized KG LLM
 - RecSys: Is chatgpt a good recommender? a preliminary study
 - AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
 
-Summary
------------------------------------------------------------------------------------------
+RAG Key Paper Summary
+=========================================================================================
 .. note::
 	* x = query
 	* z = doc
 	* y = output
 
-* Frozen RAG:
+Frozen RAG
+-----------------------------------------------------------------------------------------
+In-context
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. important::
+	RALM
 
-	- In-context:
+		- Retrieve k documents Z_k.
+		- Rerank the docs using (1) zero-shot LM or (2) dedicated trained ranker.
+		- Select top doc Z_top.
+		- Prepend top doc in textual format as-is to the query as a part of the prompt for the LM to generate.
+		- What we pass to the decoder: prompt with Z_top in it.
+		- Issues: problematic for multiple docs (!)
+In-context/Seq2Seq/Decoder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. important::
+	RePLUG
 
-		(a) In context RALM:
+		- Retrieve k documents.
+		- Use cosine similarity score to compute p(Z_k | X).
+		- What we pass to the decoder: concat{Z_k, X} or prompt with Z_k in it.
+		- Make k forward passes in the decoder for each token to compute the likelihood over vocab using softmax p(Y_i | concat{Z_k, X}, Y_1..{i-1}).
+		- Rescale the softmax with p(Z_k | X) and marginalize.
+		- Pass the marginalized softmax to the decoder.
+		- Issues: k forward passes at each token.
+Decoder Only
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. important::
+	kNN-LN
+	
+		- For the current token consider X = encode(Y_1...Y_{i-1}).
+		- Retrieve k documents Z_k matching X.
+		- Make k forward passes in the decoder with the matching doc p_k(Y_i | Z_1..{i-1}).
+		- Rescale p_k(Y_i | Z_1..{i-1}) over k and marginalize over the next token Y_i.
+		- Do the same in the original sequence p_decode(Y_i | Z_1..{i-1}).
+		- Interpolate between these using a hyperparameter.
+		- Issues: k forward passes + retrieval at each token.
+Retriever trainable RAG
+-----------------------------------------------------------------------------------------
+Seq2Seq
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. important::
+	RePLUG-LSR
 
-			- Retrieve k documents Z_k.
-			- Rerank the docs using (1) zero-shot LM or (2) dedicated trained ranker.
-			- Select top doc Z_top.
-			- Prepend top doc in textual format as-is to the query as a part of the prompt for the LM to generate.
-			- What we pass to the decoder: prompt with Z_top in it.
-			- Issues: problematic for multiple docs (!)
-	- In-context or in Seq2Seq or in decoder:
+		- Uses the parametric LM's output to update the retriever.
+		- Loss: KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
 
-		(b) RePLUG:
+E2E trainable RAG
+-----------------------------------------------------------------------------------------
+Seq2Seq
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. important::
+	* RAG
 
-			- Retrieve k documents.
-			- Use cosine similarity score to compute p(Z_k | X).
-			- What we pass to the decoder: concat{Z_k, X} or prompt with Z_k in it.
-			- Make k forward passes in the decoder for each token to compute the likelihood over vocab using softmax p(Y_i | concat{Z_k, X}, Y_1..{i-1}).
-			- Rescale the softmax with p(Z_k | X) and marginalize.
-			- Pass the marginalized softmax to the decoder.
-			- Issues: k forward passes at each token.
-	- Just decoder:
+		- Per token: same as RePLUG - output probability is marginalised at the time of generation of each token, pass it to beam decoder.
+		- Per sequence: output probability is marginalised for the entire sequence.
 
-		(c) kNN-LN:
+			- Results in #Y generated sequences.
+			- Might require additional passes.
 
-			- For the current token consider X = encode(Y_1...Y_{i-1}).
-			- Retrieve k documents Z_k matching X.
-			- Make k forward passes in the decoder with the matching doc p_k(Y_i | Z_1..{i-1}).
-			- Rescale p_k(Y_i | Z_1..{i-1}) over k and marginalize over the next token Y_i.
-			- Do the same in the original sequence p_decode(Y_i | Z_1..{i-1}).
-			- Interpolate between these using a hyperparameter.
-			- Issues: k forward passes + retrieval at each token.
-* Retriever trainable RAG:
+		- Training - NLL loss across predicted tokens.
+		- Issues: E2E training makes doc index update problematic, solution: just update the query encoder.
+	* Atlas
 
-	- Seq2Seq:
+		- Multiple choice for updating the retriever - simple RePLUG-LSR type formulation based on the KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
+		- Pre-training: same objective as the Seq2Seq (prefixLM or MLM) or decoder-only objective works well.
+		- Training:
+		- Issues:
 
-		(a) RePLUG-LSR:
-
-			- Uses the parametric LM's output to update the retriever.
-			- Loss: KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
-* E2E trainable RAG:
-
-	- Seq2Seq:
-
-		(a) RAG:
-
-			- Per token: same as RePLUG - output probability is marginalised at the time of generation of each token, pass it to beam decoder.
-			- Per sequence: output probability is marginalised for the entire sequence.
-
-				- Results in #Y generated sequences.
-				- Might require additional passes.
-
-			- Training - NLL loss across predicted tokens.
-			- Issues: E2E training makes doc index update problematic, solution: just update the query encoder.
-		(b) Atlas:
-
-			- Multiple choice for updating the retriever - simple RePLUG-LSR type formulation based on the KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
-			- Pre-training: same objective as the Seq2Seq (prefixLM or MLM) or decoder-only objective works well.
-			- Training:
-			- Issues:
-
-* RAG for Gloval Knowledge
-
-	- baseline rag struggles
-
+RAG for Global Knowledge
+-----------------------------------------------------------------------------------------
+.. important::
+	- Baseline rag struggles
+	
 		- answering a question requires traversing disparate pieces of information through their shared attributes
 		- holistically understand summarized semantic concepts over large data collections or even singular large documents.
-
-	- graph rag: https://microsoft.github.io/graphrag/
-
-		.. note::
-
-			Steps:
 	
+	- Graph rag: https://microsoft.github.io/graphrag/
+	
+		.. note::
 			- Source documents -> Text Chunks: Note: Tradeoff P/R in chunk-size with number of LLM calls vs quality of extraction (due to lost in the middle)
 			- Text Chunks -> Element Instances: 
 			
@@ -598,12 +602,12 @@ Summary
 				- Abstractive vs extractive
 				- Generic vs query-focused
 				- Single document vs multi-document
-
+	
 		- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
 		- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
 		- At query time, both of these structures are used to provide materials for the LLM context window when answering a question.	
 		- eval:
-
+	
 			- comprehensiveness (completeness within the framing of the implied context of the question)
 			- human enfranchisement (provision of supporting source material or other contextual information)
 			- diversity (provision of differing viewpoints or angles on the question posed)
