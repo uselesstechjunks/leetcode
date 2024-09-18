@@ -9,6 +9,7 @@ Practical
 	* [huggingface] `LLM Inference at scale with TGI <https://huggingface.co/blog/martinigoyanes/llm-inference-at-scale-with-tgi>`_
 	* [newsletter.maartengrootendorst.com] `A Visual Guide to Quantization <https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization>`_
 	* [vLLM] `Easy, Fast, and Cheap LLM Serving with PagedAttention <https://blog.vllm.ai/2023/06/20/vllm.html>`_
+	* [HuggingFace Blog] `Fine-tuning LLMs to 1.58bit: extreme quantization made easy <https://huggingface.co/blog/1_58_llm_extreme_quantization>`_
 	* [Paper] `Data Movement Is All You Need: A Case Study on Optimizing Transformers <https://arxiv.org/abs/2007.00072>`_
 	* [Video] `Profiling PyTorch Models for NVIDIA GPUs <https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31644/>`_	
 	* [pytorch.org] `What Every User Should Know About Mixed Precision Training in PyTorch <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/>`_
