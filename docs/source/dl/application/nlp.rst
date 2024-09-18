@@ -570,6 +570,29 @@ Graph RAG
 			- Diversity (provision of differing viewpoints or angles on the question posed)
 			- Selfcheckgpt
 
+LLM vs LC
+-----------------------------------------------------------------------------------------
+.. important::
+	- RAG FTW: Xu et al (NVDA): RETRIEVAL MEETS LONG CONTEXT LARGE LANGUAGE MODELS (Jan 2024)
+
+		- Compares between 4k+RAG and 16k/32k LC finetuned with rope trick with 40B+ models
+		- Scroll and long bench
+	- LC FTW: Li et al (DM): Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach (Jul 2024)
+
+		- Systematized the eval framework using infty-bench EN.QA (~150k) and EN.MC (~142k) and 7 datasets from long-bench (<20k)
+		- 60% of the cases RAG and LC agrees (even makes the same mistakes)
+		- Cases where RAG fails 
+
+			(a) multi-hop retrieval 
+			(b) general query where semantic similarity doesn't make sense 
+			(c) long and complex query 
+			(d) implicit query requiring a holistic view of the context
+		- Key contribution: Proposes self-reflectory approach with RAG first with an option to respond "unanswerable", then LC
+	- RAG FTW: Wu et al (NVDA): In Defense of RAG in the Era of Long-Context Language Models (Sep 2024)
+
+		- Same eval method as the above
+		- Key contribution: keep the chunks in the same order as they appear in the original text instead of ordering them based on sim measure
+
 LM Eval
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
