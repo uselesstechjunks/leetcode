@@ -437,60 +437,14 @@ Trained RAG
 		* `Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering <https://arxiv.org/pdf/2210.02627v1>`_
 		* `FINE-TUNE THE ENTIRE RAG ARCHITECTURE (INCLUDING DPR RETRIEVER) FOR QUESTION-ANSWERING <https://arxiv.org/pdf/2106.11517v1>`_
 
-LM Eval
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
-	* OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
-	* RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
-	* RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
-	* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
-
-.. seealso::
-	* `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
-
 Tech Stack
------------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
 	* [LlamaIndex] `RAG pipeline with Llama3 <https://docs.llamaindex.ai/en/stable/examples/cookbooks/llama3_cookbook/#lets-build-rag-pipeline-with-llama3>`_
 	* [Huggingface] `Simple RAG for GitHub issues using Hugging Face Zephyr and LangChain <https://huggingface.co/learn/cookbook/en/rag_zephyr_langchain>`_
 	* [Huggingface] `Advanced RAG on Hugging Face documentation using LangChain <https://huggingface.co/learn/cookbook/en/advanced_rag>`_
 	* [Huggingface] `RAG Evaluation <https://huggingface.co/learn/cookbook/en/rag_evaluation>`_
 	* [Huggingface] `Building A RAG Ebook “Librarian” Using LlamaIndex <https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian>`_
-
-LLM and KG
-=========================================================================================
-.. seealso::
-	* Unifying Large Language Models and Knowledge Graphs: A Roadmap
-	* QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering
-	* SimKGC: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models
-
-KG-enhanced LLMs
------------------------------------------------------------------------------------------
-- pre-training:
-
-	- ERNIE: Enhanced language representation with informative entities
-	- Knowledge-aware language model pretraining
-- inference time:
-
-	- Retrieval-augmented generation for knowledge intensive nlp tasks
-- KG for facts LLM for reasoning:
-
-	- Language models as knowledge bases?
-	- KagNet: Knowledgeaware graph networks for commonsense reasoning
-
-LLM enhanced KGs: KG completion and KG reasoning
------------------------------------------------------------------------------------------
-- LLMs for Knowledge Graph Construction and Reasoning
-- Pretrain-KGE: Learning Knowledge Representation from Pretrained Language Models
-- From Discrimination to Generation: Knowledge Graph Completion with Generative Transformer
-
-Synergized KG LLM
------------------------------------------------------------------------------------------
-- KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation
-- Search: LaMDA: Language Models for Dialog Applications
-- RecSys: Is chatgpt a good recommender? a preliminary study
-- AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
 
 RAG Key Paper Summary
 =========================================================================================
@@ -615,6 +569,52 @@ Graph RAG
 			- Human enfranchisement (provision of supporting source material or other contextual information)
 			- Diversity (provision of differing viewpoints or angles on the question posed)
 			- Selfcheckgpt
+
+LM Eval
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+	* MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
+	* OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
+	* RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
+	* RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
+	* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
+
+.. seealso::
+	* `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
+
+LLM and KG
+=========================================================================================
+.. seealso::
+	* Unifying Large Language Models and Knowledge Graphs: A Roadmap
+	* QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering
+	* SimKGC: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models
+
+KG-enhanced LLMs
+-----------------------------------------------------------------------------------------
+- pre-training:
+
+	- ERNIE: Enhanced language representation with informative entities
+	- Knowledge-aware language model pretraining
+- inference time:
+
+	- Retrieval-augmented generation for knowledge intensive nlp tasks
+- KG for facts LLM for reasoning:
+
+	- Language models as knowledge bases?
+	- KagNet: Knowledgeaware graph networks for commonsense reasoning
+
+LLM enhanced KGs: KG completion and KG reasoning
+-----------------------------------------------------------------------------------------
+- LLMs for Knowledge Graph Construction and Reasoning
+- Pretrain-KGE: Learning Knowledge Representation from Pretrained Language Models
+- From Discrimination to Generation: Knowledge Graph Completion with Generative Transformer
+
+Synergized KG LLM
+-----------------------------------------------------------------------------------------
+- KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation
+- Search: LaMDA: Language Models for Dialog Applications
+- RecSys: Is chatgpt a good recommender? a preliminary study
+- AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
 
 *****************************************************************************************
 Task Specific Setup
