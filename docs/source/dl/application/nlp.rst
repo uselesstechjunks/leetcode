@@ -512,6 +512,7 @@ In-context
 		- Prepend top doc in textual format as-is to the query as a part of the prompt for the LM to generate.
 		- What we pass to the decoder: prompt with Z_top in it.
 		- Issues: problematic for multiple docs (!)
+
 In-context/Seq2Seq/Decoder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. important::
@@ -524,6 +525,7 @@ In-context/Seq2Seq/Decoder
 		- Rescale the softmax with p(Z_k | X) and marginalize.
 		- Pass the marginalized softmax to the decoder.
 		- Issues: k forward passes at each token.
+
 Decoder Only
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. important::
@@ -536,6 +538,7 @@ Decoder Only
 		- Do the same in the original sequence p_decode(Y_i | Z_1..{i-1}).
 		- Interpolate between these using a hyperparameter.
 		- Issues: k forward passes + retrieval at each token.
+
 Retriever trainable RAG
 -----------------------------------------------------------------------------------------
 Seq2Seq
@@ -568,7 +571,7 @@ Seq2Seq
 		- Training:
 		- Issues:
 
-RAG for Global Knowledge
+Graph RAG
 -----------------------------------------------------------------------------------------
 .. important::
 	- Baseline rag struggles
@@ -576,7 +579,7 @@ RAG for Global Knowledge
 		- answering a question requires traversing disparate pieces of information through their shared attributes
 		- holistically understand summarized semantic concepts over large data collections or even singular large documents.
 	
-	- Graph rag: https://microsoft.github.io/graphrag/
+	- Graph RAG: https://microsoft.github.io/graphrag/
 	
 		.. note::
 			- Source documents -> Text Chunks: Note: Tradeoff P/R in chunk-size with number of LLM calls vs quality of extraction (due to lost in the middle)
@@ -606,12 +609,12 @@ RAG for Global Knowledge
 		- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
 		- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
 		- At query time, both of these structures are used to provide materials for the LLM context window when answering a question.	
-		- eval:
+		- Eval:
 	
-			- comprehensiveness (completeness within the framing of the implied context of the question)
-			- human enfranchisement (provision of supporting source material or other contextual information)
-			- diversity (provision of differing viewpoints or angles on the question posed)
-			- selfcheckgpt
+			- Comprehensiveness (completeness within the framing of the implied context of the question)
+			- Human enfranchisement (provision of supporting source material or other contextual information)
+			- Diversity (provision of differing viewpoints or angles on the question posed)
+			- Selfcheckgpt
 
 *****************************************************************************************
 Task Specific Setup
