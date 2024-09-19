@@ -2,7 +2,21 @@
 Machine Learning Applications
 ###############################################################################
 *******************************************************************************
-Resources
+Coding Resources
+*******************************************************************************
+.. important::
+	* [pytorch.org] `PyTorch Tutorials <https://pytorch.org/tutorials/>`_
+	* [rush-nlp] `Tensor Puzzles <https://github.com/srush/Tensor-Puzzles>`_
+	* [cs230.stanford.edu] `Introduction to Pytorch Code Examples <https://cs230.stanford.edu/blog/pytorch/>`_
+
+.. attention::
+	* [Book] `Learn PyTorch for Deep Learning: Zero to Mastery <https://www.learnpytorch.io/>`_
+
+.. tip::
+	* [github.com] `The Incredible PyTorch <https://github.com/ritchieng/the-incredible-pytorch>`_
+
+*******************************************************************************
+Design Resources
 *******************************************************************************
 .. important::
 	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
@@ -15,7 +29,7 @@ Resources
 	* [tableau.com] `10 Great Machine Learning (ML) and Artificial Intelligence (AI) Blogs To Follow <https://www.tableau.com/learn/articles/blogs-about-machine-learning-artificial-intelligence>`_
 	* [towardsdatascience] `What's WRONG with Metrics? <https://towardsdatascience.com/choosing-the-right-metric-is-a-huge-issue-99ccbe73de61>`_
 
-.. seealso::
+.. tip::
 	#. Designing Machine Learning Systems - Chip Huyen
 	#. `Machine Learning Yearning - Andrew Ng <https://www.deeplearning.ai/wp-content/uploads/2021/01/andrew-ng-machine-learning-yearning.pdf>`_
 	#. Feature Engineering - O'Reilly
@@ -23,62 +37,6 @@ Resources
 	#. `Being a Data Scientist does not make you a Software Engineer! - Towards Data Science <https://towardsdatascience.com/being-a-data-scientist-does-not-make-you-a-software-engineer-c64081526372>`_
 	#. `Machine Learning Crash Course - Google Developers <https://developers.google.com/machine-learning/crash-course/>`_
 	#. Ace The Data Science Interview
-
-*******************************************************************************
-ML Case-Studies
-*******************************************************************************
-
-*******************************************************************************
-ML System Design
-*******************************************************************************
-#. General Framework
-#. Some Examples
-
-	#. Design news feed ranking
-	#. Design localised search ranking
-	#. Generate Spotify's discover weekly playlist
-	#. Build a video recommendation system for YouTube users
-	#. Design a friend recommendation system
-	#. Build an advertising bidding system that presents personalized ads to users
-	#. Design a machine learning system that can identify fraudulent transactions
-
-*******************************************************************************
-Metrics
-*******************************************************************************
-#. Classification Metrics
-
-	#. Accuracy
-	#. Precision
-	#. Recall
-	#. F-measure
-	#. Kappa
-	#. AUC
-	#. LogLoss
-#. Learning to rank Metrics
-
-	#. Precision@k
-	#. AP@k
-	#. MAP@k
-	#. CG@k
-	#. DCG@k
-	#. NDCG@k
-#. Regression Metrics
-
-	#. Mean Absolute Error (MAE)
-	#. Root Mean Squared Error (RMSE)
-	#. R-squared
-	#. Adjusted R-squared
-#. NLP/NLG Metrics
-
-	#. BLEU (Bilingual Evaluation Understudy)
-	#. ROUGE (Recall-Oriented Understudy for Gisting Evaluation)
-#. Speech Recognition Metrics
-
-	#. WER (Word error rate)
-#. Other Metrics
-
-	#. RIG (Relative Information Gain)
-	#. Calibration Plot
 
 *******************************************************************************
 General Principles
