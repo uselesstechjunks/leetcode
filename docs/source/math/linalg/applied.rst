@@ -60,6 +60,7 @@ Einstein Summation
 Resources
 ********************************************************************************
 .. important::
+	* [Georgia Tech] `Interactive Linear Algebra <https://textbooks.math.gatech.edu/ila/index.html>`_
 	* `Matrix Cookbook <https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf>`_
 	* `Tensor Cookbook <https://tensorcookbook.com/>`_
 	* [Minka] `Old and New Matrix Algebra Useful for Statistics <https://tminka.github.io/papers/matrix/minka-matrix.pdf>`_
