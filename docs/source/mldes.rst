@@ -21,6 +21,7 @@ Design Resources
 .. important::
 	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
 	* [blog.google] `AI <https://blog.google/technology/ai/>`_
+	* [blogs.bing] `Bing Blogs - The news, trends, people and technology behind Bing <https://blogs.bing.com/>`_
 	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [Snapchat] `Machine Learning for Snapchat Ad Ranking <https://eng.snap.com/machine-learning-snap-ad-ranking>`_
 	* [Eugene Yan] `applied-ml repo on github <https://github.com/eugeneyan/applied-ml>`_
