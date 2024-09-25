@@ -22,6 +22,7 @@ Undergrad Math
 	* [cam.ac.uk] `Undergraduate Mathematics: Course Information <https://www.maths.cam.ac.uk/undergrad/course>`_
 	* [isibang.ac.in] `B.Math Curricula <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/bmath_new.pdf>`_
 	* [fractionshub.com] `MMATH 2023 PMB Solutions & Discussions <https://fractionshub.com/i-s-i-m-math-2023-solutions/>`_	
+	* [kskedlaya.org] `The Putnam Archive <https://kskedlaya.org/putnam-archive/>`_
 
 Grad Math
 =====================================================================
