@@ -19,6 +19,7 @@ Coding Resources
 Design Resources
 *******************************************************************************
 .. important::
+	* [recsys.acm.org] Tutorials on `ACM RecSys Conferences <https://recsys.acm.org/>`_
 	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
 	* [blog.google] `AI <https://blog.google/technology/ai/>`_
 	* [blogs.bing] `Bing Blogs - The news, trends, people and technology behind Bing <https://blogs.bing.com/>`_
