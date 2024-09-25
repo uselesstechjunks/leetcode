@@ -34,28 +34,3 @@ The techniques that we use to explore a core concept are often useful for some o
 Engineering
 *********************************************************************
 This refers to the application to *real-world* problems. For example, we can compute PageRank using matrix exponentiation.
-
-*********************************************************************
-North Star
-*********************************************************************
-Broad Areas
-=====================================================================
-.. important::
-	* `Mathematical physics <https://en.wikipedia.org/wiki/Mathematical_physics>`_
-
-		* [ncatlab.org] `quantum field theory <https://ncatlab.org/nlab/show/quantum+field+theory>`_
-
-Minimal Base
-=====================================================================
-Undergrad Math
----------------------------------------------------------------------
-.. important::
-	* [Indian Statistical Institute] `B.Math Curricula <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/bmath_new.pdf>`_
-	* [Indian Statistical Institute] `MMATH 2023 PMB Solutions & Discussions <https://fractionshub.com/i-s-i-m-math-2023-solutions/>`_	
-
-Grad Math
----------------------------------------------------------------------
-.. important::
-	* Based on `ISI M.Math <https://www.isibang.ac.in/~adean/infsys/acadata/Brochures/mmath_new.pdf>`_ Curricula	
-	* [stanford.edu] `Online Course Offerings <https://statistics.stanford.edu/graduate-programs/statistics-ms/statistics-hcp-online-course-offerings>`_
-	* [ellis.eu] `PhD & Postdoc Program <https://ellis.eu/phd-postdoc>`_
