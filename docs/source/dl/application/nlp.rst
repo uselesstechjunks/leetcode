@@ -642,6 +642,95 @@ Synergized KG LLM
 *****************************************************************************************
 Task Specific Setup
 *****************************************************************************************
+Notes from Common NLP Tasks
+=========================================================================================
+Using In-Context Capability:
+-----------------------------------------------------------------------------------------
+- Language Models as Knowledge Bases
+- Language Models are Open Knowledge Graphs
+
+NER:
+-----------------------------------------------------------------------------------------
+.. important::
+	- Fixed NER: 
+
+		- classification + chunking - encoder based (NER/POS)
+
+			- token classification:
+
+				- attributing a label to each token by having one class per entity and one class for “no entity.”
+				- ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC', 'B-MISC', 'I-MISC']
+				- AutoModelForTokenClassification 
+			- chunking: 
+
+				- attributing one label (usually B-) to any tokens that are at the beginning of a chunk, 
+				- another label (usually I-) to tokens that are inside a chunk, and 
+				- a third label (usually O) to tokens that don’t belong to any chunk.
+		- The traditional framework used to evaluate token classification prediction is seqeval - classwise p/r/f1/accuracy, overall p/r/f1/accuracy
+	- Free NER:
+
+		- extract - s2s, decoder
+		- Autoregressive Entity Retrieval
+		- GPT-NER
+		- Universal NER
+	
+Disambiguation 
+-----------------------------------------------------------------------------------------
+.. important::
+	- Clustering based approach - 
+	- End to end neural coreference method - all O(n^2) pairs
+
+		- https://huggingface.co/models?other=coreference-resolution
+		- https://explosion.ai/blog/coref
+
+Entity Linking:
+-----------------------------------------------------------------------------------------
+.. important::
+	- Text-based approaches - tfidf, statistical	
+	- Graph-based approaches to existing knowledge-base - https://huggingface.co/models?other=named-entity-linking
+
+		- Autoregressive Entity Retrieval - was trained on the full training set of BLINK (i.e., 9M datapoints for entity-disambiguation grounded on Wikipedia).	
+		- Blink - Scalable Zero-shot Entity Linking with Dense Entity Retrieval
+		- Refined - https://github.com/alexa/ReFinED	
+
+RE:
+-----------------------------------------------------------------------------------------
+- SentenceRE
+- DocRE
+
+Link Prediction: 
+-----------------------------------------------------------------------------------------
+Knowledge Graph Large Language Model (KG-LLM) for Link Prediction
+
+Graph Completion:
+-----------------------------------------------------------------------------------------
+SimKGC: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models
+
+Prompting:
+-----------------------------------------------------------------------------------------
+.. important::
+	- FewShot:
+	- CoT:
+	- ReAct: Synergizing Reasoning and Acting in Language Models	
+	- Reflextion: 
+	- Self-instruct: Aligning Language Models with Self-Generated Instructions
+	- PiVe: Prompting with Iterative Verification Improving Graph-based Generative Capability of LLMs
+	- Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning
+
+Question Answering:
+-----------------------------------------------------------------------------------------
+QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering
+
+GraphRAG: 
+-----------------------------------------------------------------------------------------
+MultiModal:
+-----------------------------------------------------------------------------------------
+Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey
+
+Other NLP Tasks:
+-----------------------------------------------------------------------------------------
+Large Language Models Meet NLP: A Survey
+
 Classification Tasks
 =========================================================================================
 1. Sentiment Analysis
