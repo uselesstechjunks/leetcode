@@ -7,6 +7,7 @@ Research Areas
 .. important::
 	* [wikipedia.org] `Mathematical physics <https://en.wikipedia.org/wiki/Mathematical_physics>`_
 	* [ncatlab.org] `Quantum Field Theory <https://ncatlab.org/nlab/show/quantum+field+theory>`_
+	* [wikipedia.org] `Hypercomplex analysis <https://en.wikipedia.org/wiki/Hypercomplex_analysis>`_
 
 *********************************************************************
 Base
