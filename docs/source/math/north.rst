@@ -5,6 +5,7 @@ North Star
 Research Areas
 *********************************************************************
 .. important::
+	* [arxiv.org] `Mathematics (since February 1992) <https://arxiv.org/archive/math>`_
 	* [wikipedia.org] `Mathematical physics <https://en.wikipedia.org/wiki/Mathematical_physics>`_
 	* [ncatlab.org] `Quantum Field Theory <https://ncatlab.org/nlab/show/quantum+field+theory>`_
 	* [wikipedia.org] `Hypercomplex analysis <https://en.wikipedia.org/wiki/Hypercomplex_analysis>`_
