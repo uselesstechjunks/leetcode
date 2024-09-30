@@ -58,7 +58,3 @@ General Principles
 #. Debugging Inference Algorithm
 #. End-to-end Deep Learning
 #. Error Analysis by Parts
-
-*******************************************************************************
-Machine Learning Design Patterns
-*******************************************************************************
