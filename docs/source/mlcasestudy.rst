@@ -1,5 +1,5 @@
 ############################################################################
-Machine Learning Problems - Case Study
+Machine Learning Practicals
 ############################################################################
 
 #. RecSys
@@ -28,7 +28,7 @@ Machine Learning Problems - Case Study
 	#. VAE - Dall-E
 	#. Diffusion - DPDM
 	#. SSL (contrastive) - CLIP 
-	#. **LC (Oct: 30, Nov: 60, Dec: 120)
+	#. LC (Oct: 30, Nov: 60, Dec: 120)
 #. LLM tech stack
 
 	#. RAG
