@@ -5,6 +5,7 @@ Machine Learning Applications
 Coding Resources
 *******************************************************************************
 .. important::
+	* [numpy.org] `Numpy Tutorials <https://numpy.org/learn/>`_
 	* [pytorch.org] `PyTorch Tutorials <https://pytorch.org/tutorials/>`_
 	* [rush-nlp] `Tensor Puzzles <https://github.com/srush/Tensor-Puzzles>`_
 	* [cs230.stanford.edu] `Introduction to Pytorch Code Examples <https://cs230.stanford.edu/blog/pytorch/>`_
