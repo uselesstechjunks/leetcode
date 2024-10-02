@@ -360,6 +360,7 @@ Rolle's theorem
 ****************************************************************
 Useful Resources
 ****************************************************************
-.. seealso::
+.. important::
 	* Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
+	* [integral-table.com] `Table of Integrals <https://www.integral-table.com/>`_
 	* [reddit.com] `r/learnmath: Difficult/tricky derivates and integrals  <https://www.reddit.com/r/learnmath/comments/cvgswt/looking_for_a_book_with_difficulttricky_derivates/>`_
