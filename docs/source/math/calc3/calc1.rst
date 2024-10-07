@@ -362,7 +362,7 @@ Useful Resources
 ****************************************************************
 .. important::
 	* Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
-	* [jeeadvancedmocktests.blogspot.com] `Mock tests - JEE Advanced <https://jeeadvancedmocktests.blogspot.com/p/welcome-to-blog.html>`_
+	* [jeeadvancedmocktests.blogspot.com] `Mock tests - JEE Advanced <https://jeeadvancedmocktests.blogspot.com/search/label/Maths>`_
 	* [personal.math.ubc.ca] `CLP Calculus Textbooks <https://personal.math.ubc.ca/~CLP/CLP2/>`_ (quuite basic to be honest)
 	* [integral-table.com] `Table of Integrals <https://www.integral-table.com/>`_
 	* [reddit.com] `r/learnmath: Difficult/tricky derivates and integrals  <https://www.reddit.com/r/learnmath/comments/cvgswt/looking_for_a_book_with_difficulttricky_derivates/>`_
