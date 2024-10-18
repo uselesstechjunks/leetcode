@@ -238,6 +238,7 @@ Must Read Papers
 ******************************************************************************************
 Math
 ******************************************************************************************
+* [github.com] `rangaeeeee/books-mir-mathematics <https://github.com/rangaeeeee/books-mir-mathematics/>`_
 * [3Blue1Brown] `Essence of linear algebra <https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab>`_
 * [MIT] `18.065 - Matrix Methods for Data Analysis <https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k>`_
 * [3Blue1Brown] `Essence of calculus <https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr>`_
