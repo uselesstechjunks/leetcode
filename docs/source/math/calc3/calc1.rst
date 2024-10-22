@@ -363,6 +363,7 @@ Feynman's Trick
 	* [github.io] `Feynman's Trick a.k.a. Differentiation under the Integral Sign & Leibniz Integral Rule <https://zackyzz.github.io/feynman.html>`_
 	* [web.williams.edu] `Differentiation under the Integral Sign <https://web.williams.edu/Mathematics/lg5/Feynman.pdf>`_
 	* [cantorsparadise.org] `Richard Feynman’s Integral Trick <https://www.cantorsparadise.org/richard-feynmans-integral-trick-e7afae85e25c/>`_
+	* [math.uconn.edu] `Differentiating under the Integral Sign <https://kconrad.math.uconn.edu/blurbs/analysis/diffunderint.pdf>`_
 
 ****************************************************************
 Useful Resources
