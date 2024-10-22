@@ -357,12 +357,19 @@ Rolle's theorem
 	* Special case of MVT.
 	* Assuming that all the MVT conditions are satisfied, if :math:`f(a)=f(b)`, then :math:`\exists c\in(a,b)` such that :math:`f'(c)=0`.
 
+Feynman's Trick
+----------------------------------------------------------------
+.. warning::
+	* [github.io] `Feynman's Trick a.k.a. Differentiation under the Integral Sign & Leibniz Integral Rule <https://zackyzz.github.io/feynman.html>`_
+	* [web.williams.edu] `Differentiation under the Integral Sign <https://web.williams.edu/Mathematics/lg5/Feynman.pdf>`_
+	* [cantorsparadise.org] `Richard Feynman’s Integral Trick <https://www.cantorsparadise.org/richard-feynmans-integral-trick-e7afae85e25c/>`_
+
 ****************************************************************
 Useful Resources
 ****************************************************************
 .. important::
 	* Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
 	* [jeeadvancedmocktests.blogspot.com] `Mock tests - JEE Advanced <https://jeeadvancedmocktests.blogspot.com/search/label/Maths>`_
-	* [personal.math.ubc.ca] `CLP Calculus Textbooks <https://personal.math.ubc.ca/~CLP/CLP2/>`_ (quuite basic to be honest)
+	* [personal.math.ubc.ca] `CLP Calculus Textbooks <https://personal.math.ubc.ca/~CLP/CLP2/>`_ (quite basic to be honest)
 	* [integral-table.com] `Table of Integrals <https://www.integral-table.com/>`_
 	* [reddit.com] `r/learnmath: Difficult/tricky derivates and integrals  <https://www.reddit.com/r/learnmath/comments/cvgswt/looking_for_a_book_with_difficulttricky_derivates/>`_
