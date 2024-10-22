@@ -369,6 +369,7 @@ Feynman's Trick
 Useful Resources
 ****************************************************************
 .. important::
+	* [math.stackexchange.com] `Advanced calculus book recommendations <https://math.stackexchange.com/a/4724341>`_
 	* Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
 	* [jeeadvancedmocktests.blogspot.com] `Mock tests - JEE Advanced <https://jeeadvancedmocktests.blogspot.com/search/label/Maths>`_
 	* [personal.math.ubc.ca] `CLP Calculus Textbooks <https://personal.math.ubc.ca/~CLP/CLP2/>`_ (quite basic to be honest)
