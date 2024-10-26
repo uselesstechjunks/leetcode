@@ -364,11 +364,14 @@ Feynman's Trick
 	* [web.williams.edu] `Differentiation under the Integral Sign <https://web.williams.edu/Mathematics/lg5/Feynman.pdf>`_
 	* [cantorsparadise.org] `Richard Feynman’s Integral Trick <https://www.cantorsparadise.org/richard-feynmans-integral-trick-e7afae85e25c/>`_
 	* [math.uconn.edu] `Differentiating under the Integral Sign <https://kconrad.math.uconn.edu/blurbs/analysis/diffunderint.pdf>`_
+	* [math.stackexchange.com] `Questions tagged [leibniz-integral-rule] <https://math.stackexchange.com/questions/tagged/leibniz-integral-rule>`_
 
 ****************************************************************
 Useful Resources
 ****************************************************************
 .. important::
+	* [math.stackexchange.com] `Questions tagged [integration] <https://math.stackexchange.com/questions/tagged/integration>`_
+	* [math.stackexchange.com] `Questions tagged [generating-functions] <https://math.stackexchange.com/questions/tagged/generating-functions>`_
 	* [math.stackexchange.com] `Advanced calculus book recommendations <https://math.stackexchange.com/a/4724341>`_
 	* Calculus cheatsheet: `Notes at tutorial.math.lamar.edu <https://tutorial.math.lamar.edu/pdf/calculus_cheat_sheet_all.pdf>`_.
 	* [jeeadvancedmocktests.blogspot.com] `Mock tests - JEE Advanced <https://jeeadvancedmocktests.blogspot.com/search/label/Maths>`_
