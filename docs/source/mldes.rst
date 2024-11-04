@@ -28,6 +28,7 @@ Design Resources
 	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [Snapchat] `Machine Learning for Snapchat Ad Ranking <https://eng.snap.com/machine-learning-snap-ad-ranking>`_
 	* [Eugene Yan] `applied-ml repo on github <https://github.com/eugeneyan/applied-ml>`_
+	* [Eugene Yan] `Tech Blog <https://eugeneyan.com/>`_
 	* [Updated] `ApplyingML <https://applyingml.com/>`_
 	* [Updated] `What We’ve Learned From A Year of Building with LLMs <https://applied-llms.org/>`_
 	* [tableau.com] `10 Great Machine Learning (ML) and Artificial Intelligence (AI) Blogs To Follow <https://www.tableau.com/learn/articles/blogs-about-machine-learning-artificial-intelligence>`_
