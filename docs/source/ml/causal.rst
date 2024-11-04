@@ -171,3 +171,8 @@ Summary of Techniques
 	- **ITE** generally requires modeling counterfactual outcomes, often through generative models or advanced machine learning techniques to infer the individual-specific treatment effects. 
 
 However, both ATE and ITE can be estimated using various methods depending on the available data and the assumptions we can reasonably make. The choice of method often depends on the context, the quality of the data, and the underlying assumptions we are willing to accept.
+
+References
+==================================================================================
+.. note::
+	* [arxiv.org] `On the Distinction Between “Conditional Average Treatment Effects” (CATE) and “Individual Treatment Effects” (ITE) Under Ignorability Assumptions <https://arxiv.org/abs/2108.04939>`_
