@@ -7,10 +7,12 @@ Single Variable Calculus
 	* The set :math:`U=\{f(x)\mathop{:}x\in S\}=f(S)` is called the image of :math:`S` under :math:`f`.
 
 ****************************************************************
-Convergence and Continuity
+Metric Topology
 ****************************************************************
-Open and Closed Balls and Intervals
+Definitions
 ================================================================
+Open and Closed Balls and Intervals
+----------------------------------------------------------------
 .. note::
 	* For any :math:`\epsilon > 0`, we can create an open :math:`\epsilon`-ball around any point :math:`x` as
 
@@ -21,29 +23,49 @@ Open and Closed Balls and Intervals
 	* Open interval: :math:`(a,b)=\{x\mathop{:} a < x < b\}`
 	* Closed interval: :math:`[a,b]=\{x\mathop{:} a \leq x \leq b\}`
 
-Convergent sequence
+Limit Point and Closure
+----------------------------------------------------------------
+
+****************************************************************
+Sequence and Convergence
+****************************************************************
+Accumulation Point
 ================================================================
-Let :math:`(x_n)_{n=1}^\infty` be a sequence such that :math:`\forall x_n\in S\subset\mathbb{R}`. 
-
+Limit Point
+================================================================
 .. note::
-	The sequence is said to be convergent to a limit :math:`x\in S` iff
+	* Let :math:`(x_n)_{n=1}^\infty` be a sequence such that :math:`\forall x_n\in S\subset\mathbb{R}`.
+	* The sequence is said to have a limit :math:`\lim\limits_{n\to\infty} x_n=L\in\mathbb{R}` iff
 
-	* :math:`\forall\delta > 0`
-	* :math:`\exists N_\delta\in\mathbb{N}^{+}` (depends on how small of a :math:`\delta` we're given) such that
-	* if we skip :math:`N_\delta` number of terms in that sequence, the remaining values are guaranteed to be inside :math:`B_\delta(x)`.
-		
-		* Formally, :math:`n > N_\delta\implies |x_n-x|< \delta`
+		* :math:`\forall\epsilon > 0`
+		* :math:`\exists N_\epsilon\in\mathbb{N}^{+}` (depends on how small of a :math:`\epsilon` we're given) such that
+		* if we skip :math:`N_\epsilon` number of terms in that sequence, the remaining values are guaranteed to be inside :math:`B_\epsilon(x)`.
+			
+			* Formally, :math:`n > N_\epsilon\implies |x_n-L|< \epsilon`
+	* A sequence with a limit point :math:`L\in\S\subset\mathbb{R}` is said to be convergent in :math:`S`.
+
+Important Theorems
+================================================================
+.. attention::
+	* Limit of a sequence is unique.
+	* If a sequence is convergent, it is bounded.
+	* Every limit point is an accumulation point. Converse doesn't hold.
+	* Every open ball around a limit point contains all but a finite number of terms in a convergent sequence.
+
+.. seealso::
+	* Null sequence
+	* Sequence of nested intervals
 
 Cauchy convergence
 ================================================================
 .. note::
 	The sequence is said to be Cauchy convergent iff
 
-	* :math:`\forall\delta > 0`
-	* :math:`\exists N_\delta\in\mathbb{N}^{+}` such that
-	* if we skip :math:`N_\delta` number of terms in that sequence, any two values from the rest of it fall under a :math:`\delta`-ball around one another.
+	* :math:`\forall\epsilon > 0`
+	* :math:`\exists N_\epsilon\in\mathbb{N}^{+}` such that
+	* if we skip :math:`N_\epsilon` number of terms in that sequence, any two terms from the rest of it is within a :math:`\epsilon`-ball around one another.
 	
-		* Formally, :math:`m, n> N_\delta\implies |x_m-x_n|< \delta`
+		* Formally, :math:`m, n> N_\delta\implies |x_m-x_n|< \epsilon`
 
 .. attention::
 	* For a sequence to be Cauchy convergent, the limit value doesn't need to be in :math:`S`.
@@ -53,6 +75,16 @@ Cauchy convergence
 
 	* This sequence is Cauchy convergent as it tends to :math:`\sqrt{2}` but it's not convergent in :math:`\mathbb{Q}`.
 
+Monotonic Sequences
+================================================================
+.. attention::
+	* If a monotonic sequence is bounded, it is convergent.
+	* Term-wise order relationship between two sequences is preserved at limit points.
+	* Squeeze/sandwich theorem
+
+****************************************************************
+Functional Limit and Continuity
+****************************************************************
 Continuity
 ================================================================
 Let :math:`f:X\subset\mathbb{R}\mapsto Y\subset\mathbb{R}`.
@@ -160,13 +192,60 @@ Properties
 	* **Product Rule**: :math:`(f\cdot g)'=f\cdot g'+f'\cdot g`
 	* **Chain Rule**: :math:`(f\circ g)'=(f'\circ g)\cdot g'`
 
+Important Theorems
+================================================================
+Boundedness theorem
+----------------------------------------------------------------
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`. Then it is bounded.
+	* More formally, here exists :math:`m, M\in\mathbb{R}` such that :math:`m\leq f(x)\leq M`.
+
+EVT: Extreme value theorem
+----------------------------------------------------------------
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`. Then the function achives a min and a max.
+	* More formally, there exists :math:`c,d\in[a,b]` such that :math:`f(c)\leq f(x)\leq f(d)`.
+
+Bolzano's theorem
+----------------------------------------------------------------
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
+	* Also assume that :math:`f(a)` and :math:`f(b)` have opposite signs.
+	* Then :math:`\exists c\in(a,b)` such that :math:`f(c)=0`
+
+IVT: Intermediate value theorem
+----------------------------------------------------------------
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
+	* Let :math:`a\leq p < q\leq b` be two arbitrary points with :math:`f(p)\neq f(q)`.
+	* Then :math:`f(x)` takes every possible value in :math:`(f(p), f(q))` within the interval :math:`(a,b)`.
+
+MVT: Mean value theorem
+----------------------------------------------------------------
+.. note::
+	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
+	* Then :math:`\exists c\in[a,b]` such that :math:`f(c)` acts as the mean value of the integral :math:`\int\limits_a^b f(x)\mathop{dx}`.
+	* Formally, :math:`\int\limits_a^b f(x)\mathop{dx}=f(c)\cdot(b-a)`
+
+.. seealso::
+	* This can also be stated using derivatives as :math:`\frac{F(b)-F(a)}{b-a}=f(c)` or :math:`\frac{g(b)-g(a)}{b-a}=g'(c)`
+
+Rolle's theorem
+----------------------------------------------------------------
+.. note::
+	* Special case of MVT.
+	* Assuming that all the MVT conditions are satisfied, if :math:`f(a)=f(b)`, then :math:`\exists c\in(a,b)` such that :math:`f'(c)=0`.
+
 Application: Local extremum
 ================================================================
+Critical Point
+----------------------------------------------------------------
 .. note::
 	* Let the function be :math:`f:X\mapsto Y` and let :math:`c\in X`.
 	* :math:`c` is called a relative (local) maximum iff
 
 		.. math:: \exists\epsilon>0,x\in B_\epsilon(c)\implies f(x)\leq f(c)
+
 .. note::
 	* Relative minimum is defined in the same way.
 	* This is usually defined in terms of an open interval, i.e. :math:`c\in(a,b)`.
@@ -204,7 +283,6 @@ For critical points
 ****************************************************************
 Integration
 ****************************************************************
-
 Integration of step functions
 ================================================================
 Let :math:`f:[a,b]\subset\mathbb{R}\mapsto \mathbb{R}` be a step-function defined on a partition :math:`P=\{x_0,\cdots,x_n\}` such that within each open interval :math:`(x_{k-1},x_k)`, the function takes a constant value :math:`s_k`.
@@ -269,23 +347,6 @@ Indefinite Integral
 
 		.. math:: A(x)-C(x)=\int\limits_a^x f(t)\mathop{dt}-\int\limits_c^x f(t)\mathop{dt}=\int\limits_a^c f(t)\mathop{dt}=k
 
-****************************************************************
-Important Theorems
-****************************************************************
-Boundedness theorem
-================================================================
-.. note::
-	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`. Then it is bounded.
-
-		* There exists :math:`m, M\in\mathbb{R}` such that :math:`m\leq f(x)\leq M`.
-
-EVT: Extreme value theorem
-================================================================
-.. note::
-	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`. Then the function achives a min and a max.
-
-		* There exists :math:`c,d\in[a,b]` such that :math:`f(c)\leq f(x)\leq f(d)`.
-
 Fundamental theorem of calculus
 ================================================================
 .. note::
@@ -307,8 +368,10 @@ Fundamental theorem of calculus
 .. attention::
 	.. math:: \int\limits_a^b f(x)\mathop{dx}=F(b)-F(a)
 
-Integration by parts
+Integration Strategies
 ================================================================
+Integration by parts
+----------------------------------------------------------------
 Let :math:`u(x)` and :math:`v(x)` be two integrable functions. We want to find out the integral of the product, :math:`\int u(x)\cdot v(x) \mathop{dx}`.
 
 .. note::
@@ -327,36 +390,6 @@ Let :math:`u(x)` and :math:`v(x)` be two integrable functions. We want to find o
 	* ILATE: Dictates the order in which the functions should be chosen to be :math:`u` or :math:`v`. 
 	* ILATE: Acronym for Inverse > Logarithmic > Algebraic > Trigonometric > Exponential. Choose left of the two as :math:`u`.
 
-Bolzano's theorem
-================================================================
-.. note::
-	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
-	* Also assume that :math:`f(a)` and :math:`f(b)` have opposite signs.
-	* Then :math:`\exists c\in(a,b)` such that :math:`f(c)=0`
-
-IVT: Intermediate value theorem
-================================================================
-.. note::
-	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
-	* Let :math:`a\leq p < q\leq b` be two arbitrary points with :math:`f(p)\neq f(q)`.
-	* Then :math:`f(x)` takes every possible value in :math:`(f(p), f(q))` within the interval :math:`(a,b)`.
-
-MVT: Mean value theorem
-================================================================
-.. note::
-	* Let :math:`f:[a,b]\mapsto\mathbb{R}` is continuous :math:`\forall x\in[a,b]`.
-	* Then :math:`\exists c\in[a,b]` such that :math:`f(c)` acts as the mean value of the integral :math:`\int\limits_a^b f(x)\mathop{dx}`.
-	* Formally, :math:`\int\limits_a^b f(x)\mathop{dx}=f(c)\cdot(b-a)`
-
-.. seealso::
-	* This can also be stated using derivatives as :math:`\frac{F(b)-F(a)}{b-a}=f(c)` or :math:`\frac{g(b)-g(a)}{b-a}=g'(c)`
-
-Rolle's theorem
-----------------------------------------------------------------
-.. note::
-	* Special case of MVT.
-	* Assuming that all the MVT conditions are satisfied, if :math:`f(a)=f(b)`, then :math:`\exists c\in(a,b)` such that :math:`f'(c)=0`.
-
 Feynman's Trick
 ----------------------------------------------------------------
 .. warning::
@@ -365,6 +398,28 @@ Feynman's Trick
 	* [cantorsparadise.org] `Richard Feynman’s Integral Trick <https://www.cantorsparadise.org/richard-feynmans-integral-trick-e7afae85e25c/>`_
 	* [math.uconn.edu] `Differentiating under the Integral Sign <https://kconrad.math.uconn.edu/blurbs/analysis/diffunderint.pdf>`_
 	* [math.stackexchange.com] `Questions tagged [leibniz-integral-rule] <https://math.stackexchange.com/questions/tagged/leibniz-integral-rule>`_
+
+****************************************************************
+Series
+****************************************************************
+Series with Positive Terms
+================================================================
+Comparison Tests
+----------------------------------------------------------------
+Ratio Test
+----------------------------------------------------------------
+Integral Test
+----------------------------------------------------------------
+Series with Mixed Terms
+================================================================
+Absolute Convergence
+----------------------------------------------------------------
+Convergence of Alternating Series
+----------------------------------------------------------------
+Power Series
+================================================================
+Root Test
+----------------------------------------------------------------
 
 ****************************************************************
 Useful Resources
