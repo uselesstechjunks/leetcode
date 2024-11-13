@@ -399,6 +399,12 @@ Feynman's Trick
 	* [math.uconn.edu] `Differentiating under the Integral Sign <https://kconrad.math.uconn.edu/blurbs/analysis/diffunderint.pdf>`_
 	* [math.stackexchange.com] `Questions tagged [leibniz-integral-rule] <https://math.stackexchange.com/questions/tagged/leibniz-integral-rule>`_
 
+Integration Bee
+----------------------------------------------------------------
+.. warning::
+	* [sites.google.com] `Integration Bee Training Resource <https://sites.google.com/view/silveralchemist/integration-bee-stuff/integration-bee-mock-problems>`_
+	* [youtube.com] `Integration Bee Training Videos <https://www.youtube.com/@Silver-cu5up>`_
+
 ****************************************************************
 Series
 ****************************************************************
