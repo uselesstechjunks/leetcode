@@ -1,5 +1,8 @@
 Data Structures & Algorithms
 ############################################
+Resources
+========================================
+[github.com] `LeetCode-Questions-CompanyWise <https://github.com/krishnadey30/LeetCode-Questions-CompanyWise/blob/master/google_6months.csv>`_
 
 Patterns:
 ========================================
