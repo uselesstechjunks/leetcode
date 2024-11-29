@@ -2,7 +2,15 @@ Data Structures & Algorithms
 ############################################
 Resources
 ========================================
-[github.com] `LeetCode-Questions-CompanyWise <https://github.com/krishnadey30/LeetCode-Questions-CompanyWise/blob/master/google_6months.csv>`_
+.. important::
+
+	* [github.com] `LeetCode-Questions-CompanyWise <https://github.com/krishnadey30/LeetCode-Questions-CompanyWise/blob/master/google_6months.csv>`_
+	* [educative.io] `Grokking the Coding Interview Patterns <https://www.educative.io/courses/grokking-coding-interview>`_
+	* [github.com] `Grokking the Coding Interview Patterns for Coding Questions <https://github.com/dipjul/Grokking-the-Coding-Interview-Patterns-for-Coding-Questions>`_
+	* [designgurus.io] `Grokking the Coding Interview: Patterns for Coding Questions <https://www.designgurus.io/course/grokking-the-coding-interview>`_
+	* [github.com] `Tech Interview Handbook <https://github.com/yangshun/tech-interview-handbook>`_
+	* [github.com] `Interview_DS_Algo <https://github.com/MAZHARMIK/Interview_DS_Algo>`_
+	* [leetracer.com] `Screen Questions - (Company Tags Last Updated: 11-02-24) <https://leetracer.com/screener>`_
 
 Patterns:
 ========================================
