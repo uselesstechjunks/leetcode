@@ -1,7 +1,9 @@
+#################################################################################
 Data Structures & Algorithms
-############################################
+#################################################################################
+*********************************************************************************
 Resources
-========================================
+*********************************************************************************
 .. important::
 
 	* [github.com] `LeetCode-Questions-CompanyWise <https://github.com/krishnadey30/LeetCode-Questions-CompanyWise/blob/master/google_6months.csv>`_
@@ -16,10 +18,56 @@ Resources
 	* [interview-prep-pro.vercel.app] `Interview Prep Pro <https://interview-prep-pro.vercel.app/>`_
 
 Patterns:
-========================================
+================================================================================
+Stack
+---------------------------------------------------------------------------------
+Parsing, Validation, Evaluation
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+.. note::
+
+	* Basic calculator 1-4
+	* Tag validator
+	* Number of atoms
+	* Parse lisp expression
+	* Number of valid subarrays
+	* Brace expansion 
+	* Parsing boolean expression
+	* Binary expression tree from infix
+
+Optimisation
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+.. note::
+
+	* Longest valid paranthesis
+	* Trapping rain water
+	* Largest rectangle in histogram
+	* Maximum rectangle
+	* Closest bst value
+	* Zuma game
+	* Create maximum number
+	* Max chunks to make sorted
+	* Minimum number of increment
+	* Maximum Score of a Good Subarray
+	* Minimum Cost to Change the Final Value of Expression
+
+Design
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+.. note::
+
+	* Max stack
+	* Max frequency stack
+	* Stamping the sequence
+	* Dinner plate stack
+
+Uncategorised
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+.. note::
+
+	* Odd even jump
+	* Car fleet
 
 Intervals
----------------------------
+---------------------------------------------------------------------------------
 
 #. `Meeting Rooms <https://leetcode.com/problems/meeting-rooms/>`_         
 #. `Non-overlapping Intervals <https://leetcode.com/problems/non-overlapping-intervals/>`_
@@ -53,19 +101,19 @@ Intervals
 #. `Number of Flowers in Full Bloom <https://leetcode.com/problems/number-of-flowers-in-full-bloom/>`_
 
 Heap
----------------------------
+---------------------------------------------------------------------------------
 
 Sliding Window
----------------------------
+---------------------------------------------------------------------------------
 
 Binary Search
----------------------------
+---------------------------------------------------------------------------------
 
 DFS & BFS
----------------------------
+---------------------------------------------------------------------------------
 
 Recursion
----------------------------
+---------------------------------------------------------------------------------
 
 Hashmap
----------------------------
+---------------------------------------------------------------------------------
