@@ -11,6 +11,7 @@ General
 	* [interviewing.io] `Google’s interview process and questions <https://interviewing.io/guides/hiring-process/google>`_
 	* [medium.com] `How I prepared for Google — Solving 200 leetcode questions. <https://medium.com/@siddhism/how-i-prepared-for-google-0-leetcode-questions-to-200-questions-e37690ebce85>`_
 	* [leetcode.com] `Google Interview Experience <https://leetcode.com/discuss/interview-question/5545888/Google-Interview-Experience/>`_	
+	* [pramp.com] `Practice Data Structures & Algorithms Interviews <https://www.pramp.com/dev/uc-data-structures-and-algorithms>`_
 
 Coding Interview
 ====================================================================
