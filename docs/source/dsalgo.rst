@@ -16,6 +16,7 @@ Resources
 	* [geeksforgeeks.org] `Must Do Coding Questions Company-wise <https://www.geeksforgeeks.org/must-coding-questions-company-wise/>`_
 	* [leetracer.com] `Screen Questions - (Company Tags Last Updated: 11-02-24) <https://leetracer.com/screener>`_
 	* [interview-prep-pro.vercel.app] `Interview Prep Pro <https://interview-prep-pro.vercel.app/>`_
+	* [educative.io] `3 month coding interview preparation bootcamp <https://www.educative.io/blog/coding-interivew-preparation-bootcamp>`_
 
 Patterns:
 ================================================================================
