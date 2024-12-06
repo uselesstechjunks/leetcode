@@ -4,6 +4,108 @@ ML Depth
 ################################################################################
 Topics
 ********************************************************************************
+Fundamentals
+================================================================================
+1. Classification/Regression loss and metrics
+2. Ranking loss and metrics
+3. Clustering
+	- Algorithms:
+		- Distance Based: K-Means
+		- Density Based: DBSCAN
+	- Metrics:
+		- Distance Based:
+			- Silhoutte coefficient
+			- DB index
+			- CH index
+		- Density Based:
+
+4. Manifold Learning
+	- t-SNE
+5. Latent Models
+	- GMM
+	- PCA, Kernel-PCA
+	- NMF
+	- ICA
+	- LDA
+6. Outlier prediction
+	- Isolation Forest
+	- One-Class SVM
+7. Density Estimation
+	- KDE
+8. Resume walkthrough 
+	- General problem description and approach
+	-  Loss function and training methods
+	- Challenges faced
+9. DL GD, backprop, regularisation
+10. Different Activation functions and different Attention mechanism
+10. Language model papers
+11. Revisit the topics read so far
+
+LMs
+==================================================================
+- init
+	- xavier/he init
+- tokenizers
+	- bpe
+	- wordpiece, sentencepiece
+- activations
+	- sigmoid, tanh, relu, gelu, swish, glu, geglu, reglu, swiglu
+- normalisation
+	- internal covariate shift
+	- batch norm
+	- layer norm	
+	- rms norm
+	- pre-ln
+- position embedding schemes
+	- learned, sinusoidal
+	- rotary positional encoding
+- transformer architecture from attention all you need
+	- pytorch implementation, batched, sequential
+	- multi-query attention
+	- grouped-query attention
+- decoding
+	- beam search
+	- top p, top k, temperature
+	- speculative decoding
+- models
+	- cbow - word2vec
+	- transformer based: 
+		- bert mlm + nsp
+		- bart
+		- moe models, mixtral
+		- gpt clm
+		- xlnet plm
+	- non-transformer - mamba
+- t5 learnings
+	- mt5
+	- generalisable t5-based retriever (gtr)
+- basics of nvda graphics hardware
+	- flash attention
+	- quantisation, int8 llm
+	- paged attention, ring attention
+- llm tech stack
+	- prompt engineering
+	- prompt tuning
+	- rag
+	- lora, qlora
+	- sft
+	- rlhf, ppo, dpo
+
+Misc
+================================================================================
+- summarise popular NL tasks and remember the usual dataset names
+- convolution based models, resnet, graph cn, light gcn, graph transformers
+- kernel methods, kernel meaning embedding, mmd, other ipms - read every inch of our paper
+- probability and statistics, parametric and non-parametric methods for inference, ci and hypothesis testing framework
+- bayes net (representation, inference, learning)
+- causality - how to think systematically going about finding out the root-cause of a problem, bing search causality paper
+- latent variable models - kmeans, mixture-of-gaussians, pca, kernel pca, ica
+- generative models on latent variable space - vae, vqvae, gan, diffusion models, diffusion transformers
+- clustering - convex, non-convex, evaluation of clustering perf
+- regression and discriminative classification - model assumption, interpretation, evaluation - collinearity, the other stuff
+- theoy as applied problem statement
+- code transformer, convnet, kernel methods, tree methods, regression, vae, gan, diffusion models
+
 GPT-generated Sample Questions on Areas of Expertise
 ================================================================================
 1. Click Prediction and Ranking Models
