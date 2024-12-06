@@ -38,8 +38,8 @@ Fundamentals
 	- Challenges faced
 9. DL GD, backprop, regularisation
 10. Different Activation functions and different Attention mechanism
-10. Language model papers
-11. Revisit the topics read so far
+11. Language model papers
+12. Revisit the topics read so far
 
 LMs
 ==================================================================
