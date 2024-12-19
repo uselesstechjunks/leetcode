@@ -456,3 +456,4 @@ Misc
 * `Why Oatmeal is Cheap: Kolmogorov Complexity and Procedural Generation <https://knivesandpaintbrushes.org/projects/why-oatmeal-is-cheap/why_oatmeal_is_cheap_fdg2023.pdf>`_
 * `Blog: Haskell in Production <https://serokell.io/blog/haskell-in-production>`_
 * `How Does an FPGA Work? <https://learn.sparkfun.com/tutorials/how-does-an-fpga-work/all>`_
+* [readthedocs.io] `Sphinx Admonitions <https://sphinx-immaterial.readthedocs.io/en/latest/admonitions.html>`_
