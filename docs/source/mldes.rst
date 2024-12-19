@@ -29,6 +29,7 @@ Design Resources
 
 .. important::
 	* [evidentlyai.com] `ML and LLM system design: 500 case studies to learn from <https://www.evidentlyai.com/ml-system-design>`_
+	* [evidentlyai.com] `AI quality and MLOps tutorials <https://www.evidentlyai.com/mlops-tutorials>`_
 	* [recsys.acm.org] Tutorials on `ACM RecSys Conferences <https://recsys.acm.org/>`_
 	* [Eugene Yan] `applied-ml repo on github <https://github.com/eugeneyan/applied-ml>`_
 	* [Eugene Yan] `Tech Blog <https://eugeneyan.com/>`_
