@@ -19,14 +19,17 @@ Coding Resources
 *******************************************************************************
 Design Resources
 *******************************************************************************
-.. important::
-	* [recsys.acm.org] Tutorials on `ACM RecSys Conferences <https://recsys.acm.org/>`_
+.. attention::
 	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
+	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [blog.google] `AI <https://blog.google/technology/ai/>`_
 	* [blogs.bing] `Bing Blogs - The news, trends, people and technology behind Bing <https://blogs.bing.com/>`_
 	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_
-	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [Snapchat] `Machine Learning for Snapchat Ad Ranking <https://eng.snap.com/machine-learning-snap-ad-ranking>`_
+
+.. important::
+	* [evidentlyai.com] `ML and LLM system design: 500 case studies to learn from <https://www.evidentlyai.com/ml-system-design>`_
+	* [recsys.acm.org] Tutorials on `ACM RecSys Conferences <https://recsys.acm.org/>`_
 	* [Eugene Yan] `applied-ml repo on github <https://github.com/eugeneyan/applied-ml>`_
 	* [Eugene Yan] `Tech Blog <https://eugeneyan.com/>`_
 	* [Updated] `ApplyingML <https://applyingml.com/>`_
