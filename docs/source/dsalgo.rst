@@ -4,7 +4,7 @@ Data Structures & Algorithms
 *********************************************************************************
 Resources
 *********************************************************************************
-.. important::
+.. attention::
 
 	* [neetcode.io] `Neetcode <https://neetcode.io/practice>`_ 
 	* [leetracer.com] `Screen Questions - (Company Tags Last Updated: 11-02-24) <https://leetracer.com/screener>`_
@@ -12,8 +12,9 @@ Resources
 	* [reddit.com] `I passed Meta E6 Hiring Committee (Screen+FullLoop). My thoughts, advice, tips. <https://www.reddit.com/r/leetcode/comments/1c7fs3o/i_passed_meta_e6_hiring_committee_screenfullloop/?share_id=jeNswSOERGx8GXDy02DBq&utm_name=androidcss>`_
 	* [reddit.com] `Here's a master list of problem keyword to algorithm patterns <https://www.reddit.com/r/leetcode/comments/1f9bejz/heres_a_master_list_of_problem_keyword_to/?share_id=_p0H75FfOq1zSO0yBWj8v&utm_name=androidcss>`_
 
-.. seealso::
+.. important::
 
+	* [leetcode.com] `Lessons from My Google L5 Interview Experience: Tips and suggestion <https://leetcode.com/discuss/interview-question/6147892/Lessons-from-My-Google-L5-Interview-Experience%3A-Tips-and-suggestion>`_
 	* [docs.google] `Leetcode Questions - public - solved by Siddhesh <https://docs.google.com/spreadsheets/d/1KkCeOIBwUFfKrHGGZe_6EJRCIqaM6MJBo0uSIMSD9bs/edit?gid=782922309#gid=782922309>`_
 	* [docs.google] `DSA Resource Problem Set <https://docs.google.com/spreadsheets/d/1hwvHbRargzmbErRYGU2cjxf4PR8GTOI-e1R9VqOVQgY/edit?gid=481396158#gid=481396158>`_
 	* [leetcode.com] `14 Patterns to Ace Any Coding Interview Question <https://leetcode.com/discuss/study-guide/4039411/14-Patterns-to-Ace-Any-Coding-Interview-Question>`_
