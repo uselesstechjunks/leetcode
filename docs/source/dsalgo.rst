@@ -7,6 +7,8 @@ Resources
 .. attention::
 
 	* [neetcode.io] `Neetcode <https://neetcode.io/practice>`_ 
+	* [leetcodethehardway.com] `LeetCode The Hard Way <https://leetcodethehardway.com/tutorials/category/basic-topics>`_
+	* [deriveit.org] `DeriveIt <https://deriveit.org/coding>`_
 	* [leetracer.com] `Screen Questions - (Company Tags Last Updated: 11-02-24) <https://leetracer.com/screener>`_
 	* [github.com] `LeetCode-Questions-CompanyWise <https://github.com/krishnadey30/LeetCode-Questions-CompanyWise/blob/master/google_6months.csv>`_	
 	* [reddit.com] `I passed Meta E6 Hiring Committee (Screen+FullLoop). My thoughts, advice, tips. <https://www.reddit.com/r/leetcode/comments/1c7fs3o/i_passed_meta_e6_hiring_committee_screenfullloop/?share_id=jeNswSOERGx8GXDy02DBq&utm_name=androidcss>`_
