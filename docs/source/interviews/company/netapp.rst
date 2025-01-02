@@ -65,39 +65,37 @@ Round 2: Machine Learning System Design
 ****************************************************************************************
 Design a Scalable Recommendation System for File Storage Optimization:
 	.. note::
-		Approach:
-		Discuss data sources: user behavior logs, file metadata.
-		Feature engineering: file access frequency, user preferences.
-		Model: Collaborative filtering or content-based filtering.
-		System architecture: Data ingestion pipeline, model training (batch), real-time inference using a microservices-based architecture.
+		- Discuss data sources: user behavior logs, file metadata.
+		- Feature engineering: file access frequency, user preferences.
+		- Model: Collaborative filtering or content-based filtering.
+		- System architecture: Data ingestion pipeline, model training (batch), real-time inference using a microservices-based architecture.
 
 Monitoring and Maintaining a ML Model for Anomaly Detection in Cloud Storage:
 	.. note::
-		Discuss:
-		Metrics: Precision, recall, drift detection.
-		Automation: Retraining pipelines, model versioning.
-		Infrastructure: Use of Docker/Kubernetes for deployment, cloud services for scalability.
+		- Metrics: Precision, recall, drift detection.
+		- Automation: Retraining pipelines, model versioning.
+		- Infrastructure: Use of Docker/Kubernetes for deployment, cloud services for scalability.
 
 Scalable File Deduplication System:
 	.. note::
-		Problem: Design a system that detects duplicate files in a distributed storage system.
-		Considerations: Hashing, sharding strategies, and handling partial duplicates.
+		- Problem: Design a system that detects duplicate files in a distributed storage system.
+		- Considerations: Hashing, sharding strategies, and handling partial duplicates.
 
 Content-Based Search for Cloud Files:
 	.. note::
-		Problem: Design a system that allows users to search files based on their content (e.g., text or metadata) instead of just file names.
-		Include indexing, embedding generation, and retrieval strategies.
+		- Problem: Design a system that allows users to search files based on their content (e.g., text or metadata) instead of just file names.
+		- Include indexing, embedding generation, and retrieval strategies.
 
 Predictive Maintenance for Cloud Servers:
 	.. note::
-		Problem: Design a system to predict potential failures in cloud servers based on historical sensor data.
-		Considerations: Handling time-series data, real-time alerts, and scalability.
+		- Problem: Design a system to predict potential failures in cloud servers based on historical sensor data.
+		- Considerations: Handling time-series data, real-time alerts, and scalability.
 
 Usage Pattern Anomaly Detection:
 	.. note::
-		Problem: Design a system that detects unusual user behavior in file access patterns to prevent unauthorized access.
-		Include: Model architecture (e.g., autoencoders or isolation forests) and deployment pipeline.
+		- Problem: Design a system that detects unusual user behavior in file access patterns to prevent unauthorized access.
+		- Include: Model architecture (e.g., autoencoders or isolation forests) and deployment pipeline.
 
 Data Compression System:
 	.. note::
-		Problem: Propose a machine learning-based system to identify optimal compression algorithms for different file types uploaded by users.
+		- Problem: Propose a machine learning-based system to identify optimal compression algorithms for different file types uploaded by users.
