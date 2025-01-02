@@ -10,9 +10,21 @@ Data Preprocessing:
 	.. note::
 		Problem: Given a dataset with missing values, normalize all numerical columns after imputing the missing values with their column means.
 
+Data Aggregation:
+	.. note::
+		Problem: Given a dataset of file logs with columns user_id, file_type, and file_size, calculate the total size of each file_type uploaded by each user.
+
+Data Pipeline:
+	.. note::
+		Problem: Write a Python script that reads a large CSV file in chunks, filters rows based on a condition (e.g., file size > 100 MB), and writes the filtered rows to a new file.
+
 Model Evaluation:
 	.. note::
 		Problem: Write a function to compute precision, recall, and F1-score given true and predicted labels.
+
+Custom Metric Implementation:
+	.. note::
+		Problem: Implement a function to compute the Area Under the Precision-Recall Curve (AUPRC) for given true and predicted probabilities.
 	
 Feature Engineering:
 	.. note::
@@ -25,14 +37,26 @@ Time Series Analysis:
 Clustering:
 	.. note::
 		Problem: Implement k-means clustering from scratch in Python and cluster a given dataset into 3 groups.
+
+Dimensionality Reduction:
+	.. note::
+		Problem: Use Principal Component Analysis (PCA) to reduce the dimensions of a high-dimensional dataset and retain 95% of the variance.
 	
 Decision Trees:
 	.. note::
 		Problem: Implement a simple decision tree classifier to predict whether a file is likely to be accessed frequently based on features like file size, user ID, and file type.
+
+Natural Language Processing:
+	.. note::
+		Problem: Implement a simple sentiment analysis model using Naive Bayes to classify user reviews as positive or negative.
 	
 API Data Fetching:
 	.. note::
 		Problem: Fetch data from a public API (e.g., GitHub repositories), clean it, and find the top 5 repositories with the most stars.
+
+Optimization Problem:
+	.. note::
+		Problem: Given a list of file sizes and a storage limit, write a function to find the maximum number of files that can fit within the storage limit.
 	
 SQL-Based Questions
 ========================================================================================
@@ -59,6 +83,33 @@ Complex Joins:
 Dynamic Queries:
 	.. note::
 		Problem: Create a query to find the average file size for each file_type, and return only those averages above a threshold (e.g., 100 MB).
+
+Recursive Queries:
+	.. note::
+		Problem: Write a query to find all parent-child relationships in a hierarchical table folders with columns folder_id and parent_id.
+Pivot Table:
+	.. note::
+		Problem: Write a query to convert rows of file types and their counts into a column format for better visualization.
+
+Multi-Table Analysis:
+	.. note::
+		Problem: Given two tables—files (with file_id, user_id, file_size) and file_tags (with file_id, tag)—write a query to find the top 3 tags associated with the largest files.
+
+Temporal Analysis:
+	.. note::
+		Problem: Write a query to find the average file size uploaded per day over the past 30 days.
+
+Data Validation:
+	.. note::
+		Problem: Write a query to identify rows in a table files where upload_date is later than the modification_date.
+
+Case Statement:
+	.. note::
+		Problem: Write a query to classify files into size categories ("Small", "Medium", "Large") based on predefined thresholds.
+
+Index Optimization:
+	.. note::
+		Problem: Write a query to analyze the performance of an index on the file_name column in a large files table.
 
 ****************************************************************************************
 Round 2: Machine Learning System Design
