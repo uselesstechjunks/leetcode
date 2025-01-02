@@ -8,3 +8,4 @@ Company Specific Questions
 	amzn
 	atlassian
 	goog
+	netapp
