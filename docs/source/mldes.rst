@@ -11,6 +11,7 @@ Coding Resources
 	* [codechef.com] `Learn NumPy - Practice Problems and Challenges <https://www.codechef.com/learn/course/numpy>`_
 	* [hackerrank.com] `Numpy Challenges <https://www.hackerrank.com/domains/python/numpy/difficulty:easy/page:1>`_
 	* [pandas.pydata.org] `Getting started tutorials <https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html>`_
+	* [pandas.pydata.org] `User Guide <https://pandas.pydata.org/docs/user_guide/index.html>`_
 	* [leetcode.com] `Introduction to Pandas <https://leetcode.com/studyplan/introduction-to-pandas/>`_
 	* [leetcode.com] `30 Days of Pandas <https://leetcode.com/studyplan/30-days-of-pandas/>`_
 	* [codechef.com] `Learn Pandas - Practice Problems and Challenges <https://www.codechef.com/learn/course/pandas>`_
