@@ -24,9 +24,9 @@ Contents
    dl/index
    rank
    dsalgo
+   mlcoding
+   mlapp
    sysdes
-   mldes
-   mlcasestudy
    behave
    studytips
    dsalgosol
