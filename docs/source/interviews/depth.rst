@@ -2,88 +2,110 @@
 ################################################################################
 ML Depth
 ################################################################################
-Topics
+Topics for Revision
 ********************************************************************************
 Fundamentals
 ================================================================================
-1. Classification/Regression loss and metrics
-2. Ranking loss and metrics
-3. Clustering
-	- Algorithms:
+#. Classification/Regression loss and metrics
+#. Ranking loss and metrics
+#. Clustering
+
+	- Algorithms
+
 		- Distance Based: K-Means
 		- Density Based: DBSCAN
-	- Metrics:
-		- Distance Based:
+	- Metrics
+
+		- Distance Based
+
 			- Silhoutte coefficient
 			- DB index
 			- CH index
 		- Density Based:
 
-4. Manifold Learning
+#. Manifold Learning
+
 	- t-SNE
-5. Latent Models
+#. Latent Variable Models
+
 	- GMM
 	- PCA, Kernel-PCA
 	- NMF
 	- ICA
 	- LDA
-6. Outlier prediction
+#. Outlier prediction
+
 	- Isolation Forest
 	- One-Class SVM
-7. Density Estimation
+#. Density Estimation
+
 	- KDE
-8. Resume walkthrough 
+#. Resume walkthrough 
+
 	- General problem description and approach
 	-  Loss function and training methods
 	- Challenges faced
-9. DL GD, backprop, regularisation
-10. Different Activation functions and different Attention mechanism
-11. Language model papers
-12. Revisit the topics read so far
+#. DL GD, backprop, regularisation
+#. Different Activation functions and different Attention mechanism
+#. Language model papers
+#. Revisit the topics read so far
 
-LMs
+Transformer based Models
 ==================================================================
-- init
+#. Init
+
 	- xavier/he init
-- tokenizers
+#. Tokenizers
+
 	- bpe
 	- wordpiece, sentencepiece
-- activations
+#. Activations
+
 	- sigmoid, tanh, relu, gelu, swish, glu, geglu, reglu, swiglu
-- normalisation
+#. Normalisation
+
 	- internal covariate shift
 	- batch norm
 	- layer norm	
 	- rms norm
 	- pre-ln
-- position embedding schemes
+#. Position embedding schemes
+
 	- learned, sinusoidal
 	- rotary positional encoding
-- transformer architecture from attention all you need
+#. Transformer architecture from attention all you need
+
 	- pytorch implementation, batched, sequential
 	- multi-query attention
 	- grouped-query attention
-- decoding
+#. Decoding
+
 	- beam search
 	- top p, top k, temperature
 	- speculative decoding
-- models
+#. Models
+
 	- cbow - word2vec
 	- transformer based: 
+
 		- bert mlm + nsp
 		- bart
+		- rtd based
 		- moe models, mixtral
 		- gpt clm
 		- xlnet plm
 	- non-transformer - mamba
-- t5 learnings
+#. T5 learnings
+
 	- mt5
 	- generalisable t5-based retriever (gtr)
-- basics of nvda graphics hardware
+#. Basics of nvda graphics hardware
+
 	- flash attention
 	- quantisation, int8 llm
 	- paged attention, ring attention
-- llm tech stack
+#. LLM tech stack
+
 	- prompt engineering
 	- prompt tuning
 	- rag

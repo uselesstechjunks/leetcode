@@ -72,6 +72,8 @@ Design Resources
 	* [Updated] `What We’ve Learned From A Year of Building with LLMs <https://applied-llms.org/>`_
 	* [tableau.com] `10 Great Machine Learning (ML) and Artificial Intelligence (AI) Blogs To Follow <https://www.tableau.com/learn/articles/blogs-about-machine-learning-artificial-intelligence>`_
 	* [towardsdatascience] `What's WRONG with Metrics? <https://towardsdatascience.com/choosing-the-right-metric-is-a-huge-issue-99ccbe73de61>`_
+	* [capitalone.com] `Understanding TF-IDF for Machine Learning <https://www.capitalone.com/tech/machine-learning/understanding-tf-idf/>`_
+	* [elastic.co] `Practical BM25 — Part 2: The BM25 Algorithm and its variables <https://www.elastic.co/blog/practical-bm25-part-2-the-bm25-algorithm-and-its-variables/>`_
 
 .. tip::
 	#. Designing Machine Learning Systems - Chip Huyen
