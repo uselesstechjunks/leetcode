@@ -7,6 +7,7 @@ Resources
 .. attention::
 
 	* [neetcode.io] `Neetcode <https://neetcode.io/practice>`_ 
+	* [takeuforward.org] `Strivers A2Z DSA Course/Sheet <https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/>`_
 	* [leetcodethehardway.com] `LeetCode The Hard Way <https://leetcodethehardway.com/tutorials/category/basic-topics>`_
 	* [deriveit.org] `DeriveIt <https://deriveit.org/coding>`_
 	* [leetracer.com] `Screen Questions - (Company Tags Last Updated: 11-02-24) <https://leetracer.com/screener>`_
