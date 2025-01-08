@@ -51,6 +51,11 @@ SQL
 .. important::
 	* [leetcode.com] `SQL 50 <https://leetcode.com/studyplan/top-sql-50/>`_
 
+Tensors
+===============================================================================
+.. important::
+	* [einsum.joelburget.com] `Einsum in Depth <https://einsum.joelburget.com/>`_
+
 *******************************************************************************
 Design Resources
 *******************************************************************************
