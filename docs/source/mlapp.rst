@@ -13,6 +13,7 @@ Design Resources
 	* [Snapchat] `Machine Learning for Snapchat Ad Ranking <https://eng.snap.com/machine-learning-snap-ad-ranking>`_
 
 .. important::
+	* [algoexpert.io] `MLExpert <https://www.algoexpert.io/machine-learning/product>`_
 	* [evidentlyai.com] `ML and LLM system design: 500 case studies to learn from <https://www.evidentlyai.com/ml-system-design>`_
 	* [evidentlyai.com] `AI quality and MLOps tutorials <https://www.evidentlyai.com/mlops-tutorials>`_
 	* [recsys.acm.org] Tutorials on `ACM RecSys Conferences <https://recsys.acm.org/>`_
