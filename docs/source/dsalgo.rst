@@ -6,12 +6,13 @@ Key Topics
 *********************************************************************************
 .. attention::
 
-	* Binary search
-	* Graph
-	* Two pointers
-	* Sliding window
-	* Dynamic programming
-	* Trees
+	#. Binary search
+	#. Graph
+	#. Dynamic programming
+	#. Combinatorial
+	#. Trees
+	#. Two pointers
+	#. Sliding window
 
 *********************************************************************************
 Resources
