@@ -4,10 +4,127 @@ ML Depth
 ################################################################################
 Topics for Revision
 ********************************************************************************
-Fundamentals
+Metrics
 ================================================================================
-#. Classification/Regression loss and metrics
-#. Ranking loss and metrics
+- Regression
+- Classification
+- Ranking
+
+	- Online ranking: ROC-AUC, PR-AUC  
+	- Offline selection: ROC-AUC  
+- Generative Models
+	- BLUE, ROUGE
+	- GPT Labeling: Accuracy, Human-like 
+
+Projects  
+================================================================================
+- Motivation
+- Approach: Metrics, features, architecture  
+- Challenges
+- Outcome
+
+Transformer-Based Models
+================================================================================
+Initialization
+--------------------------------------------------------------------------------
+- Xavier/He initialization  
+
+Tokenizers
+--------------------------------------------------------------------------------
+- Byte Pair Encoding (BPE)  
+- WordPiece  
+- SentencePiece  
+
+Activations
+--------------------------------------------------------------------------------
+- Sigmoid, Tanh, ReLU  
+- GELU, Swish  
+- GLU, GeGLU, ReGLU, SwiGLU  
+
+Normalization
+--------------------------------------------------------------------------------
+- Internal covariate shift  
+- Batch normalization  
+- Layer normalization (LayerNorm)  
+- RMS normalization (RMSNorm)  
+- Pre-layer normalization (Pre-LN)  
+
+Position Embedding Schemes
+--------------------------------------------------------------------------------
+- Learned positional encoding  
+- Sinusoidal positional encoding  
+- Rotary positional encoding  
+
+Attention Mechanisms
+--------------------------------------------------------------------------------
+- Functions: Additive, dot product, scaled dot product  
+- Architectures:  
+
+	- Full (e.g., Flash, Paged, Ring)  
+	- Sparse  
+	- Multi-query attention  
+	- Grouped-query attention  
+- Techniques:  
+
+	- Self-attention (SHA)  
+	- Multi-head attention (MHA)  
+	- Encoder attention  
+	- Decoder attention with KV-cache  
+
+Decoding Techniques
+--------------------------------------------------------------------------------
+- Beam search  
+- Top-p, Top-k sampling  
+- Temperature scaling  
+- Speculative decoding  
+
+Transformer Architectures
+--------------------------------------------------------------------------------
+- PyTorch implementation (batched, sequential)  
+- Models:  
+
+	- BERT: MLM + NSP  
+	- BART  
+	- GPT: CLM  
+	- XLNet: PLM  
+	- RTD-based models: Electra
+	- Mixture-of-Experts (MoE), Mixtral  
+	- Non-transformer models: Mamba  
+	- T5 Learnings
+
+		- mT5  
+		- Generalizable T5-based Retriever (GTR)  
+
+Transformer Hardware and Optimization
+--------------------------------------------------------------------------------
+- Flash attention  
+- Quantization (e.g., INT8 LLM)  
+- Paged attention  
+- Ring attention  
+
+LLM Techniques
+--------------------------------------------------------------------------------
+- Prompt engineering  
+- Prompt tuning  
+- Retrieval-Augmented Generation (RAG)  
+- LoRA, QLoRA  
+- Supervised Fine-Tuning (SFT)  
+- Reinforcement Learning with Human Feedback (RLHF)  
+- Proximal Policy Optimization (PPO)  
+- Direct Preference Optimization (DPO)  
+
+Loss Functions
+--------------------------------------------------------------------------------
+- Negative Log Likelihood (NLL)
+
+Optimizers
+--------------------------------------------------------------------------------
+- Adam  
+- AdamW  
+- Adagrad  
+
+Machine Learning Fundamentals
+================================================================================
 #. Clustering
 
 	- Algorithms
@@ -40,79 +157,10 @@ Fundamentals
 #. Density Estimation
 
 	- KDE
-#. Resume walkthrough 
-
-	- General problem description and approach
-	-  Loss function and training methods
-	- Challenges faced
 #. DL GD, backprop, regularisation
-#. Different Activation functions and different Attention mechanism
-#. Language model papers
-#. Revisit the topics read so far
 
-Transformer based Models
-==================================================================
-#. Init
-
-	- xavier/he init
-#. Tokenizers
-
-	- bpe
-	- wordpiece, sentencepiece
-#. Activations
-
-	- sigmoid, tanh, relu, gelu, swish, glu, geglu, reglu, swiglu
-#. Normalisation
-
-	- internal covariate shift
-	- batch norm
-	- layer norm	
-	- rms norm
-	- pre-ln
-#. Position embedding schemes
-
-	- learned, sinusoidal
-	- rotary positional encoding
-#. Transformer architecture from attention all you need
-
-	- pytorch implementation, batched, sequential
-	- multi-query attention
-	- grouped-query attention
-#. Decoding
-
-	- beam search
-	- top p, top k, temperature
-	- speculative decoding
-#. Models
-
-	- cbow - word2vec
-	- transformer based: 
-
-		- bert mlm + nsp
-		- bart
-		- rtd based
-		- moe models, mixtral
-		- gpt clm
-		- xlnet plm
-	- non-transformer - mamba
-#. T5 learnings
-
-	- mt5
-	- generalisable t5-based retriever (gtr)
-#. Basics of nvda graphics hardware
-
-	- flash attention
-	- quantisation, int8 llm
-	- paged attention, ring attention
-#. LLM tech stack
-
-	- prompt engineering
-	- prompt tuning
-	- rag
-	- lora, qlora
-	- sft
-	- rlhf, ppo, dpo
-
+Other Topics
+********************************************************************************
 Misc
 ================================================================================
 - summarise popular NL tasks and remember the usual dataset names
