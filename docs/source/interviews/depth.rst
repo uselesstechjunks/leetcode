@@ -90,10 +90,8 @@ Transformer Architectures
 	- RTD-based models: Electra
 	- Mixture-of-Experts (MoE), Mixtral  
 	- Non-transformer models: Mamba  
-	- T5 Learnings
-
-		- mT5  
-		- Generalizable T5-based Retriever (GTR)  
+	- T5 Learnings: mT5  
+	- Generalizable T5-based Retriever (GTR)  
 
 Transformer Hardware and Optimization
 --------------------------------------------------------------------------------
