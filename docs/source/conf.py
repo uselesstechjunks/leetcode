@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'SelfStudyGuide'
-copyright = '2022-2023, UselessTechJunks'
+copyright = '2022-2025, UselessTechJunks'
 author = 'Useless Tech Junks'
 
 release = '0.1'
