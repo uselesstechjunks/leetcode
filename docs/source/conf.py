@@ -42,7 +42,7 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 #html_theme = 'sphinx_rtd_theme'
-html_theme = 'python-docs-theme'
+html_theme = 'python_docs_theme'
 html_sidebars = {
 	'**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'], 
 	'using/windows': ['windows-sidebar.html', 'searchbox.html'],
