@@ -3,15 +3,25 @@
 # -- Project information
 
 project = 'SelfStudyGuide'
-copyright = '2022-2023, UselessTechJunks'
+copyright = '2022-2025, UselessTechJunks'
 author = 'Useless Tech Junks'
 
 release = '0.1'
 version = '0.1.0'
 
 # -- General configuration
+from custom_directives import DefinitionsDirective
+
+'''
+Markdown helps:
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-admonition
+'''
+
+def setup(app):
+	app.add_directive('definitions', DefinitionsDirective)
 
 extensions = [
+    'sphinx_rtd_theme',
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
@@ -19,6 +29,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_toolbox.collapse',
     'sphinx.ext.mathjax',
+    'sphinx.ext.autosectionlabel'
 ]
 
 intersphinx_mapping = {
