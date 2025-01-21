@@ -11,7 +11,7 @@ python:
       path: .
 sphinx:
   # Path to your Sphinx configuration file.
-  configuration: conf.py
+  configuration: docs/source/conf.py
   fail_on_warning: false #true
 formats:
   - pdf
