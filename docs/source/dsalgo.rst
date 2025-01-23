@@ -127,73 +127,6 @@ Problems to Practice:
 * Number of islands (DFS/BFS).
 * Shortest path in a graph (Dijkstra’s algorithm).
 * Detect cycle in an undirected graph (union-find).
-
-More Problems:
-
-* You are given a directed graph where each node represents a city and edges represent roads between them with a time cost. Find the smallest time to travel between two given cities, but you can use a "shortcut" road that reduces the time of any one edge to zero.
-* A maze is represented as a grid. Each cell is either walkable or a wall. Find the minimum number of walls you must break to create a path from the top-left corner to the bottom-right corner.
-* You are given a graph with nn nodes and mm edges, where each edge has a weight. Determine if there exists a subset of edges such that the graph becomes a tree and the sum of weights is odd.
-* You are tasked to partition a graph into two subgraphs such that the difference in the number of nodes between the two subgraphs is minimized.
-* In a large social network graph, find the smallest group of people (nodes) such that every other person in the network is directly connected to at least one person in this group.
-* Find the longest path in a Directed Acyclic Graph (DAG) where all nodes must be visited exactly once.
-* Given a weighted undirected graph, find the number of distinct Minimum Spanning Trees (MSTs) that can be formed.
-* You are given a graph where each node has a value. Find the largest sum of values that can be obtained by traversing from a given start node to an end node while following the graph’s edges.
-* You are given a directed graph representing a city's one-way road system. Each node represents an intersection, and each edge represents a road. Due to construction, one road (edge) can be closed. Determine whether the city remains fully connected (i.e., you can still reach all intersections from any starting intersection) if any one road is removed.
-* You are given an undirected graph representing a set of servers connected by cables. A server is considered critical if removing it causes some servers to become disconnected. Find all the critical servers in the graph.
-* A company wants to install a messaging system in its office building. The building is represented as a weighted undirected graph, where nodes are rooms and edges are connections between rooms. Messages can only travel over edges. Determine the minimum set of edges to remove such that there is no path between two specific rooms while keeping the rest of the graph connected.
-* You are given a directed acyclic graph (DAG) where each node represents a task, and each edge (u, v) means task u must be completed before task v. Multiple workers are available to work on tasks simultaneously. Each task takes exactly 1 unit of time to complete. Calculate the minimum time required to complete all tasks.
-* Given a grid with n rows and m columns, each cell is either land (1) or water (0). You can traverse only horizontally or vertically. A bridge can be built between two pieces of land separated by water if the Manhattan distance between them is 1. Determine the minimum number of bridges needed to connect all pieces of land into a single connected component.
-* A tournament is represented as a directed graph, where each edge (u, v) means team u defeated team v. Some match results are missing, represented as missing edges. Determine if it is possible to orient the missing edges such that the resulting graph is still a tournament.
-* You are given an undirected graph representing a city's sewer system, where nodes are sewer junctions and edges are pipes connecting them. Certain pipes are old and at risk of breaking. Find the minimum number of new pipes that need to be added to ensure that no single pipe failure disconnects any part of the system.
-* You are given a weighted undirected graph representing a network of computers. Some edges are "critical" (important for connectivity), and some are "pseudo-critical" (important but can be replaced by other edges). Write an algorithm to classify each edge as critical, pseudo-critical, or neither.
-
-Complicated Problems
-
-Problem 0: Verifying and Improving Connectivity in Sham-Poobanana
-
-	The police department in the city of Sham-Poobanana has converted every street into a one-way road. The mayor claims that it is possible to legally drive from any intersection in the city to any other intersection.
-	
-	(a) Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.
-	(b) Good Intersections: Call an intersection xx good if, for any intersection yy that one can legally reach from xx, it is possible to legally drive from yy back to xx. Devise an algorithm to verify or refute this claim.
-	(c) Reachability Pairs: Count the number of pairs of intersections (A,B)(A,B) where AA can reach BB, but BB cannot reach AA.
-	(d) Maximum Reachability Intersection: Find the intersection with the highest reachability, defined as the number of intersections reachable from it.
-	(e) Restoring Strong Connectivity: Determine the minimum number of streets that need to be converted back to two-way roads to make the city strongly connected.
-	(f) Signage Changes with Minimum Hires: People can be hired at intersections to convert roads back to two-way streets. They must obey traffic laws while doing so (i.e., they can only travel back on a street after making it two-way). Devise an efficient algorithm to minimize the number of people hired and provide an order of operations for each person to change signage.
-
-Problem 1: Counting Unreachable Pairs
-
-	The mayor of Trafficville claims that any intersection AA can reach intersection BB if there exists a path from AA to BB.
-	
-	(a) Count the number of intersection pairs (A,B)(A,B) where AA can reach BB, but BB cannot reach AA.
-	(b) Design an efficient algorithm to find such pairs and compute the count.
-
-Problem 2: Restoring Strong Connectivity with Fewest Changes
-
-	In FixItTown, some streets have been incorrectly converted to one-way roads, making some intersections unreachable.
-	
-	(a) Design an algorithm to compute the minimum number of streets that need to be converted to two-way roads to make all intersections strongly connected.
-	(b) Modify your algorithm to prioritize converting streets with the smallest total cost (each street has a given conversion cost).
-
-Problem 3: Hiring to Restore Connectivity
-
-	In TrafficFixCity, people can be hired at intersections to convert nearby one-way streets into two-way roads. Each person must follow traffic laws and can only travel back after making a road two-way.
-	
-	(a) Determine the fewest number of people required to be hired to make the city strongly connected.
-	(b) For each hired person, provide an order of operations for changing signage while obeying traffic laws.
-
-Problem 4: Detecting Good Intersections
-
-	In LoopLand, an intersection is called "good" if, for any intersection reachable from it, there exists a path back to the original intersection.
-	
-	(a) Describe an efficient algorithm to determine whether a given intersection is "good."
-	(b) Count the number of good intersections in the entire city.
-	
-Problem 5: Optimal Subset for Strong Connectivity
-
-	In PathTown, certain intersections are critical for connectivity. Removing them disconnects parts of the city.
-	
-	(a) Find the smallest subset of intersections that, when removed, makes the city no longer strongly connected.
-	(b) If no such subset exists, prove that the city is strongly connected.
 	
 5. Recursion and Backtracking
 ---------------------------------------------------------------------------------
@@ -340,3 +273,181 @@ Intervals
 #. `Meeting Rooms II <https://leetcode.com/problems/meeting-rooms-ii/>`_
 #. `Meeting Rooms III <https://leetcode.com/problems/meeting-rooms-iii/>`_
 #. `Number of Flowers in Full Bloom <https://leetcode.com/problems/number-of-flowers-in-full-bloom/>`_
+
+Advanced Graph Topics
+================================================================================
+1. Shortest Paths
+--------------------------------------------------------------------------------
+* Why important: Many problems in real-world applications (e.g., routing, network optimization) rely on shortest paths.
+* Relevant Algorithms:
+	* Dijkstra’s Algorithm (for non-negative weights).
+	* Bellman-Ford Algorithm (for graphs with negative weights).
+	* Floyd-Warshall Algorithm (all-pairs shortest paths).
+	* A* Search (if heuristic-based optimization is required).
+* Example Problems:
+	* Find the shortest path in a weighted directed graph.
+	* Determine if a negative weight cycle exists.
+	* Optimize routing in a graph with mixed positive and negative weights.
+
+2. Strongly Connected Components (SCCs)
+--------------------------------------------------------------------------------
+* Why important: SCCs are foundational in analyzing directed graphs for connectivity.
+* Key Algorithms:
+	* Kosaraju’s Algorithm.
+	* Tarjan’s Algorithm.
+* Example Problems:
+	* Find all SCCs in a directed graph.
+	* Determine if a graph is strongly connected.
+	* Compute the smallest set of edges to make a graph strongly connected.
+
+3. Minimum Spanning Tree (MST)
+--------------------------------------------------------------------------------
+* Why important: MSTs are useful in optimization problems, especially those involving connectivity.
+* Key Algorithms:
+	* Prim’s Algorithm.
+	* Kruskal’s Algorithm.
+* Example Problems:
+	* Compute the MST for a weighted undirected graph.
+	* Update the MST dynamically when a new edge is added.
+	* Determine the second-best MST.
+
+4. Topological Sort
+--------------------------------------------------------------------------------
+* Why important: Crucial for dependency resolution and scheduling problems.
+* Key Techniques:
+	* Kahn’s Algorithm (BFS-based).
+	* DFS with post-order traversal.
+* Example Problems:
+	* Check if a directed graph has a cycle.
+	* Compute a valid topological ordering.
+	* Find the number of valid topological orderings.
+
+5. Bipartite Graphs
+--------------------------------------------------------------------------------
+* Why important: Common in matching and coloring problems.
+* Key Techniques:
+	* BFS/DFS to test bipartiteness.
+	* Maximum Bipartite Matching using augmenting paths.
+* Example Problems:
+	* Check if a graph is bipartite.
+	* Solve matching problems in bipartite graphs.
+	* Partition the graph into two disjoint sets.
+
+6. Graph Traversals
+--------------------------------------------------------------------------------
+* Why important: Breadth-first and depth-first searches are foundational for exploring graphs.
+* Key Techniques:
+	* BFS (used for shortest paths in unweighted graphs, connected components).
+	* DFS (used for cycle detection, pathfinding, and SCCs).
+* Example Problems:
+	* Find all connected components.
+	* Detect cycles in a directed or undirected graph.
+	* Implement BFS/DFS to solve maze problems.
+
+7. Dynamic Graph Algorithms
+--------------------------------------------------------------------------------
+* Why important: Company values efficiency, and dynamic updates test your ability to optimize graph data structures.
+* Key Problems:
+	* Maintain connectivity as edges are added or removed.
+	* Recompute shortest paths or MST dynamically.
+	* Optimize graph updates in streaming contexts.
+
+8. Network Flow
+--------------------------------------------------------------------------------
+* Why important: Advanced but occasionally tested for senior-level candidates to assess problem-solving depth.
+* Key Algorithms:
+	* Ford-Fulkerson Algorithm.
+	* Edmonds-Karp Algorithm.
+* Example Problems:
+	* Compute maximum flow in a flow network.
+	* Solve bipartite matching using flow techniques.
+	* Minimize the cut in a weighted graph.
+
+9. Eulerian and Hamiltonian Paths
+--------------------------------------------------------------------------------
+* Why important: Rare but can appear in challenging questions.
+* Example Problems:
+	* Determine if a graph has an Eulerian path or circuit.
+	* Find the Hamiltonian path if it exists.
+	* Compute a path visiting all edges or vertices exactly once.
+
+10. Advanced Graph Techniques
+--------------------------------------------------------------------------------
+* Why important: Tests your depth of knowledge for senior-level positions.
+* Key Areas:
+	* Articulation Points and Bridges.
+	* Graph Coloring Problems.
+	* Spectral Graph Theory (rare but valuable for specific roles).
+
+11. Problems:
+--------------------------------------------------------------------------------
+* You are given a directed graph where each node represents a city and edges represent roads between them with a time cost. Find the smallest time to travel between two given cities, but you can use a "shortcut" road that reduces the time of any one edge to zero.
+* A maze is represented as a grid. Each cell is either walkable or a wall. Find the minimum number of walls you must break to create a path from the top-left corner to the bottom-right corner.
+* You are given a graph with nn nodes and mm edges, where each edge has a weight. Determine if there exists a subset of edges such that the graph becomes a tree and the sum of weights is odd.
+* You are tasked to partition a graph into two subgraphs such that the difference in the number of nodes between the two subgraphs is minimized.
+* In a large social network graph, find the smallest group of people (nodes) such that every other person in the network is directly connected to at least one person in this group.
+* Find the longest path in a Directed Acyclic Graph (DAG) where all nodes must be visited exactly once.
+* Given a weighted undirected graph, find the number of distinct Minimum Spanning Trees (MSTs) that can be formed.
+* You are given a graph where each node has a value. Find the largest sum of values that can be obtained by traversing from a given start node to an end node while following the graph’s edges.
+* You are given a directed graph representing a city's one-way road system. Each node represents an intersection, and each edge represents a road. Due to construction, one road (edge) can be closed. Determine whether the city remains fully connected (i.e., you can still reach all intersections from any starting intersection) if any one road is removed.
+* You are given an undirected graph representing a set of servers connected by cables. A server is considered critical if removing it causes some servers to become disconnected. Find all the critical servers in the graph.
+* A company wants to install a messaging system in its office building. The building is represented as a weighted undirected graph, where nodes are rooms and edges are connections between rooms. Messages can only travel over edges. Determine the minimum set of edges to remove such that there is no path between two specific rooms while keeping the rest of the graph connected.
+* You are given a directed acyclic graph (DAG) where each node represents a task, and each edge (u, v) means task u must be completed before task v. Multiple workers are available to work on tasks simultaneously. Each task takes exactly 1 unit of time to complete. Calculate the minimum time required to complete all tasks.
+* Given a grid with n rows and m columns, each cell is either land (1) or water (0). You can traverse only horizontally or vertically. A bridge can be built between two pieces of land separated by water if the Manhattan distance between them is 1. Determine the minimum number of bridges needed to connect all pieces of land into a single connected component.
+* A tournament is represented as a directed graph, where each edge (u, v) means team u defeated team v. Some match results are missing, represented as missing edges. Determine if it is possible to orient the missing edges such that the resulting graph is still a tournament.
+* You are given an undirected graph representing a city's sewer system, where nodes are sewer junctions and edges are pipes connecting them. Certain pipes are old and at risk of breaking. Find the minimum number of new pipes that need to be added to ensure that no single pipe failure disconnects any part of the system.
+* You are given a weighted undirected graph representing a network of computers. Some edges are "critical" (important for connectivity), and some are "pseudo-critical" (important but can be replaced by other edges). Write an algorithm to classify each edge as critical, pseudo-critical, or neither.
+
+12. Complicated Problems
+--------------------------------------------------------------------------------
+Problem 0: Verifying and Improving Connectivity in Sham-Poobanana
+
+.. seealso::
+	The police department in the city of Sham-Poobanana has converted every street into a one-way road. The mayor claims that it is possible to legally drive from any intersection in the city to any other intersection.
+
+	* Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.
+	* Good Intersections: Call an intersection xx good if, for any intersection yy that one can legally reach from xx, it is possible to legally drive from yy back to xx. Devise an algorithm to verify or refute this claim.
+	* Reachability Pairs: Count the number of pairs of intersections (A,B)(A,B) where AA can reach BB, but BB cannot reach AA.
+	* Maximum Reachability Intersection: Find the intersection with the highest reachability, defined as the number of intersections reachable from it.
+	* Restoring Strong Connectivity: Determine the minimum number of streets that need to be converted back to two-way roads to make the city strongly connected.
+	* Signage Changes with Minimum Hires: People can be hired at intersections to convert roads back to two-way streets. They must obey traffic laws while doing so (i.e., they can only travel back on a street after making it two-way). Devise an efficient algorithm to minimize the number of people hired and provide an order of operations for each person to change signage.
+
+Problem 1: Counting Unreachable Pairs
+
+.. seealso::
+	The mayor of Trafficville claims that any intersection AA can reach intersection BB if there exists a path from AA to BB.
+
+	* Count the number of intersection pairs (A,B)(A,B) where AA can reach BB, but BB cannot reach AA.
+	* Design an efficient algorithm to find such pairs and compute the count.
+
+Problem 2: Restoring Strong Connectivity with Fewest Changes
+
+.. seealso::
+	In FixItTown, some streets have been incorrectly converted to one-way roads, making some intersections unreachable.
+
+	* Design an algorithm to compute the minimum number of streets that need to be converted to two-way roads to make all intersections strongly connected.
+	* Modify your algorithm to prioritize converting streets with the smallest total cost (each street has a given conversion cost).
+
+Problem 3: Hiring to Restore Connectivity
+
+.. seealso::
+	In TrafficFixCity, people can be hired at intersections to convert nearby one-way streets into two-way roads. Each person must follow traffic laws and can only travel back after making a road two-way.
+
+	* Determine the fewest number of people required to be hired to make the city strongly connected.
+	* For each hired person, provide an order of operations for changing signage while obeying traffic laws.
+
+Problem 4: Detecting Good Intersections
+
+.. seealso::
+	In LoopLand, an intersection is called "good" if, for any intersection reachable from it, there exists a path back to the original intersection.
+
+	* Describe an efficient algorithm to determine whether a given intersection is "good."
+	* Count the number of good intersections in the entire city.
+	
+Problem 5: Optimal Subset for Strong Connectivity
+
+.. seealso::
+	In PathTown, certain intersections are critical for connectivity. Removing them disconnects parts of the city.
+
+	* Find the smallest subset of intersections that, when removed, makes the city no longer strongly connected.
+	* If no such subset exists, prove that the city is strongly connected.
