@@ -93,100 +93,213 @@ class Solution:
                 return False
         return True
     
-    def findBCC(self, graph, n):
-        return None, None
+    def findBCC(self, graph, n):        
+        def dfs1(parent, u):
+            nonlocal discovered, entry, low, time, articulation, bridges
+            discovered[u] = True
+            low[u], entry[u] = time, time
+            time += 1
+            treedeg = 0
+            isArticulation = False
+            for v in graph.get(u, []):
+                if not discovered[v]:
+                    treedeg += 1
+                    dfs1(u, v)
+                    low[u] = min(low[u], low[v])
+                    if low[v] > entry[u]:
+                        bridges.append((u, v))
+                    if low[v] >= entry[u]:
+                        isArticulation = True # parent articulation
+                elif parent != v:
+                    low[u] = min(low[u], entry[v])
+            if (parent == -1 and treedeg > 1) or (parent != -1 and isArticulation):
+                articulation.append(u)
+        def dfs2(parent, u, depth):
+            nonlocal discovered, entry, low, articulation, bridges
+            discovered[u] = True
+            low[u], entry[u] = depth, depth
+            treedeg = 0
+            isArticulation = False
+            for v in graph.get(u, []):
+                if not discovered[v]:
+                    treedeg += 1
+                    dfs2(u, v, depth + 1)
+                    low[u] = min(low[u], low[v])
+                    if low[v] > entry[u]:
+                        bridges.append((u, v))
+                    if low[v] >= entry[u]:
+                        isArticulation = True # parent articulation
+                elif parent != v:
+                    low[u] = min(low[u], entry[v])
+            if (parent == -1 and treedeg > 1) or (parent != -1 and isArticulation):
+                articulation.append(u)
+        discovered = [False] * n
+        entry = [None] * n
+        low = [None] * n
+        articulation, bridges = [], []
+        time = 0
+        for u in range(n):
+            if not discovered[u]:
+                dfs1(-1, u)
+        a, b = articulation, bridges
+        discovered = [False] * n
+        entry = [None] * n
+        low = [None] * n
+        articulation, bridges = [], []
+        for u in range(n):
+            if not discovered[u]:
+                dfs2(-1, u, 0)
+        c, d = articulation, bridges
+        assert(a == c and b == d)
+        return articulation, bridges
 
-def test1():
-    digraph = {  
-        0: [1, 2],  
-        1: [3, 4],  
-        2: [5, 6],  
-        3: [],
-        4: [],
-        5: [],
-        6: [] 
-    }  
-    start_node = 0
-    return digraph, start_node
-
-def test2():
-    graph = {  
-        0: [1, 3],
-        1: [0, 2],
-        2: [1, 3],
-        3: [0, 2]
-    }
-    start_node = 0
-    return graph, start_node
-
-def cycleDirected():
-    digraph, n = {}, 0 # Should return False
-    digraph, n = {0: []}, 1  # Should return False
-    digraph, n = {0: [0]}, 1  # Should return True
-    digraph, n = {0: [1], 1: []}, 2  # Should return False
-    digraph, n = {0: [1], 1: [0]}, 2  # Should return True
-    digraph, n = {0: [1], 2: [3], 3: []}, 4  # Should return False
-    digraph, n = {0: [1], 1: [2], 2: [0], 3: [4], 4: []}, 5  # Should return True
-    digraph, n = {0: [1], 1: [2], 3: []}, 4  # Should return False
-    digraph, n = {0: [1, 2], 1: [3], 2: [3], 3: [4], 4: [2]}, 5  # Should return True
-    return digraph, n
-
-def cycleUndirected():
-    graph, n = {}, 0  # Should return False
-    graph, n = {0: []}, 1  # Should return False
-    graph, n = {0: [0]}, 1  # Should return True
-    graph, n = {0: [1], 1: [0]}, 2  # Should return False
-    graph, n = {0: [1, 2], 1: [0, 2], 2: [0, 1]}, 3  # Should return True
-    graph, n = {0: [1], 1: [0, 2], 2: [1, 3], 3: [2]}, 4  # Should return False
-    graph, n = {0: [1], 1: [0, 2], 2: [1, 3], 3: [2], 4: [5], 5: [4, 6], 6: [5, 4]}, 7  # Should return True
-    graph, n = {0: [1, 1], 1: [0, 0]}, 2  # Should return True
-    graph, n = {0: [1, 2], 1: [0, 3], 2: [0, 3], 3: [1, 2, 4], 4: [3, 5], 5: [4]}, 6  # Should return True
-    graph, n = {0: [1], 1: [0, 2], 2: [1, 3], 3: [2, 4], 4: [3, 5], 5: [4]}, 6  # Should return False
-    return graph, n
-
-def bipartite():
-    graph, n = {}, 0 # Expected Output: True
-    graph, n = {0: []}, 1 # Expected Output: True
-    graph, n = {0: [1], 1: [0]}, 2, # Expected Output: True
-    graph, n = {0: [1, 2], 1: [0, 2], 2: [0, 1]}, 3 # Expected Output: False
-    graph, n = {0: [1, 3], 1: [0, 2], 2: [1, 3], 3: [0, 2]}, 4 # Expected Output: True
-    graph, n = {0: [1], 1: [0], 2: [3], 3: [2]}, 4 # Expected Output: True
-    graph, n = {0: [1], 1: [0], 2: [3, 4], 3: [2, 4], 4: [2, 3]}, 5 # Expected Output: False
-    graph, n = {0: [1, 2, 3, 4], 1: [0], 2: [0], 3: [0], 4: [0]}, 5 # Expected Output: True
-    graph, n = {0: [0]}, 1 # Expected Output: False
-    graph, n = {0: [1], 1: [0, 2], 2: [1, 3], 3: [2], 4: [5], 5: [4, 6], 6: [5]}, 7 # Expected Output: True
-    return graph, n
-
-def bcc():
-    graph, n = {}, 0 #  Expected Output: Bridges: [], Articulation Points: []
-    graph, n = {0: []}, 1 #  Expected Output: Bridges: [], Articulation Points: []
-    graph, n = {0: [1], 1: [0]}, 2 #  Expected Output: Bridges: [(0, 1)], Articulation Points: []
-    graph, n = {0: [1], 1: [0, 2], 2: [1]}, 3 #  Expected Output: Bridges: [(1, 2), (0, 1)], Articulation Points: [1]
-    graph, n = {0: [1, 2], 1: [0, 2], 2: [0, 1]}, 3 #  Expected Output: Bridges: [], Articulation Points: []
-    graph, n = {0: [1], 1: [0, 2], 2: [1], 3: [4], 4: [3]}, 5 #  Expected Output: Bridges: [(0, 1), (1, 2), (3, 4)], Articulation Points: []
-    graph, n = {0: [1, 2], 1: [0, 2, 3], 2: [0, 1], 3: [1, 4], 4: [3]}, 5 #  Expected Output: Bridges: [(1, 3), (3, 4)], Articulation Points: [1, 3]
-    graph, n = {0: [1], 1: [0, 2], 2: [1], 3: [4], 4: [3, 5], 5: [4]}, 6 #  Expected Output: Bridges: [(0, 1), (1, 2), (3, 4), (4, 5)], Articulation Points: []
-    graph, n = {0: [1, 2, 3, 4], 1: [0], 2: [0], 3: [0], 4: [0]}, 5 #  Expected Output: Bridges: [(0, 1), (0, 2), (0, 3), (0, 4)], Articulation Points: [0]
-    graph, n = {0: [1, 2], 1: [0, 3], 2: [0, 3], 3: [1, 2, 4], 4: [3, 5], 5: [4]}, 6 #  Expected Output: Bridges: [(4, 5)], Articulation Points: [3, 4]
-    return graph, n
-
-if __name__ == '__main__':
+def digraphSearch():
     solution = Solution()
-    digraph, start_node = test1()
+    digraph = {0: [1, 2],1: [3, 4],2: [5, 6],3: [],4: [],5: [],6: []}
+    start_node = 0
     res = solution.bfs1(digraph, start_node)
     print(res)
-    graph, start_node = test2()
+
+def undirectedGraphSearch():
+    solution = Solution()
+    graph = {0: [1, 3],1: [0, 2],2: [1, 3],3: [0, 2]}
+    start_node = 0
     res = solution.bfs2(graph, start_node)
     print(res)
-    digraph, n = cycleDirected()
+
+def cycleDirected():
+    solution = Solution()
+    digraph, n = {}, 0 # Should return False
     res = solution.hasCycle(digraph, n)
     print(res)
-    graph, n = cycleUndirected()
+    digraph, n = {0: []}, 1  # Should return False
+    res = solution.hasCycle(digraph, n)
+    print(res)
+    digraph, n = {0: [0]}, 1  # Should return True
+    res = solution.hasCycle(digraph, n)
+    print(res)
+    digraph, n = {0: [1], 1: []}, 2  # Should return False
+    res = solution.hasCycle(digraph, n)
+    print(res)
+    digraph, n = {0: [1], 1: [0]}, 2  # Should return True
+    res = solution.hasCycle(digraph, n)
+    print(res)
+    digraph, n = {0: [1], 2: [3], 3: []}, 4  # Should return False
+    res = solution.hasCycle(digraph, n)
+    print(res)
+    digraph, n = {0: [1], 1: [2], 2: [0], 3: [4], 4: []}, 5  # Should return True
+    res = solution.hasCycle(digraph, n)
+    print(res)
+    digraph, n = {0: [1], 1: [2], 3: []}, 4  # Should return False
+    res = solution.hasCycle(digraph, n)
+    print(res)
+    digraph, n = {0: [1, 2], 1: [3], 2: [3], 3: [4], 4: [2]}, 5  # Should return True
+    res = solution.hasCycle(digraph, n)
+    print(res)
+
+def cycleUndirected():
+    solution = Solution()
+    graph, n = {}, 0  # Should return False
     res = solution.hasCycleUndirected(graph, n)
     print(res)
-    graph, n = bipartite()
+    graph, n = {0: []}, 1  # Should return False
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+    graph, n = {0: [0]}, 1  # Should return True
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+    graph, n = {0: [1], 1: [0]}, 2  # Should return False
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+    graph, n = {0: [1, 2], 1: [0, 2], 2: [0, 1]}, 3  # Should return True
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+    graph, n = {0: [1], 1: [0, 2], 2: [1, 3], 3: [2]}, 4  # Should return False
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+    graph, n = {0: [1], 1: [0, 2], 2: [1, 3], 3: [2], 4: [5], 5: [4, 6], 6: [5, 4]}, 7  # Should return True
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+    graph, n = {0: [1, 1], 1: [0, 0]}, 2  # Should return True
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+    graph, n = {0: [1, 2], 1: [0, 3], 2: [0, 3], 3: [1, 2, 4], 4: [3, 5], 5: [4]}, 6  # Should return True
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+    graph, n = {0: [1], 1: [0, 2], 2: [1, 3], 3: [2, 4], 4: [3, 5], 5: [4]}, 6  # Should return False
+    res = solution.hasCycleUndirected(graph, n)
+    print(res)
+
+def bipartite():
+    solution = Solution()
+    graph, n = {}, 0 # Expected Output: True
     res = solution.isBipartite(graph, n)
     print(res)
-    graph, n = bcc()
+    graph, n = {0: []}, 1 # Expected Output: True
+    res = solution.isBipartite(graph, n)
+    print(res)
+    graph, n = {0: [1], 1: [0]}, 2, # Expected Output: True
+    res = solution.isBipartite(graph, n)
+    print(res)
+    graph, n = {0: [1, 2], 1: [0, 2], 2: [0, 1]}, 3 # Expected Output: False
+    res = solution.isBipartite(graph, n)
+    print(res)
+    graph, n = {0: [1, 3], 1: [0, 2], 2: [1, 3], 3: [0, 2]}, 4 # Expected Output: True
+    res = solution.isBipartite(graph, n)
+    print(res)
+    graph, n = {0: [1], 1: [0], 2: [3], 3: [2]}, 4 # Expected Output: True
+    res = solution.isBipartite(graph, n)
+    print(res)
+    graph, n = {0: [1], 1: [0], 2: [3, 4], 3: [2, 4], 4: [2, 3]}, 5 # Expected Output: False
+    res = solution.isBipartite(graph, n)
+    print(res)
+    graph, n = {0: [1, 2, 3, 4], 1: [0], 2: [0], 3: [0], 4: [0]}, 5 # Expected Output: True
+    res = solution.isBipartite(graph, n)
+    print(res)
+    graph, n = {0: [0]}, 1 # Expected Output: False
+    res = solution.isBipartite(graph, n)
+    print(res)
+    graph, n = {0: [1], 1: [0, 2], 2: [1, 3], 3: [2], 4: [5], 5: [4, 6], 6: [5]}, 7 # Expected Output: True
+    res = solution.isBipartite(graph, n)
+    print(res)
+
+def bcc():
+    solution = Solution()
+    graph, n = {}, 0 #  Expected Output: Bridges: [], Articulation Points: []
     res, res2 = solution.findBCC(graph, n)
     print(res, res2)
+    graph, n = {0: []}, 1 #  Expected Output: Bridges: [], Articulation Points: []
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+    graph, n = {0: [1], 1: [0]}, 2 #  Expected Output: Bridges: [(0, 1)], Articulation Points: []
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+    graph, n = {0: [1], 1: [0, 2], 2: [1]}, 3 #  Expected Output: Bridges: [(1, 2), (0, 1)], Articulation Points: [1]
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+    graph, n = {0: [1, 2], 1: [0, 2], 2: [0, 1]}, 3 #  Expected Output: Bridges: [], Articulation Points: []
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+    graph, n = {0: [1], 1: [0, 2], 2: [1], 3: [4], 4: [3]}, 5 #  Expected Output: Bridges: [(0, 1), (1, 2), (3, 4)], Articulation Points: [1]
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+    graph, n = {0: [1, 2], 1: [0, 2, 3], 2: [0, 1], 3: [1, 4], 4: [3]}, 5 #  Expected Output: Bridges: [(1, 3), (3, 4)], Articulation Points: [1, 3]
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+    graph, n = {0: [1], 1: [0, 2], 2: [1], 3: [4], 4: [3, 5], 5: [4]}, 6 #  Expected Output: Bridges: [(0, 1), (1, 2), (3, 4), (4, 5)], Articulation Points: [1, 4]
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+    graph, n = {0: [1, 2, 3, 4], 1: [0], 2: [0], 3: [0], 4: [0]}, 5 #  Expected Output: Bridges: [(0, 1), (0, 2), (0, 3), (0, 4)], Articulation Points: [0]
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+    graph, n = {0: [1, 2], 1: [0, 3], 2: [0, 3], 3: [1, 2, 4], 4: [3, 5], 5: [4]}, 6 #  Expected Output: Bridges: [(3,4),(4, 5)], Articulation Points: [3, 4]
+    res, res2 = solution.findBCC(graph, n)
+    print(res, res2)
+
+if __name__ == '__main__':    
+    digraphSearch()
+    undirectedGraphSearch()
+    cycleDirected()
+    cycleUndirected()
+    bipartite()
+    bcc()
