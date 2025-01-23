@@ -32,7 +32,7 @@ Resources
 	* [reddit.com] `3 parts of mastering LC with SCC example <https://www.reddit.com/r/leetcode/comments/1hye4hy/comment/m6pucmj/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button>`_
 	* [reddit.com] `Here's a master list of problem keyword to algorithm patterns <https://www.reddit.com/r/leetcode/comments/1f9bejz/heres_a_master_list_of_problem_keyword_to/?share_id=_p0H75FfOq1zSO0yBWj8v&utm_name=androidcss>`_
 
-.. seealso::
+.. note::
 	
 	* [leetcode.com] `Lessons from My Google L5 Interview Experience: Tips and suggestion <https://leetcode.com/discuss/interview-question/6147892/Lessons-from-My-Google-L5-Interview-Experience%3A-Tips-and-suggestion>`_
 	* [leetcode.com] `Google Onsite <https://leetcode.com/discuss/interview-question/849947/google-onsite>`_
@@ -55,7 +55,7 @@ Resources
 
 Code Patterns
 ================================================================================
-.. seealso::
+.. note::
 
 	* [algo.monster] `Templates <https://algo.monster/templates>`_
 	* [github.io] `LC cheatsheet <https://jwl-7.github.io/leetcode-cheatsheet/>`_
@@ -400,54 +400,14 @@ Advanced Graph Topics
 
 12. Complicated Problems
 --------------------------------------------------------------------------------
-Problem 0: Verifying and Improving Connectivity in Sham-Poobanana
+Verifying and Improving Connectivity
 
-.. seealso::
+.. note::
 	The police department in the city of Sham-Poobanana has converted every street into a one-way road. The mayor claims that it is possible to legally drive from any intersection in the city to any other intersection.
 
-	* Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.
-	* Good Intersections: Call an intersection xx good if, for any intersection yy that one can legally reach from xx, it is possible to legally drive from yy back to xx. Devise an algorithm to verify or refute this claim.
-	* Reachability Pairs: Count the number of pairs of intersections (A,B)(A,B) where AA can reach BB, but BB cannot reach AA.
-	* Maximum Reachability Intersection: Find the intersection with the highest reachability, defined as the number of intersections reachable from it.
-	* Restoring Strong Connectivity: Determine the minimum number of streets that need to be converted back to two-way roads to make the city strongly connected.
+	* Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.  
+	* Good Intersections: Call an intersection :math:`x` *good* if, for any intersection :math:`y` that one can legally reach from :math:`x`, it is possible to legally drive from :math:`y` back to :math:`x`. The mayor further claims that over 95% of the intersections in Sham-Poobanana are good. Devise an algorithm to verify or refute this claim.  
+	* Reachability Pairs: Count the number of pairs of intersections :math:`(A, B)` where :math:`A` can reach :math:`B`, but :math:`B` cannot reach :math:`A`.  
+	* Maximum Reachability Intersection: Find the intersection with the highest reachability, defined as the number of intersections reachable from it.  
+	* Restoring Strong Connectivity: Determine the minimum number of streets that need to be converted back to two-way roads to make the city strongly connected.  
 	* Signage Changes with Minimum Hires: People can be hired at intersections to convert roads back to two-way streets. They must obey traffic laws while doing so (i.e., they can only travel back on a street after making it two-way). Devise an efficient algorithm to minimize the number of people hired and provide an order of operations for each person to change signage.
-
-Problem 1: Counting Unreachable Pairs
-
-.. seealso::
-	The mayor of Trafficville claims that any intersection AA can reach intersection BB if there exists a path from AA to BB.
-
-	* Count the number of intersection pairs (A,B)(A,B) where AA can reach BB, but BB cannot reach AA.
-	* Design an efficient algorithm to find such pairs and compute the count.
-
-Problem 2: Restoring Strong Connectivity with Fewest Changes
-
-.. seealso::
-	In FixItTown, some streets have been incorrectly converted to one-way roads, making some intersections unreachable.
-
-	* Design an algorithm to compute the minimum number of streets that need to be converted to two-way roads to make all intersections strongly connected.
-	* Modify your algorithm to prioritize converting streets with the smallest total cost (each street has a given conversion cost).
-
-Problem 3: Hiring to Restore Connectivity
-
-.. seealso::
-	In TrafficFixCity, people can be hired at intersections to convert nearby one-way streets into two-way roads. Each person must follow traffic laws and can only travel back after making a road two-way.
-
-	* Determine the fewest number of people required to be hired to make the city strongly connected.
-	* For each hired person, provide an order of operations for changing signage while obeying traffic laws.
-
-Problem 4: Detecting Good Intersections
-
-.. seealso::
-	In LoopLand, an intersection is called "good" if, for any intersection reachable from it, there exists a path back to the original intersection.
-
-	* Describe an efficient algorithm to determine whether a given intersection is "good."
-	* Count the number of good intersections in the entire city.
-	
-Problem 5: Optimal Subset for Strong Connectivity
-
-.. seealso::
-	In PathTown, certain intersections are critical for connectivity. Removing them disconnects parts of the city.
-
-	* Find the smallest subset of intersections that, when removed, makes the city no longer strongly connected.
-	* If no such subset exists, prove that the city is strongly connected.
