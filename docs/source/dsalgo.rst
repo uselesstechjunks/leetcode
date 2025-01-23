@@ -128,6 +128,25 @@ Problems to Practice:
 * Shortest path in a graph (Dijkstra’s algorithm).
 * Detect cycle in an undirected graph (union-find).
 
+More Problems:
+
+* You are given a directed graph where each node represents a city and edges represent roads between them with a time cost. Find the smallest time to travel between two given cities, but you can use a "shortcut" road that reduces the time of any one edge to zero.
+* A maze is represented as a grid. Each cell is either walkable or a wall. Find the minimum number of walls you must break to create a path from the top-left corner to the bottom-right corner.
+* You are given a graph with nn nodes and mm edges, where each edge has a weight. Determine if there exists a subset of edges such that the graph becomes a tree and the sum of weights is odd.
+* You are tasked to partition a graph into two subgraphs such that the difference in the number of nodes between the two subgraphs is minimized.
+* In a large social network graph, find the smallest group of people (nodes) such that every other person in the network is directly connected to at least one person in this group.
+* Find the longest path in a Directed Acyclic Graph (DAG) where all nodes must be visited exactly once.
+* Given a weighted undirected graph, find the number of distinct Minimum Spanning Trees (MSTs) that can be formed.
+* You are given a graph where each node has a value. Find the largest sum of values that can be obtained by traversing from a given start node to an end node while following the graph’s edges.
+* You are given a directed graph representing a city's one-way road system. Each node represents an intersection, and each edge represents a road. Due to construction, one road (edge) can be closed. Determine whether the city remains fully connected (i.e., you can still reach all intersections from any starting intersection) if any one road is removed.
+* You are given an undirected graph representing a set of servers connected by cables. A server is considered critical if removing it causes some servers to become disconnected. Find all the critical servers in the graph.
+* A company wants to install a messaging system in its office building. The building is represented as a weighted undirected graph, where nodes are rooms and edges are connections between rooms. Messages can only travel over edges. Determine the minimum set of edges to remove such that there is no path between two specific rooms while keeping the rest of the graph connected.
+* You are given a directed acyclic graph (DAG) where each node represents a task, and each edge (u, v) means task u must be completed before task v. Multiple workers are available to work on tasks simultaneously. Each task takes exactly 1 unit of time to complete. Calculate the minimum time required to complete all tasks.
+* Given a grid with n rows and m columns, each cell is either land (1) or water (0). You can traverse only horizontally or vertically. A bridge can be built between two pieces of land separated by water if the Manhattan distance between them is 1. Determine the minimum number of bridges needed to connect all pieces of land into a single connected component.
+* A tournament is represented as a directed graph, where each edge (u, v) means team u defeated team v. Some match results are missing, represented as missing edges. Determine if it is possible to orient the missing edges such that the resulting graph is still a tournament.
+* You are given an undirected graph representing a city's sewer system, where nodes are sewer junctions and edges are pipes connecting them. Certain pipes are old and at risk of breaking. Find the minimum number of new pipes that need to be added to ensure that no single pipe failure disconnects any part of the system.
+* You are given a weighted undirected graph representing a network of computers. Some edges are "critical" (important for connectivity), and some are "pseudo-critical" (important but can be replaced by other edges). Write an algorithm to classify each edge as critical, pseudo-critical, or neither.
+
 5. Recursion and Backtracking
 ---------------------------------------------------------------------------------
 Key Concepts: Base case, recursive stack, pruning.
