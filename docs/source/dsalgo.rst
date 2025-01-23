@@ -147,6 +147,54 @@ More Problems:
 * You are given an undirected graph representing a city's sewer system, where nodes are sewer junctions and edges are pipes connecting them. Certain pipes are old and at risk of breaking. Find the minimum number of new pipes that need to be added to ensure that no single pipe failure disconnects any part of the system.
 * You are given a weighted undirected graph representing a network of computers. Some edges are "critical" (important for connectivity), and some are "pseudo-critical" (important but can be replaced by other edges). Write an algorithm to classify each edge as critical, pseudo-critical, or neither.
 
+Complicated Problems
+
+Problem 0: Verifying and Improving Connectivity in Sham-Poobanana
+
+	The police department in the city of Sham-Poobanana has converted every street into a one-way road. The mayor claims that it is possible to legally drive from any intersection in the city to any other intersection.
+	
+	(a) Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.
+	(b) Good Intersections: Call an intersection xx good if, for any intersection yy that one can legally reach from xx, it is possible to legally drive from yy back to xx. Devise an algorithm to verify or refute this claim.
+	(c) Reachability Pairs: Count the number of pairs of intersections (A,B)(A,B) where AA can reach BB, but BB cannot reach AA.
+	(d) Maximum Reachability Intersection: Find the intersection with the highest reachability, defined as the number of intersections reachable from it.
+	(e) Restoring Strong Connectivity: Determine the minimum number of streets that need to be converted back to two-way roads to make the city strongly connected.
+	(f) Signage Changes with Minimum Hires: People can be hired at intersections to convert roads back to two-way streets. They must obey traffic laws while doing so (i.e., they can only travel back on a street after making it two-way). Devise an efficient algorithm to minimize the number of people hired and provide an order of operations for each person to change signage.
+
+Problem 1: Counting Unreachable Pairs
+
+	The mayor of Trafficville claims that any intersection AA can reach intersection BB if there exists a path from AA to BB.
+	
+	(a) Count the number of intersection pairs (A,B)(A,B) where AA can reach BB, but BB cannot reach AA.
+	(b) Design an efficient algorithm to find such pairs and compute the count.
+
+Problem 2: Restoring Strong Connectivity with Fewest Changes
+
+	In FixItTown, some streets have been incorrectly converted to one-way roads, making some intersections unreachable.
+	
+	(a) Design an algorithm to compute the minimum number of streets that need to be converted to two-way roads to make all intersections strongly connected.
+	(b) Modify your algorithm to prioritize converting streets with the smallest total cost (each street has a given conversion cost).
+
+Problem 3: Hiring to Restore Connectivity
+
+	In TrafficFixCity, people can be hired at intersections to convert nearby one-way streets into two-way roads. Each person must follow traffic laws and can only travel back after making a road two-way.
+	
+	(a) Determine the fewest number of people required to be hired to make the city strongly connected.
+	(b) For each hired person, provide an order of operations for changing signage while obeying traffic laws.
+
+Problem 4: Detecting Good Intersections
+
+	In LoopLand, an intersection is called "good" if, for any intersection reachable from it, there exists a path back to the original intersection.
+	
+	(a) Describe an efficient algorithm to determine whether a given intersection is "good."
+	(b) Count the number of good intersections in the entire city.
+	
+Problem 5: Optimal Subset for Strong Connectivity
+
+	In PathTown, certain intersections are critical for connectivity. Removing them disconnects parts of the city.
+	
+	(a) Find the smallest subset of intersections that, when removed, makes the city no longer strongly connected.
+	(b) If no such subset exists, prove that the city is strongly connected.
+	
 5. Recursion and Backtracking
 ---------------------------------------------------------------------------------
 Key Concepts: Base case, recursive stack, pruning.
