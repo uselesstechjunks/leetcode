@@ -152,6 +152,42 @@ class Solution:
         c, d = articulation, bridges
         assert(a == c and b == d)
         return articulation, bridges
+    def tsort(self, digraph, n):
+        if self.hasCycle(digraph, n):
+            return []
+        def tarjan():
+            order = []
+            indeg = [0] * n
+            for u in digraph:
+                for v in digraph[u]:
+                    indeg[v] += 1
+            queue = deque([x for x in range(n) if indeg[x] == 0])
+            while queue:
+                u = queue.popleft()
+                order.append(u)
+                for v in digraph[u]:
+                    indeg[v] -= 1
+                    if indeg[v] == 0:
+                        queue.append(v)
+            return order
+        def recursive():
+            stack = []
+            visited = [False] * n
+            def dfs(u):
+                nonlocal stack, visited
+                visited[u] = True
+                for v in digraph[u]:
+                    if not visited[v]:
+                        dfs(v)
+                stack.append(u)
+            for u in range(n):
+                if not visited[u]:
+                    dfs(u)
+            stack.reverse()
+            return stack
+        order = tarjan()
+        stack = recursive()
+        return stack
 
 def digraphSearch():
     solution = Solution()
@@ -296,6 +332,21 @@ def bcc():
     res, res2 = solution.findBCC(graph, n)
     print(res, res2)
 
+def tsort():
+    solution = Solution()
+    graph, n = {0: [1, 2], 1: [2, 3], 2: [3], 3: []}, 4  # Expected output: [0, 1, 2, 3]
+    print(solution.tsort(graph, n))
+    graph, n = {0: [1], 1: [2], 2: [3], 3: []}, 4  # Expected output: [0, 1, 2, 3]
+    print(solution.tsort(graph, n))
+    graph, n = {0: [1], 1: [2], 2: [0]}, 3  # Expected output: None (Cycle detected, no topological sort possible)
+    print(solution.tsort(graph, n))
+    graph, n = {0: [], 1: [0], 2: [1], 3: [1]}, 4  # Expected output: [3, 2, 1, 0] or [2, 3, 1, 0]
+    print(solution.tsort(graph, n))
+    graph, n = {0: [], 1: [2], 2: [3], 3: [4], 4: []}, 5  # Expected output: [1, 2, 3, 4, 0] or any valid topological order
+    print(solution.tsort(graph, n))
+    graph, n = {0: [1], 1: [], 2: [3], 3: [], 4: [1, 3]}, 5  # Expected output: [4, 0, 2, 3, 1] or any valid topological order    
+    print(solution.tsort(graph, n))
+
 if __name__ == '__main__':    
     digraphSearch()
     undirectedGraphSearch()
@@ -303,3 +354,4 @@ if __name__ == '__main__':
     cycleUndirected()
     bipartite()
     bcc()
+    tsort()
