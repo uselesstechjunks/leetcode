@@ -32,7 +32,7 @@ Resources
 	* [reddit.com] `3 parts of mastering LC with SCC example <https://www.reddit.com/r/leetcode/comments/1hye4hy/comment/m6pucmj/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button>`_
 	* [reddit.com] `Here's a master list of problem keyword to algorithm patterns <https://www.reddit.com/r/leetcode/comments/1f9bejz/heres_a_master_list_of_problem_keyword_to/?share_id=_p0H75FfOq1zSO0yBWj8v&utm_name=androidcss>`_
 
-.. seealso::
+.. note::
 	
 	* [leetcode.com] `Lessons from My Google L5 Interview Experience: Tips and suggestion <https://leetcode.com/discuss/interview-question/6147892/Lessons-from-My-Google-L5-Interview-Experience%3A-Tips-and-suggestion>`_
 	* [leetcode.com] `Google Onsite <https://leetcode.com/discuss/interview-question/849947/google-onsite>`_
@@ -55,7 +55,7 @@ Resources
 
 Code Patterns
 ================================================================================
-.. seealso::
+.. note::
 
 	* [algo.monster] `Templates <https://algo.monster/templates>`_
 	* [github.io] `LC cheatsheet <https://jwl-7.github.io/leetcode-cheatsheet/>`_
@@ -402,7 +402,7 @@ Advanced Graph Topics
 --------------------------------------------------------------------------------
 Verifying and Improving Connectivity
 
-.. seealso::
+.. note::
 	The police department in the city of Sham-Poobanana has converted every street into a one-way road. The mayor claims that it is possible to legally drive from any intersection in the city to any other intersection.
 
 	* Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.  
