@@ -381,29 +381,49 @@ Advanced Graph Topics
 
 11. Problems:
 --------------------------------------------------------------------------------
-* You are given a directed graph where each node represents a city and edges represent roads between them with a time cost. Find the smallest time to travel between two given cities, but you can use a "shortcut" road that reduces the time of any one edge to zero.
-* A maze is represented as a grid. Each cell is either walkable or a wall. Find the minimum number of walls you must break to create a path from the top-left corner to the bottom-right corner.
-* You are given a graph with nn nodes and mm edges, where each edge has a weight. Determine if there exists a subset of edges such that the graph becomes a tree and the sum of weights is odd.
-* You are tasked to partition a graph into two subgraphs such that the difference in the number of nodes between the two subgraphs is minimized.
-* In a large social network graph, find the smallest group of people (nodes) such that every other person in the network is directly connected to at least one person in this group.
-* Find the longest path in a Directed Acyclic Graph (DAG) where all nodes must be visited exactly once.
-* Given a weighted undirected graph, find the number of distinct Minimum Spanning Trees (MSTs) that can be formed.
-* You are given a graph where each node has a value. Find the largest sum of values that can be obtained by traversing from a given start node to an end node while following the graph’s edges.
-* You are given a directed graph representing a city's one-way road system. Each node represents an intersection, and each edge represents a road. Due to construction, one road (edge) can be closed. Determine whether the city remains fully connected (i.e., you can still reach all intersections from any starting intersection) if any one road is removed.
-* You are given an undirected graph representing a set of servers connected by cables. A server is considered critical if removing it causes some servers to become disconnected. Find all the critical servers in the graph.
-* A company wants to install a messaging system in its office building. The building is represented as a weighted undirected graph, where nodes are rooms and edges are connections between rooms. Messages can only travel over edges. Determine the minimum set of edges to remove such that there is no path between two specific rooms while keeping the rest of the graph connected.
-* You are given a directed acyclic graph (DAG) where each node represents a task, and each edge (u, v) means task u must be completed before task v. Multiple workers are available to work on tasks simultaneously. Each task takes exactly 1 unit of time to complete. Calculate the minimum time required to complete all tasks.
-* Given a grid with n rows and m columns, each cell is either land (1) or water (0). You can traverse only horizontally or vertically. A bridge can be built between two pieces of land separated by water if the Manhattan distance between them is 1. Determine the minimum number of bridges needed to connect all pieces of land into a single connected component.
-* A tournament is represented as a directed graph, where each edge (u, v) means team u defeated team v. Some match results are missing, represented as missing edges. Determine if it is possible to orient the missing edges such that the resulting graph is still a tournament.
-* You are given an undirected graph representing a city's sewer system, where nodes are sewer junctions and edges are pipes connecting them. Certain pipes are old and at risk of breaking. Find the minimum number of new pipes that need to be added to ensure that no single pipe failure disconnects any part of the system.
-* You are given a weighted undirected graph representing a network of computers. Some edges are "critical" (important for connectivity), and some are "pseudo-critical" (important but can be replaced by other edges). Write an algorithm to classify each edge as critical, pseudo-critical, or neither.
+#. You are given a directed graph where each node represents a city and edges represent roads between them with a time cost. Find the smallest time to travel between two given cities, but you can use a "shortcut" road that reduces the time of any one edge to zero.
+#. A maze is represented as a grid. Each cell is either walkable or a wall. Find the minimum number of walls you must break to create a path from the top-left corner to the bottom-right corner.
+#. You are given a graph with nn nodes and mm edges, where each edge has a weight. Determine if there exists a subset of edges such that the graph becomes a tree and the sum of weights is odd.
+#. You are tasked to partition a graph into two subgraphs such that the difference in the number of nodes between the two subgraphs is minimized.
+#. In a large social network graph, find the smallest group of people (nodes) such that every other person in the network is directly connected to at least one person in this group.
+#. Find the longest path in a Directed Acyclic Graph (DAG) where all nodes must be visited exactly once.
+#. Given a weighted undirected graph, find the number of distinct Minimum Spanning Trees (MSTs) that can be formed.
+#. You are given a graph where each node has a value. Find the largest sum of values that can be obtained by traversing from a given start node to an end node while following the graph’s edges.
+#. You are given a directed graph representing a city's one-way road system. Each node represents an intersection, and each edge represents a road. Due to construction, one road (edge) can be closed. Determine whether the city remains fully connected (i.e., you can still reach all intersections from any starting intersection) if any one road is removed.
+#. You are given an undirected graph representing a set of servers connected by cables. A server is considered critical if removing it causes some servers to become disconnected. Find all the critical servers in the graph.
+#. A company wants to install a messaging system in its office building. The building is represented as a weighted undirected graph, where nodes are rooms and edges are connections between rooms. Messages can only travel over edges. Determine the minimum set of edges to remove such that there is no path between two specific rooms while keeping the rest of the graph connected.
+#. You are given a directed acyclic graph (DAG) where each node represents a task, and each edge (u, v) means task u must be completed before task v. Multiple workers are available to work on tasks simultaneously. Each task takes exactly 1 unit of time to complete. Calculate the minimum time required to complete all tasks.
+#. Given a grid with n rows and m columns, each cell is either land (1) or water (0). You can traverse only horizontally or vertically. A bridge can be built between two pieces of land separated by water if the Manhattan distance between them is 1. Determine the minimum number of bridges needed to connect all pieces of land into a single connected component.
+#. A tournament is represented as a directed graph, where each edge (u, v) means team u defeated team v. Some match results are missing, represented as missing edges. Determine if it is possible to orient the missing edges such that the resulting graph is still a tournament.
+#. You are given an undirected graph representing a city's sewer system, where nodes are sewer junctions and edges are pipes connecting them. Certain pipes are old and at risk of breaking. Find the minimum number of new pipes that need to be added to ensure that no single pipe failure disconnects any part of the system.
+#. You are given a weighted undirected graph representing a network of computers. Some edges are "critical" (important for connectivity), and some are "pseudo-critical" (important but can be replaced by other edges). Write an algorithm to classify each edge as critical, pseudo-critical, or neither.
+#. You are given a directed graph where each edge has an initial cost. You can choose to reduce the weight of up to :math:`k` edges by half. Find the minimum total cost to travel between two given nodes after applying this optimization.
+#. You are given a directed graph where some edges have been removed, resulting in a disconnected graph. Determine the minimum number of edges to add back to restore strong connectivity.
+#. You are given an undirected graph with :math:`n` nodes. The graph is subject to operations of two types: 1. Add an edge between two nodes. 2. Check if two nodes are in the same connected component. Implement an algorithm to handle these operations efficiently.
+#. Given a directed acyclic graph (DAG) where each edge has a weight and a constraint :math:`k`, find the maximum sum of weights for any path containing at most :math:`k` edges.
+#. A city is represented as a weighted grid where each cell has an elevation. Water floods from a source cell and can only flow to adjacent cells with equal or lower elevation. Determine the total area of cells that will be flooded.
+#. You are given an undirected graph representing a network of roads between cities. A road is considered "critical" if removing it increases the shortest path between any two cities. Identify all critical roads in the graph.
+#. You are given a directed graph with :math:`n` nodes and :math:`m` edges. Some edges are "mandatory," and others are "optional." Determine if it's possible to orient the optional edges to form a directed acyclic graph (DAG).
+#. A company plans to expand its network by adding new connections. Each connection has a cost, and the company has a fixed budget. Find the maximum number of nodes that can be connected to the network within the budget.
+#. You are given a directed graph where each node can serve as a starting point for spreading information. Calculate the minimum time required for information to reach all nodes, assuming it spreads simultaneously from all sources.
+#. Given an undirected graph, color its nodes using the minimum number of colors such that no two adjacent nodes have the same color. Additionally, certain nodes have preassigned colors, and the coloring must respect these assignments.
+#. You are given a directed graph where some nodes act as sources and others as sinks. Find the maximum flow in the network, assuming flow can originate from multiple sources and terminate at multiple sinks.
+#. You are given a weighted undirected graph and a threshold :math:`t`. Form clusters by removing edges with weights greater than :math:`t`. Calculate the number of resulting clusters and the size of the largest cluster.
+#. You are given a list of shortest paths between all pairs of nodes in an undirected graph. Determine if it is possible to reconstruct the original graph. If multiple graphs are possible, return any valid one.
+#. You are given a directed graph where each edge has a delay time. Calculate the minimum total delay required to synchronize all nodes such that every node receives a signal at the same time.
+#. A travel route is represented as a directed graph with costs on edges. You must visit certain mandatory nodes exactly once in any order. Find the shortest path that satisfies these constraints.
+#. Given a directed graph, a source node, and a destination node, find the :math:`k`-th shortest path from the source to the destination.
+#. You are given an undirected graph. Determine the minimum number of nodes that must be removed so that the remaining graph is still fully connected.
+#. A road network is represented as a weighted undirected graph. Each road has a traffic limit. Determine if it is possible to reroute all vehicles such that the traffic on no road exceeds its limit.
+#. You are given a weighted directed graph. Find the minimum weight cycle (if it exists) and return its weight. If no cycle exists, return -1.
+#. You are given an undirected graph. Remove the minimum number of edges to partition the graph into two disjoint connected components of equal size (or as close as possible).
 
 12. Complicated Problems
 --------------------------------------------------------------------------------
 Verifying and Improving Connectivity
 
 .. note::
-	The police department in the city of Sham-Poobanana has converted every street into a one-way road. The mayor claims that it is possible to legally drive from any intersection in the city to any other intersection.
+	The police department in the city has converted every street into a one-way road. The mayor claims that it is possible to legally drive from any intersection in the city to any other intersection.
 
 	* Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.  
 	* Good Intersections: Call an intersection :math:`x` *good* if, for any intersection :math:`y` that one can legally reach from :math:`x`, it is possible to legally drive from :math:`y` back to :math:`x`. The mayor further claims that over 95% of the intersections in Sham-Poobanana are good. Devise an algorithm to verify or refute this claim.  
