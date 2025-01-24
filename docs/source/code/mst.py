@@ -1,4 +1,4 @@
-from ordered_set import OrderedSet
+import heapq
 
 class UnionFind:
     def __init__(self, n):
@@ -22,48 +22,47 @@ class UnionFind:
             parent = parent_y
         return parent
 
-class Solution:
+class MST:
     def prim(self, n, m, edges):
         tree = []
         weight = 0
-        selected = [False] * (n+1)
-        candidates = []
-        selected[1] = True
-
-        for _ in range(n-1):
-            edge = None
-            for i in range(m):
-                u, v, w = edges[i]
-                if selected[u] ^ selected[v]:
-                    if edge is None or edge[2] > w:
-                        edge = edges[i]
-            if edge is None: break
-            u, v, w = edge
-            selected[u] = True
-            selected[v] = True
+        adj = [[] for _ in range(n)]
+        for u, v, w in edges:
+            adj[u-1].append((v-1, w))
+            adj[v-1].append((u-1, w))
+        explored = [False] * n
+        explored[0] = True
+        minheap = [(w, 0, v) for v, w in adj[0]]
+        heapq.heapify(minheap)
+        while minheap:            
+            w, u, v = heapq.heappop(minheap)
+            if explored[v]:
+                continue
+            explored[v] = True
             weight += w
-            tree.append((u,v))
-
-        if len(tree) != n-1:
-            return -1, []
-        return weight, tree
+            tree.append((u+1, v+1))
+            for y, w in adj[v]:
+                if not explored[y]:
+                    heapq.heappush(minheap, (w, v, y))
+        if len(tree) == n-1:
+            return weight, tree
+        return -1, []
 
     def kruskal(self, n, m, edges):
-        edges.sort(key=lambda x:x[2])
-        uf = UnionFind(n+1)
         tree = []
         weight = 0
-        for u, v, w in edges:
+        uf = UnionFind(n+1)
+        for u, v, w in sorted(edges, key=lambda x:x[2]):
             if uf.find(u) != uf.find(v):
                 uf.union(u, v)
-                weight += w
                 tree.append((u, v))
-        if len(tree) != n-1:
-            return -1, []
-        return weight, tree
+                weight += w
+        if len(tree) == n-1:
+            return weight, tree
+        return -1, []
 
 def test1():
-    solution = Solution()
+    mst = MST()
     n = 4
     m = 5
     edges = [
@@ -73,29 +72,29 @@ def test1():
         [3, 4, 5],
         [1, 4, 1]
     ]
-    w, tree = solution.prim(n, m, edges)
+    w, tree = mst.prim(n, m, edges)
     print(w)
     print(tree)
-    w, tree = solution.kruskal(n, m, edges)
+    w, tree = mst.kruskal(n, m, edges)
     print(w)
     print(tree)
 
 def test2():
-    solution = Solution()
+    mst = MST()
     n = 3
     m = 1
     edges = [
         [1, 2, 1]
     ]
-    w, tree = solution.prim(n, m, edges)
+    w, tree = mst.prim(n, m, edges)
     print(w)
     print(tree)
-    w, tree = solution.kruskal(n, m, edges)
+    w, tree = mst.kruskal(n, m, edges)
     print(w)
     print(tree)
 
 def test3():
-    solution = Solution()
+    mst = MST()
     n = 2
     m = 3
     edges = [
@@ -103,15 +102,15 @@ def test3():
         [1, 2, 1],
         [1, 2, 3]
     ]
-    w, tree = solution.prim(n, m, edges)
+    w, tree = mst.prim(n, m, edges)
     print(w)
     print(tree)
-    w, tree = solution.kruskal(n, m, edges)
+    w, tree = mst.kruskal(n, m, edges)
     print(w)
     print(tree)
 
 def test4():
-    solution = Solution()
+    mst = MST()
     n = 5
     m = 6
     connections = [
@@ -122,15 +121,15 @@ def test4():
         [1, 5, 7],
         [2, 5, 1]
     ]
-    w, tree = solution.prim(n, m, connections)
+    w, tree = mst.prim(n, m, connections)
     print(w)
     print(tree)
-    w, tree = solution.kruskal(n, m, connections)
+    w, tree = mst.kruskal(n, m, connections)
     print(w)
     print(tree)
     
 def test5():
-    solution = Solution()
+    mst = MST()
     n = 4
     m = 3
     connections = [
@@ -138,10 +137,10 @@ def test5():
         [2, 3, 6],
         [3, 4, 2]
     ]
-    w, tree = solution.prim(n, m, connections)
+    w, tree = mst.prim(n, m, connections)
     print(w)
     print(tree)
-    w, tree = solution.kruskal(n, m, connections)
+    w, tree = mst.kruskal(n, m, connections)
     print(w)
     print(tree)
 
