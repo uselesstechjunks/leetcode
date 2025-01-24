@@ -6,11 +6,10 @@ Key Topics
 *********************************************************************************
 .. attention::
 
-	#. Binary search
-	#. Graph
-	#. Dynamic programming
+	#. Search/Tree - item, order statistics, intervals, min/max/sum in range
+	#. Graph - shortest path, scheduling, assignment, partitioning, connectivity
+	#. Dynamic programming - optimization problems
 	#. Combinatorial
-	#. Trees
 	#. Two pointers
 	#. Sliding window
 
@@ -288,6 +287,118 @@ Advanced Graph Topics
 	* Find the shortest path in a weighted directed graph.
 	* Determine if a negative weight cycle exists.
 	* Optimize routing in a graph with mixed positive and negative weights.
+* More Problems:
+	#. Shortest Path with At Most :math:`k` Stops
+		.. seealso::
+		
+			Problem: Given a weighted directed graph, find the shortest path from a source to a destination with at most :math:`k` intermediate nodes.  
+			Modification:  
+			- Use a state-based BFS or a modified Bellman-Ford.
+			- Track the number of edges traversed in the state (e.g., (node, distance, stops)).
+			- Only allow pushing into the queue if stops \leq k.  
+			Algorithm: Bellman-Ford is naturally suited here as it can iterate at most :math:`k+1` times.  
+			Applications: Flight booking systems where you want to minimize costs with limited layovers.
+	
+	#. Shortest Path with Exact :math:`k` Stops
+		.. seealso::
+		
+			Problem: Similar to the above, but you must use exactly :math:`k` edges.  
+			Modification:  
+			- Use BFS with states (node, distance, stops).
+			- Only update the result if :math:`stops = k` when reaching the destination.  
+			Algorithm: BFS or dynamic programming.  
+			Applications: Routing problems where a fixed number of hops is needed for signal propagation.
+	
+	#. Shortest Path in a Graph with Negative Weight Cycles
+		.. seealso::
+		
+			Problem: Detect if there's a negative weight cycle and compute the shortest path in its presence (if possible).  
+			Modification:  
+			- Use Bellman-Ford. After :math:`V-1` iterations, perform one more pass to detect negative weight cycles.
+			- If any distance updates in this pass, there's a negative weight cycle.  
+			Applications: Financial arbitrage detection, currency exchange rate systems.
+	
+	#. Shortest Path with Node Constraints
+		.. seealso::
+		
+			Problem: Find the shortest path where certain nodes must or must not be visited.  
+			Modification:  
+			- Use Dijkstra's or A* with constraints in the priority queue state (e.g., (node, distance, visited_set)).
+			- Prune paths that violate constraints.  
+			Applications: Navigation systems with waypoints or restricted areas.
+	
+	#. Shortest Path with Restricted Edge Usage
+		.. seealso::
+		
+			Problem: Each edge can only be traversed a fixed number of times (e.g., roads with toll limits).  
+			Modification:  
+			- Track edge usage as a state in the priority queue (node, distance, edge_usage_map).
+			- Update distances only if edge usage constraints are satisfied.  
+			Applications: Traffic systems, network bandwidth allocation.
+	
+	#. Shortest Path with Discounted Edges
+		.. seealso::
+		
+			Problem: Find the shortest path where one edge’s weight can be reduced by a discount or percentage.  
+			Modification:  
+			- Use a state-based approach with two states: without and with discount.
+			- Transition to the discounted state for one edge during traversal.  
+			Applications: Cost minimization in transportation or pricing systems.
+	
+	#. Shortest Path in a Time-Dependent Graph
+		.. seealso::
+		
+			Problem: Edge weights vary based on the time of traversal (e.g., traffic at different times).  
+			Modification:  
+			- Maintain time as part of the state (node, time, distance).
+			- Use the edge weight as a function of time (e.g., weight = f(time)).  
+			Applications: Traffic-aware navigation systems like Google Maps.
+	
+	#. Shortest Path to Visit All Nodes (Traveling Salesman Simplification)
+		.. seealso::
+		
+			Problem: Find the shortest path that visits all nodes at least once.  
+			Modification:  
+			- Use Dijkstra's or BFS with a state representing the set of visited nodes (node, distance, visited_set).
+			- Transition states by marking nodes as visited.  
+			Algorithm: Dynamic programming + bitmasking is a better fit for optimal solutions.  
+			Applications: Logistics and delivery routing.
+	
+	#. Shortest Path with Dynamic Edge Weights
+		.. seealso::
+		
+			Problem: Edge weights change dynamically during traversal (e.g., based on usage or traffic updates).  
+			Modification:  
+			- Modify Dijkstra’s algorithm to adjust edge weights dynamically during neighbor exploration.
+			- Use a callback or a function to fetch updated weights.  
+			Applications: Dynamic routing in communication networks.
+	
+	#. Shortest Path with Multiple Sources and Destinations
+		.. seealso::
+		
+			Problem: Compute the shortest path between multiple source-destination pairs.  
+			Modification:  
+			- Use multi-source BFS or initialize Dijkstra’s with all source nodes.
+			- For destinations, stop the search once all are reached.  
+			Applications: Multicast routing, logistics optimization.
+	
+	#. Shortest Path in a Grid with Obstacles
+		.. seealso::
+		
+			Problem: Find the shortest path in a grid where some cells are blocked, and you can break at most :math:`k` obstacles.  
+			Modification:  
+			- Use BFS or Dijkstra with states (x, y, remaining_breaks).
+			- Allow traversal through blocked cells by reducing the :math:`remaining_breaks`.  
+			Applications: Robot navigation, pathfinding in games.
+	
+	#. Shortest Path with Different Modes of Transport
+		.. seealso::
+		
+			Problem: Different edge weights for different "modes" (e.g., car, bike, foot).  
+			Modification:  
+			- Use Dijkstra’s with modes as states (node, distance, mode).
+			- Transition between modes if allowed by the graph (e.g., switch from car to walking).  
+			Applications: Multi-modal route planning.
 
 2. Strongly Connected Components (SCCs)
 --------------------------------------------------------------------------------
