@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'SelfStudyGuide'
+project = 'Machine Learning Interviews'
 copyright = '2022-2025, UselessTechJunks'
 author = 'Useless Tech Junks'
 
