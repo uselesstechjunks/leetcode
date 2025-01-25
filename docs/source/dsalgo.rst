@@ -425,7 +425,7 @@ Advanced Graph Topics
 			* Modification:  
 			
 				- Use BFS or Dijkstra with states (x, y, remaining_breaks).
-				- Allow traversal through blocked cells by reducing the :math:`remaining_breaks`.  
+				- Allow traversal through blocked cells by reducing the remaining_breaks.  
 			* Applications: Robot navigation, pathfinding in games.
 	
 	#. Shortest Path with Different Modes of Transport
