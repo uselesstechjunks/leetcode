@@ -68,20 +68,26 @@ class Dijkstra:
         adj = self.construct(n, edges)
         dist = [float('inf')] * n
         dist[src] = 0
-        sortedDist = SortedList(list(range(n)), key=lambda u: dist[u])
-
-        for _ in range(n):
+        sortedDist = SortedList([src], key=lambda x: dist[x])
+	
+        while sortedDist:
             u = sortedDist[0]
             sortedDist.remove(u)
-            # check for reachability
-            if dist[u] == float('inf'):
-                break
             for v, w in adj[u]:
-                if v not in sortedDist:
-                    continue
-                sortedDist.remove(v)
+                sortedDist.discard(v)
                 dist[v] = min(dist[v], dist[u] + w)
-                sortedDist.add(v)
+                if dist[v] < float('inf'):
+                    sortedDist.add(v)
+        
+        return {u:d if d < float('inf') else -1 for u, d in enumerate(dist)}
+
+class BellmanFord:
+    def basic_impl(self, n, edges, src):
+        dist = [float('inf')] * n
+        dist[src] = 0
+        for _ in range(n-1):
+            for u, v, w in edges:
+                dist[v] = min(dist[v], dist[u] + w)
         return {u: d if d < float('inf') else -1 for u, d in enumerate(dist)}
 
 def test():
@@ -98,163 +104,8 @@ def test():
     print(sssp.basic_impl(n, edges, src))
     print(sssp.minheap_impl(n, edges, src))
     print(sssp.tree_impl(n, edges, src))
+    sssp = BellmanFord()
+    print(sssp.basic_impl(n, edges, src))
 
 if __name__ == '__main__':
     test()
-
-"""
-### **Test Case 1: Simple Graph**
-```plaintext
-n = 5
-edges = [
-    [0, 1, 4],
-    [0, 2, 2],
-    [1, 2, 5],
-    [1, 3, 10],
-    [2, 3, 3],
-    [3, 4, 1]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0, 1: 4, 2: 2, 3: 5, 4: 6}
-
----
-
-### **Test Case 2: Disconnected Graph**
-```plaintext
-n = 4
-edges = [
-    [0, 1, 1],
-    [0, 2, 4]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0, 1: 1, 2: 4, 3: -1}
-
----
-
-### **Test Case 3: Graph with a Single Node**
-```plaintext
-n = 1
-edges = []
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0}
-
----
-
-### **Test Case 4: Large Dense Graph**
-```plaintext
-n = 4
-edges = [
-    [0, 1, 1],
-    [0, 2, 2],
-    [0, 3, 3],
-    [1, 2, 1],
-    [1, 3, 4],
-    [2, 3, 1]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0, 1: 1, 2: 2, 3: 3}
-
----
-
-### **Test Case 5: Large Sparse Graph**
-```plaintext
-n = 6
-edges = [
-    [0, 1, 2],
-    [1, 2, 3],
-    [2, 3, 1],
-    [3, 4, 5],
-    [4, 5, 2]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0, 1: 2, 2: 5, 3: 6, 4: 11, 5: 13}
-
----
-
-### **Test Case 6: Cycle in the Graph**
-```plaintext
-n = 4
-edges = [
-    [0, 1, 1],
-    [1, 2, 2],
-    [2, 3, 3],
-    [3, 0, 4]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0, 1: 1, 2: 3, 3: 6}
-
----
-
-### **Test Case 7: Multiple Paths with Different Weights**
-```plaintext
-n = 5
-edges = [
-    [0, 1, 10],
-    [0, 2, 3],
-    [1, 2, 1],
-    [1, 3, 2],
-    [2, 1, 4],
-    [2, 3, 8],
-    [3, 4, 7],
-    [4, 0, 2]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0, 1: 7, 2: 3, 3: 9, 4: 16}
-
----
-
-### **Test Case 8: Negative Weights**
-(Note: Dijkstra's algorithm assumes no negative edge weights.)
-```plaintext
-n = 4
-edges = [
-    [0, 1, 1],
-    [1, 2, -2],
-    [2, 3, 3]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: Not valid for Dijkstra (Bellman-Ford required).
-
----
-
-### **Test Case 9: Graph with No Path to Some Nodes**
-```plaintext
-n = 6
-edges = [
-    [0, 1, 7],
-    [0, 2, 9],
-    [0, 5, 14],
-    [1, 2, 10],
-    [2, 3, 11],
-    [3, 4, 6]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0, 1: 7, 2: 9, 3: 20, 4: 26, 5: 14}
-
----
-
-### **Test Case 10: Edge Case - Graph with Multiple Equal Shortest Paths**
-```plaintext
-n = 5
-edges = [
-    [0, 1, 1],
-    [0, 2, 1],
-    [1, 3, 1],
-    [2, 3, 1],
-    [3, 4, 1]
-]
-```
-- **Source**: \( 0 \)
-- **Expected Output**: {0: 0, 1: 1, 2: 1, 3: 2, 4: 3}
-
----
-"""
