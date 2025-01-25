@@ -314,141 +314,18 @@ Advanced Graph Topics
 	* Determine if a negative weight cycle exists.
 	* Optimize routing in a graph with mixed positive and negative weights.
 * More Problems:
-	#. Shortest Path with At Most :math:`k` Stops
-
-		.. note::
-		
-			* Problem: Given a weighted directed graph, find the shortest path from a source to a destination with at most :math:`k` intermediate nodes.  
-			* Modification:  
-			
-				- Use a state-based BFS or a modified Bellman-Ford.
-				- Track the number of edges traversed in the state (e.g., (node, distance, stops)).
-				- Only allow pushing into the queue if stops :math:`\leq k`.  
-			* Algorithm: Bellman-Ford is naturally suited here as it can iterate at most :math:`k+1` times.  
-			* Applications: Flight booking systems where you want to minimize costs with limited layovers.
-	
-	#. Shortest Path with Exact :math:`k` Stops
-
-		.. note::
-		
-			* Problem: Similar to the above, but you must use exactly :math:`k` edges.  
-			* Modification:  
-			
-				- Use BFS with states (node, distance, stops).
-				- Only update the result if :math:`stops = k` when reaching the destination.  
-			* Algorithm: BFS or dynamic programming.  
-			* Applications: Routing problems where a fixed number of hops is needed for signal propagation.
-	
-	#. Shortest Path in a Graph with Negative Weight Cycles
-
-		.. note::
-		
-			* Problem: Detect if there's a negative weight cycle and compute the shortest path in its presence (if possible).  
-			* Modification:  
-			
-				- Use Bellman-Ford. After :math:`V-1` iterations, perform one more pass to detect negative weight cycles.
-				- If any distance updates in this pass, there's a negative weight cycle.  
-			* Applications: Financial arbitrage detection, currency exchange rate systems.
-	
-	#. Shortest Path with Node Constraints
-
-		.. note::
-		
-			* Problem: Find the shortest path where certain nodes must or must not be visited.  
-			* Modification:  
-			
-				- Use Dijkstra's or A* with constraints in the priority queue state (e.g., (node, distance, visited_set)).
-				- Prune paths that violate constraints.  
-			* Applications: Navigation systems with waypoints or restricted areas.
-	
-	#. Shortest Path with Restricted Edge Usage
-
-		.. note::
-		
-			* Problem: Each edge can only be traversed a fixed number of times (e.g., roads with toll limits).  
-			* Modification:  
-			
-				- Track edge usage as a state in the priority queue (node, distance, edge_usage_map).
-				- Update distances only if edge usage constraints are satisfied.  
-			* Applications: Traffic systems, network bandwidth allocation.
-	
-	#. Shortest Path with Discounted Edges
-
-		.. note::
-		
-			* Problem: Find the shortest path where one edge’s weight can be reduced by a discount or percentage.  
-			* Modification:  
-			
-				- Use a state-based approach with two states: without and with discount.
-				- Transition to the discounted state for one edge during traversal.  
-			* Applications: Cost minimization in transportation or pricing systems.
-	
-	#. Shortest Path in a Time-Dependent Graph
-
-		.. note::
-		
-			* Problem: Edge weights vary based on the time of traversal (e.g., traffic at different times).  
-			* Modification:  
-			
-				- Maintain time as part of the state (node, time, distance).
-				- Use the edge weight as a function of time (e.g., weight = f(time)).  
-			* Applications: Traffic-aware navigation systems like Google Maps.
-	
-	#. Shortest Path to Visit All Nodes (Traveling Salesman Simplification)
-
-		.. note::
-		
-			* Problem: Find the shortest path that visits all nodes at least once.  
-			* Modification:  
-			
-				- Use Dijkstra's or BFS with a state representing the set of visited nodes (node, distance, visited_set).
-				- Transition states by marking nodes as visited.  
-			* Algorithm: Dynamic programming + bitmasking is a better fit for optimal solutions.  
-			* Applications: Logistics and delivery routing.
-	
-	#. Shortest Path with Dynamic Edge Weights
-
-		.. note::
-		
-			* Problem: Edge weights change dynamically during traversal (e.g., based on usage or traffic updates).  
-			* Modification:  
-			
-				- Modify Dijkstra’s algorithm to adjust edge weights dynamically during neighbor exploration.
-				- Use a callback or a function to fetch updated weights.  
-			* Applications: Dynamic routing in communication networks.
-	
-	#. Shortest Path with Multiple Sources and Destinations
-
-		.. note::
-		
-			* Problem: Compute the shortest path between multiple source-destination pairs.  
-			* Modification:  
-			
-				- Use multi-source BFS or initialize Dijkstra’s with all source nodes.
-				- For destinations, stop the search once all are reached.  
-			* Applications: Multicast routing, logistics optimization.
-	
-	#. Shortest Path in a Grid with Obstacles
-
-		.. note::
-		
-			* Problem: Find the shortest path in a grid where some cells are blocked, and you can break at most :math:`k` obstacles.  
-			* Modification:  
-			
-				- Use BFS or Dijkstra with states (x, y, remaining_breaks).
-				- Allow traversal through blocked cells by reducing the remaining_breaks.  
-			* Applications: Robot navigation, pathfinding in games.
-	
-	#. Shortest Path with Different Modes of Transport
-
-		.. note::
-		
-			* Problem: Different edge weights for different "modes" (e.g., car, bike, foot).  
-			* Modification:  
-			
-				- Use Dijkstra’s with modes as states (node, distance, mode).
-				- Transition between modes if allowed by the graph (e.g., switch from car to walking).  
-			* Applications: Multi-modal route planning.
+	#. Problem: Given a weighted directed graph, find the shortest path from a source to a destination with at most :math:`k` intermediate nodes.  
+	#. Similar to the above, but you must use exactly :math:`k` edges.
+	#. Detect if there's a negative weight cycle and compute the shortest path in its presence (if possible).	
+	#. Find the shortest path where certain nodes must or must not be visited.
+	#. Each edge can only be traversed a fixed number of times (e.g., roads with toll limits).
+	#. Find the shortest path where one edge’s weight can be reduced by a discount or percentage.
+	#. Edge weights vary based on the time of traversal (e.g., traffic at different times).
+	#. Find the shortest path that visits all nodes at least once.
+	#. Edge weights change dynamically during traversal (e.g., based on usage or traffic updates).	
+	#. Compute the shortest path between multiple source-destination pairs.
+	#. Find the shortest path in a grid where some cells are blocked, and you can break at most :math:`k` obstacles.
+	#. Different edge weights for different "modes" (e.g., car, bike, foot).
 
 2. Minimum Spanning Tree (MST)
 --------------------------------------------------------------------------------
@@ -461,129 +338,22 @@ Advanced Graph Topics
 	* Update the MST dynamically when a new edge is added.
 	* Determine the second-best MST.
 * More Problems:
-	#. Minimum Spanning Tree with Constraints
-
-		.. note::
-	
-			* Problem: Find a minimum spanning tree, but the tree must include a specific edge :math:`(u, v)`.
-			* Modification:
+	#. Find a minimum spanning tree, but the tree must include a specific edge :math:`(u, v)`.
+	#. Find a spanning tree with the maximum total weight instead of the minimum.
+	#. Find the second smallest weight of a spanning tree (not the same as the minimum spanning tree).
+	#. Find a minimum spanning tree where no vertex can have a degree greater than `k`.
+	#. Each edge has an associated penalty if it is not included in the spanning tree. Find the tree that minimizes the sum of the MST weight and the penalties of excluded edges.
+	#. Find an MST where a specific vertex `v` must be part of the tree.
+	#. Each edge is assigned a color, and the MST must include at least one edge of every color.
+	#. You are given an MST for a graph. Process queries to either:
 			
-				- In Kruskal's, start by forcing the edge :math:`(u, v)` into the tree and union the two vertices. Then proceed as usual with the remaining edges.
-				- In Prim's, initialize the tree with the edge :math:`(u, v)` and adjust the priority queue accordingly.
+		- Add an edge and update the MST.
+		- Remove an edge and update the MST.
+	#. Some edges have a discounted weight (e.g., weight reduced by `x`). Find the MST under the discounted weights.
+	#. Find the MST and also compute, for each edge in the MST, the cost of the MST if that edge is removed.
+	#. Find an MST in a graph that includes edges with negative weights.
+	#. Find an MST where the maximum depth of any vertex from the root is less than or equal to `k`.
 
-	#. Maximum Spanning Tree
-
-		.. note::
-	
-			* Problem: Find a spanning tree with the maximum total weight instead of the minimum.
-			* Modification:
-			
-				- In Kruskal's, sort the edges in descending order by weight and proceed as usual.
-				- In Prim's, use a max-heap instead of a min-heap.
-
-	#. Second Best Minimum Spanning Tree
-
-		.. note::
-	
-			* Problem: Find the second smallest weight of a spanning tree (not the same as the minimum spanning tree).
-			* Modification:
-			
-				- Compute the MST normally (using Prim's or Kruskal's).
-				- For each edge in the MST, remove it and attempt to recompute an MST using the remaining edges. Keep track of the smallest total weight among these new trees.
-				- Efficient implementation involves a combination of Kruskal's and dynamic programming.
-
-	#. Minimum Spanning Tree with Degree Constraint
-
-		.. note::
-	
-			* Problem: Find a minimum spanning tree where no vertex can have a degree greater than `k`.
-			* Modification:
-			
-				- In Kruskal's, track the degree of each vertex. Before adding an edge to the tree, check if adding it would exceed the degree constraint for either endpoint.
-				- This problem may involve backtracking or heuristic approaches, as MST construction might fail under strict constraints.
-
-	#. Minimum Spanning Tree with Edge Removal Penalty
-
-		.. note::
-	
-			* Problem: Each edge has an associated penalty if it is not included in the spanning tree. Find the tree that minimizes the sum of the MST weight and the penalties of excluded edges.
-			* Modification:
-			
-				- Sort edges by :math:`(weight - penalty)` instead of just weight in Kruskal's.
-				- In Prim's, prioritize edges by :math:`(weight - penalty)` in the priority queue.
-
-	#. Minimum Spanning Tree with Specific Vertex Inclusion
-
-		.. note::
-	
-			* Problem: Find an MST where a specific vertex `v` must be part of the tree.
-			* Modification:
-			
-				- In Prim's, initialize the tree with the vertex `v` instead of an arbitrary vertex.
-				- In Kruskal's, ensure that the tree remains connected with vertex `v` by tracking whether `v` is part of the current spanning tree.
-
-	#. Minimum Spanning Tree with Color Constraints
-
-		.. note::
-	
-			* Problem: Each edge is assigned a color, and the MST must include at least one edge of every color.
-			* Modification:
-				- Modify Kruskal's to first include the minimum-weight edge of each color to ensure the constraint is satisfied. Then proceed with the usual MST construction.
-				- This is a variant of the "multi-color spanning tree" problem and may require preprocessing of edges by color.
-
-	#. Dynamic Minimum Spanning Tree
-
-		.. note::
-	
-			* Problem: You are given an MST for a graph. Process queries to either:
-			
-				- Add an edge and update the MST.
-				- Remove an edge and update the MST.
-			* Modification:
-			
-				- Use Prim's or Kruskal's with a dynamic edge set (e.g., using `SortedList` or a union-find structure with dynamic edge insertion/deletion).
-				- Efficient implementation involves link-cut trees or other advanced data structures for dynamic graph problems.
-
-	#. Minimum Spanning Tree with Discounted Edges
-
-		.. note::
-	
-			* Problem: Some edges have a discounted weight (e.g., weight reduced by `x`). Find the MST under the discounted weights.
-			* Modification:
-			
-				- Modify Prim's or Kruskal's to account for discounted weights during edge selection.
-				- May involve multiple iterations with different discount values if the discount is variable or dependent on other factors.
-
-	#. Minimum Spanning Tree with Alternate Paths
-
-		.. note::
-	
-			* Problem: Find the MST and also compute, for each edge in the MST, the cost of the MST if that edge is removed.
-			* Modification:
-			
-				- Compute the MST normally.
-				- For each edge in the MST, remove it and compute the maximum edge weight on the alternative path between the two endpoints using a DFS or a LCA structure.
-				- Update the MST weight by replacing the removed edge with the heaviest edge on the alternate path.
-
-	#. Minimum Spanning Tree in a Graph with Negative Weights
-
-		.. note::
-	
-			* Problem: Find an MST in a graph that includes edges with negative weights.
-			* Modification:
-			
-				- Both Prim's and Kruskal's work without modification since they rely on relative ordering, which remains consistent with negative weights.
-				- Ensure the graph is connected or include logic to handle disconnected components.
-
-	#. Minimum Spanning Tree with Path Length Constraints
-
-		.. note::
-	
-			* Problem: Find an MST where the maximum depth of any vertex from the root is less than or equal to `k`.
-			* Modification:
-			
-				- In Prim's, maintain depth information for vertices and avoid adding edges that violate the depth constraint.
-				- Backtracking may be required to explore feasible configurations.
 3. Topological Sort
 --------------------------------------------------------------------------------
 * Why important: Crucial for dependency resolution and scheduling problems.
@@ -663,115 +433,18 @@ Advanced Graph Topics
 	* Graph Coloring Problems.
 	* Spectral Graph Theory (rare but valuable for specific roles).
 * More Problems:
-	#. Graph Coloring with Minimum Colors (Chromatic Number)  
-	
-		.. note::  
-	   
-			* Problem: Determine the chromatic number of a graph, i.e., the minimum number of colors required to color the graph such that no two adjacent vertices share the same color.  
-			* Modification:  
-			
-				- Use a greedy algorithm to assign colors to vertices in the order of their degrees (highest to lowest).  
-				- For optimization, combine this with backtracking to ensure minimal color usage.  
-			* Applications: Scheduling problems, register allocation in compilers.
-	
-	#. Bipartite Graph Check using 2-Coloring  
-	
-		.. note::  
-	   
-			* Problem: Check if a graph is bipartite by verifying if it can be colored using exactly two colors.  
-			* Modification:  
-			
-				- Use BFS or DFS to attempt to 2-color the graph. If a vertex and its neighbor are assigned the same color during traversal, the graph is not bipartite.  
-			* Applications: Matching problems, network flow problems.
-	
-	#. Edge Coloring of a Graph  
-	
-		.. note::  
-	   
-			* Problem: Assign colors to edges such that no two edges sharing the same vertex have the same color. Minimize the number of colors used.  
-			* Modification:  
-			
-				- Use Vizing's Theorem, which states that the required colors are either :math:`\Delta(G)` or :math:`\Delta(G)+1`, where :math:`\Delta(G)` is the maximum degree of the graph.  
-				- Implement a greedy algorithm to iteratively assign colors to edges.  
-			* Applications: Channel assignment in wireless networks, task scheduling.
-	
-	#. Graph Coloring with Forbidden Colors  
-	
-		.. note::  
-	   
-			* Problem: Color a graph such that certain vertices have preassigned colors or cannot use specific colors.  
-			* Modification:  
-			
-				- Modify the greedy coloring algorithm to check and respect the forbidden or preassigned colors during the coloring process.  
-				- Backtracking might be required if constraints lead to conflicts.  
-			* Applications: Resource allocation with constraints, timetable generation.
-	
-	#. Distance-1 and Distance-2 Coloring  
-	
-		.. note::  
-	   
-			* Problem: Assign colors such that no two vertices at a distance of 1 (adjacent) or distance of 2 (neighbors' neighbors) share the same color.  
-			* Modification:  
-			
-				- Modify the adjacency list to include second-degree neighbors for distance-2 coloring.  
-				- Use a greedy algorithm with additional constraints for neighbor and neighbor-of-neighbor checks.  
-			* Applications: Frequency assignment in cellular networks, graph partitioning.
-	
-	#. Weighted Graph Coloring  
-	
-		.. note::  
-	   
-			* Problem: Assign colors to vertices such that the sum of the weights of conflicting edges is minimized.  
-			* Modification:  
-			
-				- Extend the greedy algorithm by prioritizing vertices based on their incident edge weights.  
-				- Dynamic programming or local search can help refine solutions for dense graphs.  
-			* Applications: Minimizing interference in communication networks, resource conflict management.
-	
-	#. Graph Coloring with Fixed Palette  
-	
-		.. note::  
-	   
-			* Problem: Given a fixed number of colors, determine if the graph can be properly colored.  
-			* Modification:  
-			
-				- Use backtracking to explore all possible assignments within the fixed palette. Prune branches when constraints are violated.  
-				- For large graphs, use heuristics like DSATUR (Degree of Saturation) to reduce search space.  
-			* Applications: Feasibility testing in scheduling and allocation tasks.
-	
-	#. Circular Coloring  
-	
-		.. note::  
-	   
-			* Problem: Assign colors to vertices such that the difference between the colors of adjacent vertices satisfies specific modular constraints.  
-			* Modification:  
-			
-				- Modify greedy algorithms to include modular arithmetic checks during the coloring process.  
-				- Use a DFS or BFS to verify feasibility before proceeding.  
-			* Applications: Clock synchronization, cyclic resource allocation.
-	
-	#. Planar Graph Coloring  
-	
-		.. note::  
-	   
-			* Problem: Color a planar graph with a maximum of 4 colors (Four Color Theorem).  
-			* Modification:  
-			
-				- Implement a greedy algorithm leveraging the planar graph's property that the chromatic number is at most 4.  
-				- Use DFS to identify small subgraphs and handle exceptions with backtracking.  
-			* Applications: Map coloring, geographical region division.
-	
-	#. Dynamic Graph Coloring  
-	
-		.. note::  
-	   
-			* Problem: Maintain a valid coloring of a graph while allowing for vertex or edge insertions and deletions.  
-			* Modification:  
-			
-				- Use a balanced tree or dynamic data structure (like a Fenwick tree) to track and update vertex colors efficiently.  
-				- Recolor only the affected part of the graph when changes occur.  
-			* Applications: Real-time scheduling, adaptive resource allocation.
-11. Problems:
+	#. Determine the chromatic number of a graph, i.e., the minimum number of colors required to color the graph such that no two adjacent vertices share the same color.
+	#. Check if a graph is bipartite by verifying if it can be colored using exactly two colors.	
+	#. Assign colors to edges such that no two edges sharing the same vertex have the same color. Minimize the number of colors used.	
+	#. Color a graph such that certain vertices have preassigned colors or cannot use specific colors.
+	#. Assign colors such that no two vertices at a distance of 1 (adjacent) or distance of 2 (neighbors' neighbors) share the same color.
+	#. Assign colors to vertices such that the sum of the weights of conflicting edges is minimized.
+	#. Given a fixed number of colors, determine if the graph can be properly colored.
+	#. Assign colors to vertices such that the difference between the colors of adjacent vertices satisfies specific modular constraints.	
+	#. Color a planar graph with a maximum of 4 colors (Four Color Theorem).
+	#. Maintain a valid coloring of a graph while allowing for vertex or edge insertions and deletions.
+
+11. All Topics
 --------------------------------------------------------------------------------
 #. You are given a directed graph where each node represents a city and edges represent roads between them with a time cost. Find the smallest time to travel between two given cities, but you can use a "shortcut" road that reduces the time of any one edge to zero.
 #. A maze is represented as a grid. Each cell is either walkable or a wall. Find the minimum number of walls you must break to create a path from the top-left corner to the bottom-right corner.
@@ -810,16 +483,15 @@ Advanced Graph Topics
 #. You are given a weighted directed graph. Find the minimum weight cycle (if it exists) and return its weight. If no cycle exists, return -1.
 #. You are given an undirected graph. Remove the minimum number of edges to partition the graph into two disjoint connected components of equal size (or as close as possible).
 
-12. Complicated Problems
+12. Multi-Step Problems
 --------------------------------------------------------------------------------
-Verifying and Improving Connectivity
+#. Verifying and Improving Connectivity
 
-.. note::
 	The police department in the city has converted every street into a one-way road. The mayor claims that it is possible to legally drive from any intersection in the city to any other intersection.
-
-	* Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.  
-	* Good Intersections: Call an intersection :math:`x` *good* if, for any intersection :math:`y` that one can legally reach from :math:`x`, it is possible to legally drive from :math:`y` back to :math:`x`. The mayor further claims that over 95% of the intersections in Sham-Poobanana are good. Devise an algorithm to verify or refute this claim.  
-	* Reachability Pairs: Count the number of pairs of intersections :math:`(A, B)` where :math:`A` can reach :math:`B`, but :math:`B` cannot reach :math:`A`.  
-	* Maximum Reachability Intersection: Find the intersection with the highest reachability, defined as the number of intersections reachable from it.  
-	* Restoring Strong Connectivity: Determine the minimum number of streets that need to be converted back to two-way roads to make the city strongly connected.  
-	* Signage Changes with Minimum Hires: People can be hired at intersections to convert roads back to two-way streets. They must obey traffic laws while doing so (i.e., they can only travel back on a street after making it two-way). Devise an efficient algorithm to minimize the number of people hired and provide an order of operations for each person to change signage.
+	
+		* Verify Strong Connectivity: Design an algorithm to determine whether the city is strongly connected. If it is not, refute the mayor’s claim.  
+		* Good Intersections: Call an intersection :math:`x` *good* if, for any intersection :math:`y` that one can legally reach from :math:`x`, it is possible to legally drive from :math:`y` back to :math:`x`. The mayor further claims that over 95% of the intersections in Sham-Poobanana are good. Devise an algorithm to verify or refute this claim.  
+		* Reachability Pairs: Count the number of pairs of intersections :math:`(A, B)` where :math:`A` can reach :math:`B`, but :math:`B` cannot reach :math:`A`.  
+		* Maximum Reachability Intersection: Find the intersection with the highest reachability, defined as the number of intersections reachable from it.  
+		* Restoring Strong Connectivity: Determine the minimum number of streets that need to be converted back to two-way roads to make the city strongly connected.  
+		* Signage Changes with Minimum Hires: People can be hired at intersections to convert roads back to two-way streets. They must obey traffic laws while doing so (i.e., they can only travel back on a street after making it two-way). Devise an efficient algorithm to minimize the number of people hired and provide an order of operations for each person to change signage.
