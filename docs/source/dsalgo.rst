@@ -140,7 +140,7 @@ SSSP
 .. seealso::
 	.. collapse:: Expand Code
 
-	   .. literalinclude:: code/dijkstra.py
+	   .. literalinclude:: code/sssp.py
 	      :language: python
 	      :linenos:
 
