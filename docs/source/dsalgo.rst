@@ -425,7 +425,7 @@ Advanced Graph Topics
 			* Modification:  
 			
 				- Use BFS or Dijkstra with states (x, y, remaining_breaks).
-				- Allow traversal through blocked cells by reducing the :math:`remaining_breaks`.  
+				- Allow traversal through blocked cells by reducing the remaining_breaks.  
 			* Applications: Robot navigation, pathfinding in games.
 	
 	#. Shortest Path with Different Modes of Transport
@@ -438,18 +438,7 @@ Advanced Graph Topics
 				- Transition between modes if allowed by the graph (e.g., switch from car to walking).  
 			* Applications: Multi-modal route planning.
 
-2. Strongly Connected Components (SCCs)
---------------------------------------------------------------------------------
-* Why important: SCCs are foundational in analyzing directed graphs for connectivity.
-* Key Algorithms:
-	* Kosaraju’s Algorithm.
-	* Tarjan’s Algorithm.
-* Example Problems:
-	* Find all SCCs in a directed graph.
-	* Determine if a graph is strongly connected.
-	* Compute the smallest set of edges to make a graph strongly connected.
-
-3. Minimum Spanning Tree (MST)
+2. Minimum Spanning Tree (MST)
 --------------------------------------------------------------------------------
 * Why important: MSTs are useful in optimization problems, especially those involving connectivity.
 * Key Algorithms:
@@ -459,8 +448,119 @@ Advanced Graph Topics
 	* Compute the MST for a weighted undirected graph.
 	* Update the MST dynamically when a new edge is added.
 	* Determine the second-best MST.
+* More Problems:
+	#. Minimum Spanning Tree with Constraints
+		.. note::
+	
+			* Problem: Find a minimum spanning tree, but the tree must include a specific edge :math:`(u, v)`.
+			* Modification:
+			
+				- In Kruskal's, start by forcing the edge :math:`(u, v)` into the tree and union the two vertices. Then proceed as usual with the remaining edges.
+				- In Prim's, initialize the tree with the edge :math:`(u, v)` and adjust the priority queue accordingly.
 
-4. Topological Sort
+	#. Maximum Spanning Tree
+		.. note::
+	
+			* Problem: Find a spanning tree with the maximum total weight instead of the minimum.
+			* Modification:
+			
+				- In Kruskal's, sort the edges in descending order by weight and proceed as usual.
+				- In Prim's, use a max-heap instead of a min-heap.
+
+	#. Second Best Minimum Spanning Tree
+		.. note::
+	
+			* Problem: Find the second smallest weight of a spanning tree (not the same as the minimum spanning tree).
+			* Modification:
+			
+				- Compute the MST normally (using Prim's or Kruskal's).
+				- For each edge in the MST, remove it and attempt to recompute an MST using the remaining edges. Keep track of the smallest total weight among these new trees.
+				- Efficient implementation involves a combination of Kruskal's and dynamic programming.
+
+	#. Minimum Spanning Tree with Degree Constraint
+		.. note::
+	
+			* Problem: Find a minimum spanning tree where no vertex can have a degree greater than `k`.
+			* Modification:
+			
+				- In Kruskal's, track the degree of each vertex. Before adding an edge to the tree, check if adding it would exceed the degree constraint for either endpoint.
+				- This problem may involve backtracking or heuristic approaches, as MST construction might fail under strict constraints.
+
+	#. Minimum Spanning Tree with Edge Removal Penalty
+		.. note::
+	
+			* Problem: Each edge has an associated penalty if it is not included in the spanning tree. Find the tree that minimizes the sum of the MST weight and the penalties of excluded edges.
+			* Modification:
+			
+				- Sort edges by :math:`(weight - penalty)` instead of just weight in Kruskal's.
+				- In Prim's, prioritize edges by :math:`(weight - penalty)` in the priority queue.
+
+	#. Minimum Spanning Tree with Specific Vertex Inclusion
+		.. note::
+	
+			* Problem: Find an MST where a specific vertex `v` must be part of the tree.
+			* Modification:
+			
+				- In Prim's, initialize the tree with the vertex `v` instead of an arbitrary vertex.
+				- In Kruskal's, ensure that the tree remains connected with vertex `v` by tracking whether `v` is part of the current spanning tree.
+
+	#. Minimum Spanning Tree with Color Constraints
+		.. note::
+	
+			* Problem: Each edge is assigned a color, and the MST must include at least one edge of every color.
+			* Modification:
+				- Modify Kruskal's to first include the minimum-weight edge of each color to ensure the constraint is satisfied. Then proceed with the usual MST construction.
+				- This is a variant of the "multi-color spanning tree" problem and may require preprocessing of edges by color.
+
+	#. Dynamic Minimum Spanning Tree
+		.. note::
+	
+			* Problem: You are given an MST for a graph. Process queries to either:
+			
+				- Add an edge and update the MST.
+				- Remove an edge and update the MST.
+			* Modification:
+			
+				- Use Prim's or Kruskal's with a dynamic edge set (e.g., using `SortedList` or a union-find structure with dynamic edge insertion/deletion).
+				- Efficient implementation involves link-cut trees or other advanced data structures for dynamic graph problems.
+
+	#. Minimum Spanning Tree with Discounted Edges
+		.. note::
+	
+			* Problem: Some edges have a discounted weight (e.g., weight reduced by `x`). Find the MST under the discounted weights.
+			* Modification:
+			
+				- Modify Prim's or Kruskal's to account for discounted weights during edge selection.
+				- May involve multiple iterations with different discount values if the discount is variable or dependent on other factors.
+
+	#. Minimum Spanning Tree with Alternate Paths
+		.. note::
+	
+			* Problem: Find the MST and also compute, for each edge in the MST, the cost of the MST if that edge is removed.
+			* Modification:
+			
+				- Compute the MST normally.
+				- For each edge in the MST, remove it and compute the maximum edge weight on the alternative path between the two endpoints using a DFS or a LCA structure.
+				- Update the MST weight by replacing the removed edge with the heaviest edge on the alternate path.
+
+	#. Minimum Spanning Tree in a Graph with Negative Weights
+		.. note::
+	
+			* Problem: Find an MST in a graph that includes edges with negative weights.
+			* Modification:
+			
+				- Both Prim's and Kruskal's work without modification since they rely on relative ordering, which remains consistent with negative weights.
+				- Ensure the graph is connected or include logic to handle disconnected components.
+
+	#. Minimum Spanning Tree with Path Length Constraints
+		.. note::
+	
+			* Problem: Find an MST where the maximum depth of any vertex from the root is less than or equal to `k`.
+			* Modification:
+			
+				- In Prim's, maintain depth information for vertices and avoid adding edges that violate the depth constraint.
+				- Backtracking may be required to explore feasible configurations.
+3. Topological Sort
 --------------------------------------------------------------------------------
 * Why important: Crucial for dependency resolution and scheduling problems.
 * Key Techniques:
@@ -470,6 +570,17 @@ Advanced Graph Topics
 	* Check if a directed graph has a cycle.
 	* Compute a valid topological ordering.
 	* Find the number of valid topological orderings.
+
+4. Strongly Connected Components (SCCs)
+--------------------------------------------------------------------------------
+* Why important: SCCs are foundational in analyzing directed graphs for connectivity.
+* Key Algorithms:
+	* Kosaraju’s Algorithm.
+	* Tarjan’s Algorithm.
+* Example Problems:
+	* Find all SCCs in a directed graph.
+	* Determine if a graph is strongly connected.
+	* Compute the smallest set of edges to make a graph strongly connected.
 
 5. Bipartite Graphs
 --------------------------------------------------------------------------------
