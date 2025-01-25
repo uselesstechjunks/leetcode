@@ -315,6 +315,7 @@ Advanced Graph Topics
 	* Optimize routing in a graph with mixed positive and negative weights.
 * More Problems:
 	#. Shortest Path with At Most :math:`k` Stops
+
 		.. note::
 		
 			* Problem: Given a weighted directed graph, find the shortest path from a source to a destination with at most :math:`k` intermediate nodes.  
@@ -327,6 +328,7 @@ Advanced Graph Topics
 			* Applications: Flight booking systems where you want to minimize costs with limited layovers.
 	
 	#. Shortest Path with Exact :math:`k` Stops
+
 		.. note::
 		
 			* Problem: Similar to the above, but you must use exactly :math:`k` edges.  
@@ -338,6 +340,7 @@ Advanced Graph Topics
 			* Applications: Routing problems where a fixed number of hops is needed for signal propagation.
 	
 	#. Shortest Path in a Graph with Negative Weight Cycles
+
 		.. note::
 		
 			* Problem: Detect if there's a negative weight cycle and compute the shortest path in its presence (if possible).  
@@ -348,6 +351,7 @@ Advanced Graph Topics
 			* Applications: Financial arbitrage detection, currency exchange rate systems.
 	
 	#. Shortest Path with Node Constraints
+
 		.. note::
 		
 			* Problem: Find the shortest path where certain nodes must or must not be visited.  
@@ -358,6 +362,7 @@ Advanced Graph Topics
 			* Applications: Navigation systems with waypoints or restricted areas.
 	
 	#. Shortest Path with Restricted Edge Usage
+
 		.. note::
 		
 			* Problem: Each edge can only be traversed a fixed number of times (e.g., roads with toll limits).  
@@ -368,6 +373,7 @@ Advanced Graph Topics
 			* Applications: Traffic systems, network bandwidth allocation.
 	
 	#. Shortest Path with Discounted Edges
+
 		.. note::
 		
 			* Problem: Find the shortest path where one edge’s weight can be reduced by a discount or percentage.  
@@ -378,6 +384,7 @@ Advanced Graph Topics
 			* Applications: Cost minimization in transportation or pricing systems.
 	
 	#. Shortest Path in a Time-Dependent Graph
+
 		.. note::
 		
 			* Problem: Edge weights vary based on the time of traversal (e.g., traffic at different times).  
@@ -388,6 +395,7 @@ Advanced Graph Topics
 			* Applications: Traffic-aware navigation systems like Google Maps.
 	
 	#. Shortest Path to Visit All Nodes (Traveling Salesman Simplification)
+
 		.. note::
 		
 			* Problem: Find the shortest path that visits all nodes at least once.  
@@ -399,6 +407,7 @@ Advanced Graph Topics
 			* Applications: Logistics and delivery routing.
 	
 	#. Shortest Path with Dynamic Edge Weights
+
 		.. note::
 		
 			* Problem: Edge weights change dynamically during traversal (e.g., based on usage or traffic updates).  
@@ -409,6 +418,7 @@ Advanced Graph Topics
 			* Applications: Dynamic routing in communication networks.
 	
 	#. Shortest Path with Multiple Sources and Destinations
+
 		.. note::
 		
 			* Problem: Compute the shortest path between multiple source-destination pairs.  
@@ -419,6 +429,7 @@ Advanced Graph Topics
 			* Applications: Multicast routing, logistics optimization.
 	
 	#. Shortest Path in a Grid with Obstacles
+
 		.. note::
 		
 			* Problem: Find the shortest path in a grid where some cells are blocked, and you can break at most :math:`k` obstacles.  
@@ -429,6 +440,7 @@ Advanced Graph Topics
 			* Applications: Robot navigation, pathfinding in games.
 	
 	#. Shortest Path with Different Modes of Transport
+
 		.. note::
 		
 			* Problem: Different edge weights for different "modes" (e.g., car, bike, foot).  
@@ -450,6 +462,7 @@ Advanced Graph Topics
 	* Determine the second-best MST.
 * More Problems:
 	#. Minimum Spanning Tree with Constraints
+
 		.. note::
 	
 			* Problem: Find a minimum spanning tree, but the tree must include a specific edge :math:`(u, v)`.
@@ -459,6 +472,7 @@ Advanced Graph Topics
 				- In Prim's, initialize the tree with the edge :math:`(u, v)` and adjust the priority queue accordingly.
 
 	#. Maximum Spanning Tree
+
 		.. note::
 	
 			* Problem: Find a spanning tree with the maximum total weight instead of the minimum.
@@ -468,6 +482,7 @@ Advanced Graph Topics
 				- In Prim's, use a max-heap instead of a min-heap.
 
 	#. Second Best Minimum Spanning Tree
+
 		.. note::
 	
 			* Problem: Find the second smallest weight of a spanning tree (not the same as the minimum spanning tree).
@@ -478,6 +493,7 @@ Advanced Graph Topics
 				- Efficient implementation involves a combination of Kruskal's and dynamic programming.
 
 	#. Minimum Spanning Tree with Degree Constraint
+
 		.. note::
 	
 			* Problem: Find a minimum spanning tree where no vertex can have a degree greater than `k`.
@@ -487,6 +503,7 @@ Advanced Graph Topics
 				- This problem may involve backtracking or heuristic approaches, as MST construction might fail under strict constraints.
 
 	#. Minimum Spanning Tree with Edge Removal Penalty
+
 		.. note::
 	
 			* Problem: Each edge has an associated penalty if it is not included in the spanning tree. Find the tree that minimizes the sum of the MST weight and the penalties of excluded edges.
@@ -496,6 +513,7 @@ Advanced Graph Topics
 				- In Prim's, prioritize edges by :math:`(weight - penalty)` in the priority queue.
 
 	#. Minimum Spanning Tree with Specific Vertex Inclusion
+
 		.. note::
 	
 			* Problem: Find an MST where a specific vertex `v` must be part of the tree.
@@ -505,6 +523,7 @@ Advanced Graph Topics
 				- In Kruskal's, ensure that the tree remains connected with vertex `v` by tracking whether `v` is part of the current spanning tree.
 
 	#. Minimum Spanning Tree with Color Constraints
+
 		.. note::
 	
 			* Problem: Each edge is assigned a color, and the MST must include at least one edge of every color.
@@ -513,6 +532,7 @@ Advanced Graph Topics
 				- This is a variant of the "multi-color spanning tree" problem and may require preprocessing of edges by color.
 
 	#. Dynamic Minimum Spanning Tree
+
 		.. note::
 	
 			* Problem: You are given an MST for a graph. Process queries to either:
@@ -525,6 +545,7 @@ Advanced Graph Topics
 				- Efficient implementation involves link-cut trees or other advanced data structures for dynamic graph problems.
 
 	#. Minimum Spanning Tree with Discounted Edges
+
 		.. note::
 	
 			* Problem: Some edges have a discounted weight (e.g., weight reduced by `x`). Find the MST under the discounted weights.
@@ -534,6 +555,7 @@ Advanced Graph Topics
 				- May involve multiple iterations with different discount values if the discount is variable or dependent on other factors.
 
 	#. Minimum Spanning Tree with Alternate Paths
+
 		.. note::
 	
 			* Problem: Find the MST and also compute, for each edge in the MST, the cost of the MST if that edge is removed.
@@ -544,6 +566,7 @@ Advanced Graph Topics
 				- Update the MST weight by replacing the removed edge with the heaviest edge on the alternate path.
 
 	#. Minimum Spanning Tree in a Graph with Negative Weights
+
 		.. note::
 	
 			* Problem: Find an MST in a graph that includes edges with negative weights.
@@ -553,6 +576,7 @@ Advanced Graph Topics
 				- Ensure the graph is connected or include logic to handle disconnected components.
 
 	#. Minimum Spanning Tree with Path Length Constraints
+
 		.. note::
 	
 			* Problem: Find an MST where the maximum depth of any vertex from the root is less than or equal to `k`.
@@ -638,7 +662,115 @@ Advanced Graph Topics
 	* Articulation Points and Bridges.
 	* Graph Coloring Problems.
 	* Spectral Graph Theory (rare but valuable for specific roles).
-
+* More Problems:
+	#. Graph Coloring with Minimum Colors (Chromatic Number)  
+	
+		.. note::  
+	   
+			* Problem: Determine the chromatic number of a graph, i.e., the minimum number of colors required to color the graph such that no two adjacent vertices share the same color.  
+			* Modification:  
+			
+				- Use a greedy algorithm to assign colors to vertices in the order of their degrees (highest to lowest).  
+				- For optimization, combine this with backtracking to ensure minimal color usage.  
+			* Applications: Scheduling problems, register allocation in compilers.
+	
+	#. Bipartite Graph Check using 2-Coloring  
+	
+		.. note::  
+	   
+			* Problem: Check if a graph is bipartite by verifying if it can be colored using exactly two colors.  
+			* Modification:  
+			
+				- Use BFS or DFS to attempt to 2-color the graph. If a vertex and its neighbor are assigned the same color during traversal, the graph is not bipartite.  
+			* Applications: Matching problems, network flow problems.
+	
+	#. Edge Coloring of a Graph  
+	
+		.. note::  
+	   
+			* Problem: Assign colors to edges such that no two edges sharing the same vertex have the same color. Minimize the number of colors used.  
+			* Modification:  
+			
+				- Use Vizing's Theorem, which states that the required colors are either :math:`\Delta(G)` or :math:`\Delta(G)+1`, where :math:`\Delta(G)` is the maximum degree of the graph.  
+				- Implement a greedy algorithm to iteratively assign colors to edges.  
+			* Applications: Channel assignment in wireless networks, task scheduling.
+	
+	#. Graph Coloring with Forbidden Colors  
+	
+		.. note::  
+	   
+			* Problem: Color a graph such that certain vertices have preassigned colors or cannot use specific colors.  
+			* Modification:  
+			
+				- Modify the greedy coloring algorithm to check and respect the forbidden or preassigned colors during the coloring process.  
+				- Backtracking might be required if constraints lead to conflicts.  
+			* Applications: Resource allocation with constraints, timetable generation.
+	
+	#. Distance-1 and Distance-2 Coloring  
+	
+		.. note::  
+	   
+			* Problem: Assign colors such that no two vertices at a distance of 1 (adjacent) or distance of 2 (neighbors' neighbors) share the same color.  
+			* Modification:  
+			
+				- Modify the adjacency list to include second-degree neighbors for distance-2 coloring.  
+				- Use a greedy algorithm with additional constraints for neighbor and neighbor-of-neighbor checks.  
+			* Applications: Frequency assignment in cellular networks, graph partitioning.
+	
+	#. Weighted Graph Coloring  
+	
+		.. note::  
+	   
+			* Problem: Assign colors to vertices such that the sum of the weights of conflicting edges is minimized.  
+			* Modification:  
+			
+				- Extend the greedy algorithm by prioritizing vertices based on their incident edge weights.  
+				- Dynamic programming or local search can help refine solutions for dense graphs.  
+			* Applications: Minimizing interference in communication networks, resource conflict management.
+	
+	#. Graph Coloring with Fixed Palette  
+	
+		.. note::  
+	   
+			* Problem: Given a fixed number of colors, determine if the graph can be properly colored.  
+			* Modification:  
+			
+				- Use backtracking to explore all possible assignments within the fixed palette. Prune branches when constraints are violated.  
+				- For large graphs, use heuristics like DSATUR (Degree of Saturation) to reduce search space.  
+			* Applications: Feasibility testing in scheduling and allocation tasks.
+	
+	#. Circular Coloring  
+	
+		.. note::  
+	   
+			* Problem: Assign colors to vertices such that the difference between the colors of adjacent vertices satisfies specific modular constraints.  
+			* Modification:  
+			
+				- Modify greedy algorithms to include modular arithmetic checks during the coloring process.  
+				- Use a DFS or BFS to verify feasibility before proceeding.  
+			* Applications: Clock synchronization, cyclic resource allocation.
+	
+	#. Planar Graph Coloring  
+	
+		.. note::  
+	   
+			* Problem: Color a planar graph with a maximum of 4 colors (Four Color Theorem).  
+			* Modification:  
+			
+				- Implement a greedy algorithm leveraging the planar graph's property that the chromatic number is at most 4.  
+				- Use DFS to identify small subgraphs and handle exceptions with backtracking.  
+			* Applications: Map coloring, geographical region division.
+	
+	#. Dynamic Graph Coloring  
+	
+		.. note::  
+	   
+			* Problem: Maintain a valid coloring of a graph while allowing for vertex or edge insertions and deletions.  
+			* Modification:  
+			
+				- Use a balanced tree or dynamic data structure (like a Fenwick tree) to track and update vertex colors efficiently.  
+				- Recolor only the affected part of the graph when changes occur.  
+			* Applications: Real-time scheduling, adaptive resource allocation.
 11. Problems:
 --------------------------------------------------------------------------------
 #. You are given a directed graph where each node represents a city and edges represent roads between them with a time cost. Find the smallest time to travel between two given cities, but you can use a "shortcut" road that reduces the time of any one edge to zero.
