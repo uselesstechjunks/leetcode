@@ -35,7 +35,6 @@ Contents
 	deepdives
 	rtfm
 	kurzgesagt
-	readlist 
-	dsalgosol   
+	readlist
 
 Machine Learning Interviews has its documentation hosted on Read the Docs.
