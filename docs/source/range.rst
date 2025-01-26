@@ -34,6 +34,9 @@ Data Structures
 #. Interval Tree and KD-Tree:
 
 	- For multidimensional range queries.
+#. Monotonic Stack/Queue:
+
+	- Span porblems in static data.
 
 Algorithms
 --------------------------------------------------------------------------------
@@ -259,3 +262,62 @@ Hybrid Problems
 		1. Updates: Add a value to all elements in a submatrix.
 		2. Queries: Find the sum of elements in any submatrix.
 	- Hints: Use a 2D Fenwick Tree or segment tree for efficient query and update operations.
+
+Problems Using Monotonic Stack
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Largest Rectangle in Histogram
+
+	- Problem: Given an array of heights representing a histogram, find the area of the largest rectangle.
+	- Hint: Use a monotonic stack to track bars in increasing order.
+
+#. Trapping Rain Water
+
+	- Problem: Given an array representing heights, calculate how much water can be trapped after it rains.
+	- Hint: Use a monotonic stack to find the bounds of trapped water.
+
+#. Next Greater Element (NGE)
+
+	- Problem: For an array, find the next greater element for each element.
+	- Hint: Traverse from the end and use a monotonic stack to maintain greater elements.
+
+#. Next Smaller Element
+
+	- Problem: For an array, find the next smaller element for each element.
+	- Hint: Similar to NGE, but with a decreasing monotonic stack.
+
+#. Sum of Subarray Minimums
+
+	- Problem: Given an array, find the sum of the minimum values of all subarrays.
+	- Hint: Use a monotonic stack to find the nearest smaller elements on both sides.
+
+#. 132 Pattern
+
+	- Problem: Find if there exists a 132 pattern in an array.
+	- Hint: Use a monotonic stack to maintain potential "3" values while iterating.
+
+#. Daily Temperatures
+
+	- Problem: For each day's temperature, find how many days you’d have to wait for a warmer temperature.
+	- Hint: Monotonic stack tracks indices of temperatures.
+
+#. Asteroid Collision
+
+	- Problem: Simulate asteroid collisions where larger ones destroy smaller ones.
+	- Hint: Use a monotonic stack to simulate collisions.
+
+Problems Using Monotonic Queue
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Sliding Window Maximum
+
+	- Problem: Find the maximum element in every sliding window of size :math:`k`.
+	- Hint: Maintain a monotonic queue to store potential maxima.
+
+#. Shortest Subarray with Sum at Least K
+
+	- Problem: Given an array, find the shortest subarray with a sum :math:`\geq K`.
+	- Hint: Use a monotonic queue to optimize prefix sums.
+
+#. Max Sliding Window Minimum
+
+	- Problem: Find the minimum value in every sliding window of size :math:`k`.
+	- Hint: Maintain a monotonic queue for minimums.
