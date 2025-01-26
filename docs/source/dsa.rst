@@ -18,7 +18,7 @@ Deep Dives
 
 	dsa/range
 	dsa/graph
-	dsa/dsalgosol
+	dsa/dsasol
 
 *********************************************************************************
 Resources
