@@ -6,7 +6,7 @@ Key Topics
 *********************************************************************************
 .. attention::
 
-	#. Order Statistics/Range queries - Items, Intervals, Two pointers, Sliding window
+	#. Order/Range queries - Items, Intervals, Two pointers, Sliding window
 	#. Graph - shortest path, scheduling, assignment, partitioning, connectivity
 	#. Dynamic programming - optimization problems
 	#. Combinatorial
