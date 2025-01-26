@@ -22,10 +22,10 @@ Contents
 	:maxdepth: 1
 
 	math/index
+	dsa
 	ml/index
 	dl/index
 	rank
-	dsalgo
 	mlcoding
 	mlapp
 	sysdes
