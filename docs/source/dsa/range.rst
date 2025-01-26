@@ -45,23 +45,23 @@ Algorithms
 #. Two-pointer methods for range problems in sorted data.
 #. Offline processing for batch queries using Mo's Algorithm or persistent data structures.
 
-Example Problems
+Fundamental Problems
 --------------------------------------------------------------------------------
 Binary Search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Minimum Number of Days to Make m Bouquets
 
-	- Problem: Given an array where each element represents the number of days it takes for a flower to bloom, and integers :math:`m`and :math:`k`, find the minimum number of days required to make :math:`m`bouquets, where each bouquet requires :math:`k`adjacent flowers.
+	- Problem: Given an array where each element represents the number of days it takes for a flower to bloom, and integers :math:`m` and :math:`k`, find the minimum number of days required to make :math:` m` bouquets, where each bouquet requires :math:`k` adjacent flowers.
 	- Hints: Use binary search on the minimum days.
 
 #. Allocate Books (or Minimum Maximum Partition)
 
-	- Problem: Given :math:`n`books and :math:`m`students, where each book has a certain number of pages, partition the books such that the maximum pages assigned to a student is minimized.
+	- Problem: Given :math:`n` books and :math:`m` students, where each book has a certain number of pages, partition the books such that the maximum pages assigned to a student is minimized.
 	- Hints: Binary search on the maximum pages.
 
 #. Koko Eating Bananas
 
-	- Problem: Given :math:`n`piles of bananas and an integer :math:`h`, find the minimum eating speed :math:`k`such that Koko can finish all the bananas in :math:`h`hours.
+	- Problem: Given :math:`n` piles of bananas and an integer :math:`h`, find the minimum eating speed :math:`k` such that Koko can finish all the bananas in :math:`h` hours.
 	- Hints: Binary search on the eating speed.
 
 #. Find Median in a Row-Wise Sorted Matrix
@@ -71,7 +71,7 @@ Binary Search
 
 #. Aggressive Cows (or Maximum Minimum Distance)
 
-	- Problem: Given :math:`n`stalls and :math:`c`cows, place the cows in the stalls such that the minimum distance between any two cows is maximized.
+	- Problem: Given :math:`n` stalls and :math:`c` cows, place the cows in the stalls such that the minimum distance between any two cows is maximized.
 	- Hints: Binary search on the minimum distance.
 
 #. Search in a Rotated Sorted Array
@@ -81,7 +81,7 @@ Binary Search
 
 #. Split Array Largest Sum
 
-	- Problem: Split an array into :math:`m`non-empty subarrays to minimize the largest sum among the subarrays.
+	- Problem: Split an array into :math:`m` non-empty subarrays to minimize the largest sum among the subarrays.
 	- Hints: Binary search on the maximum subarray sum.
 
 #. Find Peak Element in an Unsorted Array
@@ -96,7 +96,7 @@ Binary Search
 
 #. Minimize the Maximum Difference Between Pairs
 
-	- Problem: Given an array of integers and a number :math:`p`, partition the array into :math:`p`pairs such that the maximum absolute difference of any pair is minimized.
+	- Problem: Given an array of integers and a number :math:`p`, partition the array into :math:`p` pairs such that the maximum absolute difference of any pair is minimized.
 	- Hints: Binary search on the maximum difference.
 
 Hybrid Binary Search
@@ -133,7 +133,7 @@ Order Statistics
 
 #. kth Element in the Cartesian Product
 
-	- Problem: Given two sorted arrays :math:`A` and :math:`B`, find the :math:`k`-th smallest element in the Cartesian product of :math:`A \times B`. 
+	- Problem: Given two sorted arrays :math:`A` and :math:`B`, find the :math:`k` -th smallest element in the Cartesian product of :math:`A \times B`. 
 	- Hints: Use a min-heap with tuples to track possible combinations efficiently.
 
 #. Median in a Sliding Window
@@ -199,7 +199,7 @@ Range Query Problems
 
 	- Problem: Given an array of integers, process the following operations efficiently:
 
-		1. Update the :math:`i`-th element to :math:`x`.
+		1. Update the :math:`i` -th element to :math:`x`.
 		2. Query the XOR of elements in the range :math:`[L, R]`.
 	- Hints: Use a segment tree with XOR as the operation and point updates.
 
@@ -322,161 +322,145 @@ Problems Using Monotonic Queue
 	- Problem: Find the minimum value in every sliding window of size :math:`k`.
 	- Hints: Maintain a monotonic queue for minimums.
 
-Advanced Problems
+Interview Problems
 --------------------------------------------------------------------------------
 #. Sliding Window Maximum
 
-	- Basic Variant  
+	#. Basic Variant
 	
 		- Problem: Find the maximum element in every sliding window of size :math:`k` in an array.
 		- Hints: Use a monotonic deque to store indices of potential maxima, maintaining decreasing order.
-
-	- Advanced Variants  
 	
-		#. Dynamic Data (Real-Time Updates)  
-		
-			- Change: The array is dynamic, and elements can be added/removed in real-time.  
-			- Hints: Use a Segment Tree or Fenwick Tree to track maxima in specific ranges.  
+	#. Dynamic Data (Real-Time Updates) 
+	
+		- Change: The array is dynamic, and elements can be added/removed in real-time. 
+		- Hints: Use a Segment Tree or Fenwick Tree to track maxima in specific ranges. 
 
-		#. Multiple Queries  
-		
-			- Change: Instead of just one pass, answer multiple queries of the form :math:`[L, R]` to find the maximum in subarrays.  
-			- Hints: Preprocess with a Sparse Table (for static queries) or Segment Tree (for dynamic updates).  
+	#. Multiple Queries 
+	
+		- Change: Instead of just one pass, answer multiple queries of the form :math:`[L, R]` to find the maximum in subarrays. 
+		- Hints: Preprocess with a Sparse Table (for static queries) or Segment Tree (for dynamic updates). 
 
 #. Largest Rectangle in Histogram
 
-	- Basic Variant  
+	#. Basic Variant
 	
-		- Problem: Find the area of the largest rectangle that can be formed in a histogram.  
+		- Problem: Find the area of the largest rectangle that can be formed in a histogram. 
 		- Hints: Use a monotonic stack to find the next smaller and previous smaller heights for each bar.
 
-	- Advanced Variants  
+	#. 2D Matrix (Maximal Rectangle) 
 	
-		#. 2D Matrix (Maximal Rectangle)  
-		
-			- Change: Extend the to a binary matrix to find the largest rectangle containing only 1s.  
-			- Hints: Treat each row as a histogram and use the stack approach iteratively.
+		- Change: Extend the to a binary matrix to find the largest rectangle containing only 1s. 
+		- Hints: Treat each row as a histogram and use the stack approach iteratively.
 
-		#. Dynamic Histogram Updates  
-		
-			- Change: Allow updates to histogram heights and dynamically compute the largest rectangle.  
-			- Hints: Use a Segment Tree to store and query the largest rectangle efficiently.  
+	#. Dynamic Histogram Updates 
+	
+		- Change: Allow updates to histogram heights and dynamically compute the largest rectangle. 
+		- Hints: Use a Segment Tree to store and query the largest rectangle efficiently. 
 
 #. Trapping Rain Water
 
-	- Basic Variant  
+	#. Basic Variant
 	
-		- Problem: Given an array of heights, calculate the total water trapped after rain.  
+		- Problem: Given an array of heights, calculate the total water trapped after rain. 
 		- Hints: Use two-pointer technique or monotonic stack to find bounds for water levels.
-
-	- Advanced Variants  
 	
-		#. Dynamic Updates  
-		
-			- Change: Heights can be updated, and the total trapped water must be recalculated efficiently.  
-			- Hints: Use a Fenwick Tree to maintain prefix max values and efficiently compute water levels.  
+	#. Dynamic Updates 
+	
+		- Change: Heights can be updated, and the total trapped water must be recalculated efficiently. 
+		- Hints: Use a Fenwick Tree to maintain prefix max values and efficiently compute water levels. 
 
-		#. Multiple Queries  
-		
-			- Change: For multiple ranges :math:`[L, R]` , calculate the water trapped in those ranges.  
-			- Hints: Precompute prefix max/min values for efficient range queries.  
+	#. Multiple Queries 
+	
+		- Change: For multiple ranges :math:`[L, R]`, calculate the water trapped in those ranges. 
+		- Hints: Precompute prefix max/min values for efficient range queries. 
 
 #. Next Greater Element (NGE)
 
-	- Basic Variant  
+	#. Basic Variant
 	
-		- Problem: For an array, find the next greater element for each element.  
+		- Problem: For an array, find the next greater element for each element. 
 		- Hints: Use a monotonic stack while iterating from the end of the array.
-
-	- Advanced Variants  
 	
-		#. Circular Array  
-		
-			- Change: The array is circular, so elements wrap around.  
-			- Hints: Simulate wrapping by iterating twice through the array with a stack.  
+	#. Circular Array 
+	
+		- Change: The array is circular, so elements wrap around. 
+		- Hints: Simulate wrapping by iterating twice through the array with a stack. 
 
-		#. Dynamic Updates  
-		
-			- Change: Support updates to the array and answer NGE queries efficiently.  
-			- Hints: Use a Segment Tree or Ordered Set to dynamically track and query next greater elements.  
+	#. Dynamic Updates 
+	
+		- Change: Support updates to the array and answer NGE queries efficiently. 
+		- Hints: Use a Segment Tree or Ordered Set to dynamically track and query next greater elements. 
 
 #. Range Sum Query
 
-	- Basic Variant  
+	#. Basic Variant
 	
-		- Problem: Given an array, calculate the sum of elements in a range :math:`[L, R]` .  
+		- Problem: Given an array, calculate the sum of elements in a range :math:`[L, R]` . 
 		- Hints: Use a prefix sum array for efficient range queries.
 
-	- Advanced Variants  
+	#. Dynamic Updates 
 	
-		#. Dynamic Updates  
-		
-			- Change: Allow updates to the array and answer range sum queries.  
-			- Hints: Use a Fenwick Tree or Segment Tree for :math:`O(\log n)` updates and queries.  
+		- Change: Allow updates to the array and answer range sum queries. 
+		- Hints: Use a Fenwick Tree or Segment Tree for :math:`O(\log n)` updates and queries. 
 
-		#. Range Sum with Modulo or Constraints  
-		
-			- Change: Add a constraint to compute range sums modulo :math:`k` , or find if the sum in a range satisfies certain conditions.  
-			- Hints: Use a Segment Tree with custom lazy propagation to handle constraints.  
+	#. Range Sum with Modulo or Constraints 
+	
+		- Change: Add a constraint to compute range sums modulo :math:`k`, or find if the sum in a range satisfies certain conditions. 
+		- Hints: Use a Segment Tree with custom lazy propagation to handle constraints. 
 
 #. Stock Span Problem
 
-	- Basic Variant  
+	#. Basic Variant
 	
-		- Problem: For each day’s stock price, find the number of consecutive days before it with a price less than or equal to the current day.  
+		- Problem: For each day’s stock price, find the number of consecutive days before it with a price less than or equal to the current day. 
 		- Hints: Use a monotonic stack to track indices.
-
-	- Advanced Variants  
 	
-		#. Dynamic Price Updates  
-		
-			- Change: Allow updates to stock prices and recalculate the span dynamically.  
-			- Hints: Use a Segment Tree to maintain range queries for stock prices.  
+	#. Dynamic Price Updates 
+	
+		- Change: Allow updates to stock prices and recalculate the span dynamically. 
+		- Hints: Use a Segment Tree to maintain range queries for stock prices. 
 
-		#. Multiple Queries for Ranges  
-		
-			- Change: Answer span queries for multiple subranges :math:`[L, R]` .  
-			- Hints: Combine Segment Tree or Sparse Table with preprocessing for efficient queries.  
+	#. Multiple Queries for Ranges 
+	
+		- Change: Answer span queries for multiple subranges :math:`[L, R]` . 
+		- Hints: Combine Segment Tree or Sparse Table with preprocessing for efficient queries. 
 
 #. Sum of Subarray Minimums
 
-	- Basic Variant  
+	#. Basic Variant
 	
-		- Problem: Find the sum of minimum values of all subarrays of an array.  
+		- Problem: Find the sum of minimum values of all subarrays of an array. 
 		- Hints: Use a monotonic stack to find the nearest smaller elements on both sides.
-
-	- Advanced Variants  
 	
-		#. Dynamic Array Updates  
-		
-			- Change: Support updates to array elements and recompute the sum of subarray minimums.  
-			- Hints: Use a Segment Tree to track minimums and their contributions dynamically.  
+	#. Dynamic Array Updates 
+	
+		- Change: Support updates to array elements and recompute the sum of subarray minimums. 
+		- Hints: Use a Segment Tree to track minimums and their contributions dynamically. 
 
-		#. Additional Constraints  
-		
-			- Change: Add constraints like subarray sums must be within a given range or subarray lengths must be limited.  
-			- Hints: Combine a Fenwick Tree with constraint checks for efficient processing.  
+	#. Additional Constraints 
+	
+		- Change: Add constraints like subarray sums must be within a given range or subarray lengths must be limited. 
+		- Hints: Combine a Fenwick Tree with constraint checks for efficient processing. 
 
 #. Binary Search Variants
 
-	- Basic Variant  
+	#. Basic Variant
 	
-		- Problem: Find an element in a sorted array using binary search.  
+		- Problem: Find an element in a sorted array using binary search. 
 		- Hints: Divide and conquer to find the target element.
-
-	- Advanced Variants  
 	
-		#. Rotated Sorted Array  
-		
-			- Change: The array is rotated; find the target element.  
-			- Hints: Modify binary search to handle rotations.  
+	#. Rotated Sorted Array 
+	
+		- Change: The array is rotated; find the target element. 
+		- Hints: Modify binary search to handle rotations. 
 
-		#. Minimum in Rotated Sorted Array with Duplicates  
-		
-			- Change: The rotated array contains duplicates.  
-			- Hints: Adapt binary search with careful handling of duplicate elements.  
+	#. Minimum in Rotated Sorted Array with Duplicates 
+	
+		- Change: The rotated array contains duplicates. 
+		- Hints: Adapt binary search with careful handling of duplicate elements. 
 
-		#. Find Median in a Stream  
-		
-			- Change: Support dynamic updates and find the median efficiently.  
-			- Hints: Use a combination of Heaps or Balanced BSTs for dynamic median maintenance.  
+	#. Find Median in a Stream 
+	
+		- Change: Support dynamic updates and find the median efficiently. 
+		- Hints: Use a combination of Heaps or Balanced BSTs for dynamic median maintenance. 
