@@ -34,6 +34,9 @@ Data Structures
 #. Interval Tree and KD-Tree:
 
 	- For multidimensional range queries.
+#. Monotonic Stack/Queue:
+
+	- Span porblems in static data.
 
 Algorithms
 --------------------------------------------------------------------------------
@@ -113,7 +116,7 @@ Order Statistics
 #. Kth Largest/Smallest Element in a Stream:
 
 	- Maintain the top k elements in a stream of data.
-	- Example: Leverage min-heaps or order statistics trees.
+	- Hints: Leverage min-heaps or order statistics trees.
 
 #. Find the Median of a Running Stream:
 
@@ -157,31 +160,31 @@ Range Query Problems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Range Sum Query with Updates:
 
-	- Solve using segment trees or Fenwick trees with range updates.
+	- Hints: Solve using segment trees or Fenwick trees with range updates.
 
 #. Range Minimum/Maximum Query:
 
-	- Solve using segment trees, sparse tables, or hybrid methods.
+	- Hints: Solve using segment trees, sparse tables, or hybrid methods.
 
 #. Dynamic Range Median Queries:
 
-	- Maintain a dynamic dataset and answer queries for the median of a range.
+	- Hints: Maintain a dynamic dataset and answer queries for the median of a range.
 
 #. Range XOR Query:
 
-	- Solve using segment trees.
+	- Hints: Solve using segment trees.
 
 #. Sum of Range Products:
 
-	- Given an array, answer the sum of products of all pairs in the range [L, R].
+	- Hints: Given an array, answer the sum of products of all pairs in the range [L, R].
 
 #. Number of Distinct Elements in Range:
 
-	- Use Mo’s Algorithm or a segment tree with a map structure.
+	- Hints: Use Mo’s Algorithm or a segment tree with a map structure.
 
 #. Range Frequency Query:
 
-	- Solve using a wavelet tree or merge sort tree.
+	- Hints: Solve using a wavelet tree or merge sort tree.
 
 #. Dynamic Range Median Queries
 
@@ -259,3 +262,221 @@ Hybrid Problems
 		1. Updates: Add a value to all elements in a submatrix.
 		2. Queries: Find the sum of elements in any submatrix.
 	- Hints: Use a 2D Fenwick Tree or segment tree for efficient query and update operations.
+
+Problems Using Monotonic Stack
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Largest Rectangle in Histogram
+
+	- Problem: Given an array of heights representing a histogram, find the area of the largest rectangle.
+	- Hints: Use a monotonic stack to track bars in increasing order.
+
+#. Trapping Rain Water
+
+	- Problem: Given an array representing heights, calculate how much water can be trapped after it rains.
+	- Hints: Use a monotonic stack to find the bounds of trapped water.
+
+#. Next Greater Element (NGE)
+
+	- Problem: For an array, find the next greater element for each element.
+	- Hints: Traverse from the end and use a monotonic stack to maintain greater elements.
+
+#. Next Smaller Element
+
+	- Problem: For an array, find the next smaller element for each element.
+	- Hints: Similar to NGE, but with a decreasing monotonic stack.
+
+#. Sum of Subarray Minimums
+
+	- Problem: Given an array, find the sum of the minimum values of all subarrays.
+	- Hints: Use a monotonic stack to find the nearest smaller elements on both sides.
+
+#. 132 Pattern
+
+	- Problem: Find if there exists a 132 pattern in an array.
+	- Hints: Use a monotonic stack to maintain potential "3" values while iterating.
+
+#. Daily Temperatures
+
+	- Problem: For each day's temperature, find how many days you’d have to wait for a warmer temperature.
+	- Hints: Monotonic stack tracks indices of temperatures.
+
+#. Asteroid Collision
+
+	- Problem: Simulate asteroid collisions where larger ones destroy smaller ones.
+	- Hints: Use a monotonic stack to simulate collisions.
+
+Problems Using Monotonic Queue
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Sliding Window Maximum
+
+	- Problem: Find the maximum element in every sliding window of size :math:`k`.
+	- Hints: Maintain a monotonic queue to store potential maxima.
+
+#. Shortest Subarray with Sum at Least K
+
+	- Problem: Given an array, find the shortest subarray with a sum :math:`\geq K`.
+	- Hints: Use a monotonic queue to optimize prefix sums.
+
+#. Max Sliding Window Minimum
+
+	- Problem: Find the minimum value in every sliding window of size :math:`k`.
+	- Hints: Maintain a monotonic queue for minimums.
+
+Advanced Problems
+--------------------------------------------------------------------------------
+#. Sliding Window Maximum
+
+	- Basic Variant  
+	
+		- Problem: Find the maximum element in every sliding window of size :math:`k` in an array.
+		- Hints: Use a monotonic deque to store indices of potential maxima, maintaining decreasing order.
+
+	- Advanced Variants  
+	
+		#. Dynamic Data (Real-Time Updates)  
+		
+			- Change: The array is dynamic, and elements can be added/removed in real-time.  
+			- Hints: Use a Segment Tree or Fenwick Tree to track maxima in specific ranges.  
+
+		#. Multiple Queries  
+		
+			- Change: Instead of just one pass, answer multiple queries of the form :math:`[L, R]` to find the maximum in subarrays.  
+			- Hints: Preprocess with a Sparse Table (for static queries) or Segment Tree (for dynamic updates).  
+
+#. Largest Rectangle in Histogram
+
+	- Basic Variant  
+	
+		- Problem: Find the area of the largest rectangle that can be formed in a histogram.  
+		- Hints: Use a monotonic stack to find the next smaller and previous smaller heights for each bar.
+
+	- Advanced Variants  
+	
+		#. 2D Matrix (Maximal Rectangle)  
+		
+			- Change: Extend the to a binary matrix to find the largest rectangle containing only 1s.  
+			- Hints: Treat each row as a histogram and use the stack approach iteratively.
+
+		#. Dynamic Histogram Updates  
+		
+			- Change: Allow updates to histogram heights and dynamically compute the largest rectangle.  
+			- Hints: Use a Segment Tree to store and query the largest rectangle efficiently.  
+
+#. Trapping Rain Water
+
+	- Basic Variant  
+	
+		- Problem: Given an array of heights, calculate the total water trapped after rain.  
+		- Hints: Use two-pointer technique or monotonic stack to find bounds for water levels.
+
+	- Advanced Variants  
+	
+		#. Dynamic Updates  
+		
+			- Change: Heights can be updated, and the total trapped water must be recalculated efficiently.  
+			- Hints: Use a Fenwick Tree to maintain prefix max values and efficiently compute water levels.  
+
+		#. Multiple Queries  
+		
+			- Change: For multiple ranges :math:`[L, R]` , calculate the water trapped in those ranges.  
+			- Hints: Precompute prefix max/min values for efficient range queries.  
+
+#. Next Greater Element (NGE)
+
+	- Basic Variant  
+	
+		- Problem: For an array, find the next greater element for each element.  
+		- Hints: Use a monotonic stack while iterating from the end of the array.
+
+	- Advanced Variants  
+	
+		#. Circular Array  
+		
+			- Change: The array is circular, so elements wrap around.  
+			- Hints: Simulate wrapping by iterating twice through the array with a stack.  
+
+		#. Dynamic Updates  
+		
+			- Change: Support updates to the array and answer NGE queries efficiently.  
+			- Hints: Use a Segment Tree or Ordered Set to dynamically track and query next greater elements.  
+
+#. Range Sum Query
+
+	- Basic Variant  
+	
+		- Problem: Given an array, calculate the sum of elements in a range :math:`[L, R]` .  
+		- Hints: Use a prefix sum array for efficient range queries.
+
+	- Advanced Variants  
+	
+		#. Dynamic Updates  
+		
+			- Change: Allow updates to the array and answer range sum queries.  
+			- Hints: Use a Fenwick Tree or Segment Tree for :math:`O(\log n)` updates and queries.  
+
+		#. Range Sum with Modulo or Constraints  
+		
+			- Change: Add a constraint to compute range sums modulo :math:`k` , or find if the sum in a range satisfies certain conditions.  
+			- Hints: Use a Segment Tree with custom lazy propagation to handle constraints.  
+
+#. Stock Span Problem
+
+	- Basic Variant  
+	
+		- Problem: For each day’s stock price, find the number of consecutive days before it with a price less than or equal to the current day.  
+		- Hints: Use a monotonic stack to track indices.
+
+	- Advanced Variants  
+	
+		#. Dynamic Price Updates  
+		
+			- Change: Allow updates to stock prices and recalculate the span dynamically.  
+			- Hints: Use a Segment Tree to maintain range queries for stock prices.  
+
+		#. Multiple Queries for Ranges  
+		
+			- Change: Answer span queries for multiple subranges :math:`[L, R]` .  
+			- Hints: Combine Segment Tree or Sparse Table with preprocessing for efficient queries.  
+
+#. Sum of Subarray Minimums
+
+	- Basic Variant  
+	
+		- Problem: Find the sum of minimum values of all subarrays of an array.  
+		- Hints: Use a monotonic stack to find the nearest smaller elements on both sides.
+
+	- Advanced Variants  
+	
+		#. Dynamic Array Updates  
+		
+			- Change: Support updates to array elements and recompute the sum of subarray minimums.  
+			- Hints: Use a Segment Tree to track minimums and their contributions dynamically.  
+
+		#. Additional Constraints  
+		
+			- Change: Add constraints like subarray sums must be within a given range or subarray lengths must be limited.  
+			- Hints: Combine a Fenwick Tree with constraint checks for efficient processing.  
+
+#. Binary Search Variants
+
+	- Basic Variant  
+	
+		- Problem: Find an element in a sorted array using binary search.  
+		- Hints: Divide and conquer to find the target element.
+
+	- Advanced Variants  
+	
+		#. Rotated Sorted Array  
+		
+			- Change: The array is rotated; find the target element.  
+			- Hints: Modify binary search to handle rotations.  
+
+		#. Minimum in Rotated Sorted Array with Duplicates  
+		
+			- Change: The rotated array contains duplicates.  
+			- Hints: Adapt binary search with careful handling of duplicate elements.  
+
+		#. Find Median in a Stream  
+		
+			- Change: Support dynamic updates and find the median efficiently.  
+			- Hints: Use a combination of Heaps or Balanced BSTs for dynamic median maintenance.  
