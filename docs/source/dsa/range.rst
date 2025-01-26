@@ -8,6 +8,13 @@ Data Structures
 	- Sum, min, max, and custom range queries.
 	- Lazy propagation for range updates.
 	- Variants like mergeable segment trees.
+
+	.. important::
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: code/segtree.py
+		      :language: python
+		      :linenos:
 #. Fenwick Tree (Binary Indexed Tree):
 
 	- Point updates and prefix/range queries.
