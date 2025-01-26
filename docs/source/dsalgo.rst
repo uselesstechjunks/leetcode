@@ -296,3 +296,9 @@ Intervals
 #. `Meeting Rooms II <https://leetcode.com/problems/meeting-rooms-ii/>`_
 #. `Meeting Rooms III <https://leetcode.com/problems/meeting-rooms-iii/>`_
 #. `Number of Flowers in Full Bloom <https://leetcode.com/problems/number-of-flowers-in-full-bloom/>`_
+
+.. toctree::
+	:maxdepth: 1
+
+	graph
+	range
