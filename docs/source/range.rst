@@ -1,5 +1,5 @@
 ================================================================================
-Order Statistics and Range Queries
+Order, Search and Range Queries
 ================================================================================
 Data Structures
 --------------------------------------------------------------------------------
@@ -44,6 +44,70 @@ Algorithms
 
 Example Problems
 --------------------------------------------------------------------------------
+Binary Search
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Minimum Number of Days to Make m Bouquets
+
+	- Problem: Given an array where each element represents the number of days it takes for a flower to bloom, and integers :math:`m`and :math:`k`, find the minimum number of days required to make :math:`m`bouquets, where each bouquet requires :math:`k`adjacent flowers.
+	- Hints: Use binary search on the minimum days.
+
+#. Allocate Books (or Minimum Maximum Partition)
+
+	- Problem: Given :math:`n`books and :math:`m`students, where each book has a certain number of pages, partition the books such that the maximum pages assigned to a student is minimized.
+	- Hints: Binary search on the maximum pages.
+
+#. Koko Eating Bananas
+
+	- Problem: Given :math:`n`piles of bananas and an integer :math:`h`, find the minimum eating speed :math:`k`such that Koko can finish all the bananas in :math:`h`hours.
+	- Hints: Binary search on the eating speed.
+
+#. Find Median in a Row-Wise Sorted Matrix
+
+	- Problem: Given a row-wise sorted matrix, find its median.
+	- Hints: Use binary search on the value range, with a helper function to count elements smaller than or equal to the mid.
+
+#. Aggressive Cows (or Maximum Minimum Distance)
+
+	- Problem: Given :math:`n`stalls and :math:`c`cows, place the cows in the stalls such that the minimum distance between any two cows is maximized.
+	- Hints: Binary search on the minimum distance.
+
+#. Search in a Rotated Sorted Array
+
+	- Problem: Given a rotated sorted array, find a target value in :math:`O(\log n)`.
+	- Hints: Binary search with conditions to identify the rotated segment.
+
+#. Split Array Largest Sum
+
+	- Problem: Split an array into :math:`m`non-empty subarrays to minimize the largest sum among the subarrays.
+	- Hints: Binary search on the maximum subarray sum.
+
+#. Find Peak Element in an Unsorted Array
+
+	- Problem: Given an unsorted array, find a peak element (an element greater than its neighbors) in :math:`O(\log n)`.
+	- Hints: Apply binary search with local comparison.
+
+#. Longest Subsequence with Limited Sum
+
+	- Problem: Given an array and queries, for each query, find the maximum number of elements in the array whose sum is less than or equal to the query value.
+	- Hints: Binary search with prefix sums.
+
+#. Minimize the Maximum Difference Between Pairs
+
+	- Problem: Given an array of integers and a number :math:`p`, partition the array into :math:`p`pairs such that the maximum absolute difference of any pair is minimized.
+	- Hints: Binary search on the maximum difference.
+
+Hybrid Binary Search
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Matrix Median
+
+	- Problem: Find the median of a matrix where each row is sorted.
+	- Hints: Binary search on the value range while counting elements using row-wise binary searches.
+
+#. Maximize Minimum Distance Between Points
+
+	- Problem: Given points on a line and a fixed number of segments, maximize the minimum distance between the segment boundaries.
+	- Hints: Binary search on the answer.
+
 Order Statistics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Kth Largest/Smallest Element in a Stream:
