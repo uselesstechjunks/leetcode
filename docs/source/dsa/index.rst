@@ -16,9 +16,9 @@ Deep Dives
 .. toctree::
 	:maxdepth: 1
 
-	dsa/range
-	dsa/graph
-	dsa/dsasol
+	range
+	graph
+	dsasol
 
 *********************************************************************************
 Resources
