@@ -3,6 +3,13 @@ Advanced Graph Topics
 ================================================================================
 1. Shortest Paths
 --------------------------------------------------------------------------------
+.. important::
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: code/sssp.py
+	      :language: python
+	      :linenos:
+
 * Why important: Many problems in real-world applications (e.g., routing, network optimization) rely on shortest paths.
 * Relevant Algorithms:
 
@@ -32,6 +39,13 @@ Advanced Graph Topics
 
 2. Minimum Spanning Tree (MST)
 --------------------------------------------------------------------------------
+.. important::
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: code/mst.py
+	      :language: python
+	      :linenos:
+
 * Why important: MSTs are useful in optimization problems, especially those involving connectivity.
 * Key Algorithms:
 
@@ -101,6 +115,13 @@ Advanced Graph Topics
 
 6. Graph Traversals
 --------------------------------------------------------------------------------
+.. important::
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: code/graph.py
+	      :language: python
+	      :linenos:
+
 * Why important: Breadth-first and depth-first searches are foundational for exploring graphs.
 * Key Techniques:
 
