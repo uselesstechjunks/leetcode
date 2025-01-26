@@ -49,99 +49,92 @@ Fundamental Problems
 --------------------------------------------------------------------------------
 Binary Search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Minimum Number of Days to Make m Bouquets
+#. `Minimum Number of Days to Make m Bouquets <https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/>`_
 
 	- Problem: Given an array where each element represents the number of days it takes for a flower to bloom, and integers :math:`m` and :math:`k`, find the minimum number of days required to make :math:`m` bouquets, where each bouquet requires :math:`k` adjacent flowers.
 	- Hints: Use binary search on the minimum days.
 
-#. Allocate Books (or Minimum Maximum Partition)
+#. `Allocate Books (or Minimum Maximum Partition) <https://www.geeksforgeeks.org/allocate-minimum-number-pages/>`_
 
 	- Problem: Given :math:`n` books and :math:`m` students, where each book has a certain number of pages, partition the books such that the maximum pages assigned to a student is minimized.
 	- Hints: Binary search on the maximum pages.
 
-#. Koko Eating Bananas
+#. `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
 
 	- Problem: Given :math:`n` piles of bananas and an integer :math:`h`, find the minimum eating speed :math:`k` such that Koko can finish all the bananas in :math:`h` hours.
 	- Hints: Binary search on the eating speed.
 
-#. Find Median in a Row-Wise Sorted Matrix
+#. `Find Median in a Row-Wise Sorted Matrix <https://www.geeksforgeeks.org/find-median-row-wise-sorted-matrix/>`_
 
 	- Problem: Given a row-wise sorted matrix, find its median.
 	- Hints: Use binary search on the value range, with a helper function to count elements smaller than or equal to the mid.
 
-#. Aggressive Cows (or Maximum Minimum Distance)
+#. `Aggressive Cows (or Maximum Minimum Distance) <https://www.geeksforgeeks.org/assign-stalls-to-k-cows-to-maximize-the-minimum-distance-between-them/>`_
 
 	- Problem: Given :math:`n` stalls and :math:`c` cows, place the cows in the stalls such that the minimum distance between any two cows is maximized.
 	- Hints: Binary search on the minimum distance.
 
-#. Search in a Rotated Sorted Array
+#. `Search in a Rotated Sorted Array <https://leetcode.com/problems/search-in-rotated-sorted-array/>`_
 
 	- Problem: Given a rotated sorted array, find a target value in :math:`O(\log n)`.
 	- Hints: Binary search with conditions to identify the rotated segment.
 
-#. Split Array Largest Sum
+#. `Split Array Largest Sum <https://leetcode.com/problems/split-array-largest-sum/>`_
 
 	- Problem: Split an array into :math:`m` non-empty subarrays to minimize the largest sum among the subarrays.
 	- Hints: Binary search on the maximum subarray sum.
 
-#. Find Peak Element in an Unsorted Array
+#. `Find Peak Element in an Unsorted Array <https://leetcode.com/problems/find-peak-element/>`_
 
 	- Problem: Given an unsorted array, find a peak element (an element greater than its neighbors) in :math:`O(\log n)`.
 	- Hints: Apply binary search with local comparison.
 
-#. Longest Subsequence with Limited Sum
+#. `Longest Subsequence with Limited Sum <https://leetcode.com/problems/longest-subsequence-with-limited-sum/>`_
 
 	- Problem: Given an array and queries, for each query, find the maximum number of elements in the array whose sum is less than or equal to the query value.
 	- Hints: Binary search with prefix sums.
 
-#. Minimize the Maximum Difference Between Pairs
+#. `Minimize the Maximum Difference Between Pairs <https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/>`_
 
 	- Problem: Given an array of integers and a number :math:`p`, partition the array into :math:`p` pairs such that the maximum absolute difference of any pair is minimized.
 	- Hints: Binary search on the maximum difference.
 
-Hybrid Binary Search
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Matrix Median
-
-	- Problem: Find the median of a matrix where each row is sorted.
-	- Hints: Binary search on the value range while counting elements using row-wise binary searches.
-
-#. Maximize Minimum Distance Between Points
+#. `Maximize Minimum Distance Between Points <https://www.geeksforgeeks.org/place-k-elements-such-that-minimum-distance-is-maximized/>`_
 
 	- Problem: Given points on a line and a fixed number of segments, maximize the minimum distance between the segment boundaries.
 	- Hints: Binary search on the answer.
 
 Order Statistics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Kth Largest/Smallest Element in a Stream:
+#. `Kth Largest/Smallest Element in a Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/>`_
 
 	- Maintain the top k elements in a stream of data.
 	- Hints: Leverage min-heaps or order statistics trees.
 
-#. Find the Median of a Running Stream:
+#. `Find the Median of a Running Stream <https://leetcode.com/problems/find-median-from-data-stream/>`_
 
 	- Use two heaps (max-heap and min-heap) for efficiency.
 
-#. Count of Smaller/Larger Numbers After Self:
+#. `Count of Smaller/Larger Numbers After Self <https://leetcode.com/problems/count-of-smaller-numbers-after-self/>`_
 
 	- Given an array, for each element, count how many elements are smaller/larger to its right.
 	- Solution: Fenwick Tree, segment tree, or merge sort.
 
-#. Find the Kth Largest Element in an Unsorted Array:
+#. `Find the Kth Largest Element in an Unsorted Array <https://leetcode.com/problems/kth-largest-element-in-an-array/>`_
 
 	- Variants where you cannot sort directly (e.g., use Quickselect).
 
 #. kth Element in the Cartesian Product
 
-	- Problem: Given two sorted arrays :math:`A` and :math:`B`, find the :math:`k` -th smallest element in the Cartesian product of :math:`A \times B`. 
+	- Problem: Given two sorted arrays :math:`A` and :math:`B`, find the :math:`k`-th smallest tuple :math:`(a, b)` in :math:`A \times B` under the order relation defined above (based on the sum :math:`a + b`). 
 	- Hints: Use a min-heap with tuples to track possible combinations efficiently.
 
-#. Median in a Sliding Window
+#. `Median in a Sliding Window <https://leetcode.com/problems/sliding-window-median/>`_
 
 	- Problem: Given an array of integers and a sliding window of size :math:`k`, find the median of each window as it slides from left to right.
 	- Hints: Use two heaps (max-heap and min-heap) to dynamically maintain the window.
 
-#. Inversion Count in Subarrays
+#. `Inversion Count in Subarrays <https://www.geeksforgeeks.org/counting-inversions-in-an-subarrays/>`_
 
 	- Problem: For an array :math:`A`, process :math:`q` queries of the form :math:`(L, R)` where you need to count the number of inversions in the subarray :math:`A[L:R]`.
 	- Hints: Use a segment tree with merge-sort logic at each node.
@@ -158,37 +151,37 @@ Order Statistics
 
 Range Query Problems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Range Sum Query with Updates:
+#. Range Sum Query with Updates
 
 	- Hints: Solve using segment trees or Fenwick trees with range updates.
 
-#. Range Minimum/Maximum Query:
+#. Range Minimum/Maximum Query
 
 	- Hints: Solve using segment trees, sparse tables, or hybrid methods.
 
-#. Dynamic Range Median Queries:
+#. Dynamic Range Median Queries
 
 	- Hints: Maintain a dynamic dataset and answer queries for the median of a range.
 
-#. Range XOR Query:
+#. Range XOR Query
 
 	- Hints: Solve using segment trees.
 
-#. Sum of Range Products:
+#. Sum of Range Products
 
 	- Hints: Given an array, answer the sum of products of all pairs in the range [L, R].
 
-#. Number of Distinct Elements in Range:
+#. Number of Distinct Elements in Range
 
 	- Hints: Use Mo’s Algorithm or a segment tree with a map structure.
 
-#. Range Frequency Query:
+#. Range Frequency Query
 
 	- Hints: Solve using a wavelet tree or merge sort tree.
 
 #. Dynamic Range Median Queries
 
-	- Problem: Maintain a dynamic array supporting:
+	- Problem: Maintain a dynamic array supporting
 
 		1. Insertion of an element.
 		2. Deletion of an element.
@@ -197,7 +190,7 @@ Range Query Problems
 
 #. Range XOR with Updates
 
-	- Problem: Given an array of integers, process the following operations efficiently:
+	- Problem: Given an array of integers, process the following operations efficiently
 
 		1. Update the :math:`i` -th element to :math:`x`.
 		2. Query the XOR of elements in the range :math:`[L, R]`.
@@ -215,7 +208,7 @@ Range Query Problems
 
 #. Range Updates with a Custom Function
 
-	- Problem: Design a data structure to efficiently handle:
+	- Problem: Design a data structure to efficiently handle
 
 		1. Updates: Apply a custom function :math:`f(x)` to all elements in the range :math:`[L, R]`.
 		2. Queries: Retrieve the sum of all elements in the range :math:`[L, R]`.
@@ -223,15 +216,15 @@ Range Query Problems
 
 Hybrid Problems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Dynamic Skyline Problem:
+#. Dynamic Skyline Problem
 
 	- Given a list of intervals, dynamically insert or delete intervals and determine the current skyline.
 
-#. Maximum Sum Rectangle in a 2D Matrix:
+#. Maximum Sum Rectangle in a 2D Matrix
 
 	- Use a 1D segment tree approach for optimal results.
 
-#. Range GCD Query:
+#. Range GCD Query
 
 	- Find the GCD of elements in the range [L, R] using a segment tree or sparse table.
 
@@ -257,7 +250,7 @@ Hybrid Problems
 
 #. Submatrix Sum Queries
 
-	- Problem: Given a 2D grid, process:
+	- Problem: Given a 2D grid, process
 
 		1. Updates: Add a value to all elements in a submatrix.
 		2. Queries: Find the sum of elements in any submatrix.

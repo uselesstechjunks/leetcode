@@ -22,7 +22,7 @@ Contents
 	:maxdepth: 1
 
 	math/index
-	dsa
+	dsa/index
 	ml/index
 	dl/index
 	rank
