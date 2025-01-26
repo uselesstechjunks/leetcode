@@ -51,7 +51,7 @@ Binary Search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Minimum Number of Days to Make m Bouquets
 
-	- Problem: Given an array where each element represents the number of days it takes for a flower to bloom, and integers :math:`m` and :math:`k`, find the minimum number of days required to make :math:` m` bouquets, where each bouquet requires :math:`k` adjacent flowers.
+	- Problem: Given an array where each element represents the number of days it takes for a flower to bloom, and integers :math:`m` and :math:`k`, find the minimum number of days required to make :math:`m` bouquets, where each bouquet requires :math:`k` adjacent flowers.
 	- Hints: Use binary search on the minimum days.
 
 #. Allocate Books (or Minimum Maximum Partition)
