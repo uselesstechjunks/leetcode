@@ -7,36 +7,35 @@ Machine Learning Interviews!
 
 .. note::
 
-   This project is under active development.
+	This project is under active development.
 
 **********************************************************************************************
 Roadmap
 **********************************************************************************************
 .. image:: img/003prep.drawio.png
-  :width: 600
-  :alt: Preparation roadmap
+	:width: 600
+	:alt: Preparation roadmap
 
 Contents
 ----------------------------------------------------------------------------------------------
-
 .. toctree::
-   :maxdepth: 1
+	:maxdepth: 1
 
-   math/index
-   ml/index
-   dl/index
-   rank
-   dsalgo
-   mlcoding
-   mlapp
-   sysdes
-   behave
-   studytips
-   dsalgosol
-   deepdives
-   rtfm
-   kurzgesagt
-   readlist
-   interviews/index
+	math/index
+	ml/index
+	dl/index
+	rank
+	dsalgo
+	mlcoding
+	mlapp
+	sysdes
+	interviews/index   
+	behave
+	studytips   
+	deepdives
+	rtfm
+	kurzgesagt
+	readlist 
+	dsalgosol   
 
 Machine Learning Interviews has its documentation hosted on Read the Docs.
