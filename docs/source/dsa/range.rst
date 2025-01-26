@@ -12,7 +12,7 @@ Data Structures
 	.. important::
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: code/segtree.py
+		   .. literalinclude:: ../code/segtree.py
 		      :language: python
 		      :linenos:
 #. Fenwick Tree (Binary Indexed Tree):
@@ -26,6 +26,13 @@ Data Structures
 
 	- Find kth smallest element.
 	- Count of elements less than or greater than a given value.
+
+	.. important::
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../code/bst.py
+		      :language: python
+		      :linenos:
 #. RMQ (Range Minimum Query):
 
 	- Hybrid solutions combining segment tree and sparse table for efficiency.

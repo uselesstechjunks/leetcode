@@ -6,7 +6,7 @@ Advanced Graph Topics
 .. important::
 	.. collapse:: Expand Code
 
-	   .. literalinclude:: code/sssp.py
+	   .. literalinclude:: ../code/sssp.py
 	      :language: python
 	      :linenos:
 
@@ -42,7 +42,7 @@ Advanced Graph Topics
 .. important::
 	.. collapse:: Expand Code
 
-	   .. literalinclude:: code/mst.py
+	   .. literalinclude:: ../code/mst.py
 	      :language: python
 	      :linenos:
 
@@ -118,7 +118,7 @@ Advanced Graph Topics
 .. important::
 	.. collapse:: Expand Code
 
-	   .. literalinclude:: code/graph.py
+	   .. literalinclude:: ../code/graph.py
 	      :language: python
 	      :linenos:
 
