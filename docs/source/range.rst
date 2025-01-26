@@ -1,6 +1,8 @@
 ================================================================================
-Data Structures
+Order Statistics and Range Queries
 ================================================================================
+Data Structures
+--------------------------------------------------------------------------------
 #. Segment Tree:
 
 	- Sum, min, max, and custom range queries.
@@ -33,19 +35,17 @@ Data Structures
 
 	- For multidimensional range queries.
 
-================================================================================
 Algorithms
-================================================================================
+--------------------------------------------------------------------------------
 #. Divide-and-Conquer approaches (e.g., inversion count with merge sort).
 #. Sliding window techniques (efficient for specific range problems).
 #. Two-pointer methods for range problems in sorted data.
 #. Offline processing for batch queries using Mo's Algorithm or persistent data structures.
 
-================================================================================
 Example Problems
-================================================================================
-Order Statistics
 --------------------------------------------------------------------------------
+Order Statistics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Kth Largest/Smallest Element in a Stream:
 
 	- Maintain the top k elements in a stream of data.
@@ -90,7 +90,7 @@ Order Statistics
 	- Hints: Use Mo’s Algorithm with frequency tracking or segment trees with custom nodes.
 
 Range Query Problems
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Range Sum Query with Updates:
 
 	- Solve using segment trees or Fenwick trees with range updates.
@@ -155,7 +155,7 @@ Range Query Problems
 	- Hints: Use a segment tree with lazy propagation where :math:`f(x)` can be propagated efficiently.
 
 Hybrid Problems
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Dynamic Skyline Problem:
 
 	- Given a list of intervals, dynamically insert or delete intervals and determine the current skyline.
