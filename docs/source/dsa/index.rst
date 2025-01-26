@@ -125,32 +125,6 @@ Key Concepts:
 * Trees: Traversals (DFS, BFS), recursion, binary search tree properties.
 * Graphs: Representations (adjacency list/matrix), DFS, BFS, Dijkstra, union-find.
 
-BFS/DFS
-
-.. seealso::
-	.. collapse:: Expand Code
-
-	   .. literalinclude:: code/graph.py
-	      :language: python
-	      :linenos:
-MST
-
-.. seealso::
-	.. collapse:: Expand Code
-
-	   .. literalinclude:: code/mst.py
-	      :language: python
-	      :linenos:
-
-SSSP
-
-.. seealso::
-	.. collapse:: Expand Code
-
-	   .. literalinclude:: code/sssp.py
-	      :language: python
-	      :linenos:
-
 Problems to Practice:
 
 * Binary tree level order traversal.
