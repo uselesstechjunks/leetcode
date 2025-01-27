@@ -62,6 +62,23 @@ class RMFQ(SegmentTree):
             return (x[0], x[1]+y[1])
         super().__init__(arr=counts, combine=combine)
 
+class RZQ(SegmentTree):
+    def __init__(self, arr):
+        counts = [1 if x == 0 else 0 for x in arr]
+        super().__init__(arr=counts, combine=lambda x,y: x+y)
+    def find_kth_idx(self, k):
+        def impl(i, tl, tr, k):
+            if k > self.tree[i]:
+                return -1
+            if tl == tr:
+                return tl
+            tm = tl+(tr-tl)//2
+            if k <= self.tree[2*i]:
+                return impl(2*i, tl, tm, k)
+            else:
+                return impl(2*i+1, tm+1, tr, k-self.tree[2*i])
+        return impl(1, 0, self.n-1, k)
+
 def test_rsq():
     size = 10
     nums = list(range(size))
