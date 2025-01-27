@@ -1,3 +1,6 @@
+from random import randint
+from collections import Counter
+
 class SegmentTree:
     def __init__(self, arr, combine):
         self.combine = combine
@@ -48,6 +51,17 @@ class RMQ(SegmentTree):
     def __init__(self, arr):
         super().__init__(arr=arr, combine=lambda x,y: min(x, y))
 
+class RMFQ(SegmentTree):
+    def __init__(self, arr):
+        counts = [(x,1) for x in arr]
+        def combine(x, y):
+            if x[0] < y[0]:
+                return x
+            if x[0] > y[0]:
+                return y
+            return (x[0], x[1]+y[1])
+        super().__init__(arr=counts, combine=combine)
+
 def test_rsq():
     size = 10
     nums = list(range(size))
@@ -57,17 +71,17 @@ def test_rsq():
         for i in range(l, r+1):
             res += nums[i]
         return res
-    rsq = RSQ(nums)
+    module = RSQ(nums)
     for l in range(size):
         for r in range(l, size):
-            a = rsq.query(l, r)
+            a = module.query(l, r)
             b = calculate(l, r)
             assert(a == b)
     nums[7] = -10
-    rsq.update(7, -10)
+    module.update(7, -10)
     for l in range(size):
         for r in range(l, size):
-            a = rsq.query(l, r)
+            a = module.query(l, r)
             b = calculate(l, r)
             assert(a == b)
 
@@ -80,20 +94,43 @@ def test_rmq():
         for i in range(l, r+1):
             res = min(res, nums[i])
         return res
-    rmq = RMQ(nums)
+    module = RMQ(nums)
     for l in range(size):
         for r in range(l, size):
-            a = rmq.query(l, r)
+            a = module.query(l, r)
             b = calculate(l, r)
             assert(a == b)
     nums[7] = -10
-    rmq.update(7, -10)
+    module.update(7, -10)
     for l in range(size):
         for r in range(l, size):
-            a = rmq.query(l, r)
+            a = module.query(l, r)
             b = calculate(l, r)
+            assert(a == b)
+
+def test_rmfq():
+    size = 10
+    nums = [randint(0, 20) for _ in range(size)]
+    def calculate(l, r):
+        nonlocal nums
+        m = min(nums[l:r+1])
+        counts = Counter(nums[l:r+1])
+        return m, counts[m]
+    module = RMFQ(nums)
+    for l in range(size):
+        for r in range(l, size):
+            a = module.query(l, r)
+            b = calculate(l, r)
+            assert(a == b)
+    nums[7] = -10
+    module.update(7, (-10,1))
+    for l in range(size):
+        for r in range(l, size):
+            a = module.query(l, r)
+            b = calculate(l, r)            
             assert(a == b)
 
 if __name__ == '__main__':
     test_rsq()
     test_rmq()
+    test_rmfq()
