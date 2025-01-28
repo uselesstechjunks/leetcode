@@ -8,11 +8,18 @@ Data Structures
 	- Sum, min, max, and custom range queries.
 	- Lazy propagation for range updates.
 	- Variants like mergeable segment trees.
+	- Basic implementation
 
-	.. important::
 		.. collapse:: Expand Code
 	
 		   .. literalinclude:: ../code/segtree.py
+		      :language: python
+		      :linenos:
+	- Sample Applications
+
+		.. collapse:: Shortest Subarray with Sum at Least K
+	
+		   .. literalinclude:: ../code/minlencumsum.py
 		      :language: python
 		      :linenos:
 #. Fenwick Tree (Binary Indexed Tree):
