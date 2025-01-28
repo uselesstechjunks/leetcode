@@ -34,8 +34,7 @@ Data Structures
 	- Find kth smallest element.
 	- Count of elements less than or greater than a given value.
 
-	.. important::
-		.. collapse:: Expand Code
+		.. collapse:: Sample BST implementation
 	
 		   .. literalinclude:: ../code/bst.py
 		      :language: python
