@@ -8,18 +8,11 @@ Data Structures
 	- Sum, min, max, and custom range queries.
 	- Lazy propagation for range updates.
 	- Variants like mergeable segment trees.
-	- Basic implementation
+	- Sample implementation
 
 		.. collapse:: Expand Code
 	
 		   .. literalinclude:: ../code/segtree.py
-		      :language: python
-		      :linenos:
-	- Sample Applications
-
-		.. collapse:: Shortest Subarray with Sum at Least K
-	
-		   .. literalinclude:: ../code/minlencumsum.py
 		      :language: python
 		      :linenos:
 #. Fenwick Tree (Binary Indexed Tree):
@@ -34,8 +27,7 @@ Data Structures
 	- Find kth smallest element.
 	- Count of elements less than or greater than a given value.
 
-	.. important::
-		.. collapse:: Expand Code
+		.. collapse:: Sample BST implementation
 	
 		   .. literalinclude:: ../code/bst.py
 		      :language: python
@@ -321,20 +313,22 @@ Problems Using Monotonic Stack
 
 Problems Using Monotonic Queue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Sliding Window Maximum
+#. `Sliding Window Maximum <https://leetcode.com/problems/sliding-window-maximum/description>`_
 
 	- Problem: Find the maximum element in every sliding window of size :math:`k`.
 	- Hints: Maintain a monotonic queue to store potential maxima.
 
-#. Shortest Subarray with Sum at Least K
+#. `Shortest Subarray with Sum at Least K <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_
 
 	- Problem: Given an array, find the shortest subarray with a sum :math:`\geq K`.
 	- Hints: Use a monotonic queue to optimize prefix sums.
+	- This can also be solved using segment tree but it's suboptimal
 
-#. Max Sliding Window Minimum
-
-	- Problem: Find the minimum value in every sliding window of size :math:`k`.
-	- Hints: Maintain a monotonic queue for minimums.
+		.. collapse:: Shortest Subarray with Sum at Least K
+	
+		   .. literalinclude:: ../code/minlencumsum.py
+		      :language: python
+		      :linenos:
 
 Interview Problems
 --------------------------------------------------------------------------------

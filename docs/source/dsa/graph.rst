@@ -3,8 +3,9 @@ Advanced Graph Topics
 ================================================================================
 1. Shortest Paths
 --------------------------------------------------------------------------------
-.. important::
-	.. collapse:: Expand Code
+* Sample implementation
+
+	.. collapse:: Single source shortest path
 
 	   .. literalinclude:: ../code/sssp.py
 	      :language: python
@@ -39,8 +40,8 @@ Advanced Graph Topics
 
 2. Minimum Spanning Tree (MST)
 --------------------------------------------------------------------------------
-.. important::
-	.. collapse:: Expand Code
+* Sample implementation
+	.. collapse:: MST algorithms
 
 	   .. literalinclude:: ../code/mst.py
 	      :language: python
@@ -115,8 +116,8 @@ Advanced Graph Topics
 
 6. Graph Traversals
 --------------------------------------------------------------------------------
-.. important::
-	.. collapse:: Expand Code
+* Sample implementation
+	.. collapse:: A collection of traversal algorithms and applications
 
 	   .. literalinclude:: ../code/graph.py
 	      :language: python
