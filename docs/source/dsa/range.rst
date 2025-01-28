@@ -322,6 +322,12 @@ Problems Using Monotonic Queue
 
 	- Problem: Given an array, find the shortest subarray with a sum :math:`\geq K`.
 	- Hints: Use a monotonic queue to optimize prefix sums.
+
+		.. collapse:: Monotonic queue for rightmost left index
+	
+		   .. literalinclude:: ../code/shortestsubarrsumk.py
+		      :language: python
+		      :linenos:
 	- This can also be solved using segment tree but it's suboptimal
 
 		.. collapse:: Shortest Subarray with Sum at Least K
