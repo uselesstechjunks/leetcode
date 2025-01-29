@@ -35,14 +35,14 @@ Data Structures
 		      :linenos:
 	- Check if a tree is a valid BST
 
-		.. collapse:: `Validate BST <https://leetcode.com/problems/validate-binary-search-tree/>`_
+		.. collapse:: Validate BST
 	
 		   .. literalinclude:: ../code/validbst.py
 		      :language: python
 		      :linenos:
 	- Tree traversals with stack
 
-		.. collapse:: `Inorder traversal with stack <https://leetcode.com/problems/binary-tree-inorder-traversal/>`_
+		.. collapse:: Inorder traversal with stack
 	
 		   .. literalinclude:: ../code/inorder.py
 		      :language: python
