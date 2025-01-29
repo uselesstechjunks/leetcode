@@ -26,10 +26,25 @@ Data Structures
 
 	- Find kth smallest element.
 	- Count of elements less than or greater than a given value.
+	- Fundamental tree algorithms
 
 		.. collapse:: Sample BST implementation
 	
 		   .. literalinclude:: ../code/bst.py
+		      :language: python
+		      :linenos:
+	- Check if a tree is a valid BST
+
+		.. collapse:: `Validate BST <https://leetcode.com/problems/validate-binary-search-tree/>`_
+	
+		   .. literalinclude:: ../code/validbst.py
+		      :language: python
+		      :linenos:
+	- Tree traversals with stack
+
+		.. collapse:: `Inorder traversal with stack <https://leetcode.com/problems/binary-tree-inorder-traversal/>`_
+	
+		   .. literalinclude:: ../code/inorder.py
 		      :language: python
 		      :linenos:
 #. RMQ (Range Minimum Query):
