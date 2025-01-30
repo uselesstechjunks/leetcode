@@ -5,6 +5,8 @@ Applied Deep Learning
 .. toctree::
 	:maxdepth: 3
 
+	lm
+	llm
 	nlp
 	multimodal
 	cp

@@ -153,10 +153,11 @@ Must Read Papers
 		CLM, LLaMA: Open and Efficient Foundation Language Models
 		CLM, LLaMA 2: Open Foundation and Fine-Tuned Chat Models
 		CLM, LLaMA 3: The Llama 3 Herd of Models
+		MoE, Mixtral: Mixtral of Experts
+		MoE, DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning		
 		PLM, XLNet: Generalized Autoregressive Pretraining for Language Understanding
 		GLM, GLM: General Language Model Pretraining with Autoregressive Blank Infilling
-		MoE,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
-		MoE, Mixtral: Mixtral of Experts
+		MoE,Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity		
 		MoE, OLMoE: Open Mixture-of-Experts Language Models
 		Seq2Seq, BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation Translation and Comprehension
 		Seq2Seq, T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
@@ -188,6 +189,7 @@ Must Read Papers
 		LLM, Aligning with Human Judgement: The Role of Pairwise Preference in Large Language Model Evaluators
 		LLM, RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
 		LLM, Large Language Models Are Latent Variable Models
+		LLM, DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models
 		Quant, LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
 		Quant, LoRA Low-Rank Adaptation of Large Language Models
 		Quant, QLORA: Efficient Finetuning of Quantized LLMs
