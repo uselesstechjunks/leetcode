@@ -105,26 +105,28 @@ LSTM
 *****************************************************************************************
 Transformer
 *****************************************************************************************
-Resources
+General Resources
 =========================================================================================
 .. warning::
-	* [Karpathy] `LLM101n: Let's build a Storyteller <https://github.com/karpathy/LLM101n>`_
-	* [MoE] `Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity <https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf>`_
+	* [github.com] `LLM101n: Let's build a Storyteller <https://github.com/karpathy/LLM101n>`_
+	* [jmlr.org] `Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity <https://www.jmlr.org/papers/volume23/21-0998/21-0998.pdf>`_
+	* [epoch.ai] `How has DeepSeek improved the Transformer architecture? <https://epoch.ai/gradient-updates/how-has-deepseek-improved-the-transformer-architecture>`_
 
 .. note::
-	* [Harvard] `The Annotated Transformer <https://nlp.seas.harvard.edu/annotated-transformer/>`_
+	* [harvard.edu] `The Annotated Transformer <https://nlp.seas.harvard.edu/annotated-transformer/>`_
 	* [jalammar.github.io] `The Illustrated Transformer <https://jalammar.github.io/illustrated-transformer/>`_
 	* [lilianweng.github.io] `Attention? Attention! <https://lilianweng.github.io/posts/2018-06-24-attention/>`_
-	* [d2l] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
+	* [d2l.ai] `The Transformer Architecture <https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html>`_
+	* [newsletter.languagemodels.co] `The Illustrated DeepSeek-R1: A recipe for reasoning LLMs <https://newsletter.languagemodels.co/p/the-illustrated-deepseek-r1>`_
 
 Position Encoding
 =========================================================================================
 .. note::
-	* `Position Information in Transformers: An Overview <https://arxiv.org/abs/2102.11090>`_
-	* `Rethinking Positional Encoding in Language Pre-training <https://arxiv.org/abs/2006.15595>`_
-	* [Blog] `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
-	* [MSR] `LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens <https://arxiv.org/abs/2402.13753>`_
-	* RoFormer: `Enhanced Transformer with Rotary Position Embedding <https://arxiv.org/abs/2104.09864>`_
+	* [arxiv.org] `Position Information in Transformers: An Overview <https://arxiv.org/abs/2102.11090>`_
+	* [arxiv.org] `Rethinking Positional Encoding in Language Pre-training <https://arxiv.org/abs/2006.15595>`_
+	* [eleuther.ai] `RoPE <https://blog.eleuther.ai/rotary-embeddings/>`_
+	* [arxiv.org] `LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens <https://arxiv.org/abs/2402.13753>`_
+	* [arxiv.org] `RoFormer: Enhanced Transformer with Rotary Position Embedding <https://arxiv.org/abs/2104.09864>`_
 
 Attention
 =========================================================================================
@@ -221,7 +223,7 @@ Resources
 Decoding
 =========================================================================================
 * Beam Search, Top-K, Top-p/Nuclear, Temperature
-* `[mlabonne.github.io] Decoding Strategies in Large Language Models <https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html>`_
+* [mlabonne.github.io] `Decoding Strategies in Large Language Models <https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html>`_
 * Speculative Deocding
 
 *****************************************************************************************
@@ -231,8 +233,11 @@ Encoder [BERT]
 =========================================================================================
 .. note::
 	* BERT: `Pre-training of Deep Bidirectional Transformers for Language Understanding <https://arxiv.org/abs/1810.04805>`_
+	* Additional Resources
 
-		* [tinkerd.net] Additional Resources: `BERT Tokenization <https://tinkerd.net/blog/machine-learning/bert-tokenization/>`_, `BERT Embeddings <https://tinkerd.net/blog/machine-learning/bert-embeddings/>`_, `BERT Encoder Layer <https://tinkerd.net/blog/machine-learning/bert-encoder/>`_
+		* [tinkerd.net] `BERT Tokenization <https://tinkerd.net/blog/machine-learning/bert-tokenization/>`_
+		* [tinkerd.net] `BERT Embeddings <https://tinkerd.net/blog/machine-learning/bert-embeddings/>`_, 
+		* [tinkerd.net] `BERT Encoder Layer <https://tinkerd.net/blog/machine-learning/bert-encoder/>`_
 	* `A Primer in BERTology: What we know about how BERT works <https://arxiv.org/abs/2002.12327>`_
 	* RoBERTa: `A Robustly Optimized BERT Pretraining Approach <https://arxiv.org/abs/1907.11692>`_
 	* XLM: `Cross-lingual Language Model Pretraining <https://arxiv.org/abs/1901.07291>`_
@@ -241,10 +246,11 @@ Encoder [BERT]
 Decoder [GPT]
 =========================================================================================
 .. note::
-	* `[jalammar.github.io] The Illustrated GPT-2 <https://jalammar.github.io/illustrated-gpt2/>`_
-	* `[cameronrwolfe.substack.com] Decoder-Only Transformers: The Workhorse of Generative LLMs <https://cameronrwolfe.substack.com/p/decoder-only-transformers-the-workhorse>`_
-	* GPT-2: `Language Models are Unsupervised Multitask Learners <https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf>`_
-	* GPT-3: `Language Models are Few-Shot Learners <https://arxiv.org/abs/2005.14165>`_
+	* [jalammar.github.io] `The Illustrated GPT-2 <https://jalammar.github.io/illustrated-gpt2/>`_
+	* [github.com] `karpathy/nanoGPT <https://github.com/karpathy/nanoGPT>`_
+	* [cameronrwolfe.substack.com] `Decoder-Only Transformers: The Workhorse of Generative LLMs <https://cameronrwolfe.substack.com/p/decoder-only-transformers-the-workhorse>`_
+	* [openai.com] `GPT-2: Language Models are Unsupervised Multitask Learners <https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf>`_
+	* [openai.com] `GPT-3: Language Models are Few-Shot Learners <https://arxiv.org/abs/2005.14165>`_
 
 Encoder-Decoder [T5]
 =========================================================================================
@@ -284,6 +290,9 @@ Supervised Fine-Tuning
 =========================================================================================
 Reinforcement Learning with Human Feedback (RLHF)
 =========================================================================================
+.. note::
+	* [philschmid.de] `Bite: How Deepseek R1 was trained <https://www.philschmid.de/deepseek-r1>`_
+
 Direct Preference Optimisation (DPO)
 =========================================================================================
 *****************************************************************************************
@@ -292,12 +301,12 @@ Special Techniques
 Low-Rank Approximations (LoRA)
 =========================================================================================
 .. note::
-	* [tinkerd.net]: `Language Model Fine-Tuning with LoRA <https://tinkerd.net/blog/machine-learning/lora/>`_
+	* [tinkerd.net] `Language Model Fine-Tuning with LoRA <https://tinkerd.net/blog/machine-learning/lora/>`_
 
-MOE
+MoE
 =========================================================================================
 .. note::
-	* `Mixture of Experts Pattern for Transformer Models <https://tinkerd.net/blog/machine-learning/mixture-of-experts/>`_
+	* [tinkerd.net] `Mixture of Experts Pattern for Transformer Models <https://tinkerd.net/blog/machine-learning/mixture-of-experts/>`_
 	* Mixtral
 
 Long Context
@@ -349,799 +358,6 @@ Pruning
 -----------------------------------------------------------------------------------------
 * LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference
 
-*****************************************************************************************
-LLM Technology Stack
-*****************************************************************************************
-Embeddings for Search and Retrieval
-=========================================================================================
-.. note::
-	* SPLADE: `SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval <https://arxiv.org/pdf/2109.10086>`_
-	* [Meta] DRAGON: `How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval <https://arxiv.org/pdf/2302.07452>`_
-
-Embedding Generation and Eval
------------------------------------------------------------------------------------------
-.. note::
-	* [TechTarget] `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_	
-	* Evaluation Metrics:
-
-		* `BEIR <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
-		* `MTEB <https://arxiv.org/pdf/2210.07316>`_
-		* For speech and vision, refer to the guide above from TechTarget.
-
-Model Architecture
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [Huggingface] `SBERT <https://sbert.net/docs/sentence_transformer/pretrained_models.html>`_
-	* [Google GTR - T5 Based] `Large Dual Encoders Are Generalizable Retrievers <https://arxiv.org/pdf/2112.07899>`_
-	* [`Microsoft E5 <https://github.com/microsoft/unilm/tree/master/e5>`_] `Improving Text Embeddings with Large Language Models <https://arxiv.org/pdf/2401.00368>`_
-	* [Cohere - Better Perf on RAG] `Embed v3 <https://cohere.com/blog/introducing-embed-v3>`_
-
-Resources
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
-
-Embedding Retrieval
------------------------------------------------------------------------------------------
-Vector DB
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
-	* Chroma, Weaviate
-
-RAG Focused
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
-	* `[LlamaIndex] Structured Hierarchical Retrieval <https://docs.llamaindex.ai/en/stable/examples/query_engine/multi_doc_auto_retrieval/multi_doc_auto_retrieval/#structured-hierarchical-retrieval>`_
-	* `Child-Parent Recursive Retriever <https://docs.llamaindex.ai/en/stable/examples/retrievers/recursive_retriever_nodes/>`_
-
-Retrieval Augmented Generation (RAG)
-=========================================================================================
-.. note::
-	* [SUPER IMPORTANT][Stanford Lecture] `Stanford CS25: V3 I Retrieval Augmented Language Models <https://www.youtube.com/watch?v=mE7IDf2SmJg>`_
-	* [Huggingface] `RAG paper - RAG Doc <https://huggingface.co/docs/transformers/main/en/model_doc/rag#rag>`_
-	* [Nvidia] `RAG 101: Demystifying Retrieval-Augmented Generation Pipelines <https://resources.nvidia.com/en-us-ai-large-language-models/demystifying-rag-blog>`_
-	* [Nvidia] `RAG 101: Retrieval-Augmented Generation Questions Answered <https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/>`_
-	* [MSR] `From Local to Global: A Graph RAG Approach to Query-Focused Summarization <https://arxiv.org/pdf/2404.16130>`_
-	* [Neo4j] `The GraphRAG Manifesto: Adding Knowledge to GenAI <https://neo4j.com/blog/graphrag-manifesto/>`_
-
-Resources
------------------------------------------------------------------------------------------
-Frozen RAG
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [FAIR] `REPLUG: Retrieval-Augmented Black-Box Language Models <https://arxiv.org/pdf/2301.12652>`_
-	* RALM: `In-Context Retrieval-Augmented Language Models <https://arxiv.org/pdf/2302.00083>`_
-
-Trained RAG
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [FAIR] RAG: `Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks <https://arxiv.org/pdf/2005.11401>`_
-	* [FAIR] FiD: `Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering <https://arxiv.org/pdf/2007.01282>`_
-	* [FAIR] Atlas: `Few-shot Learning with Retrieval Augmented Language Models <https://arxiv.org/pdf/2208.03299>`_	
-	* [FAIR] kNN-LM: `Generalization through Memorization: Nearest Neighbor Language Models <https://arxiv.org/pdf/1911.00172>`_
-	* [Goog] REALM: `Retrieval-Augmented Language Model Pre-Training <https://arxiv.org/pdf/2002.08909>`_
-	* [FAIR] FLARE: `Active Retrieval Augmented Generation <https://arxiv.org/pdf/2305.06983>`_
-	* [FAIR] Toolformer: `Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
-	* `SILO Language Models: Isolating Legal Risk In a Nonparametric Datastore <https://arxiv.org/pdf/2308.04430>`_
-	* `Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection <https://arxiv.org/pdf/2310.11511>`_
-	* [FAIR] RA-DIT: `Retrieval-Augmented Dual Instruction Tuning <https://arxiv.org/pdf/2310.01352>`_
-	* Might not work well in practice:
-
-		* [DeepMind] Retro: `Improving language models by retrieving from trillions of tokens <https://arxiv.org/pdf/2112.04426>`_
-		* [Nvidia] Retro++: `InstructRetro: Instruction Tuning post Retrieval-Augmented Pretraining <https://arxiv.org/pdf/2310.07713v2>`_
-	* Other stuff:
-
-		* Issue with Frozen RAG: `Lost in the Middle: How Language Models Use Long Contexts <https://arxiv.org/pdf/2307.03172>`_
-		* `Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering <https://arxiv.org/pdf/2210.02627v1>`_
-		* `FINE-TUNE THE ENTIRE RAG ARCHITECTURE (INCLUDING DPR RETRIEVER) FOR QUESTION-ANSWERING <https://arxiv.org/pdf/2106.11517v1>`_
-
-Tech Stack
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [LlamaIndex] `RAG pipeline with Llama3 <https://docs.llamaindex.ai/en/stable/examples/cookbooks/llama3_cookbook/#lets-build-rag-pipeline-with-llama3>`_
-	* [Huggingface] `Simple RAG for GitHub issues using Hugging Face Zephyr and LangChain <https://huggingface.co/learn/cookbook/en/rag_zephyr_langchain>`_
-	* [Huggingface] `Advanced RAG on Hugging Face documentation using LangChain <https://huggingface.co/learn/cookbook/en/advanced_rag>`_
-	* [Huggingface] `RAG Evaluation <https://huggingface.co/learn/cookbook/en/rag_evaluation>`_
-	* [Huggingface] `Building A RAG Ebook “Librarian” Using LlamaIndex <https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian>`_
-
-RAG Key Paper Summary
-=========================================================================================
-.. note::
-	* x = query
-	* z = doc
-	* y = output
-
-Frozen RAG
------------------------------------------------------------------------------------------
-In-context
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. important::
-	RALM
-
-		- Retrieve k documents Z_k.
-		- Rerank the docs using (1) zero-shot LM or (2) dedicated trained ranker.
-		- Select top doc Z_top.
-		- Prepend top doc in textual format as-is to the query as a part of the prompt for the LM to generate.
-		- What we pass to the decoder: prompt with Z_top in it.
-		- Issues: problematic for multiple docs (!)
-
-In-context/Seq2Seq/Decoder
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. important::
-	RePLUG
-
-		- Retrieve k documents.
-		- Use cosine similarity score to compute p(Z_k | X).
-		- What we pass to the decoder: concat{Z_k, X} or prompt with Z_k in it.
-		- Make k forward passes in the decoder for each token to compute the likelihood over vocab using softmax p(Y_i | concat{Z_k, X}, Y_1..{i-1}).
-		- Rescale the softmax with p(Z_k | X) and marginalize.
-		- Pass the marginalized softmax to the decoder.
-		- Issues: k forward passes at each token.
-
-Decoder Only
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. important::
-	kNN-LN
-	
-		- For the current token consider X = encode(Y_1...Y_{i-1}).
-		- Retrieve k documents Z_k matching X.
-		- Make k forward passes in the decoder with the matching doc p_k(Y_i | Z_1..{i-1}).
-		- Rescale p_k(Y_i | Z_1..{i-1}) over k and marginalize over the next token Y_i.
-		- Do the same in the original sequence p_decode(Y_i | Z_1..{i-1}).
-		- Interpolate between these using a hyperparameter.
-		- Issues: k forward passes + retrieval at each token.
-
-Retriever trainable RAG
------------------------------------------------------------------------------------------
-Seq2Seq
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. important::
-	RePLUG-LSR
-
-		- Uses the parametric LM's output to update the retriever.
-		- Loss: KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
-
-E2E trainable RAG
------------------------------------------------------------------------------------------
-Seq2Seq
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. important::
-	* RAG
-
-		- Per token: same as RePLUG - output probability is marginalised at the time of generation of each token, pass it to beam decoder.
-		- Per sequence: output probability is marginalised for the entire sequence.
-
-			- Results in #Y generated sequences.
-			- Might require additional passes.
-
-		- Training - NLL loss across predicted tokens.
-		- Issues: E2E training makes doc index update problematic, solution: just update the query encoder.
-	* Atlas
-
-		- Multiple choice for updating the retriever - simple RePLUG-LSR type formulation based on the KL div between p(Z_k | X) and the posterior p(Z_k | X, Y_1..Y_N) works well.
-		- Pre-training: same objective as the Seq2Seq (prefixLM or MLM) or decoder-only objective works well.
-		- Training:
-		- Issues:
-
-Graph RAG
------------------------------------------------------------------------------------------
-.. important::
-	- Baseline rag struggles
-	
-		- answering a question requires traversing disparate pieces of information through their shared attributes
-		- holistically understand summarized semantic concepts over large data collections or even singular large documents.
-	
-	- Graph RAG: https://microsoft.github.io/graphrag/
-	
-		.. note::
-			- Source documents -> Text Chunks: Note: Tradeoff P/R in chunk-size with number of LLM calls vs quality of extraction (due to lost in the middle)
-			- Text Chunks -> Element Instances: 
-			
-				- Multipart LLM prompt for (a) Entity and then (b) Relationship. Extract descriptions as well.
-				- Tailor prompt for each domain with FS example. 
-				- Additional extraction covariates (e.g. events). 
-				- Multiple rounds of gleaning - detect additional entities with high logit bias for yes/no. Prepend "MANY entities were missed".
-			- Element Instances -> Element Summaries
-			- Element Summaries -> Graph Communities
-			- Graph Communities -> Community Summaries
-	
-				- Leaf level communities
-				- Higher level communities
-			- Community Summaries -> Community Answers -> Global Answer
-	
-				- Prepare community summaries: Shuffle and split into chunks to avoid concentration of information and therefore lost in the middle.
-				- Map-Reduce community summaries
-	
-			- Summarisation tasks
-	
-				- Abstractive vs extractive
-				- Generic vs query-focused
-				- Single document vs multi-document
-	
-		- The LLM processes the entire private dataset, creating references to all entities and relationships within the source data, which are then used to create an LLM-generated knowledge graph. 
-		- This graph is then used to create a bottom-up clustering that organizes the data hierarchically into semantic clusters This partitioning allows for pre-summarization of semantic concepts and themes, which aids in holistic understanding of the dataset. 
-		- At query time, both of these structures are used to provide materials for the LLM context window when answering a question.	
-		- Eval:
-	
-			- Comprehensiveness (completeness within the framing of the implied context of the question)
-			- Human enfranchisement (provision of supporting source material or other contextual information)
-			- Diversity (provision of differing viewpoints or angles on the question posed)
-			- Selfcheckgpt
-
-LLM vs LC
------------------------------------------------------------------------------------------
-.. important::
-	- RAG FTW: Xu et al (NVDA): RETRIEVAL MEETS LONG CONTEXT LARGE LANGUAGE MODELS (Jan 2024)
-
-		- Compares between 4k+RAG and 16k/32k LC finetuned with rope trick with 40B+ models
-		- Scroll and long bench
-	- LC FTW: Li et al (DM): Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach (Jul 2024)
-
-		- Systematized the eval framework using infty-bench EN.QA (~150k) and EN.MC (~142k) and 7 datasets from long-bench (<20k)
-		- 60% of the cases RAG and LC agrees (even makes the same mistakes)
-		- Cases where RAG fails 
-
-			(a) multi-hop retrieval 
-			(b) general query where semantic similarity doesn't make sense 
-			(c) long and complex query 
-			(d) implicit query requiring a holistic view of the context
-		- Key contribution: Proposes self-reflectory approach with RAG first with an option to respond "unanswerable", then LC
-	- RAG FTW: Wu et al (NVDA): In Defense of RAG in the Era of Long-Context Language Models (Sep 2024)
-
-		- Same eval method as the above
-		- Key contribution: keep the chunks in the same order as they appear in the original text instead of ordering them based on sim measure
-
-LM Eval
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
-	* OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
-	* RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
-	* RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
-	* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
-
-.. seealso::
-	* `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
-
-LLM and KG
-=========================================================================================
-.. seealso::
-	* Unifying Large Language Models and Knowledge Graphs: A Roadmap
-	* QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering
-	* SimKGC: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models
-
-KG-enhanced LLMs
------------------------------------------------------------------------------------------
-- pre-training:
-
-	- ERNIE: Enhanced language representation with informative entities
-	- Knowledge-aware language model pretraining
-- inference time:
-
-	- Retrieval-augmented generation for knowledge intensive nlp tasks
-- KG for facts LLM for reasoning:
-
-	- Language models as knowledge bases?
-	- KagNet: Knowledgeaware graph networks for commonsense reasoning
-
-LLM enhanced KGs: KG completion and KG reasoning
------------------------------------------------------------------------------------------
-- LLMs for Knowledge Graph Construction and Reasoning
-- Pretrain-KGE: Learning Knowledge Representation from Pretrained Language Models
-- From Discrimination to Generation: Knowledge Graph Completion with Generative Transformer
-
-Synergized KG LLM
------------------------------------------------------------------------------------------
-- KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation
-- Search: LaMDA: Language Models for Dialog Applications
-- RecSys: Is chatgpt a good recommender? a preliminary study
-- AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
-
-*****************************************************************************************
-Task Specific Setup
-*****************************************************************************************
-Notes from Common NLP Tasks
-=========================================================================================
-Using In-Context Capability:
------------------------------------------------------------------------------------------
-- Language Models as Knowledge Bases
-- Language Models are Open Knowledge Graphs
-
-NER:
------------------------------------------------------------------------------------------
-.. important::
-	- Fixed NER: 
-
-		- classification + chunking - encoder based (NER/POS)
-
-			- token classification:
-
-				- attributing a label to each token by having one class per entity and one class for “no entity.”
-				- ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC', 'B-MISC', 'I-MISC']
-				- AutoModelForTokenClassification 
-			- chunking: 
-
-				- attributing one label (usually B-) to any tokens that are at the beginning of a chunk, 
-				- another label (usually I-) to tokens that are inside a chunk, and 
-				- a third label (usually O) to tokens that don’t belong to any chunk.
-		- The traditional framework used to evaluate token classification prediction is seqeval - classwise p/r/f1/accuracy, overall p/r/f1/accuracy
-	- Free NER:
-
-		- extract - s2s, decoder
-		- Autoregressive Entity Retrieval
-		- GPT-NER
-		- Universal NER
-	
-Disambiguation 
------------------------------------------------------------------------------------------
-.. important::
-	- Clustering based approach - 
-	- End to end neural coreference method - all O(n^2) pairs
-
-		- https://huggingface.co/models?other=coreference-resolution
-		- https://explosion.ai/blog/coref
-
-Entity Linking:
------------------------------------------------------------------------------------------
-.. important::
-	- Text-based approaches - tfidf, statistical	
-	- Graph-based approaches to existing knowledge-base - https://huggingface.co/models?other=named-entity-linking
-
-		- Autoregressive Entity Retrieval - was trained on the full training set of BLINK (i.e., 9M datapoints for entity-disambiguation grounded on Wikipedia).	
-		- Blink - Scalable Zero-shot Entity Linking with Dense Entity Retrieval
-		- Refined - https://github.com/alexa/ReFinED	
-
-RE:
------------------------------------------------------------------------------------------
-- SentenceRE
-- DocRE
-
-Link Prediction: 
------------------------------------------------------------------------------------------
-Knowledge Graph Large Language Model (KG-LLM) for Link Prediction
-
-Graph Completion:
------------------------------------------------------------------------------------------
-SimKGC: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models
-
-Prompting:
------------------------------------------------------------------------------------------
-.. important::
-	- FewShot:
-	- CoT:
-	- ReAct: Synergizing Reasoning and Acting in Language Models	
-	- Reflextion: 
-	- Self-instruct: Aligning Language Models with Self-Generated Instructions
-	- PiVe: Prompting with Iterative Verification Improving Graph-based Generative Capability of LLMs
-	- Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning
-
-Question Answering:
------------------------------------------------------------------------------------------
-QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering
-
-GraphRAG: 
------------------------------------------------------------------------------------------
-MultiModal:
------------------------------------------------------------------------------------------
-Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey
-
-Other NLP Tasks:
------------------------------------------------------------------------------------------
-Large Language Models Meet NLP: A Survey
-
-Classification Tasks
-=========================================================================================
-1. Sentiment Analysis
------------------------------------------------------------------------------------------
-Description:
-Sentiment analysis involves determining the sentiment or emotional tone behind a piece of text, typically classified as positive, negative, or neutral.
-
-Example:
-
-- Input: "I love this product!"
-- Output: "Positive"
-
-Evaluation Metrics:
-
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-
-Benchmark Datasets:
-
-- IMDb Movie Reviews
-- Sentiment140
-- SST (Stanford Sentiment Treebank)
-
-Example Prompt:
-"Determine the sentiment of the following text: 'I love this product!'"
-
-Information Retrieval (IR) Tasks
-=========================================================================================
-1. Document Retrieval
------------------------------------------------------------------------------------------
-Description:
-Document retrieval involves finding and ranking relevant documents from a large corpus in response to a user's query.
-
-Example:
-
-- Input: Query: "What are the symptoms of COVID-19?"
-- Output: [List of relevant documents about COVID-19 symptoms]
-
-Evaluation Metrics:
-
-- Precision at k (P@k)
-- Mean Average Precision (MAP)
-- Normalized Discounted Cumulative Gain (NDCG)
-
-Benchmark Datasets:
-
-- TREC (Text REtrieval Conference)
-- CLEF (Conference and Labs of the Evaluation Forum)
-- MSMARCO
-
-Example Prompt:
-"Retrieve the top 5 documents related to the query: 'What are the symptoms of COVID-19?'"
-
-2. Passage Retrieval
------------------------------------------------------------------------------------------
-Description:
-Passage retrieval involves finding and ranking relevant passages or sections within documents in response to a user's query.
-
-Example:
-
-- Input: Query: "What is the capital of France?"
-- Output: [List of passages containing information about the capital of France]
-
-Evaluation Metrics:
-
-- Precision at k (P@k)
-- Mean Average Precision (MAP)
-- Normalized Discounted Cumulative Gain (NDCG)
-
-Benchmark Datasets:
-
-- MSMARCO Passage Ranking
-- TREC Deep Learning
-
-Example Prompt:
-"Retrieve the top 5 passages related to the query: 'What is the capital of France?'"
-
-3. Query Expansion
------------------------------------------------------------------------------------------
-Description:
-Query expansion involves modifying a user's query by adding additional terms to improve retrieval performance.
-
-Example:
-
-- Input: Query: "COVID-19"
-- Output: Expanded Query: "COVID-19 coronavirus symptoms pandemic"
-
-Evaluation Metrics:
-
-- Precision
-- Recall
-- Mean Average Precision (MAP)
-
-Benchmark Datasets:
-
-- TREC
-- CLEF
-
-Example Prompt:
-"Expand the following query to improve search results: 'COVID-19'"
-
-4. Question Answering (QA)
------------------------------------------------------------------------------------------
-Description:
-QA involves retrieving answers to questions posed in natural language, often using information from a large corpus.
-
-Example:
-
-- Input: Question: "What is the tallest mountain in the world?"
-- Output: "Mount Everest"
-
-Evaluation Metrics:
-
-- Exact Match (EM)
-- F1 Score
-
-Benchmark Datasets:
-
-- SQuAD (Stanford Question Answering Dataset)
-- Natural Questions
-- TriviaQA
-
-Example Prompt:
-"Answer the following question: 'What is the tallest mountain in the world?'"
-
-Information Extraction (IE) Tasks
-=========================================================================================
-1. Named Entity Recognition (NER)
------------------------------------------------------------------------------------------
-Description:
-NER involves identifying and classifying entities in text into predefined categories such as names of people, organizations, locations, dates, etc.
-
-Example:
-
-- Input: "Barack Obama was born in Hawaii."
-- Output: [("Barack Obama", "PERSON"), ("Hawaii", "LOCATION")]
-
-Evaluation Metrics:
-
-- Precision
-- Recall
-- F1 Score
-
-Benchmark Datasets:
-
-- CoNLL-2003
-- OntoNotes
-- WNUT 2017
-
-Example Prompt:
-"Identify and classify named entities in the following sentence: 'Barack Obama was born in Hawaii.'"
-
-2. Relation Extraction
------------------------------------------------------------------------------------------
-Description:
-Relation extraction involves identifying and classifying the relationships between entities in text.
-
-Example:
-
-- Input: "Barack Obama was born in Hawaii."
-- Output: ("Barack Obama", "born in", "Hawaii")
-
-Evaluation Metrics:
-
-- Precision
-- Recall
-- F1 Score
-
-Benchmark Datasets:
-
-- TACRED
-- SemEval
-- ACE 2005
-
-Example Prompt:
-"Identify the relationship between entities in the following sentence: 'Barack Obama was born in Hawaii.'"
-
-3. Event Extraction
------------------------------------------------------------------------------------------
-Description:
-Event extraction involves identifying events in text and their participants, attributes, and the context in which they occur.
-
-Example:
-
-- Input: "An earthquake of magnitude 6.5 struck California yesterday."
-- Output: [("earthquake", "magnitude 6.5", "California", "yesterday")]
-
-Evaluation Metrics:
-
-- Precision
-- Recall
-- F1 Score
-
-Benchmark Datasets:
-
-- ACE 2005
-- MUC-4
-- TAC KBP
-
-Example Prompt:
-"Extract events and their details from the following text: 'An earthquake of magnitude 6.5 struck California yesterday.'"
-
-4. Coreference Resolution
------------------------------------------------------------------------------------------
-Description:
-Coreference resolution involves identifying when different expressions in a text refer to the same entity.
-
-Example:
-
-- Input: "Jane went to the market. She bought apples."
-- Output: [("Jane", "She")]
-
-Evaluation Metrics:
-
-- Precision
-- Recall
-- F1 Score
-
-Benchmark Datasets:
-
-- CoNLL-2012 Shared Task
-- OntoNotes
-
-Example Prompt:
-"Identify coreferences in the following text: 'Jane went to the market. She bought apples.'"
-
-Sequence to Sequence Tasks
-=========================================================================================
-1. Machine Translation
------------------------------------------------------------------------------------------
-Description:
-Machine translation involves translating text from one language to another.
-
-Example:
-
-- Input: "Hello, how are you?" (English)
-- Output: "Hola, ¿cómo estás?" (Spanish)
-
-Evaluation Metrics:
-
-- BLEU Score
-- METEOR
-- TER
-
-Benchmark Datasets:
-
-- WMT (Workshop on Machine Translation)
-- IWSLT (International Workshop on Spoken Language Translation)
-
-Example Prompt:
-"Translate the following text from English to Spanish: 'Hello, how are you?'"
-
-2. Text Summarization
------------------------------------------------------------------------------------------
-Description:
-Text summarization involves generating a concise summary of a longer document while preserving key information.
-
-Example:
-
-- Input: "Artificial intelligence is a branch of computer science that aims to create intelligent machines. It has become an essential part of the technology industry."
-- Output: "AI is a branch of computer science aiming to create intelligent machines, essential in technology."
-
-Evaluation Metrics:
-
-- ROUGE Score
-- BLEU Score
-
-Benchmark Datasets:
-
-- CNN/Daily Mail
-- XSum
-- Gigaword
-
-Example Prompt:
-"Summarize the following text: 'Artificial intelligence is a branch of computer science that aims to create intelligent machines. It has become an essential part of the technology industry.'"
-
-3. Text Generation
------------------------------------------------------------------------------------------
-Description:
-Text generation involves creating new text that is coherent and contextually relevant based on a given input prompt.
-
-Example:
-
-- Input: "Once upon a time"
-- Output: "Once upon a time, in a small village, there lived a brave young girl named Ella."
-
-Evaluation Metrics:
-
-- Perplexity
-- BLEU Score
-- Human Evaluation
-
-Benchmark Datasets:
-
-- OpenAI GPT-3 Playground
-- EleutherAI's Pile
-- WikiText
-
-Example Prompt:
-"Generate a continuation for the following text: 'Once upon a time, in a small village, there lived a brave young girl named Ella.'"
-
-Multimodal Tasks
-=========================================================================================
-1. Text-to-Speech (TTS)
------------------------------------------------------------------------------------------
-Description:
-TTS involves converting written text into spoken words.
-
-Example:
-
-- Input: "Good morning, everyone."
-- Output: [Audio clip saying "Good morning, everyone."]
-
-Evaluation Metrics:
-
-- Mean Opinion Score (MOS)
-- Word Error Rate (WER)
-- Naturalness
-
-Benchmark Datasets:
-
-- LJSpeech
-- LibriSpeech
-- VCTK
-
-Example Prompt:
-"Convert the following text to speech: 'Good morning, everyone.'"
-
-2. Speech Recognition
------------------------------------------------------------------------------------------
-Description:
-Speech recognition involves converting spoken language into written text.
-
-Example:
-
-- Input: [Audio clip saying "Hello, world!"]
-- Output: "Hello, world!"
-
-Evaluation Metrics:
-
-- Word Error Rate (WER)
-- Sentence Error Rate (SER)
-
-Benchmark Datasets:
-
-- LibriSpeech
-- TED-LIUM
-- Common Voice
-
-Example Prompt:
-"Transcribe the following audio clip: [Audio clip saying 'Hello, world!']"
-
-Extending Vocab for Domain-Adaptation or Fine-Tuning
-=========================================================================================
-1. Extend the Tokenizer Vocabulary
------------------------------------------------------------------------------------------
-.. code-block:: python
-
-	from transformers import GPT2Tokenizer, GPT2Model
-	
-	# Load the pre-trained tokenizer and model
-	tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
-	
-	# Example of extending vocabulary with domain-specific terms
-	domain_specific_terms = ["term1", "term2", "term3"]
-	tokenizer.add_tokens(domain_specific_terms)
-	
-	# If you are also fine-tuning the model, adjust the model to handle new tokens
-	model = GPT2Model.from_pretrained('gpt2')
-	model.resize_token_embeddings(len(tokenizer))
-
-.. note::
-	* tokenizer.add_tokens(domain_specific_terms): This adds your domain-specific terms to the tokenizer vocabulary.
-	* model.resize_token_embeddings(len(tokenizer)): This adjusts the model's embedding layer to accommodate the new tokens. This step is crucial if you plan to fine-tune the model with these new tokens.
-
-2. Tinkering with the Embedding Matrix
------------------------------------------------------------------------------------------
-.. code-block:: python
-
-	import torch
-	
-	# Load the original model again for clarity
-	model = GPT2Model.from_pretrained('gpt2')
-	
-	# Assuming you have already added new tokens to the tokenizer
-	new_token_ids = tokenizer.encode(domain_specific_terms, add_special_tokens=False)
-	
-	# Initialize the new token embeddings randomly
-	new_token_embeddings = torch.randn(len(new_token_ids), model.config.hidden_size)
-	
-	# Concatenate original embeddings with new token embeddings
-	original_embeddings = model.transformer.wte.weight[:tokenizer.vocab_size]
-	combined_embeddings = torch.cat([original_embeddings, new_token_embeddings], dim=0)
-	
-	# Overwrite the original embedding matrix in the model
-	model.transformer.wte.weight.data = combined_embeddings
-
-.. note::
-	* tokenizer.encode(domain_specific_terms, add_special_tokens=False): This encodes the domain-specific terms to get their token IDs in the tokenizer's vocabulary.
-	* torch.randn(len(new_token_ids), model.config.hidden_size): This initializes random embeddings for new tokens. Alternatively, you can initialize them differently based on your specific needs.
-	* model.transformer.wte.weight[:tokenizer.vocab_size]: Extracts the original embeddings up to the size of the original vocabulary.
-	* torch.cat([original_embeddings, new_token_embeddings], dim=0): Concatenates the original embeddings with the new token embeddings.
-
-Notes:
------------------------------------------------------------------------------------------
-* Tokenizer Vocabulary: Ensure that after extending the tokenizer vocabulary, you save it or use it consistently across your tasks.
-* Embedding Adjustment: The approach here adds new tokens and initializes their embeddings separately from the pre-trained embeddings. This keeps the original embeddings intact while allowing new tokens to have their embeddings learned during fine-tuning.
-* Fine-Tuning: If you plan to fine-tune the model on your specific tasks, you would then proceed with training using your domain-specific data, where the model will adapt not only to the new tokens but also to the specific patterns in your data.
-
 [TODO: Classify Later] Other Topics
 =========================================================================================
 * Prompt Engineering
@@ -1171,46 +387,10 @@ Notes:
 * `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
 * `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
 
-TODO
------------------------------------------------------------------------------------------
-- constitutional ai
-- guardrails
-- https://github.com/microsoft/unilm
-- eval for ie tasks - open vs supervised
-- llm evals: https://github.com/openai/evals
-- multimodal ie
-- multimodal: text + image
-	- classification: 
-		- clip: https://github.com/openai/CLIP
-			Learning Transferable Visual Models From Natural Language Supervision
-		- cnn
-	- generation: 
-		- dall-e: https://github.com/openai/dall-e
-			Zero-Shot Text-to-Image Generation
-		- latent-diffusion: https://github.com/CompVis/latent-diffusion
-			- High-Resolution Image Synthesis with Latent Diffusion Models
-			- Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models
-		- stable diffusion: https://github.com/CompVis/stable-diffusion
-			- Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
-		- vision transformers and diffusion models 
-	- eval
-- cnn:
-	- image classification
-	- object detection (bounding box): 
-		https://paperswithcode.com/task/object-detection
-		YOLOv4: Optimal Speed and Accuracy of Object Detection
-	- image segmentation:
-		- GeminiFusion: Efficient Pixel-wise Multimodal Fusion for Vision Transformer
-- recsys - context based (in session rec - llm), interaction based (collaborative filtering - mf, gcn)
-- nlp downstream tasks
-- hardware p40, v100, a100 - arch, cost
-- training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment and preference optim (rhlf/dpo)
-- domain understanding
-- design e2e: integrate user feedback
-
 Prompt best guide
 -----------------------------------------------------------------------------------------
 Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
+
 	- Zero-shot
 	- Random few-shot
 	- Random few-shot, chain-of-thought
@@ -1242,12 +422,15 @@ To force an LLM into a yes/no answer, you can adjust the logits for the "yes" an
 Steps to Apply Logit Bias
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Identify Token IDs:
+
    - Determine the token IDs for "yes" and "no" in the model's vocabulary. For instance, suppose "yes" is token ID 345 and "no" is token ID 678.
 
 2. Apply Bias:
+
    - Adjust the logits for these tokens. Typically, you would add a positive bias to both "yes" and "no" tokens to increase their probabilities and/or subtract a bias from all other tokens to decrease their probabilities.
 
 3. Implementing the Bias:
+
    - If using an API or library that supports logit bias (e.g., OpenAI GPT-3), you can specify the bias directly in the request.
 
 Example
@@ -1267,12 +450,15 @@ Here's an example of how you might apply a logit bias in a request using a hypot
 Practical Considerations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Magnitude of Bias:
+
    - The magnitude of the bias determines how strongly the model will favor "yes" or "no." A larger bias will make the model more likely to choose these tokens.
 
 2. Context Sensitivity:
+
    - The model may still consider the context of the prompt. If the context strongly indicates one answer over the other, the model may lean towards that answer even with a bias.
 
 3. Balanced Bias:
+
    - If you want the model to have an equal chance of saying "yes" or "no," you can apply equal positive biases to both tokens. If you want to skew the response towards one answer, apply a larger bias to that token.
 
 Example in Practice
@@ -1309,8 +495,7 @@ In this example:
 - The `prompt` is set to "Is the sky blue?"
 - The `logit_bias` dictionary adjusts the logits for the "yes" and "no" tokens to be higher.
 - The `max_tokens` is set to 1 to ensure only one word is generated.
-
-By using logit bias in this way, you can guide the LLM to produce a "yes" or "no" answer more reliably.
+- By using logit bias in this way, you can guide the LLM to produce a "yes" or "no" answer more reliably.
 
 Issues with LLMs
 -----------------------------------------------------------------------------------------
@@ -1350,72 +535,49 @@ Issues with LLMs
 		- dpo
 		- reflexion
 
-Information Retrieval
+TODO
 -----------------------------------------------------------------------------------------
-	- MLM based: BERT, T5
-	- RTD based: Electra
-	- Contrastive Learning based:
-		- image: OG image and distorted image form pos-pairs
-		- text: contriever
-			- contrastive learning based embeddings
-			- infonce loss: softmax over 1 positive and K negative
-			- getting positive: 
-				(a) Inverse Cloze Task (contiguous segment as query, rest as doc) - relates with closure of a query
-				(b) Independent cropping - sample two independent contiguous pieces of text
-			- getting negatives:
-				(a) in-batch negatives
-				(b) negs from previous batch docs - called keys. either not updated or updated slowly with different parameterization including momentum (moco)
-		- text: e5
-	- Long Context
-		- "lost in the middle" using longer context (primacy bias, recency bias) - U-shaped curve
-			-> if using only a decoder model, due to masked attention, put the question at the end 
-			-> instruction tuned is much better
-			-> relevance order of the retriever matters a lot
-		
-		- extending context length
-			- needle in a haystack
-			- l-eval, novelqa, infty-bench
-			- nocha (fictional, unseen books with true/false q/a pairs 
-				- performs better when fact is present in the book at sentence level
-				- performs worse if requires global reasoning or if contains extensive world building
-			- position embeddings 
-				- change the angle hyperparameter in RoPE to deal with longer sequences
-			- efficient attention 
-				- full attention with hardware-aware algorithm design - flash attention
-				- sparse attention techniques: sliding window attention, block attention
-			- data engineering - replicate larger model perf using 7b/13b llama
-				- continuous pretraining
-					- 1-5B new tokens for 
-					- upsampling longer sequences
-					- same #tokens per batch (adjusted as per sequence length and batch size)
-					- 2e-5 lr cosine schedule
-					- 2x8 a100 gpu, 7 day training, flashattention (3x time for 80k vs 4k, majority time goes in cpu<->gpu, gpu<->gpu, and hbm<->sm)
-				- instruction tuning: rlhf data + self instruct
-					- (a) chunk long doc (b) from long doc formulate q/a (c) use OG doc and q/a pair as training
-					- 1e-5 lr constant
-					- lora/qlora
-			- incorporating some form of recurrance relation - transformer-xl, longformer, rmt
-	
-	- chain-of-agents
+- constitutional ai
+- guardrails
+- https://github.com/microsoft/unilm
+- eval for ie tasks - open vs supervised
+- llm evals: https://github.com/openai/evals
+- multimodal ie
+- multimodal: text + image
 
-Information Extraction
------------------------------------------------------------------------------------------
-	- NER: named entity recognition, entity-linking
-		- predefined entity-classes: location (LOC), organizations (ORG), person (PER) and Miscellaneous (MISC). 
-			- https://huggingface.co/dslim/bert-base-NER
-			- https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english			
-		- open entity-classes: 
-			- UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
-			- GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
-			- GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
-		- Open IE eval: Preserving Knowledge Invariance: Rethinking Robustness Evaluation of Open Information Extraction (https://github.com/qijimrc/ROBUST/tree/master)		
-		- LLMaAA: Making Large Language Models as Active Annotators https://github.com/ridiculouz/LLMaAA/tree/main
-		- A Deep Learning Based Knowledge Extraction Toolkit for Knowledge Graph Construction (https://github.com/zjunlp/DeepKE)
-	- RE: relationship extraction
-		- QA4RE: Aligning Instruction Tasks Unlocks Large Language Models as Zero-Shot Relation Extractors (ZS Pr) https://github.com/OSU-NLP-Group/QA4RE
-		- DocGNRE: Semi-automatic Data Enhancement for Document-Level Relation Extraction with Distant Supervision from Large Language Models (https://github.com/bigai-nlco/DocGNRE)
-	- EE: event extraction
-	- Papers to read: UniversalNER, GLiNER
+	- classification: 
+		- clip: https://github.com/openai/CLIP
+
+			Learning Transferable Visual Models From Natural Language Supervision
+		- cnn
+	- generation: 
+		- dall-e: https://github.com/openai/dall-e
+
+			Zero-Shot Text-to-Image Generation
+		- latent-diffusion: https://github.com/CompVis/latent-diffusion
+
+			- High-Resolution Image Synthesis with Latent Diffusion Models
+			- Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models
+		- stable diffusion: https://github.com/CompVis/stable-diffusion
+
+			- Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
+		- vision transformers and diffusion models 
+	- eval
+- cnn:
+	- image classification
+	- object detection (bounding box): 
+
+		https://paperswithcode.com/task/object-detection
+		YOLOv4: Optimal Speed and Accuracy of Object Detection
+	- image segmentation:
+
+		- GeminiFusion: Efficient Pixel-wise Multimodal Fusion for Vision Transformer
+- recsys - context based (in session rec - llm), interaction based (collaborative filtering - mf, gcn)
+- nlp downstream tasks
+- hardware p40, v100, a100 - arch, cost
+- training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment and preference optim (rhlf/dpo)
+- domain understanding
+- design e2e: integrate user feedback
 
 Resources
 =========================================================================================
