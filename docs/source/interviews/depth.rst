@@ -121,42 +121,6 @@ Optimizers
 - AdamW  
 - Adagrad  
 
-Machine Learning Fundamentals
-================================================================================
-#. Clustering
-
-	- Algorithms
-
-		- Distance Based: K-Means
-		- Density Based: DBSCAN
-	- Metrics
-
-		- Distance Based
-
-			- Silhoutte coefficient
-			- DB index
-			- CH index
-		- Density Based:
-
-#. Manifold Learning
-
-	- t-SNE
-#. Latent Variable Models
-
-	- GMM
-	- PCA, Kernel-PCA
-	- NMF
-	- ICA
-	- LDA
-#. Outlier prediction
-
-	- Isolation Forest
-	- One-Class SVM
-#. Density Estimation
-
-	- KDE
-#. DL GD, backprop, regularisation
-
 Other Topics
 ********************************************************************************
 Misc
