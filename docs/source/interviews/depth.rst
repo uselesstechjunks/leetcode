@@ -2,7 +2,7 @@
 ################################################################################
 ML Depth
 ################################################################################
-Topics for Revision
+Fundamentals
 ********************************************************************************
 Metrics
 ================================================================================
@@ -13,6 +13,7 @@ Metrics
 	- Online ranking: ROC-AUC, PR-AUC  
 	- Offline selection: ROC-AUC  
 - Generative Models
+
 	- BLUE, ROUGE
 	- GPT Labeling: Accuracy, Human-like 
 
@@ -84,14 +85,18 @@ Transformer Architectures
 - Models:  
 
 	- BERT: MLM + NSP  
-	- BART  
+	- BART: Autoencoder
 	- GPT: CLM  
 	- XLNet: PLM  
-	- RTD-based models: Electra
-	- Mixture-of-Experts (MoE), Mixtral  
-	- Non-transformer models: Mamba  
-	- T5 Learnings: mT5  
-	- Generalizable T5-based Retriever (GTR)  
+	- Electra: RTD
+	- Mixtral: MoE
+	- Mamba: State-Space
+- Papers
+	- BERT, RoBERTa, XLM-R,
+	- T5 Learnings, mT5  
+	- Generalizable T5-based Retriever (GTR) 
+	- LLama3
+	- DeepSeek
 
 Transformer Hardware and Optimization
 --------------------------------------------------------------------------------
@@ -121,58 +126,20 @@ Optimizers
 - AdamW  
 - Adagrad  
 
-Machine Learning Fundamentals
+Personal Picks
 ================================================================================
-#. Clustering
-
-	- Algorithms
-
-		- Distance Based: K-Means
-		- Density Based: DBSCAN
-	- Metrics
-
-		- Distance Based
-
-			- Silhoutte coefficient
-			- DB index
-			- CH index
-		- Density Based:
-
-#. Manifold Learning
-
-	- t-SNE
-#. Latent Variable Models
-
-	- GMM
-	- PCA, Kernel-PCA
-	- NMF
-	- ICA
-	- LDA
-#. Outlier prediction
-
-	- Isolation Forest
-	- One-Class SVM
-#. Density Estimation
-
-	- KDE
-#. DL GD, backprop, regularisation
-
-Other Topics
-********************************************************************************
-Misc
-================================================================================
-- summarise popular NL tasks and remember the usual dataset names
-- convolution based models, resnet, graph cn, light gcn, graph transformers
-- kernel methods, kernel meaning embedding, mmd, other ipms - read every inch of our paper
-- probability and statistics, parametric and non-parametric methods for inference, ci and hypothesis testing framework
-- bayes net (representation, inference, learning)
-- causality - how to think systematically going about finding out the root-cause of a problem, bing search causality paper
-- latent variable models - kmeans, mixture-of-gaussians, pca, kernel pca, ica
-- generative models on latent variable space - vae, vqvae, gan, diffusion models, diffusion transformers
-- clustering - convex, non-convex, evaluation of clustering perf
-- regression and discriminative classification - model assumption, interpretation, evaluation - collinearity, the other stuff
-- theoy as applied problem statement
-- code transformer, convnet, kernel methods, tree methods, regression, vae, gan, diffusion models
+- Summarise popular NL tasks and remember the usual dataset names.  
+- Convolution-based models: ResNet, Graph CN, LightGCN, Graph Transformers.  
+- Kernel methods: kernel meaning embedding, MMD, other IPMs – read every inch of our paper.  
+- Probability and statistics: parametric and non-parametric methods for inference, CI, and hypothesis testing framework.  
+- Bayes Net (representation, inference, learning).  
+- Causality – how to think systematically about finding the root cause of a problem; Bing search causality paper.  
+- Latent variable models: K-means, mixture of Gaussians, PCA, kernel PCA, ICA.  
+- Generative models on latent variable space: VAE, VQVAE, GAN, diffusion models, diffusion transformers.  
+- Clustering: convex, non-convex, evaluation of clustering performance.  
+- Regression and discriminative classification: model assumption, interpretation, evaluation – collinearity, the other stuff.  
+- Theory as applied problem statement.  
+- Code Transformer, ConvNet, kernel methods, tree methods, regression, VAE, GAN, diffusion models.
 
 GPT-generated Sample Questions on Areas of Expertise
 ================================================================================
