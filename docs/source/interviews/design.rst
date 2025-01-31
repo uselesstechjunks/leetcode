@@ -2,6 +2,20 @@
 ML Application
 ################################################################################
 ********************************************************************************
+General System Design interview Tips 
+********************************************************************************
+	#. Start with documenting your summary/overview in Google docs/Excalidraw or Zoom whiteboard. Even if the company hasn’t provided a link and interviewer insists on the conversation to be purely verbal - Document key bullet points. 
+	#. Present your interview systematically; lead the conversation and don't wait for the interviewer to ask questions. At the beginning of the interview, present the discussion's structure and ask the interviewer about their main areas of interest. 
+	#. Show your understanding of the business implications by sharing insights on metrics. Understand what the product truly expects from you. 
+	#. Actively listen to the interviewer. At the start, ask: "What are you primarily looking for?". Address the whole process, from collecting and labeling data to defining metrics. 
+	#. Assess the importance of the modeling process. 
+	#. Familiarize yourself with the nuances of ML-Ops, such as: At the start of the interview, get a feel for if the interviewer seems interested in ML-Ops. You'll mostly get a clear signal on whether or not they are interested. 
+		#. Managing model versions 
+		#. Training models 
+		#. Using model execution engines 
+	#. Keep your resume at hand and review it before starting the interview.
+
+********************************************************************************
 Paradigms For Applications
 ********************************************************************************
 * Classification 
