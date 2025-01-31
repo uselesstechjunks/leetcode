@@ -2,6 +2,194 @@
 ML Application
 ################################################################################
 ********************************************************************************
+Useful References:
+********************************************************************************
+1. Real-World Recommendation System Series
+
+	- `Part 1 <https://blog.fennel.ai/p/real-world-recommendation-system?s=w>`_
+	- `Part 2 <https://blog.fennel.ai/p/real-world-recommendation-systems?s=r>`_
+	- `Part 3 <https://blog.fennel.ai/p/real-world-recommendation-systems-21e>`_
+2. Feature Engineering for Recommendations
+
+	- `Feature Engineering Blog <https://blog.fennel.ai/p/feature-engineering-for-recommendation>`_
+	- `Feature Logging <https://fennel.ai/blog/feature-engineering-for-recommendation-031/>`_
+	- `Information Leakage <https://www.fennel.ai/blog/two-types-of-information-leakage/>`_
+
+********************************************************************************
+General System Design interview Tips 
+********************************************************************************
+	#. Start with documenting your summary/overview in Google docs/Excalidraw or Zoom whiteboard. Even if the company hasn’t provided a link and interviewer insists on the conversation to be purely verbal - Document key bullet points. 
+	#. Present your interview systematically; lead the conversation and don't wait for the interviewer to ask questions. At the beginning of the interview, present the discussion's structure and ask the interviewer about their main areas of interest. 
+	#. Show your understanding of the business implications by sharing insights on metrics. Understand what the product truly expects from you. 
+	#. Actively listen to the interviewer. At the start, ask: "What are you primarily looking for?". Address the whole process, from collecting and labeling data to defining metrics. 
+	#. Assess the importance of the modeling process. 
+	#. Familiarize yourself with the nuances of ML-Ops, such as: At the start of the interview, get a feel for if the interviewer seems interested in ML-Ops. You'll mostly get a clear signal on whether or not they are interested. 
+
+		#. Managing model versions 
+		#. Training models 
+		#. Using model execution engines 
+	#. Keep your resume at hand and review it before starting the interview.
+
+********************************************************************************
+Recommendation System
+********************************************************************************
+1. Problem Setup and Label Collection
+================================================================================
+a. Clarifying Questions
+
+	- Understand the problem context and objectives.
+	- Identify constraints and requirements.
+b. Definition of Success
+
+	- Define key performance metrics (e.g., accuracy, precision, recall, business metrics).
+c. Positive and Negative Labels
+
+	i. Different Options to Define Labels:
+
+		1. Joining a group.
+		2. Retention after a week.
+		3. Interaction with other users.
+		4. Meaningful interaction (e.g., time spent, making friends in the group).
+	ii. Fairness Considerations:
+
+		- Ensure adequate data for underrepresented groups.
+d. Label Generation
+
+	i. Engagement as Proxy:
+
+		- User click as a positive label, no click as a negative label.
+	ii. Use of Labelers:
+
+		1. Utilize semi-supervised or unsupervised methods (e.g., clustering) to enhance labeler efficiency.
+		2. Consider visits in a session (e.g., Pinterest or DoorDash) as similar pins or restaurants.
+e. Downsampling the Dominant Class using Negative Sampling
+
+	- Only downsample training data while keeping validation and test distributions unchanged.
+f. Bias in Training
+
+	- Limit the number of labels per user, video, or restaurant to prevent bias towards active users or popular items.
+
+2. Feature Engineering
+================================================================================
+a. User Features
+
+	- Demographic information, historical behavior, preferences.
+b. Group Features
+
+	- Attributes of the group or community.
+c. Cross Features Between Group and Users
+
+	- Interaction-based features.
+d. Contextual Features
+
+	- Time of day, holiday, device type, network connection (WiFi vs. 4G).
+e. Feature Selection Process
+
+	- Start with basic counters/ratios and refine using Gradient Boosted Decision Trees (GBDT).
+
+3. Modeling
+================================================================================
+a. Two-Tower Model
+
+	- Separate embedding models for users and items.
+b. Embedding Creation
+
+	- Graph embeddings and learned representations.
+c. Retrieval (Optimized for Recall)
+
+	- Collaborative filtering-based approaches.
+d. Diversification of Sources
+
+	- Ensure variety in retrieved results.
+e. Ranking (Optimized for Precision)
+
+	1. Two-Tower Model.
+	2. Precision-focused optimization.
+
+4. Measurement
+================================================================================
+a. Offline vs. Online Evaluation
+
+	- Offline metrics (precision, recall) vs. online business impact.
+b. Key Metrics
+
+	- NDCG (Normalized Discounted Cumulative Gain)
+	- Precision\@Top-K: Measures relevance of top-K recommendations.
+	- Mean Average Precision (MAP\@K): Mean of AP\@K across users.
+c. Explanation of Metrics
+
+	- Justify metric choice at each evaluation stage.
+d. Online Measurement
+
+	- Prioritize business metrics.
+	- Conduct A/B testing or Multi-Armed Bandit experiments.
+
+5. Debugging
+================================================================================
+a. Structured Debugging Approach
+
+	- Maintain a clear, written log of issues and solutions.
+b. Online vs. Offline Model Debugging
+
+	- Identify discrepancies between offline validation and real-world performance.
+
+6. Feature Logging
+================================================================================
+a. Training Phase
+
+	- Ensure consistency in feature storage and retrieval.
+b. Debugging
+
+	- Log model inputs and outputs for analysis.
+
+7. Preparing the Training Pipeline
+================================================================================
+	- Automate feature extraction, model training, and validation.
+	- Ensure reproducibility and scalability.
+
+8. Deployment
+================================================================================
+a. Novelty Effects
+
+	- Account for temporary engagement spikes post-deployment.
+b. Model Refresh Impact
+
+	- Understand how periodic updates influence engagement.
+
+9. Stages of a Ranking System Funnel
+================================================================================
+	- Retrieval: Reduce millions of candidates to thousands.
+	- Filtering: Remove irrelevant or outdated candidates.
+	- Feature Extraction: Ensure consistency in train-test splits.
+	- Ranking: Apply advanced models to refine selections.
+
+10. Advanced Topics
+================================================================================
+a. Data Pipeline & Infrastructure
+
+	- Efficient data ingestion, storage, and processing at scale.
+	- Real-time vs. batch data pipelines.
+	- Feature freshness and consistency.
+
+b. Scalability & Latency Considerations
+
+	- Low-latency serving strategies.
+	- Trade-offs between model complexity and inference speed.
+	- Caching, pre-computation, and model distillation.
+
+c. Handling Model Drift & Monitoring
+
+	- Detection of data drift and performance degradation.
+	- Automated retraining strategies.
+	- Monitoring feature distribution shifts over time.
+
+d. Fairness, Interpretability, and Ethics
+	
+	- Fairness-aware learning to mitigate biases.
+	- Interpretability techniques like SHAP, LIME.
+	- Ethical considerations in AI-driven recommendations.
+
+********************************************************************************
 Paradigms For Applications
 ********************************************************************************
 * Classification 
@@ -21,203 +209,6 @@ Paradigms For Applications
 
 	* Structured prediction
 * Multimodal learning
-
-********************************************************************************
-Topics for Revision
-********************************************************************************
-* End Goal:  
-
-	.. note::
-	
-		- Can I explain the inner workings of transformers, diffusion models, and LLM fine-tuning techniques?  
-		- Can I walk through the end-to-end design of an ML system confidently?  
-		- Am I able to break down an ambiguous problem into structured ML components?  
-
-* Plan Outline:  
-
-	.. note::
-	
-		- Days 1-3: Build ML and deep learning foundation  
-		- Day 4: Deep dive into applied ML & system design  
-		- Day 5: Mock interviews & reinforcement  
-
-Day 1: ML Fundamentals & Core Deep Learning Concepts (4-5 hours)  
-================================================================================
-.. note::
-	Objective: Refresh fundamental ML concepts and deep learning theory, ensuring a strong foundation.  
-
-Topics to Cover:  
---------------------------------------------------------------------------------
-1. Supervised & Unsupervised Learning Basics  
-
-	- Bias-variance tradeoff, overfitting, regularization, cross-validation  
-	- Optimization techniques: SGD, Adam, Momentum  
-	- Feature selection and feature engineering  
-2. Deep Learning Core Concepts  
-
-	- Neural network architectures: CNNs, RNNs, Transformers  
-	- Backpropagation & optimization in deep learning  
-	- Attention mechanisms & self-attention  
-3. Probabilistic Thinking in ML  
-
-	- Bayesian ML, Gaussian Processes, Uncertainty Estimation  
-	- Graph-based models (e.g., Probabilistic Graphical Models)  
-
-Suggested Readings & Materials:  
---------------------------------------------------------------------------------
-Papers  
-
-	- "Understanding Machine Learning: From Theory to Algorithms" – Shalev-Shwartz & Ben-David (Chapters 1-3)  
-	- "Deep Learning" – Ian Goodfellow et al. (Chapters 6-9 for deep learning core concepts)  
-Videos  
-
-	- MIT 6.S191: Introduction to Deep Learning – Lecture 1 & 2 (YouTube)  
-	- CS229: Machine Learning – Stanford (Andrew Ng’s lectures)  
-
-Practice Questions:  
---------------------------------------------------------------------------------
-	- Explain the key trade-offs in choosing different ML models (e.g., trees vs. deep learning vs. probabilistic models).  
-	- Given a dataset with heavy class imbalance, what strategies would you use?  
-	- What are the main challenges when optimizing deep networks? 
-
-Day 2: Generative AI & Large Language Models (LLMs) Essentials (4-5 hours)  
-================================================================================
-.. note::
-	Objective: Develop a deep understanding of LLMs, transformers, generative models, and diffusion models.  
-
-Topics to Cover:  
---------------------------------------------------------------------------------
-1. Transformer Models & Self-Attention  
-
-	- Attention mechanisms, Multi-Head Attention, Positional Encoding  
-	- Pretraining vs. Fine-tuning in LLMs  
-2. Training and Inference Optimization  
-
-	- Parameter-efficient fine-tuning methods (LoRA, adapters)  
-	- Quantization and distillation for LLMs  
-3. Diffusion Models & GANs  
-
-	- How diffusion models work and where they are used (e.g., DALL-E, Stable Diffusion)  
-	- How they compare to GANs for generative modeling  
-
-Suggested Readings & Materials:  
---------------------------------------------------------------------------------
-Papers  
-
-	- "Attention Is All You Need" – Vaswani et al. (Transformer architecture)  
-	- "Scaling Laws for Neural Language Models" – Kaplan et al. (Important for LLM scaling)  
-	- "Denoising Diffusion Probabilistic Models" – Ho et al. (Key diffusion model paper)  
-Videos  
-
-	- Yannic Kilcher’s explainer on Transformers & LLMs (YouTube)  
-	- Andrej Karpathy’s "State of GPT" talk  
-
-Practice Questions:  
---------------------------------------------------------------------------------
-	- How does self-attention work in transformers?  
-	- Why do LLMs require large-scale pretraining, and what are some methods to reduce compute requirements?  
-	- Compare GANs and diffusion models in terms of training stability and quality of generated content.  
-
-Day 3: Applied ML in E-commerce & First-Principles Thinking  (4-5 hours)  
-================================================================================
-.. note::
-	Objective: Understand how ML is applied in e-commerce and practice solving open-ended ML problems.  
-
-Topics to Cover:  
---------------------------------------------------------------------------------
-1. Personalization & Recommendations  
-
-	- Collaborative filtering, Matrix Factorization, Deep Learning for Recommendations  
-	- Cold start problem and hybrid approaches  
-2. Fraud Detection & Marketplace Integrity  
-
-	- Anomaly detection methods, semi-supervised learning  
-	- Behavioral modeling for fraud prevention  
-3. Search & Ranking in E-commerce  
-
-	- Learning-to-Rank (LTR) approaches  
-	- RAG-based models for search  
-4. Conversational AI & Generative AI in E-commerce  
-
-	- AI-powered chatbots for customer support  
-	- Product image & description generation  
-
-Suggested Readings & Materials:  
---------------------------------------------------------------------------------
-Papers  
-
-	- "Deep Learning Based Recommender System: A Survey and New Perspectives" – Zhang et al.  
-	- "A Survey on Learning to Rank for Information Retrieval" – Liu et al.  
-	- "BERT for E-commerce Search" – Amazon AI Paper  
-
-Videos  
-
-	- DeepMind’s talk on "Learning to Rank" (YouTube)  
-	- Stanford CS330: Personalized AI Models  
-
-Practice Questions:  
---------------------------------------------------------------------------------
-	- How would you design a ranking algorithm for a search engine?  
-	- Suppose an e-commerce company wants to detect fraud in seller transactions. What approach would you take?  
-	- How can generative AI be used to automate product catalog generation?  
-
-Day 4 (Weekend): End-to-End ML System Design & Case Studies  (8+ hours)  
-================================================================================
-.. note::
-	Objective: Work on end-to-end ML system design, focusing on real-world case studies.  
-
-Topics to Cover:  
---------------------------------------------------------------------------------
-1. ML System Design Framework  
-
-	- Problem formulation, data pipeline, model selection, serving infrastructure  
-	- Latency vs. Accuracy trade-offs in production systems  
-2. Scaling ML Systems for Millions of Users  
-
-	- Distributed training & inference optimization  
-	- Model monitoring & retraining strategies  
-3. Applied ML Case Studies  
-
-	- End-to-end design of a large-scale recommendation system  
-	- ML-based fraud detection pipeline  
-	- Building a generative AI-based product description generator  
-
-Suggested Readings & Materials:  
---------------------------------------------------------------------------------
-Papers  
-
-	- "Machine Learning: The High-Interest Credit Card of Technical Debt" – Sculley et al.  
-	- "TFX: A TensorFlow-Based Production-Scale Machine Learning Platform" – Baylor et al.  
-Videos  
-
-	- ML System Design - Stanford CS329S  
-	- Chip Huyen’s talk on ML in Production  
-
-Practice Questions:  
---------------------------------------------------------------------------------
-	- Design a real-time personalized feed ranking system for an e-commerce company.  
-	- How would you ensure that ML models in production do not degrade over time?  
-	- Design a fraud detection pipeline that scales across millions of transactions.  
-
-Day 5 (Weekend): Mock Interviews & Final Review  (8+ hours)  
-================================================================================
-.. note::
-	Objective: Reinforce learning, work on mock interviews, and refine your explanations.  
-
-Activities:  
---------------------------------------------------------------------------------
-1. Mock Interviews (4-5 hours)  
-
-	- Practice answering end-to-end ML system design problems out loud  
-	- Get a friend or use a platform like pramp/interviewing.io  
-2. Concept Review & Weak Area Focus (3-4 hours)  
-
-	- Revise key LLM, ML, and system design concepts  
-	- Solve additional case studies  
-3. Behavioral & Culture Fit Preparation  
-
-	- STAR method for answering leadership & impact questions  
-	- Reflect on past projects where you applied ML in production  
 
 ********************************************************************************
 ML Design Round Framework

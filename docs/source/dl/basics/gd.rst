@@ -123,9 +123,10 @@ Layer Normalisation
 Resources
 ===================================================================================
 .. note::
-	* `[Prof Ganesh Ramakrishnan] CS769 Optimization in Machine Learning IIT Bombay 2024 <https://www.cse.iitb.ac.in/%7Eganesh/cs769/>`_
+	* [iitb.ac.in] `CS769 Optimization in Machine Learning IIT Bombay 2024 <https://www.cse.iitb.ac.in/%7Eganesh/cs769/>`_
 
 		* `Full Playlist on YT <https://www.youtube.com/playlist?list=PLyo3HAXSZD3yhIPf7Luk_ZHM_ss2fFCVV>`_
 		* `Unified all GD variants <https://youtu.be/2QNquvof1WA?list=PLyo3HAXSZD3yhIPf7Luk_ZHM_ss2fFCVV&t=865>`_
-	* `[ruder.io] An overview of gradient descent optimization algorithms <https://www.ruder.io/optimizing-gradient-descent/>`_
-	* `This SO post on understanding how adaptive methods try to estimate Hessian <https://math.stackexchange.com/a/2349067>`_
+	* [ruder.io] `An overview of gradient descent optimization algorithms <https://www.ruder.io/optimizing-gradient-descent/>`_
+	* [math.stackexchange.com] `This SO post on understanding how adaptive methods try to estimate Hessian <https://math.stackexchange.com/a/2349067>`_
+	* [medium.com] `A Visual Explanation of Gradient Descent Methods (Momentum, AdaGrad, RMSProp, Adam) <https://medium.com/towards-data-science/a-visual-explanation-of-gradient-descent-methods-momentum-adagrad-rmsprop-adam-f898b102325c>`_
