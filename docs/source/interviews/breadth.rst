@@ -87,13 +87,15 @@ Fundamentals
 	- Explore-exploit, bandits (eps-greedy, UCB, Thompson sampling), 
 	- Q-learning, DQN
 
+#. Learning To Rank
+
+	- Predicts a relative-order
+	- Metrics: MAP, Precision@k, Recall@k, DCG@k/NDCG@k, MRR)
+	- Common Approaches: Pairwise
+
 Esoteric Topics
 ================================================================================
-	* Ordinal Regression - predicts a class label/score (check `this <https://home.ttic.edu/~nati/Publications/RennieSrebroIJCAI05.pdf>`_)
-	* Learning To Rank - predicts a relative-order (MAP, Precision@k, Recall@k, DCG@k/NDCG@k, MRR)	
-
-Even more esoteric topics
-================================================================================
+	* Ordinal Regression - predicts a class label/score (check `this <https://home.ttic.edu/~nati/Publications/RennieSrebroIJCAI05.pdf>`_)	
 	* Causal reasoning and diagnostics, Causal networks
 	* Learning latent representations
 	* Bayesian linear regression
