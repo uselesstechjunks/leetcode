@@ -51,7 +51,7 @@ Design Resources
 	#. [patrickhalina.com] `ML Systems Design Interview Guide <http://patrickhalina.com/posts/ml-systems-design-interview-guide/>`_
 	#. [leetcode.com] `Machine Learning System Design : A framework for the interview day <https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day>`_
 	#. [stackexchange.com] `Preparing for a Machine Learning Design Interview <https://datascience.stackexchange.com/questions/69981/preparing-for-a-machine-learning-design-interview>`_
-	* [algoexpert.io] `MLExpert <https://www.algoexpert.io/machine-learning/product>`_
+	#. [algoexpert.io] `MLExpert <https://www.algoexpert.io/machine-learning/product>`_
 7. Resources
 
 	#. Machine Learning System Design Interview - Alex Xu
