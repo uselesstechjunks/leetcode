@@ -25,39 +25,40 @@ Revision Topics
 Fundamentals
 ================================================================================
 #. Math
-
-	- Multivariate Chain Rule	
-	- Matrix Factorizations - Eigendecomposition, SVD
-	- Common Distributions and moments
+	
+	- Matrix Factorizations - Eigendecomposition, SVD, QR, Cholesky, PD/PSD
+	- Matrix Calculus, Vector Calculus, Multivariate Chain Rule, Backprop derivation
+	- Taylor's Expansion, First and second order Approximation
+	- Convex Optimization: GD, Newton's Mehtod, Gauss-Newton's Approximation
+	- Optimizers: SGD, AdaGrad, RMSProp, Adam - Learning Rate, Schedule, Choice of parameters, Effect of Regularisation
+	- Constrained Optimization: Lagrange Multipliers, KKT Conditions
+	- Mercer Kernels, Reproducing Property
 #. Stat
 
+	- Expectations, Higher Moments, Skew, Kurtoisis, Conditional, Marginal, Joint, Bayes Theorem
+	- Variance Covariance Matrix, Scatter Matrix, Correlation Matrix, Eigendecomposition
+	- Distributions and moments - Bernoulli, Binomial, Categorical, Multinomial, Normal, Poisson, Exponential, Logistic
 	- Frequentis Estimation Theory - Point Estimation, Confidence Interval, Hypothesis Testing
-	- Minmax Theory
-	- Bayesian Estimaton Theory
-#. Learning theory
+	- Point Estimation, Bayes Estimator, Bias Variance Decomposition
+	- Minmax Theory, Empirical Risk Minimization
+	- Bayesian Estimaton Theory, Conjugate Priors - Normal, Beta-Binomial, Dirichlet-Multinomial
+	- Sampling Techniques: CDF-Jacobian, Monte Carlo Estimators, Metropolis Hasting, Adaptive Metropolis Hasting, Ancestor Sampling
+#. Learning Theory
 
 	- KL divergence, Entropy, MaxEnt, Cross-Entropy, NLL
-	- Graphical Models, Variational Inference, Belief Propagation, Deep Belief Net, LDA, CRF
+	- Graphical Models - BN, MRF, CRF
+	- Variational Inference, Belief Propagation, Deep Belief Net
 #. Regression and Classification
 
-	- Bayes Estimator
-	- Basis Expansion
+	- Bayes Estimator - Estimator for conditional mean (regression) or conditional mode (classification)
+	- Basis Expansion, Gram matrix, Feature Maps
+	- Linear Regression, Logistic Regression, Naive Bayes, SVM
+	- Tree Based Methods: DT, Bagging, Boosting, XGBoost
 #. Clustering
 
-	- Algorithms
-
-		- Distance Based: K-Means
-		- Density Based: DBSCAN
-		- Hierarchical Clustering
-		- Self-Organizing Maps
-	- Metrics
-
-		- Distance Based
-
-			- Silhoutte coefficient
-			- DB index
-			- CH index
-		- Density Based:
+	- Distance Based: K-Means, Density Based: DBSCAN
+	- Hierarchical Clustering, Self-Organizing Maps
+	- Metrics - Distance Based (Silhoutte coefficient), DB index, CH index
 
 #. Manifold Learning
 
@@ -65,44 +66,38 @@ Fundamentals
 	- Spectral Clustering
 #. Latent Variable Models
 
-	- GMM
-	- PCA, Kernel-PCA
-	- NMF
-	- ICA
-	- LDA
+	- GMM, PCA, Kernel-PCA, ICA, CCA
+	- NMF, LDA
 #. Outlier prediction
 
 	- Isolation Forest
 	- One-Class SVM
 #. Density Estimation
 
-	- KDE
-#. DL GD, Backprop, Regularisation
+	- Linear/Quadratic Discriminator Analysis
+	- Kernel Density Estimator
 
-Practical Topics
-================================================================================
-	* Feature Engineering
-	* Linear Regression and variants
-	* Boosted Trees, Random Forest
-	* Naive Bayes
-	* Logistic Regression	
-	* Support Vector Machines
+#. Practical
+
+	- Feature Engineering
+
+#. Reinforcement learning
 	
+	- SARSA
+	- Explore-exploit, bandits (eps-greedy, UCB, Thompson sampling), 
+	- Q-learning, DQN
+
 Esoteric Topics
 ================================================================================
 	* Ordinal Regression - predicts a class label/score (check `this <https://home.ttic.edu/~nati/Publications/RennieSrebroIJCAI05.pdf>`_)
-	* Learning To Rank - predicts a relative-order (MAP, DCG/NDCG, Precision@n, Recall@n, MRR)
-	* Bayesian linear regression
-	* Gaussian Processes
-	* NER, Pos-tagging, ULMFit
-	* FaceNet, YOLO
-	* Reinforcement learning: SARSA, explore-exploit,  bandits (eps-greedy, UCB, Thompson sampling), Q-learning, DQN - applications
+	* Learning To Rank - predicts a relative-order (MAP, Precision@k, Recall@k, DCG@k/NDCG@k, MRR)	
 
 Even more esoteric topics
 ================================================================================
-	* Causal reasoning and diagnostics
+	* Causal reasoning and diagnostics, Causal networks
 	* Learning latent representations
-	* Causal networks
+	* Bayesian linear regression
+	* Gaussian Processes
 
 ********************************************************************************
 Study Framework
@@ -170,29 +165,7 @@ Screening
 	#. How are Random Forests different from normal classification trees?
 	#. What is regularisation and why do we need it? Explained in RR and DNN? What type of regulariser is used in RR? What is the L1 version called?
 
-Transformers
---------------------------------------------------------------------------------
-	#. Do you have experience with LLMs?
-	#. Explain offline selection problem in detail.
-	#. What is the difference between offline selection and online ranking?
-	#. What are the inputs and outputs of your triplet BERT model?
-	#. Explain triplet BERT architecture, how is it different from normal BERT? Why do you need 3 copies of the identical towers and not just concatenate text with SEP token?
-	#. How do you tackle embeddings of 3 different embeddings? 
-	#. What is the meaning of doing a max-pooling over the features in terms of individual dimensions? 
-	#. How is max-pooling different than doing concatenation first and then projection?
-	#. Walk me through the entire BERT encoding process from input sequence in natural text to final the layer.
-	#. Explain how wordpiece works. Explain the Embedding matrix. What are its dimensions?
-	#. Why do we need positional encodings? Which part in the transformer layer requires this positional information?
-	#. Why do we need to divide QK^T by sqrt(d_k)?
-	#. Why do we need softmax?
-	#. Why do we need residual connection?
-	#. Explain the FC layer.
-	#. What are your evaluation metrics and why do you use them?
-	#. Do you know about metrics that are used for generation?
-	#. Tell me some shortcomings of BLEU and ROUGE. What other metric can we use? How is perplexity defined?
-	#. Do you know about Reflection? How would you evaluate LLM outputs for hallucination and other mistakes?
-
-Theory
+In Depth Theory
 --------------------------------------------------------------------------------
 	#. Tell me a few dimensionality reduction mechanisms - PCA and autoencoders.
 	#. Explain PCA and probabilistic PCA.
@@ -213,24 +186,6 @@ Theory
 	#. How does the loss curve for Cross entropy look?
 	#. What does the "minus" in cross-entropy mean?
 	#. Explain how Momentum differs from RMS prop optimizer?
-
-Mixture
---------------------------------------------------------------------------------
-	#. What is convolution Operation? Code it up.
-	#. What is self attention?
-	#. Derive gradient descent update rule for non negative matrix factorisation.
-	#. Code non negative matrix factorisation.
-	#. Derive gradient descent update rule for linear/logistic regression.
-	#. Code stochastic gradient descent in linear/logistic regression setting.
-	#. Code AUC.
-	#. Questions related to my projects/thesis.
-	#. One question from statistics: was related to Bayes theorem.
-	#. Bias-variance tradeoff.
-	#. Design questions: Let's say some countries don't allow showing ads for knife, gun, etc, how would you go about building a system that can classify safe queries vs unsafe queries?
-	#. What's a language model?
-	#. Explain the working of any click prediction model.
-	#. A couple of questions related to indexing in search engine.
-	#. Convolution vs feedforward.
 
 ********************************************************************************
 Topics
@@ -270,6 +225,24 @@ Classical ML
 Applied ML
 --------------------------------------------------------------------------------
 * What metrics are used for a heavily imbalanced dataset?
+
+Mixture
+--------------------------------------------------------------------------------
+	#. What is convolution Operation? Code it up.
+	#. What is self attention?
+	#. Derive gradient descent update rule for non negative matrix factorisation.
+	#. Code non negative matrix factorisation.
+	#. Derive gradient descent update rule for linear/logistic regression.
+	#. Code stochastic gradient descent in linear/logistic regression setting.
+	#. Code AUC.
+	#. Questions related to my projects/thesis.
+	#. One question from statistics: was related to Bayes theorem.
+	#. Bias-variance tradeoff.
+	#. Design questions: Let's say some countries don't allow showing ads for knife, gun, etc, how would you go about building a system that can classify safe queries vs unsafe queries?
+	#. What's a language model?
+	#. Explain the working of any click prediction model.
+	#. A couple of questions related to indexing in search engine.
+	#. Convolution vs feedforward.
 
 Related StackExchanges
 ================================================================================
