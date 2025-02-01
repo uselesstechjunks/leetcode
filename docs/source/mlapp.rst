@@ -46,18 +46,10 @@ Design Resources
 	* [Eugene Yan] `applied-ml repo on github <https://github.com/eugeneyan/applied-ml>`_	
 	* [Updated] `ApplyingML <https://applyingml.com/>`_
 	* [Updated] `What We’ve Learned From A Year of Building with LLMs <https://applied-llms.org/>`_	
-6. Interview Guide
+6. Resources
 
-	#. [patrickhalina.com] `ML Systems Design Interview Guide <http://patrickhalina.com/posts/ml-systems-design-interview-guide/>`_
-	#. [leetcode.com] `Machine Learning System Design : A framework for the interview day <https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day>`_
-	#. [stackexchange.com] `Preparing for a Machine Learning Design Interview <https://datascience.stackexchange.com/questions/69981/preparing-for-a-machine-learning-design-interview>`_
-	#. [algoexpert.io] `MLExpert <https://www.algoexpert.io/machine-learning/product>`_
-7. Resources
-
-	#. Machine Learning System Design Interview - Alex Xu
 	#. Designing Machine Learning Systems - Chip Huyen
 	#. Feature Engineering - O'Reilly
-	#. Ace The Data Science Interview	
 	#. [deeplearning.ai] `Machine Learning Yearning - Andrew Ng <https://www.deeplearning.ai/wp-content/uploads/2021/01/andrew-ng-machine-learning-yearning.pdf>`_	
 	#. [towardsdatascience.com] `Being a Data Scientist does not make you a Software Engineer! - Towards Data Science <https://towardsdatascience.com/being-a-data-scientist-does-not-make-you-a-software-engineer-c64081526372>`_
 	#. [developers.google.com] `Machine Learning Crash Course - Google Developers <https://developers.google.com/machine-learning/crash-course/>`_	
