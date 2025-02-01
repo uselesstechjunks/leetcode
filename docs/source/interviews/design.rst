@@ -2,6 +2,23 @@
 ML Application
 ################################################################################
 ********************************************************************************
+Resources
+********************************************************************************
+#. Interview Guide
+
+	#. [patrickhalina.com] `ML Systems Design Interview Guide <http://patrickhalina.com/posts/ml-systems-design-interview-guide/>`_
+	#. [leetcode.com] `Machine Learning System Design : A framework for the interview day <https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day>`_
+	#. [medium.com] `How to Crack Machine learning Interviews at FAANG! <https://medium.com/@reachpriyaa/how-to-crack-machine-learning-interviews-at-faang-78a2882a05c5>`_
+	#. [medium.com] `Part 2 — How to Crack Machine learning Interviews at FAANG : Pointers for Junior/Senior/Staff+ levels <https://medium.com/@reachpriyaa/part-2-how-to-crack-machine-learning-interviews-at-faang-pointers-for-junior-senior-staff-4b89e10bff28>`_
+
+	#. [stackexchange.com] `Preparing for a Machine Learning Design Interview <https://datascience.stackexchange.com/questions/69981/preparing-for-a-machine-learning-design-interview>`_
+	#. [algoexpert.io] `MLExpert <https://www.algoexpert.io/machine-learning/product>`_
+#. Resources
+
+	#. Machine Learning System Design Interview - Alex Xu
+	#. Ace The Data Science Interview
+
+********************************************************************************
 General System Design interview Tips 
 ********************************************************************************
 	#. Start with documenting your summary/overview in Google docs/Excalidraw or Zoom whiteboard. Even if the company hasn’t provided a link and interviewer insists on the conversation to be purely verbal - Document key bullet points. 
