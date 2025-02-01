@@ -38,9 +38,9 @@ Tokenizers
 
 Activations
 --------------------------------------------------------------------------------
-- Sigmoid, Tanh, ReLU  
-- GELU, Swish  
-- GLU, GeGLU, ReGLU, SwiGLU  
+- Sigmoid, Tanh, ReLU, LeakyReLU
+- SiLU, GELU, Swish
+- GLU, GeGLU, ReGLU, SwiGLU
 
 Normalization
 --------------------------------------------------------------------------------
@@ -81,24 +81,23 @@ Decoding Techniques
 
 Transformer Architectures
 --------------------------------------------------------------------------------
-- PyTorch implementation (batched, sequential)  
-- Models:  
+- Models: PyTorch implementation
 
-	- BERT: MLM + NSP  
-	- BART: Autoencoder
+	- BERT: MLM
 	- GPT: CLM  
-	- XLNet: PLM  
-	- Electra: RTD
-	- Mixtral: MoE
-	- Mamba: State-Space
+	- T5: Seq2Seq
 - Papers
-	- BERT, RoBERTa, XLM-R,
-	- T5 Learnings, mT5  
-	- Generalizable T5-based Retriever (GTR) 
-	- LLama3
-	- DeepSeek
+	- Encoder: BERT, RoBERTa, XLM-R
+	- Decoder: GPT, LLama3, DeepSeek
+	- Seq2Seq: T5 Learnings, mT5
+	- Autoencoder: BART
+	- PLM: XLNet
+	- RTD: Elextra
+	- MoE: Mixtral
+	- State-Space: Mamba
+	- Retriever Embeddings: Generalizable T5-based Retriever (GTR)
 
-Transformer Hardware and Optimization
+Hardware and Optimization
 --------------------------------------------------------------------------------
 - Flash attention  
 - Quantization (e.g., INT8 LLM)  
@@ -110,36 +109,36 @@ LLM Techniques
 - Prompt engineering  
 - Prompt tuning  
 - Retrieval-Augmented Generation (RAG)  
-- LoRA, QLoRA  
+- LoRA, QLoRA
 - Supervised Fine-Tuning (SFT)  
 - Reinforcement Learning with Human Feedback (RLHF)  
 - Proximal Policy Optimization (PPO)  
-- Direct Preference Optimization (DPO)  
+- Direct Preference Optimization (DPO)
 
-Loss Functions
---------------------------------------------------------------------------------
-- Negative Log Likelihood (NLL)
-
-Optimizers
---------------------------------------------------------------------------------
-- Adam  
-- AdamW  
-- Adagrad  
-
-Personal Picks
+Convolution-Based Models
 ================================================================================
-- Summarise popular NL tasks and remember the usual dataset names.  
-- Convolution-based models: ResNet, Graph CN, LightGCN, Graph Transformers.  
+- Convolution-based models: ConvNet, ResNet, Graph CN, LightGCN, Graph Transformers.  
+
+Generative Models
+================================================================================
+- Generative models on latent variable space: VAE, VQVAE, GAN, diffusion models, diffusion transformers.  
+
+Multimodal Models
+================================================================================
+TODO
+
+Good to Know
+================================================================================
+- Popular NL tasks and remember the dataset names. 
 - Kernel methods: kernel meaning embedding, MMD, other IPMs – read every inch of our paper.  
 - Probability and statistics: parametric and non-parametric methods for inference, CI, and hypothesis testing framework.  
 - Bayes Net (representation, inference, learning).  
 - Causality – how to think systematically about finding the root cause of a problem; Bing search causality paper.  
 - Latent variable models: K-means, mixture of Gaussians, PCA, kernel PCA, ICA.  
-- Generative models on latent variable space: VAE, VQVAE, GAN, diffusion models, diffusion transformers.  
 - Clustering: convex, non-convex, evaluation of clustering performance.  
 - Regression and discriminative classification: model assumption, interpretation, evaluation – collinearity, the other stuff.  
 - Theory as applied problem statement.  
-- Code Transformer, ConvNet, kernel methods, tree methods, regression, VAE, GAN, diffusion models.
+- Code kernel methods, tree methods, regression, VAE, GAN, diffusion models.
 
 Sample Questions
 ================================================================================
