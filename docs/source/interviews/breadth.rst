@@ -5,6 +5,8 @@ ML Breadth
 ********************************************************************************
 Resources
 ********************************************************************************
+#. Specific Topics
+
 	#. [youtube.com] `ML interviews <https://www.youtube.com/playlist?list=PLXmbE5IFg3EEoSAzuqbu7o8Kh8FFhTFPc>`_
 	#. [blog.paperspace.com] `Intro to Optimization in Deep Learning: Busting the Myth About Batch Normalization <https://blog.paperspace.com/busting-the-myths-about-batch-normalization/>`_
 	#. [medium.com] `A Visual Explanation of Gradient Descent Methods (Momentum, AdaGrad, RMSProp, Adam) <https://medium.com/towards-data-science/a-visual-explanation-of-gradient-descent-methods-momentum-adagrad-rmsprop-adam-f898b102325c>`_
@@ -15,7 +17,8 @@ Resources
 		- `DB Index <https://scikit-learn.org/stable/modules/clustering.html#davies-bouldin-index>`_
 		- `Rand Index <https://scikit-learn.org/stable/modules/clustering.html#rand-index>`_
 
-.. seealso::
+#. Interview Guide
+
 	* [medium.com] `How to Crack Machine learning Interviews at FAANG! <https://medium.com/@reachpriyaa/how-to-crack-machine-learning-interviews-at-faang-78a2882a05c5>`_
 	* [medium.com] `Part 2 — How to Crack Machine learning Interviews at FAANG : Pointers for Junior/Senior/Staff+ levels <https://medium.com/@reachpriyaa/part-2-how-to-crack-machine-learning-interviews-at-faang-pointers-for-junior-senior-staff-4b89e10bff28>`_
 
