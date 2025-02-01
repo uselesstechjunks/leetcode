@@ -2,28 +2,6 @@
 ML Application
 ################################################################################
 ********************************************************************************
-Useful References:
-********************************************************************************
-1. Real-World Recommendation System Series
-
-	- `Part 1 <https://blog.fennel.ai/p/real-world-recommendation-system?s=w>`_
-	- `Part 2 <https://blog.fennel.ai/p/real-world-recommendation-systems?s=r>`_
-	- `Part 3 <https://blog.fennel.ai/p/real-world-recommendation-systems-21e>`_
-2. Feature Engineering for Recommendations
-
-	- `Feature Engineering Blog <https://blog.fennel.ai/p/feature-engineering-for-recommendation>`_
-	- `Feature Logging <https://fennel.ai/blog/feature-engineering-for-recommendation-031/>`_
-	- `Information Leakage <https://www.fennel.ai/blog/two-types-of-information-leakage/>`_
-3. Blogs:
-
-	- [github.io] `Lil’Log <https://lilianweng.github.io/>`_
-	- [ruder.io] `A blog about natural language processing and machine learning <https://www.ruder.io/>`_
-3. Videos
-
-	- [youtube.com] `Upcoming Book: "Machine Learning System Design" by Alex Xu <https://youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn>`_
-	- [youtube.com] `Machine Learning (ML) System Design Interview Questions <https://www.youtube.com/playlist?list=PLlvnxKilk3aIbyEp3MFlTkYItrLmjS-T3>`_
-
-********************************************************************************
 General System Design interview Tips 
 ********************************************************************************
 	#. Start with documenting your summary/overview in Google docs/Excalidraw or Zoom whiteboard. Even if the company hasn’t provided a link and interviewer insists on the conversation to be purely verbal - Document key bullet points. 
