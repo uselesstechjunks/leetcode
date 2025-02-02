@@ -41,7 +41,7 @@ Ranking
 ====================================================================================
 - Metric Recall@k (non differentiable)
 - Other metrics: HR@k, nDCG
-- Differentiable Discriminative loss (binary loss (similar to cross entropy), Bayesian prediction loss (BPR)
+- Differentiable Discriminative loss - binary loss (similar to cross entropy), Bayesian prediction loss (BPR)
 - Issue with binary, BPR solves the ranking problem better
 - Trick to choose neg samples
 - Not suitable for ANN
@@ -59,13 +59,105 @@ GCN
 - Application: similar image recommendation in Pinterest 
 - Issue: doesn't have contextual awareness or session/temporal awareness
 
-************************************************************************************
 Session/sequential RS
-************************************************************************************
+====================================================================================
 - Attention based
 - Transformer4rec
 
-************************************************************************************
 LLM for Recommendation
-************************************************************************************
+====================================================================================
 - gotta read
+
+************************************************************************************
+Patterns
+************************************************************************************
+User-Item Recommendation  
+====================================================================================
+- Homepage recommendations
+- product recommendations
+- videos you might like, etc
+
+Key Concept  
+------------------------------------------------------------------------------------
+- User-item recommendation focuses on predicting a user's preference for an item based on historical interactions. This can be framed as:  
+
+	#. Explicit feedback (e.g., ratings, thumbs up/down)  
+	#. Implicit feedback (e.g., clicks, watch time, purchases)  
+
+- Common approaches include:  
+
+	#. Collaborative Filtering (CF) (Matrix Factorization, Neural CF)  
+	#. Content-Based Filtering (Feature-based models)  
+	#. Hybrid Models (Combining CF and content-based methods)  
+	#. Deep Learning Approaches (Neural networks, Transformers)  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. Collaborative Filtering  
+
+	- "Matrix Factorization Techniques for Recommender Systems" – Koren et al. (2009)  
+	- "Neural Collaborative Filtering" – He et al. (2017)  
+
+#. Deep Learning Approaches  
+
+	- "Deep Neural Networks for YouTube Recommendations" – Covington et al. (2016)  
+	- "Wide & Deep Learning for Recommender Systems" – Cheng et al. (2016)  
+	- "Transformers4Rec: Bridging the Gap Between NLP and Sequential Recommendation" – De Souza et al. (2021)  
+
+#. Hybrid and Production Systems  
+
+	- "Amazon.com Recommendations: Item-to-Item Collaborative Filtering" – Linden et al. (2003)  
+	- "Netflix Recommendations: Beyond the 5 Stars" – Gomez-Uribe et al. (2015)  
+
+Gathering Training Data & Labels  
+------------------------------------------------------------------------------------
+#. Supervised Learning:  
+
+	- Label: binary (clicked/not clicked, purchased/not purchased) or continuous (watch time, rating).  
+	- Data sources: user interactions, purchase logs, watch history.  
+	- Challenges: Class imbalance (many more non-clicked items than clicked ones).  
+
+#. Semi-Supervised Learning:  
+
+	- Use self-training (pseudo-labeling) to expand labeled data.  
+	- Graph-based methods to propagate labels across similar users/items.  
+
+#. Self-Supervised Learning:  
+
+	- Contrastive learning (e.g., SimCLR, BERT-style masked item prediction).  
+	- Learning representations via session-based modeling (e.g., predicting the next item a user interacts with).  
+
+Feature Engineering  
+------------------------------------------------------------------------------------
+- User Features: Past interactions, demographics, engagement signals.  
+- Item Features: Category, text/image embeddings, historical engagement.  
+- Cross Features: User-item interactions (e.g., user’s affinity to a category).  
+- Contextual Features: Time of day, device, location.  
+- Embedding-based Features: Learned latent factors from models like Word2Vec for items/users.  
+
+Handling Nuisances & Trade-offs  
+------------------------------------------------------------------------------------
+#. Cold-Start Problem  
+
+	- New users: Use demographic-based recommendations or onboarding surveys.  
+	- New items: Use content-based embeddings, metadata-based recommendations.  
+	- Trade-off: Over-relying on metadata may lead to popularity bias.  
+#. Novelty Effects  
+
+	- Boosting exploration by temporarily ranking new items higher.  
+	- Trade-off: Can over-promote untested items, leading to poor user experience.  
+#. Popularity Bias  
+
+	- Penalizing highly popular items in ranking.  
+	- Personalized diversity re-ranking (e.g., promoting niche items based on user profile).  
+	- Trade-off: Too much de-biasing can hurt engagement.  
+#. Explore-Exploit Balance  
+
+	- Bandit-based approaches (e.g., Thompson Sampling, UCB).  
+	- Randomized ranking perturbation to introduce diversity.  
+	- Trade-off: Excess exploration can hurt short-term metrics.  
+#. Avoiding Feedback Loops  
+
+	- Regular model updates to prevent reinforcing the same recommendations.  
+	- Counterfactual evaluation (simulate what would happen if different recommendations were shown).  
+	- Trade-off: More frequent model updates increase computational costs.  
