@@ -13,7 +13,17 @@ Metrics
 
 Resources
 ====================================================================================
-Summary
+Overview: Stages
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Stage", "Goals", "Key Metrics", "Common Techniques"
+	:align: center
+	
+		Retrieval, Fetch diverse candidates from multiple sources, Recall@K; Coverage; Latency, Multi-tower models; ANN; User embeddings
+		Combining & Filtering, Merge candidates; remove duplicates; apply business rules, Diversity; Precision@K; Fairness, Weighted merging; Min-hashing; Rule-based filtering
+		Re-Ranking, Optimize order of recommendations for engagement, CTR; NDCG; Exploration Ratio, Neural Rankers; Bandits; DPP for diversity
+
+Overview: Patterns
 ------------------------------------------------------------------------------------
 .. csv-table:: 
 	:header: "Pattern", "Traditional Approach", "LLM Augmentations"
@@ -123,10 +133,73 @@ More Papers
 ************************************************************************************
 Stages
 ************************************************************************************
-- Candidate Generation
-- Retrieval
-- Filtering
-- Reranking
+A large-scale recommendation system consists of multiple stages designed to efficiently retrieve, filter, and rank items to maximize user engagement and satisfaction. The three primary stages are Retrieval, Combining & Filtering, and Re-Ranking.  
+
+Retrieval  
+====================================================================================
+(Fetching an initial candidate pool from multiple sources)  
+
+Goals:  
+	- Reduce a large item pool (millions of candidates) to a manageable number (thousands).  
+	- Retrieve diverse candidates from multiple sources that might be relevant to the user.  
+	- Balance long-term preferences vs. short-term intent.  
+
+Metrics to Optimize For:  
+	- Recall@K – How many relevant items are in the top-K retrieved items?  
+	- Coverage – Ensuring diversity by retrieving from multiple pools.  
+	- Latency – Efficient retrieval in milliseconds at large scales.  
+
+Common Techniques for Different Goals:  
+
+
+Example - YouTube Recommendation:  
+	- Candidate pools: Watched videos, partially watched videos, topic-based videos, demographically popular videos, newly uploaded videos, videos from followed channels.  
+	- Techniques used: Two-Tower model for retrieval, Approximate Nearest Neighbors (ANN) for fast lookup.  
+
+Combining & Filtering  
+====================================================================================
+(Merging retrieved candidates from different sources and removing low-quality items)  
+
+Goals:  
+	- Merge multiple retrieved pools and assign confidence scores to each source.  
+	- Filter out irrelevant, duplicate, or low-quality candidates.  
+	- Apply business rules (e.g., compliance filtering, removing expired content).  
+
+Metrics to Optimize For:  
+	- Diversity – Ensuring different content types are represented.  
+	- Precision@K – How many retrieved items are actually relevant?  
+	- Fairness & Representation – Avoiding over-exposure of popular items.  
+	- Latency – Keeping the filtering process efficient.  
+
+Common Techniques for Different Goals:  
+
+
+Example - Newsfeed Recommendation:  
+	- Candidate sources: Text posts, image posts, video posts.  
+	- Filtering techniques: Removing duplicate posts, blocking low-quality content, filtering based on engagement thresholds.  
+
+Re-Ranking  
+====================================================================================
+(Final ranking of candidates based on personalization, diversity, and explore-exploit trade-offs)  
+
+Goals:  
+	- Optimize the order of candidates to maximize engagement.  
+	- Balance personalization with exploration (ensuring new content gets surfaced).  
+	- Ensure fairness and representation (avoid showing only highly popular items).  
+
+Metrics to Optimize For:  
+	- CTR (Click-Through Rate) – Measures immediate engagement.  
+	- NDCG (Normalized Discounted Cumulative Gain) – Measures ranking quality.  
+	- Exploration Ratio – Tracks new content shown to users.  
+	- Long-Term Engagement – Measures retention and repeat interactions.  
+
+Common Techniques for Different Goals:  
+
+
+Example - TikTok Recommendation:  
+	- Challenges: Need to mix trending videos, personalized content, and fresh videos.  
+	- Techniques used: Transformer-based ranking, popularity dampening, diversity-based re-ranking.  
+
 
 ************************************************************************************
 Patterns
