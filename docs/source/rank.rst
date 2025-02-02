@@ -13,7 +13,17 @@ Metrics
 
 Resources
 ====================================================================================
-Summary
+Overview: Stages
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Stage", "Goals", "Key Metrics", "Common Techniques"
+	:align: center
+	
+		Retrieval, Fetch diverse candidates from multiple sources, Recall@K; Coverage; Latency, Multi-tower models; ANN; User embeddings
+		Combining & Filtering, Merge candidates; remove duplicates; apply business rules, Diversity; Precision@K; Fairness, Weighted merging; Min-hashing; Rule-based filtering
+		Re-Ranking, Optimize order of recommendations for engagement, CTR; NDCG; Exploration Ratio, Neural Rankers; Bandits; DPP for diversity
+
+Overview: Patterns
 ------------------------------------------------------------------------------------
 .. csv-table:: 
 	:header: "Pattern", "Traditional Approach", "LLM Augmentations"
@@ -123,10 +133,110 @@ More Papers
 ************************************************************************************
 Stages
 ************************************************************************************
-- Candidate Generation
-- Retrieval
-- Filtering
-- Reranking
+A large-scale recommendation system consists of multiple stages designed to efficiently retrieve, filter, and rank items to maximize user engagement and satisfaction. The three primary stages are Retrieval, Combining & Filtering, and Re-Ranking.  
+
+Retrieval  
+====================================================================================
+(Fetching an initial candidate pool from multiple sources)  
+
+Goals:  
+------------------------------------------------------------------------------------
+	- Reduce a large item pool (millions of candidates) to a manageable number (thousands).  
+	- Retrieve diverse candidates from multiple sources that might be relevant to the user.  
+	- Balance long-term preferences vs. short-term intent.  
+
+Metrics to Optimize For:  
+------------------------------------------------------------------------------------
+	- Recall@K – How many relevant items are in the top-K retrieved items?  
+	- Coverage – Ensuring diversity by retrieving from multiple pools.  
+	- Latency – Efficient retrieval in milliseconds at large scales.  
+
+Common Techniques for Different Goals:  
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Goal", "Techniques"
+	:align: center
+
+		Heterogeneous Candidate Retrieval, Multi-tower models; Hybrid retrieval (Collaborative Filtering + Content-Based)
+		Personalization, User embeddings (e.g.; Two-Tower models; Matrix Factorization)
+		Exploration & Freshness, Real-time embeddings; Bandit-based exploration
+		Scalability & Efficiency, Approximate Nearest Neighbors (ANN); FAISS; HNSW
+		Cold-Start Handling, Content-based retrieval (TF-IDF; BERT); Popularity-based heuristics
+
+Example - YouTube Recommendation:  
+------------------------------------------------------------------------------------
+	- Candidate pools: Watched videos, partially watched videos, topic-based videos, demographically popular videos, newly uploaded videos, videos from followed channels.  
+	- Techniques used: Two-Tower model for retrieval, Approximate Nearest Neighbors (ANN) for fast lookup.  
+
+Combining & Filtering  
+====================================================================================
+(Merging retrieved candidates from different sources and removing low-quality items)  
+
+Goals:  
+------------------------------------------------------------------------------------
+	- Merge multiple retrieved pools and assign confidence scores to each source.  
+	- Filter out irrelevant, duplicate, or low-quality candidates.  
+	- Apply business rules (e.g., compliance filtering, removing expired content).  
+
+Metrics to Optimize For:  
+------------------------------------------------------------------------------------
+	- Diversity – Ensuring different content types are represented.  
+	- Precision@K – How many retrieved items are actually relevant?  
+	- Fairness & Representation – Avoiding over-exposure of popular items.  
+	- Latency – Keeping the filtering process efficient.  
+
+Common Techniques for Different Goals:  
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Goal", "Techniques"
+	:align: center
+
+		Merging Multiple Candidate Pools, Weighted aggregation based on confidence scores
+		Duplicate Removal, Min-hashing; Jaccard similarity; clustering-based deduplication
+		Quality Filtering, Heuristic filters; Rule-based filters; Adversarial detection
+		Business Constraints, Compliance rules (e.g.; sensitive content removal); Content freshness checks
+		Balancing Diversity, Re-weighting based on underrepresented categories
+		Scaling Up, Streaming pipelines (Kafka; Flink); Pre-filtering with Bloom Filters
+
+Example - Newsfeed Recommendation:  
+------------------------------------------------------------------------------------
+	- Candidate sources: Text posts, image posts, video posts.  
+	- Filtering techniques: Removing duplicate posts, blocking low-quality content, filtering based on engagement thresholds.  
+
+Re-Ranking  
+====================================================================================
+(Final ranking of candidates based on personalization, diversity, and explore-exploit trade-offs)  
+
+Goals:  
+------------------------------------------------------------------------------------
+	- Optimize the order of candidates to maximize engagement.  
+	- Balance personalization with exploration (ensuring new content gets surfaced).  
+	- Ensure fairness and representation (avoid showing only highly popular items).  
+
+Metrics to Optimize For:  
+------------------------------------------------------------------------------------
+	- CTR (Click-Through Rate) – Measures immediate engagement.  
+	- NDCG (Normalized Discounted Cumulative Gain) – Measures ranking quality.  
+	- Exploration Ratio – Tracks new content shown to users.  
+	- Long-Term Engagement – Measures retention and repeat interactions.  
+
+Common Techniques for Different Goals:  
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Goal", "Techniques"
+	:align: center
+
+		Personalized Ranking, Neural Ranking Models (e.g.; DeepFM; Wide & Deep; Transformer-based rankers)
+		Diversity Promotion, Determinantal Point Processes (DPP); Re-ranking by category
+		Explore-Exploit Balance, Multi-Armed Bandits (Thompson Sampling; UCB); Randomized Ranking
+		Handling Highly Popular Items, Popularity dampening; Re-ranking with popularity decay
+		Fairness & Representation, Re-weighting models; Exposure-aware ranking
+		Fast Re-Ranking, Tree-based models (GBDT); LightGBM; XGBoost
+
+Example - TikTok Recommendation:  
+------------------------------------------------------------------------------------
+	- Challenges: Need to mix trending videos, personalized content, and fresh videos.  
+	- Techniques used: Transformer-based ranking, popularity dampening, diversity-based re-ranking.  
 
 ************************************************************************************
 Patterns
@@ -350,11 +460,9 @@ Key Papers to Read
 
 	- "Deep Neural Networks for YouTube Recommendations" – Covington et al. (2016)  
 	- "Wide & Deep Learning for Recommender Systems" – Cheng et al. (2016)  
-	- "Transformers4Rec: Bridging the Gap Between NLP and Sequential Recommendation" – De Souza et al. (2021)  
 
 #. Hybrid and Production Systems  
 
-	- "Amazon.com Recommendations: Item-to-Item Collaborative Filtering" – Linden et al. (2003)  
 	- "Netflix Recommendations: Beyond the 5 Stars" – Gomez-Uribe et al. (2015)  
 
 Gathering Training Data & Labels  
