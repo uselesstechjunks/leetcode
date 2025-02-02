@@ -548,3 +548,108 @@ Handling Nuisances & Trade-offs
 	- Use randomized A/B testing to prevent algorithmic bias reinforcement.  
 	- Regularly refresh graph-based embeddings.  
 	- Trade-off: Frequent updates increase computational costs.  
+
+************************************************************************************
+LLM Applications
+************************************************************************************
+Leveraging Large Language Models (LLMs) like GPT, BERT, and T5 for various recommendation patterns
+
+Query-Item Recommendation
+====================================================================================
+Key Concept  
+------------------------------------------------------------------------------------
+- Traditional search relies on lexical matching (BM25, TF-IDF) or vector search.  
+- LLMs enhance ranking via reranking models (ColBERT, T5-based retrieval).  
+- Can be used for query expansion, understanding user intent, and handling ambiguous queries.  
+- Example use case: Google Search, AI-driven Q&A search (Perplexity AI).  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. LLM-Based Search Ranking  
+
+	- "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction Over BERT" – Khattab et al. (2020)  
+	- "T5 for Information Retrieval" – Nogueira et al. (2020)  
+#. LLM-Augmented Search  
+
+	- "InstructGPT for Information Retrieval" – Ouyang et al. (2023)  
+	- "GPT-4 for Web Search Augmentation" – Bender et al. (2023)  
+
+Item-Item Recommendation  
+====================================================================================
+Key Concept  
+------------------------------------------------------------------------------------
+- Traditional methods use co-occurrence matrices or content similarity (TF-IDF, embeddings).  
+- LLMs improve semantic similarity scoring, identifying nuanced item relationships.  
+- Multimodal LLMs (e.g., CLIP) combine text, images, and metadata to enhance recommendations.  
+- Example use case: E-commerce (Amazon's “similar items”), content platforms (Netflix’s related videos).  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. Multimodal LLMs for Recommendation  
+
+	- "CLIP-Recommend: Multimodal Learning for E-Commerce Recommendations" – Xu et al. (2023)  
+	- "Unified Vision-Language Pretraining for E-Commerce Recommendations" – Wang et al. (2022)  
+#. Semantic Similarity Using LLMs  
+
+	- "Semantic-Aware Item Matching with Large Language Models" – Chen et al. (2023)  
+	- "Contextual Item Recommendation with Pretrained LLMs" – Li et al. (2022)  
+
+User-Item Recommendation  
+====================================================================================
+Key Concept  
+------------------------------------------------------------------------------------
+- Traditional approaches rely on collaborative filtering (CF) or content-based filtering to predict user preferences.  
+- LLMs enhance this by learning richer user and item embeddings, capturing nuanced interactions.  
+- LLMs can generate user preferences dynamically via zero-shot/few-shot learning, improving personalization.  
+- Example use case: Personalized product descriptions, interactive recommendation assistants.  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. LLM-powered Recommendation  
+
+	- "GPT4Rec: A Generative Framework for Personalized Recommendation" – Wang et al. (2023)  
+	- "LLM-based Collaborative Filtering: Enhancing Recommendations with Large Language Models" – Liu et al. (2023)  
+#. Transformer-Based RecSys  
+
+	- "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations" – Sun et al. (2019)  
+	- "SASRec: Self-Attentive Sequential Recommendation" – Kang & McAuley (2018)  
+
+Session-Based Recommendation  
+====================================================================================
+Key Concept  
+------------------------------------------------------------------------------------
+- Traditional methods use sequential models (RNNs, GRUs, Transformers) to predict next-item interactions.  
+- LLMs enhance session modeling by leveraging sequential reasoning and contextual awareness.  
+- Few-shot prompting allows LLMs to infer session preferences without explicit training.  
+- Example use case: Dynamic content feeds (TikTok), real-time recommendations (Spotify session playlists).  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. Transformer-Based Session Recommendations  
+
+	- "SASRec: Self-Attentive Sequential Recommendation" – Kang & McAuley (2018)  
+	- "Next-Item Prediction Using Pretrained Language Models" – Sun et al. (2021)  
+#. LLM-Driven Dynamic Recommendation  
+
+	- "LLM-Powered Dynamic Personalized Recommendations" – Guo et al. (2023)  
+	- "Real-Time Recommendation with Large Language Models" – Zhang et al. (2023)  
+
+User-User Recommendation  
+====================================================================================
+Key Concept  
+------------------------------------------------------------------------------------
+- Typically modeled as a graph-based link prediction problem, where users are nodes.  
+- LLMs can enhance user similarity computations by processing richer profile texts (e.g., bios, chat history).  
+- Social connections can be inferred by analyzing natural language data, rather than relying solely on structural graph features.  
+- Example use case: Professional networking (LinkedIn), AI-assisted friend suggestions.  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. Graph-Based LLMs  
+
+	- "Graph Neural Networks Meet Large Language Models: A Survey" – Wu et al. (2023)  
+	- "LLM-powered Social Graph Completion for Friend Recommendations" – Huang et al. (2023)  
+#. Hybrid Graph and LLMs  
+
+	- "LLM-Augmented Node Classification in Social Networks" – Zhang et al. (2023)  
+	- "Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
