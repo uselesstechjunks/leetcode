@@ -13,6 +13,17 @@ Metrics
 
 Resources
 ====================================================================================
+Summary
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Pattern", "Traditional Approach", "LLM Augmentations"
+	:align: center
+
+		Query-Item, BM25; TF-IDF; Neural Ranking, LLM-based reranking; Query expansion
+		Item-Item, Co-occurrence; Similarity Matching, Semantic matching; Multimodal embeddings
+		User-Item, CF; Content-Based; Deep Learning, Personalized generation; Zero-shot preferences
+		Session-Based, Sequential Models; Transformers, Few-shot reasoning; Context-aware personalization
+		User-User, Graph-Based; Link Prediction, Profile-text analysis; Social graph augmentation
 Papers
 ------------------------------------------------------------------------------------
 	- BOF = Bag of features 
