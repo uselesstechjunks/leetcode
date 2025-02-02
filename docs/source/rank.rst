@@ -71,6 +71,101 @@ LLM for Recommendation
 ************************************************************************************
 Patterns
 ************************************************************************************
+Item-Item Recommendation  
+====================================================================================
+- Similar Products
+- Related Videos
+- "Customers Who Bought This Also Bought"
+
+Key Concept  
+------------------------------------------------------------------------------------
+- Item-item recommendation focuses on suggesting similar items based on user interactions. This is widely used in e-commerce, streaming platforms, and content discovery systems.  
+
+	- Typically modeled as an item simi-larity problem.  
+	- Unlike user-item recommendation, the goal is to find related items rather than predicting a user’s preferences.  
+
+- Common approaches include:  
+
+	- Item-Based Collaborative Filtering (Similarity between item interaction histories)  
+	- Content-Based Filtering (Similarity using item attributes like text, image, category)  
+	- Graph-Based Approaches (Item-item similarity using co-purchase graphs)  
+	- Deep Learning Methods (Representation learning, embeddings)  
+	- Hybrid Methods (Combining multiple approaches)  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. Collaborative Filtering-Based Approaches  
+
+	- "Item-Based Collaborative Filtering Recommendation Algorithms" – Sarwar et al. (2001)  
+	- "Matrix Factorization Techniques for Recommender Systems" – Koren et al. (2009)  
+
+#. Content-Based Approaches  
+
+	- "Learning Deep Representations for Content-Based Recommendation" – Wang et al. (2015)  
+	- "Deep Learning Based Recommender System: A Survey and New Perspectives" – Zhang et al. (2019)  
+
+#. Graph-Based & Hybrid Approaches  
+
+	- "Amazon.com Recommendations: Item-to-Item Collaborative Filtering" – Linden et al. (2003)  
+	- "PinSage: Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
+
+Gathering Training Data & Labels  
+------------------------------------------------------------------------------------
+#. Supervised Learning:  
+
+	- Label: Binary (1 = two items are similar, 0 = not similar).  
+	- Data sources: Co-purchase data, co-click data, content similarity.  
+	- Challenges: Defining meaningful similarity when explicit labels don’t exist.  
+
+#. Semi-Supervised Learning:  
+
+	- Clustering similar items based on embeddings or co-occurrence.  
+	- Weak supervision from user-generated tags, reviews.  
+
+#. Self-Supervised Learning:  
+
+	- Contrastive learning (e.g., learning embeddings by pushing dissimilar items apart).  
+	- Masked item prediction (e.g., predicting missing related items in a session).  
+
+Feature Engineering  
+------------------------------------------------------------------------------------
+- Item Features: Category, brand, price, textual description, images.  
+- Interaction Features: Co-purchase counts, view sequences, co-engagement.  
+- Graph Features: Item co-occurrence in user sessions, citation networks.  
+- Embedding-Based Features: Learned latent item representations.  
+- Contextual Features: Time decay (trending vs. evergreen items).  
+
+Handling Nuisances & Trade-offs  
+------------------------------------------------------------------------------------
+#. Cold-Start Problem  
+
+	- New items: Use content-based methods (text, image embeddings).  
+	- Few interactions: Boost exploration via diversity in recommendations.  
+	- Trade-off: Content-based methods may miss collaborative signals.  
+
+#. Novelty Effects 
+ 
+	- Boost engagement by temporarily surfacing new items.  
+	- Trade-off: Over-promoting new items can degrade relevance.  
+
+#. Popularity Bias  
+
+	- Downweight extremely popular items to avoid over-recommendation.  
+	- Diversify item recommendations per user segment.  
+	- Trade-off: Reducing popular items too much may lower engagement.  
+
+#. Explore-Exploit Balance  
+
+	- Use Thompson Sampling or contextual bandits.  
+	- Introduce diversity via re-ranking strategies.  
+	- Trade-off: Too much exploration may hurt conversion rates.  
+
+#. Avoiding Feedback Loops  
+
+	- Periodically refresh item similarities to prevent stale recommendations.  
+	- Use counterfactual evaluations to assess if users are stuck in recommendation bubbles.  
+	- Trade-off: More frequent updates increase computational complexity.  
+
 User-Item Recommendation  
 ====================================================================================
 - Homepage recommendations
