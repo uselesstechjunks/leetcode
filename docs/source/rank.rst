@@ -350,6 +350,99 @@ Handling Nuisances & Trade-offs
 	- Counterfactual evaluation (simulate what would happen if different recommendations were shown).  
 	- Trade-off: More frequent model updates increase computational costs.  
 
+Session-Based Recommendation  
+====================================================================================
+- Personalized recommendations based on recent user actions
+- short-term intent modeling
+- sequential recommendations
+
+Key Concept  
+------------------------------------------------------------------------------------
+Session-based recommendation focuses on predicting the next relevant item for a user based on their recent interactions, rather than long-term historical data. This is useful when:  
+
+	- Users don’t have extensive histories (e.g., guest users).  
+	- Preferences shift dynamically (e.g., browsing sessions in e-commerce).  
+	- Recent behavior is more indicative of intent than long-term history.  
+
+Common approaches include:  
+
+	- Rule-Based Methods (Most popular, trending, or recently viewed items)  
+	- Markov Chains & Sequential Models (Predicting next item based on state transitions)  
+	- Recurrent Neural Networks (RNNs, GRUs, LSTMs) (Capturing sequential dependencies)  
+	- Graph-Based Approaches (Session-based Graph Neural Networks)  
+	- Transformer-Based Models (Attention-based architectures for session modeling)  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. Traditional Approaches & Sequential Models  
+
+	- "Session-Based Recommendations with Recurrent Neural Networks" – Hidasi et al. (2016)  
+	- "Neural Architecture for Session-Based Recommendations" – Tang & Wang (2018)  
+
+#. Graph-Based Methods  
+
+	- "Session-Based Recommendation with Graph Neural Networks" – Wu et al. (2019)  
+	- "Next Item Recommendation with Self-Attention" – Sun et al. (2019)  
+
+#. Transformer-Based Methods  
+
+	- "SASRec: Self-Attentive Sequential Recommendation" – Kang & McAuley (2018)  
+	- "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations" – Sun et al. (2019)  
+
+Gathering Training Data & Labels  
+------------------------------------------------------------------------------------
+#. Supervised Learning:  
+
+	- Label: Next item in sequence (e.g., clicked/purchased item).  
+	- Data sources: User sessions, browsing logs, cart abandonment data.  
+	- Challenges: Short sessions make training harder; sparse interaction data.  
+
+#. Semi-Supervised Learning:  
+
+	- Use self-supervised tasks like predicting masked interactions.  
+	- Graph-based node propagation to learn session similarities.  
+
+#. Self-Supervised Learning:  
+
+	- Contrastive learning (e.g., predict next item from different user sessions).  
+	- Next-click prediction using masked sequence modeling (BERT-style).  
+
+Feature Engineering  
+------------------------------------------------------------------------------------
+- Session Features: Time spent, number of items viewed, recency of last interaction.  
+- Item Features: Product category, textual embeddings, popularity trends.  
+- Sequence Features: Click sequences, time gaps between interactions.  
+- Contextual Features: Device type, time of day, geographical location.  
+- Embedding-Based Features: Pretrained session embeddings (e.g., Word2Vec-like for items).  
+
+Handling Nuisances & Trade-offs 
+------------------------------------------------------------------------------------ 
+#. Cold-Start Problem  
+
+	- New sessions: Default to trending/popular items.  
+	- New items: Leverage content-based recommendations within sessions.  
+	- Trade-off: May fail to capture truly personalized intent.  
+
+#. Novelty Effects  
+
+	- Boost recent items in ranking to reflect dynamic preferences.  
+	- Trade-off: Overweighting recent activity may hurt recommendation diversity.  
+
+#. Popularity Bias  
+
+	- Adjust session-based rankings to include niche or long-tail items.  
+	- Trade-off: Too much diversity can reduce perceived relevance.  
+
+#. Explore-Exploit Balance  
+
+	- Reinforcement learning to adaptively explore new items in a session.  
+	- Trade-off: Over-exploration can degrade short-term session relevance.  
+
+#. Avoiding Feedback Loops  
+
+	- Periodically reset session-based learning to avoid stale recommendations.  
+	- Trade-off: Frequent resets may cause loss of valuable session insights.  
+
 User-User Recommendation  
 ====================================================================================
 - People You May Know
