@@ -24,7 +24,14 @@ Summary
 		User-Item, CF; Content-Based; Deep Learning, Personalized generation; Zero-shot preferences
 		Session-Based, Sequential Models; Transformers, Few-shot reasoning; Context-aware personalization
 		User-User, Graph-Based; Link Prediction, Profile-text analysis; Social graph augmentation
-Papers
+
+Videos
+------------------------------------------------------------------------------------
+- [youtube.com] `Stanford CS224W: Machine Learning w/ Graphs I 2023 I GNNs for Recommender Systems <https://www.youtube.com/watch?v=OV2VUApLUio>`_
+
+	- Mapped as an edge prediction problem in a bipartite graph
+
+Key Papers
 ------------------------------------------------------------------------------------
 	- BOF = Bag of features 
 	- NG = N-Gram
@@ -42,12 +49,61 @@ Papers
 		LLM, Collaborative Large Language Model for Recommender Systems
 		LLM, Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach
 
-Videos
+More Papers
 ------------------------------------------------------------------------------------
-- [youtube.com] `Stanford CS224W: Machine Learning w/ Graphs I 2023 I GNNs for Recommender Systems <https://www.youtube.com/watch?v=OV2VUApLUio>`_
+.. csv-table:: 
+	:header: "Year", "Title"
+	:align: center
 
-	- Mapped as an edge prediction problem in a bipartite graph
+		2001,Item-Based Collaborative Filtering Recommendation Algorithms – Sarwar et al.
+		2003,Amazon.com Recommendations: Item-to-Item Collaborative Filtering – Linden et al.
+		2007,Link Prediction Approaches and Applications – Liben-Nowell et al.
+		2008,An Introduction to Information Retrieval – Manning et al.
+		2009,BM25 and Beyond – Robertson et al.
+		2009,Matrix Factorization Techniques for Recommender Systems – Koren et al.
+		2010,Who to Follow: Recommending People in Social Networks – Twitter Research
+		2014,DeepWalk: Online Learning of Social Representations – Perozzi et al.
+		2015,Learning Deep Representations for Content-Based Recommendation – Wang et al.
+		2015,Netflix Recommendations: Beyond the 5 Stars – Gomez-Uribe et al.
+		2016,Deep Neural Networks for YouTube Recommendations – Covington et al.
+		2016,Wide & Deep Learning for Recommender Systems – Cheng et al.
+		2016,Session-Based Recommendations with Recurrent Neural Networks – Hidasi et al.
+		2017,DeepRank: A New Deep Architecture for Relevance Ranking in Information Retrieval – Pang et al.
+		2017,Neural Collaborative Filtering – He et al.
+		2017,A Guide to Neural Collaborative Filtering – He et al.
+		2018,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding – Devlin et al.
+		2018,PinSage: Graph Convolutional Neural Networks for Web-Scale Recommender Systems – Ying et al.
+		2018,Neural Architecture for Session-Based Recommendations – Tang & Wang
+		2018,SASRec: Self-Attentive Sequential Recommendation – Kang & McAuley
+		2018,Graph Convolutional Neural Networks for Web-Scale Recommender Systems – Ying et al.
+		2019,Deep Learning Based Recommender System: A Survey and New Perspectives – Zhang et al.
+		2019,Session-Based Recommendation with Graph Neural Networks – Wu et al.
+		2019,Next Item Recommendation with Self-Attention – Sun et al.
+		2019,BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations – Sun et al.
+		2020,Dense Passage Retrieval for Open-Domain Question Answering – Karpukhin et al.
+		2020,ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction Over BERT – Khattab et al.
+		2020,T5 for Information Retrieval – Nogueira et al.
+		2021,CLIP: Learning Transferable Visual Models from Natural Language Supervision – Radford et al.
+		2021,Transformers4Rec: Bridging the Gap Between NLP and Sequential Recommendation – De Souza et al.
+		2021,Graph Neural Networks: A Review of Methods and Applications – Wu et al.
+		2021,Next-Item Prediction Using Pretrained Language Models – Sun et al.
+		2022,Unified Vision-Language Pretraining for E-Commerce Recommendations – Wang et al.
+		2022,Contextual Item Recommendation with Pretrained LLMs – Li et al.
+		2023,InstructGPT for Information Retrieval – Ouyang et al.
+		2023,GPT-4 for Web Search Augmentation – Bender et al.
+		2023,CLIP-Recommend: Multimodal Learning for E-Commerce Recommendations – Xu et al.
+		2023,Semantic-Aware Item Matching with Large Language Models – Chen et al.
+		2023,GPT4Rec: A Generative Framework for Personalized Recommendation – Wang et al.
+		2023,LLM-based Collaborative Filtering: Enhancing Recommendations with Large Language Models – Liu et al.
+		2023,LLM-Powered Dynamic Personalized Recommendations – Guo et al.
+		2023,Real-Time Recommendation with Large Language Models – Zhang et al.
+		2023,Graph Neural Networks Meet Large Language Models: A Survey – Wu et al.
+		2023,LLM-powered Social Graph Completion for Friend Recommendations – Huang et al.
+		2023,LLM-Augmented Node Classification in Social Networks – Zhang et al.
 
+************************************************************************************
+Some Topics
+************************************************************************************
 Ranking
 ====================================================================================
 - Metric Recall@k (non differentiable)
@@ -78,6 +134,14 @@ Session/sequential RS
 LLM for Recommendation
 ====================================================================================
 - gotta read
+
+************************************************************************************
+Stages
+************************************************************************************
+- Candidate Generation
+- Retrieval
+- Filtering
+- Reranking
 
 ************************************************************************************
 Patterns
