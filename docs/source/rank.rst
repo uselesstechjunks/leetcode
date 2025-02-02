@@ -161,3 +161,98 @@ Handling Nuisances & Trade-offs
 	- Regular model updates to prevent reinforcing the same recommendations.  
 	- Counterfactual evaluation (simulate what would happen if different recommendations were shown).  
 	- Trade-off: More frequent model updates increase computational costs.  
+
+User-User Recommendation  
+====================================================================================
+- People You May Know
+- Friend Suggestions
+- Follower Recommendations
+
+Key Concept  
+------------------------------------------------------------------------------------
+- User-user recommendation focuses on predicting connections between users based on their behavior, interests, or existing social networks. 
+ 
+	#. Typically modeled as a link prediction problem in graphs.  
+	#. Used for social networks, professional connections, or matchmaking systems.  
+
+- Common approaches include:  
+
+	#. Collaborative Filtering (User-Based CF)  
+	#. Graph-Based Approaches (Graph Neural Networks, PageRank, Node2Vec, etc.)  
+	#. Feature-Based Matching (Demographic and behavior similarity)  
+	#. Hybrid Approaches (Graph + CF + Deep Learning)  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. Collaborative Filtering-Based Approaches  
+
+	- "Item-Based Collaborative Filtering Recommendation Algorithms" – Sarwar et al. (2001)  
+	- "A Guide to Neural Collaborative Filtering" – He et al. (2017)  
+
+#. Graph-Based Approaches  
+
+	- "DeepWalk: Online Learning of Social Representations" – Perozzi et al. (2014)  
+	- "Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
+	- "Graph Neural Networks: A Review of Methods and Applications" – Wu et al. (2021)  
+
+#. Hybrid and Large-Scale User-User Recommendation  
+
+	- "Link Prediction Approaches and Applications" – Liben-Nowell et al. (2007)  
+	- "Who to Follow: Recommending People in Social Networks" – Twitter Research (2010)  
+
+Gathering Training Data & Labels  
+------------------------------------------------------------------------------------
+#. Supervised Learning:  
+
+	- Label: Binary (1 = connection exists, 0 = no connection).  
+	- Data sources: Friendship graphs, follow/unfollow actions, mutual interests.  
+	- Challenges: Highly imbalanced data (most user pairs are not connected).  
+
+#. Semi-Supervised Learning:  
+
+	- Graph-based label propagation (e.g., predicting missing edges in a user graph).  
+	- Use unlabeled users with weak supervision from social structures.  
+
+#. Self-Supervised Learning:  
+
+	- Contrastive learning (e.g., learning embeddings where connected users are closer in vector space).  
+	- Masked edge prediction (e.g., hide some connections and train the model to reconstruct them).  
+
+Feature Engineering  
+------------------------------------------------------------------------------------
+- User Features: Profile attributes (age, location, industry, interests).  
+- Graph Features: Common neighbors, Jaccard similarity, Adamic-Adar score.  
+- Interaction Features: Message frequency, engagement level.  
+- Embedding-Based Features: Node2Vec or GNN-based embeddings.  
+- Contextual Features: Activity time, shared communities.  
+
+Handling Nuisances & Trade-offs  
+------------------------------------------------------------------------------------
+#. Cold-Start Problem  
+
+	- New users: Recommend based on shared attributes (location, interests).  
+	- New connections: Use heuristic-based similarity scores.  
+	- Trade-off: Can lead to homophily (over-recommending similar users).  
+
+#. Novelty Effects  
+
+	- Boost recommendations of new users to help them integrate faster.  
+	- Trade-off: High visibility to new users might hurt engagement from established users.  
+
+#. Popularity Bias  
+
+	- Penalize highly connected users in ranking.  
+	- Use diversity-enhancing ranking strategies.  
+	- Trade-off: Reducing bias may lower connection acceptance rates.  
+
+#. Explore-Exploit Balance  
+
+	- Multi-Armed Bandit strategies (exploring less-connected users).  
+	- Randomized ranking variations to encourage serendipity.  
+	- Trade-off: Excessive exploration can degrade user experience.  
+
+#. Avoiding Feedback Loops  
+
+	- Use randomized A/B testing to prevent algorithmic bias reinforcement.  
+	- Regularly refresh graph-based embeddings.  
+	- Trade-off: Frequent updates increase computational costs.  
