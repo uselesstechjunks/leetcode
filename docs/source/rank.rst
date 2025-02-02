@@ -15,17 +15,21 @@ Resources
 ====================================================================================
 Papers
 ------------------------------------------------------------------------------------
+	- BOF = Bag of features 
+	- NG = N-Gram
+	- CM = Causal Models (autoregressive)
+
 .. csv-table:: 
 	:header: "Tag", "Title"
 	:align: center
 
-		MLP, Neural Collaborative Filtering
+		Two Tower; MLP, Neural Collaborative Filtering
 		Two Tower; BOF, StarSpace: Embed All The Things!
-		Two Tower; Text + Context, Embedding-based Retrieval in Facebook Search
-		GCN: LightGCN, Simplifying and Powering Graph Convolution Network for Recommendation
-		LLM, Collaborative Large Language Model for Recommender Systems		
-		LLM, Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach		
-		Transformer; Session, Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation
+		Two Tower; NG+BOF, Embedding-based Retrieval in Facebook Search
+		GCN, LightGCN - Simplifying and Powering Graph Convolution Network for Recommendation
+		CM; Session, Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation
+		LLM, Collaborative Large Language Model for Recommender Systems
+		LLM, Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach
 
 Videos
 ------------------------------------------------------------------------------------
