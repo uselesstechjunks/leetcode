@@ -71,6 +71,99 @@ LLM for Recommendation
 ************************************************************************************
 Patterns
 ************************************************************************************
+Query-Item Recommendation  
+====================================================================================
+- Search systems
+- text-to-item search
+- image-to-item search
+- query expansion techniques
+
+Key Concept  
+------------------------------------------------------------------------------------
+- Query-item recommendation is the foundation of search systems, where a user provides a query (text, image, voice, etc.), and the system retrieves the most relevant items. Unlike standard recommendations, search is explicit—users express intent directly.  
+
+- Common approaches include:  
+
+	- Lexical Matching (TF-IDF, BM25, keyword-based retrieval)  
+	- Semantic Matching (Word embeddings, Transformer models like BERT, CLIP for vision-text matching)  
+	- Hybrid Search (Combining lexical and semantic search, e.g., BM25 + embeddings)  
+	- Learning-to-Rank (LTR) models optimizing ranking performance based on user interactions)  
+	- Multimodal Search (Image-to-text retrieval, video search, voice search, etc.)  
+
+Key Papers to Read  
+------------------------------------------------------------------------------------
+#. Traditional Information Retrieval  
+
+	- "An Introduction to Information Retrieval" – Manning et al. (2008)  
+	- "BM25 and Beyond" – Robertson et al. (2009)  
+
+#. Neural Ranking Models  
+
+	- "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" – Devlin et al. (2018)  
+	- "Dense Passage Retrieval for Open-Domain Question Answering" – Karpukhin et al. (2020)  
+
+#. Multimodal & Deep Learning-Based Search  
+
+	- "CLIP: Learning Transferable Visual Models from Natural Language Supervision" – Radford et al. (2021)  
+	- "DeepRank: A New Deep Architecture for Relevance Ranking in Information Retrieval" – Pang et al. (2017)  
+
+Gathering Training Data & Labels  
+------------------------------------------------------------------------------------
+#. Supervised Learning:  
+
+	- Label: Binary (clicked vs. not clicked) or relevance score (explicit ratings, dwell time).  
+	- Data sources: Search logs, query-click data, user feedback (thumbs up/down).  
+	- Challenges: Noisy labels (e.g., clicks may not always indicate relevance).  
+
+#. Semi-Supervised Learning:  
+
+	- Use query expansion techniques (e.g., weak supervision from similar queries).  
+	- Leverage pseudo-labeling (e.g., use a weaker ranker to generate labels).  
+
+#. Self-Supervised Learning:  
+
+	- Contrastive learning (e.g., train embeddings by pulling query and relevant items closer).  
+	- Masked query prediction (e.g., predicting missing words in search queries).  
+
+Feature Engineering  
+------------------------------------------------------------------------------------
+- Query Features: Term frequency, query length, part-of-speech tagging.  
+- Item Features: Title, description, category, metadata, embeddings.  
+- Interaction Features: Click history, query-to-item dwell time, CTR.  
+- Contextual Features: Time of query, device type, user history.  
+- Embedding-Based Features: Pretrained word embeddings (Word2Vec, FastText, BERT embeddings).  
+
+Handling Nuisances & Trade-offs  
+------------------------------------------------------------------------------------
+#. Cold-Start Problem  
+
+	- New queries: Use query expansion via NLP techniques (e.g., synonym mining).  
+	- New items: Use embeddings to map items to semantically similar ones.  
+	- Trade-off: Over-expansion can retrieve noisy or irrelevant results.  
+
+#. Novelty Effects  
+
+	- Promote fresh items by boosting recency in ranking models.  
+	- Trade-off: Too much emphasis on new content may degrade long-term user satisfaction.  
+
+#. Popularity Bias  
+
+	- Penalize over-recommended items in search results.  
+	- Introduce personalized ranking adjustments per user profile.  
+	- Trade-off: Too much de-biasing may harm engagement rates.  
+
+#. Explore-Exploit Balance  
+
+	- Contextual bandits for dynamic ranking adjustments.  
+	- Randomized exploration in search results (e.g., diverse result sets).  
+	- Trade-off: Excessive exploration may reduce precision and user satisfaction.  
+
+#. Avoiding Feedback Loops  
+
+	- Regularly update embeddings and ranking models.  
+	- Use counterfactual learning to estimate impact of unseen queries.  
+	- Trade-off: More frequent retraining requires higher computational cost.  
+
 Item-Item Recommendation  
 ====================================================================================
 - Similar Products
