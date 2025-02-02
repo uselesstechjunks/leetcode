@@ -7,15 +7,31 @@ Resources
 Metrics
 ====================================================================================
 .. important::
-  * [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
-  * [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
 
-************************************************************************************
-Personalised homepage recommendations 
-************************************************************************************
-RecSys learning summary (stanford graph NN lecture):
+	* [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
+	* [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
 
-- mapped as an edge prediction problem in a bipartite graph
+Resources
+====================================================================================
+Papers
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Tag", "Title"
+	:align: center
+
+		MLP, Neural Collaborative Filtering
+		Two Tower; BOF, StarSpace: Embed All The Things!
+		Two Tower; Text + Context, Embedding-based Retrieval in Facebook Search
+		GCN: LightGCN, Simplifying and Powering Graph Convolution Network for Recommendation
+		LLM, Collaborative Large Language Model for Recommender Systems		
+		LLM, Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach		
+		Transformer; Session, Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation
+
+Videos
+------------------------------------------------------------------------------------
+- [youtube.com] `Stanford CS224W: Machine Learning w/ Graphs I 2023 I GNNs for Recommender Systems <https://www.youtube.com/watch?v=OV2VUApLUio>`_
+
+	- Mapped as an edge prediction problem in a bipartite graph
 
 Ranking
 ====================================================================================
