@@ -42,20 +42,39 @@ Overview: Patterns
 
 Overview: Common Issues
 ------------------------------------------------------------------------------------
-#. Cold-start problem (new users & new items).  
-#. Ensuring user engagement isn’t due to novelty effect.  
-#. Tackling popularity bias (e.g., highly popular items dominating recommendations).  
-#. Avoiding feedback loops.  
-#. Ensuring diversity in items.  
-#. Personalized search & recommendations.  
-#. Scalability & low-latency retrieval.  
-#. Data sparsity in user-item interactions.  
-#. Balancing multiple business objectives (CTR vs. fairness vs. revenue).  
-#. Cross-device and cross-session personalization.  
-#. Cold-start for new contexts (e.g., emerging trends, viral content).  
-#. Privacy concerns & compliance (GDPR, CCPA).  
-#. Long-term user retention vs. short-term engagement trade-offs.  
-#. Multi-modality & cross-domain recommendation challenges.  
+- General Issues in Search & Recommendation Systems
+
+	- Cold-Start Problem (Users, items)
+	- Popularity Bias & Feedback Loops
+	- Short-Term Engagement vs. Long-Term User Retention
+	- Diversity vs. Personalization Trade-Off
+	- Real-Time Personalization & Latency Trade-Offs
+	- Balancing multiple business objectives (CTR vs. fairness vs. revenue)
+	- Cross-device and cross-session personalization
+	- Privacy concerns & compliance (GDPR, CCPA)
+	- Multi-modality & cross-domain recommendation challenges
+
+- Domain-Specific Issues & Their Unique Challenges
+
+	- Search-Specific Issues: Query Understanding & Intent Disambiguation
+	- E-Commerce Issues: Balancing Revenue & User Satisfaction
+	- Video & Music Streaming: Content-Length Bias in Recommendations
+
+Overview: Domains
+------------------------------------------------------------------------------------
+Music
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: 
+	:header: "Issue", "Why Its Important", "Strategic Fixes & Trade-Offs"
+	:align: center
+
+		Short-Term vs. Long-Term Personalization, Users listening habits change over time, Hybrid models balancing recent & long-term preferences
+		Repetition & Content Fatigue, Avoid overplaying the same songs, Playlist diversity; session-aware filtering
+		Context-Aware Recommendations, Music preferences change by mood/activity, Implicit context detection vs. manual tags
+		Popularity Bias & Lack of Exposure, Overexposure of big artists; niche artists struggle, Fairness-aware ranking; discovery playlists
+		Cold-Start Problem for New Artists, New tracks struggle for exposure, Metadata-based linking; artist collaborations
+		Balancing Exploration vs. Personalization, Users want both new and familiar music, RL-based dynamic ranking; exploration constraints
+		Multi-Modal Music Discovery, Listeners discover music via lyrics; themes; podcasts, Cross-domain retrieval using audio/text embeddings
 
 Videos
 ------------------------------------------------------------------------------------
@@ -325,37 +344,6 @@ Feature Engineering
 - Contextual Features: Time of query, device type, user history.  
 - Embedding-Based Features: Pretrained word embeddings (Word2Vec, FastText, BERT embeddings).  
 
-Handling Nuisances & Trade-offs  
-------------------------------------------------------------------------------------
-#. Cold-Start Problem  
-
-	- New queries: Use query expansion via NLP techniques (e.g., synonym mining).  
-	- New items: Use embeddings to map items to semantically similar ones.  
-	- Trade-off: Over-expansion can retrieve noisy or irrelevant results.  
-
-#. Novelty Effects  
-
-	- Promote fresh items by boosting recency in ranking models.  
-	- Trade-off: Too much emphasis on new content may degrade long-term user satisfaction.  
-
-#. Popularity Bias  
-
-	- Penalize over-recommended items in search results.  
-	- Introduce personalized ranking adjustments per user profile.  
-	- Trade-off: Too much de-biasing may harm engagement rates.  
-
-#. Explore-Exploit Balance  
-
-	- Contextual bandits for dynamic ranking adjustments.  
-	- Randomized exploration in search results (e.g., diverse result sets).  
-	- Trade-off: Excessive exploration may reduce precision and user satisfaction.  
-
-#. Avoiding Feedback Loops  
-
-	- Regularly update embeddings and ranking models.  
-	- Use counterfactual learning to estimate impact of unseen queries.  
-	- Trade-off: More frequent retraining requires higher computational cost.  
-
 Item-Item Recommendation  
 ====================================================================================
 - Similar Products
@@ -418,38 +406,7 @@ Feature Engineering
 - Interaction Features: Co-purchase counts, view sequences, co-engagement.  
 - Graph Features: Item co-occurrence in user sessions, citation networks.  
 - Embedding-Based Features: Learned latent item representations.  
-- Contextual Features: Time decay (trending vs. evergreen items).  
-
-Handling Nuisances & Trade-offs  
-------------------------------------------------------------------------------------
-#. Cold-Start Problem  
-
-	- New items: Use content-based methods (text, image embeddings).  
-	- Few interactions: Boost exploration via diversity in recommendations.  
-	- Trade-off: Content-based methods may miss collaborative signals.  
-
-#. Novelty Effects 
- 
-	- Boost engagement by temporarily surfacing new items.  
-	- Trade-off: Over-promoting new items can degrade relevance.  
-
-#. Popularity Bias  
-
-	- Downweight extremely popular items to avoid over-recommendation.  
-	- Diversify item recommendations per user segment.  
-	- Trade-off: Reducing popular items too much may lower engagement.  
-
-#. Explore-Exploit Balance  
-
-	- Use Thompson Sampling or contextual bandits.  
-	- Introduce diversity via re-ranking strategies.  
-	- Trade-off: Too much exploration may hurt conversion rates.  
-
-#. Avoiding Feedback Loops  
-
-	- Periodically refresh item similarities to prevent stale recommendations.  
-	- Use counterfactual evaluations to assess if users are stuck in recommendation bubbles.  
-	- Trade-off: More frequent updates increase computational complexity.  
+- Contextual Features: Time decay (trending vs. evergreen items).   
 
 User-Item Recommendation  
 ====================================================================================
@@ -512,33 +469,6 @@ Feature Engineering
 - Cross Features: User-item interactions (e.g., user’s affinity to a category).  
 - Contextual Features: Time of day, device, location.  
 - Embedding-based Features: Learned latent factors from models like Word2Vec for items/users.  
-
-Handling Nuisances & Trade-offs  
-------------------------------------------------------------------------------------
-#. Cold-Start Problem  
-
-	- New users: Use demographic-based recommendations or onboarding surveys.  
-	- New items: Use content-based embeddings, metadata-based recommendations.  
-	- Trade-off: Over-relying on metadata may lead to popularity bias.  
-#. Novelty Effects  
-
-	- Boosting exploration by temporarily ranking new items higher.  
-	- Trade-off: Can over-promote untested items, leading to poor user experience.  
-#. Popularity Bias  
-
-	- Penalizing highly popular items in ranking.  
-	- Personalized diversity re-ranking (e.g., promoting niche items based on user profile).  
-	- Trade-off: Too much de-biasing can hurt engagement.  
-#. Explore-Exploit Balance  
-
-	- Bandit-based approaches (e.g., Thompson Sampling, UCB).  
-	- Randomized ranking perturbation to introduce diversity.  
-	- Trade-off: Excess exploration can hurt short-term metrics.  
-#. Avoiding Feedback Loops  
-
-	- Regular model updates to prevent reinforcing the same recommendations.  
-	- Counterfactual evaluation (simulate what would happen if different recommendations were shown).  
-	- Trade-off: More frequent model updates increase computational costs.  
 
 Session-Based Recommendation  
 ====================================================================================
@@ -605,34 +535,6 @@ Feature Engineering
 - Contextual Features: Device type, time of day, geographical location.  
 - Embedding-Based Features: Pretrained session embeddings (e.g., Word2Vec-like for items).  
 
-Handling Nuisances & Trade-offs 
------------------------------------------------------------------------------------- 
-#. Cold-Start Problem  
-
-	- New sessions: Default to trending/popular items.  
-	- New items: Leverage content-based recommendations within sessions.  
-	- Trade-off: May fail to capture truly personalized intent.  
-
-#. Novelty Effects  
-
-	- Boost recent items in ranking to reflect dynamic preferences.  
-	- Trade-off: Overweighting recent activity may hurt recommendation diversity.  
-
-#. Popularity Bias  
-
-	- Adjust session-based rankings to include niche or long-tail items.  
-	- Trade-off: Too much diversity can reduce perceived relevance.  
-
-#. Explore-Exploit Balance  
-
-	- Reinforcement learning to adaptively explore new items in a session.  
-	- Trade-off: Over-exploration can degrade short-term session relevance.  
-
-#. Avoiding Feedback Loops  
-
-	- Periodically reset session-based learning to avoid stale recommendations.  
-	- Trade-off: Frequent resets may cause loss of valuable session insights.  
-
 User-User Recommendation  
 ====================================================================================
 - People You May Know
@@ -696,37 +598,6 @@ Feature Engineering
 - Interaction Features: Message frequency, engagement level.  
 - Embedding-Based Features: Node2Vec or GNN-based embeddings.  
 - Contextual Features: Activity time, shared communities.  
-
-Handling Nuisances & Trade-offs  
-------------------------------------------------------------------------------------
-#. Cold-Start Problem  
-
-	- New users: Recommend based on shared attributes (location, interests).  
-	- New connections: Use heuristic-based similarity scores.  
-	- Trade-off: Can lead to homophily (over-recommending similar users).  
-
-#. Novelty Effects  
-
-	- Boost recommendations of new users to help them integrate faster.  
-	- Trade-off: High visibility to new users might hurt engagement from established users.  
-
-#. Popularity Bias  
-
-	- Penalize highly connected users in ranking.  
-	- Use diversity-enhancing ranking strategies.  
-	- Trade-off: Reducing bias may lower connection acceptance rates.  
-
-#. Explore-Exploit Balance  
-
-	- Multi-Armed Bandit strategies (exploring less-connected users).  
-	- Randomized ranking variations to encourage serendipity.  
-	- Trade-off: Excessive exploration can degrade user experience.  
-
-#. Avoiding Feedback Loops  
-
-	- Use randomized A/B testing to prevent algorithmic bias reinforcement.  
-	- Regularly refresh graph-based embeddings.  
-	- Trade-off: Frequent updates increase computational costs.  
 
 ************************************************************************************
 LLM Applications
@@ -834,7 +705,141 @@ Key Papers to Read
 	- "Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
 
 ************************************************************************************
-Diversity in Recommendation Systems
+Issues in Search & Recommendation Systems
+************************************************************************************
+General Issues
+====================================================================================
+Cold-Start Problem (Users & Items)  
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- New users: No interaction history makes personalization difficult.  
+	- New items: Struggle to get exposure due to lack of engagement signals.  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Content-Based Methods (Text embeddings, Image/Video features) → Good for new items, but lacks user personalization.  
+	- Demographic-Based Recommendations (Cluster similar users) → Generalizes well but risks oversimplification.  
+	- Randomized Exploration (Show new items randomly) → Increases fairness but can reduce CTR.  
+
+- Domain-Specific Notes:  
+
+	- E-commerce (Amazon, Etsy) → Cold-start for new sellers & niche products.  
+	- Video Streaming (Netflix, YouTube) → Cold-start for newly released content.  
+
+Popularity Bias & Feedback Loops
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- Over-recommending already popular items creates a "rich-get-richer" effect.  
+	- Items with low initial exposure struggle to gain traction.  
+	- Reinforces biases in user engagement, making it harder to surface niche or novel content.  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Re-Ranking with Popularity Dampening (Decay-based adjustments) → Improves exposure but can hurt user satisfaction.  
+	- Counterfactual Learning (Causal ML for fairness) → Breaks bias loops but hard to implement at scale.  
+	- Multi-Armed Bandits (UCB, Thompson Sampling) → Helps exploration but can reduce short-term revenue.  
+
+- Domain-Specific Notes:  
+
+	- Social Media (TikTok, Twitter, Facebook) → Celebrity overexposure (e.g., verified users dominating feeds).  
+	- News Aggregators (Google News, Apple News) → Same sources getting recommended (e.g., mainstream news over independent journalism).  
+
+Short-Term Engagement vs. Long-Term User Retention  
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- Systems often optimize for immediate engagement (CTR, watch time, purchases), which can lead to addictive behaviors or content fatigue.  
+	- Over-exploitation of "sticky content" (clickbait, sensationalism, autoplay loops) may reduce long-term satisfaction.  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Multi-Objective Optimization (CTR + Long-Term Retention) → Complex to balance but essential for sustainability.  
+	- Delayed Reward Models (Reinforcement Learning) → Great for long-term user retention but slow learning process.  
+	- Personalization Decay (Balancing Freshness vs. Relevance) → Introduces diverse content but can feel random to users.  
+
+- Domain-Specific Notes:  
+
+	- YouTube, TikTok, Instagram → Prioritizing sensational viral content over educational material.  
+	- E-Commerce (Amazon, Alibaba) → Short-term discounts vs. long-term brand loyalty.  
+
+Diversity vs. Personalization Trade-Off  
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- Highly personalized feeds often reinforce user preferences too strongly, limiting exposure to new content.  
+	- Users may get stuck in content silos (e.g., political polarization, filter bubbles).  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Diversity-Promoting Re-Ranking (DPP, Exploration Buffers) → Reduces filter bubbles but may decrease engagement.  
+	- Diversity-Constrained Search (Re-weighting ranking models) → Promotes varied content but risks reducing precision.  
+	- Hybrid User-Item Graphs (Graph Neural Networks for diversification) → Balances exploration but requires expensive training.  
+
+- Domain-Specific Notes:  
+
+	- Social Media (Facebook, Twitter, YouTube) → Political echo chambers & misinformation bubbles.  
+	- E-commerce (Amazon, Etsy, Zalando) → Users seeing only one type of product repeatedly.  
+
+Real-Time Personalization & Latency Trade-Offs  
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- Personalized recommendations require real-time feature updates and low-latency inference.  
+	- Search relevance depends on immediate context (e.g., location, time of day, trending topics).  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Precomputed User Embeddings (FAISS, HNSW, Vector DBs) → Speeds up search but sacrifices personalization flexibility.  
+	- Edge AI for On-Device Personalization → Reduces latency but increases computational costs.  
+	- Session-Based Recommendation Models (Transformers for Session-Based Context) → Great for short-term personalization but expensive for large user bases.  
+
+- Domain-Specific Notes:  
+
+	- E-Commerce (Amazon, Walmart, Shopee) → Latency constraints for "similar item" recommendations.  
+	- Search Engines (Google, Bing, Baidu) → Needing real-time personalization without slowing down results.  
+
+Domain-Specific
+====================================================================================
+Search
+------------------------------------------------------------------------------------  
+- Query Understanding & Intent Disambiguation
+
+	- Users enter ambiguous or vague queries, requiring intent inference.  
+	- Example: Searching for “apple” – Is it a fruit, a company, or a music service?  
+	- Solutions & Trade-Offs:  
+	
+		- LLM-Powered Query Rewriting (T5, GPT) → Improves relevance but risks over-modifying queries.  
+		- Session-Aware Query Expansion → Helps disambiguation but increases computational cost.  
+
+E-Commerce
+------------------------------------------------------------------------------------
+- Balancing Revenue & User Satisfaction  
+
+	- Revenue-driven recommendations (sponsored ads, promoted products) vs. organic recommendations.  
+	- Example: Amazon mixing sponsored and personalized search results.  
+	- Solutions & Trade-Offs:  
+	
+		- Hybrid Models (Re-ranking with Fairness Constraints) → Balances organic vs. paid but hard to tune for revenue goals.  
+		- Trust-Based Ranking (Reducing deceptive sellers, fake reviews) → Improves satisfaction but may lower short-term sales.  
+
+Video & Music Streaming
+------------------------------------------------------------------------------------
+- Content-Length Bias in Recommendations  
+
+	- Recommendation models often favor shorter videos (TikTok, YouTube Shorts) over long-form content.  
+	- Example: YouTube’s watch-time optimization may prioritize clickbaity short videos over educational content.  
+	- Solutions & Trade-Offs:  
+	
+		- Normalized Engagement Metrics (Watch Percentage vs. Watch Time) → Improves long-form content exposure but may reduce video diversity.  
+		- Hybrid-Length Recommendations (Mixing Shorts & Full Videos) → Enhances variety but harder to rank effectively. 
+************************************************************************************
+Personalisation
+************************************************************************************
+
+************************************************************************************
+Diversity
 ************************************************************************************
 - Goal
 
@@ -1121,3 +1126,134 @@ Cons:
 
 	- Higher Inference Cost - Re-ranking every session in real-time increases server load.  
 	- Risk of Over-Exploration - If diversity is forced, users may feel the system is less relevant.  
+
+************************************************************************************
+Domain Knowledge
+************************************************************************************
+Music
+====================================================================================
+Short-Term vs. Long-Term Personalization
+------------------------------------------------------------------------------------
+- Why It Matters:
+
+	- Users music preferences change over time, but most recommendation models overly rely on recent activity.
+	- Recommending only recently played songs can overfit short-term moods and ignore long-term preferences.
+
+- Strategic Solutions & Trade-Offs:
+
+	- Session-Based Personalization (Short-Term Context Models)  Captures mood-based preferences but can overfit recent choices.
+	- Hybrid Long-Term + Short-Term Embeddings (Contrastive Learning on Listening History)  Balances nostalgia & discovery but computationally expensive.
+	- Decay-Based Weighting on Past Behavior  Helps phase out stale preferences but requires careful tuning.
+
+- Spotifys Approach:
+
+	- Balances On Repeat (long-term) and Discover Weekly (exploration).
+
+Repetition & Content Fatigue (Avoiding Overplayed Songs)
+------------------------------------------------------------------------------------
+- Why It Matters:
+
+	- Users dislike hearing the same songs too frequently in personalized playlists.
+	- Music recommendation systems tend to reinforce top tracks due to high past engagement.
+
+- Strategic Solutions & Trade-Offs:
+
+	- Play-Session Awareness (Avoiding recently played tracks)  Prevents fatigue but risks reducing personalization strength.
+	- Diversified Playlist Generation (Embedding Clustering)  Encourages discovery but may introduce unrelated tracks.
+	- Temporal Diversity Constraints (Recommender-aware time gaps)  Reduces overexposure but adds complexity to ranking models.
+
+- Spotify & Apple Musics Fix:
+
+	- Autogenerated playlists (e.g., Daily Mix, Radio) have anti-repetition constraints.
+
+Context-Aware Recommendations (Music for Different Situations)
+------------------------------------------------------------------------------------
+- Why It Matters:
+
+	- Music preferences vary by context (workout, driving, studying, relaxing), but most recommenders treat all listening the same.
+
+- Strategic Solutions & Trade-Offs:
+
+	- User-Controlled Context Tags (Spotifys Mood Playlists, YouTube Musics Activity Mode)  More control but adds friction.
+	- Implicit Context Detection (Using location, time, device, previous context switches)  Improves automation but risks privacy concerns.
+	- Adaptive Playlist Generation (Real-time context-aware re-ranking)  Better real-world usability but increases computational costs.
+
+- Industry Example:
+
+	- Spotifys Made for You mixes genres based on past listening sessions.
+
+Popularity Bias & Lack of Exposure for Niche Artists
+------------------------------------------------------------------------------------
+- Why It Matters:
+
+	- Big-label artists dominate recommendations, making it hard for new/independent musicians to gain visibility.
+	- Overemphasis on top charts and algorithmic repetition reinforces the same mainstream music.
+
+- Strategic Solutions & Trade-Offs:
+
+	- Fairness-Aware Re-Ranking (Exposing lesser-known artists)  Promotes diversity but may reduce engagement.
+	- User Preference-Based Exploration (Blending familiar & new artists)  Increases discovery but harder to balance.
+	- Contextual Boosting (Surfacing niche content in certain playlists)  Encourages exploration but risks user dissatisfaction.
+
+- Spotifys Fix:
+
+	- Discover Weekly and Release Radar to highlight emerging artists.
+
+Cold-Start Problem for New Artists & Songs
+------------------------------------------------------------------------------------
+- Why It Matters:
+
+	- New artists and newly released tracks struggle to get exposure since they have no engagement history.
+
+- Strategic Solutions & Trade-Offs:
+
+	- Metadata-Based Recommendations (Genre, BPM, lyrics embeddings)  Useful for early exposure but lacks engagement feedback.
+	- Collaborative Boosting (Linking new artists to known artists)  Improves visibility but risks inaccurate pairing.
+	- User-Driven Exploration (Playlists like Fresh Finds)  Promotes new songs but may not reach mainstream listeners.
+
+- Example:
+
+	- Spotifys Fresh Finds is a human-curated playlist designed for emerging artists.
+
+Balancing Exploration vs. Personalization in Playlists
+------------------------------------------------------------------------------------
+- Why It Matters:
+
+	- Users want to hear familiar songs but also expect discovery of new tracks.
+	- Too much exploration reduces engagement, too little keeps users stuck in their existing preferences.
+
+- Strategic Solutions & Trade-Offs:
+
+	- Reinforcement Learning-Based Ranking (Balancing Novelty & Familiarity)  Dynamically adjusts exploration but requires more data.
+	- Hybrid Personalized Playlists (50% known, 50% new)  Encourages discovery but still risks disengagement.
+	- Diversity Re-Ranking Models (Ensuring mix of different artist popularity levels)  Enhances engagement but increases complexity.
+
+- Spotifys Fix:
+
+	- Discover Weekly mixes familiar artists with newly recommended artists.
+
+Multi-Modal Recommendation (Lyrics, Podcasts, Audio Similarity)
+------------------------------------------------------------------------------------
+- Why It Matters:
+
+	- Music discovery can be driven by lyrics, themes, artist backstories, and spoken content (podcasts).
+	- Traditional recommendation models focus only on collaborative filtering (listening history).
+
+- Strategic Solutions & Trade-Offs:
+
+	- Lyrics-Based Embeddings (Thematic music recommendations)  Enhances meaning-based recommendations but requires NLP processing.
+	- Cross-Domain Music-Podcast Recommendation (Shared interests)  Improves discovery but harder to rank relevance.
+	- Audio Similarity-Based Retrieval (Matching based on timbre, rhythm)  Better for organic discovery but requires deep learning models.
+
+- Industry Example:
+
+	- YouTube Music cross-recommends music & podcasts based on topics.
+
+Social Media
+====================================================================================
+
+Short Video
+====================================================================================
+
+E-Commerce
+====================================================================================
