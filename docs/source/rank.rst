@@ -40,6 +40,23 @@ Overview: Patterns
 		Session-Based, Sequential Models; Transformers, Few-shot reasoning; Context-aware personalization
 		User-User, Graph-Based; Link Prediction, Profile-text analysis; Social graph augmentation
 
+Overview: Common Issues
+------------------------------------------------------------------------------------
+#. Cold-start problem (new users & new items).  
+#. Ensuring user engagement isn’t due to novelty effect.  
+#. Tackling popularity bias (e.g., highly popular items dominating recommendations).  
+#. Avoiding feedback loops.  
+#. Ensuring diversity in items.  
+#. Personalized search & recommendations.  
+#. Scalability & low-latency retrieval.  
+#. Data sparsity in user-item interactions.  
+#. Balancing multiple business objectives (CTR vs. fairness vs. revenue).  
+#. Cross-device and cross-session personalization.  
+#. Cold-start for new contexts (e.g., emerging trends, viral content).  
+#. Privacy concerns & compliance (GDPR, CCPA).  
+#. Long-term user retention vs. short-term engagement trade-offs.  
+#. Multi-modality & cross-domain recommendation challenges.  
+
 Videos
 ------------------------------------------------------------------------------------
 - [youtube.com] `Stanford CS224W: Machine Learning w/ Graphs I 2023 I GNNs for Recommender Systems <https://www.youtube.com/watch?v=OV2VUApLUio>`_
