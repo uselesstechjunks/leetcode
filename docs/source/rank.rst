@@ -60,6 +60,22 @@ Overview: Common Issues
 	- E-Commerce Issues: Balancing Revenue & User Satisfaction
 	- Video & Music Streaming: Content-Length Bias in Recommendations
 
+Overview: Domains
+------------------------------------------------------------------------------------
+Music
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: 
+	:header: "Issue", "Why Its Important", "Strategic Fixes & Trade-Offs"
+	:align: center
+
+		Short-Term vs. Long-Term Personalization, Users listening habits change over time, Hybrid models balancing recent & long-term preferences
+		Repetition & Content Fatigue, Avoid overplaying the same songs, Playlist diversity; session-aware filtering
+		Context-Aware Recommendations, Music preferences change by mood/activity, Implicit context detection vs. manual tags
+		Popularity Bias & Lack of Exposure, Overexposure of big artists; niche artists struggle, Fairness-aware ranking; discovery playlists
+		Cold-Start Problem for New Artists, New tracks struggle for exposure, Metadata-based linking; artist collaborations
+		Balancing Exploration vs. Personalization, Users want both new and familiar music, RL-based dynamic ranking; exploration constraints
+		Multi-Modal Music Discovery, Listeners discover music via lyrics; themes; podcasts, Cross-domain retrieval using audio/text embeddings
+
 Videos
 ------------------------------------------------------------------------------------
 - [youtube.com] `Stanford CS224W: Machine Learning w/ Graphs I 2023 I GNNs for Recommender Systems <https://www.youtube.com/watch?v=OV2VUApLUio>`_
@@ -691,7 +707,133 @@ Key Papers to Read
 ************************************************************************************
 Issues in Search & Recommendation Systems
 ************************************************************************************
+General Issues
+====================================================================================
+Cold-Start Problem (Users & Items)  
+------------------------------------------------------------------------------------
+- Why It Matters:  
 
+	- New users: No interaction history makes personalization difficult.  
+	- New items: Struggle to get exposure due to lack of engagement signals.  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Content-Based Methods (Text embeddings, Image/Video features) → Good for new items, but lacks user personalization.  
+	- Demographic-Based Recommendations (Cluster similar users) → Generalizes well but risks oversimplification.  
+	- Randomized Exploration (Show new items randomly) → Increases fairness but can reduce CTR.  
+
+- Domain-Specific Notes:  
+
+	- E-commerce (Amazon, Etsy) → Cold-start for new sellers & niche products.  
+	- Video Streaming (Netflix, YouTube) → Cold-start for newly released content.  
+
+Popularity Bias & Feedback Loops
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- Over-recommending already popular items creates a "rich-get-richer" effect.  
+	- Items with low initial exposure struggle to gain traction.  
+	- Reinforces biases in user engagement, making it harder to surface niche or novel content.  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Re-Ranking with Popularity Dampening (Decay-based adjustments) → Improves exposure but can hurt user satisfaction.  
+	- Counterfactual Learning (Causal ML for fairness) → Breaks bias loops but hard to implement at scale.  
+	- Multi-Armed Bandits (UCB, Thompson Sampling) → Helps exploration but can reduce short-term revenue.  
+
+- Domain-Specific Notes:  
+
+	- Social Media (TikTok, Twitter, Facebook) → Celebrity overexposure (e.g., verified users dominating feeds).  
+	- News Aggregators (Google News, Apple News) → Same sources getting recommended (e.g., mainstream news over independent journalism).  
+
+Short-Term Engagement vs. Long-Term User Retention  
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- Systems often optimize for immediate engagement (CTR, watch time, purchases), which can lead to addictive behaviors or content fatigue.  
+	- Over-exploitation of "sticky content" (clickbait, sensationalism, autoplay loops) may reduce long-term satisfaction.  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Multi-Objective Optimization (CTR + Long-Term Retention) → Complex to balance but essential for sustainability.  
+	- Delayed Reward Models (Reinforcement Learning) → Great for long-term user retention but slow learning process.  
+	- Personalization Decay (Balancing Freshness vs. Relevance) → Introduces diverse content but can feel random to users.  
+
+- Domain-Specific Notes:  
+
+	- YouTube, TikTok, Instagram → Prioritizing sensational viral content over educational material.  
+	- E-Commerce (Amazon, Alibaba) → Short-term discounts vs. long-term brand loyalty.  
+
+Diversity vs. Personalization Trade-Off  
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- Highly personalized feeds often reinforce user preferences too strongly, limiting exposure to new content.  
+	- Users may get stuck in content silos (e.g., political polarization, filter bubbles).  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Diversity-Promoting Re-Ranking (DPP, Exploration Buffers) → Reduces filter bubbles but may decrease engagement.  
+	- Diversity-Constrained Search (Re-weighting ranking models) → Promotes varied content but risks reducing precision.  
+	- Hybrid User-Item Graphs (Graph Neural Networks for diversification) → Balances exploration but requires expensive training.  
+
+- Domain-Specific Notes:  
+
+	- Social Media (Facebook, Twitter, YouTube) → Political echo chambers & misinformation bubbles.  
+	- E-commerce (Amazon, Etsy, Zalando) → Users seeing only one type of product repeatedly.  
+
+Real-Time Personalization & Latency Trade-Offs  
+------------------------------------------------------------------------------------
+- Why It Matters:  
+
+	- Personalized recommendations require real-time feature updates and low-latency inference.  
+	- Search relevance depends on immediate context (e.g., location, time of day, trending topics).  
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Precomputed User Embeddings (FAISS, HNSW, Vector DBs) → Speeds up search but sacrifices personalization flexibility.  
+	- Edge AI for On-Device Personalization → Reduces latency but increases computational costs.  
+	- Session-Based Recommendation Models (Transformers for Session-Based Context) → Great for short-term personalization but expensive for large user bases.  
+
+- Domain-Specific Notes:  
+
+	- E-Commerce (Amazon, Walmart, Shopee) → Latency constraints for "similar item" recommendations.  
+	- Search Engines (Google, Bing, Baidu) → Needing real-time personalization without slowing down results.  
+
+Domain-Specific
+====================================================================================
+Search
+------------------------------------------------------------------------------------  
+- Query Understanding & Intent Disambiguation
+
+	- Users enter ambiguous or vague queries, requiring intent inference.  
+	- Example: Searching for “apple” – Is it a fruit, a company, or a music service?  
+	- Solutions & Trade-Offs:  
+	
+		- LLM-Powered Query Rewriting (T5, GPT) → Improves relevance but risks over-modifying queries.  
+		- Session-Aware Query Expansion → Helps disambiguation but increases computational cost.  
+
+E-Commerce
+------------------------------------------------------------------------------------
+- Balancing Revenue & User Satisfaction  
+
+	- Revenue-driven recommendations (sponsored ads, promoted products) vs. organic recommendations.  
+	- Example: Amazon mixing sponsored and personalized search results.  
+	- Solutions & Trade-Offs:  
+	
+		- Hybrid Models (Re-ranking with Fairness Constraints) → Balances organic vs. paid but hard to tune for revenue goals.  
+		- Trust-Based Ranking (Reducing deceptive sellers, fake reviews) → Improves satisfaction but may lower short-term sales.  
+
+Video & Music Streaming
+------------------------------------------------------------------------------------
+- Content-Length Bias in Recommendations  
+
+	- Recommendation models often favor shorter videos (TikTok, YouTube Shorts) over long-form content.  
+	- Example: YouTube’s watch-time optimization may prioritize clickbaity short videos over educational content.  
+	- Solutions & Trade-Offs:  
+	
+		- Normalized Engagement Metrics (Watch Percentage vs. Watch Time) → Improves long-form content exposure but may reduce video diversity.  
+		- Hybrid-Length Recommendations (Mixing Shorts & Full Videos) → Enhances variety but harder to rank effectively. 
 ************************************************************************************
 Personalisation
 ************************************************************************************
@@ -985,130 +1127,124 @@ Cons:
 	- Higher Inference Cost - Re-ranking every session in real-time increases server load.  
 	- Risk of Over-Exploration - If diversity is forced, users may feel the system is less relevant.  
 
-General Issues in Search & Recommendation Systems  
+************************************************************************************
+Domain Knowledge
+************************************************************************************
+Music
 ====================================================================================
-Cold-Start Problem (Users & Items)  
+Short-Term vs. Long-Term Personalization
 ------------------------------------------------------------------------------------
-- Why It Matters:  
+- Why It Matters:
 
-	- New users: No interaction history makes personalization difficult.  
-	- New items: Struggle to get exposure due to lack of engagement signals.  
+	- Users music preferences change over time, but most recommendation models overly rely on recent activity.
+	- Recommending only recently played songs can overfit short-term moods and ignore long-term preferences.
 
-- Strategic Solutions & Trade-Offs:  
+- Strategic Solutions & Trade-Offs:
 
-	- Content-Based Methods (Text embeddings, Image/Video features) → Good for new items, but lacks user personalization.  
-	- Demographic-Based Recommendations (Cluster similar users) → Generalizes well but risks oversimplification.  
-	- Randomized Exploration (Show new items randomly) → Increases fairness but can reduce CTR.  
+	- Session-Based Personalization (Short-Term Context Models)  Captures mood-based preferences but can overfit recent choices.
+	- Hybrid Long-Term + Short-Term Embeddings (Contrastive Learning on Listening History)  Balances nostalgia & discovery but computationally expensive.
+	- Decay-Based Weighting on Past Behavior  Helps phase out stale preferences but requires careful tuning.
 
-- Domain-Specific Notes:  
+- Spotifys Approach:
 
-	- E-commerce (Amazon, Etsy) → Cold-start for new sellers & niche products.  
-	- Video Streaming (Netflix, YouTube) → Cold-start for newly released content.  
+	- Balances On Repeat (long-term) and Discover Weekly (exploration).
 
-Popularity Bias & Feedback Loops
+Repetition & Content Fatigue (Avoiding Overplayed Songs)
 ------------------------------------------------------------------------------------
-- Why It Matters:  
+- Why It Matters:
 
-	- Over-recommending already popular items creates a "rich-get-richer" effect.  
-	- Items with low initial exposure struggle to gain traction.  
-	- Reinforces biases in user engagement, making it harder to surface niche or novel content.  
+	- Users dislike hearing the same songs too frequently in personalized playlists.
+	- Music recommendation systems tend to reinforce top tracks due to high past engagement.
 
-- Strategic Solutions & Trade-Offs:  
+- Strategic Solutions & Trade-Offs:
 
-	- Re-Ranking with Popularity Dampening (Decay-based adjustments) → Improves exposure but can hurt user satisfaction.  
-	- Counterfactual Learning (Causal ML for fairness) → Breaks bias loops but hard to implement at scale.  
-	- Multi-Armed Bandits (UCB, Thompson Sampling) → Helps exploration but can reduce short-term revenue.  
+	- Play-Session Awareness (Avoiding recently played tracks)  Prevents fatigue but risks reducing personalization strength.
+	- Diversified Playlist Generation (Embedding Clustering)  Encourages discovery but may introduce unrelated tracks.
+	- Temporal Diversity Constraints (Recommender-aware time gaps)  Reduces overexposure but adds complexity to ranking models.
 
-- Domain-Specific Notes:  
+- Spotify & Apple Musics Fix:
 
-	- Social Media (TikTok, Twitter, Facebook) → Celebrity overexposure (e.g., verified users dominating feeds).  
-	- News Aggregators (Google News, Apple News) → Same sources getting recommended (e.g., mainstream news over independent journalism).  
+	- Autogenerated playlists (e.g., Daily Mix, Radio) have anti-repetition constraints.
 
-Short-Term Engagement vs. Long-Term User Retention  
+Context-Aware Recommendations (Music for Different Situations)
 ------------------------------------------------------------------------------------
-- Why It Matters:  
+- Why It Matters:
 
-	- Systems often optimize for immediate engagement (CTR, watch time, purchases), which can lead to addictive behaviors or content fatigue.  
-	- Over-exploitation of "sticky content" (clickbait, sensationalism, autoplay loops) may reduce long-term satisfaction.  
+	- Music preferences vary by context (workout, driving, studying, relaxing), but most recommenders treat all listening the same.
 
-- Strategic Solutions & Trade-Offs:  
+- Strategic Solutions & Trade-Offs:
 
-	- Multi-Objective Optimization (CTR + Long-Term Retention) → Complex to balance but essential for sustainability.  
-	- Delayed Reward Models (Reinforcement Learning) → Great for long-term user retention but slow learning process.  
-	- Personalization Decay (Balancing Freshness vs. Relevance) → Introduces diverse content but can feel random to users.  
+	- User-Controlled Context Tags (Spotifys Mood Playlists, YouTube Musics Activity Mode)  More control but adds friction.
+	- Implicit Context Detection (Using location, time, device, previous context switches)  Improves automation but risks privacy concerns.
+	- Adaptive Playlist Generation (Real-time context-aware re-ranking)  Better real-world usability but increases computational costs.
 
-- Domain-Specific Notes:  
+- Industry Example:
 
-	- YouTube, TikTok, Instagram → Prioritizing sensational viral content over educational material.  
-	- E-Commerce (Amazon, Alibaba) → Short-term discounts vs. long-term brand loyalty.  
+	- Spotifys Made for You mixes genres based on past listening sessions.
 
-Diversity vs. Personalization Trade-Off  
+Popularity Bias & Lack of Exposure for Niche Artists
 ------------------------------------------------------------------------------------
-- Why It Matters:  
+- Why It Matters:
 
-	- Highly personalized feeds often reinforce user preferences too strongly, limiting exposure to new content.  
-	- Users may get stuck in content silos (e.g., political polarization, filter bubbles).  
+	- Big-label artists dominate recommendations, making it hard for new/independent musicians to gain visibility.
+	- Overemphasis on top charts and algorithmic repetition reinforces the same mainstream music.
 
-- Strategic Solutions & Trade-Offs:  
+- Strategic Solutions & Trade-Offs:
 
-	- Diversity-Promoting Re-Ranking (DPP, Exploration Buffers) → Reduces filter bubbles but may decrease engagement.  
-	- Diversity-Constrained Search (Re-weighting ranking models) → Promotes varied content but risks reducing precision.  
-	- Hybrid User-Item Graphs (Graph Neural Networks for diversification) → Balances exploration but requires expensive training.  
+	- Fairness-Aware Re-Ranking (Exposing lesser-known artists)  Promotes diversity but may reduce engagement.
+	- User Preference-Based Exploration (Blending familiar & new artists)  Increases discovery but harder to balance.
+	- Contextual Boosting (Surfacing niche content in certain playlists)  Encourages exploration but risks user dissatisfaction.
 
-- Domain-Specific Notes:  
+- Spotifys Fix:
 
-	- Social Media (Facebook, Twitter, YouTube) → Political echo chambers & misinformation bubbles.  
-	- E-commerce (Amazon, Etsy, Zalando) → Users seeing only one type of product repeatedly.  
+	- Discover Weekly and Release Radar to highlight emerging artists.
 
-Real-Time Personalization & Latency Trade-Offs  
+Cold-Start Problem for New Artists & Songs
 ------------------------------------------------------------------------------------
-- Why It Matters:  
+- Why It Matters:
 
-	- Personalized recommendations require real-time feature updates and low-latency inference.  
-	- Search relevance depends on immediate context (e.g., location, time of day, trending topics).  
+	- New artists and newly released tracks struggle to get exposure since they have no engagement history.
 
-- Strategic Solutions & Trade-Offs:  
+- Strategic Solutions & Trade-Offs:
 
-	- Precomputed User Embeddings (FAISS, HNSW, Vector DBs) → Speeds up search but sacrifices personalization flexibility.  
-	- Edge AI for On-Device Personalization → Reduces latency but increases computational costs.  
-	- Session-Based Recommendation Models (Transformers for Session-Based Context) → Great for short-term personalization but expensive for large user bases.  
+	- Metadata-Based Recommendations (Genre, BPM, lyrics embeddings)  Useful for early exposure but lacks engagement feedback.
+	- Collaborative Boosting (Linking new artists to known artists)  Improves visibility but risks inaccurate pairing.
+	- User-Driven Exploration (Playlists like Fresh Finds)  Promotes new songs but may not reach mainstream listeners.
 
-- Domain-Specific Notes:  
+- Example:
 
-	- E-Commerce (Amazon, Walmart, Shopee) → Latency constraints for "similar item" recommendations.  
-	- Search Engines (Google, Bing, Baidu) → Needing real-time personalization without slowing down results.  
+	- Spotifys Fresh Finds is a human-curated playlist designed for emerging artists.
 
-Domain-Specific Issues
-====================================================================================
-Search
-------------------------------------------------------------------------------------  
-- Query Understanding & Intent Disambiguation
-
-	- Users enter ambiguous or vague queries, requiring intent inference.  
-	- Example: Searching for “apple” – Is it a fruit, a company, or a music service?  
-	- Solutions & Trade-Offs:  
-	
-		- LLM-Powered Query Rewriting (T5, GPT) → Improves relevance but risks over-modifying queries.  
-		- Session-Aware Query Expansion → Helps disambiguation but increases computational cost.  
-
-E-Commerce
+Balancing Exploration vs. Personalization in Playlists
 ------------------------------------------------------------------------------------
-- Balancing Revenue & User Satisfaction  
+- Why It Matters:
 
-	- Revenue-driven recommendations (sponsored ads, promoted products) vs. organic recommendations.  
-	- Example: Amazon mixing sponsored and personalized search results.  
-	- Solutions & Trade-Offs:  
-	
-		- Hybrid Models (Re-ranking with Fairness Constraints) → Balances organic vs. paid but hard to tune for revenue goals.  
-		- Trust-Based Ranking (Reducing deceptive sellers, fake reviews) → Improves satisfaction but may lower short-term sales.  
+	- Users want to hear familiar songs but also expect discovery of new tracks.
+	- Too much exploration reduces engagement, too little keeps users stuck in their existing preferences.
 
-Video & Music Streaming
+- Strategic Solutions & Trade-Offs:
+
+	- Reinforcement Learning-Based Ranking (Balancing Novelty & Familiarity)  Dynamically adjusts exploration but requires more data.
+	- Hybrid Personalized Playlists (50% known, 50% new)  Encourages discovery but still risks disengagement.
+	- Diversity Re-Ranking Models (Ensuring mix of different artist popularity levels)  Enhances engagement but increases complexity.
+
+- Spotifys Fix:
+
+	- Discover Weekly mixes familiar artists with newly recommended artists.
+
+Multi-Modal Recommendation (Lyrics, Podcasts, Audio Similarity)
 ------------------------------------------------------------------------------------
-- Content-Length Bias in Recommendations  
+- Why It Matters:
 
-	- Recommendation models often favor shorter videos (TikTok, YouTube Shorts) over long-form content.  
-	- Example: YouTube’s watch-time optimization may prioritize clickbaity short videos over educational content.  
-	- Solutions & Trade-Offs:  
-	
-		- Normalized Engagement Metrics (Watch Percentage vs. Watch Time) → Improves long-form content exposure but may reduce video diversity.  
-		- Hybrid-Length Recommendations (Mixing Shorts & Full Videos) → Enhances variety but harder to rank effectively. 
+	- Music discovery can be driven by lyrics, themes, artist backstories, and spoken content (podcasts).
+	- Traditional recommendation models focus only on collaborative filtering (listening history).
+
+- Strategic Solutions & Trade-Offs:
+
+	- Lyrics-Based Embeddings (Thematic music recommendations)  Enhances meaning-based recommendations but requires NLP processing.
+	- Cross-Domain Music-Podcast Recommendation (Shared interests)  Improves discovery but harder to rank relevance.
+	- Audio Similarity-Based Retrieval (Matching based on timbre, rhythm)  Better for organic discovery but requires deep learning models.
+
+- Industry Example:
+
+	- YouTube Music cross-recommends music & podcasts based on topics.
