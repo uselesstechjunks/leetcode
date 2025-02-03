@@ -1248,3 +1248,12 @@ Multi-Modal Recommendation (Lyrics, Podcasts, Audio Similarity)
 - Industry Example:
 
 	- YouTube Music cross-recommends music & podcasts based on topics.
+
+Social Media
+====================================================================================
+
+Short Video
+====================================================================================
+
+E-Commerce
+====================================================================================
