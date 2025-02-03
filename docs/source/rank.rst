@@ -837,10 +837,12 @@ Key Papers to Read
 Diversity in Recommendation Systems
 ************************************************************************************
 - Goal
+
 	- improving user engagement
 	- avoiding filter bubbles
 	- preventing over-reliance on popular content.
 - Metric
+
 	- TODO
 - Ensuring diversity in recommendation systems requires a multi-stage approach, balancing user engagement, fairness, and exploration. The best strategies depend on the product type:
 
@@ -858,6 +860,7 @@ Diversity in Recommendation Systems
 		- Google Search & News - Uses BERT-based fairness filters for diverse search results.  
 
 - Technique Summary
+
 	.. csv-table:: 
 		:header: "Technique", "Stage", "Pros", "Cons"
 		:align: center
@@ -871,6 +874,7 @@ Diversity in Recommendation Systems
 			Multi-Armed Bandits, Re-Ranking, Balances personalization and exploration, Hard to tune in real-world scenarios
 
 - LLMs for Diversity at Each Stage  
+
 	.. csv-table:: 
 		:header: "Stage", "LLM Enhancements", "Pros", "Cons"
 		:align: center
@@ -886,60 +890,71 @@ Retrieval Stage
 
 Multi-Pool Retrieval (Heterogeneous Candidate Selection)
 ------------------------------------------------------------------------------------
-- Retrieves candidates from multiple independent sources (e.g., popularity-based pool, collaborative filtering pool, content-based retrieval).
-- Ensures that recommendations are not solely based on one dominant factor (e.g., trending items).
-
+	- Retrieves candidates from multiple independent sources (e.g., popularity-based pool, collaborative filtering pool, content-based retrieval).
+	- Ensures that recommendations are not solely based on one dominant factor (e.g., trending items).
+	
 Pros:
-- Increases coverage by considering multiple types of items.
-- Helps balance long-term preferences vs. short-term interest.
 
+	- Increases coverage by considering multiple types of items.
+	- Helps balance long-term preferences vs. short-term interest.
+	
 Cons:
-- If not weighted properly, can introduce irrelevant or low-quality recommendations.
-- Computationally expensive when handling large numbers of pools.
 
+	- If not weighted properly, can introduce irrelevant or low-quality recommendations.
+	- Computationally expensive when handling large numbers of pools.
+	
 Example:
-- YouTube retrieves candidates from watched videos, partially watched videos, new uploads, and popular in demographic to balance diversity.
+
+	- YouTube retrieves candidates from watched videos, partially watched videos, new uploads, and popular in demographic to balance diversity.
 
 Popularity-Based Downsampling
 ------------------------------------------------------------------------------------
-- Reduces the dominance of highly popular items in the candidate pool.
-- Ensures niche items have a fair chance of being retrieved.
-
+	- Reduces the dominance of highly popular items in the candidate pool.
+	- Ensures niche items have a fair chance of being retrieved.
+	
 Pros:
-- Prevents "rich-get-richer" feedback loops.
-- Encourages long-tail item discovery.
 
+	- Prevents "rich-get-richer" feedback loops.
+	- Encourages long-tail item discovery.
+	
 Cons:
-- Might hurt immediate engagement metrics (CTR, Watch Time).
-- New users may still prefer popular items over niche ones.
 
+	- Might hurt immediate engagement metrics (CTR, Watch Time).
+	- New users may still prefer popular items over niche ones.
+	
 Example:
-- Spotifys Discover Weekly uses a mix of popular and long-tail recommendations to balance engagement and discovery.
+
+	- Spotifys Discover Weekly uses a mix of popular and long-tail recommendations to balance engagement and discovery.
 
 LLMs for Diverse Candidate Selection  
 ------------------------------------------------------------------------------------
-#. Query Expansion for Better Recall  
-- LLMs generate query variations to retrieve diverse candidates beyond exact keyword matching.  
-- Example: Instead of just retrieving laptops, LLMs expand queries to include notebooks, MacBooks, ultrabooks.  
-- Technique: Use T5/BERT-based semantic expansion to increase retrieval diversity.  
-
-#. Multi-Modal Understanding for Heterogeneous Retrieval  
-- LLMs bridge different modalities (text, image, video) to retrieve richer candidate pools.  
-- Example: In YouTube Recommendations, an LLM can link a users watched TED Talk to blog articles on the same topic.  
-- Technique: Use CLIP (for text-image-video embeddings) to retrieve across modalities.  
-
-#. User Preference Understanding for Contextual Retrieval  
-- Instead of static retrieval models, LLMs generate dynamic search queries based on user conversation history.  
-- Example: A user searching for travel backpacks may also receive recommendations for hiking gear if LLMs infer the intent.  
-- Technique: Use GPT-like models to rewrite user queries dynamically based on session context.  
-
+	#. Query Expansion for Better Recall  
+	
+		- LLMs generate query variations to retrieve diverse candidates beyond exact keyword matching.  
+		- Example: Instead of just retrieving laptops, LLMs expand queries to include notebooks, MacBooks, ultrabooks.  
+		- Technique: Use T5/BERT-based semantic expansion to increase retrieval diversity.  
+		
+	#. Multi-Modal Understanding for Heterogeneous Retrieval  
+	
+		- LLMs bridge different modalities (text, image, video) to retrieve richer candidate pools.  
+		- Example: In YouTube Recommendations, an LLM can link a users watched TED Talk to blog articles on the same topic.  
+		- Technique: Use CLIP (for text-image-video embeddings) to retrieve across modalities.  
+	
+	#. User Preference Understanding for Contextual Retrieval  
+	
+		- Instead of static retrieval models, LLMs generate dynamic search queries based on user conversation history.  
+		- Example: A user searching for travel backpacks may also receive recommendations for hiking gear if LLMs infer the intent.  
+		- Technique: Use GPT-like models to rewrite user queries dynamically based on session context.  
+	
 Pros:  
-- Improves Recall - LLMs retrieve more diverse content that traditional CF models miss.  
-- Better Cold-Start Handling - Generates synthetic preferences for new users.  
+
+	- Improves Recall - LLMs retrieve more diverse content that traditional CF models miss.  
+	- Better Cold-Start Handling - Generates synthetic preferences for new users.  
 
 Cons:  
-- High Latency - Generating queries dynamically can be slower than precomputed embeddings.  
-- Loss of Precision - More diverse candidates mean a higher risk of retrieving irrelevant results.  
+
+	- High Latency - Generating queries dynamically can be slower than precomputed embeddings.  
+	- Loss of Precision - More diverse candidates mean a higher risk of retrieving irrelevant results.  
 
 Filtering & Merging Stage
 ====================================================================================
@@ -948,60 +963,71 @@ Filtering & Merging Stage
 
 Minimum-Item Representation Heuristics
 ------------------------------------------------------------------------------------
-- Ensures that each category, genre, or provider has a minimum number of candidates before merging.
-- Helps prevent over-representation of any single category.
+	- Ensures that each category, genre, or provider has a minimum number of candidates before merging.
+	- Helps prevent over-representation of any single category.
 
 Pros:
-- Easy to implement with rule-based heuristics.
-- Ensures fairness in content exposure.
+
+	- Easy to implement with rule-based heuristics.
+	- Ensures fairness in content exposure.
 
 Cons:
-- Can sacrifice relevance by forcing underrepresented items.
-- Hard to scale for fine-grained personalization.
+
+	- Can sacrifice relevance by forcing underrepresented items.
+	- Hard to scale for fine-grained personalization.
 
 Example:
-- News Feeds (Facebook, Twitter, Google News) ensure a minimum number of international vs. local news, avoiding content silos.
+
+	- News Feeds (Facebook, Twitter, Google News) ensure a minimum number of international vs. local news, avoiding content silos.
 
 Category-Sensitive Filtering
 ------------------------------------------------------------------------------------
-- Computes category entropy to measure diversity across different categories.
-- If a users recommendations lack category diversity, it enforces rebalancing by boosting underrepresented categories.
+	- Computes category entropy to measure diversity across different categories.
+	- If a users recommendations lack category diversity, it enforces rebalancing by boosting underrepresented categories.
 
 Pros:
-- Dynamically adapts to different users.
-- Can be optimized for long-term user retention.
+
+	- Dynamically adapts to different users.
+	- Can be optimized for long-term user retention.
 
 Cons:
-- Requires real-time category tracking, which can be computationally expensive.
-- Poor tuning may result in irrelevant recommendations.
+
+	- Requires real-time category tracking, which can be computationally expensive.
+	- Poor tuning may result in irrelevant recommendations.
 
 Example:
-- Netflix ensures that recommendations contain a mix of different genres rather than overloading one.
+
+	- Netflix ensures that recommendations contain a mix of different genres rather than overloading one.
 
 LLMs for Diversity-Aware Candidate Selection  
 ------------------------------------------------------------------------------------
-#. Semantic Deduplication & Cluster Merging  
-- LLMs identify semantically similar items (even if they differ in wording) to prevent redundancy.  
-- Example: In news recommendations, LLMs group articles covering the same event to avoid repetition.  
-- Technique: Use sentence embeddings (SBERT) to cluster semantically duplicate items.  
-
-#. Bias & Fairness Control  
-- LLMs detect biased patterns (e.g., over-representing a certain demographic) and adjust recommendations accordingly.  
-- Example: A job recommendation system might over-recommend tech jobs to menLLMs can balance exposure.  
-- Technique: Use LLM-based fairness models (e.g., DebiasBERT) to adjust recommendations.  
-
-#. Context-Aware Filtering  
-- LLMs generate filtering rules on-the-fly based on user profile, session history, or external trends.  
-- Example: If a user browses vegetarian recipes, LLMs downrank meat-based recipes dynamically.  
-- Technique: Use GPT-powered filtering prompts to dynamically adjust content selection.  
+	#. Semantic Deduplication & Cluster Merging  
+	
+		- LLMs identify semantically similar items (even if they differ in wording) to prevent redundancy.  
+		- Example: In news recommendations, LLMs group articles covering the same event to avoid repetition.  
+		- Technique: Use sentence embeddings (SBERT) to cluster semantically duplicate items.  
+	
+	#. Bias & Fairness Control  
+	
+		- LLMs detect biased patterns (e.g., over-representing a certain demographic) and adjust recommendations accordingly.  
+		- Example: A job recommendation system might over-recommend tech jobs to menLLMs can balance exposure.  
+		- Technique: Use LLM-based fairness models (e.g., DebiasBERT) to adjust recommendations.  
+	
+	#. Context-Aware Filtering  
+	
+		- LLMs generate filtering rules on-the-fly based on user profile, session history, or external trends.  
+		- Example: If a user browses vegetarian recipes, LLMs downrank meat-based recipes dynamically.  
+		- Technique: Use GPT-powered filtering prompts to dynamically adjust content selection.  
 
 Pros:  
-- Prevents Repetitive Recommendations - Ensures users dont see redundant items.  
-- Improves Fairness & Representation - Adjusts for bias in candidate selection.  
+
+	- Prevents Repetitive Recommendations - Ensures users dont see redundant items.  
+	- Improves Fairness & Representation - Adjusts for bias in candidate selection.  
 
 Cons:  
-- Computationally Expensive - Filtering millions of candidates using LLMs can increase inference costs.  
-- Difficult to Fine-Tune - Over-filtering may hide relevant recommendations.  
+
+	- Computationally Expensive - Filtering millions of candidates using LLMs can increase inference costs.  
+	- Difficult to Fine-Tune - Over-filtering may hide relevant recommendations.  
 
 Re-Ranking Stage
 ====================================================================================
@@ -1010,74 +1036,88 @@ Re-Ranking Stage
 
 Determinantal Point Processes (DPP)
 ------------------------------------------------------------------------------------
-- Uses probabilistic modeling to diversify ranked lists.
-- Given a candidate set, DPP selects a subset that maximizes diversity while maintaining relevance.
-- Works by modeling similarity between items and ensuring that similar items are not ranked too closely together.
+	- Uses probabilistic modeling to diversify ranked lists.
+	- Given a candidate set, DPP selects a subset that maximizes diversity while maintaining relevance.
+	- Works by modeling similarity between items and ensuring that similar items are not ranked too closely together.
 
 Pros:
-- Mathematically principled and ensures diversity without arbitrary rules.
-- Used successfully in Spotify and Amazon for playlist & product recommendations.
+
+	- Mathematically principled and ensures diversity without arbitrary rules.
+	- Used successfully in Spotify and Amazon for playlist & product recommendations.
 
 Cons:
-- Computationally expensive, especially in large-scale deployments.
-- Needs proper similarity functions to be effective.
+
+	- Computationally expensive, especially in large-scale deployments.
+	- Needs proper similarity functions to be effective.
 
 Example:
-- Spotify Playlist Generation - Ensures a playlist has a variety of artists and genres instead of only one type of song.
+
+	- Spotify Playlist Generation - Ensures a playlist has a variety of artists and genres instead of only one type of song.
 
 Re-Ranking with Diversity Constraints
 ------------------------------------------------------------------------------------
-- Uses weighted re-ranking algorithms that explicitly penalize redundant recommendations.
-- Can be tuned to balance diversity vs. personalization dynamically.
+	- Uses weighted re-ranking algorithms that explicitly penalize redundant recommendations.
+	- Can be tuned to balance diversity vs. personalization dynamically.
 
 Pros:
-- Adjustable trade-off between diversity and user preferences.
-- Works well for personalized recommendations.
+
+	- Adjustable trade-off between diversity and user preferences.
+	- Works well for personalized recommendations.
 
 Cons:
-- Needs constant tuning to find the right balance.
-- If misconfigured, can make recommendations feel random or irrelevant.
+
+	- Needs constant tuning to find the right balance.
+	- If misconfigured, can make recommendations feel random or irrelevant.
 
 Example:
-- YouTubes Ranking Model applies re-ranking constraints to prevent over-recommendation of a single creator in a session.
+
+	- YouTubes Ranking Model applies re-ranking constraints to prevent over-recommendation of a single creator in a session.
 
 Multi-Armed Bandits for Explore-Exploit
 ------------------------------------------------------------------------------------
-- Balances exploitation (showing relevant, known content) with exploration (introducing new, diverse content).
-- Upper Confidence Bound (UCB), Thompson Sampling are commonly used bandit techniques.
+	- Balances exploitation (showing relevant, known content) with exploration (introducing new, diverse content).
+	- Upper Confidence Bound (UCB), Thompson Sampling are commonly used bandit techniques.
 
 Pros:
-- Encourages personalized discovery while ensuring exploration.
-- Automatically adapts over time.
+
+	- Encourages personalized discovery while ensuring exploration.
+	- Automatically adapts over time.
 
 Cons:
-- Hard to tune exploration parameters in production settings.
-- May result in temporary engagement drops during exploration phases.
+
+	- Hard to tune exploration parameters in production settings.
+	- May result in temporary engagement drops during exploration phases.
 
 Example:
-- TikToks For You Page mixes known preferences with new content using bandit-based ranking.
+
+	- TikToks For You Page mixes known preferences with new content using bandit-based ranking.
 
 LLMs for Diversity-Aware Ranking  
 ------------------------------------------------------------------------------------
-#. Diversity-Aware Ranking Models  
-- LLMs act as personalization-aware rerankers, balancing relevance with diversity dynamically.  
-- Example: Instead of showing only Marvel movies to a fan, LLMs inject DC movies or indie superhero films.  
-- Technique: Use LLM-powered diversity re-ranking prompts in post-processing.  
+	#. Diversity-Aware Ranking Models  
 
-#. Personalized Exploration vs. Exploitation  
-- LLMs simulate user preferences in real-time and adjust ranking to include more exploration.  
-- Example: In TikTok, if a user likes cooking videos, LLMs inject some fitness or travel videos to encourage exploration.  
-- Technique: Use GPT-powered bandit re-ranking for adaptive diversity balancing.  
+		- LLMs act as personalization-aware rerankers, balancing relevance with diversity dynamically.  
+		- Example: Instead of showing only Marvel movies to a fan, LLMs inject DC movies or indie superhero films.  
+		- Technique: Use LLM-powered diversity re-ranking prompts in post-processing.  
+	
+	#. Personalized Exploration vs. Exploitation  
 
-#. Diversity-Aware Re-Ranking via Counterfactual Predictions  
-- LLMs generate counterfactual recommendations to test how users might respond to different recommendation lists.  
-- Example: Instead of showing only trending news, LLMs inject underrepresented topics and measure user responses.  
-- Technique: Use LLMs for offline counterfactual testing before deployment.  
+		- LLMs simulate user preferences in real-time and adjust ranking to include more exploration.  
+		- Example: In TikTok, if a user likes cooking videos, LLMs inject some fitness or travel videos to encourage exploration.  
+		- Technique: Use GPT-powered bandit re-ranking for adaptive diversity balancing.  
+	
+	#. Diversity-Aware Re-Ranking via Counterfactual Predictions  
+
+		- LLMs generate counterfactual recommendations to test how users might respond to different recommendation lists.  
+		- Example: Instead of showing only trending news, LLMs inject underrepresented topics and measure user responses.  
+		- Technique: Use LLMs for offline counterfactual testing before deployment.  
 
 Pros:  
-- Balances Personalization & Diversity - Prevents filter bubbles.  
-- Improves Long-Term Engagement - Users are less likely to get bored.  
+
+	- Balances Personalization & Diversity - Prevents filter bubbles.  
+	- Improves Long-Term Engagement - Users are less likely to get bored.  
 
 Cons:  
-- Higher Inference Cost - Re-ranking every session in real-time increases server load.  
-- Risk of Over-Exploration - If diversity is forced, users may feel the system is less relevant.  
+
+	- Higher Inference Cost - Re-ranking every session in real-time increases server load.  
+	- Risk of Over-Exploration - If diversity is forced, users may feel the system is less relevant.  
