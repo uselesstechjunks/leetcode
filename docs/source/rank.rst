@@ -65,16 +65,15 @@ Overview: Domains
 Music
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table:: 
-	:header: "Issue", "Why Its Important", "Strategic Fixes & Trade-Offs"
+	:header: "Challenge", "Why Its Important", "Trade-Offs"
 	:align: center
 
-		Short-Term vs. Long-Term Personalization, Users listening habits change over time, Hybrid models balancing recent & long-term preferences
-		Repetition & Content Fatigue, Avoid overplaying the same songs, Playlist diversity; session-aware filtering
-		Context-Aware Recommendations, Music preferences change by mood/activity, Implicit context detection vs. manual tags
-		Popularity Bias & Lack of Exposure, Overexposure of big artists; niche artists struggle, Fairness-aware ranking; discovery playlists
-		Cold-Start Problem for New Artists, New tracks struggle for exposure, Metadata-based linking; artist collaborations
-		Balancing Exploration vs. Personalization, Users want both new and familiar music, RL-based dynamic ranking; exploration constraints
-		Multi-Modal Music Discovery, Listeners discover music via lyrics; themes; podcasts, Cross-domain retrieval using audio/text embeddings
+		Personalization vs. Serendipity, Users want relevant music but also expect some new discoveries., Too much personalization  Feels repetitive. Too much exploration  Feels random.
+		Repetition & Content Fatigue, Users get frustrated if the same songs appear too often., Strict anti-repetition  May exclude user favorites. Loose constraints  Risk of overplaying certain songs.
+		Context & Mood Adaptation, Users listen to music differently based on mood; time; activity (workout; relaxation)., Explicit mood tagging is effective but requires manual input. Implicit context detection risks wrong assumptions.
+		Balancing Popular & Niche Tracks, Highly popular songs dominate engagement; making it hard for lesser-known songs to gain exposure., Boosting niche tracks improves diversity; but may lower engagement metrics.
+		Cold-Start for New Songs & Artists, Newly released songs struggle to get exposure due to lack of engagement signals., Over-boosting new music can lead to reduced user satisfaction.
+		Playlist Length & Engagement Optimization, Users may not finish long playlists; leading to low engagement metrics., Shorter playlists increase completion rate; but longer ones improve session duration.
 
 Videos
 ------------------------------------------------------------------------------------
@@ -1130,27 +1129,95 @@ Cons:
 ************************************************************************************
 Domain Knowledge
 ************************************************************************************
+Sponsored Search
+====================================================================================
+Conversion & Attribution 
+------------------------------------------------------------------------------------
+Auction and pricing
+------------------------------------------------------------------------------------
+
 Music
 ====================================================================================
-Short-Term vs. Long-Term Personalization
+Playlist Generation & Curation in Music Recommendation Systems
 ------------------------------------------------------------------------------------
+Types of Playlists & Their Challenges
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: 
+	:header: "Playlist Type", "Example", "Key Challenges"
+	:align: center
+
+		Personalized Playlists, Spotifys Discover Weekly; YouTube Musics Your Mix, Ensuring balance between familiar & new tracks.
+		Mood/Activity-Based Playlists, Workout Mix; Chill Vibes; Focus Music, Detecting mood & intent dynamically.
+		Trending & Algorithmic Playlists, Spotifys Top 50; Apple Musics Charts, Avoiding popularity bias while staying relevant.
+		Collaborative & Social Playlists, Spotify Blend; Apple Musics Shared Playlists, Handling conflicting preferences in shared lists.
+		Genre/Artist-Centric Playlists, Best of 90s Rock; Jazz Classics, Ensuring diversity within a theme.
+
+Solutions to Key Playlist Challenges 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: 
+	:header: "Challenge", "Solution", "Trade-Off"
+	:align: center
+
+		Over-Personalization (Echo Chamber), Inject 5-20% exploration (Multi-Armed Bandits), Too much exploration may decrease CTR
+		Repetition & Content Fatigue, Anti-repetition rules (e.g.; same song cannot appear in back-to-back sessions), May prevent users from hearing favorite tracks
+		Cold-Start for New Songs, Boost underexposed songs using metadata (tempo; genre), Over-promoting new songs may harm engagement
+		Context-Aware Playlists, Use real-time signals (e.g.; running mode detects movement; adjusts tempo), Misinterpreted context may cause poor recommendations
+		Playlist Completion Rate, Optimize for average session length (shorter playlists for casual users; longer for engaged users), Shorter playlists may reduce playtime per session
+
+Common Problems
+------------------------------------------------------------------------------------
+Cold-Start Problem for New Artists & Songs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Why It Matters:
 
-	- Users music preferences change over time, but most recommendation models overly rely on recent activity.
-	- Recommending only recently played songs can overfit short-term moods and ignore long-term preferences.
+	- New artists and newly released tracks struggle to get exposure since they have no engagement history.
 
 - Strategic Solutions & Trade-Offs:
 
-	- Session-Based Personalization (Short-Term Context Models)  Captures mood-based preferences but can overfit recent choices.
-	- Hybrid Long-Term + Short-Term Embeddings (Contrastive Learning on Listening History)  Balances nostalgia & discovery but computationally expensive.
-	- Decay-Based Weighting on Past Behavior  Helps phase out stale preferences but requires careful tuning.
+	- Metadata-Based Recommendations (Genre, BPM, lyrics embeddings)  Useful for early exposure but lacks engagement feedback.
+	- Collaborative Boosting (Linking new artists to known artists)  Improves visibility but risks inaccurate pairing.
+	- User-Driven Exploration (Playlists like Fresh Finds)  Promotes new songs but may not reach mainstream listeners.
 
-- Spotifys Approach:
+- Example:
 
-	- Balances On Repeat (long-term) and Discover Weekly (exploration).
+	- Spotifys Fresh Finds is a human-curated playlist designed for emerging artists.
+
+Popularity Bias & Lack of Exposure for Niche Artists
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Why It Matters:
+
+	- Big-label artists dominate recommendations, making it hard for new/independent musicians to gain visibility.
+	- Overemphasis on top charts and algorithmic repetition reinforces the same mainstream music.
+
+- Strategic Solutions & Trade-Offs:
+
+	- Fairness-Aware Re-Ranking (Exposing lesser-known artists)  Promotes diversity but may reduce engagement.
+	- User Preference-Based Exploration (Blending familiar & new artists)  Increases discovery but harder to balance.
+	- Contextual Boosting (Surfacing niche content in certain playlists)  Encourages exploration but risks user dissatisfaction.
+
+- Spotifys Fix:
+
+	- Discover Weekly and Release Radar to highlight emerging artists.
+
+Balancing Exploration vs. Personalization in Playlists
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Why It Matters:
+
+	- Users want to hear familiar songs but also expect discovery of new tracks.
+	- Too much exploration reduces engagement, too little keeps users stuck in their existing preferences.
+
+- Strategic Solutions & Trade-Offs:
+
+	- Reinforcement Learning-Based Ranking (Balancing Novelty & Familiarity)  Dynamically adjusts exploration but requires more data.
+	- Hybrid Personalized Playlists (50% known, 50% new)  Encourages discovery but still risks disengagement.
+	- Diversity Re-Ranking Models (Ensuring mix of different artist popularity levels)  Enhances engagement but increases complexity.
+
+- Spotifys Fix:
+
+	- Discover Weekly mixes familiar artists with newly recommended artists.
 
 Repetition & Content Fatigue (Avoiding Overplayed Songs)
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Why It Matters:
 
 	- Users dislike hearing the same songs too frequently in personalized playlists.
@@ -1167,7 +1234,7 @@ Repetition & Content Fatigue (Avoiding Overplayed Songs)
 	- Autogenerated playlists (e.g., Daily Mix, Radio) have anti-repetition constraints.
 
 Context-Aware Recommendations (Music for Different Situations)
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Why It Matters:
 
 	- Music preferences vary by context (workout, driving, studying, relaxing), but most recommenders treat all listening the same.
@@ -1182,58 +1249,25 @@ Context-Aware Recommendations (Music for Different Situations)
 
 	- Spotifys Made for You mixes genres based on past listening sessions.
 
-Popularity Bias & Lack of Exposure for Niche Artists
-------------------------------------------------------------------------------------
+Short-Term vs. Long-Term Personalization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Why It Matters:
 
-	- Big-label artists dominate recommendations, making it hard for new/independent musicians to gain visibility.
-	- Overemphasis on top charts and algorithmic repetition reinforces the same mainstream music.
+	- Users music preferences change over time, but most recommendation models overly rely on recent activity.
+	- Recommending only recently played songs can overfit short-term moods and ignore long-term preferences.
 
 - Strategic Solutions & Trade-Offs:
 
-	- Fairness-Aware Re-Ranking (Exposing lesser-known artists)  Promotes diversity but may reduce engagement.
-	- User Preference-Based Exploration (Blending familiar & new artists)  Increases discovery but harder to balance.
-	- Contextual Boosting (Surfacing niche content in certain playlists)  Encourages exploration but risks user dissatisfaction.
+	- Session-Based Personalization (Short-Term Context Models)  Captures mood-based preferences but can overfit recent choices.
+	- Hybrid Long-Term + Short-Term Embeddings (Contrastive Learning on Listening History)  Balances nostalgia & discovery but computationally expensive.
+	- Decay-Based Weighting on Past Behavior  Helps phase out stale preferences but requires careful tuning.
 
-- Spotifys Fix:
+- Spotifys Approach:
 
-	- Discover Weekly and Release Radar to highlight emerging artists.
-
-Cold-Start Problem for New Artists & Songs
-------------------------------------------------------------------------------------
-- Why It Matters:
-
-	- New artists and newly released tracks struggle to get exposure since they have no engagement history.
-
-- Strategic Solutions & Trade-Offs:
-
-	- Metadata-Based Recommendations (Genre, BPM, lyrics embeddings)  Useful for early exposure but lacks engagement feedback.
-	- Collaborative Boosting (Linking new artists to known artists)  Improves visibility but risks inaccurate pairing.
-	- User-Driven Exploration (Playlists like Fresh Finds)  Promotes new songs but may not reach mainstream listeners.
-
-- Example:
-
-	- Spotifys Fresh Finds is a human-curated playlist designed for emerging artists.
-
-Balancing Exploration vs. Personalization in Playlists
-------------------------------------------------------------------------------------
-- Why It Matters:
-
-	- Users want to hear familiar songs but also expect discovery of new tracks.
-	- Too much exploration reduces engagement, too little keeps users stuck in their existing preferences.
-
-- Strategic Solutions & Trade-Offs:
-
-	- Reinforcement Learning-Based Ranking (Balancing Novelty & Familiarity)  Dynamically adjusts exploration but requires more data.
-	- Hybrid Personalized Playlists (50% known, 50% new)  Encourages discovery but still risks disengagement.
-	- Diversity Re-Ranking Models (Ensuring mix of different artist popularity levels)  Enhances engagement but increases complexity.
-
-- Spotifys Fix:
-
-	- Discover Weekly mixes familiar artists with newly recommended artists.
+	- Balances On Repeat (long-term) and Discover Weekly (exploration).
 
 Multi-Modal Recommendation (Lyrics, Podcasts, Audio Similarity)
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Why It Matters:
 
 	- Music discovery can be driven by lyrics, themes, artist backstories, and spoken content (podcasts).
