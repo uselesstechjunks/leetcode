@@ -89,7 +89,7 @@ Key Concepts: Sliding window, two pointers, prefix sum, Kadane’s algorithm, st
 
 Problems to Practice:
 
-* Longest substring without repeating characters.
+* `Longest substring without repeating characters <https://leetcode.com/problems/longest-substring-without-repeating-characters/>`_.
 * Maximum subarray sum (Kadane’s algorithm).
 * Rotate array (in-place rotation).
 * Valid palindrome.
