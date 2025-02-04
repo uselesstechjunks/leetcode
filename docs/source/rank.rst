@@ -62,6 +62,21 @@ Overview: Common Issues
 
 Overview: Domains
 ------------------------------------------------------------------------------------
+Sponsored Search
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: 
+	:header: "Issue", "Why It Matters", "Strategic Fixes", "Trade-Offs"
+	:align: center
+
+		Relevance vs. Revenue, Showing high-bid but low-relevance ads hurts trust, Hybrid ranking (bid + quality), Too much relevance filtering lowers revenue
+		Click Fraud & Ad Spam, Inflated clicks drain budgets, ML-based fraud detection, False positives can hurt advertisers
+		Ad Auction Manipulation, AI-driven bid shading exploits system, Second-price auctions, Reduced ad revenue
+		Ad Fatigue & Banner Blindness, Users ignore repetitive ads, Adaptive ad rotation, Frequent ad refreshing increases costs
+		Query Intent Mismatch, Poor ad matching frustrates users, BERT-based intent detection, Over-restricting ads lowers monetization
+		Landing Page Experience, High bounce rate = low conversion, Quality Score rules, Strict rules limit advertiser flexibility
+		Multi-Touch Attribution, Last-click attribution undervalues early ad exposures, Shapley-based attribution, More complexity; slower optimization
+		Ad Bias & Fairness, Favoring large advertisers hurts competition, Fairness-aware bidding, Less revenue from high bidders
+
 Music
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table:: 
@@ -1131,10 +1146,141 @@ Domain Knowledge
 ************************************************************************************
 Sponsored Search
 ====================================================================================
-Conversion & Attribution 
+Relevance vs. Revenue Trade-Off
 ------------------------------------------------------------------------------------
-Auction and pricing
+Why It Matters:  
+
+	- Advertisers bid for visibility, but their ads may not always be relevant to the user's query.  
+	- If high-bid but low-relevance ads are shown, users may lose trust in the search engine.  
+
+Strategic Solutions & Trade-Offs:  
+
+	- Quality Score (Google Ads' Approach)  Ranks ads based on a combination of CTR, relevance, and landing page experience, not just bid amount.  
+	- Hybrid Ranking Model (Revenue + User Engagement)  Balances ad revenue vs. user satisfaction.  
+
+Trade-Offs:  
+
+	- Prioritizing high-relevance, low-bid ads reduces short-term revenue.  
+	- Prioritizing high-bid, low-relevance ads hurts user trust & long-term retention.  
+
+Click Spam & Ad Fraud
 ------------------------------------------------------------------------------------
+Why It Matters:  
+
+	- Bots & malicious actors inflate clicks to waste competitor ad budgets (click fraud).  
+	- Some advertisers run low-quality, misleading ads to generate fake engagement.  
+
+Strategic Solutions & Trade-Offs:  
+
+	- Click Fraud Detection (Googles Invalid Click Detection)  Uses IP tracking, anomaly detection, and ML models to filter fraudulent clicks.  
+	- Post-Click Analysis (User Behavior Analysis)  Detects bots based on engagement (bounce rate, session length, interactions).  
+
+Trade-Offs:  
+
+	- False Positives  May block legitimate traffic, harming advertisers.  
+	- False Negatives  Fraudulent clicks still get monetized, increasing costs for real advertisers.  
+
+Ad Auction Manipulation & Bid Shading
+------------------------------------------------------------------------------------
+Why It Matters:  
+
+	- Sophisticated advertisers use AI-driven bidding strategies to game real-time auctions.  
+	- Bid shading techniques lower ad costs while maintaining high visibility.  
+
+Strategic Solutions & Trade-Offs:  
+
+	- Second-Price Auctions (Vickrey Auctions)  Advertisers only pay the second-highest bid price, reducing manipulation.  
+	- Multi-Objective Bidding Models  Balances advertiser cost efficiency and search engine revenue.  
+
+Trade-Offs:  
+
+	- Too much bid control reduces revenue  Search engines may earn less per click.  
+	- Aggressive bid adjustments can reduce advertiser trust  If advertisers feel theyre losing transparency, they may pull budgets.  
+
+Ad Fatigue & Banner Blindness
+------------------------------------------------------------------------------------
+Why It Matters:  
+
+	- Users ignore repetitive ads after multiple exposures, reducing CTR over time.  
+	- If ads look too much like organic results, users may feel deceived.  
+
+Strategic Solutions & Trade-Offs:  
+
+	- Adaptive Ad Rotation (Google Ads Optimize for Best Performing Mode)  Dynamically swaps low-performing ads with higher-engagement creatives.  
+	- Ad Labeling Transparency  Clearer Sponsored tags improve user trust but reduce click rates.  
+
+Trade-Offs:  
+
+	- Refreshing ads too frequently raises advertiser costs.  
+	- Too much ad transparency leads to lower revenue per impression.  
+
+Query Intent Mismatch
+------------------------------------------------------------------------------------
+Why It Matters:  
+
+	- Search queries are often ambiguous, and poor ad matching leads to bad user experience.  
+	- Example: Searching for Apple  Should the search engine show Apple iPhones (commercial intent) or apple fruit (informational intent)?  
+
+Strategic Solutions & Trade-Offs:  
+
+	- Intent Classification Models (BERT, T5-based Models)  Classify queries into commercial vs. informational intent.  
+	- Negative Keyword Targeting (Google Ads' Negative Keywords)  Advertisers block unrelated queries from triggering their ads.  
+
+Trade-Offs:  
+
+	- Restricting ads based on intent can lower revenue.  
+	- Allowing broad ad targeting risks user dissatisfaction.  
+
+Landing Page Experience & Conversion Rate Optimization
+------------------------------------------------------------------------------------
+Why It Matters:  
+
+	- Even if an ad gets high CTR, if the landing page is misleading or slow, users bounce without converting.  
+	- Google penalizes low-quality landing pages via Quality Score reductions.  
+
+Strategic Solutions & Trade-Offs:  
+
+	- Landing Page Quality Audits (Googles Ad Quality Guidelines)  Checks for page speed, relevance, mobile-friendliness.  
+	- Post-Click Engagement Monitoring  Uses bounce rate, time-on-site, conversion tracking to refine ranking.  
+
+Trade-Offs:  
+
+	- Strict landing page rules limit advertiser flexibility.  
+	- Relaxed rules allow low-quality ads, reducing long-term trust.  
+
+Multi-Touch Attribution & Ad Budget Allocation
+------------------------------------------------------------------------------------
+Why It Matters:  
+
+	- Users may see an ad but not convert immediately  Traditional last-click attribution ignores earlier touchpoints.  
+	- Advertisers struggle to allocate budgets across search, display, social, and video ads.  
+
+Strategic Solutions & Trade-Offs:  
+
+	- Multi-Touch Attribution Models (Shapley Value, Markov Chains)  Assigns fair credit to different ad exposures.  
+	- Cross-Channel Conversion Tracking  Tracks user journeys across search & display ads.  
+
+Trade-Offs:  
+
+	- More complex attribution models require longer training times.  
+	- Over-attributing upper-funnel ads can inflate costs without clear ROI.  
+
+Fairness & Ad Bias Issues
+------------------------------------------------------------------------------------
+Why It Matters:  
+
+	- Some ad auctions are biased against small advertisers, favoring large ad budgets.  
+	- Discriminatory ad targeting (e.g., gender/race bias in job/housing ads) can lead to regulatory penalties.  
+
+Strategic Solutions & Trade-Offs:  
+
+	- Fairness-Constrained Bidding (Googles Fairness-Aware Ad Auctions)  Adjusts auction weights to prevent dominance by large advertisers.  
+	- Bias Detection in Ad Targeting (Auditing Models for Discriminatory Targeting)  Ensures fair exposure of diverse ads.  
+
+Trade-Offs:  
+
+	- Too much fairness correction may reduce revenue from high-bidding advertisers.  
+	- Too little correction risks regulatory lawsuits (e.g., Facebooks 2019 lawsuit for discriminatory ad targeting).  
 
 Music
 ====================================================================================
@@ -1286,7 +1432,7 @@ Multi-Modal Recommendation (Lyrics, Podcasts, Audio Similarity)
 Social Media
 ====================================================================================
 
-Short Video
+Video
 ====================================================================================
 
 E-Commerce
