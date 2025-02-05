@@ -10,3 +10,4 @@ Applied Deep Learning
 	nlp
 	multimodal
 	cp
+	observability
