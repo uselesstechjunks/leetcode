@@ -16,6 +16,38 @@ Metrics
 	* [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
 	* [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
 
+Relevance
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Metric", "Full Name", "Formula", "Desc", "Drawback"
+	:align: center
+		
+		HR@k, Hit-rate at k, , ,
+		Recall@k, Recall at k, , ,
+		NDCG@k, Normalized Discounted Cumulative Gain at k, , ,
+
+Popularity Bias
+------------------------------------------------------------------------------------
+.. note::
+	* :math:`U`: Set of all users
+	* :math:`I`: Set of all items
+	* :math:`L_u`: List of items (concatenated) impressed for user :math:`u`
+	* :math:`L`: All list of items (concatenated)
+
+.. csv-table:: 
+	:header: "Metric", "Full Name", "Formula", "Desc", "Drawback"
+	:align: center
+		
+		ARP, Average Recommendation Popularity, :math:`\frac{1}{|U|}\sum_{u\in U}\frac{\sum_{i\in L_u}\phi(i)}{|L_u|}`, Average CTR across users, Good (low) value doesn't indicate coverage
+		Agg-Div, Aggregate Diversity, , ,
+		Gini, Gini Index, , ,
+		UDP, User Popularity Deviation, , ,
+	
+Diversity
+------------------------------------------------------------------------------------
+Personalsation
+------------------------------------------------------------------------------------
+
 Resources
 ====================================================================================
 Overview: Stages
