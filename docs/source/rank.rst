@@ -16,6 +16,48 @@ Metrics
 	* [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
 	* [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
 
+Key objectives
+------------------------------------------------------------------------------------
+.. note::
+	* Accuracy
+	* Personalisation
+	* Diversity
+	* Serendipity
+	* Novelty
+	* Fairness
+
+Relevance
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Metric", "Full Name", "Formula", "Desc", "Drawback"
+	:align: center
+		
+		HR@k, Hit-rate at k, , ,
+		Recall@k, Recall at k, , ,
+		NDCG@k, Normalized Discounted Cumulative Gain at k, , ,
+
+Popularity Bias
+------------------------------------------------------------------------------------
+.. note::
+	* :math:`U`: Set of all users
+	* :math:`I`: Set of all items
+	* :math:`L_u`: List of items (concatenated) impressed for user :math:`u`
+	* :math:`L`: All list of items (concatenated)
+
+.. csv-table:: 
+	:header: "Metric", "Full Name", "Formula", "Note", "Drawback"
+	:align: center
+		
+		ARP, Average Recommendation Popularity, :math:`\frac{1}{|U|}\sum_{u\in U}\frac{\sum_{i\in L_u}\phi(i)}{|L_u|}`, Average CTR across users, Good (low) value doesn't indicate coverage
+		Agg-Div, Aggregate Diversity, :math:`\frac{|\bigcup_{u\in U}L_u|}{|I|}`, Item Coverage, Doesn't detect skew in impression
+		Gini, Gini Index, :math:`1-\frac{1}{|I|-1}\sum_{k}^{|I|}(2k-|I|-1)p(i_k|L)`, :math:`p(i_k|L)`: how many times :math:`i_k` occured in `L`, Ignores user preference
+		UDP, User Popularity Deviation, , ,
+	
+Diversity
+------------------------------------------------------------------------------------
+Personalsation
+------------------------------------------------------------------------------------
+
 Resources
 ====================================================================================
 Overview: Stages
@@ -44,21 +86,21 @@ Overview: Common Issues
 ------------------------------------------------------------------------------------
 - General Issues in Search & Recommendation Systems
 
-	- Cold-Start Problem (Users, items)
-	- Popularity Bias & Feedback Loops
-	- Short-Term Engagement vs. Long-Term User Retention
-	- Diversity vs. Personalization Trade-Off
-	- Real-Time Personalization & Latency Trade-Offs
-	- Balancing multiple business objectives (CTR vs. fairness vs. revenue)
-	- Cross-device and cross-session personalization
-	- Privacy concerns & compliance (GDPR, CCPA)
-	- Multi-modality & cross-domain recommendation challenges
+	#. Cold-Start Problem (Users, items)
+	#. Popularity Bias & Feedback Loops
+	#. Short-Term Engagement vs. Long-Term User Retention
+	#. Diversity vs. Personalization Trade-Off
+	#. Real-Time Personalization & Latency Trade-Offs
+	#. Balancing multiple business objectives (CTR vs. fairness vs. revenue)
+	#. Cross-device and cross-session personalization
+	#. Privacy concerns & compliance (GDPR, CCPA)
+	#. Multi-modality & cross-domain recommendation challenges
 
 - Domain-Specific Issues & Their Unique Challenges
 
-	- Search-Specific Issues: Query Understanding & Intent Disambiguation
-	- E-Commerce Issues: Balancing Revenue & User Satisfaction
-	- Video & Music Streaming: Content-Length Bias in Recommendations
+	#. Search-Specific Issues: Query Understanding & Intent Disambiguation
+	#. E-Commerce Issues: Balancing Revenue & User Satisfaction
+	#. Video & Music Streaming: Content-Length Bias in Recommendations
 
 Overview: Domains
 ------------------------------------------------------------------------------------
@@ -749,16 +791,37 @@ Popularity Bias & Feedback Loops
 	- Items with low initial exposure struggle to gain traction.  
 	- Reinforces biases in user engagement, making it harder to surface niche or novel content.  
 
-- Strategic Solutions & Trade-Offs:  
+- Common Approaches:
 
-	- Re-Ranking with Popularity Dampening (Decay-based adjustments) → Improves exposure but can hurt user satisfaction.  
-	- Counterfactual Learning (Causal ML for fairness) → Breaks bias loops but hard to implement at scale.  
-	- Multi-Armed Bandits (UCB, Thompson Sampling) → Helps exploration but can reduce short-term revenue.  
+	- ReGularization (RG)
 
-- Domain-Specific Notes:  
+		- Controls the ratio of popular and less popular items via a regularizer added to the objective function
+		- Penalizes lists that contain only one group of items and hence attempting to reduce the concentration on popular items
+	- Discrepancy Minimization (DM)
 
-	- Social Media (TikTok, Twitter, Facebook) → Celebrity overexposure (e.g., verified users dominating feeds).  
-	- News Aggregators (Google News, Apple News) → Same sources getting recommended (e.g., mainstream news over independent journalism).  
+		- Optimizes for aggregate diversity
+		- Define a target distribution of item exposure as a constraint for the objective function
+		- Goal is therefore to minimize the discrepancy of the recommendation frequency for each item and the target distribution
+	- FA*IR (FS)
+
+		- Creates queues of protected (long-tail) and unprotected (head) items and merges them using normalized scoring such that protected items get more exposure
+	- Personalized Long-tail Promotion (XQ)
+
+		- Query result diversification
+		 -The objective for a final recommendation list is a balanced ratio of popular and less popular (long-tail) items.
+	- Calibrated Popularity (CP)
+	- Counterfactual Learning (Causal ML for fairness): Breaks bias loops but hard to implement at scale.  
+	- Multi-Armed Bandits (UCB, Thompson Sampling): Helps exploration but can reduce short-term revenue.  
+
+- Papers:
+
+	- [arxiv.org] `User-centered Evaluation of Popularity Bias in Recommender Systems - Abdollahpouri et. al <https://arxiv.org/pdf/2103.06364>`_
+	- [arxiv.org] `Model-Agnostic Counterfactual Reasoning for Eliminating Popularity Bias in Recommender System - Wei et. al <https://arxiv.org/pdf/2010.15363>`_
+
+- Domain-Specific Notes:
+
+	- Social Media (TikTok, Twitter, Facebook): Celebrity overexposure (e.g., verified users dominating feeds).  
+	- News Aggregators (Google News, Apple News): Same sources getting recommended (e.g., mainstream news over independent journalism).  
 
 Short-Term Engagement vs. Long-Term User Retention  
 ------------------------------------------------------------------------------------
@@ -848,6 +911,7 @@ Video & Music Streaming
 	
 		- Normalized Engagement Metrics (Watch Percentage vs. Watch Time) → Improves long-form content exposure but may reduce video diversity.  
 		- Hybrid-Length Recommendations (Mixing Shorts & Full Videos) → Enhances variety but harder to rank effectively. 
+
 ************************************************************************************
 Personalisation
 ************************************************************************************
@@ -855,6 +919,11 @@ Personalisation
 ************************************************************************************
 Diversity
 ************************************************************************************
+.. important::
+	- Music & video platforms (Spotify, YouTube, TikTok) use DPP and Bandits to introduce diverse content.
+	- E-commerce (Amazon, Etsy) balances popularity-based downsampling with weighted re-ranking.
+	- Newsfeeds (Google News, Facebook, Twitter) use category-sensitive filtering to prevent echo chambers.
+
 - Goal
 
 	- improving user engagement
@@ -863,12 +932,6 @@ Diversity
 - Metric
 
 	- TODO
-- Ensuring diversity in recommendation systems requires a multi-stage approach, balancing user engagement, fairness, and exploration. The best strategies depend on the product type:
-
-	.. important::
-		- Music & video platforms (Spotify, YouTube, TikTok) use DPP and Bandits to introduce diverse content.
-		- E-commerce (Amazon, Etsy) balances popularity-based downsampling with weighted re-ranking.
-		- Newsfeeds (Google News, Facebook, Twitter) use category-sensitive filtering to prevent echo chambers.
 
 - LLMs for Diversity in Recommendations
 
