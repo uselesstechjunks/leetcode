@@ -23,6 +23,19 @@ Distribution Shift
 	* [mit.edu] `Class Imbalance, Outliers, and Distribution Shift <https://dcai.csail.mit.edu/2024/imbalance-outliers-shift/>`_	
 	* [arize.com] `Drift Metrics: a Quickstart Guide <https://arize.com/blog-course/drift/>`_
 
+Defitions
+-------------------------------------------------------------------------------------
+.. note::
+	* Distribution shift: :math:`p_{\text{train}}(\mathbf{x},y)\neq p_{\text{test}}(\mathbf{x},y)`
+	* Covariate shift: 
+
+		* :math:`p_{\text{train}}(\mathbf{x})\neq p_{\text{test}}(\mathbf{x})`
+		* :math:`p_{\text{train}}(y|\mathbf{x})=p_{\text{test}}(y|\mathbf{x})`
+	* Concept shift:
+
+		* :math:`p_{\text{train}}(\mathbf{x})=p_{\text{test}}(\mathbf{x})`
+		* :math:`p_{\text{train}}(y|\mathbf{x})\neq p_{\text{test}}(y|\mathbf{x})`
+
 Identification 
 -------------------------------------------------------------------------------------
 Detecting distribution shift requires monitoring both data drift (changes in input distribution) and concept drift (changes in target relationships).  
