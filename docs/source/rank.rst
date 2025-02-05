@@ -133,13 +133,6 @@ Sponsored Search
 	:align: center
 	
 		Relevance vs. Revenue, Showing high-bid but low-relevance ads hurts trust, Hybrid ranking (bid + quality), Too much relevance filtering lowers revenue
-		Click Fraud & Ad Spam, Inflated clicks drain budgets, ML-based fraud detection, False positives can hurt advertisers
-		Ad Auction Manipulation, AI-driven bid shading exploits system, Second-price auctions, Reduced ad revenue
-		Ad Fatigue & Banner Blindness, Users ignore repetitive ads, Adaptive ad rotation, Frequent ad refreshing increases costs
-		Query Intent Mismatch, Poor ad matching frustrates users, BERT-based intent detection, Over-restricting ads lowers monetization
-		Landing Page Experience, High bounce rate means low conversion, Quality Score rules, Strict rules limit advertiser flexibility
-		Multi-Touch Attribution, Last-click attribution undervalues early ad exposures, Shapley-based attribution, More complexity; slower optimization
-		Ad Bias & Fairness, Favoring large advertisers hurts competition, Fairness-aware bidding, Less revenue from high bidders
 
 ************************************************************************************
 Resources
