@@ -83,35 +83,6 @@ General Principles
 #. Error Analysis by Parts
 
 ****************************************************************************
-Search and RecSys
-****************************************************************************
-Patterns
-
-	#. Query to Item - search
-	#. Item to Item - similar items
-	#. User to Item - homepage recommendation
-	#. User to User - people you may know
-Domains
-
-	#. e-commerce (Amazon, Alibaba)
-	#. music (Spotify)
-	#. image (Instagram)
-	#. video (Netflix, Firestick, YouTube)
-	#. voice (Alexa)
-	#. short-video (Tiktok)
-	#. food (DoorDash, UberEats)
-	#. travel (...)
-	#. social (Facebook, Twitter)
-
-****************************************************************************
-Ads
-****************************************************************************
-#. selection
-#. relevance
-#. ranking
-#. auction & pricing
-
-****************************************************************************
 Implementations
 ****************************************************************************
 #. CNN - ResNet
