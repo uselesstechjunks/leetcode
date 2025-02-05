@@ -129,7 +129,7 @@ Overview: Domains
 Search Advertising
 ------------------------------------------------------------------------------------
 .. csv-table:: 
-	:header: "A", "B", "C", "D"
+	:header: "Issue", "Why It Matters", "Strategic Fixes", "Trade-Offs"
 	:align: center
 	
 		Relevance vs. Revenue, Showing high-bid but low-relevance ads hurts trust, Hybrid ranking (bid + quality), Too much relevance filtering lowers revenue
