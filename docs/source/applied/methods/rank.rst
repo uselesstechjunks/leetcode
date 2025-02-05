@@ -868,33 +868,36 @@ Popularity Bias & Feedback Loops
 
 		- ReGularization (RG)
 
+			- [depaul.edu] `Controlling Popularity Bias in Learning to Rank Recommendation <https://scds.cdm.depaul.edu/wp-content/uploads/2017/05/SOCRS_2017_paper_5.pdf>`_
 			- Controls the ratio of popular and less popular items via a regularizer added to the objective function
 			- Penalizes lists that contain only one group of items and hence attempting to reduce the concentration on popular items
 		- Discrepancy Minimization (DM)
-	
+
+			- [cmu.edu] `Post Processing Recommender Systems for Diversity <https://www.contrib.andrew.cmu.edu/~ravi/kdd17.pdf>`_
 			- Optimizes for aggregate diversity
 			- Define a target distribution of item exposure as a constraint for the objective function
 			- Goal is therefore to minimize the discrepancy of the recommendation frequency for each item and the target distribution
 		- FA*IR (FS)
-	
+
+			- [arxiv.org] `FA*IR: A Fair Top-k Ranking Algorithm <https://arxiv.org/abs/1706.06368>`_
 			- Creates queues of protected (long-tail) and unprotected (head) items and merges them using normalized scoring such that protected items get more exposure
 		- Personalized Long-tail Promotion (XQ)
-	
+
+			- [arxiv.org] `Managing Popularity Bias in Recommender Systems with Personalized Re-ranking <https://arxiv.org/abs/1901.07555>`_
 			- Query result diversification
 			 -The objective for a final recommendation list is a balanced ratio of popular and less popular (long-tail) items.
 		- Calibrated Popularity (CP)
+
+			- [arxiv.org] `User-centered Evaluation of Popularity Bias in Recommender Systems - Abdollahpouri et. al <https://arxiv.org/pdf/2103.06364>`_
+			- Takes user's affinity towards popular, diverse and niche contents into account
 	- Randomisation
 
-		- Multi-Armed Bandits (UCB, Thompson Sampling): Helps exploration but can reduce short-term revenue.  
 		- Contextual Bandits
 	- Position debiasing
-	- Counterfactual Learning (Causal ML for fairness): Breaks bias loops but hard to implement at scale.  	
+	- Counterfactual Learning (Causal ML for fairness):
 
-- Papers:
-
-	- [arxiv.org] `User-centered Evaluation of Popularity Bias in Recommender Systems - Abdollahpouri et. al <https://arxiv.org/pdf/2103.06364>`_
-	- [arxiv.org] `Model-Agnostic Counterfactual Reasoning for Eliminating Popularity Bias in Recommender System - Wei et. al <https://arxiv.org/pdf/2010.15363>`_
-
+		- [arxiv.org] `Model-Agnostic Counterfactual Reasoning for Eliminating Popularity Bias in Recommender System - Wei et. al <https://arxiv.org/pdf/2010.15363>`_
+	
 - Domain-Specific Notes:
 
 	- Social Media (TikTok, Twitter, Facebook): Celebrity overexposure (e.g., verified users dominating feeds).  
