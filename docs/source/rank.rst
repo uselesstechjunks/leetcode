@@ -55,7 +55,7 @@ Overview
 			#. Popularity Bias
 			#. Short-Term Engagement vs. Long-Term User Retention Trade-off
 			#. Privacy concerns & compliance (GDPR, CCPA)
-			#. Distribution shift
+			#. Distribution shift (data/input, concept/target)
 
 		- Nuanced
 		
