@@ -8,4 +8,5 @@ Applied Machine Learning
 	sys/mlcoding
 	sys/sysdes
 	methods/index
-	eval/obsv
+	eval/eval
+	eval/monitor
