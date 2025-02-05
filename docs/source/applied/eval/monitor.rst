@@ -11,6 +11,7 @@ Observability
 Distribution Shift
 ====================================================================================
 .. note::
+	* [mit.edu] `Class Imbalance, Outliers, and Distribution Shift <https://dcai.csail.mit.edu/2024/imbalance-outliers-shift/>`_
 	* [arize.com] `Drift Metrics: a Quickstart Guide <https://arize.com/blog-course/drift/>`_
 
 Identification 
