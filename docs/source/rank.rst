@@ -10,27 +10,30 @@ Search & Recommendation
 Overview
 ************************************************************************************
 .. important::
-	- Entities - Users, items (text, image, video, nodes), interactions, context
-	- Labels - Supervised, semi-supervised (proxy label), self-supervised, unsupervised
-	- Patterns - Query-Item, User-Item, Item-Item, Session, User-User
+	- Entities
+
+		- Users, items (text, image, video, nodes), interactions, context
+	- Labels
+	
+		- Supervised, semi-supervised (proxy label), self-supervised, unsupervised
+	- Patterns
+
+		- Query-Item, User-Item, Item-Item, Session, User-User
 	- Objectives & metrics
 
-		#. Accuracy
-		#. Personalisation
-		#. Diversity
-		#. Serendipity
-		#. Novelty
-		#. Fairness
+		- Accuracy, Personalisation, Diversity, Serendipity, Novelty, Fairness
 
-	- Stages - Retrieval, Filtering, Rerank
+	- Stages 
+
+		- Retrieval, Filtering, Rerank
 	- Models
 
 		- Retrieval
 
-			- [Matching] Content-based Filtering
-			- [Bipartite] Collaborative Filtering - MF/Neural CF
-			- [Multi-Hop] GCN - LightGCN
-			- [Sequence] Transformers for rec
+			- Content-based Filtering - Matching
+			- Collaborative Filtering - MF/Neural CF
+			- GCN - LightGCN
+			- Sequence - Transformers
 		- Filtering
 
 			- Ruled based
