@@ -126,10 +126,10 @@ Overview: Patterns
 
 Overview: Domains
 ====================================================================================
-Sponsored Search
+Search Advertising
 ------------------------------------------------------------------------------------
 .. csv-table:: 
-	:header: "Issue", "Why It Matters", "Strategic Fixes", "Trade-Offs"
+	:header: "A", "B", "C", "D"
 	:align: center
 	
 		Relevance vs. Revenue, Showing high-bid but low-relevance ads hurts trust, Hybrid ranking (bid + quality), Too much relevance filtering lowers revenue
