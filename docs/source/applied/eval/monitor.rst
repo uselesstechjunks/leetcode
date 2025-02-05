@@ -1,21 +1,20 @@
 ###################################################################################
-Observability
+Monitoring & Debugging
 ###################################################################################
 ***********************************************************************************
-Resources
+Observability
 ***********************************************************************************
 .. note::
 
 	* [arize.com] `Courses on Observability <https://courses.arize.com/courses/>`_
 
-***********************************************************************************
 Distribution Shift
-***********************************************************************************
+====================================================================================
 .. note::
 	* [arize.com] `Drift Metrics: a Quickstart Guide <https://arize.com/blog-course/drift/>`_
 
 Identification 
-====================================================================================
+-------------------------------------------------------------------------------------
 Detecting distribution shift requires monitoring both data drift (changes in input distribution) and concept drift (changes in target relationships).  
 
 (A) Statistical & Distance-Based Methods  
