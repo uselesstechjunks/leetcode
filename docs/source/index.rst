@@ -25,9 +25,7 @@ Contents
 	dsa/index
 	ml/index
 	dl/index
-	rank
-	mlcoding
-	mlapp
+	applied/index
 	sysdes
 	interviews/index   
 	behave
