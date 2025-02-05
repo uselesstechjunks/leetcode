@@ -6,5 +6,6 @@ Applied Machine Learning
 	:maxdepth: 2
 
 	sys/mlcoding
+	sys/sysdes
 	methods/mlapp
 	eval/obsv
