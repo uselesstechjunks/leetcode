@@ -7,5 +7,6 @@ Applied Machine Learning
 
 	sys/mlcoding
 	sys/sysdes
-	methods/mlapp
-	eval/obsv
+	methods/index	
+	eval/dcai
+	eval/eval

@@ -146,6 +146,30 @@ Overview: Patterns
 
 Overview: Domains
 ====================================================================================
+#. E-commerce (Amazon, Alibaba)
+#. Music (Spotify)
+#. Image (Instagram)
+#. Video (Netflix, Firestick, YouTube)
+#. Voice (Alexa)
+#. Short-video (Tiktok)
+#. Food (DoorDash, UberEats)
+#. Travel (AirBnB)
+#. Social (Facebook, Twitter)
+#. Search Advertising (Google, Bing)
+
+Music
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Challenge", "Why Its Important", "Trade-Offs"
+	:align: center
+	
+		Personalization vs. Serendipity, Users want relevant music but also expect some new discoveries., Too much personalization  Feels repetitive. Too much exploration  Feels random.
+		Repetition & Content Fatigue, Users get frustrated if the same songs appear too often., Strict anti-repetition  May exclude user favorites. Loose constraints  Risk of overplaying certain songs.
+		Context & Mood Adaptation, Users listen to music differently based on mood; time; activity (workout; relaxation)., Explicit mood tagging is effective but requires manual input. Implicit context detection risks wrong assumptions.
+		Balancing Popular & Niche Tracks, Highly popular songs dominate engagement; making it hard for lesser-known songs to gain exposure., Boosting niche tracks improves diversity; but may lower engagement metrics.
+		Cold-Start for New Songs & Artists, Newly released songs struggle to get exposure due to lack of engagement signals., Over-boosting new music can lead to reduced user satisfaction.
+		Playlist Length & Engagement Optimization, Users may not finish long playlists; leading to low engagement metrics., Shorter playlists increase completion rate; but longer ones improve session duration.
+
 Search Advertising
 ------------------------------------------------------------------------------------
 .. csv-table:: 
@@ -160,19 +184,6 @@ Search Advertising
 		Landing Page Experience, High bounce rate = low conversion, Quality Score rules, Strict rules limit advertiser flexibility
 		Multi-Touch Attribution, Last-click attribution undervalues early ad exposures, Shapley-based attribution, More complexity; slower optimization
 		Ad Bias & Fairness, Favoring large advertisers hurts competition, Fairness-aware bidding, Less revenue from high bidders
-
-Music
-------------------------------------------------------------------------------------
-.. csv-table:: 
-	:header: "Challenge", "Why Its Important", "Trade-Offs"
-	:align: center
-	
-		Personalization vs. Serendipity, Users want relevant music but also expect some new discoveries., Too much personalization  Feels repetitive. Too much exploration  Feels random.
-		Repetition & Content Fatigue, Users get frustrated if the same songs appear too often., Strict anti-repetition  May exclude user favorites. Loose constraints  Risk of overplaying certain songs.
-		Context & Mood Adaptation, Users listen to music differently based on mood; time; activity (workout; relaxation)., Explicit mood tagging is effective but requires manual input. Implicit context detection risks wrong assumptions.
-		Balancing Popular & Niche Tracks, Highly popular songs dominate engagement; making it hard for lesser-known songs to gain exposure., Boosting niche tracks improves diversity; but may lower engagement metrics.
-		Cold-Start for New Songs & Artists, Newly released songs struggle to get exposure due to lack of engagement signals., Over-boosting new music can lead to reduced user satisfaction.
-		Playlist Length & Engagement Optimization, Users may not finish long playlists; leading to low engagement metrics., Shorter playlists increase completion rate; but longer ones improve session duration.
 
 ************************************************************************************
 Resources
@@ -853,32 +864,36 @@ Popularity Bias & Feedback Loops
 	- Reinforces biases in user engagement, making it harder to surface niche or novel content.  
 
 - Common Approaches:
+	- Changing objective
 
-	- ReGularization (RG)
+		- ReGularization (RG)
 
-		- Controls the ratio of popular and less popular items via a regularizer added to the objective function
-		- Penalizes lists that contain only one group of items and hence attempting to reduce the concentration on popular items
-	- Discrepancy Minimization (DM)
+			- [depaul.edu] `Controlling Popularity Bias in Learning to Rank Recommendation <https://scds.cdm.depaul.edu/wp-content/uploads/2017/05/SOCRS_2017_paper_5.pdf>`_
+			- Controls the ratio of popular and less popular items via a regularizer added to the objective function
+			- Penalizes lists that contain only one group of items and hence attempting to reduce the concentration on popular items
+		- Discrepancy Minimization (DM)
 
-		- Optimizes for aggregate diversity
-		- Define a target distribution of item exposure as a constraint for the objective function
-		- Goal is therefore to minimize the discrepancy of the recommendation frequency for each item and the target distribution
-	- FA*IR (FS)
+			- [cmu.edu] `Post Processing Recommender Systems for Diversity <https://www.contrib.andrew.cmu.edu/~ravi/kdd17.pdf>`_
+			- Optimizes for aggregate diversity
+			- Define a target distribution of item exposure as a constraint for the objective function
+			- Goal is therefore to minimize the discrepancy of the recommendation frequency for each item and the target distribution
+		- FA*IR (FS)
 
-		- Creates queues of protected (long-tail) and unprotected (head) items and merges them using normalized scoring such that protected items get more exposure
-	- Personalized Long-tail Promotion (XQ)
+			- [arxiv.org] `FA*IR: A Fair Top-k Ranking Algorithm <https://arxiv.org/abs/1706.06368>`_
+			- Creates queues of protected (long-tail) and unprotected (head) items so that protected items get more exposure
+		- Personalized Long-tail Promotion (XQ)
 
-		- Query result diversification
-		 -The objective for a final recommendation list is a balanced ratio of popular and less popular (long-tail) items.
-	- Calibrated Popularity (CP)
-	- Counterfactual Learning (Causal ML for fairness): Breaks bias loops but hard to implement at scale.  
-	- Multi-Armed Bandits (UCB, Thompson Sampling): Helps exploration but can reduce short-term revenue.  
+			- [arxiv.org] `Managing Popularity Bias in Recommender Systems with Personalized Re-ranking <https://arxiv.org/abs/1901.07555>`_
+			- Query result diversification
+			 -The objective for a final recommendation list is a balanced ratio of popular and less popular (long-tail) items.
+		- Calibrated Popularity (CP)
 
-- Papers:
+			- [arxiv.org] `User-centered Evaluation of Popularity Bias in Recommender Systems - Abdollahpouri et. al <https://arxiv.org/pdf/2103.06364>`_
+			- Takes user's affinity towards popular, diverse and niche contents into account
+	- Randomisation
 
-	- [arxiv.org] `User-centered Evaluation of Popularity Bias in Recommender Systems - Abdollahpouri et. al <https://arxiv.org/pdf/2103.06364>`_
-	- [arxiv.org] `Model-Agnostic Counterfactual Reasoning for Eliminating Popularity Bias in Recommender System - Wei et. al <https://arxiv.org/pdf/2010.15363>`_
-
+		- Contextual Bandits
+	- Position debiasing
 - Domain-Specific Notes:
 
 	- Social Media (TikTok, Twitter, Facebook): Celebrity overexposure (e.g., verified users dominating feeds).  
