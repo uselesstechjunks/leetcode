@@ -3,11 +3,7 @@ Applied Deep Learning
 #####################################################################################
 
 .. toctree::
-	:maxdepth: 3
+	:maxdepth: 2
 
-	lm
-	llm
-	nlp
-	multimodal
-	cp
-	observability
+	mlcoding
+	mlapp
