@@ -7,6 +7,68 @@ Search & Recommendation
    :backlinks: none
 
 ************************************************************************************
+Overview
+************************************************************************************
+.. important::
+	- Entities - Users, items (text, image, video, nodes), interactions, context
+	- Labels - Supervised, semi-supervised (proxy label), self-supervised, unsupervised
+	- Patterns - Query-Item, User-Item, Item-Item, Session, User-User
+	- Objectives & metrics
+
+		#. Accuracy
+		#. Personalisation
+		#. Diversity
+		#. Serendipity
+		#. Novelty
+		#. Fairness
+
+	- Stages - Retrieval, Filtering, Rerank
+	- Models
+
+		- Retrieval
+
+			- [Matching] Content-based Filtering
+			- [Bipartite] Collaborative Filtering - MF/Neural CF
+			- [Multi-Hop] GCN - LightGCN
+			- [Sequence] Transformers for rec
+		- Filtering
+
+			- Ruled based
+		- Rerank
+			
+			- GBDT, NN, DCN, WDN, DPP
+
+	- Domains
+
+		- Sponsored search
+		- Music
+		- Video
+		- E-commerce
+		- Social media
+
+	- Issues
+
+		- General
+
+			#. Cold-Start Problem (Users, items)
+			#. Diversity vs. Personalization Trade-Off
+			#. Popularity Bias
+			#. Short-Term Engagement vs. Long-Term User Retention Trade-off
+			#. Privacy concerns & compliance (GDPR, CCPA)
+
+		- Nuanced
+		
+			#. Real-Time Personalization & Latency Trade-Offs
+			#. Cross-device and cross-session personalization
+			#. Multi-modality & cross-domain recommendation challenges
+
+		- Domain-Specific
+	
+			#. Search-Specific Issues: Query Understanding & Intent Disambiguation
+			#. E-Commerce Issues: Balancing Revenue & User Satisfaction
+			#. Video & Music Streaming: Content-Length Bias in Recommendations
+
+************************************************************************************
 Resources
 ************************************************************************************
 Metrics
@@ -15,16 +77,6 @@ Metrics
 
 	* [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
 	* [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
-
-Key objectives
-------------------------------------------------------------------------------------
-.. note::
-	* Accuracy
-	* Personalisation
-	* Diversity
-	* Serendipity
-	* Novelty
-	* Fairness
 
 Relevance
 ------------------------------------------------------------------------------------
@@ -81,26 +133,6 @@ Overview: Patterns
 		User-Item, CF; Content-Based; Deep Learning, Personalized generation; Zero-shot preferences
 		Session-Based, Sequential Models; Transformers, Few-shot reasoning; Context-aware personalization
 		User-User, Graph-Based; Link Prediction, Profile-text analysis; Social graph augmentation
-
-Overview: Common Issues
-------------------------------------------------------------------------------------
-- General Issues in Search & Recommendation Systems
-
-	#. Cold-Start Problem (Users, items)
-	#. Popularity Bias & Feedback Loops
-	#. Short-Term Engagement vs. Long-Term User Retention
-	#. Diversity vs. Personalization Trade-Off
-	#. Real-Time Personalization & Latency Trade-Offs
-	#. Balancing multiple business objectives (CTR vs. fairness vs. revenue)
-	#. Cross-device and cross-session personalization
-	#. Privacy concerns & compliance (GDPR, CCPA)
-	#. Multi-modality & cross-domain recommendation challenges
-
-- Domain-Specific Issues & Their Unique Challenges
-
-	#. Search-Specific Issues: Query Understanding & Intent Disambiguation
-	#. E-Commerce Issues: Balancing Revenue & User Satisfaction
-	#. Video & Music Streaming: Content-Length Bias in Recommendations
 
 Overview: Domains
 ------------------------------------------------------------------------------------
