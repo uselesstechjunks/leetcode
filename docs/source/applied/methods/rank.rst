@@ -880,7 +880,7 @@ Popularity Bias & Feedback Loops
 		- FA*IR (FS)
 
 			- [arxiv.org] `FA*IR: A Fair Top-k Ranking Algorithm <https://arxiv.org/abs/1706.06368>`_
-			- Creates queues of protected (long-tail) and unprotected (head) items and merges them using normalized scoring such that protected items get more exposure
+			- Creates queues of protected (long-tail) and unprotected (head) items so that protected items get more exposure
 		- Personalized Long-tail Promotion (XQ)
 
 			- [arxiv.org] `Managing Popularity Bias in Recommender Systems with Personalized Re-ranking <https://arxiv.org/abs/1901.07555>`_
@@ -894,10 +894,6 @@ Popularity Bias & Feedback Loops
 
 		- Contextual Bandits
 	- Position debiasing
-	- Counterfactual Learning (Causal ML for fairness):
-
-		- [arxiv.org] `Model-Agnostic Counterfactual Reasoning for Eliminating Popularity Bias in Recommender System - Wei et. al <https://arxiv.org/pdf/2010.15363>`_
-	
 - Domain-Specific Notes:
 
 	- Social Media (TikTok, Twitter, Facebook): Celebrity overexposure (e.g., verified users dominating feeds).  
