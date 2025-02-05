@@ -40,7 +40,7 @@ Overview
 
 	- Domains
 
-		- Sponsored search
+		- Search Advertising
 		- Music
 		- Video
 		- E-commerce
@@ -55,6 +55,7 @@ Overview
 			#. Popularity Bias
 			#. Short-Term Engagement vs. Long-Term User Retention Trade-off
 			#. Privacy concerns & compliance (GDPR, CCPA)
+			#. Distribution shift (data/input, concept/target)
 
 		- Nuanced
 		
@@ -68,17 +69,9 @@ Overview
 			#. E-Commerce Issues: Balancing Revenue & User Satisfaction
 			#. Video & Music Streaming: Content-Length Bias in Recommendations
 
-************************************************************************************
-Resources
-************************************************************************************
-Metrics
+Overview: Metrics
 ====================================================================================
-.. important::
-
-	* [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
-	* [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
-
-Relevance
+Accuracy
 ------------------------------------------------------------------------------------
 .. csv-table:: 
 	:header: "Metric", "Full Name", "Formula", "Desc", "Drawback"
@@ -104,16 +97,27 @@ Popularity Bias
 		Agg-Div, Aggregate Diversity, :math:`\frac{|\bigcup_{u\in U}L_u|}{|I|}`, Item Coverage, Doesn't detect skew in impression
 		Gini, Gini Index, :math:`1-\frac{1}{|I|-1}\sum_{k}^{|I|}(2k-|I|-1)p(i_k|L)`, :math:`p(i_k|L)`: how many times :math:`i_k` occured in `L`, Ignores user preference
 		UDP, User Popularity Deviation, , ,
-	
+
 Diversity
 ------------------------------------------------------------------------------------
 Personalsation
 ------------------------------------------------------------------------------------
-
-Resources
+Overview: Issues
 ====================================================================================
-Overview: Stages
+Distribution Shift
 ------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Problem", "How to Detect", "How to Fix", "Trade-Offs"
+	:align: center  
+
+		Model Degradation, Performance drop (CTR; engagement), Frequent model retraining, Computationally expensive
+		Popularity Mismatch, PSI; JSD; embeddings drift, Adaptive reweighting of historical data, Hard to balance long vs. short-term relevance
+		Bias Reinforcement, Disparity in exposure metrics, Fairness-aware ranking, May hurt engagement
+		Cold-Start for New Trends, Increase in unseen queries, Session-based personalization, Requires fast inference
+		Intent Drift in Search, Increase in irrelevant search rankings, Online learning models, Real-time training is costly
+
+Overview: Stages
+====================================================================================
 .. csv-table:: 
 	:header: "Stage", "Goals", "Key Metrics", "Common Techniques"
 	:align: center
@@ -123,7 +127,7 @@ Overview: Stages
 		Re-Ranking, Optimize order of recommendations for engagement, CTR; NDCG; Exploration Ratio, Neural Rankers; Bandits; DPP for diversity
 
 Overview: Patterns
-------------------------------------------------------------------------------------
+====================================================================================
 .. csv-table:: 
 	:header: "Pattern", "Traditional Approach", "LLM Augmentations"
 	:align: center
@@ -135,13 +139,13 @@ Overview: Patterns
 		User-User, Graph-Based; Link Prediction, Profile-text analysis; Social graph augmentation
 
 Overview: Domains
+====================================================================================
+Search Advertising
 ------------------------------------------------------------------------------------
-Sponsored Search
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table:: 
 	:header: "Issue", "Why It Matters", "Strategic Fixes", "Trade-Offs"
 	:align: center
-
+	
 		Relevance vs. Revenue, Showing high-bid but low-relevance ads hurts trust, Hybrid ranking (bid + quality), Too much relevance filtering lowers revenue
 		Click Fraud & Ad Spam, Inflated clicks drain budgets, ML-based fraud detection, False positives can hurt advertisers
 		Ad Auction Manipulation, AI-driven bid shading exploits system, Second-price auctions, Reduced ad revenue
@@ -152,11 +156,11 @@ Sponsored Search
 		Ad Bias & Fairness, Favoring large advertisers hurts competition, Fairness-aware bidding, Less revenue from high bidders
 
 Music
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------------------------------------------
 .. csv-table:: 
 	:header: "Challenge", "Why Its Important", "Trade-Offs"
 	:align: center
-
+	
 		Personalization vs. Serendipity, Users want relevant music but also expect some new discoveries., Too much personalization  Feels repetitive. Too much exploration  Feels random.
 		Repetition & Content Fatigue, Users get frustrated if the same songs appear too often., Strict anti-repetition  May exclude user favorites. Loose constraints  Risk of overplaying certain songs.
 		Context & Mood Adaptation, Users listen to music differently based on mood; time; activity (workout; relaxation)., Explicit mood tagging is effective but requires manual input. Implicit context detection risks wrong assumptions.
@@ -164,8 +168,18 @@ Music
 		Cold-Start for New Songs & Artists, Newly released songs struggle to get exposure due to lack of engagement signals., Over-boosting new music can lead to reduced user satisfaction.
 		Playlist Length & Engagement Optimization, Users may not finish long playlists; leading to low engagement metrics., Shorter playlists increase completion rate; but longer ones improve session duration.
 
+************************************************************************************
+Resources
+************************************************************************************
+Metrics
+====================================================================================
+.. important::
+
+	* [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
+	* [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
+
 Videos
-------------------------------------------------------------------------------------
+====================================================================================
 - [youtube.com] `Stanford CS224W: Machine Learning w/ Graphs I 2023 I GNNs for Recommender Systems <https://www.youtube.com/watch?v=OV2VUApLUio>`_
 .. note::
 	- Mapped as an edge prediction problem in a bipartite graph
@@ -189,6 +203,8 @@ Videos
 		- Application: similar image recommendation in Pinterest 
 		- Issue: doesn't have contextual awareness or session/temporal awareness
 
+Papers
+====================================================================================
 Key Papers
 ------------------------------------------------------------------------------------
 	- BOF = Bag of features 
@@ -199,13 +215,18 @@ Key Papers
 	:header: "Tag", "Title"
 	:align: center
 
-		Two Tower; MLP, Neural Collaborative Filtering
-		Two Tower; BOF, StarSpace: Embed All The Things!
-		Two Tower; NG+BOF, Embedding-based Retrieval in Facebook Search
-		GCN, LightGCN - Simplifying and Powering Graph Convolution Network for Recommendation
-		CM; Session, Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation
-		LLM, Collaborative Large Language Model for Recommender Systems
-		LLM, Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach
+		Two Tower; MLP,`Neural Collaborative Filtering <https://arxiv.org/abs/1708.05031>`_
+		Two Tower; BOF,`StarSpace: Embed All The Things! <https://arxiv.org/abs/1709.03856>`_
+		Two Tower; NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_
+		GCN,`Graph Convolutional Neural Networks for Web-Scale Recommender Systems <https://arxiv.org/abs/1806.01973>`_
+		GCN,`LightGCN - Simplifying and Powering Graph Convolution Network for Recommendation <https://arxiv.org/abs/2002.02126>`_
+		CM; Session,`Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation <https://scontent.fblr25-1.fna.fbcdn.net/v/t39.8562-6/243129449_615285476133189_8760410510155369283_n.pdf?_nc_cat=104&ccb=1-7&_nc_sid=b8d81d&_nc_ohc=WDJcULkgkY8Q7kNvgHspPmM&_nc_zt=14&_nc_ht=scontent.fblr25-1.fna&_nc_gid=A_fmEzCPOHil7q9dPSpYsHS&oh=00_AYDCkVOnyZufYEGHEQORBbfI-blNODNIrePL4TaB8p_82A&oe=67A8FEDE>`_
+		LLM,`Collaborative Large Language Model for Recommender Systems <https://arxiv.org/abs/2311.01343>`_
+		LLM,`Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach <https://arxiv.org/abs/2305.07001>`_
+		DPP,`Improving the Diversity of Top-N Recommendation via Determinantal Point Process <https://arxiv.org/abs/1709.05135v1>`_
+		DPP,`Fast Greedy MAP Inference for Determinantal Point Process to Improve Recommendation Diversity <https://proceedings.neurips.cc/paper_files/paper/2018/file/dbbf603ff0e99629dda5d75b6f75f966-Paper.pdf>`_
+		WDN,`Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
+		DCN,`DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
 
 More Papers
 ------------------------------------------------------------------------------------
@@ -944,13 +965,11 @@ Video & Music Streaming
 		- Normalized Engagement Metrics (Watch Percentage vs. Watch Time) → Improves long-form content exposure but may reduce video diversity.  
 		- Hybrid-Length Recommendations (Mixing Shorts & Full Videos) → Enhances variety but harder to rank effectively. 
 
-************************************************************************************
 Personalisation
-************************************************************************************
+====================================================================================
 
-************************************************************************************
 Diversity
-************************************************************************************
+====================================================================================
 .. important::
 	- Music & video platforms (Spotify, YouTube, TikTok) use DPP and Bandits to introduce diverse content.
 	- E-commerce (Amazon, Etsy) balances popularity-based downsampling with weighted re-ranking.
@@ -998,12 +1017,12 @@ Diversity
 			Re-Ranking, Diversity-aware reranking; Counterfactuals, Balances personalization & exploration, Risk of over-exploration; Expensive inference
 
 Retrieval Stage
-====================================================================================
+------------------------------------------------------------------------------------
 .. note::
 	Goal: Ensuring Diversity in Candidate Selection
 
 Multi-Pool Retrieval (Heterogeneous Candidate Selection)
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	- Retrieves candidates from multiple independent sources (e.g., popularity-based pool, collaborative filtering pool, content-based retrieval).
 	- Ensures that recommendations are not solely based on one dominant factor (e.g., trending items).
 	
@@ -1022,7 +1041,7 @@ Example:
 	- YouTube retrieves candidates from watched videos, partially watched videos, new uploads, and popular in demographic to balance diversity.
 
 Popularity-Based Downsampling
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	- Reduces the dominance of highly popular items in the candidate pool.
 	- Ensures niche items have a fair chance of being retrieved.
 	
@@ -1041,7 +1060,7 @@ Example:
 	- Spotifys Discover Weekly uses a mix of popular and long-tail recommendations to balance engagement and discovery.
 
 LLMs for Diverse Candidate Selection  
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	#. Query Expansion for Better Recall  
 	
 		- LLMs generate query variations to retrieve diverse candidates beyond exact keyword matching.  
@@ -1071,12 +1090,12 @@ Cons:
 	- Loss of Precision - More diverse candidates mean a higher risk of retrieving irrelevant results.  
 
 Filtering & Merging Stage
-====================================================================================
+------------------------------------------------------------------------------------
 .. note::
 	Goal: Balancing Diversity Before Re-Ranking
 
 Minimum-Item Representation Heuristics
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	- Ensures that each category, genre, or provider has a minimum number of candidates before merging.
 	- Helps prevent over-representation of any single category.
 
@@ -1095,7 +1114,7 @@ Example:
 	- News Feeds (Facebook, Twitter, Google News) ensure a minimum number of international vs. local news, avoiding content silos.
 
 Category-Sensitive Filtering
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	- Computes category entropy to measure diversity across different categories.
 	- If a users recommendations lack category diversity, it enforces rebalancing by boosting underrepresented categories.
 
@@ -1114,7 +1133,7 @@ Example:
 	- Netflix ensures that recommendations contain a mix of different genres rather than overloading one.
 
 LLMs for Diversity-Aware Candidate Selection  
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	#. Semantic Deduplication & Cluster Merging  
 	
 		- LLMs identify semantically similar items (even if they differ in wording) to prevent redundancy.  
@@ -1144,12 +1163,12 @@ Cons:
 	- Difficult to Fine-Tune - Over-filtering may hide relevant recommendations.  
 
 Re-Ranking Stage
-====================================================================================
+------------------------------------------------------------------------------------
 .. note::
 	Goal: Final Diversity Adjustments
 
 Determinantal Point Processes (DPP)
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	- Uses probabilistic modeling to diversify ranked lists.
 	- Given a candidate set, DPP selects a subset that maximizes diversity while maintaining relevance.
 	- Works by modeling similarity between items and ensuring that similar items are not ranked too closely together.
@@ -1169,7 +1188,7 @@ Example:
 	- Spotify Playlist Generation - Ensures a playlist has a variety of artists and genres instead of only one type of song.
 
 Re-Ranking with Diversity Constraints
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	- Uses weighted re-ranking algorithms that explicitly penalize redundant recommendations.
 	- Can be tuned to balance diversity vs. personalization dynamically.
 
@@ -1188,7 +1207,7 @@ Example:
 	- YouTubes Ranking Model applies re-ranking constraints to prevent over-recommendation of a single creator in a session.
 
 Multi-Armed Bandits for Explore-Exploit
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	- Balances exploitation (showing relevant, known content) with exploration (introducing new, diverse content).
 	- Upper Confidence Bound (UCB), Thompson Sampling are commonly used bandit techniques.
 
@@ -1207,7 +1226,7 @@ Example:
 	- TikToks For You Page mixes known preferences with new content using bandit-based ranking.
 
 LLMs for Diversity-Aware Ranking  
-------------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	#. Diversity-Aware Ranking Models  
 
 		- LLMs act as personalization-aware rerankers, balancing relevance with diversity dynamically.  
@@ -1234,12 +1253,117 @@ Pros:
 Cons:  
 
 	- Higher Inference Cost - Re-ranking every session in real-time increases server load.  
-	- Risk of Over-Exploration - If diversity is forced, users may feel the system is less relevant.  
+	- Risk of Over-Exploration - If diversity is forced, users may feel the system is less relevant. 
+
+Distribution Shift
+====================================================================================
+Identification 
+------------------------------------------------------------------------------------
+Detecting distribution shift requires monitoring both data drift (changes in input distribution) and concept drift (changes in target relationships).  
+
+(A) Statistical & Distance-Based Methods  
+
+	#. Kolmogorov-Smirnov (KS) Test / Jensen-Shannon Divergence (JSD)  
+	
+		- Measures difference in feature distributions between past data (training set) and new data (live traffic).  
+		- Example: If the distribution of search queries in training data is significantly different from recent user queries, a shift is happening.  
+
+	#. Population Stability Index (PSI)  
+	
+		- Tracks changes in feature distributions over time to identify shifts.  
+		- Example: If a recommender systems user embeddings shift significantly, the model might be outdated.  
+
+(B) Model Performance Monitoring  
+
+	#. Live A/B Testing with Shadow Models  
+	
+		- Deploy a newer retrained model alongside the existing one, comparing engagement metrics (CTR, conversions, etc.).  
+		- Example: If old models show declining CTR, while new models improve CTR, this signals distribution shift.  
+
+	#. Error Analysis on Recent Queries  
+	
+		- Compare model predictions on new queries vs. actual user behavior.  
+		- Example: If a search model ranks outdated news articles highly but users click on newer sources, concept drift has occurred.  
+
+(C) Embedding-Based Drift Detection  
+
+	#. Measuring Drift in Learned Representations (e.g., PCA, t-SNE)  
+	
+		- Compare embedding spaces of items and users from past vs. present data.  
+		- Example: If embeddings from old user data cluster differently from new user behavior, a shift is occurring.  
+
+	#. Contrastive Learning for Drift Detection  
+	
+		- Train an encoder on past interactions and compare with embeddings from new interactions.  
+		- If new embeddings are significantly different, it signals a distribution shift.  
+
+Addressal
+------------------------------------------------------------------------------------
+(A) Continuous Model Updating & Online Learning  
+
+	- Solution: Train fresh models on recent data to ensure up-to-date recommendations.  
+	- Trade-Offs:  
+	
+		- Frequent retraining is computationally expensive.  
+		- Requires robust online learning pipelines (feature stores, incremental updates).  
+
+Example:  
+
+	- Google Search updates its ranking models regularly to adapt to evolving search trends.  
+	- Spotify retrains user embeddings frequently to reflect shifting music preferences.  
+
+(B) Adaptive Sampling & Reweighting Older Data  
+
+	- Solution: Weight recent data more heavily while retaining historical knowledge for long-term trends.  
+	- Trade-Offs:  
+	
+		- Overweighting recent data may cause catastrophic forgetting of long-term preferences.  
+		- Requires tuning of decay rates (e.g., exponential decay).  
+
+Example:  
+
+	- E-Commerce platforms (Amazon, Walmart) use time-decayed embeddings to keep recommendations fresh.  
+
+(C) Real-Time Personalization Using Session-Based Models  
+
+	- Solution: Use short-term session-based models (Transformers, RNNs) that adapt to recent interactions.  
+	- Trade-Offs:  
+	
+		- Session models work well short-term but lack long-term personalization.  
+		- Requires fast inference pipelines (low latency).  
+
+Example:  
+
+	- TikToks recommender adapts within a session, adjusting based on user behavior in real-time.  
+
+(D) Reinforcement Learning for Adaptive Ranking  
+
+	- Solution: Use reinforcement learning (RL) models to dynamically adapt rankings based on user feedback.  
+	- Trade-Offs:  
+	
+		- RL models require a lot of data to converge.  
+		- Training RL models online is computationally expensive.  
+
+Example:  
+
+	- YouTubes ranking system adapts via reinforcement learning to balance freshness & engagement.  
+
+(E) Hybrid Ensembles (Mixing Old & New Models)  
+
+	- Solution: Use an ensemble of multiple models trained on different time periods, allowing a blend of fresh & historical preferences.  
+	- Trade-Offs:  
+	
+		- Combining models increases complexity.  
+		- Requires ensemble weighting tuning to balance long-term vs. short-term data.  
+
+Example:  
+
+		- Netflix blends long-term preference models with session-based recommendations.  
 
 ************************************************************************************
 Domain Knowledge
 ************************************************************************************
-Sponsored Search
+Search Advertising
 ====================================================================================
 Relevance vs. Revenue Trade-Off
 ------------------------------------------------------------------------------------
