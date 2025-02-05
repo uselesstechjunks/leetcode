@@ -131,7 +131,7 @@ Sponsored Search
 .. csv-table:: 
 	:header: "Issue", "Why It Matters", "Strategic Fixes", "Trade-Offs"
 	:align: center
-
+	
 		Relevance vs. Revenue, Showing high-bid but low-relevance ads hurts trust, Hybrid ranking (bid + quality), Too much relevance filtering lowers revenue
 		Click Fraud & Ad Spam, Inflated clicks drain budgets, ML-based fraud detection, False positives can hurt advertisers
 		Ad Auction Manipulation, AI-driven bid shading exploits system, Second-price auctions, Reduced ad revenue
@@ -146,7 +146,7 @@ Music
 .. csv-table:: 
 	:header: "Challenge", "Why Its Important", "Trade-Offs"
 	:align: center
-
+	
 		Personalization vs. Serendipity, Users want relevant music but also expect some new discoveries., Too much personalization  Feels repetitive. Too much exploration  Feels random.
 		Repetition & Content Fatigue, Users get frustrated if the same songs appear too often., Strict anti-repetition  May exclude user favorites. Loose constraints  Risk of overplaying certain songs.
 		Context & Mood Adaptation, Users listen to music differently based on mood; time; activity (workout; relaxation)., Explicit mood tagging is effective but requires manual input. Implicit context detection risks wrong assumptions.
