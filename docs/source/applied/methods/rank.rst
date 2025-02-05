@@ -146,6 +146,30 @@ Overview: Patterns
 
 Overview: Domains
 ====================================================================================
+#. E-commerce (Amazon, Alibaba)
+#. Music (Spotify)
+#. Image (Instagram)
+#. Video (Netflix, Firestick, YouTube)
+#. Voice (Alexa)
+#. Short-video (Tiktok)
+#. Food (DoorDash, UberEats)
+#. Travel (AirBnB)
+#. Social (Facebook, Twitter)
+#. Search Advertising (Google, Bing)
+
+Music
+------------------------------------------------------------------------------------
+.. csv-table:: 
+	:header: "Challenge", "Why Its Important", "Trade-Offs"
+	:align: center
+	
+		Personalization vs. Serendipity, Users want relevant music but also expect some new discoveries., Too much personalization  Feels repetitive. Too much exploration  Feels random.
+		Repetition & Content Fatigue, Users get frustrated if the same songs appear too often., Strict anti-repetition  May exclude user favorites. Loose constraints  Risk of overplaying certain songs.
+		Context & Mood Adaptation, Users listen to music differently based on mood; time; activity (workout; relaxation)., Explicit mood tagging is effective but requires manual input. Implicit context detection risks wrong assumptions.
+		Balancing Popular & Niche Tracks, Highly popular songs dominate engagement; making it hard for lesser-known songs to gain exposure., Boosting niche tracks improves diversity; but may lower engagement metrics.
+		Cold-Start for New Songs & Artists, Newly released songs struggle to get exposure due to lack of engagement signals., Over-boosting new music can lead to reduced user satisfaction.
+		Playlist Length & Engagement Optimization, Users may not finish long playlists; leading to low engagement metrics., Shorter playlists increase completion rate; but longer ones improve session duration.
+
 Search Advertising
 ------------------------------------------------------------------------------------
 .. csv-table:: 
@@ -160,19 +184,6 @@ Search Advertising
 		Landing Page Experience, High bounce rate = low conversion, Quality Score rules, Strict rules limit advertiser flexibility
 		Multi-Touch Attribution, Last-click attribution undervalues early ad exposures, Shapley-based attribution, More complexity; slower optimization
 		Ad Bias & Fairness, Favoring large advertisers hurts competition, Fairness-aware bidding, Less revenue from high bidders
-
-Music
-------------------------------------------------------------------------------------
-.. csv-table:: 
-	:header: "Challenge", "Why Its Important", "Trade-Offs"
-	:align: center
-	
-		Personalization vs. Serendipity, Users want relevant music but also expect some new discoveries., Too much personalization  Feels repetitive. Too much exploration  Feels random.
-		Repetition & Content Fatigue, Users get frustrated if the same songs appear too often., Strict anti-repetition  May exclude user favorites. Loose constraints  Risk of overplaying certain songs.
-		Context & Mood Adaptation, Users listen to music differently based on mood; time; activity (workout; relaxation)., Explicit mood tagging is effective but requires manual input. Implicit context detection risks wrong assumptions.
-		Balancing Popular & Niche Tracks, Highly popular songs dominate engagement; making it hard for lesser-known songs to gain exposure., Boosting niche tracks improves diversity; but may lower engagement metrics.
-		Cold-Start for New Songs & Artists, Newly released songs struggle to get exposure due to lack of engagement signals., Over-boosting new music can lead to reduced user satisfaction.
-		Playlist Length & Engagement Optimization, Users may not finish long playlists; leading to low engagement metrics., Shorter playlists increase completion rate; but longer ones improve session duration.
 
 ************************************************************************************
 Resources
