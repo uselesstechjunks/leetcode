@@ -183,6 +183,7 @@ Metrics
 
 	* [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
 	* [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
+	* [arize.com] `Machine Learning Observability Course <https://arize.com/blog-course/>`_
 
 Videos
 ====================================================================================
