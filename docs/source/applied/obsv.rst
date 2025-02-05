@@ -11,6 +11,9 @@ Resources
 ***********************************************************************************
 Distribution Shift
 ***********************************************************************************
+.. note::
+	* [arize.com] `Drift Metrics: a Quickstart Guide <https://arize.com/blog-course/drift/>`_
+
 Identification 
 ====================================================================================
 Detecting distribution shift requires monitoring both data drift (changes in input distribution) and concept drift (changes in target relationships).  
