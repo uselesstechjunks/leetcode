@@ -39,8 +39,8 @@ Popularity Bias
 	:align: center
 		
 		ARP, Average Recommendation Popularity, :math:`\frac{1}{|U|}\sum_{u\in U}\frac{\sum_{i\in L_u}\phi(i)}{|L_u|}`, Average CTR across users, Good (low) value doesn't indicate coverage
-		Agg-Div, Aggregate Diversity, , ,
-		Gini, Gini Index, , ,
+		Agg-Div, Aggregate Diversity, :math:`\frac{|\bigcup_{u\in U}L_u|}{|I|}`, Item Coverage, Doesn't detect skew in impression
+		Gini, Gini Index, :math:`1-\frac{1}{|I|-1}\sum_{k}^{|I|}(2k-|I|-1)p(i_k|L)`, :math:`p(i_k|L)`: how many times :math:`i_k` occured in `L`, Ignores user preference
 		UDP, User Popularity Deviation, , ,
 	
 Diversity
@@ -76,21 +76,21 @@ Overview: Common Issues
 ------------------------------------------------------------------------------------
 - General Issues in Search & Recommendation Systems
 
-	- Cold-Start Problem (Users, items)
-	- Popularity Bias & Feedback Loops
-	- Short-Term Engagement vs. Long-Term User Retention
-	- Diversity vs. Personalization Trade-Off
-	- Real-Time Personalization & Latency Trade-Offs
-	- Balancing multiple business objectives (CTR vs. fairness vs. revenue)
-	- Cross-device and cross-session personalization
-	- Privacy concerns & compliance (GDPR, CCPA)
-	- Multi-modality & cross-domain recommendation challenges
+	#. Cold-Start Problem (Users, items)
+	#. Popularity Bias & Feedback Loops
+	#. Short-Term Engagement vs. Long-Term User Retention
+	#. Diversity vs. Personalization Trade-Off
+	#. Real-Time Personalization & Latency Trade-Offs
+	#. Balancing multiple business objectives (CTR vs. fairness vs. revenue)
+	#. Cross-device and cross-session personalization
+	#. Privacy concerns & compliance (GDPR, CCPA)
+	#. Multi-modality & cross-domain recommendation challenges
 
 - Domain-Specific Issues & Their Unique Challenges
 
-	- Search-Specific Issues: Query Understanding & Intent Disambiguation
-	- E-Commerce Issues: Balancing Revenue & User Satisfaction
-	- Video & Music Streaming: Content-Length Bias in Recommendations
+	#. Search-Specific Issues: Query Understanding & Intent Disambiguation
+	#. E-Commerce Issues: Balancing Revenue & User Satisfaction
+	#. Video & Music Streaming: Content-Length Bias in Recommendations
 
 Overview: Domains
 ------------------------------------------------------------------------------------
