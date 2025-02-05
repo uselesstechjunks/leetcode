@@ -9,6 +9,14 @@ Search & Recommendation
 ************************************************************************************
 Overview
 ************************************************************************************
+.. warning::
+
+	* Overview of search and recsys - different stages
+	* Metrics, Modelling for different stages
+	* Application of LLMs at different stages
+	* General problems
+	* Domain specific problems
+
 .. important::
 	- Entities
 
@@ -22,7 +30,6 @@ Overview
 	- Objectives & metrics
 
 		- Accuracy, Personalisation, Diversity, Serendipity, Novelty, Fairness
-
 	- Stages 
 
 		- Retrieval, Filtering, Rerank
@@ -40,7 +47,6 @@ Overview
 		- Rerank
 			
 			- GBDT, NN, DCN, WDN, DPP
-
 	- Domains
 
 		- Search Advertising
@@ -48,7 +54,6 @@ Overview
 		- Video
 		- E-commerce
 		- Social media
-
 	- Issues
 
 		- General
@@ -59,13 +64,11 @@ Overview
 			#. Short-Term Engagement vs. Long-Term User Retention Trade-off
 			#. Privacy concerns & compliance (GDPR, CCPA)
 			#. Distribution shift (data/input, concept/target)
-
 		- Nuanced
 		
 			#. Real-Time Personalization & Latency Trade-Offs
 			#. Cross-device and cross-session personalization
 			#. Multi-modality & cross-domain recommendation challenges
-
 		- Domain-Specific
 	
 			#. Search-Specific Issues: Query Understanding & Intent Disambiguation
