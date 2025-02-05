@@ -26,7 +26,6 @@ Contents
 	ml/index
 	dl/index
 	applied/index
-	sysdes
 	interviews/index   
 	behave
 	studytips   

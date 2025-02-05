@@ -5,5 +5,7 @@ Applied Machine Learning
 .. toctree::
 	:maxdepth: 2
 
-	mlcoding
-	mlapp
+	sys/mlcoding
+	sys/sysdes
+	methods/mlapp
+	eval/obsv
