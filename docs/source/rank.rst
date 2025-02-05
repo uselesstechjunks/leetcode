@@ -20,6 +20,7 @@ Key objectives
 ------------------------------------------------------------------------------------
 .. note::
 	* Accuracy
+	* Personalisation
 	* Diversity
 	* Serendipity
 	* Novelty
@@ -792,27 +793,28 @@ Popularity Bias & Feedback Loops
 
 - Common Approaches:
 
-	- ReGularization (RG):
+	- ReGularization (RG)
 
 		- Controls the ratio of popular and less popular items via a regularizer added to the objective function
 		- Penalizes lists that contain only one group of items and hence attempting to reduce the concentration on popular items
-	- Discrepancy Minimization (DM):
+	- Discrepancy Minimization (DM)
 
 		- Optimizes for aggregate diversity
 		- Define a target distribution of item exposure as a constraint for the objective function
 		- Goal is therefore to minimize the discrepancy of the recommendation frequency for each item and the target distribution
-	- FA*IR (FS):
+	- FA*IR (FS)
 
 		- Creates queues of protected (long-tail) and unprotected (head) items and merges them using normalized scoring such that protected items get more exposure
-	- Personalized Long-tail Promotion (XQ):
+	- Personalized Long-tail Promotion (XQ)
 
 		- Query result diversification
 		 -The objective for a final recommendation list is a balanced ratio of popular and less popular (long-tail) items.
-	- Calibrated Popularity (CP):
+	- Calibrated Popularity (CP)
 	- Counterfactual Learning (Causal ML for fairness): Breaks bias loops but hard to implement at scale.  
 	- Multi-Armed Bandits (UCB, Thompson Sampling): Helps exploration but can reduce short-term revenue.  
 
 - Papers:
+
 	- [arxiv.org] `User-centered Evaluation of Popularity Bias in Recommender Systems - Abdollahpouri et. al <https://arxiv.org/pdf/2103.06364>`_
 	- [arxiv.org] `Model-Agnostic Counterfactual Reasoning for Eliminating Popularity Bias in Recommender System - Wei et. al <https://arxiv.org/pdf/2010.15363>`_
 
