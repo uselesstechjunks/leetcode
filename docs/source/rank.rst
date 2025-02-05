@@ -35,7 +35,7 @@ Popularity Bias
 	* :math:`L`: All list of items (concatenated)
 
 .. csv-table:: 
-	:header: "Metric", "Full Name", "Formula", "Desc", "Drawback"
+	:header: "Metric", "Full Name", "Formula", "Note", "Drawback"
 	:align: center
 		
 		ARP, Average Recommendation Popularity, :math:`\frac{1}{|U|}\sum_{u\in U}\frac{\sum_{i\in L_u}\phi(i)}{|L_u|}`, Average CTR across users, Good (low) value doesn't indicate coverage
