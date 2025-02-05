@@ -1,6 +1,15 @@
 ###################################################################################
-Monitoring & Debugging
+Data Centric AI
 ###################################################################################
+.. note::
+	* [youtube.com] `MIT: Introduction to Data-Centric AI <https://www.youtube.com/watch?v=ayzOzZGHZy4&list=PLnSYPjg2dHQKdig0vVbN-ZnEU0yNJ1mo5>`_
+
+***********************************************************************************
+Class Imbalance
+***********************************************************************************
+***********************************************************************************
+Outliers
+***********************************************************************************
 ***********************************************************************************
 Observability
 ***********************************************************************************
@@ -8,15 +17,10 @@ Observability
 
 	* [arize.com] `Courses on Observability <https://courses.arize.com/courses/>`_
 
-Class Imbalance
-====================================================================================
-Outliers
-====================================================================================
 Distribution Shift
 ====================================================================================
 .. note::
-	* [mit.edu] `Class Imbalance, Outliers, and Distribution Shift <https://dcai.csail.mit.edu/2024/imbalance-outliers-shift/>`_
-	* [youtube.com] `MIT: Introduction to Data-Centric AI <https://www.youtube.com/watch?v=ayzOzZGHZy4&list=PLnSYPjg2dHQKdig0vVbN-ZnEU0yNJ1mo5>`_
+	* [mit.edu] `Class Imbalance, Outliers, and Distribution Shift <https://dcai.csail.mit.edu/2024/imbalance-outliers-shift/>`_	
 	* [arize.com] `Drift Metrics: a Quickstart Guide <https://arize.com/blog-course/drift/>`_
 
 Identification 
