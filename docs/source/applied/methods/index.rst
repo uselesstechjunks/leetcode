@@ -8,7 +8,6 @@ Machine Learning Applications
 	llm
 	nlp
 	multimodal
-	cp
 	rank
 	obsv
 *******************************************************************************

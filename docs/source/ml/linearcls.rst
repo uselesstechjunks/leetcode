@@ -1,6 +1,11 @@
 ######################################################################################
 Linear Methods for Classification
 ######################################################################################
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
+
 .. note::
 	* We note that the output here is a categorical rv :math:`G\in\mathcal{G}` where :math:`|\mathcal{G}|=K`. 
 	* We therefore associate each observed output :math:`g_i=k` where :math:`k=1,2,\cdots,K`.

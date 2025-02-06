@@ -1,6 +1,10 @@
 ###################################################################################
 Causal Inference
 ###################################################################################
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
 
 .. note::
 	* Strong ignorability `SO post <https://stats.stackexchange.com/a/474619>`_

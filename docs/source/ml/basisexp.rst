@@ -1,6 +1,11 @@
 ##################################################################################
 Basis Expansion
 ##################################################################################
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
+
 .. warning::
 	* We can use the established framework for linear models to move beyond linearity just by using non-linear transforms on the features.
 	* We define the transforms as functions :math:`h:\mathbb{R}^d\mapsto\mathcal{\Phi}` where :math:`\mathcal{\Phi}` can be finite or infinite dimensional.

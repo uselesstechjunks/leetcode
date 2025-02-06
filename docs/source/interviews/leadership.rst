@@ -1,6 +1,10 @@
 ##########################################################################
 Leadership and Values
 ##########################################################################
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
 
 1. **Ethical Considerations**:
    - Ask about the candidate's approach to ethical considerations in machine learning, such as fairness, accountability, transparency, and privacy. How do they ensure their models are free from biases and uphold ethical standards in their work?

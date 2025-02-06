@@ -1,6 +1,10 @@
 #####################################################################################
 Advanced Topics
 #####################################################################################
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
 
 .. warning::
 	* [mbernste.github.io] `The evidence lower bound (ELBO) <https://mbernste.github.io/posts/elbo/>`_
