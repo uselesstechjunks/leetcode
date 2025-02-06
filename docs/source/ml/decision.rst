@@ -1,6 +1,11 @@
 ##################################################################################
 Statistical Decision Theory
 ##################################################################################
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
+
 This puts the prediction task under a statistical inference paradigm.
 
 Statistical machine learning deals with the problem of prediction by using existing data to form a model. There are two distinct aspects of such a task
