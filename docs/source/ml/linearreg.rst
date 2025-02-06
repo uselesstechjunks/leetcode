@@ -1,6 +1,11 @@
 ###########################################################################
 Linear Methods for Regression
 ###########################################################################
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
+
 .. note::
 	* For regression problem, the output :math:`Y` is being modeled as a function of the input data :math:`X`.
 	* We assume that the function :math:`f` belongs to some well-defined function class spanned by a set of parameters, and our model then becomes
