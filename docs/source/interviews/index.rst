@@ -7,6 +7,7 @@ ML Interviews
 
 	resume
 	breadth
+	qb
 	depth
 	design
 	leadership
