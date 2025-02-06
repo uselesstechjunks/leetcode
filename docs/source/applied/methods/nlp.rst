@@ -1,6 +1,11 @@
 *****************************************************************************************
-Task Specific Setup
+Natural Language Processing Tasks
 *****************************************************************************************
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
+
 Notes from Common NLP Tasks
 =========================================================================================
 Using In-Context Capability:
