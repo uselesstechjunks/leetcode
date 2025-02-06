@@ -77,6 +77,13 @@ Advanced Graph Topics
 
 3. Topological Sort
 --------------------------------------------------------------------------------
+* Sample implementation
+
+	.. collapse:: Single source shortest path
+
+	   .. literalinclude:: ../code/tsort.py
+	      :language: python
+	      :linenos:
 * Why important: Crucial for dependency resolution and scheduling problems.
 * Key Techniques:
 
