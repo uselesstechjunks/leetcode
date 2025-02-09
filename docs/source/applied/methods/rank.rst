@@ -29,7 +29,13 @@ Overview
 		- Query-Item, User-Item, Item-Item, Session, User-User
 	- Objectives & metrics
 
-		- Accuracy, Personalisation, Diversity, Serendipity, Novelty, Fairness
+		- Accuracy: Precision@k, Recall@k, MAP@k, NDCG@k, MRR@k, HR@k
+		- Behavioral: Diversity, Novelty, Serendipity, Popularity-bias, Personalisation, Fairness
+		- Monitoring: Drift metrics
+	- Considerations in model training
+
+		- Training window: Seasonality, Data leak
+		- Deciding on labels
 	- Stages 
 
 		- Retrieval, Filtering, Rerank
@@ -37,7 +43,7 @@ Overview
 
 		- Retrieval
 
-			- Content-based Filtering - Matching
+			- Content-based Filtering
 			- Collaborative Filtering - MF/Neural CF
 			- GCN - LightGCN
 			- Sequence - Transformers
