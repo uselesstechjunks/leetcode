@@ -10,6 +10,9 @@ ML Breadth
 ********************************************************************************
 Resources
 ********************************************************************************
+#. Misc Resources
+
+	#. [github.com] `Machine-Learning-Interview-Prep <https://github.com/QuickLearner171998/Machine-Learning-Interview-Prep/blob/master/README.md>`_
 #. Specific Topics
 
 	#. [youtube.com] `ML interviews <https://www.youtube.com/playlist?list=PLXmbE5IFg3EEoSAzuqbu7o8Kh8FFhTFPc>`_
