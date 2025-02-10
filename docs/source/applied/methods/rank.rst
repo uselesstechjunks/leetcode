@@ -259,6 +259,7 @@ Key Papers
 		WDN,`Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
 		DCN,`DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
 		Fairness,`Fairness in Ranking, Part II: Learning-to-Rank and Recommender Systems <https://dl.acm.org/doi/pdf/10.1145/3533380>`_
+		Fairness,`Fairness Definitions Explained <https://fairware.cs.umass.edu/papers/Verma.pdf>`_
 
 More Papers
 ------------------------------------------------------------------------------------
