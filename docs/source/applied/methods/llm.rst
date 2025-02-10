@@ -1,10 +1,15 @@
 *****************************************************************************************
-LLM Technology Stack
+Applied LLMs
 *****************************************************************************************
 .. contents:: Table of Contents
    :depth: 2
    :local:
    :backlinks: none
+
+In Context Learning (ICL)
+=========================================================================================
+.. note::
+	* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
 
 Embeddings for Search and Retrieval
 =========================================================================================
