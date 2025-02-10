@@ -227,7 +227,7 @@ Videos
 		- Application: similar image recommendation in Pinterest 
 		- Issue: doesn't have contextual awareness or session/temporal awareness
 
-Papers
+Books & Papers
 ====================================================================================
 Key Papers
 ------------------------------------------------------------------------------------
@@ -239,6 +239,8 @@ Key Papers
 	:header: "Tag", "Title"
 	:align: center
 
+		IR;Book, `Introduction to Information Retrieval <https://nlp.stanford.edu/IR-book/information-retrieval-book.html>`_
+		Retrieval;Survey, `A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
 		Two Tower; MLP,`Neural Collaborative Filtering <https://arxiv.org/abs/1708.05031>`_
 		Two Tower; BOF,`StarSpace: Embed All The Things! <https://arxiv.org/abs/1709.03856>`_
 		Two Tower; NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_
