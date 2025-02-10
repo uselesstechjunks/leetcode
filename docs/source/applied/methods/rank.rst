@@ -194,13 +194,15 @@ Search Advertising
 ************************************************************************************
 Resources
 ************************************************************************************
-Metrics
+Metrics & QA
 ====================================================================================
 .. important::
 
 	* [evidentlyai.com] `10 metrics to evaluate recommender and ranking systems <https://www.evidentlyai.com/ranking-metrics/evaluating-recommender-systems>`_
 	* [docs.evidentlyai.com] `Ranking metrics <https://docs.evidentlyai.com/reference/all-metrics/ranking-metrics>`_
 	* [arize.com] `A Quick Survey of Drift Metrics <https://arize.com/blog-course/drift/>`_
+	* [github.com] `50 Fundamental Recommendation Systems Interview Questions <https://github.com/Devinterview-io/recommendation-systems-interview-questions>`_
+	* [devinterview.io] `50 Recommendation Systems interview questions <https://devinterview.io/questions/machine-learning-and-data-science/recommendation-systems-interview-questions/>`_
 
 Videos
 ====================================================================================
