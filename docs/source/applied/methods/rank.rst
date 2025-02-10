@@ -227,7 +227,7 @@ Videos
 		- Application: similar image recommendation in Pinterest 
 		- Issue: doesn't have contextual awareness or session/temporal awareness
 
-Books & Papers
+Course, Books & Papers
 ====================================================================================
 Key Papers
 ------------------------------------------------------------------------------------
@@ -239,8 +239,10 @@ Key Papers
 	:header: "Tag", "Title"
 	:align: center
 
-		IR;Book, `Introduction to Information Retrieval <https://nlp.stanford.edu/IR-book/information-retrieval-book.html>`_
-		Retrieval;Survey, `A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
+		IR;Course;Stanford,`CS 276 / LING 286: Information Retrieval and Web Search <https://web.stanford.edu/class/cs276/>`_
+		IR;Book,`Introduction to Information Retrieval <https://nlp.stanford.edu/IR-book/information-retrieval-book.html>`_
+		RS;Survey,`A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
+		DL;RS;Survey,`Deep Learning based Recommender System: A Survey and New Perspectives <https://arxiv.org/pdf/1707.07435>`_		
 		Two Tower; MLP,`Neural Collaborative Filtering <https://arxiv.org/abs/1708.05031>`_
 		Two Tower; BOF,`StarSpace: Embed All The Things! <https://arxiv.org/abs/1709.03856>`_
 		Two Tower; NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_
@@ -254,6 +256,7 @@ Key Papers
 		DPP,`Fast Greedy MAP Inference for Determinantal Point Process to Improve Recommendation Diversity <https://proceedings.neurips.cc/paper_files/paper/2018/file/dbbf603ff0e99629dda5d75b6f75f966-Paper.pdf>`_
 		WDN,`Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
 		DCN,`DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
+		Fairness,`Fairness in Ranking, Part II: Learning-to-Rank and Recommender Systems <https://dl.acm.org/doi/pdf/10.1145/3533380>`_
 
 More Papers
 ------------------------------------------------------------------------------------
