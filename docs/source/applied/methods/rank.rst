@@ -87,8 +87,8 @@ Metrics
 Accuracy
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Metric", "Full Name", "Formula", "Desc", "Drawback"
-	:align center
+	:header: "Metric", "Full Name", "Formula", "Desc", "Drawback"
+	:align: center
 	
 		HR@k, Hit-rate at k, , ,
 		Recall@k, Recall at k, , ,
@@ -97,14 +97,14 @@ Accuracy
 Popularity Bias
 ------------------------------------------------------------------------------------
 .. note::
-	* :math:`U` Set of all users
-	* :math:`I` Set of all items
-	* :math:`L_u` List of items (concatenated) impressed for user :math:`u`
-	* :math:`L` All list of items (concatenated)
+	* :math:`U`: Set of all users
+	* :math:`I`: Set of all items
+	* :math:`L_u`: List of items (concatenated) impressed for user :math:`u`
+	* :math:`L`: All list of items (concatenated)
 
 .. csv-table::
-	:header "Metric", "Full Name", "Formula", "Note", "Drawback"
-	:align center
+	:header: "Metric", "Full Name", "Formula", "Note", "Drawback"
+	:align: center
 	
 		ARP, Average Recommendation Popularity, :math:`\frac{1}{|U|}\sum_{u\in U}\frac{\sum_{i\in L_u}\phi(i)}{|L_u|}`, Average CTR across users, Good (low) value doesn't indicate coverage
 		Agg-Div, Aggregate Diversity, :math:`\frac{|\bigcup_{u\in U}L_u|}{|I|}`, Item Coverage, Doesn't detect skew in impression
@@ -120,8 +120,8 @@ Issues
 Distribution Shift
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Problem", "How to Detect", "How to Fix", "Trade-Offs"
-	:align center 
+	:header: "Problem", "How to Detect", "How to Fix", "Trade-Offs"
+	:align: center 
 
 		Model Degradation, Performance drop (CTR; engagement), Frequent model retraining, Computationally expensive
 		Popularity Mismatch, PSI; JSD; embeddings drift, Adaptive reweighting of historical data, Hard to balance long vs. short-term relevance
@@ -132,8 +132,8 @@ Distribution Shift
 Stages
 ====================================================================================
 .. csv-table::
-	:header "Stage", "Goals", "Key Metrics", "Common Techniques"
-	:align center
+	:header: "Stage", "Goals", "Key Metrics", "Common Techniques"
+	:align: center
 
 		Retrieval, Fetch diverse candidates from multiple sources, Recall@K; Coverage; Latency, Multi-tower models; ANN; User embeddings
 		Combining & Filtering, Merge candidates; remove duplicates; apply business rules, Diversity; Precision@K; Fairness, Weighted merging; Min-hashing; Rule-based filtering
@@ -142,8 +142,8 @@ Stages
 Patterns
 ====================================================================================
 .. csv-table::
-	:header "Pattern", "Traditional Approach", "LLM Augmentations"
-	:align center
+	:header: "Pattern", "Traditional Approach", "LLM Augmentations"
+	:align: center
 
 		Query-Item, BM25; TF-IDF; Neural Ranking, LLM-based reranking; Query expansion
 		Item-Item, Co-occurrence; Similarity Matching, Semantic matching; Multimodal embeddings
@@ -167,8 +167,8 @@ Domains
 Music
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Challenge", "Why Its Important", "Trade-Offs"
-	:align center
+	:header: "Challenge", "Why Its Important", "Trade-Offs"
+	:align: center
 
 		Personalization vs. Serendipity, Users want relevant music but also expect some new discoveries., Too much personalization  Feels repetitive. Too much exploration  Feels random.
 		Repetition & Content Fatigue, Users get frustrated if the same songs appear too often., Strict anti-repetition  May exclude user favorites. Loose constraints  Risk of overplaying certain songs.
@@ -180,8 +180,8 @@ Music
 Search Advertising
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Issue", "Why It Matters", "Strategic Fixes", "Trade-Offs"
-	:align center
+	:header: "Issue", "Why It Matters", "Strategic Fixes", "Trade-Offs"
+	:align: center
 
 		Relevance vs. Revenue, Showing high-bid but low-relevance ads hurts trust, Hybrid ranking (bid + quality), Too much relevance filtering lowers revenue
 		Click Fraud & Ad Spam, Inflated clicks drain budgets, ML-based fraud detection, False positives can hurt advertisers
@@ -239,8 +239,8 @@ Key Papers
 	- CM = Causal Models (autoregressive)
 
 .. csv-table::
-	:header "Tag", "Title"
-	:align center
+	:header: "Tag", "Title"
+	:align: center
 
 		IR;Course;Stanford,`CS 276 / LING 286 Information Retrieval and Web Search <https://web.stanford.edu/class/cs276/>`_
 		IR;Book,`Introduction to Information Retrieval <https://nlp.stanford.edu/IR-book/information-retrieval-book.html>`_
@@ -267,8 +267,8 @@ Key Papers
 More Papers
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Year", "Title"
-	:align center
+	:header: "Year", "Title"
+	:align: center
 
 		2001,Item-Based Collaborative Filtering Recommendation Algorithms – Sarwar et al.
 		2003,Amazon.com Recommendations Item-to-Item Collaborative Filtering – Linden et al.
@@ -317,7 +317,7 @@ More Papers
 		2023,LLM-Augmented Node Classification in Social Networks – Zhang et al.
 
 ************************************************************************************
-Implicit Label Collection Techniques
+Implicit Labels
 ************************************************************************************
 Collaborative Filtering (CF)  
 ====================================================================================
@@ -327,8 +327,8 @@ Collaborative Filtering (CF)
 User Engagement-Based Labels  
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
-	:align center
+	:header: "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
+	:align: center
 
 		Clicks, Count clicks on an item.,  Simple; scalable.  Clicking  liking (accidental clicks).
 		Watch Time / Dwell Time, Measure time spent on videos/articles.,  Captures engagement depth.  Long duration  satisfaction (e.g.; passive watching).
@@ -340,8 +340,8 @@ User Engagement-Based Labels
 Social & Community-Based Signals  
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
-	:align center
+	:header: "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
+	:align: center
 
 		Likes / Upvotes, Count "likes" on posts; videos; or comments.,  Clear positive feedback.  Some users never like items.
 		Shares / Retweets, Count how often users share content.,  Strong endorsement.  May share for controversy.
@@ -350,8 +350,8 @@ Social & Community-Based Signals
 Negative Feedback & Implicit Dislikes  
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
-	:align center
+	:header: "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
+	:align: center
 
 		Skip / Bounce Rate, Detect when a user skips a song/video quickly.,  Identifies disinterest.  May skip for reasons unrelated to content.
 		Negative Actions, "Not Interested" clicks; downvotes; blocking content.,  Explicit dislike signal.  Only a subset of users take these actions.
@@ -365,12 +365,16 @@ Content-Based Filtering (CBF)
 Session-Based & Short-Term Context Labels  
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
-	:align center
+	:header: "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
+	:align: center
 
 		Recent Search Context, Track evolving search terms.,  Captures short-term needs.  Trends change quickly.
 		Location-Based Preferences, Match user location with nearby content.,  Useful for local recommendations.  Privacy-sensitive.
 		Time of Day / Activity Patterns, Suggest different items based on morning/evening behavior.,  Improves context relevance.  Needs continuous adaptation.
+
+Self-Supervised Paradigm
+------------------------------------------------------------------------------------
+TODO
 
 Knowledge Graphs for Hybrid Labeling
 ====================================================================================
@@ -379,29 +383,27 @@ Knowledge Graphs for Hybrid Labeling
 ************************************************************************************
 Stages
 ************************************************************************************
-A large-scale recommendation system consists of multiple stages designed to efficiently retrieve, filter, and rank items to maximize user engagement and satisfaction. The three primary stages are Retrieval, Combining & Filtering, and Re-Ranking. 
-
 Retrieval 
 ====================================================================================
 (Fetching an initial candidate pool from multiple sources) 
 
-Goals 
+Task
 ------------------------------------------------------------------------------------
 	- Reduce a large item pool (millions of candidates) to a manageable number (thousands). 
 	- Retrieve diverse candidates from multiple sources that might be relevant to the user. 
 	- Balance long-term preferences vs. short-term intent. 
 
-Metrics to Optimize For 
+Comon Metrics
 ------------------------------------------------------------------------------------
 	- Recall@K – How many relevant items are in the top-K retrieved items? 
 	- Coverage – Ensuring diversity by retrieving from multiple pools. 
 	- Latency – Efficient retrieval in milliseconds at large scales. 
 
-Common Techniques for Different Goals 
+Common Techniques
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Goal", "Techniques"
-	:align center
+	:header: "Goal", "Techniques"
+	:align: center
 
 		Heterogeneous Candidate Retrieval, Multi-tower models; Hybrid retrieval (Collaborative Filtering + Content-Based)
 		Personalization, User embeddings (e.g.; Two-Tower models; Matrix Factorization)
@@ -418,24 +420,24 @@ Combining & Filtering
 ====================================================================================
 (Merging retrieved candidates from different sources and removing low-quality items) 
 
-Goals 
+Task
 ------------------------------------------------------------------------------------
 	- Merge multiple retrieved pools and assign confidence scores to each source. 
 	- Filter out irrelevant, duplicate, or low-quality candidates. 
 	- Apply business rules (e.g., compliance filtering, removing expired content). 
 
-Metrics to Optimize For 
+Comon Metrics
 ------------------------------------------------------------------------------------
 	- Diversity – Ensuring different content types are represented. 
 	- Precision@K – How many retrieved items are actually relevant? 
 	- Fairness & Representation – Avoiding over-exposure of popular items. 
 	- Latency – Keeping the filtering process efficient. 
 
-Common Techniques for Different Goals 
+Common Techniques
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Goal", "Techniques"
-	:align center
+	:header: "Goal", "Techniques"
+	:align: center
 
 		Merging Multiple Candidate Pools, Weighted aggregation based on confidence scores
 		Duplicate Removal, Min-hashing; Jaccard similarity; clustering-based deduplication
@@ -453,24 +455,24 @@ Re-Ranking
 ====================================================================================
 (Final ranking of candidates based on personalization, diversity, and explore-exploit trade-offs) 
 
-Goals 
+Task
 ------------------------------------------------------------------------------------
 	- Optimize the order of candidates to maximize engagement. 
 	- Balance personalization with exploration (ensuring new content gets surfaced). 
 	- Ensure fairness and representation (avoid showing only highly popular items). 
 
-Metrics to Optimize For 
+Comon Metrics
 ------------------------------------------------------------------------------------
 	- CTR (Click-Through Rate) – Measures immediate engagement. 
 	- NDCG (Normalized Discounted Cumulative Gain) – Measures ranking quality. 
 	- Exploration Ratio – Tracks new content shown to users. 
 	- Long-Term Engagement – Measures retention and repeat interactions. 
 
-Common Techniques for Different Goals 
+Common Techniques
 ------------------------------------------------------------------------------------
 .. csv-table::
-	:header "Goal", "Techniques"
-	:align center
+	:header: "Goal", "Techniques"
+	:align: center
 
 		Personalized Ranking, Neural Ranking Models (e.g.; DeepFM; Wide & Deep; Transformer-based rankers)
 		Diversity Promotion, Determinantal Point Processes (DPP); Re-ranking by category
@@ -496,8 +498,7 @@ Query-Item Recommendation
 
 Key Concept 
 ------------------------------------------------------------------------------------
-- Query-item recommendation is the foundation of search systems, where a user provides a query (text, image, voice, etc.), and the system retrieves the most relevant items. Unlike standard recommendations, search is explicit—users express intent directly. 
-- Common approaches
+- Common Approaches
 
 	- Lexical Matching (TF-IDF, BM25, keyword-based retrieval) 
 	- Semantic Matching (Word embeddings, Transformer models like BERT, CLIP for vision-text matching) 
@@ -510,7 +511,7 @@ Key Concept
 	- Can be used for query expansion, understanding user intent, and handling ambiguous queries. 
 	- Example use case Google Search, AI-driven Q&A search (Perplexity AI). 
 
-Gathering Training Data & Labels 
+Learning Objectives
 ------------------------------------------------------------------------------------
 #. Supervised Learning 
 
@@ -526,7 +527,7 @@ Gathering Training Data & Labels
 	- Contrastive learning (e.g., train embeddings by pulling query and relevant items closer). 
 	- Masked query prediction (e.g., predicting missing words in search queries). 
 
-Feature Engineering 
+Common Features
 ------------------------------------------------------------------------------------
 - Query Features Term frequency, query length, part-of-speech tagging. 
 - Item Features Title, description, category, metadata, embeddings. 
@@ -569,7 +570,7 @@ Key Concept
 
 	- Typically modeled as an item simi-larity problem. 
 	- Unlike user-item recommendation, the goal is to find related items rather than predicting a user’s preferences. 
-- Common approaches
+- Common Approaches
 
 	- Item-Based Collaborative Filtering (Similarity between item interaction histories) 
 	- Content-Based Filtering (Similarity using item attributes like text, image, category) 
@@ -582,7 +583,7 @@ Key Concept
 	- Multimodal LLMs (e.g., CLIP) combine text, images, and metadata to enhance recommendations.
 	- Example use case E-commerce (Amazon's “similar items”), content platforms (Netflix’s related videos).
 
-Gathering Training Data & Labels 
+Learning Objectives
 ------------------------------------------------------------------------------------
 #. Supervised Learning 
 
@@ -598,7 +599,7 @@ Gathering Training Data & Labels
 	- Contrastive learning (e.g., learning embeddings by pushing dissimilar items apart). 
 	- Masked item prediction (e.g., predicting missing related items in a session). 
 
-Feature Engineering 
+Common Features
 ------------------------------------------------------------------------------------
 - Item Features Category, brand, price, textual description, images. 
 - Interaction Features Co-purchase counts, view sequences, co-engagement. 
@@ -641,7 +642,7 @@ Key Concept
 
 	- Explicit feedback (e.g., ratings, thumbs up/down) 
 	- Implicit feedback (e.g., clicks, watch time, purchases) 
-- Common approaches
+- Common Approaches
 
 	- Collaborative Filtering (CF) (Matrix Factorization, Neural CF) 
 	- Content-Based Filtering (Feature-based models) 
@@ -653,7 +654,7 @@ Key Concept
 	- LLMs can generate user preferences dynamically via zero-shot/few-shot learning, improving personalization. 
 	- Example use case Personalized product descriptions, interactive recommendation assistants. 
 
-Gathering Training Data & Labels 
+Learning Objectives
 ------------------------------------------------------------------------------------
 #. Supervised Learning 
 
@@ -669,7 +670,7 @@ Gathering Training Data & Labels
 	- Contrastive learning (e.g., SimCLR, BERT-style masked item prediction). 
 	- Learning representations via session-based modeling (e.g., predicting the next item a user interacts with). 
 
-Feature Engineering 
+Common Features
 ------------------------------------------------------------------------------------
 - User Features Past interactions, demographics, engagement signals. 
 - Item Features Category, text/image embeddings, historical engagement. 
@@ -712,7 +713,7 @@ Key Concept
 	- Users don’t have extensive histories (e.g., guest users). 
 	- Preferences shift dynamically (e.g., browsing sessions in e-commerce). 
 	- Recent behavior is more indicative of intent than long-term history. 
-- Common approaches
+- Common Approaches
 
 	- Rule-Based Methods (Most popular, trending, or recently viewed items) 
 	- Markov Chains & Sequential Models (Predicting next item based on state transitions) 
@@ -726,7 +727,7 @@ Key Concept
 	- Few-shot prompting allows LLMs to infer session preferences without explicit training. 
 	- Example use case Dynamic content feeds (TikTok), real-time recommendations (Spotify session playlists). 
 
-Gathering Training Data & Labels 
+Learning Objectives
 ------------------------------------------------------------------------------------
 #. Supervised Learning 
 
@@ -742,7 +743,7 @@ Gathering Training Data & Labels
 	- Contrastive learning (e.g., predict next item from different user sessions). 
 	- Next-click prediction using masked sequence modeling (BERT-style). 
 
-Feature Engineering 
+Common Features
 ------------------------------------------------------------------------------------
 - Session Features Time spent, number of items viewed, recency of last interaction. 
 - Item Features Product category, textual embeddings, popularity trends. 
@@ -782,7 +783,7 @@ Key Concept
 
 	#. Typically modeled as a link prediction problem in graphs. 
 	#. Used for social networks, professional connections, or matchmaking systems. 
-- Common approaches
+- Common Approaches
 
 	#. Collaborative Filtering (User-Based CF) 
 	#. Graph-Based Approaches (Graph Neural Networks, PageRank, Node2Vec, etc.) 
@@ -795,7 +796,7 @@ Key Concept
 	- Social connections can be inferred by analyzing natural language data, rather than relying solely on structural graph features. 
 	- Example use case Professional networking (LinkedIn), AI-assisted friend suggestions. 
 
-Gathering Training Data & Labels 
+Learning Objectives
 ------------------------------------------------------------------------------------
 #. Supervised Learning 
 
@@ -813,7 +814,7 @@ Gathering Training Data & Labels
 	- Contrastive learning (e.g., learning embeddings where connected users are closer in vector space). 
 	- Masked edge prediction (e.g., hide some connections and train the model to reconstruct them). 
 
-Feature Engineering 
+Common Features
 ------------------------------------------------------------------------------------
 - User Features Profile attributes (age, location, industry, interests). 
 - Graph Features Common neighbors, Jaccard similarity, Adamic-Adar score. 
@@ -1073,8 +1074,8 @@ Diversity
 - Technique Summary
 
 	.. csv-table::
-		:header "Technique", "Stage", "Pros", "Cons"
-		:align center
+		:header: "Technique", "Stage", "Pros", "Cons"
+		:align: center
 
 			Multi-Pool Retrieval, Retrieval, High diversity; multiple candidate sources, Computationally expensive
 			Popularity-Based Downsampling, Retrieval, Prevents over-recommendation of trending items, May reduce engagement
@@ -1087,8 +1088,8 @@ Diversity
 - LLMs for Diversity at Each Stage 
 
 	.. csv-table::
-		:header "Stage", "LLM Enhancements", "Pros", "Cons"
-		:align center
+		:header: "Stage", "LLM Enhancements", "Pros", "Cons"
+		:align: center
 
 			Retrieval, Query expansion; Multi-modal retrieval, Increases recall & heterogeneity, Higher latency; Loss of precision
 			Filtering & Merging, Semantic deduplication; Bias correction, Prevents redundancy; Fairer recommendations, Computationally expensive
@@ -1550,8 +1551,8 @@ Playlist Generation & Curation in Music Recommendation Systems
 Types of Playlists & Their Challenges
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
-	:header "Playlist Type", "Example", "Key Challenges"
-	:align center
+	:header: "Playlist Type", "Example", "Key Challenges"
+	:align: center
 
 		Personalized Playlists, Spotifys Discover Weekly; YouTube Musics Your Mix, Ensuring balance between familiar & new tracks.
 		Mood/Activity-Based Playlists, Workout Mix; Chill Vibes; Focus Music, Detecting mood & intent dynamically.
@@ -1562,8 +1563,8 @@ Types of Playlists & Their Challenges
 Solutions to Key Playlist Challenges
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. csv-table::
-	:header "Challenge", "Solution", "Trade-Off"
-	:align center
+	:header: "Challenge", "Solution", "Trade-Off"
+	:align: center
 
 		Over-Personalization (Echo Chamber), Inject 5-20% exploration (Multi-Armed Bandits), Too much exploration may decrease CTR
 		Repetition & Content Fatigue, Anti-repetition rules (e.g.; same song cannot appear in back-to-back sessions), May prevent users from hearing favorite tracks
