@@ -46,6 +46,7 @@ Design Resources
 	* [blog.google] `AI <https://blog.google/technology/ai/>`_
 	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_
 	* [engineering.atspotify.com] `Spotify Engineering <https://engineering.atspotify.com/>`_
+	* [ngineering.atspotify.com] `Spotify Machine Learning <https://engineering.atspotify.com/category/maching-learning/>`_
 	* [medium.com] `Pinterest Engineering <https://medium.com/pinterest-engineering>`_
 	* [eng.snap.com] `Snapchat Engineering Blog <https://eng.snap.com/>`_
 	* [blogs.bing] `Bing Blogs - The news, trends, people and technology behind Bing <https://blogs.bing.com/>`_	
@@ -102,7 +103,15 @@ Design Resources
 			2021, Video, Netflix, A/B Testing, `What is an A/B Test? <https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962>`_
 			2021, Video, Netflix, A/B Testing, `Interpreting A/B test results: false positives and statistical significance <https://netflixtechblog.com/interpreting-a-b-test-results-false-positives-and-statistical-significance-c1522d0db27a>`_
 			2021, Video, Netflix, A/B Testing, `Interpreting A/B test results: false negatives and power <https://netflixtechblog.com/interpreting-a-b-test-results-false-negatives-and-power-6943995cf3a8>`_
-
+			2024, Music, Spotify, Annotations, `How We Generated Millions of Content Annotations <https://engineering.atspotify.com/2024/10/how-we-generated-millions-of-content-annotations/>`_
+			2024, Music, Spotify, A/B Testing, `Fixed-Power Designs: It’s Not IF You Peek; It’s WHAT You Peek at <https://engineering.atspotify.com/2024/05/fixed-power-designs-its-not-if-you-peek-its-what-you-peek-at/>`_
+			2023, Music, Spotify, Causal Infernece, `Experimenting with Machine Learning to Target In-App Messaging <https://engineering.atspotify.com/2023/06/experimenting-with-machine-learning-to-target-in-app-messaging/>`_
+			2023, Music, Spotify, Clusterig, `Recursive Embedding and Clustering <https://engineering.atspotify.com/2023/12/recursive-embedding-and-clustering/>`_
+			2022, Music, Spotify, Search, `Introducing Natural Language Search for Podcast Episodes <https://engineering.atspotify.com/2022/03/introducing-natural-language-search-for-podcast-episodes/>`_
+			2021, Music, Spotify, Personalization, `How Spotify Uses ML to Create the Future of Personalization <https://engineering.atspotify.com/2021/12/how-spotify-uses-ml-to-create-the-future-of-personalization/>`_
+			2021, Music, Spotify, Personalization, `The Rise (and Lessons Learned) of ML Models to Personalize Content on Home (Part I) <https://engineering.atspotify.com/2021/11/the-rise-and-lessons-learned-of-ml-models-to-personalize-content-on-home-part-i/>`_
+			2021, Music, Spotify, Personalization, `The Rise (and Lessons Learned) of ML Models to Personalize Content on Home (Part II) <https://engineering.atspotify.com/2021/11/the-rise-and-lessons-learned-of-ml-models-to-personalize-content-on-home-part-ii/>`_
+			
 5. Generic Topics
 	
 	* [evidentlyai.com] `AI quality and MLOps tutorials <https://www.evidentlyai.com/mlops-tutorials>`_
