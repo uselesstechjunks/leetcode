@@ -44,6 +44,8 @@ Design Resources
 	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
 	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [blog.google] `AI <https://blog.google/technology/ai/>`_
+	* [blog.google] `News about Google Search <https://blog.google/products/search/>`_
+	* [blog.google] `News and updates about Google Ads and Commerce products. <https://blog.google/products/search/>`_
 	* [blogs.bing] `Bing Blogs - The news, trends, people and technology behind Bing <https://blogs.bing.com/>`_
 	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_	
 	* [evidentlyai.com] `ML and LLM system design: 500 case studies to learn from <https://www.evidentlyai.com/ml-system-design>`_
