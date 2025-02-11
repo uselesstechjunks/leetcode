@@ -2,7 +2,7 @@
 Search & Recommendation
 ####################################################################################
 .. contents:: Table of Contents
-   :depth: 2
+   :depth: 3
    :local:
    :backlinks: none
 
@@ -876,9 +876,8 @@ Popularity Bias & Feedback Loops
 ------------------------------------------------------------------------------------
 - Why It Matters:  
 
-	- Over-recommending already popular items creates a "rich-get-richer" effect.  
-	- Items with low initial exposure struggle to gain traction.  
-	- Reinforces biases in user engagement, making it harder to surface niche or novel content.  
+	- Over-recommending already popular items creates a "rich-get-richer" effect affecting fairness, novelty.
+	- Reinforces biases in user engagement, making it harder to surface niche or novel content.
 
 - Common Approaches:
 	- Changing objective
@@ -916,41 +915,81 @@ Popularity Bias & Feedback Loops
 	- Social Media (TikTok, Twitter, Facebook): Celebrity overexposure (e.g., verified users dominating feeds).  
 	- News Aggregators (Google News, Apple News): Same sources getting recommended (e.g., mainstream news over independent journalism).  
 
+Diversity vs. Personalization Trade-Off  
+------------------------------------------------------------------------------------
+- Resources:
+
+	- [engineering.fb.com] `On the value of diversified recommendations <https://engineering.fb.com/2020/12/17/ml-applications/diversified-recommendations/>`_
+- Why It Matters:
+
+	- Highly personalized feeds reinforce user preferences, limiting exposure to new content.
+	- Leads to boredom of users in long-term which might reduce retention rate.
+	- Users may get stuck in content silos (e.g., political polarization, filter bubbles).
+
+- Understanding the issue:
+		
+	- Theoretical framework
+		
+		- Personalization
+			- Polya process
+			- self reinforcement 
+			- pros: short term gains
+			- cons: leads to boredom and retention
+		- Balancing
+			- balancing process
+			- Negative reinforcement
+			- Pros: doesn't lead to boredom
+			- Cons: affects short term gains
+	- Complexities in real world personal preferences
+	
+		- Multidimensional (dark comedy = dark thriller + general comedy)
+		- Soft (30% affinity towards comedy, 90% affinity towards sports)
+		- Contextual (mood, time of day, current trends)
+		- Dynamic (evolves over time)
+
+- Heuristics on diversifying recommendation:
+
+	- Author level diversity -> strafification -> pick candidates from different authors
+	- Media type diversity -> applicable for multimedia platforms -> intermix modality
+	- Semantic diversity -> content understanding system -> classify user's affinity to topics -> sample across topics
+	- Explore similar semantic nodes -> knowledge tree/graph 
+	
+		- Explore parents, siblings, children of topics
+		- Explore long tail for niche topics
+		- Explore items that covers multiple topics
+	- Maintain separate pool for short-term and long-term preferences
+	- Utilize explore-exploit framework -> eps-greedy, ucb, thompson sampling
+	- Prioritize behavioural metrics as much as accuracy metrics
+	- Priotitize explicit negative feedbacks from users
+
+- Strategic Solutions & Trade-Offs:  
+
+	- Diversity-Promoting Re-Ranking (DPP, Exploration Buffers) -> Reduces filter bubbles but may decrease engagement.  
+	- Diversity-Constrained Search (Re-weighting ranking models) -> Promotes varied content but risks reducing precision.  
+	- Hybrid User-Item Graphs (Graph Neural Networks for diversification) -> Balances exploration but requires expensive training.  
+
+- Domain-Specific Notes:  
+
+	- Social Media (Facebook, Twitter, YouTube) -> Political echo chambers & misinformation bubbles.  
+	- E-commerce (Amazon, Etsy, Zalando) -> Users seeing only one type of product repeatedly. 
+
 Short-Term Engagement vs. Long-Term User Retention  
 ------------------------------------------------------------------------------------
 - Why It Matters:  
 
-	- Systems often optimize for immediate engagement (CTR, watch time, purchases), which can lead to addictive behaviors or content fatigue.  
-	- Over-exploitation of "sticky content" (clickbait, sensationalism, autoplay loops) may reduce long-term satisfaction.  
+	- Systems often optimize for immediate engagement (CTR, watch time, purchases), which can lead to addictive behaviors or content fatigue.
+	- Over-exploitation of "sticky content" (clickbait, sensationalism, autoplay loops) may reduce long-term satisfaction.
 
-- Strategic Solutions & Trade-Offs:  
+- Strategic Solutions & Trade-Offs:
 
-	- Multi-Objective Optimization (CTR + Long-Term Retention) → Complex to balance but essential for sustainability.  
-	- Delayed Reward Models (Reinforcement Learning) → Great for long-term user retention but slow learning process.  
-	- Personalization Decay (Balancing Freshness vs. Relevance) → Introduces diverse content but can feel random to users.  
+	- Multi-Objective Optimization (CTR + Long-Term Retention) -> Complex to balance but essential for sustainability.
+	- Delayed Reward Models (Reinforcement Learning) -> Great for long-term user retention but slow learning process.
+	- Personalization Decay (Balancing Freshness vs. Relevance) -> Introduces diverse content but can feel random to users.
 
-- Domain-Specific Notes:  
+- Domain-Specific Notes:
 
-	- YouTube, TikTok, Instagram → Prioritizing sensational viral content over educational material.  
-	- E-Commerce (Amazon, Alibaba) → Short-term discounts vs. long-term brand loyalty.  
-
-Diversity vs. Personalization Trade-Off  
-------------------------------------------------------------------------------------
-- Why It Matters:  
-
-	- Highly personalized feeds often reinforce user preferences too strongly, limiting exposure to new content.  
-	- Users may get stuck in content silos (e.g., political polarization, filter bubbles).  
-
-- Strategic Solutions & Trade-Offs:  
-
-	- Diversity-Promoting Re-Ranking (DPP, Exploration Buffers) → Reduces filter bubbles but may decrease engagement.  
-	- Diversity-Constrained Search (Re-weighting ranking models) → Promotes varied content but risks reducing precision.  
-	- Hybrid User-Item Graphs (Graph Neural Networks for diversification) → Balances exploration but requires expensive training.  
-
-- Domain-Specific Notes:  
-
-	- Social Media (Facebook, Twitter, YouTube) → Political echo chambers & misinformation bubbles.  
-	- E-commerce (Amazon, Etsy, Zalando) → Users seeing only one type of product repeatedly.  
+	- YouTube, TikTok, Instagram -> Prioritizing sensational viral content over educational material.
+	- E-Commerce (Amazon, Alibaba) -> Short-term discounts vs. long-term brand loyalty.
 
 Real-Time Personalization & Latency Trade-Offs  
 ------------------------------------------------------------------------------------
@@ -1005,6 +1044,9 @@ Video & Music Streaming
 		- Normalized Engagement Metrics (Watch Percentage vs. Watch Time) → Improves long-form content exposure but may reduce video diversity.  
 		- Hybrid-Length Recommendations (Mixing Shorts & Full Videos) → Enhances variety but harder to rank effectively. 
 
+************************************************************************************
+Deep Dives
+************************************************************************************
 Personalisation
 ====================================================================================
 
@@ -1014,12 +1056,6 @@ Diversity
 	- Music & video platforms (Spotify, YouTube, TikTok) use DPP and Bandits to introduce diverse content.
 	- E-commerce (Amazon, Etsy) balances popularity-based downsampling with weighted re-ranking.
 	- Newsfeeds (Google News, Facebook, Twitter) use category-sensitive filtering to prevent echo chambers.
-
-Resources
-------------------------------------------------------------------------------------
-* Understanding the trade-off between personalization (positive reinforcement) vs balancing (negative reinforment)
-
-	* [engineering.fb.com] `On the value of diversified recommendations <https://engineering.fb.com/2020/12/17/ml-applications/diversified-recommendations/>`_
 
 - Goal
 
