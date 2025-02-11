@@ -64,22 +64,23 @@ Overview
 
 		- General
 
-			#. Cold-Start Problem (Users, items)
-			#. Diversity vs. Personalization Trade-Off
-			#. Popularity Bias
-			#. Short-Term Engagement vs. Long-Term User Retention Trade-off
+			#. Cold-start
+			#. Diversity vs. personalization Trade-Off
+			#. Popularity bias & fairness
+			#. Short-term engagement vs. long-term user retention trade-off
 			#. Privacy concerns & compliance (GDPR, CCPA)
 			#. Distribution shift (data/input, concept/target)
-		- Nuanced
-		
-			#. Real-Time Personalization & Latency Trade-Offs
+		- Advanced
+
+			#. Multi-touch Attribution
+			#. Real-time personalization & latency trade-Offs
 			#. Cross-device and cross-session personalization
 			#. Multi-modality & cross-domain recommendation challenges
 		- Domain-Specific
-	
-			#. Search-Specific Issues: Query Understanding & Intent Disambiguation
-			#. E-Commerce Issues: Balancing Revenue & User Satisfaction
-			#. Video & Music Streaming: Content-Length Bias in Recommendations
+
+			#. Search: Query understanding & intent disambiguation
+			#. E-Commerce: Balancing revenue & user satisfaction
+			#. Video & Music Streaming: Content-length bias in recommendations
 
 Overview: Metrics
 ====================================================================================
