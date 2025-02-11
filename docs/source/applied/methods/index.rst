@@ -39,15 +39,36 @@ Design Resources
 
 	- [youtube.com] `Upcoming Book: "Machine Learning System Design" by Alex Xu <https://youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn>`_
 	- [youtube.com] `Machine Learning (ML) System Design Interview Questions <https://www.youtube.com/playlist?list=PLlvnxKilk3aIbyEp3MFlTkYItrLmjS-T3>`_
-4. Case Studies
+4. Tech Blogs
 	
 	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
 	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [blog.google] `AI <https://blog.google/technology/ai/>`_
 	* [blogs.bing] `Bing Blogs - The news, trends, people and technology behind Bing <https://blogs.bing.com/>`_
-	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_
-	* [Snapchat] `Machine Learning for Snapchat Ad Ranking <https://eng.snap.com/machine-learning-snap-ad-ranking>`_
+	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_	
 	* [evidentlyai.com] `ML and LLM system design: 500 case studies to learn from <https://www.evidentlyai.com/ml-system-design>`_
+	
+4. Case Studies
+
+	.. csv-table:: 
+		:header: "Year", "Company", "Product", "Article Link"
+		:align: center
+
+			2023, Meta, Logging, `Logarithm: A logging engine for AI training workflows and services <https://engineering.fb.com/2024/03/18/data-infrastructure/logarithm-logging-engine-ai-training-workflows-services-meta/>`_
+			2023, Meta, Instagram, `Scaling the Instagram Explore recommendations system <https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/>`_
+			2022, Meta, Causal Inference, `Improving Instagram notification management with machine learning and causal inference <Improving Instagram notification management with machine learning and causal inference>`_
+			2022, Meta, Privacy, `Applying federated learning to protect data on mobile devices <https://engineering.fb.com/2022/06/14/production-engineering/federated-learning-differential-privacy/>`_
+			2022, Meta, Data Engineering, `Scaling data ingestion for machine learning training at Meta <https://engineering.fb.com/2022/09/19/ml-applications/data-ingestion-machine-learning-training-meta/>`_
+			2021, Meta, Newsfeed Ranking, `How machine learning powers Facebook’s News Feed ranking algorithm <https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/>`_
+			2021, Meta, Video, `How Facebook encodes your videos <https://engineering.fb.com/2021/04/05/video-engineering/how-facebook-encodes-your-videos/>`_
+			2020, Meta, Diversity, `On the value of diversified recommendations <https://engineering.fb.com/2020/12/17/ml-applications/diversified-recommendations/>`_
+			2023, Snapchat, Retrieval, `Embedding-based Retrieval with Two-Tower Models in Spotlight <https://eng.snap.com/embedding-based-retrieval>`_
+			2022, Snapchat, Privacy, `Differential Privacy at Snapchat <https://eng.snap.com/differential-privacy-at-snap>`_
+			2022, Snapchat, Feature Engineering, `Synthetic Data for Machine Learning (ML) <https://eng.snap.com/synthetic-data-for-machine-learning>`_
+			2022, Snapchat, Feature Infra, `Speed Up Feature Engineering for Recommendation Systems <https://eng.snap.com/speed-up-feature-engineering>`_
+			2022, Snapchat, Ranking, `Machine Learning for Snapchat Ad Ranking <https://eng.snap.com/machine-learning-snap-ad-ranking>`_
+			2022, Snapchat, Video, `Snap Video Compression <https://eng.snap.com/snap-video-compression>`_
+			2022, Snapchat, Metrics, `STOMP out Bad Metrics <https://eng.snap.com/stomp-out-bad-metrics>`_
 5. Generic Topics
 	
 	* [evidentlyai.com] `AI quality and MLOps tutorials <https://www.evidentlyai.com/mlops-tutorials>`_
