@@ -1015,6 +1015,12 @@ Diversity
 	- E-commerce (Amazon, Etsy) balances popularity-based downsampling with weighted re-ranking.
 	- Newsfeeds (Google News, Facebook, Twitter) use category-sensitive filtering to prevent echo chambers.
 
+Resources
+------------------------------------------------------------------------------------
+* Understanding the trade-off between personalization (positive reinforcement) vs balancing (negative reinforment)
+
+	* [engineering.fb.com] `On the value of diversified recommendations <https://engineering.fb.com/2020/12/17/ml-applications/diversified-recommendations/>`_
+
 - Goal
 
 	- improving user engagement
