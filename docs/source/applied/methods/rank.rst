@@ -82,7 +82,7 @@ Overview
 			#. E-Commerce Balancing revenue & user satisfaction
 			#. Video & Music Streaming Content-length bias in recommendations
 
-Overview Metrics
+Metrics
 ====================================================================================
 Accuracy
 ------------------------------------------------------------------------------------
@@ -115,7 +115,7 @@ Diversity
 ------------------------------------------------------------------------------------
 Personalsation
 ------------------------------------------------------------------------------------
-Overview Issues
+Issues
 ====================================================================================
 Distribution Shift
 ------------------------------------------------------------------------------------
@@ -129,7 +129,7 @@ Distribution Shift
 		Cold-Start for New Trends, Increase in unseen queries, Session-based personalization, Requires fast inference
 		Intent Drift in Search, Increase in irrelevant search rankings, Online learning models, Real-time training is costly
 
-Overview Stages
+Stages
 ====================================================================================
 .. csv-table::
 	:header "Stage", "Goals", "Key Metrics", "Common Techniques"
@@ -139,7 +139,7 @@ Overview Stages
 		Combining & Filtering, Merge candidates; remove duplicates; apply business rules, Diversity; Precision@K; Fairness, Weighted merging; Min-hashing; Rule-based filtering
 		Re-Ranking, Optimize order of recommendations for engagement, CTR; NDCG; Exploration Ratio, Neural Rankers; Bandits; DPP for diversity
 
-Overview Patterns
+Patterns
 ====================================================================================
 .. csv-table::
 	:header "Pattern", "Traditional Approach", "LLM Augmentations"
@@ -151,7 +151,7 @@ Overview Patterns
 		Session-Based, Sequential Models; Transformers, Few-shot reasoning; Context-aware personalization
 		User-User, Graph-Based; Link Prediction, Profile-text analysis; Social graph augmentation
 
-Overview Domains
+Domains
 ====================================================================================
 #. E-commerce (Amazon, Alibaba)
 #. Music (Spotify)
