@@ -437,31 +437,18 @@ Query-Item Recommendation
 Key Concept  
 ------------------------------------------------------------------------------------
 - Query-item recommendation is the foundation of search systems, where a user provides a query (text, image, voice, etc.), and the system retrieves the most relevant items. Unlike standard recommendations, search is explicit—users express intent directly.  
-
-- Common approaches include:  
+- Common approaches
 
 	- Lexical Matching (TF-IDF, BM25, keyword-based retrieval)  
 	- Semantic Matching (Word embeddings, Transformer models like BERT, CLIP for vision-text matching)  
 	- Hybrid Search (Combining lexical and semantic search, e.g., BM25 + embeddings)  
 	- Learning-to-Rank (LTR) models optimizing ranking performance based on user interactions)  
 	- Multimodal Search (Image-to-text retrieval, video search, voice search, etc.)  
+- LLM Applications
 
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. Traditional Information Retrieval  
-
-	- "An Introduction to Information Retrieval" – Manning et al. (2008)  
-	- "BM25 and Beyond" – Robertson et al. (2009)  
-
-#. Neural Ranking Models  
-
-	- "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" – Devlin et al. (2018)  
-	- "Dense Passage Retrieval for Open-Domain Question Answering" – Karpukhin et al. (2020)  
-
-#. Multimodal & Deep Learning-Based Search  
-
-	- "CLIP: Learning Transferable Visual Models from Natural Language Supervision" – Radford et al. (2021)  
-	- "DeepRank: A New Deep Architecture for Relevance Ranking in Information Retrieval" – Pang et al. (2017)  
+	- LLMs enhance ranking via reranking models (ColBERT, T5-based retrieval).  
+	- Can be used for query expansion, understanding user intent, and handling ambiguous queries.  
+	- Example use case: Google Search, AI-driven Q&A search (Perplexity AI).  
 
 Gathering Training Data & Labels  
 ------------------------------------------------------------------------------------
@@ -470,12 +457,10 @@ Gathering Training Data & Labels
 	- Label: Binary (clicked vs. not clicked) or relevance score (explicit ratings, dwell time).  
 	- Data sources: Search logs, query-click data, user feedback (thumbs up/down).  
 	- Challenges: Noisy labels (e.g., clicks may not always indicate relevance).  
-
 #. Semi-Supervised Learning:  
 
 	- Use query expansion techniques (e.g., weak supervision from similar queries).  
 	- Leverage pseudo-labeling (e.g., use a weaker ranker to generate labels).  
-
 #. Self-Supervised Learning:  
 
 	- Contrastive learning (e.g., train embeddings by pulling query and relevant items closer).  
@@ -489,6 +474,29 @@ Feature Engineering
 - Contextual Features: Time of query, device type, user history.  
 - Embedding-Based Features: Pretrained word embeddings (Word2Vec, FastText, BERT embeddings).  
 
+Resources
+------------------------------------------------------------------------------------
+#. Traditional Information Retrieval  
+
+	- "An Introduction to Information Retrieval" – Manning et al. (2008)  
+	- "BM25 and Beyond" – Robertson et al. (2009)  
+#. Neural Ranking Models  
+
+	- "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" – Devlin et al. (2018)  
+	- "Dense Passage Retrieval for Open-Domain Question Answering" – Karpukhin et al. (2020)  
+#. Multimodal & Deep Learning-Based Search  
+
+	- "CLIP: Learning Transferable Visual Models from Natural Language Supervision" – Radford et al. (2021)  
+	- "DeepRank: A New Deep Architecture for Relevance Ranking in Information Retrieval" – Pang et al. (2017)  
+#. LLM-Based Search Ranking  
+
+	- "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction Over BERT" – Khattab et al. (2020)  
+	- "T5 for Information Retrieval" – Nogueira et al. (2020)  
+#. LLM-Augmented Search  
+
+	- "InstructGPT for Information Retrieval" – Ouyang et al. (2023)  
+	- "GPT-4 for Web Search Augmentation" – Bender et al. (2023)  
+
 Item-Item Recommendation  
 ====================================================================================
 - Similar Products
@@ -501,31 +509,18 @@ Key Concept
 
 	- Typically modeled as an item simi-larity problem.  
 	- Unlike user-item recommendation, the goal is to find related items rather than predicting a user’s preferences.  
-
-- Common approaches include:  
+- Common approaches
 
 	- Item-Based Collaborative Filtering (Similarity between item interaction histories)  
 	- Content-Based Filtering (Similarity using item attributes like text, image, category)  
 	- Graph-Based Approaches (Item-item similarity using co-purchase graphs)  
 	- Deep Learning Methods (Representation learning, embeddings)  
 	- Hybrid Methods (Combining multiple approaches)  
+- LLM Applications
 
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. Collaborative Filtering-Based Approaches  
-
-	- "Item-Based Collaborative Filtering Recommendation Algorithms" – Sarwar et al. (2001)  
-	- "Matrix Factorization Techniques for Recommender Systems" – Koren et al. (2009)  
-
-#. Content-Based Approaches  
-
-	- "Learning Deep Representations for Content-Based Recommendation" – Wang et al. (2015)  
-	- "Deep Learning Based Recommender System: A Survey and New Perspectives" – Zhang et al. (2019)  
-
-#. Graph-Based & Hybrid Approaches  
-
-	- "Amazon.com Recommendations: Item-to-Item Collaborative Filtering" – Linden et al. (2003)  
-	- "PinSage: Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
+	- LLMs improve semantic similarity scoring, identifying nuanced item relationships.
+	- Multimodal LLMs (e.g., CLIP) combine text, images, and metadata to enhance recommendations.
+	- Example use case: E-commerce (Amazon's “similar items”), content platforms (Netflix’s related videos).
 
 Gathering Training Data & Labels  
 ------------------------------------------------------------------------------------
@@ -534,12 +529,10 @@ Gathering Training Data & Labels
 	- Label: Binary (1 = two items are similar, 0 = not similar).  
 	- Data sources: Co-purchase data, co-click data, content similarity.  
 	- Challenges: Defining meaningful similarity when explicit labels don’t exist.  
-
 #. Semi-Supervised Learning:  
 
 	- Clustering similar items based on embeddings or co-occurrence.  
 	- Weak supervision from user-generated tags, reviews.  
-
 #. Self-Supervised Learning:  
 
 	- Contrastive learning (e.g., learning embeddings by pushing dissimilar items apart).  
@@ -553,6 +546,29 @@ Feature Engineering
 - Embedding-Based Features: Learned latent item representations.  
 - Contextual Features: Time decay (trending vs. evergreen items).   
 
+Resources
+------------------------------------------------------------------------------------
+#. Collaborative Filtering-Based Approaches  
+
+	- "Item-Based Collaborative Filtering Recommendation Algorithms" – Sarwar et al. (2001)  
+	- "Matrix Factorization Techniques for Recommender Systems" – Koren et al. (2009)  
+#. Content-Based Approaches  
+
+	- "Learning Deep Representations for Content-Based Recommendation" – Wang et al. (2015)  
+	- "Deep Learning Based Recommender System: A Survey and New Perspectives" – Zhang et al. (2019)  
+#. Graph-Based & Hybrid Approaches  
+
+	- "Amazon.com Recommendations: Item-to-Item Collaborative Filtering" – Linden et al. (2003)  
+	- "PinSage: Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
+#. Multimodal LLMs for Recommendation  
+
+	- "CLIP-Recommend: Multimodal Learning for E-Commerce Recommendations" – Xu et al. (2023)  
+	- "Unified Vision-Language Pretraining for E-Commerce Recommendations" – Wang et al. (2022)  
+#. Semantic Similarity Using LLMs  
+
+	- "Semantic-Aware Item Matching with Large Language Models" – Chen et al. (2023)  
+	- "Contextual Item Recommendation with Pretrained LLMs" – Li et al. (2022)  
+
 User-Item Recommendation  
 ====================================================================================
 - Homepage recommendations
@@ -563,31 +579,19 @@ Key Concept
 ------------------------------------------------------------------------------------
 - User-item recommendation focuses on predicting a user's preference for an item based on historical interactions. This can be framed as:  
 
-	#. Explicit feedback (e.g., ratings, thumbs up/down)  
-	#. Implicit feedback (e.g., clicks, watch time, purchases)  
+	- Explicit feedback (e.g., ratings, thumbs up/down)  
+	- Implicit feedback (e.g., clicks, watch time, purchases)  
+- Common approaches
 
-- Common approaches include:  
+	- Collaborative Filtering (CF) (Matrix Factorization, Neural CF)  
+	- Content-Based Filtering (Feature-based models)  
+	- Hybrid Models (Combining CF and content-based methods)  
+	- Deep Learning Approaches (Neural networks, Transformers)  
+- LLM Applications
 
-	#. Collaborative Filtering (CF) (Matrix Factorization, Neural CF)  
-	#. Content-Based Filtering (Feature-based models)  
-	#. Hybrid Models (Combining CF and content-based methods)  
-	#. Deep Learning Approaches (Neural networks, Transformers)  
-
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. Collaborative Filtering  
-
-	- "Matrix Factorization Techniques for Recommender Systems" – Koren et al. (2009)  
-	- "Neural Collaborative Filtering" – He et al. (2017)  
-
-#. Deep Learning Approaches  
-
-	- "Deep Neural Networks for YouTube Recommendations" – Covington et al. (2016)  
-	- "Wide & Deep Learning for Recommender Systems" – Cheng et al. (2016)  
-
-#. Hybrid and Production Systems  
-
-	- "Netflix Recommendations: Beyond the 5 Stars" – Gomez-Uribe et al. (2015)  
+	- LLMs enhance this by learning richer user and item embeddings, capturing nuanced interactions.  
+	- LLMs can generate user preferences dynamically via zero-shot/few-shot learning, improving personalization.  
+	- Example use case: Personalized product descriptions, interactive recommendation assistants.  
 
 Gathering Training Data & Labels  
 ------------------------------------------------------------------------------------
@@ -596,12 +600,10 @@ Gathering Training Data & Labels
 	- Label: binary (clicked/not clicked, purchased/not purchased) or continuous (watch time, rating).  
 	- Data sources: user interactions, purchase logs, watch history.  
 	- Challenges: Class imbalance (many more non-clicked items than clicked ones).  
-
 #. Semi-Supervised Learning:  
 
 	- Use self-training (pseudo-labeling) to expand labeled data.  
 	- Graph-based methods to propagate labels across similar users/items.  
-
 #. Self-Supervised Learning:  
 
 	- Contrastive learning (e.g., SimCLR, BERT-style masked item prediction).  
@@ -615,6 +617,28 @@ Feature Engineering
 - Contextual Features: Time of day, device, location.  
 - Embedding-based Features: Learned latent factors from models like Word2Vec for items/users.  
 
+Resources
+------------------------------------------------------------------------------------
+#. Collaborative Filtering  
+
+	- "Matrix Factorization Techniques for Recommender Systems" – Koren et al. (2009)  
+	- "Neural Collaborative Filtering" – He et al. (2017)  
+#. Deep Learning Approaches  
+
+	- "Deep Neural Networks for YouTube Recommendations" – Covington et al. (2016)  
+	- "Wide & Deep Learning for Recommender Systems" – Cheng et al. (2016)  
+#. Hybrid and Production Systems  
+
+	- "Netflix Recommendations: Beyond the 5 Stars" – Gomez-Uribe et al. (2015)  
+#. Transformer-Based RecSys  
+
+	- "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations" – Sun et al. (2019)  
+	- "SASRec: Self-Attentive Sequential Recommendation" – Kang & McAuley (2018)  
+#. LLM-powered Recommendation  
+
+	- "GPT4Rec: A Generative Framework for Personalized Recommendation" – Wang et al. (2023)  
+	- "LLM-based Collaborative Filtering: Enhancing Recommendations with Large Language Models" – Liu et al. (2023)  
+
 Session-Based Recommendation  
 ====================================================================================
 - Personalized recommendations based on recent user actions
@@ -623,36 +647,24 @@ Session-Based Recommendation
 
 Key Concept  
 ------------------------------------------------------------------------------------
-Session-based recommendation focuses on predicting the next relevant item for a user based on their recent interactions, rather than long-term historical data. This is useful when:  
+- Session-based recommendation focuses on predicting the next relevant item for a user based on their recent interactions, rather than long-term historical data. This is useful when:  
 
 	- Users don’t have extensive histories (e.g., guest users).  
 	- Preferences shift dynamically (e.g., browsing sessions in e-commerce).  
 	- Recent behavior is more indicative of intent than long-term history.  
-
-Common approaches include:  
+- Common approaches
 
 	- Rule-Based Methods (Most popular, trending, or recently viewed items)  
 	- Markov Chains & Sequential Models (Predicting next item based on state transitions)  
 	- Recurrent Neural Networks (RNNs, GRUs, LSTMs) (Capturing sequential dependencies)  
 	- Graph-Based Approaches (Session-based Graph Neural Networks)  
 	- Transformer-Based Models (Attention-based architectures for session modeling)  
+- LLM Applications
 
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. Traditional Approaches & Sequential Models  
-
-	- "Session-Based Recommendations with Recurrent Neural Networks" – Hidasi et al. (2016)  
-	- "Neural Architecture for Session-Based Recommendations" – Tang & Wang (2018)  
-
-#. Graph-Based Methods  
-
-	- "Session-Based Recommendation with Graph Neural Networks" – Wu et al. (2019)  
-	- "Next Item Recommendation with Self-Attention" – Sun et al. (2019)  
-
-#. Transformer-Based Methods  
-
-	- "SASRec: Self-Attentive Sequential Recommendation" – Kang & McAuley (2018)  
-	- "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations" – Sun et al. (2019)  
+	- Traditional methods use sequential models (RNNs, GRUs, Transformers) to predict next-item interactions.  
+	- LLMs enhance session modeling by leveraging sequential reasoning and contextual awareness.  
+	- Few-shot prompting allows LLMs to infer session preferences without explicit training.  
+	- Example use case: Dynamic content feeds (TikTok), real-time recommendations (Spotify session playlists).  
 
 Gathering Training Data & Labels  
 ------------------------------------------------------------------------------------
@@ -661,12 +673,10 @@ Gathering Training Data & Labels
 	- Label: Next item in sequence (e.g., clicked/purchased item).  
 	- Data sources: User sessions, browsing logs, cart abandonment data.  
 	- Challenges: Short sessions make training harder; sparse interaction data.  
-
 #. Semi-Supervised Learning:  
 
 	- Use self-supervised tasks like predicting masked interactions.  
 	- Graph-based node propagation to learn session similarities.  
-
 #. Self-Supervised Learning:  
 
 	- Contrastive learning (e.g., predict next item from different user sessions).  
@@ -680,6 +690,26 @@ Feature Engineering
 - Contextual Features: Device type, time of day, geographical location.  
 - Embedding-Based Features: Pretrained session embeddings (e.g., Word2Vec-like for items).  
 
+Resources
+------------------------------------------------------------------------------------
+#. Traditional Approaches & Sequential Models  
+
+	- "Session-Based Recommendations with Recurrent Neural Networks" – Hidasi et al. (2016)  
+	- "Neural Architecture for Session-Based Recommendations" – Tang & Wang (2018)  
+#. Graph-Based Methods  
+
+	- "Session-Based Recommendation with Graph Neural Networks" – Wu et al. (2019)  
+	- "Next Item Recommendation with Self-Attention" – Sun et al. (2019)  
+#. Transformer-Based Methods  
+
+	- "SASRec: Self-Attentive Sequential Recommendation" – Kang & McAuley (2018)  
+	- "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations" – Sun et al. (2019)  
+#. LLM-Driven Dynamic Recommendation  
+
+	- "LLM-Powered Dynamic Personalized Recommendations" – Guo et al. (2023)  
+	- "Next-Item Prediction Using Pretrained Language Models" – Sun et al. (2021)  
+	- "Real-Time Recommendation with Large Language Models" – Zhang et al. (2023)  
+
 User-User Recommendation  
 ====================================================================================
 - People You May Know
@@ -692,32 +722,19 @@ Key Concept
  
 	#. Typically modeled as a link prediction problem in graphs.  
 	#. Used for social networks, professional connections, or matchmaking systems.  
-
-- Common approaches include:  
+- Common approaches
 
 	#. Collaborative Filtering (User-Based CF)  
 	#. Graph-Based Approaches (Graph Neural Networks, PageRank, Node2Vec, etc.)  
 	#. Feature-Based Matching (Demographic and behavior similarity)  
 	#. Hybrid Approaches (Graph + CF + Deep Learning)  
+- LLM Applications
 
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. Collaborative Filtering-Based Approaches  
-
-	- "Item-Based Collaborative Filtering Recommendation Algorithms" – Sarwar et al. (2001)  
-	- "A Guide to Neural Collaborative Filtering" – He et al. (2017)  
-
-#. Graph-Based Approaches  
-
-	- "DeepWalk: Online Learning of Social Representations" – Perozzi et al. (2014)  
-	- "Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
-	- "Graph Neural Networks: A Review of Methods and Applications" – Wu et al. (2021)  
-
-#. Hybrid and Large-Scale User-User Recommendation  
-
-	- "Link Prediction Approaches and Applications" – Liben-Nowell et al. (2007)  
-	- "Who to Follow: Recommending People in Social Networks" – Twitter Research (2010)  
-
+	- Typically modeled as a graph-based link prediction problem, where users are nodes.  
+	- LLMs can enhance user similarity computations by processing richer profile texts (e.g., bios, chat history).  
+	- Social connections can be inferred by analyzing natural language data, rather than relying solely on structural graph features.  
+	- Example use case: Professional networking (LinkedIn), AI-assisted friend suggestions.  
+	
 Gathering Training Data & Labels  
 ------------------------------------------------------------------------------------
 #. Supervised Learning:  
@@ -742,104 +759,23 @@ Feature Engineering
 - Graph Features: Common neighbors, Jaccard similarity, Adamic-Adar score.  
 - Interaction Features: Message frequency, engagement level.  
 - Embedding-Based Features: Node2Vec or GNN-based embeddings.  
-- Contextual Features: Activity time, shared communities.  
+- Contextual Features: Activity time, shared communities. 
 
-************************************************************************************
-LLM Applications
-************************************************************************************
-Leveraging Large Language Models (LLMs) like GPT, BERT, and T5 for various recommendation patterns
-
-Query-Item Recommendation
-====================================================================================
-Key Concept  
+Resources
 ------------------------------------------------------------------------------------
-- Traditional search relies on lexical matching (BM25, TF-IDF) or vector search.  
-- LLMs enhance ranking via reranking models (ColBERT, T5-based retrieval).  
-- Can be used for query expansion, understanding user intent, and handling ambiguous queries.  
-- Example use case: Google Search, AI-driven Q&A search (Perplexity AI).  
+#. Collaborative Filtering-Based Approaches  
 
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. LLM-Based Search Ranking  
+	- "Item-Based Collaborative Filtering Recommendation Algorithms" – Sarwar et al. (2001)  
+	- "A Guide to Neural Collaborative Filtering" – He et al. (2017)  
+#. Graph-Based Approaches  
 
-	- "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction Over BERT" – Khattab et al. (2020)  
-	- "T5 for Information Retrieval" – Nogueira et al. (2020)  
-#. LLM-Augmented Search  
+	- "DeepWalk: Online Learning of Social Representations" – Perozzi et al. (2014)  
+	- "Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
+	- "Graph Neural Networks: A Review of Methods and Applications" – Wu et al. (2021)  
+#. Hybrid and Large-Scale User-User Recommendation  
 
-	- "InstructGPT for Information Retrieval" – Ouyang et al. (2023)  
-	- "GPT-4 for Web Search Augmentation" – Bender et al. (2023)  
-
-Item-Item Recommendation  
-====================================================================================
-Key Concept  
-------------------------------------------------------------------------------------
-- Traditional methods use co-occurrence matrices or content similarity (TF-IDF, embeddings).  
-- LLMs improve semantic similarity scoring, identifying nuanced item relationships.  
-- Multimodal LLMs (e.g., CLIP) combine text, images, and metadata to enhance recommendations.  
-- Example use case: E-commerce (Amazon's “similar items”), content platforms (Netflix’s related videos).  
-
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. Multimodal LLMs for Recommendation  
-
-	- "CLIP-Recommend: Multimodal Learning for E-Commerce Recommendations" – Xu et al. (2023)  
-	- "Unified Vision-Language Pretraining for E-Commerce Recommendations" – Wang et al. (2022)  
-#. Semantic Similarity Using LLMs  
-
-	- "Semantic-Aware Item Matching with Large Language Models" – Chen et al. (2023)  
-	- "Contextual Item Recommendation with Pretrained LLMs" – Li et al. (2022)  
-
-User-Item Recommendation  
-====================================================================================
-Key Concept  
-------------------------------------------------------------------------------------
-- Traditional approaches rely on collaborative filtering (CF) or content-based filtering to predict user preferences.  
-- LLMs enhance this by learning richer user and item embeddings, capturing nuanced interactions.  
-- LLMs can generate user preferences dynamically via zero-shot/few-shot learning, improving personalization.  
-- Example use case: Personalized product descriptions, interactive recommendation assistants.  
-
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. LLM-powered Recommendation  
-
-	- "GPT4Rec: A Generative Framework for Personalized Recommendation" – Wang et al. (2023)  
-	- "LLM-based Collaborative Filtering: Enhancing Recommendations with Large Language Models" – Liu et al. (2023)  
-#. Transformer-Based RecSys  
-
-	- "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations" – Sun et al. (2019)  
-	- "SASRec: Self-Attentive Sequential Recommendation" – Kang & McAuley (2018)  
-
-Session-Based Recommendation  
-====================================================================================
-Key Concept  
-------------------------------------------------------------------------------------
-- Traditional methods use sequential models (RNNs, GRUs, Transformers) to predict next-item interactions.  
-- LLMs enhance session modeling by leveraging sequential reasoning and contextual awareness.  
-- Few-shot prompting allows LLMs to infer session preferences without explicit training.  
-- Example use case: Dynamic content feeds (TikTok), real-time recommendations (Spotify session playlists).  
-
-Key Papers to Read  
-------------------------------------------------------------------------------------
-#. Transformer-Based Session Recommendations  
-
-	- "SASRec: Self-Attentive Sequential Recommendation" – Kang & McAuley (2018)  
-	- "Next-Item Prediction Using Pretrained Language Models" – Sun et al. (2021)  
-#. LLM-Driven Dynamic Recommendation  
-
-	- "LLM-Powered Dynamic Personalized Recommendations" – Guo et al. (2023)  
-	- "Real-Time Recommendation with Large Language Models" – Zhang et al. (2023)  
-
-User-User Recommendation  
-====================================================================================
-Key Concept  
-------------------------------------------------------------------------------------
-- Typically modeled as a graph-based link prediction problem, where users are nodes.  
-- LLMs can enhance user similarity computations by processing richer profile texts (e.g., bios, chat history).  
-- Social connections can be inferred by analyzing natural language data, rather than relying solely on structural graph features.  
-- Example use case: Professional networking (LinkedIn), AI-assisted friend suggestions.  
-
-Key Papers to Read  
-------------------------------------------------------------------------------------
+	- "Link Prediction Approaches and Applications" – Liben-Nowell et al. (2007)  
+	- "Who to Follow: Recommending People in Social Networks" – Twitter Research (2010)  
 #. Graph-Based LLMs  
 
 	- "Graph Neural Networks Meet Large Language Models: A Survey" – Wu et al. (2023)  
@@ -847,7 +783,7 @@ Key Papers to Read
 #. Hybrid Graph and LLMs  
 
 	- "LLM-Augmented Node Classification in Social Networks" – Zhang et al. (2023)  
-	- "Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)  
+	- "Graph Convolutional Neural Networks for Web-Scale Recommender Systems" – Ying et al. (2018)   
 
 ************************************************************************************
 Issues in Search & Recommendation Systems
