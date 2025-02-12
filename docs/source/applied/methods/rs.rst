@@ -453,38 +453,60 @@ Example - Newsfeed Recommendation
 
 Re-Ranking 
 ====================================================================================
-(Final ranking of candidates based on personalization, diversity, and explore-exploit trade-offs) 
-
 Task
 ------------------------------------------------------------------------------------
 	- Optimize the order of candidates to maximize engagement. 
 	- Balance personalization with exploration (ensuring new content gets surfaced). 
 	- Ensure fairness and representation (avoid showing only highly popular items). 
 
-Comon Metrics
+Metrics
 ------------------------------------------------------------------------------------
-	- CTR (Click-Through Rate) – Measures immediate engagement. 
-	- NDCG (Normalized Discounted Cumulative Gain) – Measures ranking quality. 
-	- Exploration Ratio – Tracks new content shown to users. 
-	- Long-Term Engagement – Measures retention and repeat interactions. 
+	- [Offline] AUC (ROC-AUC, PR-AUC) – Measures prediction accuracy if modeled as a binary classification problem.
+	- [Offline] NDCG@k, MRR@k, HR@k – Measures ranking quality.
+	- [Online] CTR (Click-Through Rate) – Measures immediate engagement.
+	- [Online] Long-Term Engagement – Holdout -> Measures retention and repeat interactions.
+	- [?] Exploration Ratio – Tracks new content shown to users.
 
-Common Techniques
+Techniques
 ------------------------------------------------------------------------------------
 .. csv-table::
 	:header: "Goal", "Techniques"
 	:align: center
 
-		Personalized Ranking, Neural Ranking Models (e.g.; DeepFM; Wide & Deep; Transformer-based rankers)
-		Diversity Promotion, Determinantal Point Processes (DPP); Re-ranking by category
+		Fast Re-Ranking, Tree-based models (GBDT); LightGBM; XGBoost
+		Personalized Ranking, Embed + MLP Models (e.g.; DeepFM; Wide & Deep; Transformer-based rankers)
+		Diversity Promotion, Re-ranking by category (e.g.; Round Robin); Determinantal Point Processes (DPP)
 		Explore-Exploit Balance, Multi-Armed Bandits (Thompson Sampling; UCB); Randomized Ranking
 		Handling Highly Popular Items, Popularity dampening; Re-ranking with popularity decay
-		Fairness & Representation, Re-weighting models; Exposure-aware ranking
-		Fast Re-Ranking, Tree-based models (GBDT); LightGBM; XGBoost
+		Fairness & Representation, Re-weighting models; Exposure-aware ranking		
 
-Example - TikTok Recommendation 
+Resources
 ------------------------------------------------------------------------------------
-	- Challenges Need to mix trending videos, personalized content, and fresh videos. 
-	- Techniques used Transformer-based ranking, popularity dampening, diversity-based re-ranking. 
+Ranking
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Features
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+	- User profile (captures long term user's preferences)
+	- Item profile (captures item metadata and content understanding)
+	- Contextual features (e.g, device, geolocation, temporal)
+	- Interaction features
+
+`CTR Prediction Papers <https://paperswithcode.com/task/click-through-rate-prediction>`_
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. csv-table::
+	:header: "Technique", "Resource"
+	:align: center
+
+		Survey, `Click-Through Rate Prediction in Online Advertising: A Literature Review <https://arxiv.org/abs/2202.10462>`_
+		Embed + MLP, `Deep Neural Networks for YouTube Recommendations <https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf>`_
+		Embed + MLP, `Real-time Personalization using Embeddings for Search Ranking at Airbnb <https://dl.acm.org/doi/pdf/10.1145/3219819.3219885>`_
+		Wide & Deep, `Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
+		DeepFM, `DeepFM: A Factorization-Machine based Neural Network for CTR Prediction <https://arxiv.org/abs/1703.04247>`_
+		xDeepFM, `xDeepFM: Combining Explicit and Implicit Feature Interactions for Recommender Systems <https://arxiv.org/abs/1803.05170>`_
+		DCN, `Deep & Cross Network for Ad Click Predictions <https://arxiv.org/abs/1708.05123>`_
+		DCNv2, `DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
+		DIN, `Deep Interest Network for Click-Through Rate Prediction <https://arxiv.org/abs/1706.06978>`_
+		BST, `Behavior Sequence Transformer for E-commerce Recommendation in Alibaba <https://arxiv.org/abs/1905.06874>`_
 
 ************************************************************************************
 Patterns
