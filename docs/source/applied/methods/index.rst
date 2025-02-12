@@ -8,7 +8,7 @@ Machine Learning Applications
 	llm
 	nlp
 	multimodal
-	rank
+	rs
 	obsv
 *******************************************************************************
 Design Resources
