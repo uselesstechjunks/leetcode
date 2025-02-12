@@ -497,6 +497,7 @@ Features
 	:header: "Technique", "Resource"
 	:align: center
 
+		LR, `Distributed training of Large-scale Logistic models <https://proceedings.mlr.press/v28/gopal13.pdf>`_
 		Survey, `Click-Through Rate Prediction in Online Advertising: A Literature Review <https://arxiv.org/abs/2202.10462>`_
 		Embed + MLP, `Deep Neural Networks for YouTube Recommendations <https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf>`_
 		Embed + MLP, `Real-time Personalization using Embeddings for Search Ranking at Airbnb <https://dl.acm.org/doi/pdf/10.1145/3219819.3219885>`_
