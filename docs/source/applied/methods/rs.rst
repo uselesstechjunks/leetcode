@@ -244,25 +244,25 @@ Key Papers
 
 		IR;Course;Stanford,`CS 276 / LING 286 Information Retrieval and Web Search <https://web.stanford.edu/class/cs276/>`_
 		IR;Book,`Introduction to Information Retrieval <https://nlp.stanford.edu/IR-book/information-retrieval-book.html>`_
-		RS;Retrieval;Survey,`A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
+		Retrieval;Survey,`A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
 		DL;RS;Survey,`Deep Learning based Recommender System A Survey and New Perspectives <https://arxiv.org/pdf/1707.07435>`_
-		RS;Retrival,`Simple but Efficient A Multi-Scenario Nearline Retrieval Framework for Recommendation on Taobao <https://arxiv.org/pdf/2408.00247v1>`_
-		Two Tower;MLP,`Neural Collaborative Filtering <https://arxiv.org/abs/1708.05031>`_
-		Two Tower;BOF,`StarSpace Embed All The Things! <https://arxiv.org/abs/1709.03856>`_
-		Two Tower;NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_
+		Retrival;RS,`Simple but Efficient A Multi-Scenario Nearline Retrieval Framework for Recommendation on Taobao <https://arxiv.org/pdf/2408.00247v1>`_
+		Retrival;Ranking;Embed+MLP,`Neural Collaborative Filtering <https://arxiv.org/abs/1708.05031>`_
+		Retrival;Two Tower;BOF,`StarSpace Embed All The Things! <https://arxiv.org/abs/1709.03856>`_
+		Retrival;Ranking;Two Tower;NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_
+		Ranking;WDN,`Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
+		Ranking;DCN,`DCN V2 Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
 		GCN,`Graph Convolutional Neural Networks for Web-Scale Recommender Systems <https://arxiv.org/abs/1806.01973>`_
 		GCN,`LightGCN - Simplifying and Powering Graph Convolution Network for Recommendation <https://arxiv.org/abs/2002.02126>`_
-		CM;Session,`Transformers4Rec Bridging the Gap between NLP and Sequential / Session-Based Recommendation <https://scontent.fblr25-1.fna.fbcdn.net/v/t39.8562-6/243129449_615285476133189_8760410510155369283_n.pdf?_nc_cat=104&ccb=1-7&_nc_sid=b8d81d&_nc_ohc=WDJcULkgkY8Q7kNvgHspPmM&_nc_zt=14&_nc_ht=scontent.fblr25-1.fna&_nc_gid=A_fmEzCPOHil7q9dPSpYsHS&oh=00_AYDCkVOnyZufYEGHEQORBbfI-blNODNIrePL4TaB8p_82A&oe=67A8FEDE>`_	
-		LLM,`Collaborative Large Language Model for Recommender Systems <https://arxiv.org/abs/2311.01343>`_
-		LLM,`Recommendation as Instruction Following A Large Language Model Empowered Recommendation Approach <https://arxiv.org/abs/2305.07001>`_
+		CM;Session,`Transformers4Rec Bridging the Gap between NLP and Sequential / Session-Based Recommendation <https://scontent.fblr25-1.fna.fbcdn.net/v/t39.8562-6/243129449_615285476133189_8760410510155369283_n.pdf?_nc_cat=104&ccb=1-7&_nc_sid=b8d81d&_nc_ohc=WDJcULkgkY8Q7kNvgHspPmM&_nc_zt=14&_nc_ht=scontent.fblr25-1.fna&_nc_gid=A_fmEzCPOHil7q9dPSpYsHS&oh=00_AYDCkVOnyZufYEGHEQORBbfI-blNODNIrePL4TaB8p_82A&oe=67A8FEDE>`_			
 		Diversity;DPP,`Improving the Diversity of Top-N Recommendation via Determinantal Point Process <https://arxiv.org/abs/1709.05135v1>`_
 		Diversity;DPP,`Practical Diversified Recommendations on YouTube with Determinantal Point Processes <https://jgillenw.com/cikm2018.pdf>`_
 		Diversity;DPP,`Fast Greedy MAP Inference for Determinantal Point Process to Improve Recommendation Diversity <https://proceedings.neurips.cc/paper_files/paper/2018/file/dbbf603ff0e99629dda5d75b6f75f966-Paper.pdf>`_
-		Diversity;Multi-Stage,`Representation Online Matters Practical End-to-End Diversification in Search and Recommender Systems <https://arxiv.org/pdf/2305.15534>`_
-		Ranking;WDN,`Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
-		Ranking;DCN,`DCN V2 Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
+		Diversity;Multi-Stage,`Representation Online Matters Practical End-to-End Diversification in Search and Recommender Systems <https://arxiv.org/pdf/2305.15534>`_		
 		Fairness,`Fairness in Ranking Part II Learning-to-Rank and Recommender Systems <https://dl.acm.org/doi/pdf/10.1145/3533380>`_
 		Fairness,`Fairness Definitions Explained <https://fairware.cs.umass.edu/papers/Verma.pdf>`_
+		LLM,`Collaborative Large Language Model for Recommender Systems <https://arxiv.org/abs/2311.01343>`_
+		LLM,`Recommendation as Instruction Following A Large Language Model Empowered Recommendation Approach <https://arxiv.org/abs/2305.07001>`_
 
 More Papers
 ------------------------------------------------------------------------------------
@@ -453,38 +453,61 @@ Example - Newsfeed Recommendation
 
 Re-Ranking 
 ====================================================================================
-(Final ranking of candidates based on personalization, diversity, and explore-exploit trade-offs) 
-
 Task
 ------------------------------------------------------------------------------------
 	- Optimize the order of candidates to maximize engagement. 
 	- Balance personalization with exploration (ensuring new content gets surfaced). 
 	- Ensure fairness and representation (avoid showing only highly popular items). 
 
-Comon Metrics
+Metrics
 ------------------------------------------------------------------------------------
-	- CTR (Click-Through Rate) – Measures immediate engagement. 
-	- NDCG (Normalized Discounted Cumulative Gain) – Measures ranking quality. 
-	- Exploration Ratio – Tracks new content shown to users. 
-	- Long-Term Engagement – Measures retention and repeat interactions. 
+	- [Offline] AUC (ROC-AUC, PR-AUC) – Measures prediction accuracy if modeled as a binary classification problem.
+	- [Offline] NDCG@k, MRR@k, HR@k – Measures ranking quality.
+	- [Online] CTR (Click-Through Rate) – Measures immediate engagement.
+	- [Online] Long-Term Engagement – Holdout -> Measures retention and repeat interactions.
+	- [?] Exploration Ratio – Tracks new content shown to users.
 
-Common Techniques
+Techniques
 ------------------------------------------------------------------------------------
 .. csv-table::
 	:header: "Goal", "Techniques"
 	:align: center
 
-		Personalized Ranking, Neural Ranking Models (e.g.; DeepFM; Wide & Deep; Transformer-based rankers)
-		Diversity Promotion, Determinantal Point Processes (DPP); Re-ranking by category
+		Fast Re-Ranking, Tree-based models (GBDT); LightGBM; XGBoost
+		Personalized Ranking, Embed + MLP Models (e.g.; DeepFM; Wide & Deep; Transformer-based rankers)
+		Diversity Promotion, Re-ranking by category (e.g.; Round Robin); Determinantal Point Processes (DPP)
 		Explore-Exploit Balance, Multi-Armed Bandits (Thompson Sampling; UCB); Randomized Ranking
 		Handling Highly Popular Items, Popularity dampening; Re-ranking with popularity decay
-		Fairness & Representation, Re-weighting models; Exposure-aware ranking
-		Fast Re-Ranking, Tree-based models (GBDT); LightGBM; XGBoost
+		Fairness & Representation, Re-weighting models; Exposure-aware ranking		
 
-Example - TikTok Recommendation 
+Resources
 ------------------------------------------------------------------------------------
-	- Challenges Need to mix trending videos, personalized content, and fresh videos. 
-	- Techniques used Transformer-based ranking, popularity dampening, diversity-based re-ranking. 
+Ranking
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Features
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+	- User profile (captures long term user's preferences)
+	- Item profile (captures item metadata and content understanding)
+	- Contextual features (e.g, device, geolocation, temporal)
+	- Interaction features
+
+`CTR Prediction Papers <https://paperswithcode.com/task/click-through-rate-prediction>`_
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. csv-table::
+	:header: "Technique", "Resource"
+	:align: center
+
+		LR, `Distributed training of Large-scale Logistic models <https://proceedings.mlr.press/v28/gopal13.pdf>`_
+		Survey, `Click-Through Rate Prediction in Online Advertising: A Literature Review <https://arxiv.org/abs/2202.10462>`_
+		Embed + MLP, `Deep Neural Networks for YouTube Recommendations <https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf>`_
+		Embed + MLP, `Real-time Personalization using Embeddings for Search Ranking at Airbnb <https://dl.acm.org/doi/pdf/10.1145/3219819.3219885>`_
+		Wide & Deep, `Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
+		DeepFM, `DeepFM: A Factorization-Machine based Neural Network for CTR Prediction <https://arxiv.org/abs/1703.04247>`_
+		xDeepFM, `xDeepFM: Combining Explicit and Implicit Feature Interactions for Recommender Systems <https://arxiv.org/abs/1803.05170>`_
+		DCN, `Deep & Cross Network for Ad Click Predictions <https://arxiv.org/abs/1708.05123>`_
+		DCNv2, `DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
+		DIN, `Deep Interest Network for Click-Through Rate Prediction <https://arxiv.org/abs/1706.06978>`_
+		BST, `Behavior Sequence Transformer for E-commerce Recommendation in Alibaba <https://arxiv.org/abs/1905.06874>`_
 
 ************************************************************************************
 Patterns
