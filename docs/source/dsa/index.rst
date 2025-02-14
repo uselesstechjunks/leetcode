@@ -32,12 +32,26 @@ Important Algorithms
 - Range Query - [Immutable] Prefix Sum
 - Range Query - [Mutable] Segment Tree [Updates on existing values], Cartesian Tree [Updates on length]
 
-5. Optimization problems 
+5. Counting Problems
 ---------------------------------------------------------------------------------
-- Array - [Manacher] `Longest palindromic substring <https://leetcode.com/problems/longest-palindromic-substring/>`_
-- Array - [Kadane] Subarray with maximum sum
-- Array - VLW - Optimal Length Subarray with Target Sum
+- Array - VLW - `Count Subarrays with Sum Equals K <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
+- Array - VLW - `Count Subarray with Product Less Than K <https://leetcode.com/problems/subarray-product-less-than-k/description/>`_
+- Array - DnC - `Count of Smaller Numbers After Self <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
+- Array - DnC - `Count of Range Sum within Given Range <https://leetcode.com/problems/count-of-range-sum/>`_
+
+6. Optimization problems 
+---------------------------------------------------------------------------------
+- Array - [Manacher] `Longest Palindromic Substring <https://leetcode.com/problems/longest-palindromic-substring/>`_
+- Array - [Kadane] Subarray with Maximum `Sum <https://leetcode.com/problems/maximum-subarray/description/>`_, `Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
+- Array - VLW - Optimal Length Subarray with Target Sum 
+
+	- [Positives] `Minimum Size Subarray Sum Equals k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
+	- [General] `Maximum Size Subarray Sum Equals k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/>`_
 - Array - VLW - Optimal Length Subarray with Bag-Of-Tokens
+- Array - VLW - Minimal Operations to Meet Target
+
+	- `Minimum Number of Operations to Make Array Continuous <https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/>`_
+- Array - DnC - `Maximum Average Subarray II with Len At Least K <https://leetcode.com/problems/maximum-average-subarray-ii/>`_
 - Graph - [Prim][Kruskal] Minimum Spanning Tree
 - Graph - [Dijkstra][Bellman Ford][Floyd Warshall] Shortest Distance
 - DP - 0-1 Knapsack
@@ -55,7 +69,7 @@ Important Algorithms
 - DP - Divide and Conquer DP
 - DP - Knuth's Optimization
 
-6. Connectivity problems
+7. Connectivity problems
 ---------------------------------------------------------------------------------
 - Tree - Lowest common ancestor
 - Graph - Lowest common ancestor
@@ -63,9 +77,13 @@ Important Algorithms
 - Graph - Articulation vertex and biconneted components
 - Graph - [Kosaraju] Strongly connected components
 
-7. Combinatorial problems 
+8. Combinatorial problems 
 ---------------------------------------------------------------------------------
 - Backtracking - Generate Permutations, Combinations, Paranthesis
+
+9. Design problems 
+---------------------------------------------------------------------------------
+- Logger Rate Limiter
 
 Deep Dives
 =================================================================================
