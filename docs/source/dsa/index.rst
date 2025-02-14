@@ -42,7 +42,7 @@ Important Algorithms
 6. Optimization problems 
 ---------------------------------------------------------------------------------
 - Array - [Manacher] `Longest Palindromic Substring <https://leetcode.com/problems/longest-palindromic-substring/>`_
-- Array - [Kadane] Subarray with Maximum `Sum <https://leetcode.com/problems/maximum-subarray/description/>`_, `Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
+- Array - Kadane/DnC Subarray with Maximum `Sum <https://leetcode.com/problems/maximum-subarray/description/>`_, `Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
 - Array - VLW - Optimal Length Subarray with Target Sum 
 
 	- [Positives] `Minimum Size Subarray Sum Equals k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
