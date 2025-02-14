@@ -11,6 +11,62 @@ Key Topics
 	#. Dynamic Programming, Greedy - Optimization problems
 	#. Combinatorial - Recursion, Backtracking
 
+Important Algorithms
+=================================================================================
+1. Scheduling problems
+---------------------------------------------------------------------------------
+- Graph - [Tarjan][Kahn] Topological sort
+- Graph - Priority queue for Greedy Scheduling
+
+2. Assignment problems 
+---------------------------------------------------------------------------------
+- Graph - Bipartite Matching
+
+3. Order Statistics problems
+---------------------------------------------------------------------------------
+- Array - Inversion count
+
+4. Search problems
+---------------------------------------------------------------------------------
+- String - [Rabin Karp] String hashing
+- Range Query - [Immutable] Prefix Sum
+- Range Query - [Mutable] Segment Tree [Updates on existing values], Cartesian Tree [Updates on length]
+
+5. Optimization problems 
+---------------------------------------------------------------------------------
+- Array - [Manacher] `Longest palindromic substring <https://leetcode.com/problems/longest-palindromic-substring/>`_
+- Array - [Kadane] Subarray with maximum sum
+- Array - VLW - Optimal Length Subarray with Target Sum
+- Array - VLW - Optimal Length Subarray with Bag-Of-Tokens
+- Graph - [Prim][Kruskal] Minimum Spanning Tree
+- Graph - [Dijkstra][Bellman Ford][Floyd Warshall] Shortest Distance
+- DP - 0-1 Knapsack
+- DP - Complete Knapsack
+- DP - Multiple Knapsack
+- DP - Monotone Queue Optimization
+- DP - Subset Sum
+- DP - Longest Common Subsequence
+- DP - Longest Increasing Subsequence (LIS)
+- DP - Longest Palindromic Subsequence
+- DP - Rod Cutting
+- DP - Edit Distance
+- DP - Counting Paths in a 2D Array
+- DP - Longest Path in a Directed Acyclic Graph (DAG)
+- DP - Divide and Conquer DP
+- DP - Knuth's Optimization
+
+6. Connectivity problems
+---------------------------------------------------------------------------------
+- Tree - Lowest common ancestor
+- Graph - Lowest common ancestor
+- Graph - Connected components
+- Graph - Articulation vertex and biconneted components
+- Graph - [Kosaraju] Strongly connected components
+
+7. Combinatorial problems 
+---------------------------------------------------------------------------------
+- Backtracking - Generate Permutations, Combinations, Paranthesis
+
 Deep Dives
 =================================================================================
 .. toctree::
