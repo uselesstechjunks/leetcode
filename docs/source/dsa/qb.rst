@@ -44,6 +44,11 @@ Arrays
 - Find Range - Constrainted Frequency Query
 
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
+- Find Range - Constrainted Order Query
+
+	- [Medium] `Find Shortest Unsorted Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
+	- [Medium] `Shortest Subarray to Remove to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
+	- [Hard] `Count Subarrays to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_
 - Given Range - Sum Query
 
 	- [Easy] `Immutable - 1D <https://leetcode.com/problems/range-sum-query-immutable/description/>`_
