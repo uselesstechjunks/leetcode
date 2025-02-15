@@ -103,7 +103,8 @@ Arrays
 	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_
 - Given Range - Frequency Query
 
-	 - [Medium] `Value Frequency in Given Range <https://leetcode.com/problems/range-frequency-queries/description/>`_
+	- [Medium] `Find Majority Element In Entire Array <https://leetcode.com/problems/majority-element/description/>`_, `Variant <https://leetcode.com/problems/majority-element-ii/description/>`_
+	- [Medium] `Value Frequency in Given Range <https://leetcode.com/problems/range-frequency-queries/description/>`_
 - Given Range - Min/Max/Avg/Median Query
 
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
