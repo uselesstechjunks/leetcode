@@ -189,6 +189,7 @@ Arrays
 	- [Hard] `Longest Palindrome Merging Subsequences from 2 Arrays <https://leetcode.com/problems/maximize-palindrome-length-from-subsequences/>`_
 - Misc
 
+	- [Medium] `Construct Array Free of Arithmatic Subsequences <https://leetcode.com/problems/beautiful-array/description/>`_
 	- [Hard] `Reconstruct Array from Given Condition <https://leetcode.com/problems/recover-the-original-array/description/>`_
 	- [Hard] `Reconstruct Array from All Subcollection Sums <https://leetcode.com/problems/find-array-given-subset-sums/description/>`_
 
