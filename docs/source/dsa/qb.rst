@@ -20,6 +20,10 @@ Arrays
 	- [Medium] `Can Replace from K Range <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
 	- [Medium] `Minimum Adjacent Swaps to Make Ones Consecutive <https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/>`_
 	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
+- Inversions
+
+	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
+	- [Hard] `Count Inversions <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
 - Find Range - Contrained Sum Query
 
 	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
