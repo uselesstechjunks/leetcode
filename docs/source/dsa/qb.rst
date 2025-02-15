@@ -12,4 +12,5 @@ Questions
 
 	- [Easy] `Find Maximum Number of Consecutive Ones <https://leetcode.com/problems/max-consecutive-ones/description/>`_
 	- [Medium] `Can Flip 1 Zero <https://leetcode.com/problems/max-consecutive-ones-ii/description/>`_
+	- [Medium] `Can Delete 1 Zero <https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/>`_
 	- [Medium] `Can Flip k Zeros <https://leetcode.com/problems/max-consecutive-ones-iii/description/>`_
