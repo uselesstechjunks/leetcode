@@ -8,6 +8,7 @@ Questions
 	- [Hard] `Can Array be Divided in K Consecutive Subarrays? <https://leetcode.com/problems/hand-of-straights/description/>`_
 	- [Hard] `Can Array be Divided in Consecutive Subsequences? <https://leetcode.com/problems/split-array-into-consecutive-subsequences/>`_
 	- [Medium] `Longest Sequence Containing Consecutive Numbers <https://leetcode.com/problems/longest-consecutive-sequence/>`_
+	- [Medium] `Longest Sequence Containing Consecutive Numbers in Tree <https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/>`_
 - Maximum Consecutive Ones
 
 	- [Easy] `Find Maximum Number of Consecutive Ones <https://leetcode.com/problems/max-consecutive-ones/description/>`_
