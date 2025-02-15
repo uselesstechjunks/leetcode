@@ -1,6 +1,14 @@
 *********************************************************************
 Revision Questions
 *********************************************************************
+.. attention::
+	- Binary Search
+	- Divide & Conquer
+	- DP
+	- Scheduling
+	- Two Pointers
+	- Sliding Window
+
 Arrays
 =====================================================================
 - Consecutive Values
@@ -23,6 +31,7 @@ Arrays
 	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
 	- [Medium] `If We Can Replace Any with Anything Else K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
 	- [Medium] `If We Can Replace Any with Anything Else within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_	
+	- [Medium] `If Longest Consecutive 1s is Longer Than Longst Consecutive 0s <https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros/description/>`_
 - Inversions
 
 	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
@@ -67,6 +76,7 @@ Arrays
 	- [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
 	- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
+	- [Medium] `Count Subarrays with More 1s Than 0s <https://leetcode.com/problems/count-subarrays-with-more-ones-than-zeros/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
 - Find Range - Constrainted Order Query
 
@@ -79,6 +89,7 @@ Arrays
 	- [Medium] `Immutable - 2D <https://leetcode.com/problems/range-sum-query-2d-immutable/description/>`_
 	- [Medium] `Mutable - 1D <https://leetcode.com/problems/range-sum-query-mutable/>`_
 	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_
+	- [Hard] `Count Subarrays With Sum in Given Range <https://leetcode.com/problems/count-of-range-sum/description/>`_
 - Given Range - Min/Max/Avg/Median Query
 
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
@@ -90,6 +101,13 @@ Arrays
 	- [Hard] `Median <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
 	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
 	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
+- Given Range - Binary Search
+
+	- [Hard] `Optimal Placement With Penalty <https://leetcode.com/problems/minimize-max-distance-to-gas-station/>`_
+- Assume Range - Binary Search
+
+	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
+	- [Hard] `Maximum Average Subarray <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
 - Permutation
 
 	- [Medium] `Find Next Permutation <https://leetcode.com/problems/next-permutation/>`_
@@ -131,9 +149,17 @@ Arrays
 	- [Hard] `Optimal Job Allocation Among K Workers <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/description/>`_
 	- [Medium] `Optimal Job Allocation Among K Workers of Varying Capability <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs-ii/description/>`_
 	- [Medium] `Max Utilized Resource for Flexi Schedule Jobs <https://leetcode.com/problems/meeting-rooms-iii/description/>`_
+- Combinatorics
+
+	- [Medium] Generate All Permutations
+	- [Medium] Generate All Combinations
+	- [Medium] Generate All Valid Paranthesis
 
 Strings
 =====================================================================
+- Prefix
+
+	- [Medium] `Longest Common Prefix <https://leetcode.com/problems/longest-common-prefix/description/>`_
 Trees
 =====================================================================
 Graphs
