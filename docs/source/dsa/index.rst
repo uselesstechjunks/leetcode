@@ -2,15 +2,31 @@
 Data Structures & Algorithms
 #################################################################################
 *********************************************************************************
-Key Topics
+Interview Prep
 *********************************************************************************
+Topics
+=================================================================================
 .. attention::
 
-	#. Order, Search and Range Queries - Items, Intervals, Binary Search, Two pointers, Sliding window
-	#. Graph - Shortest path, Scheduling, assignment, Partitioning, Connectivity
-	#. Dynamic Programming, Greedy - Optimization problems
-	#. Combinatorial - Recursion, Backtracking
+	Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
 
+During Interview
+=================================================================================
+.. attention::
+	#. Evaluate trade-offs.  
+	#. Ask clarifying questions before coding.  
+	#. Write the core logic.  
+	#. Check boundary conditions.  
+	#. Create test cases before dry running.  
+	#. Ensure a smooth implementation.  
+	#. Solve 3-4 follow-ups.  
+	#. Optimize time and space complexity.  
+	#. Use clear variable names and correct syntax.  
+	#. Wrap up efficiently.
+
+*********************************************************************************
+Revision Deck
+*********************************************************************************
 Important Questions
 =================================================================================
 .. toctree::
