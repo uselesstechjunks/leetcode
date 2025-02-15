@@ -1,6 +1,14 @@
 *********************************************************************
 Revision Questions
 *********************************************************************
+.. attention::
+	- Binary Search
+	- Divide & Conquer
+	- DP
+	- Scheduling
+	- Two Pointers
+	- Sliding Window
+
 Arrays
 =====================================================================
 - Consecutive Values
@@ -23,10 +31,21 @@ Arrays
 	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
 	- [Medium] `If We Can Replace Any with Anything Else K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
 	- [Medium] `If We Can Replace Any with Anything Else within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_	
+	- [Medium] `If Longest Consecutive 1s is Longer Than Longst Consecutive 0s <https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros/description/>`_
 - Inversions
 
 	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
 	- [Hard] `Count Inversions <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
+- Order Statistics
+
+	- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
+	- [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
+	- [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
+	- [Easy] `Kth Largest Element in Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/description/>`_
+	- [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
+	- [Hard] `Median in Stream <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
+	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
+	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
 - MEX (Minimal Excluded Element)
 
 	- [Hard] `Find First Missing Positive <https://leetcode.com/problems/first-missing-positive/description/>`_
@@ -48,6 +67,7 @@ Arrays
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_
 	- [Medium] `Count Subarrays (Binary) with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
+	- [Hard] `Count Subarrays With Sum in Given Range <https://leetcode.com/problems/count-of-range-sum/description/>`_
 	- [Hard] `Count Subarrays with Sum*Len <= k <https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/>`_
 	- [Medium] `Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
 	- [Medium] `Count Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
@@ -67,29 +87,36 @@ Arrays
 	- [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
 	- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
+	- [Medium] `Count Subarrays with More 1s Than 0s <https://leetcode.com/problems/count-subarrays-with-more-ones-than-zeros/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
 - Find Range - Constrainted Order Query
 
 	- [Medium] `Find Shortest Unsorted Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
 	- [Medium] `Shortest Subarray to Remove to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
 	- [Hard] `Count Subarrays to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_
+	- [Hard] `Find Range With Given Array as a Subsequence <https://leetcode.com/problems/minimum-window-subsequence/description/>`_
 - Given Range - Sum Query
 
 	- [Easy] `Immutable - 1D <https://leetcode.com/problems/range-sum-query-immutable/description/>`_
 	- [Medium] `Immutable - 2D <https://leetcode.com/problems/range-sum-query-2d-immutable/description/>`_
 	- [Medium] `Mutable - 1D <https://leetcode.com/problems/range-sum-query-mutable/>`_
 	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_
+- Given Range - Frequency Query
+
+	- [Medium] `Find Majority Element In Entire Array <https://leetcode.com/problems/majority-element/description/>`_, `Variant <https://leetcode.com/problems/majority-element-ii/description/>`_
+	- [Medium] `Value Frequency in Given Range <https://leetcode.com/problems/range-frequency-queries/description/>`_
 - Given Range - Min/Max/Avg/Median Query
 
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
 	- [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
-- Stream - Min/Max/Avg/Median Query
+- Given Range - Binary Search
 
-	- [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
-	- [Hard] `Median <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
-	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
-	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
+	- [Hard] `Optimal Placement With Penalty <https://leetcode.com/problems/minimize-max-distance-to-gas-station/>`_
+- Assume Range - Binary Search
+
+	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
+	- [Hard] `Maximum Average Subarray <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
 - Permutation
 
 	- [Medium] `Find Next Permutation <https://leetcode.com/problems/next-permutation/>`_
@@ -131,9 +158,45 @@ Arrays
 	- [Hard] `Optimal Job Allocation Among K Workers <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/description/>`_
 	- [Medium] `Optimal Job Allocation Among K Workers of Varying Capability <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs-ii/description/>`_
 	- [Medium] `Max Utilized Resource for Flexi Schedule Jobs <https://leetcode.com/problems/meeting-rooms-iii/description/>`_
+- Combinatorics
+
+	- [Medium] `Generate All Permutations of Given Array of Uniques <https://leetcode.com/problems/permutations/description/>`_
+	- [Medium] `Generate All Permutations of Given Array Containing Duplicates <https://leetcode.com/problems/permutations-ii/description/>`_
+	- [Hard] `Generate Kth Permutation <https://leetcode.com/problems/permutation-sequence/description/>`_
+	- [Medium] `Generate Palindrome Permutations of Given Array <https://leetcode.com/problems/palindrome-permutation-ii/description/>`_
+	- [Medium] `Generate Combinations <https://leetcode.com/problems/combinations/>`_
+	- [Medium] `Combinations Sum = K (With Replacement) <https://leetcode.com/problems/combination-sum/description/>`_
+	- [Medium] `Combinations Sum = K (Without Replacement) <https://leetcode.com/problems/combination-sum-ii/description/>`_
+	- [Medium] `Combinations of K Digits With Sum = N (Without Replacement) <https://leetcode.com/problems/combination-sum-iii/description/>`_
+- Paranthesis
+
+	- [Medium] `Generate All Valid Paranthesis of Given Size <https://leetcode.com/problems/generate-parentheses/description/>`_
+	- [Medium] `Check Valid Paranthesis With Wildcard <https://leetcode.com/problems/valid-parenthesis-string/description/>`_
+	- [Medium] `Min Remove to Make Valid Paranthesis <https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/>`_
+	- [Medium] `Can Make Valid Paranthesis Flipping At Certain Allowed Position <https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/description/>`_
+- Palindromes
+
+	- [Easy] `Can Be Made Palindrome With 1 Removal <https://leetcode.com/problems/valid-palindrome-ii/description/>`_
+	- [Medium] `Can Be Made Palindrome With 1 Replacement <https://leetcode.com/problems/valid-palindrome-iv/description/>`_
+	- [Medium] `Can be Made Palindrome With K Removal <https://leetcode.com/problems/valid-palindrome-iii/description/>`_
+	- [Medium] `Longest Palindromic Subsequence <https://leetcode.com/problems/longest-palindromic-subsequence/description/>`_
+	- [Medium] `Longest Palindromic Subsequence With Constraints <https://leetcode.com/problems/longest-palindromic-subsequence-ii/>`_
+	- [Medium] `Longest Palindromic Subarray <https://leetcode.com/problems/longest-palindromic-substring/description/>`_
+	- [Medium] `Count Palindromic Subarrays <https://leetcode.com/problems/palindromic-substrings/description/>`_
+	- [Hard] `Count Distinct Palindromic Subsequences <https://leetcode.com/problems/count-different-palindromic-subsequences/description/>`_
+	- [Medium] `Count Distinct Length 3 Palindromic Subsequences <https://leetcode.com/problems/unique-length-3-palindromic-subsequences/>`_
+	- [Hard] `Count Palindromic Subsequences of Given Length <https://leetcode.com/problems/count-palindromic-subsequences/>`_
+	- [Hard] `Longest Palindrome Merging Subsequences from 2 Arrays <https://leetcode.com/problems/maximize-palindrome-length-from-subsequences/>`_
+- Misc
+
+	- [Hard] `Reconstruct Array from Given Condition <https://leetcode.com/problems/recover-the-original-array/description/>`_
+	- [Hard] `Reconstruct Array from All Subcollection Sums <https://leetcode.com/problems/find-array-given-subset-sums/description/>`_
 
 Strings
 =====================================================================
+- Prefix
+
+	- [Medium] `Longest Common Prefix <https://leetcode.com/problems/longest-common-prefix/description/>`_
 Trees
 =====================================================================
 Graphs
