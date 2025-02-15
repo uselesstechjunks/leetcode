@@ -129,7 +129,7 @@ Arrays
 	- [Medium] `Ordered Single CPU Scheduler with Repeat Constraint  <https://leetcode.com/problems/task-scheduler-ii/description/>`_
 	- [Medium] `Optimal Job Allocation with Fixed Burst Time <https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/description/>`_
 	- [Hard] `Optimal Job Allocation Among K Workers <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/description/>`_
-	- [Medium] `Optimal Job Allocation Along K Workers of Varying Capability <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs-ii/description/>`_
+	- [Medium] `Optimal Job Allocation Among K Workers of Varying Capability <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs-ii/description/>`_
 	- [Medium] `Max Utilized Resource for Flexi Schedule Jobs <https://leetcode.com/problems/meeting-rooms-iii/description/>`_
 
 Strings
