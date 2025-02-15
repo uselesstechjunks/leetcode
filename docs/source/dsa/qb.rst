@@ -36,6 +36,16 @@ Arrays
 
 	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
 	- [Hard] `Count Inversions <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
+- Order Statistics
+
+	- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
+	- [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
+	- [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
+	- [Easy] `Kth Largest Element in Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/description/>`_
+	- [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
+	- [Hard] `Median in Stream <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
+	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
+	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
 - MEX (Minimal Excluded Element)
 
 	- [Hard] `Find First Missing Positive <https://leetcode.com/problems/first-missing-positive/description/>`_
@@ -99,12 +109,6 @@ Arrays
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
 	- [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
-- Stream - Min/Max/Avg/Median Query
-
-	- [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
-	- [Hard] `Median <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
-	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
-	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
 - Given Range - Binary Search
 
 	- [Hard] `Optimal Placement With Penalty <https://leetcode.com/problems/minimize-max-distance-to-gas-station/>`_
