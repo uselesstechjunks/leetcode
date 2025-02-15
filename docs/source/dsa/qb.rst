@@ -16,20 +16,39 @@ Questions
 	- [Medium] `Can Delete 1 Zero <https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/>`_
 	- [Medium] `Can Flip k Zeros <https://leetcode.com/problems/max-consecutive-ones-iii/description/>`_
 	- [Medium] `Can Replace from K Range <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
-- Constrainted Subarray Sum
+- Find Range - Contrained Sum Query
 
-	- [Medium] `Shortest Subarray of Positives with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
-	- [Medium] `Shortest Rotated Subarray of Positives with Sum <= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
+	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
+	- [Medium] `Shortest Rotated Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
 	- [Hard] `Shortest Subarray with Sum <= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_
 	- [Medium] `Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_
-	- [Medium] `Number of Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
+	- [Medium] `Count Subarrays (Binary) with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
+	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
+	- [Hard] `Count Subarrays with Sum*Len <= k <https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/>`_
 	- [Medium] `Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
-	- [Medium] `Number of Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
+	- [Medium] `Count Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
 	- [Medium] `Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_
-- Range Sum Query
+- Find Range - Constrained Value Query
+
+	- [Medium] `Count Subarrays Containing k Odd Numbers <https://leetcode.com/problems/count-number-of-nice-subarrays/description/>`_
+	- [Medium] `Count Subarrays with k | Value and k | Len <https://leetcode.com/problems/count-of-interesting-subarrays/>`_
+	- [Medium] `Count Subarrays with p | Value for at most k of them <https://leetcode.com/problems/k-divisible-elements-subarrays/>`_
+	- [Medium] `Count Subarrays with Values at max K Apart <https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/>`_
+	- [Medium] `Count Subarrays with Max Value in Given Range <https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/>`_
+	- [Hard] `Count Subarrays with All Values in Given Range <https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/>`_
+	- [Hard] `Count Subarrays Bounded by Max on Either End <https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/>`_
+	- [Medium] `2D - Adjacent Values within K <https://leetcode.com/problems/find-the-grid-of-region-average/description/>`_
+- Find Range - Constrainted Frequency Query
+
+	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
+- Given Range - Sum Query
 
 	- [Easy] `Immutable - 1D <https://leetcode.com/problems/range-sum-query-immutable/description/>`_
 	- [Medium] `Immutable - 2D <https://leetcode.com/problems/range-sum-query-2d-immutable/description/>`_
 	- [Medium] `Mutable - 1D <https://leetcode.com/problems/range-sum-query-mutable/>`_
 	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_
+- Given Range - Min/Max/Avg/Median Query
+
+	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
+	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
