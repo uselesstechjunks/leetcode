@@ -171,7 +171,17 @@ Arrays
 	- [Medium] `Can Make Valid Paranthesis Flipping At Certain Allowed Position <https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/description/>`_
 - Palindromes
 
-	- TODO
+	- [Easy] `Can Be Made Palindrome With 1 Removal <https://leetcode.com/problems/valid-palindrome-ii/description/>`_
+	- [Medium] `Can Be Made Palindrome With 1 Replacement <https://leetcode.com/problems/valid-palindrome-iv/description/>`_
+	- [Medium] `Can be Made Palindrome With K Removal <https://leetcode.com/problems/valid-palindrome-iii/description/>`_
+	- [Medium] `Longest Palindromic Subsequence <https://leetcode.com/problems/longest-palindromic-subsequence/description/>`_
+	- [Medium] `Longest Palindromic Subsequence With Constraints <https://leetcode.com/problems/longest-palindromic-subsequence-ii/>`_
+	- [Medium] `Longest Palindromic Subarray <https://leetcode.com/problems/longest-palindromic-substring/description/>`_
+	- [Medium] `Count Palindromic Subarrays <https://leetcode.com/problems/palindromic-substrings/description/>`_
+	- [Hard] `Count Distinct Palindromic Subsequences <https://leetcode.com/problems/count-different-palindromic-subsequences/description/>`_
+	- [Medium] `Count Distinct Length 3 Palindromic Subsequences <https://leetcode.com/problems/unique-length-3-palindromic-subsequences/>`_
+	- [Hard] `Count Palindromic Subsequences of Given Length <https://leetcode.com/problems/count-palindromic-subsequences/>`_
+	- [Hard] `Longest Palindrome Merging Subsequences from 2 Arrays <https://leetcode.com/problems/maximize-palindrome-length-from-subsequences/>`_
 - Misc
 
 	- [Hard] `Reconstruct Array from Given Condition <https://leetcode.com/problems/recover-the-original-array/description/>`_
