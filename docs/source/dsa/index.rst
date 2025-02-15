@@ -10,6 +10,14 @@ Topics
 
 	Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
 
+Techniques
+=================================================================================
+- Find min/max - Immutable - Linear Search, Heap (streams)
+- Find min/max - Mutable - Divide and Conquer - BST, Segment Tree, Cartesian Tree
+- Ranges - Precompute - Prefix Sum, Divide and Conquer - Segment Tree, Cartesian Tree
+- Bookkeeping - Hashmap
+- Can we narrow down search space by having min/max limits? Can use Binary search.
+
 During Interview
 =================================================================================
 .. attention::
