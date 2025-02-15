@@ -51,4 +51,10 @@ Questions
 - Given Range - Min/Max/Avg/Median Query
 
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
+	- [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
+- Stream - Min/Max/Avg/Median Query
+
+	- [Hard] `Median <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
+	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
+	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
