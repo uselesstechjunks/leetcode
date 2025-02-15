@@ -57,6 +57,7 @@ Arrays
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_
 	- [Medium] `Count Subarrays (Binary) with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
+	- [Hard] `Count Subarrays With Sum in Given Range <https://leetcode.com/problems/count-of-range-sum/description/>`_
 	- [Hard] `Count Subarrays with Sum*Len <= k <https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/>`_
 	- [Medium] `Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
 	- [Medium] `Count Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
@@ -88,8 +89,7 @@ Arrays
 	- [Easy] `Immutable - 1D <https://leetcode.com/problems/range-sum-query-immutable/description/>`_
 	- [Medium] `Immutable - 2D <https://leetcode.com/problems/range-sum-query-2d-immutable/description/>`_
 	- [Medium] `Mutable - 1D <https://leetcode.com/problems/range-sum-query-mutable/>`_
-	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_
-	- [Hard] `Count Subarrays With Sum in Given Range <https://leetcode.com/problems/count-of-range-sum/description/>`_
+	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_	
 - Given Range - Min/Max/Avg/Median Query
 
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
