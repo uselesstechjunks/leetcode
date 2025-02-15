@@ -84,12 +84,16 @@ Arrays
 	- [Medium] `Find Shortest Unsorted Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
 	- [Medium] `Shortest Subarray to Remove to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
 	- [Hard] `Count Subarrays to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_
+	- [Hard] `Find Range With Given Array as a Subsequence <https://leetcode.com/problems/minimum-window-subsequence/description/>`_
 - Given Range - Sum Query
 
 	- [Easy] `Immutable - 1D <https://leetcode.com/problems/range-sum-query-immutable/description/>`_
 	- [Medium] `Immutable - 2D <https://leetcode.com/problems/range-sum-query-2d-immutable/description/>`_
 	- [Medium] `Mutable - 1D <https://leetcode.com/problems/range-sum-query-mutable/>`_
-	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_	
+	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_
+- Given Range - Frequency Query
+
+	 - [Medium] `Value Frequency in Given Range <https://leetcode.com/problems/range-frequency-queries/description/>`_
 - Given Range - Min/Max/Avg/Median Query
 
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
@@ -151,9 +155,27 @@ Arrays
 	- [Medium] `Max Utilized Resource for Flexi Schedule Jobs <https://leetcode.com/problems/meeting-rooms-iii/description/>`_
 - Combinatorics
 
-	- [Medium] Generate All Permutations
-	- [Medium] Generate All Combinations
-	- [Medium] Generate All Valid Paranthesis
+	- [Medium] `Generate All Permutations of Given Array of Uniques <https://leetcode.com/problems/permutations/description/>`_
+	- [Medium] `Generate All Permutations of Given Array Containing Duplicates <https://leetcode.com/problems/permutations-ii/description/>`_
+	- [Hard] `Generate Kth Permutation <https://leetcode.com/problems/permutation-sequence/description/>`_
+	- [Medium] `Generate Palindrome Permutations of Given Array <https://leetcode.com/problems/palindrome-permutation-ii/description/>`_
+	- [Medium] `Generate Combinations <https://leetcode.com/problems/combinations/>`_
+	- [Medium] `Combinations Sum = K (With Replacement) <https://leetcode.com/problems/combination-sum/description/>`_
+	- [Medium] `Combinations Sum = K (Without Replacement) <https://leetcode.com/problems/combination-sum-ii/description/>`_
+	- [Medium] `Combinations of K Digits With Sum = N (Without Replacement) <https://leetcode.com/problems/combination-sum-iii/description/>`_
+- Paranthesis
+
+	- [Medium] `Generate All Valid Paranthesis of Given Size <https://leetcode.com/problems/generate-parentheses/description/>`_
+	- [Medium] `Check Valid Paranthesis With Wildcard <https://leetcode.com/problems/valid-parenthesis-string/description/>`_
+	- [Medium] `Min Remove to Make Valid Paranthesis <https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/>`_
+	- [Medium] `Can Make Valid Paranthesis Flipping At Certain Allowed Position <https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/description/>`_
+- Palindromes
+
+	- TODO
+- Misc
+
+	- [Hard] `Reconstruct Array from Given Condition <https://leetcode.com/problems/recover-the-original-array/description/>`_
+	- [Hard] `Reconstruct Array from All Subcollection Sums <https://leetcode.com/problems/find-array-given-subset-sums/description/>`_
 
 Strings
 =====================================================================
