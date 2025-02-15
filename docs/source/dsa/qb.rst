@@ -17,6 +17,7 @@ Arrays
 	- [Medium] `Can Flip 1 Zero <https://leetcode.com/problems/max-consecutive-ones-ii/description/>`_
 	- [Medium] `Can Delete 1 Zero <https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/>`_
 	- [Medium] `Can Flip k Zeros <https://leetcode.com/problems/max-consecutive-ones-iii/description/>`_
+	- [Medium] `Can Replace with Anything K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
 	- [Medium] `Can Replace from K Range <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
 	- [Medium] `Minimum Adjacent Swaps to Make Ones Consecutive <https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/>`_
 	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
@@ -49,6 +50,8 @@ Arrays
 	- [Medium] `2D - Adjacent Values within K <https://leetcode.com/problems/find-the-grid-of-region-average/description/>`_
 - Find Range - Constrainted Frequency Query
 
+	- [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
+	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
 - Find Range - Constrainted Order Query
 
