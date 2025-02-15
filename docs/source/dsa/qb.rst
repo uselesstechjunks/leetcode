@@ -58,7 +58,14 @@ Arrays
 
 	- [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
 	- [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
-- Find Range - Contrained Sum Query
+- Find Range - Max Sum/Product Query
+
+	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
+	- [Medium] `Find Subarray with Max Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
+	- [Medium] `Find Subarray with Max Abs Sum <https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/description/>`_
+	- [Hard] `Find Subarray with Max Sum After Removing One Value Everywhere <https://leetcode.com/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/description/>`_
+	- [Medium] `Find Subarray with Max Sum After Squaring One Element <https://leetcode.com/problems/maximum-subarray-sum-after-one-operation/description/>`_
+- Find Range - Contrained Sum/Product Query
 
 	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
 	- [Medium] `Shortest Rotated Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
@@ -67,6 +74,7 @@ Arrays
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_
 	- [Medium] `Count Subarrays (Binary) with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
+	- [Medium] `Count Subarrays with Product < k <https://leetcode.com/problems/subarray-product-less-than-k/description/>`_
 	- [Hard] `Count Subarrays With Sum in Given Range <https://leetcode.com/problems/count-of-range-sum/description/>`_
 	- [Hard] `Count Subarrays with Sum*Len <= k <https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/>`_
 	- [Medium] `Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
