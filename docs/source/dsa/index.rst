@@ -11,6 +11,13 @@ Key Topics
 	#. Dynamic Programming, Greedy - Optimization problems
 	#. Combinatorial - Recursion, Backtracking
 
+Important Questions
+=================================================================================
+.. toctree::
+	:maxdepth: 1
+
+	qb
+
 Important Algorithms
 =================================================================================
 1. Scheduling problems
