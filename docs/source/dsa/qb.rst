@@ -7,7 +7,7 @@ Arrays
 
 	- [Medium] `If Entire Array Made of Consecutive Numbers <https://leetcode.com/problems/check-if-an-array-is-consecutive/description/>`_
 	- [Hard] `If not, Minimum Replacement Operations to Make it <https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/description/>`_
-	- [Hard] `Can Array be Divided in K Consecutive Subarrays? <https://leetcode.com/problems/hand-of-straights/description/>`_
+	- [Hard] `Can Array be Partitioned in K Consecutive Subarrays? <https://leetcode.com/problems/hand-of-straights/description/>`_
 	- [Hard] `Can Array be Divided in Consecutive Subsequences? <https://leetcode.com/problems/split-array-into-consecutive-subsequences/>`_
 	- [Medium] `Longest Sequence Containing Consecutive Numbers <https://leetcode.com/problems/longest-consecutive-sequence/>`_
 	- [Medium] `Longest Sequence Containing Consecutive Numbers in Tree <https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/>`_
@@ -17,7 +17,14 @@ Arrays
 	- [Medium] `Can Flip 1 Zero <https://leetcode.com/problems/max-consecutive-ones-ii/description/>`_
 	- [Medium] `Can Delete 1 Zero <https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/>`_
 	- [Medium] `Can Flip k Zeros <https://leetcode.com/problems/max-consecutive-ones-iii/description/>`_
+	- [Medium] `Can Replace with Anything K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
 	- [Medium] `Can Replace from K Range <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
+	- [Medium] `Minimum Adjacent Swaps to Make Ones Consecutive <https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/>`_
+	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
+- Inversions
+
+	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
+	- [Hard] `Count Inversions <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
 - Find Range - Contrained Sum Query
 
 	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
@@ -43,6 +50,8 @@ Arrays
 	- [Medium] `2D - Adjacent Values within K <https://leetcode.com/problems/find-the-grid-of-region-average/description/>`_
 - Find Range - Constrainted Frequency Query
 
+	- [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
+	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
 - Find Range - Constrainted Order Query
 
@@ -62,6 +71,7 @@ Arrays
 	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
 - Stream - Min/Max/Avg/Median Query
 
+	- [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
 	- [Hard] `Median <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
 	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
 	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
