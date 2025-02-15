@@ -16,7 +16,7 @@ Questions
 	- [Medium] `Can Delete 1 Zero <https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/>`_
 	- [Medium] `Can Flip k Zeros <https://leetcode.com/problems/max-consecutive-ones-iii/description/>`_
 	- [Medium] `Can Replace from K Range <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
-- Subarray Sum
+- Constrainted Subarray Sum
 
 	- [Medium] `Shortest Subarray of Positives with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
 	- [Medium] `Shortest Rotated Subarray of Positives with Sum <= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
@@ -27,3 +27,9 @@ Questions
 	- [Medium] `Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
 	- [Medium] `Number of Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
 	- [Medium] `Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_
+- Range Sum Query
+
+	- [Easy] `Immutable - 1D <https://leetcode.com/problems/range-sum-query-immutable/description/>`_
+	- [Medium] `Immutable - 2D <https://leetcode.com/problems/range-sum-query-2d-immutable/description/>`_
+	- [Medium] `Mutable - 1D <https://leetcode.com/problems/range-sum-query-mutable/>`_
+	- [Medium] `Mutable - 2D <https://leetcode.com/problems/range-sum-query-2d-mutable/description/>`_
