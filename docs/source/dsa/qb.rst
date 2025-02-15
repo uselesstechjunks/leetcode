@@ -9,6 +9,7 @@ Arrays
 	- [Hard] `If not, Minimum Replacement Operations to Make it <https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/description/>`_
 	- [Hard] `Can Array be Partitioned into K Subarrays of Consecutive Numbers? <https://leetcode.com/problems/hand-of-straights/description/>`_
 	- [Hard] `Can Sorted Array be Partitioned into Consecutive Subsequences? <https://leetcode.com/problems/split-array-into-consecutive-subsequences/>`_
+	- [Medium] `Longest Harmonious Subsequence <https://leetcode.com/problems/longest-harmonious-subsequence/description/>`_
 	- [Medium] `Longest Sequence Containing Consecutive Numbers <https://leetcode.com/problems/longest-consecutive-sequence/>`_
 	- [Medium] `Longest Sequence Containing Consecutive Numbers in Tree <https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/>`_
 - Same Value Placed Consecutively
@@ -64,6 +65,7 @@ Arrays
 
 	- [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
+	- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
 - Find Range - Constrainted Order Query
 
@@ -93,8 +95,9 @@ Arrays
 	- [Medium] `Find Max from 1 Swap <https://leetcode.com/problems/maximum-swap/>`_
 	- [Hard] `Min Swaps To Make All Pairs Consecutives <https://leetcode.com/problems/couples-holding-hands/>`_
 	- [Medium] `Check if 1 Swap Can Make Array Equal <https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/description/>`_
+	- [Medium] `Check if Adjacent Swaps Can Make Array Equal <https://leetcode.com/problems/move-pieces-to-obtain-a-string/>`_
 	- [Hard] `Check if Any Number of Swaps Can Make Array Equal <https://leetcode.com/problems/k-similar-strings/description/>`_
-	- [Hard] `Last Substring in Lexicographical Order <https://leetcode.com/problems/last-substring-in-lexicographical-order/description/>`_
+	- [Hard] `Last Substring in Lexicographical Order <https://leetcode.com/problems/last-substring-in-lexicographical-order/description/>`_	
 - Selection
 
 	- [Medium] `Subsequence of Len K Starting with Smallest <https://leetcode.com/problems/find-the-most-competitive-subsequence/description/>`_
@@ -104,7 +107,7 @@ Arrays
 - Greedy Search
 
 	- [Medium] `Find Sup of a Given Number with Monotonic Digits <https://leetcode.com/problems/monotone-increasing-digits/description/>`_
-- Intervals
+- Intervals/Activity Selection
 
 	- [Easy] `Exists Overlapping Intervals <https://leetcode.com/problems/meeting-rooms/description/>`_
 	- [Medium] `Exists Overlapping Intervals <https://leetcode.com/problems/meeting-rooms-ii/description/>`_
@@ -114,10 +117,17 @@ Arrays
 	- [Medium] `Number of Running Job at Any Given Time <https://leetcode.com/problems/number-of-flowers-in-full-bloom/description/>`_
 	- [Medium] `Shortest Running Job at Any Given Time <https://leetcode.com/problems/minimum-interval-to-include-each-query/description/>`_
 	- [Medium] `Fixed Schedule with Capacity Requirement <https://leetcode.com/problems/car-pooling/description/>`_
-- Scheduling
-
-	- [Medium] `Max Utilized Resource for Flexi Schedule Jobs <https://leetcode.com/problems/meeting-rooms-iii/description/>`_
 	- [Hard] `Max Utilized Resource for Droppable Jobs <https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/description/>`_
+- Job Scheduling
+
+	- [Medium] `Rearrage to Make Same Characters 1 Distance Apart <https://leetcode.com/problems/reorganize-string/description/>`_
+	- [Hard] `Rearrage to Make Same Characters K Distance Apart <https://leetcode.com/problems/rearrange-string-k-distance-apart/description/>`_
+	- [Medium] `Unordered Single CPU Scheduler with Repeat Constraint <https://leetcode.com/problems/task-scheduler/description/>`_	
+	- [Medium] `Ordered Single CPU Scheduler with Repeat Constraint  <https://leetcode.com/problems/task-scheduler-ii/description/>`_
+	- [Medium] `Optimal Job Allocation with Fixed Burst Time <https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/description/>`_
+	- [Hard] `Optimal Job Allocation Among K Workers <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/description/>`_
+	- [Medium] `Optimal Job Allocation Along K Workers of Varying Capability <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs-ii/description/>`_
+	- [Medium] `Max Utilized Resource for Flexi Schedule Jobs <https://leetcode.com/problems/meeting-rooms-iii/description/>`_
 
 Strings
 =====================================================================
