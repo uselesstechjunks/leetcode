@@ -12,6 +12,7 @@ Arrays
 	- [Medium] `Longest Harmonious Subsequence <https://leetcode.com/problems/longest-harmonious-subsequence/description/>`_
 	- [Medium] `Longest Sequence Containing Consecutive Numbers <https://leetcode.com/problems/longest-consecutive-sequence/>`_
 	- [Medium] `Longest Sequence Containing Consecutive Numbers in Tree <https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/>`_
+	- [Medium] `Maximum Gap Between Values in Sorted Order <https://leetcode.com/problems/maximum-gap/description/>`_
 - Same Value Placed Consecutively
 
 	- [Easy] `Find Maximum Number of Consecutive Ones <https://leetcode.com/problems/max-consecutive-ones/description/>`_
@@ -118,6 +119,8 @@ Arrays
 	- [Medium] `Shortest Running Job at Any Given Time <https://leetcode.com/problems/minimum-interval-to-include-each-query/description/>`_
 	- [Medium] `Fixed Schedule with Capacity Requirement <https://leetcode.com/problems/car-pooling/description/>`_
 	- [Hard] `Max Utilized Resource for Droppable Jobs <https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/description/>`_
+	- [Medium] `Max Events That Can Be Attended Partially <https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/>`_
+	- [Hard] `Max Events That Can Be Attended Fully <https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/description/>`_
 - Job Scheduling
 
 	- [Medium] `Rearrage to Make Same Characters 1 Distance Apart <https://leetcode.com/problems/reorganize-string/description/>`_
