@@ -18,6 +18,7 @@ Arrays
 	- [Medium] `Can Delete 1 Zero <https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/>`_
 	- [Medium] `Can Flip k Zeros <https://leetcode.com/problems/max-consecutive-ones-iii/description/>`_
 	- [Medium] `Can Replace from K Range <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
+	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
 - Find Range - Contrained Sum Query
 
 	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
