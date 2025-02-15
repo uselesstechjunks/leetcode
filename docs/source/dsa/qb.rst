@@ -94,6 +94,7 @@ Arrays
 	- [Hard] `Min Swaps To Make All Pairs Consecutives <https://leetcode.com/problems/couples-holding-hands/>`_
 	- [Medium] `Check if 1 Swap Can Make Array Equal <https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/description/>`_
 	- [Hard] `Check if Any Number of Swaps Can Make Array Equal <https://leetcode.com/problems/k-similar-strings/description/>`_
+	- [Hard] `Last Substring in Lexicographical Order <https://leetcode.com/problems/last-substring-in-lexicographical-order/description/>`_
 - Selection
 
 	- [Medium] `Subsequence of Len K Starting with Smallest <https://leetcode.com/problems/find-the-most-competitive-subsequence/description/>`_
