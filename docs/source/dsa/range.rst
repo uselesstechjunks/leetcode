@@ -295,6 +295,13 @@ Problems Using Monotonic Stack
 
 	- Problem: Given an array of heights representing a histogram, find the area of the largest rectangle.
 	- Hints: Use a monotonic stack to track bars in increasing order.
+	- Sample implementation
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../code/largestareahist.py
+		      :language: python
+		      :linenos:
 
 #. Trapping Rain Water
 
