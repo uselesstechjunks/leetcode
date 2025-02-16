@@ -58,13 +58,13 @@ Arrays
 
 	- [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
 	- [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
-- Find Range - Max Sum/Product/Average Query
+- Find Optimal Range - Max Sum/Product/Average Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
 	- [Medium] `Find Subarray with Max Sum of Len At Least K <https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/>`_
 	- [Medium] `Find Subarray with Max Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
 	- [Easy] `Find Subarray of Fixed Size with Max Average <https://leetcode.com/problems/maximum-average-subarray-i/description/>`_
-	- [Hard] `Find Subarray with Max Average <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
+	- [Hard] `Find Subarray of Size >= K with Max Average <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
 	- [Medium] `Find Subarray with Max Abs Sum <https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/description/>`_
 	- [Hard] `Find Subarray with Max Sum After Removing One Value Everywhere <https://leetcode.com/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/description/>`_
 	- [Medium] `Find Subarray with Max Sum After Squaring One Element <https://leetcode.com/problems/maximum-subarray-sum-after-one-operation/description/>`_
@@ -73,7 +73,7 @@ Arrays
 	- [Hard] `Find Largest Rectangle in a Histogram <https://leetcode.com/problems/largest-rectangle-in-histogram/description/>`_
 	- [Hard] `Find Maximal Rectangle in a Binary Matrix <https://leetcode.com/problems/maximal-rectangle/description/>`_
 	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
-- Find Range - Contrained Sum/Product Query
+- Find Shortest/Longest Range/Count - Contrained Subarray Sum/Product Query
 
 	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
 	- [Medium] `Shortest Rotated Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
