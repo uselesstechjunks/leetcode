@@ -38,9 +38,8 @@ Find something
 	- Valuex explicit - vanilla Binary search.
 	- Values NOT explicit 
 
-		- Is there a W=(min, max) limit? Binary search on range (W) 
-		- If condition check takes O(T(n)), total T(n)lg(W)
-		- No upper limit? One way binary search from min - move from i -> 2i
+		- Values bounded by range W? Binary search on range W. Condition check O(T(n)) -> total T(n)lg(W)
+		- Bounded either above/below? One way binary search from one end - move from i -> 2i or i -> i/2
 		- Target forms a convex function? Optimal exists at root? 
 	
 			- Can compute gradient? GD.
