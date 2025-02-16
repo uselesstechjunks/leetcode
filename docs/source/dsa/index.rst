@@ -29,6 +29,7 @@ Find something
 	- Segment tree (Precompute prefix/suffix/sum in tree, Mutable)
 	- BitIndex tree (???) - Mutable
 	- Cartesian tree (RMQ tasks - size extendable)
+	- Union find (equivalence classes)
 Common Problems
 ---------------------------------------------------------------------------------
 #. Subarray Sum
