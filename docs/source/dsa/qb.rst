@@ -58,10 +58,12 @@ Arrays
 
 	- [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
 	- [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
-- Find Range - Max Sum/Product Query
+- Find Range - Max Sum/Product/Average Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
 	- [Medium] `Find Subarray with Max Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
+	- [Easy] `Find Subarray of Fixed Size with Max Average <https://leetcode.com/problems/maximum-average-subarray-i/description/>`_
+	- [Hard] `Find Subarray with Max Average <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
 	- [Medium] `Find Subarray with Max Abs Sum <https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/description/>`_
 	- [Hard] `Find Subarray with Max Sum After Removing One Value Everywhere <https://leetcode.com/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/description/>`_
 	- [Medium] `Find Subarray with Max Sum After Squaring One Element <https://leetcode.com/problems/maximum-subarray-sum-after-one-operation/description/>`_
@@ -123,8 +125,7 @@ Arrays
 	- [Hard] `Optimal Placement With Penalty <https://leetcode.com/problems/minimize-max-distance-to-gas-station/>`_
 - Assume Range - Binary Search
 
-	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
-	- [Hard] `Maximum Average Subarray <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
+	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_	
 - Permutation
 
 	- [Medium] `Find Next Permutation <https://leetcode.com/problems/next-permutation/>`_
