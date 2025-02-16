@@ -52,12 +52,14 @@ Find something
 	- Order statistics tree (???)
 	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
 	- Monotonic stack - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
-		
-		- Top is range min (max) for [top, curr]
+
+		- Before appending, all larger (smaller) values than curr are removed from top
+		- At the time of append, top is range min (max) for [top, curr]
 	- Monotonic queue - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
 
+		- Before appending, all larger (smaller) values than curr are removed from back
+		- At the time of append, back is range min for [back, curr]
 		- Front is range min (max) for [0, curr]
-		- Back is range min for [back, curr]
 	- Min/max stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
 	- Min/max queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
 	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
