@@ -81,9 +81,9 @@ Arrays
 	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
 - Find Shortest/Longest Range/Count - Contrained Subarray Sum/Product Query
 
-	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
-	- [Medium] `Shortest Rotated Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
-	- [Hard] `Shortest Subarray with Sum <= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_
+	- [Medium] `Shortest Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
+	- [Medium] `Shortest Rotated Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
+	- [Hard] `Shortest Subarray with Sum >= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_
 	- [Medium] `Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_	
 	- [Medium] `Largest Submatrix with Sum = 0 <https://www.geeksforgeeks.org/largest-rectangular-sub-matrix-whose-sum-0/>`_
