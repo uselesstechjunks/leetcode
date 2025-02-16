@@ -67,6 +67,11 @@ Arrays
 	- [Medium] `Find Subarray with Max Abs Sum <https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/description/>`_
 	- [Hard] `Find Subarray with Max Sum After Removing One Value Everywhere <https://leetcode.com/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/description/>`_
 	- [Medium] `Find Subarray with Max Sum After Squaring One Element <https://leetcode.com/problems/maximum-subarray-sum-after-one-operation/description/>`_
+	- [Hard] `Find Subarray with Max Score = MinLen * Len <https://leetcode.com/problems/maximum-score-of-a-good-subarray/>`_
+	- [Medium] `Find Maximal Square in a Binary Matrix <https://leetcode.com/problems/maximal-square/description/>`_
+	- [Hard] `Find Largest Rectangle in a Histogram <https://leetcode.com/problems/largest-rectangle-in-histogram/description/>`_
+	- [Hard] `Find Maximal Rectangle in a Binary Matrix <https://leetcode.com/problems/maximal-rectangle/description/>`_
+	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
 - Find Range - Contrained Sum/Product Query
 
 	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
