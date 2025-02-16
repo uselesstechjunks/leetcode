@@ -2,7 +2,7 @@
 Data Structures & Algorithms
 #################################################################################
 .. contents:: Table of Contents
-   :depth: 1
+   :depth: 3
    :local:
    :backlinks: none
 
@@ -115,7 +115,7 @@ Optimise something
 	- Shortest path - SSSP [Dijkstra][Bellman Ford]
 	- Lightest edge - MST [Prim][Kruskal]
 
-Check connectivity, Grouping & cyclic dependencies
+Check connectivity, grouping & cyclic dependencies
 ---------------------------------------------------------------------------------
 #. Tortoise & hare algorithm
 #. BFS for bipartite detection
