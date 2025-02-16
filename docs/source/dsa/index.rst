@@ -50,7 +50,7 @@ Find something
 	- Monotonic stack (???)
 	- Min/max stack (???)
 	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
-	- Monotonic Queue (all smaller/larger values than curr in sorted order from earlier range in O(1) + maintains insert seq)
+	- Monotonic queue (all smaller/larger values than curr in sorted order from earlier range in O(1) + maintains insert seq)
 	- Min/max queue (???)
 	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
 	- Interval tree (find value in range)
