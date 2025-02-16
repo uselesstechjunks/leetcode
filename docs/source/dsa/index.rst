@@ -38,7 +38,7 @@ Find something
 #. No upper limit? One way binary search from min - power of 2
 #. Unsorted? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
 
-	- Hashmap (freq count, earlier/earliest/latest occurance)
+	- Hashmap (freq count, detect earlier occurance, obtain earliest/latest occurance)
 	- Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
 	- Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
 	- Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
