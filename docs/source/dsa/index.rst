@@ -12,16 +12,30 @@ Topics
 
 Techniques
 =================================================================================
-- Bookkeeping - Hashmap (freq), Queue (insert seq), Heap (min/max) Monotonic Queue (min/max + insert seq), Monotonic Stack (???)
-- Find min/max - Immutable - Linear Search, Heap (streams)
-- Find min/max - Mutable - Divide and Conquer - BST, Segment Tree, Cartesian Tree
-- Subarray Sum
+Find something
+---------------------------------------------------------------------------------
+#. Sorted? Binary search.
+#. Is there a min/max limit? Binary search on range (W) - if check takes O(T(n)), total T(n)lg(W)
+#. No upper limit? One way binary search from min - power of 2
+#. Unsorted? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
 
-	- Keep track of prefix sums
-	- Keep prefix or drop prefix (DP)
-	- Divide and conquer, Segment Tree, Binary Indexed Tree
-	- Sliding window if monotonic
-- Can we narrow down search space by having min/max limits? Can use Binary search.
+	- Hashmap (freq count, earlier/earliest/latest occurance)
+	- Queue (maintain insert seq + can maintain last k inserted + earliest/latest in O(1))
+	- Stack (???)
+	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
+	- Monotonic Queue (all smaller/larger values than curr in sorted order from earlier range in O(1) + maintain insert seq)
+	- BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
+	- Monotonic Stack (???)
+	- Segment tree (Precompute prefix/suffix/sum in tree, Mutable)
+	- BitIndex tree (???) - Mutable
+	- Cartesian tree (RMQ tasks - size extendable)
+#. Subarray Sum
+
+	#. Keep track of earlier seen prefix sums
+	#. Keep prefix or drop prefix (DP) when processing current
+	#. Divide and conquer with (a) max prefix/suffix and (b) sum
+	#. Segment Tree, Binary Indexed Tree
+	#. Sliding window if monotonic
 
 During Interview
 =================================================================================
