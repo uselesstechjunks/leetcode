@@ -29,7 +29,7 @@ Topics
 
 	Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
 
-Techniques
+Bag of Tricks
 =================================================================================
 Find something
 ---------------------------------------------------------------------------------
