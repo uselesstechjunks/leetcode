@@ -124,6 +124,8 @@ Arrays
 - Given Range - Min/Max/Avg/Median Query
 
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
+	- [Hard] `Query Max for All Subarrays of Fixed Size K <https://leetcode.com/problems/sliding-window-maximum/description/>`_
+	- [Hard] `Query Median for All Subarrays of Fixed Size K <https://leetcode.com/problems/sliding-window-median/description/>`_
 	- [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
 - Given Range - Binary Search
