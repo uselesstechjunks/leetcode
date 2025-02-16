@@ -113,6 +113,7 @@ Arrays
 	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
 	- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
 	- [Medium] `Count Subarrays with More 1s Than 0s <https://leetcode.com/problems/count-subarrays-with-more-ones-than-zeros/>`_
+	- [Medium] `Longest Subarray with Equal 1s and 0s <https://leetcode.com/problems/contiguous-array/description/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
 - Find Shortest/Longest Range/Count - Constrainted Order Query
 
