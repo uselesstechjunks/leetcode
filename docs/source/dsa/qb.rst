@@ -83,7 +83,8 @@ Arrays
 
 	- [Medium] `(Positives) Shortest Subarray with Sum >= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
 	- [Medium] `(Positives) Shortest Rotated Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
-	- [Hard] `Shortest Subarray with Sum >= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_
+	- [Medium] `Shortest Subarray with Sum = k <https://www.geeksforgeeks.org/smallest-subarray-with-sum-k-from-an-array/>`_
+	- [Hard] `Shortest Subarray with Sum >= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_	
 	- [Medium] `(NonNeg) Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_	
 	- [Medium] `Largest Submatrix with Sum = 0 <https://www.geeksforgeeks.org/largest-rectangular-sub-matrix-whose-sum-0/>`_
