@@ -131,7 +131,10 @@ Arrays
 	- [Hard] `Optimal Placement With Penalty <https://leetcode.com/problems/minimize-max-distance-to-gas-station/>`_
 - Assume Range - Binary Search
 
-	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_	
+	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
+- Optimal Partitioning
+
+	- [Hard] `Partition Array into K Parts Minimising Largest Subarray Sum <https://leetcode.com/problems/split-array-largest-sum/description/>`_
 - Permutation
 
 	- [Medium] `Find Next Permutation <https://leetcode.com/problems/next-permutation/>`_
