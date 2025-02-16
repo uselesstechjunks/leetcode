@@ -16,30 +16,6 @@ Revision Questions
 
 Arrays
 =====================================================================
-- Consecutive Values
-
-	- [Medium] `If Entire Array Made of Consecutive Numbers <https://leetcode.com/problems/check-if-an-array-is-consecutive/description/>`_
-	- [Hard] `If not, Minimum Replacement Operations to Make it <https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/description/>`_
-	- [Hard] `Can Array be Partitioned into K Subarrays of Consecutive Numbers? <https://leetcode.com/problems/hand-of-straights/description/>`_
-	- [Hard] `Can Sorted Array be Partitioned into Consecutive Subsequences? <https://leetcode.com/problems/split-array-into-consecutive-subsequences/>`_
-	- [Medium] `Longest Harmonious Subsequence <https://leetcode.com/problems/longest-harmonious-subsequence/description/>`_
-	- [Medium] `Longest Sequence Containing Consecutive Numbers <https://leetcode.com/problems/longest-consecutive-sequence/>`_
-	- [Medium] `Longest Sequence Containing Consecutive Numbers in Tree <https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/>`_
-	- [Medium] `Maximum Gap Between Values in Sorted Order <https://leetcode.com/problems/maximum-gap/description/>`_
-- Same Value Placed Consecutively
-
-	- [Easy] `Find Maximum Number of Consecutive Ones <https://leetcode.com/problems/max-consecutive-ones/description/>`_
-	- [Medium] `Check if Longest Consecutive 1s is Longer Than Longst Consecutive 0s <https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros/description/>`_
-	- [Medium] `Find Maximal Square in a Binary Matrix <https://leetcode.com/problems/maximal-square/description/>`_	
-	- [Hard] `Find Largest Rectangle in a Histogram <https://leetcode.com/problems/largest-rectangle-in-histogram/description/>`_
-	- [Hard] `Find Maximal Rectangle in a Binary Matrix <https://leetcode.com/problems/maximal-rectangle/description/>`_
-	- [Medium] `Maximum Number of Consecutive Ones If We Can Flip 1 Zero <https://leetcode.com/problems/max-consecutive-ones-ii/description/>`_
-	- [Medium] `Maximum Number of Consecutive Ones If We Can Delete 1 Zero <https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/>`_
-	- [Medium] `Maximum Number of Consecutive Ones If We Can Flip k Zeros <https://leetcode.com/problems/max-consecutive-ones-iii/description/>`_
-	- [Medium] `Minimum Adjacent Swaps to Make All Ones Consecutive <https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/>`_
-	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
-	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
-	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_		
 - Inversions
 
 	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
@@ -66,6 +42,29 @@ Arrays
 
 	- [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
 	- [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
+- Consecutive Values
+
+	- [Medium] `If Entire Array Made of Consecutive Numbers <https://leetcode.com/problems/check-if-an-array-is-consecutive/description/>`_
+	- [Hard] `If not, Minimum Replacement Operations to Make it <https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/description/>`_
+	- [Hard] `Can Array be Partitioned into K Subarrays of Consecutive Numbers? <https://leetcode.com/problems/hand-of-straights/description/>`_
+	- [Hard] `Can Sorted Array be Partitioned into Consecutive Subsequences? <https://leetcode.com/problems/split-array-into-consecutive-subsequences/>`_
+	- [Medium] `Longest Harmonious Subsequence <https://leetcode.com/problems/longest-harmonious-subsequence/description/>`_
+	- [Medium] `Longest Sequence Containing Consecutive Numbers <https://leetcode.com/problems/longest-consecutive-sequence/>`_
+	- [Medium] `Longest Sequence Containing Consecutive Numbers in Tree <https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/>`_
+	- [Medium] `Maximum Gap Between Values in Sorted Order <https://leetcode.com/problems/maximum-gap/description/>`_
+- Contiguous Segments of Same Value
+
+	- [Easy] `Find Maximum Number of Consecutive Ones <https://leetcode.com/problems/max-consecutive-ones/description/>`_
+	- [Medium] `Check if Longest Consecutive 1s is Longer Than Longst Consecutive 0s <https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros/description/>`_
+	- [Medium] `Find Maximal Square in a Binary Matrix <https://leetcode.com/problems/maximal-square/description/>`_
+	- [Hard] `Find Maximal Rectangle in a Binary Matrix <https://leetcode.com/problems/maximal-rectangle/description/>`_
+	- [Medium] `Maximum Number of Consecutive Ones If We Can Flip 1 Zero <https://leetcode.com/problems/max-consecutive-ones-ii/description/>`_
+	- [Medium] `Maximum Number of Consecutive Ones If We Can Delete 1 Zero <https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/>`_
+	- [Medium] `Maximum Number of Consecutive Ones If We Can Flip k Zeros <https://leetcode.com/problems/max-consecutive-ones-iii/description/>`_
+	- [Medium] `Minimum Adjacent Swaps to Make All Ones Consecutive <https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/description/>`_
+	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
+	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
+	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
 - Find Optimal Range - Max Sum/Product/Average Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
@@ -77,7 +76,8 @@ Arrays
 	- [Hard] `Find Subarray with Max Sum After Removing One Value Everywhere <https://leetcode.com/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/description/>`_
 	- [Medium] `Find Subarray with Max Sum After Squaring One Element <https://leetcode.com/problems/maximum-subarray-sum-after-one-operation/description/>`_
 	- [Hard] `Find Subarray with Max Score = MinLen * Len <https://leetcode.com/problems/maximum-score-of-a-good-subarray/>`_	
-	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
+	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_
+	- [Hard] `Find Largest Rectangle in a Histogram <https://leetcode.com/problems/largest-rectangle-in-histogram/description/>`_
 - Find Shortest/Longest Range/Count - Contrained Subarray Sum/Product Query
 
 	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
