@@ -74,6 +74,7 @@ Reinforcement Learning with Human Feedback (RLHF)/Proximal Policy Optimisation (
 ========================================================================================
 .. note::
 	* [github.io] `The 37 Implementation Details of Proximal Policy Optimization <https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/>`_
+	* [arxiv.org] `SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training <https://arxiv.org/abs/2501.17161v1>`_
 
 Direct Preference Optimisation (DPO)
 =========================================================================================
