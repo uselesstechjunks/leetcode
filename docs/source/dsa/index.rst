@@ -20,16 +20,16 @@ Find something
 #. Unsorted? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
 
 	- Hashmap (freq count, earlier/earliest/latest occurance)
-	- Stack (maintain insert seq in rev + can maintain first k inserted + latest in O(1))
-	- Queue (maintain insert seq + can maintain last k inserted + earliest/latest in O(1))
-	- Dequeue (maintain insert seq + can maintain first+last k inserted + earliest/latest in O(1))
-	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
-	- Monotonic Queue (all smaller/larger values than curr in sorted order from earlier range in O(1) + maintain insert seq)
+	- Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
+	- Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
+	- Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
 	- BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
 	- Monotonic Stack (???)
-	- Segment tree (Precompute prefix/suffix/sum in tree, Mutable)
-	- BitIndex tree (???) - Mutable
-	- Cartesian tree (RMQ tasks - size extendable)
+	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
+	- Monotonic Queue (all smaller/larger values than curr in sorted order from earlier range in O(1) + maintains insert seq)
+	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable
+	- BitIndex tree (???) - mutable
+	- Cartesian tree (RMQ tasks) - size extendable
 	- Union find (equivalence classes)
 Common Problems
 ---------------------------------------------------------------------------------
