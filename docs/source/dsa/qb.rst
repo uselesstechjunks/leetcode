@@ -61,6 +61,7 @@ Arrays
 - Find Range - Max Sum/Product/Average Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
+	- [Medium] `Find Subarray with Max Sum of Len At Least K <https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/>`_
 	- [Medium] `Find Subarray with Max Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
 	- [Easy] `Find Subarray of Fixed Size with Max Average <https://leetcode.com/problems/maximum-average-subarray-i/description/>`_
 	- [Hard] `Find Subarray with Max Average <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
@@ -79,6 +80,7 @@ Arrays
 	- [Hard] `Shortest Subarray with Sum <= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_
 	- [Medium] `Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_
+	- [Medium] `Largest Subarray Sum of Size >= k <https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/>`_
 	- [Medium] `Count Subarrays (Binary) with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
 	- [Medium] `Count Subarrays with Product < k <https://leetcode.com/problems/subarray-product-less-than-k/description/>`_
