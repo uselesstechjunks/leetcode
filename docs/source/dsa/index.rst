@@ -98,14 +98,16 @@ Optimise something
 	- Shortest path - SSSP [Dijkstra][Bellman Ford]
 	- Lightest edge - MST [Prim][Kruskal]
 
-Check connectivity & cyclic dependencies
+Check connectivity, Grouping & cyclic dependencies
 ---------------------------------------------------------------------------------
 #. Tortoise & hare algorithm
+#. BFS for bipartite detection
 #. DFS with edge classification, union-find
 #. Lowest common ancestor - tree/graph - [Euler's tour],[Tarjan],[Farach-Colton and Bender]
 #. Connected components
 #. Articulation vertex and biconneted components
 #. [Kosaraju] Strongly connected components
+#. Eulerian circuit for cycle visiting all vertices
 
 Combinatorial problems 
 ---------------------------------------------------------------------------------
