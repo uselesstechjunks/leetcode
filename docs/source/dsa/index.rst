@@ -36,7 +36,10 @@ Find something
 #. Sorted?
 
 	- Valuex explicit - vanilla Binary search.
-	- Values NOT explicit - Is there a min/max limit? Binary search on range (W) - if condition check takes O(T(n)), total T(n)lg(W)
+	- Values NOT explicit 
+
+		- Is there a W=(min, max) limit? Binary search on range (W) 
+		- If condition check takes O(T(n)), total T(n)lg(W)
 	- No upper limit? One way binary search from min - move from i -> 2i
 	- Target forms a convex function? Optimal exists at root? Can compute gradient? GD. Can compute Hessian? Newton.
 #. Unsorted? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
@@ -48,10 +51,15 @@ Find something
 	- BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
 	- Order statistics tree (???)
 	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
-	- Min/max stack (maintains min/max seen so far at top - obtain in O(1))
-	- Min/max queue (???)
-	- Monotonic stack (maintains longest mono sequence from min/max (including curr) ending at curr)
-	- Monotonic queue (maintains longest mono sequence from min/max (including curr) ending at curr + obtain min/max in O(1))
+	- Monotonic stack - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
+		
+		- Top is range min (max) for [top, curr]
+	- Monotonic queue - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
+
+		- Front is range min (max) for [0, curr]
+		- Back is range min for [back, curr]
+	- Min/max stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
+	- Min/max queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
 	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
 	- Interval tree (find value in range)
 	- Binary indexed tree (???) - mutable
