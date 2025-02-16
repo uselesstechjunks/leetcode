@@ -6,6 +6,52 @@ Applied LLMs
    :local:
    :backlinks: none
 
+Practical
+=========================================================================================
+Scaling Large Models
+-----------------------------------------------------------------------------------------
+.. important::
+	* [github.io] `How To Scale Your Model <https://jax-ml.github.io/scaling-book/index>`_
+
+Data Engineering
+-----------------------------------------------------------------------------------------
+.. important::
+	* [github.com] `LLMDataHub: Awesome Datasets for LLM Training <https://github.com/Zjh-819/LLMDataHub>`_
+	* [arxiv.org] `The Pile: An 800GB Dataset of Diverse Text for Language Modeling <https://arxiv.org/abs/2101.00027>`_	
+
+Hardware Utilisation
+-----------------------------------------------------------------------------------------
+.. important::
+	* [horace.io] `Making Deep Learning Go Brrrr From First Principles <https://horace.io/brrr_intro.html>`_
+	* [newsletter.maartengrootendorst.com] `A Visual Guide to Quantization <https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization>`_
+	* [nvidia.com] `Profiling PyTorch Models for NVIDIA GPUs <https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31644/>`_
+	* [pytorch.org] `What Every User Should Know About Mixed Precision Training in PyTorch <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/>`_
+	* [pytorch.org] `Performance Tuning Guide <https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html>`_
+	* [arxiv.org] `Hardware Acceleration of LLMs: A comprehensive survey and comparison <https://arxiv.org/pdf/2409.03384>`_
+
+Pipelines
+-----------------------------------------------------------------------------------------
+.. important::
+	* [huggingface] `LLM Inference at scale with TGI <https://huggingface.co/blog/martinigoyanes/llm-inference-at-scale-with-tgi>`_
+	* [vLLM] `Easy, Fast, and Cheap LLM Serving with PagedAttention <https://blog.vllm.ai/2023/06/20/vllm.html>`_
+	* [HuggingFace Blog] `Fine-tuning LLMs to 1.58bit: extreme quantization made easy <https://huggingface.co/blog/1_58_llm_extreme_quantization>`_
+	* [Paper] `Data Movement Is All You Need: A Case Study on Optimizing Transformers <https://arxiv.org/abs/2007.00072>`_
+
+Tools
+-----------------------------------------------------------------------------------------
+.. important::
+	* [pytorch.org] `PyTorch Profiler <https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html>`_
+	* [tinkerd.net] `Writing CUDA Kernels for PyTorch <https://tinkerd.net/blog/machine-learning/cuda-basics/>`_
+	* [spaCy] `Library for NLU/IE Tasks <https://spacy.io/usage/spacy-101>`_, `LLM-variants <https://spacy.io/usage/large-language-models>`_
+	* [tinkerd.net] `Distributed Training and DeepSpeed <https://tinkerd.net/blog/machine-learning/distributed-training/>`_
+
+Evaluation
+-----------------------------------------------------------------------------------------
+.. important::
+	* [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
+	* [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
+	* [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
+
 In Context Learning (ICL)
 =========================================================================================
 .. note::
