@@ -57,7 +57,7 @@ Find something
 	#. BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
 	#. Order statistics tree (???)
 	#. Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
-	#. Cartesian tree (RMQ tasks) - size extendable, range min at root O(1)
+	#. Cartesian tree (RMQ tasks) - size extendable, range min at root O(1). Constructive requires stack. Unbalanced.
 	#. Monotonic stack - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
 
 		#. Before appending, all larger (smaller) values than curr are removed from top
