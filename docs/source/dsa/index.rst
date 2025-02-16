@@ -87,7 +87,7 @@ Schedule something
 Assign something
 ---------------------------------------------------------------------------------
 #. Two pointers
-#. Bipartite matching
+#. [Kuhn] Maximal bipartite matching
 
 Optimise something
 ---------------------------------------------------------------------------------
