@@ -39,43 +39,43 @@ Find something
 ---------------------------------------------------------------------------------
 #. Ordered?
 
-	- Valuex explicit - vanilla Binary search.
-	- Values NOT explicit 
+	#. Values explicit - vanilla Binary search.
+	#. Values NOT explicit 
 
-		- Values bounded? Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
-		- Bounded either above/below? One way binary search from one end - move from i -> 2i or i -> i/2
-		- Target forms a convex function? Optimal exists at root? 
+		#. Values bounded? Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
+		#. Bounded either above/below? One way binary search from one end - move from i -> 2i or i -> i/2
+		#. Target forms a convex function? Optimal exists at root? 
 	
-			- Can compute gradient? GD.
-			- Can compute Hessian? Newton.
+			#. Can compute gradient? GD.
+			#. Can compute Hessian? Newton.
 #. Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
 
-	- Hashmap (freq count, detect earlier occurance, obtain earliest/latest occurance)
-	- Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
-	- Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
-	- Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
-	- BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
-	- Order statistics tree (???)
-	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
-	- Monotonic stack - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
+	#. Hashmap (freq count, detect earlier occurance, obtain earliest/latest occurance)
+	#. Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
+	#. Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
+	#. Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
+	#. BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
+	#. Order statistics tree (???)
+	#. Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
+	#. Monotonic stack - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
 
-		- Before appending, all larger (smaller) values than curr are removed from top
-		- At the time of append, top is range min (max) for [top, curr]
-	- Monotonic queue - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
+		#. Before appending, all larger (smaller) values than curr are removed from top
+		#. At the time of append, top is range min (max) for [top, curr]
+	#. Monotonic queue - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
 
-		- Before appending, all larger (smaller) values than curr are removed from back
-		- At the time of append, back is range min for [back, curr]
-		- Front is range min (max) for [0, curr]
-	- Min (max) stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
-	- Min (max) queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
-	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
-	- Interval tree (find value in range)
-	- Binary indexed tree (???) - mutable
-	- Sparse table (RMQ)
-	- Cartesian tree (RMQ tasks) - size extendable
-	- Union find (equivalence classes)
-	- Trie (prefix matching)
-	- String hashing - Rabin Karp
+		#. Before appending, all larger (smaller) values than curr are removed from back
+		#. At the time of append, back is range min for [back, curr]
+		#. Front is range min (max) for [0, curr]
+	#. Min (max) stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
+	#. Min (max) queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
+	#. Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
+	#. Interval tree (find value in range)
+	#. Binary indexed tree (???) - mutable
+	#. Sparse table (RMQ)
+	#. Cartesian tree (RMQ tasks) - size extendable
+	#. Union find (equivalence classes)
+	#. Trie (prefix matching)
+	#. String hashing - Rabin Karp
 #. Make bookkeeping faster - sqrt decomposition
 
 Modify something
@@ -97,27 +97,27 @@ Optimise something
 ---------------------------------------------------------------------------------
 #. DP - Classic problems
 
-	- 0-1 knapsack
-	- Complete knapsack
-	- Multiple knapsack
-	- Monotone queue optimization
-	- Subset sum
-	- Longest common subsequence
-	- Longest increasing subsequence (LIS)
-	- Longest palindromic subsequence
-	- Rod cutting
-	- Edit distance
-	- Counting paths in a 2D array
-	- Longest Path in DAG
-	- Divide and conquer DP
-	- Knuth's optimisation
-	- ASSP [Floyd Warshall]
+	#. 0-1 knapsack
+	#. Complete knapsack
+	#. Multiple knapsack
+	#. Monotone queue optimization
+	#. Subset sum
+	#. Longest common subsequence
+	#. Longest increasing subsequence (LIS)
+	#. Longest palindromic subsequence
+	#. Rod cutting
+	#. Edit distance
+	#. Counting paths in a 2D array
+	#. Longest Path in DAG
+	#. Divide and conquer DP
+	#. Knuth's optimisation
+	#. ASSP [Floyd Warshall]
 #. Greedy 
 
-	- Two pointers
-	- Sliding window
-	- Shortest path - SSSP [Dijkstra][Bellman Ford]
-	- Lightest edge - MST [Prim][Kruskal]
+	#. Two pointers
+	#. Sliding window
+	#. Shortest path - SSSP [Dijkstra][Bellman Ford]
+	#. Lightest edge - MST [Prim][Kruskal]
 
 Check connectivity, grouping & cyclic dependencies
 ---------------------------------------------------------------------------------
@@ -132,21 +132,21 @@ Check connectivity, grouping & cyclic dependencies
 
 Combinatorial problems 
 ---------------------------------------------------------------------------------
-- Backtracking
+#. Backtracking
 
 Design problems 
 ---------------------------------------------------------------------------------
-- Mostly bookkeeping
+#. Mostly bookkeeping
 
 Validate/parse something
 ---------------------------------------------------------------------------------
-- Stack
+#. Stack
 
 Involves intervals
 ---------------------------------------------------------------------------------
-- Sort them - overlap check left-end >= right-start
-- Sort by start - benefit (???)
-- Sort by end - benefit (???)
+#. Sort them - overlap check left-end >= right-start
+#. Sort by start - benefit (???)
+#. Sort by end - benefit (???)
 
 Common Problems
 ---------------------------------------------------------------------------------
