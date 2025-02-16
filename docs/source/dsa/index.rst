@@ -57,22 +57,24 @@ Find something
 	#. BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
 	#. Order statistics tree (???)
 	#. Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
+	#. Cartesian tree (RMQ tasks) - size extendable, range min at root O(1)
 	#. Monotonic stack - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
 
 		#. Before appending, all larger (smaller) values than curr are removed from top
 		#. At the time of append, top is range min (max) for [top, curr]
+		#. Corresponds to the rightmost subtree of a Cartesian tree
 	#. Monotonic queue - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
 
 		#. Before appending, all larger (smaller) values than curr are removed from back
 		#. At the time of append, back is range min for [back, curr]
 		#. Front is range min (max) for [0, curr]
+		#. Corresponds to the rightmost subtree of a Cartesian tree		
 	#. Min (max) stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
 	#. Min (max) queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
 	#. Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
 	#. Interval tree (find value in range)
 	#. Binary indexed tree (???) - mutable
-	#. Sparse table (RMQ)
-	#. Cartesian tree (RMQ tasks) - size extendable
+	#. Sparse table (RMQ)	
 	#. Union find (equivalence classes)
 	#. Trie (prefix matching)
 	#. String hashing - Rabin Karp
