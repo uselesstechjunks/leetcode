@@ -90,7 +90,7 @@ Arrays
 	- [Medium] `Count Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
 	- [Medium] `Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_
 	- [Hard] `Find Rectangle With Sum <= k <https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/>`_
-- Find Range - Constrained Value Query
+- Find Range Count - Constrained Value Query
 
 	- [Medium] `Count Subarrays Containing k Odd Numbers <https://leetcode.com/problems/count-number-of-nice-subarrays/description/>`_
 	- [Medium] `Count Subarrays with k | Value and k | Len <https://leetcode.com/problems/count-of-interesting-subarrays/>`_
@@ -100,14 +100,14 @@ Arrays
 	- [Hard] `Count Subarrays with All Values in Given Range <https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/>`_
 	- [Hard] `Count Subarrays Bounded by Max on Either End <https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/>`_
 	- [Medium] `2D - Adjacent Values within K <https://leetcode.com/problems/find-the-grid-of-region-average/description/>`_
-- Find Range - Constrainted Frequency Query
+- Find Shortest/Longest Range/Count - Constrainted Frequency Query
 
 	- [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
 	- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
 	- [Medium] `Count Subarrays with More 1s Than 0s <https://leetcode.com/problems/count-subarrays-with-more-ones-than-zeros/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
-- Find Range - Constrainted Order Query
+- Find Shortest/Longest Range/Count - Constrainted Order Query
 
 	- [Medium] `Find Shortest Unsorted Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
 	- [Medium] `Shortest Subarray to Remove to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
