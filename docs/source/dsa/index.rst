@@ -40,8 +40,11 @@ Find something
 
 		- Is there a W=(min, max) limit? Binary search on range (W) 
 		- If condition check takes O(T(n)), total T(n)lg(W)
-	- No upper limit? One way binary search from min - move from i -> 2i
-	- Target forms a convex function? Optimal exists at root? Can compute gradient? GD. Can compute Hessian? Newton.
+		- No upper limit? One way binary search from min - move from i -> 2i
+		- Target forms a convex function? Optimal exists at root? 
+	
+			- Can compute gradient? GD.
+			- Can compute Hessian? Newton.
 #. Unsorted? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
 
 	- Hashmap (freq count, detect earlier occurance, obtain earliest/latest occurance)
