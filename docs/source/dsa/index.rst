@@ -31,6 +31,10 @@ Topics
 
 Bag of Tricks
 =================================================================================
+Count something
+---------------------------------------------------------------------------------
+#. Can we count compliment instead?
+
 Find something
 ---------------------------------------------------------------------------------
 #. Ordered?
@@ -87,7 +91,7 @@ Schedule something
 Assign something
 ---------------------------------------------------------------------------------
 #. Two pointers
-#. Bipartite matching
+#. [Kuhn] Maximal bipartite matching
 
 Optimise something
 ---------------------------------------------------------------------------------
@@ -134,6 +138,16 @@ Design problems
 ---------------------------------------------------------------------------------
 - Mostly bookkeeping
 
+Validate/parse something
+---------------------------------------------------------------------------------
+- Stack
+
+Involves intervals
+---------------------------------------------------------------------------------
+- Sort them - overlap check left-end >= right-start
+- Sort by start - benefit (???)
+- Sort by end - benefit (???)
+
 Common Problems
 ---------------------------------------------------------------------------------
 #. Subarray Sum
@@ -171,41 +185,12 @@ Deep Dives
 *********************************************************************************
 Resources
 *********************************************************************************
+Fundamentals
+================================================================================
 .. attention::
 
 	* [neetcode.io] `Neetcode <https://neetcode.io/practice>`_ 
-	* [cp-algorithms.com] `Algorithms for Competitive Programming <https://cp-algorithms.com/>`_	
-
-.. important::
-	* [takeuforward.org] `Strivers A2Z DSA Course/Sheet <https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/>`_
-	* [leetracer.com] `Screen Questions - (Company Tags Last Updated: 11-02-24) <https://leetracer.com/screener>`_	
-	* [github.com] `LeetCode-Questions-CompanyWise <https://github.com/krishnadey30/LeetCode-Questions-CompanyWise/blob/master/google_6months.csv>`_
-	* [leetcode.com] `Top Google Questions <https://leetcode.com/problem-list/7p55wqm/>`_
-	* [leetcode.com] `Top 100 Liked <https://leetcode.com/studyplan/top-100-liked/>`_
-	* [reddit.com] `I passed Meta E6 Hiring Committee (Screen+FullLoop). My thoughts, advice, tips. <https://www.reddit.com/r/leetcode/comments/1c7fs3o/i_passed_meta_e6_hiring_committee_screenfullloop/?share_id=jeNswSOERGx8GXDy02DBq&utm_name=androidcss>`_
-	* [reddit.com] `3 parts of mastering LC with SCC example <https://www.reddit.com/r/leetcode/comments/1hye4hy/comment/m6pucmj/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button>`_
-	* [reddit.com] `Here's a master list of problem keyword to algorithm patterns <https://www.reddit.com/r/leetcode/comments/1f9bejz/heres_a_master_list_of_problem_keyword_to/?share_id=_p0H75FfOq1zSO0yBWj8v&utm_name=androidcss>`_
-
-.. note::
-	
-	* [leetcode.com] `Lessons from My Google L5 Interview Experience: Tips and suggestion <https://leetcode.com/discuss/interview-question/6147892/Lessons-from-My-Google-L5-Interview-Experience%3A-Tips-and-suggestion>`_
-	* [leetcode.com] `Google Onsite <https://leetcode.com/discuss/interview-question/849947/google-onsite>`_
-	* [docs.google] `Leetcode Questions - public - solved by Siddhesh <https://docs.google.com/spreadsheets/d/1KkCeOIBwUFfKrHGGZe_6EJRCIqaM6MJBo0uSIMSD9bs/edit?gid=782922309#gid=782922309>`_
-	* [hellointerview.com] `Data Structures and Algorithms <https://www.hellointerview.com/learn/code>`_
-	* [leetcodethehardway.com] `LeetCode The Hard Way <https://leetcodethehardway.com/tutorials/category/basic-topics>`_
-	* [deriveit.org] `DeriveIt <https://deriveit.org/coding>`_	
-	* [docs.google] `DSA Resource Problem Set <https://docs.google.com/spreadsheets/d/1hwvHbRargzmbErRYGU2cjxf4PR8GTOI-e1R9VqOVQgY/edit?gid=481396158#gid=481396158>`_
-	* [leetcode.com] `14 Patterns to Ace Any Coding Interview Question <https://leetcode.com/discuss/study-guide/4039411/14-Patterns-to-Ace-Any-Coding-Interview-Question>`_
-	* [educative.io] `Grokking the Coding Interview Patterns <https://www.educative.io/courses/grokking-coding-interview>`_
-	* [educative.io] `3 month coding interview preparation bootcamp <https://www.educative.io/blog/coding-interivew-preparation-bootcamp>`_
-	* [educative.io] `Data Structures for Coding Interviews in Python <https://www.educative.io/courses/data-structures-coding-interviews-python>`_
-	* [github.com] `Grokking the Coding Interview Patterns for Coding Questions <https://github.com/dipjul/Grokking-the-Coding-Interview-Patterns-for-Coding-Questions>`_
-	* [designgurus.io] `Grokking the Coding Interview: Patterns for Coding Questions <https://www.designgurus.io/course/grokking-the-coding-interview>`_
-	* [github.com] `Tech Interview Handbook <https://github.com/yangshun/tech-interview-handbook>`_
-	* [github.com] `Interview_DS_Algo <https://github.com/MAZHARMIK/Interview_DS_Algo>`_
-	* [geeksforgeeks.org] `Must Do Coding Questions for Companies <https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/>`_
-	* [geeksforgeeks.org] `Must Do Coding Questions Company-wise <https://www.geeksforgeeks.org/must-coding-questions-company-wise/>`_	
-	* [interview-prep-pro.vercel.app] `Interview Prep Pro <https://interview-prep-pro.vercel.app/>`_
+	* [cp-algorithms.com] `Algorithms for Competitive Programming <https://cp-algorithms.com/>`_
 
 Code Patterns
 ================================================================================
@@ -229,6 +214,40 @@ Two Pointers
 	* [leetcode.com] `Solved all two pointers problems in 100 days. <https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days>`_
 	* [reddit.com] `Two-Pointer Technique, an In-Depth Guide <https://www.reddit.com/r/leetcode/comments/18g9383/twopointer_technique_an_indepth_guide_concepts/?rdt=59240>`_
 
+Mostly Useful
+================================================================================
+.. important::
+	* [takeuforward.org] `Strivers A2Z DSA Course/Sheet <https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/>`_
+	* [leetracer.com] `Screen Questions - (Company Tags Last Updated: 11-02-24) <https://leetracer.com/screener>`_	
+	* [github.com] `LeetCode-Questions-CompanyWise <https://github.com/krishnadey30/LeetCode-Questions-CompanyWise/blob/master/google_6months.csv>`_
+	* [leetcode.com] `Top Google Questions <https://leetcode.com/problem-list/7p55wqm/>`_
+	* [leetcode.com] `Top 100 Liked <https://leetcode.com/studyplan/top-100-liked/>`_
+	* [reddit.com] `I passed Meta E6 Hiring Committee (Screen+FullLoop). My thoughts, advice, tips. <https://www.reddit.com/r/leetcode/comments/1c7fs3o/i_passed_meta_e6_hiring_committee_screenfullloop/?share_id=jeNswSOERGx8GXDy02DBq&utm_name=androidcss>`_
+	* [reddit.com] `3 parts of mastering LC with SCC example <https://www.reddit.com/r/leetcode/comments/1hye4hy/comment/m6pucmj/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button>`_
+	* [reddit.com] `Here's a master list of problem keyword to algorithm patterns <https://www.reddit.com/r/leetcode/comments/1f9bejz/heres_a_master_list_of_problem_keyword_to/?share_id=_p0H75FfOq1zSO0yBWj8v&utm_name=androidcss>`_
+
+Might be Useful
+================================================================================
+.. note::
+	* [leetcode.com] `Lessons from My Google L5 Interview Experience: Tips and suggestion <https://leetcode.com/discuss/interview-question/6147892/Lessons-from-My-Google-L5-Interview-Experience%3A-Tips-and-suggestion>`_
+	* [leetcode.com] `Google Onsite <https://leetcode.com/discuss/interview-question/849947/google-onsite>`_
+	* [docs.google] `Leetcode Questions - public - solved by Siddhesh <https://docs.google.com/spreadsheets/d/1KkCeOIBwUFfKrHGGZe_6EJRCIqaM6MJBo0uSIMSD9bs/edit?gid=782922309#gid=782922309>`_
+	* [hellointerview.com] `Data Structures and Algorithms <https://www.hellointerview.com/learn/code>`_
+	* [leetcodethehardway.com] `LeetCode The Hard Way <https://leetcodethehardway.com/tutorials/category/basic-topics>`_
+	* [deriveit.org] `DeriveIt <https://deriveit.org/coding>`_	
+	* [docs.google] `DSA Resource Problem Set <https://docs.google.com/spreadsheets/d/1hwvHbRargzmbErRYGU2cjxf4PR8GTOI-e1R9VqOVQgY/edit?gid=481396158#gid=481396158>`_
+	* [leetcode.com] `14 Patterns to Ace Any Coding Interview Question <https://leetcode.com/discuss/study-guide/4039411/14-Patterns-to-Ace-Any-Coding-Interview-Question>`_
+	* [educative.io] `Grokking the Coding Interview Patterns <https://www.educative.io/courses/grokking-coding-interview>`_
+	* [educative.io] `3 month coding interview preparation bootcamp <https://www.educative.io/blog/coding-interivew-preparation-bootcamp>`_
+	* [educative.io] `Data Structures for Coding Interviews in Python <https://www.educative.io/courses/data-structures-coding-interviews-python>`_
+	* [github.com] `Grokking the Coding Interview Patterns for Coding Questions <https://github.com/dipjul/Grokking-the-Coding-Interview-Patterns-for-Coding-Questions>`_
+	* [designgurus.io] `Grokking the Coding Interview: Patterns for Coding Questions <https://www.designgurus.io/course/grokking-the-coding-interview>`_
+	* [github.com] `Tech Interview Handbook <https://github.com/yangshun/tech-interview-handbook>`_
+	* [github.com] `Interview_DS_Algo <https://github.com/MAZHARMIK/Interview_DS_Algo>`_
+	* [geeksforgeeks.org] `Must Do Coding Questions for Companies <https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/>`_
+	* [geeksforgeeks.org] `Must Do Coding Questions Company-wise <https://www.geeksforgeeks.org/must-coding-questions-company-wise/>`_	
+	* [interview-prep-pro.vercel.app] `Interview Prep Pro <https://interview-prep-pro.vercel.app/>`_
+
 Base
 ================================================================================
 1. Arrays and Strings
@@ -237,11 +256,11 @@ Key Concepts: Sliding window, two pointers, prefix sum, Kadane’s algorithm, st
 
 Problems to Practice:
 
-* `Longest substring without repeating characters <https://leetcode.com/problems/longest-substring-without-repeating-characters/>`_.
-* `Maximum subarray sum (Kadane’s algorithm) <https://leetcode.com/problems/maximum-subarray/>`_.
-* `Rotate array (in-place rotation) <https://leetcode.com/problems/rotate-array/>`_.
-* Valid palindrome.
-* String pattern matching (e.g., KMP algorithm, Rabin-Karp).
+* Longest substring without repeating characters
+* Maximum subarray sum (Kadane’s algorithm)
+* Rotate array (in-place rotation)
+* Valid palindrome
+* String pattern matching (e.g., KMP algorithm, Rabin-Karp)
 
 2. Hashing
 ---------------------------------------------------------------------------------
@@ -349,81 +368,3 @@ Problems to Practice:
 * Find GCD/LCM of two numbers.
 * Count primes up to n (Sieve of Eratosthenes).
 * Water trapped after rainfall (two-pointer approach).
-
-11. Practice for Company-Specific Challenges
----------------------------------------------------------------------------------
-Company tends to focus on:
-
-* Efficiency: Optimize solutions for time and space.
-* Edge Cases: Handle null, empty, or large inputs.
-* Scalability: Consider how your solution scales for massive data.
-
-Focus on problems from platforms like:
-
-* LeetCode (Company-specific questions).
-* GeeksforGeeks (company tag: Company).
-* HackerRank.
-
-Preparation Strategy
----------------------------------------------------------------------------------
-Prioritize Weak Areas:
-
-* Track the problems you struggle with from the Neetcode 150 list and revisit them.
-
-Mock Interviews:
-
-* Start mock interviews on platforms like Pramp or Interviewing.io after covering core topics.
-
-Time Management:
-
-* Practice solving medium-level problems in 20 minutes and hard-level problems in 40 minutes.
-
-Company-Specific Resources:
-
-* Solve past Company interview problems and contests (e.g., Kick Start).
-
-Stack
----------------------------------------------------------------------------------
-Parsing, Validation, Evaluation
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-#. Basic calculator 1-4
-#. Tag validator
-#. Number of atoms
-#. Parse lisp expression
-#. Number of valid subarrays
-#. Brace expansion 
-#. Parsing boolean expression
-#. Binary expression tree from infix
-
-Optimisation
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-#. Longest valid paranthesis
-#. Trapping rain water
-#. Largest rectangle in histogram
-#. Maximum rectangle
-#. Closest bst value
-#. Zuma game
-#. Create maximum number
-#. Max chunks to make sorted
-#. Minimum number of increment
-#. Maximum Score of a Good Subarray
-#. Minimum Cost to Change the Final Value of Expression
-
-Design
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-#. Max stack
-#. Max frequency stack
-#. Stamping the sequence
-#. Dinner plate stack
-
-Intervals
----------------------------------------------------------------------------------
-#. `Meeting Rooms <https://leetcode.com/problems/meeting-rooms/>`_         
-#. `Non-overlapping Intervals <https://leetcode.com/problems/non-overlapping-intervals/>`_
-#. `Minimum Number of Arrows to Burst Balloons <https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/>`_
-#. `Merge Intervals <https://leetcode.com/problems/merge-intervals/>`_
-#. `Car Pooling <https://leetcode.com/problems/car-pooling/>`_
-#. `Total Cost to Hire K Workers <https://leetcode.com/problems/total-cost-to-hire-k-workers/>`_
-#. `Meeting Rooms II <https://leetcode.com/problems/meeting-rooms-ii/>`_
-#. `Meeting Rooms III <https://leetcode.com/problems/meeting-rooms-iii/>`_
-#. `Number of Flowers in Full Bloom <https://leetcode.com/problems/number-of-flowers-in-full-bloom/>`_
