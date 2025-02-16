@@ -50,8 +50,8 @@ Find something
 	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
 	- Min/max stack (maintains min/max seen so far at top - obtain in O(1))
 	- Min/max queue (???)
-	- Monotonic stack (maintains longest monotonic sequence from min/max on the left ending at curr)
-	- Monotonic queue (maintains longest monotonic sequence from min/max on the left ending at curr + obtain min/max in O(1))
+	- Monotonic stack (maintains longest monotonic sequence from min/max (including curr) ending at curr)
+	- Monotonic queue (maintains longest monotonic sequence from min/max (including curr) ending at curr + obtain min/max in O(1))
 	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
 	- Interval tree (find value in range)
 	- Binary indexed tree (???) - mutable
