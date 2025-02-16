@@ -15,6 +15,7 @@ Scaling Large Models
 -----------------------------------------------------------------------------------------
 .. important::
 	* [github.io] `How To Scale Your Model <https://jax-ml.github.io/scaling-book/index>`_
+	* [mlsyscourse.org] `CMU: 15-442/15-642: Machine Learning Systems <https://mlsyscourse.org/>`_
 
 Data Engineering
 -----------------------------------------------------------------------------------------
@@ -63,12 +64,17 @@ Pretraining
 
 Domain-Adaptation
 =========================================================================================
-SoDA
+.. note::
+	* SoDA
+	* [arxiv.org] `LIMO: Less is More for Reasoning <https://arxiv.org/abs/2502.03387>`_
 
 Supervised Fine-Tuning (SFT)
 =========================================================================================
-Reinforcement Learning with Human Feedback (RLHF)
+Reinforcement Learning with Human Feedback (RLHF)/Proximal Policy Optimisation (PPO)
 ========================================================================================
+.. note::
+	* [github.io] `The 37 Implementation Details of Proximal Policy Optimization <https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/>`_
+
 Direct Preference Optimisation (DPO)
 =========================================================================================
 Reinforcement Fine-Tuning (RFT)
