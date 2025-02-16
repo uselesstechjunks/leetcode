@@ -19,6 +19,7 @@ Design Resources
 	- [github.io] `Contrastive Representation Learning <https://lilianweng.github.io/posts/2021-05-31-contrastive/>`_
 	- [github.io] `The Multi-Armed Bandit Problem and Its Solutions  <https://lilianweng.github.io/posts/2018-01-23-multi-armed-bandit/>`_
 	- [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
+	- [mit.edu] `Data-Centric AI vs. Model-Centric AI <https://dcai.csail.mit.edu/2024/data-centric-model-centric/>`_
 	- [fennel.ai] `Real World Recommendation System – Part 1 <https://fennel.ai/blog/real-world-recommendation-system/>`_
 	- [fennel.ai] `Real World Recommendation Systems – Part 2 (Training Data Generation) <https://fennel.ai/blog/real-world-recommendation-systems/>`_
 	- [fennel.ai] `Real World Recommendation Systems – Part 3 (Modeling) <https://fennel.ai/blog/real-world-recommendation-systems-21e/>`_
