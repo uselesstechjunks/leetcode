@@ -81,21 +81,21 @@ Arrays
 	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
 - Find Shortest/Longest Range/Count - Contrained Subarray Sum/Product Query
 
-	- [Medium] `Shortest Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
-	- [Medium] `Shortest Rotated Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
+	- [Medium] `(Positives) Shortest Subarray with Sum >= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
+	- [Medium] `(Positives) Shortest Rotated Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
 	- [Hard] `Shortest Subarray with Sum >= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_
-	- [Medium] `Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
+	- [Medium] `(NonNeg) Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_	
 	- [Medium] `Largest Submatrix with Sum = 0 <https://www.geeksforgeeks.org/largest-rectangular-sub-matrix-whose-sum-0/>`_
-	- [Medium] `Count Subarrays (Binary) with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
+	- [Medium] `(Binary) Count Subarrays with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
 	- [Medium] `Count Submatrices with Sum = k <https://www.geeksforgeeks.org/count-of-submatrix-with-sum-x-in-a-given-matrix/>`_
 	- [Medium] `Count Subarrays with Product < k <https://leetcode.com/problems/subarray-product-less-than-k/description/>`_
 	- [Hard] `Count Subarrays With Sum in Given Range <https://leetcode.com/problems/count-of-range-sum/description/>`_
-	- [Hard] `Count Subarrays with Sum*Len <= k <https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/>`_
-	- [Medium] `Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
+	- [Hard] `(Positives) Count Subarrays with Sum*Len <= k <https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/>`_
+	- [Medium] `(NonNeg) Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
 	- [Medium] `Count Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
-	- [Medium] `Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_
+	- [Medium] `(Positives) Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_
 	- [Hard] `Find Rectangle With Sum <= k <https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/>`_
 - Find Range Count - Constrained Value Query
 
