@@ -1,28 +1,14 @@
 #################################################################################
 Data Structures & Algorithms
 #################################################################################
+.. contents:: Table of Contents
+   :depth: 3
+   :local:
+   :backlinks: none
+
 *********************************************************************************
 Interview Prep
 *********************************************************************************
-Topics
-=================================================================================
-.. attention::
-
-	Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
-
-Techniques
-=================================================================================
-- Bookkeeping - Hashmap (freq), Queue (insert seq), Heap (min/max) Monotonic Queue (min/max + insert seq), Monotonic Stack (???)
-- Find min/max - Immutable - Linear Search, Heap (streams)
-- Find min/max - Mutable - Divide and Conquer - BST, Segment Tree, Cartesian Tree
-- Subarray Sum
-
-	- Keep track of prefix sums
-	- Keep prefix or drop prefix (DP)
-	- Divide and conquer, Segment Tree, Binary Indexed Tree
-	- Sliding window if monotonic
-- Can we narrow down search space by having min/max limits? Can use Binary search.
-
 During Interview
 =================================================================================
 .. attention::
@@ -37,6 +23,132 @@ During Interview
 	#. Use clear variable names and correct syntax.  
 	#. Wrap up efficiently.
 
+Topics
+=================================================================================
+.. attention::
+
+	Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
+
+Bag of Tricks
+=================================================================================
+Find something
+---------------------------------------------------------------------------------
+#. Ordered?
+
+	- Valuex explicit - vanilla Binary search.
+	- Values NOT explicit 
+
+		- Values bounded? Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
+		- Bounded either above/below? One way binary search from one end - move from i -> 2i or i -> i/2
+		- Target forms a convex function? Optimal exists at root? 
+	
+			- Can compute gradient? GD.
+			- Can compute Hessian? Newton.
+#. Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
+
+	- Hashmap (freq count, detect earlier occurance, obtain earliest/latest occurance)
+	- Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
+	- Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
+	- Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
+	- BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
+	- Order statistics tree (???)
+	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
+	- Monotonic stack - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
+
+		- Before appending, all larger (smaller) values than curr are removed from top
+		- At the time of append, top is range min (max) for [top, curr]
+	- Monotonic queue - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
+
+		- Before appending, all larger (smaller) values than curr are removed from back
+		- At the time of append, back is range min for [back, curr]
+		- Front is range min (max) for [0, curr]
+	- Min (max) stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
+	- Min (max) queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
+	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
+	- Interval tree (find value in range)
+	- Binary indexed tree (???) - mutable
+	- Sparse table (RMQ)
+	- Cartesian tree (RMQ tasks) - size extendable
+	- Union find (equivalence classes)
+	- Trie (prefix matching)
+	- String hashing - Rabin Karp
+#. Make bookkeeping faster - sqrt decomposition
+
+Modify something
+---------------------------------------------------------------------------------
+#. Two pointers + swap
+#. Dutch national flag
+
+Schedule something
+---------------------------------------------------------------------------------
+#. Priority queue + optional external dict for value - greedy
+#. [Tarjan][Kahn] Topological sort
+
+Assign something
+---------------------------------------------------------------------------------
+#. Two pointers
+#. Bipartite matching
+
+Optimise something
+---------------------------------------------------------------------------------
+#. DP - Classic problems
+
+	- 0-1 knapsack
+	- Complete knapsack
+	- Multiple knapsack
+	- Monotone queue optimization
+	- Subset sum
+	- Longest common subsequence
+	- Longest increasing subsequence (LIS)
+	- Longest palindromic subsequence
+	- Rod cutting
+	- Edit distance
+	- Counting paths in a 2D array
+	- Longest Path in DAG
+	- Divide and conquer DP
+	- Knuth's optimisation
+	- ASSP [Floyd Warshall]
+#. Greedy 
+
+	- Two pointers
+	- Sliding window
+	- Shortest path - SSSP [Dijkstra][Bellman Ford]
+	- Lightest edge - MST [Prim][Kruskal]
+
+Check connectivity, grouping & cyclic dependencies
+---------------------------------------------------------------------------------
+#. Tortoise & hare algorithm
+#. BFS for bipartite detection
+#. DFS with edge classification, union-find
+#. Lowest common ancestor - tree/graph - [Euler's tour],[Tarjan],[Farach-Colton and Bender]
+#. Connected components
+#. Articulation vertex and biconneted components
+#. [Kosaraju] Strongly connected components
+#. Eulerian circuit for cycle visiting all vertices
+
+Combinatorial problems 
+---------------------------------------------------------------------------------
+- Backtracking
+
+Design problems 
+---------------------------------------------------------------------------------
+- Mostly bookkeeping
+
+Common Problems
+---------------------------------------------------------------------------------
+#. Subarray Sum
+
+	#. Keep track of earlier seen prefix sums
+	#. [Kadane] Keep prefix or drop prefix (DP) when processing current
+	#. Divide and conquer with (a) max prefix/suffix and (b) sum
+	#. If mutable, Segment Tree, Binary Indexed Tree
+	#. If monotonic, VLW
+#. LCA
+#. RSQ/RMQ
+#. MEX
+#. LCS
+#. Order stat
+
 *********************************************************************************
 Revision Deck
 *********************************************************************************
@@ -46,80 +158,6 @@ Important Questions
 	:maxdepth: 1
 
 	qb
-
-Important Algorithms
-=================================================================================
-1. Scheduling problems
----------------------------------------------------------------------------------
-- Graph - [Tarjan][Kahn] Topological sort
-- Graph - Priority queue for Greedy Scheduling
-
-2. Assignment problems 
----------------------------------------------------------------------------------
-- Graph - Bipartite Matching
-
-3. Order Statistics problems
----------------------------------------------------------------------------------
-- Array - Inversion count
-
-4. Search problems
----------------------------------------------------------------------------------
-- String - [Rabin Karp] String hashing
-- Range Query - [Immutable] Prefix Sum
-- Range Query - [Mutable] Segment Tree [Updates on existing values], Cartesian Tree [Updates on length]
-
-5. Counting Problems
----------------------------------------------------------------------------------
-- Array - VLW - `Count Subarrays with Sum Equals K <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
-- Array - VLW - `Count Subarray with Product Less Than K <https://leetcode.com/problems/subarray-product-less-than-k/description/>`_
-- Array - DnC - `Count of Smaller Numbers After Self <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
-- Array - DnC - `Count of Range Sum within Given Range <https://leetcode.com/problems/count-of-range-sum/>`_
-
-6. Optimization problems 
----------------------------------------------------------------------------------
-- Array - [Manacher] `Longest Palindromic Substring <https://leetcode.com/problems/longest-palindromic-substring/>`_
-- Array - Kadane/DnC Subarray with Maximum `Sum <https://leetcode.com/problems/maximum-subarray/description/>`_, `Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
-- Array - VLW - Optimal Length Subarray with Target Sum 
-
-	- [Positives] `Minimum Size Subarray Sum Equals k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
-	- [General] `Maximum Size Subarray Sum Equals k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/>`_
-- Array - VLW - Optimal Length Subarray with Bag-Of-Tokens
-- Array - VLW - Minimal Operations to Meet Target
-
-	- `Minimum Number of Operations to Make Array Continuous <https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/>`_
-- Array - DnC - `Maximum Average Subarray II with Len At Least K <https://leetcode.com/problems/maximum-average-subarray-ii/>`_
-- Graph - [Prim][Kruskal] Minimum Spanning Tree
-- Graph - [Dijkstra][Bellman Ford][Floyd Warshall] Shortest Distance
-- DP - 0-1 Knapsack
-- DP - Complete Knapsack
-- DP - Multiple Knapsack
-- DP - Monotone Queue Optimization
-- DP - Subset Sum
-- DP - Longest Common Subsequence
-- DP - Longest Increasing Subsequence (LIS)
-- DP - Longest Palindromic Subsequence
-- DP - Rod Cutting
-- DP - Edit Distance
-- DP - Counting Paths in a 2D Array
-- DP - Longest Path in a Directed Acyclic Graph (DAG)
-- DP - Divide and Conquer DP
-- DP - Knuth's Optimization
-
-7. Connectivity problems
----------------------------------------------------------------------------------
-- Tree - Lowest common ancestor
-- Graph - Lowest common ancestor
-- Graph - Connected components
-- Graph - Articulation vertex and biconneted components
-- Graph - [Kosaraju] Strongly connected components
-
-8. Combinatorial problems 
----------------------------------------------------------------------------------
-- Backtracking - Generate Permutations, Combinations, Paranthesis
-
-9. Design problems 
----------------------------------------------------------------------------------
-- Logger Rate Limiter
 
 Deep Dives
 =================================================================================
