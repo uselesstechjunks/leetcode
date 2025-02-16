@@ -29,13 +29,20 @@ Find something
 	- Segment tree (Precompute prefix/suffix/sum in tree, Mutable)
 	- BitIndex tree (???) - Mutable
 	- Cartesian tree (RMQ tasks - size extendable)
+Common Problems
+---------------------------------------------------------------------------------
 #. Subarray Sum
 
 	#. Keep track of earlier seen prefix sums
 	#. Keep prefix or drop prefix (DP) when processing current
 	#. Divide and conquer with (a) max prefix/suffix and (b) sum
-	#. Segment Tree, Binary Indexed Tree
-	#. Sliding window if monotonic
+	#. If mutable, Segment Tree, Binary Indexed Tree
+	#. If monotonic, VLW
+#. LCA
+#. RSQ/RMQ
+#. MEX
+#. LCS
+#. Order stat
 
 During Interview
 =================================================================================
