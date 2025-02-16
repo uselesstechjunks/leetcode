@@ -38,7 +38,7 @@ Find something
 	- Valuex explicit - vanilla Binary search.
 	- Values NOT explicit 
 
-		- Values bounded by range W? Binary search on range W. Condition check O(T(n)) -> total T(n)lg(W)
+		- Values bounded Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
 		- Bounded either above/below? One way binary search from one end - move from i -> 2i or i -> i/2
 		- Target forms a convex function? Optimal exists at root? 
 	
