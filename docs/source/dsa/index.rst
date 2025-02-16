@@ -36,6 +36,7 @@ Find something
 #. Sorted? Binary search.
 #. Is there a min/max limit? Binary search on range (W) - if check takes O(T(n)), total T(n)lg(W)
 #. No upper limit? One way binary search from min - power of 2
+#. Target forms a convex function? Optimal exists at root? Can compute gradient? GD. Can compute Hessian? Newton.
 #. Unsorted? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
 
 	- Hashmap (freq count, detect earlier occurance, obtain earliest/latest occurance)
