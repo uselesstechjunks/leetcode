@@ -265,7 +265,8 @@ Key Papers
 		Diversity;DPP,`Improving the Diversity of Top-N Recommendation via Determinantal Point Process <https://arxiv.org/abs/1709.05135v1>`_
 		Diversity;DPP,`Practical Diversified Recommendations on YouTube with Determinantal Point Processes <https://jgillenw.com/cikm2018.pdf>`_
 		Diversity;DPP,`Fast Greedy MAP Inference for Determinantal Point Process to Improve Recommendation Diversity <https://proceedings.neurips.cc/paper_files/paper/2018/file/dbbf603ff0e99629dda5d75b6f75f966-Paper.pdf>`_
-		Diversity;Multi-Stage,`Representation Online Matters Practical End-to-End Diversification in Search and Recommender Systems <https://arxiv.org/pdf/2305.15534>`_		
+		Diversity;Multi-Stage,`Representation Online Matters Practical End-to-End Diversification in Search and Recommender Systems <https://arxiv.org/pdf/2305.15534>`_
+		Polularity Bias,`Managing Popularity Bias in Recommender Systems with Personalized Re-Ranking <https://cdn.aaai.org/ocs/18199/18199-78818-1-PB.pdf>`_
 		Fairness,`Fairness in Ranking Part II Learning-to-Rank and Recommender Systems <https://dl.acm.org/doi/pdf/10.1145/3533380>`_
 		Fairness,`Fairness Definitions Explained <https://fairware.cs.umass.edu/papers/Verma.pdf>`_
 		LLM,`A Review of Modern Recommender Systems Using Generative Models (Gen-RecSys) <https://arxiv.org/abs/2404.00579>`_
