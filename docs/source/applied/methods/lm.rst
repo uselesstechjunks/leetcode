@@ -266,15 +266,19 @@ Domain-Adaptation
 =========================================================================================
 SoDA
 
-Supervised Fine-Tuning
+Supervised Fine-Tuning (SFT)
 =========================================================================================
 Reinforcement Learning with Human Feedback (RLHF)
+========================================================================================
+Direct Preference Optimisation (DPO)
+=========================================================================================
+Reinforcement Fine-Tuning (RFT)
 =========================================================================================
 .. note::
 	* [philschmid.de] `Bite: How Deepseek R1 was trained <https://www.philschmid.de/deepseek-r1>`_
+	* [arxiv.org] `DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models <https://arxiv.org/abs/2402.03300>`_
+	* [predibase.com] `How Reinforcement Learning Beats Supervised Fine-Tuning When Data is Scarce <https://predibase.com/blog/how-reinforcement-learning-beats-supervised-fine-tuning-when-data-is-scarce>`_
 
-Direct Preference Optimisation (DPO)
-=========================================================================================
 *****************************************************************************************
 Special Techniques
 *****************************************************************************************
