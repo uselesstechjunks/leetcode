@@ -252,6 +252,7 @@ Key Papers
 		Retrival;Ranking;Two Tower;NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_
 		Ranking;WDN,`Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
 		Ranking;DCN,`DCN V2 Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
+		Ranking;L2R,`DeepRank: Learning to rank with neural networks for recommendation <http://zhouxiuze.com/pub/DeepRank.pdf>`_
 		GCN,`Graph Convolutional Neural Networks for Web-Scale Recommender Systems <https://arxiv.org/abs/1806.01973>`_
 		GCN,`LightGCN - Simplifying and Powering Graph Convolution Network for Recommendation <https://arxiv.org/abs/2002.02126>`_
 		CM;Session,`Transformers4Rec Bridging the Gap between NLP and Sequential / Session-Based Recommendation <https://scontent.fblr25-1.fna.fbcdn.net/v/t39.8562-6/243129449_615285476133189_8760410510155369283_n.pdf?_nc_cat=104&ccb=1-7&_nc_sid=b8d81d&_nc_ohc=WDJcULkgkY8Q7kNvgHspPmM&_nc_zt=14&_nc_ht=scontent.fblr25-1.fna&_nc_gid=A_fmEzCPOHil7q9dPSpYsHS&oh=00_AYDCkVOnyZufYEGHEQORBbfI-blNODNIrePL4TaB8p_82A&oe=67A8FEDE>`_			
@@ -261,6 +262,7 @@ Key Papers
 		Diversity;Multi-Stage,`Representation Online Matters Practical End-to-End Diversification in Search and Recommender Systems <https://arxiv.org/pdf/2305.15534>`_		
 		Fairness,`Fairness in Ranking Part II Learning-to-Rank and Recommender Systems <https://dl.acm.org/doi/pdf/10.1145/3533380>`_
 		Fairness,`Fairness Definitions Explained <https://fairware.cs.umass.edu/papers/Verma.pdf>`_
+		LLM,`A Review of Modern Recommender Systems Using Generative Models (Gen-RecSys) <https://arxiv.org/abs/2404.00579>`_
 		LLM,`Collaborative Large Language Model for Recommender Systems <https://arxiv.org/abs/2311.01343>`_
 		LLM,`Recommendation as Instruction Following A Large Language Model Empowered Recommendation Approach <https://arxiv.org/abs/2305.07001>`_
 
