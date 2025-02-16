@@ -87,6 +87,7 @@ Arrays
 	- [Medium] `Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
 	- [Medium] `Count Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
 	- [Medium] `Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_
+	- [Hard] `Find Rectangle With Sum <= k <https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/>`_
 - Find Range - Constrained Value Query
 
 	- [Medium] `Count Subarrays Containing k Odd Numbers <https://leetcode.com/problems/count-number-of-nice-subarrays/description/>`_
