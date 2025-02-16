@@ -12,10 +12,14 @@ Topics
 
 Techniques
 =================================================================================
+- Bookkeeping - Hashmap (freq), Queue (insert seq), Heap (min/max) Monotonic Queue (min/max + insert seq), Monotonic Stack (???)
 - Find min/max - Immutable - Linear Search, Heap (streams)
 - Find min/max - Mutable - Divide and Conquer - BST, Segment Tree, Cartesian Tree
-- Ranges - Precompute - Prefix Sum, Divide and Conquer - Segment Tree, Cartesian Tree
-- Bookkeeping - Hashmap
+- Subarray Sum
+
+	- Keep track of prefix sums
+	- Keep prefix or drop prefix (DP)
+	- Divide and conquer, Segment Tree, Binary Indexed Tree
 - Can we narrow down search space by having min/max limits? Can use Binary search.
 
 During Interview
