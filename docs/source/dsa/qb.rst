@@ -68,6 +68,7 @@ Arrays
 - Find Optimal Range - Max Sum/Product/Average Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
+	- [Medium] `Find Submatrix with Max Sum <https://www.geeksforgeeks.org/maximum-sum-submatrix/>`_
 	- [Medium] `Find Subarray with Max Sum of Len At Least K <https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/>`_
 	- [Medium] `Find Subarray with Max Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
 	- [Easy] `Find Subarray of Fixed Size with Max Average <https://leetcode.com/problems/maximum-average-subarray-i/description/>`_
@@ -86,8 +87,10 @@ Arrays
 	- [Medium] `Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_
 	- [Medium] `Largest Subarray Sum of Size >= k <https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/>`_
+	- [Medium] `Largest Submatrix with Sum = 0 <https://www.geeksforgeeks.org/largest-rectangular-sub-matrix-whose-sum-0/>`_
 	- [Medium] `Count Subarrays (Binary) with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
+	- [Medium] `Count Submatrices with Sum = k <https://www.geeksforgeeks.org/count-of-submatrix-with-sum-x-in-a-given-matrix/>`_
 	- [Medium] `Count Subarrays with Product < k <https://leetcode.com/problems/subarray-product-less-than-k/description/>`_
 	- [Hard] `Count Subarrays With Sum in Given Range <https://leetcode.com/problems/count-of-range-sum/description/>`_
 	- [Hard] `Count Subarrays with Sum*Len <= k <https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/>`_
