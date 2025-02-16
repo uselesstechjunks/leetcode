@@ -33,7 +33,7 @@ Techniques
 =================================================================================
 Find something
 ---------------------------------------------------------------------------------
-#. Sorted?
+#. Ordered?
 
 	- Valuex explicit - vanilla Binary search.
 	- Values NOT explicit 
@@ -44,7 +44,7 @@ Find something
 	
 			- Can compute gradient? GD.
 			- Can compute Hessian? Newton.
-#. Unsorted? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
+#. Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
 
 	- Hashmap (freq count, detect earlier occurance, obtain earliest/latest occurance)
 	- Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
