@@ -54,11 +54,14 @@ Find something
 	- Min/max queue (???)
 	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
 	- Interval tree (find value in range)
-	- BitIndex tree (???) - mutable
+	- Binary indexed tree (???) - mutable
+	- Sparse table (RMQ)
 	- Cartesian tree (RMQ tasks) - size extendable
 	- Union find (equivalence classes)
 	- Trie (prefix matching)
 	- String hashing - Rabin Karp
+#. Make bookkeeping faster - sqrt decomposition
+
 Modify something
 ---------------------------------------------------------------------------------
 #. Two pointers + swap
