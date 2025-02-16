@@ -20,8 +20,9 @@ Find something
 #. Unsorted? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
 
 	- Hashmap (freq count, earlier/earliest/latest occurance)
-	- Queue (maintain insert seq + can maintain last k inserted + earliest/latest in O(1))
 	- Stack (maintain insert seq in rev + can maintain first k inserted + latest in O(1))
+	- Queue (maintain insert seq + can maintain last k inserted + earliest/latest in O(1))
+	- Dequeue (maintain insert seq + can maintain first+last k inserted + earliest/latest in O(1))
 	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
 	- Monotonic Queue (all smaller/larger values than curr in sorted order from earlier range in O(1) + maintain insert seq)
 	- BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
