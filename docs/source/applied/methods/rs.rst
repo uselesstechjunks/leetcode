@@ -162,6 +162,7 @@ Domains
 #. Food (DoorDash, UberEats)
 #. Travel (AirBnB)
 #. Social (Facebook, Twitter)
+#. Search (Google, Bing)
 #. Search Advertising (Google, Bing)
 
 Music
@@ -176,6 +177,11 @@ Music
 		Balancing Popular & Niche Tracks, Highly popular songs dominate engagement; making it hard for lesser-known songs to gain exposure., Boosting niche tracks improves diversity; but may lower engagement metrics.
 		Cold-Start for New Songs & Artists, Newly released songs struggle to get exposure due to lack of engagement signals., Over-boosting new music can lead to reduced user satisfaction.
 		Playlist Length & Engagement Optimization, Users may not finish long playlists; leading to low engagement metrics., Shorter playlists increase completion rate; but longer ones improve session duration.
+
+Search
+------------------------------------------------------------------------------------
+.. note::
+	- [fennel.ai] `Feature Engineering for Personalized Search <https://fennel.ai/blog/feature-engineering-for-personalized-search/>`_
 
 Search Advertising
 ------------------------------------------------------------------------------------
