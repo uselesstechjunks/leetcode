@@ -47,11 +47,11 @@ Find something
 	- Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
 	- BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
 	- Order statistics tree (???)
-	- Monotonic stack (???)
-	- Min/max stack (???)
 	- Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
-	- Monotonic queue (all smaller/larger values than curr in sorted order from earlier range in O(1) + maintains insert seq)
+	- Min/max stack (maintains min/max seen so far at top - obtain in O(1))
+	- Monotonic stack (maintains longest monotonic sequence from min/max on the left ending at curr + maintains insert seq)
 	- Min/max queue (???)
+	- Monotonic queue (maintains longest monotonic sequence from min/max on the left ending at curr + obtain min/max in O(1) + maintains insert seq)
 	- Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
 	- Interval tree (find value in range)
 	- Binary indexed tree (???) - mutable
