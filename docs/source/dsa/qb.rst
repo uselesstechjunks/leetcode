@@ -58,20 +58,29 @@ Arrays
 
 	- [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
 	- [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
-- Find Range - Max Sum/Product Query
+- Find Optimal Range - Max Sum/Product/Average Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
+	- [Medium] `Find Subarray with Max Sum of Len At Least K <https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/>`_
 	- [Medium] `Find Subarray with Max Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
+	- [Easy] `Find Subarray of Fixed Size with Max Average <https://leetcode.com/problems/maximum-average-subarray-i/description/>`_
+	- [Hard] `Find Subarray of Size >= K with Max Average <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
 	- [Medium] `Find Subarray with Max Abs Sum <https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/description/>`_
 	- [Hard] `Find Subarray with Max Sum After Removing One Value Everywhere <https://leetcode.com/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/description/>`_
 	- [Medium] `Find Subarray with Max Sum After Squaring One Element <https://leetcode.com/problems/maximum-subarray-sum-after-one-operation/description/>`_
-- Find Range - Contrained Sum/Product Query
+	- [Hard] `Find Subarray with Max Score = MinLen * Len <https://leetcode.com/problems/maximum-score-of-a-good-subarray/>`_
+	- [Medium] `Find Maximal Square in a Binary Matrix <https://leetcode.com/problems/maximal-square/description/>`_
+	- [Hard] `Find Largest Rectangle in a Histogram <https://leetcode.com/problems/largest-rectangle-in-histogram/description/>`_
+	- [Hard] `Find Maximal Rectangle in a Binary Matrix <https://leetcode.com/problems/maximal-rectangle/description/>`_
+	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
+- Find Shortest/Longest Range/Count - Contrained Subarray Sum/Product Query
 
 	- [Medium] `Shortest Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
 	- [Medium] `Shortest Rotated Subarray (Positives) with Sum <= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
 	- [Hard] `Shortest Subarray with Sum <= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_
 	- [Medium] `Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_
+	- [Medium] `Largest Subarray Sum of Size >= k <https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/>`_
 	- [Medium] `Count Subarrays (Binary) with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
 	- [Medium] `Count Subarrays with Product < k <https://leetcode.com/problems/subarray-product-less-than-k/description/>`_
@@ -80,7 +89,8 @@ Arrays
 	- [Medium] `Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
 	- [Medium] `Count Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
 	- [Medium] `Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_
-- Find Range - Constrained Value Query
+	- [Hard] `Find Rectangle With Sum <= k <https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/>`_
+- Find Range Count - Constrained Value Query
 
 	- [Medium] `Count Subarrays Containing k Odd Numbers <https://leetcode.com/problems/count-number-of-nice-subarrays/description/>`_
 	- [Medium] `Count Subarrays with k | Value and k | Len <https://leetcode.com/problems/count-of-interesting-subarrays/>`_
@@ -90,14 +100,14 @@ Arrays
 	- [Hard] `Count Subarrays with All Values in Given Range <https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/>`_
 	- [Hard] `Count Subarrays Bounded by Max on Either End <https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/>`_
 	- [Medium] `2D - Adjacent Values within K <https://leetcode.com/problems/find-the-grid-of-region-average/description/>`_
-- Find Range - Constrainted Frequency Query
+- Find Shortest/Longest Range/Count - Constrainted Frequency Query
 
 	- [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
 	- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
 	- [Medium] `Count Subarrays with More 1s Than 0s <https://leetcode.com/problems/count-subarrays-with-more-ones-than-zeros/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
-- Find Range - Constrainted Order Query
+- Find Shortest/Longest Range/Count - Constrainted Order Query
 
 	- [Medium] `Find Shortest Unsorted Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
 	- [Medium] `Shortest Subarray to Remove to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
@@ -116,6 +126,8 @@ Arrays
 - Given Range - Min/Max/Avg/Median Query
 
 	- [Hard] `Mutable - Range Min Query <https://www.spoj.com/problems/RMQSQ/>`_
+	- [Hard] `Query Max for All Subarrays of Fixed Size K <https://leetcode.com/problems/sliding-window-maximum/description/>`_
+	- [Hard] `Query Median for All Subarrays of Fixed Size K <https://leetcode.com/problems/sliding-window-median/description/>`_
 	- [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
 - Given Range - Binary Search
@@ -124,7 +136,9 @@ Arrays
 - Assume Range - Binary Search
 
 	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
-	- [Hard] `Maximum Average Subarray <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
+- Optimal Partitioning
+
+	- [Hard] `Partition Array into K Parts Minimising Largest Subarray Sum <https://leetcode.com/problems/split-array-largest-sum/description/>`_
 - Permutation
 
 	- [Medium] `Find Next Permutation <https://leetcode.com/problems/next-permutation/>`_
