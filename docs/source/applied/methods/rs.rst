@@ -162,6 +162,7 @@ Domains
 #. Food (DoorDash, UberEats)
 #. Travel (AirBnB)
 #. Social (Facebook, Twitter)
+#. Search (Google, Bing)
 #. Search Advertising (Google, Bing)
 
 Music
@@ -176,6 +177,11 @@ Music
 		Balancing Popular & Niche Tracks, Highly popular songs dominate engagement; making it hard for lesser-known songs to gain exposure., Boosting niche tracks improves diversity; but may lower engagement metrics.
 		Cold-Start for New Songs & Artists, Newly released songs struggle to get exposure due to lack of engagement signals., Over-boosting new music can lead to reduced user satisfaction.
 		Playlist Length & Engagement Optimization, Users may not finish long playlists; leading to low engagement metrics., Shorter playlists increase completion rate; but longer ones improve session duration.
+
+Search
+------------------------------------------------------------------------------------
+.. note::
+	- [fennel.ai] `Feature Engineering for Personalized Search <https://fennel.ai/blog/feature-engineering-for-personalized-search/>`_
 
 Search Advertising
 ------------------------------------------------------------------------------------
@@ -252,15 +258,21 @@ Key Papers
 		Retrival;Ranking;Two Tower;NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_
 		Ranking;WDN,`Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
 		Ranking;DCN,`DCN V2 Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
+		Ranking;L2R,`DeepRank: Learning to rank with neural networks for recommendation <http://zhouxiuze.com/pub/DeepRank.pdf>`_
 		GCN,`Graph Convolutional Neural Networks for Web-Scale Recommender Systems <https://arxiv.org/abs/1806.01973>`_
 		GCN,`LightGCN - Simplifying and Powering Graph Convolution Network for Recommendation <https://arxiv.org/abs/2002.02126>`_
 		CM;Session,`Transformers4Rec Bridging the Gap between NLP and Sequential / Session-Based Recommendation <https://scontent.fblr25-1.fna.fbcdn.net/v/t39.8562-6/243129449_615285476133189_8760410510155369283_n.pdf?_nc_cat=104&ccb=1-7&_nc_sid=b8d81d&_nc_ohc=WDJcULkgkY8Q7kNvgHspPmM&_nc_zt=14&_nc_ht=scontent.fblr25-1.fna&_nc_gid=A_fmEzCPOHil7q9dPSpYsHS&oh=00_AYDCkVOnyZufYEGHEQORBbfI-blNODNIrePL4TaB8p_82A&oe=67A8FEDE>`_			
 		Diversity;DPP,`Improving the Diversity of Top-N Recommendation via Determinantal Point Process <https://arxiv.org/abs/1709.05135v1>`_
 		Diversity;DPP,`Practical Diversified Recommendations on YouTube with Determinantal Point Processes <https://jgillenw.com/cikm2018.pdf>`_
+		Diversity;DPP,`Personalized Re-ranking for Improving Diversity in Live Recommender Systems <https://arxiv.org/abs/2004.06390>`_
 		Diversity;DPP,`Fast Greedy MAP Inference for Determinantal Point Process to Improve Recommendation Diversity <https://proceedings.neurips.cc/paper_files/paper/2018/file/dbbf603ff0e99629dda5d75b6f75f966-Paper.pdf>`_
-		Diversity;Multi-Stage,`Representation Online Matters Practical End-to-End Diversification in Search and Recommender Systems <https://arxiv.org/pdf/2305.15534>`_		
+		Diversity;Multi-Stage,`Representation Online Matters Practical End-to-End Diversification in Search and Recommender Systems <https://arxiv.org/pdf/2305.15534>`_
+		Polularity Bias,`Managing Popularity Bias in Recommender Systems with Personalized Re-Ranking <https://cdn.aaai.org/ocs/18199/18199-78818-1-PB.pdf>`_
+		Polularity Bias,`User-centered Evaluation of Popularity Bias in Recommender Systems <https://dl.acm.org/doi/fullHtml/10.1145/3450613.3456821>`_
+		Polularity Bias,`Model-Agnostic Counterfactual Reasoning for Eliminating Popularity Bias in Recommender System <https://arxiv.org/pdf/2010.15363>`_
 		Fairness,`Fairness in Ranking Part II Learning-to-Rank and Recommender Systems <https://dl.acm.org/doi/pdf/10.1145/3533380>`_
 		Fairness,`Fairness Definitions Explained <https://fairware.cs.umass.edu/papers/Verma.pdf>`_
+		LLM,`A Review of Modern Recommender Systems Using Generative Models (Gen-RecSys) <https://arxiv.org/abs/2404.00579>`_
 		LLM,`Collaborative Large Language Model for Recommender Systems <https://arxiv.org/abs/2311.01343>`_
 		LLM,`Recommendation as Instruction Following A Large Language Model Empowered Recommendation Approach <https://arxiv.org/abs/2305.07001>`_
 
