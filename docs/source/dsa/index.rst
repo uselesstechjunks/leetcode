@@ -18,7 +18,7 @@ Techniques
 - Subarray Sum
 
 	- Keep track of prefix sums
-	- Keep prefix or drop prefix
+	- Keep prefix or drop prefix (DP)
 	- Divide and conquer, Segment Tree, Binary Indexed Tree
 - Can we narrow down search space by having min/max limits? Can use Binary search.
 
