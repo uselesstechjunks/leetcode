@@ -37,7 +37,7 @@ Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques
 #. Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
 #. Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
 #. Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
-#. BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
+#. BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq) - sortedcontainers.SortedList
 #. Order statistics tree (???)
 #. Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
 #. Cartesian tree (RMQ tasks) - heap with insert seq: range min at root O(1). Constructive requires stack. Unbalanced.
