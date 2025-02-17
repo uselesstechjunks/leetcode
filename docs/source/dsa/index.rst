@@ -2,27 +2,24 @@
 Data Structures & Algorithms
 #################################################################################
 .. contents:: Table of Contents
-   :depth: 3
+   :depth: 2
    :local:
    :backlinks: none
 
 *********************************************************************************
-Interview Prep
-*********************************************************************************
 Topics
-=================================================================================
-.. attention::
+*********************************************************************************
+Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
 
-	Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
-
+*********************************************************************************
 Bag of Tricks
-=================================================================================
+*********************************************************************************
 Count something
----------------------------------------------------------------------------------
+=================================================================================
 #. Can we count compliment instead?
 
 Find something
----------------------------------------------------------------------------------
+=================================================================================
 #. Ordered?
 
 	#. Values explicit - vanilla Binary search.
@@ -75,22 +72,22 @@ Find something
 #. Make bookkeeping faster - sqrt decomposition
 
 Modify something
----------------------------------------------------------------------------------
+=================================================================================
 #. Two pointers + swap
 #. Dutch national flag
 
 Schedule something
----------------------------------------------------------------------------------
+=================================================================================
 #. Priority queue + optional external dict for value - greedy
 #. [Tarjan][Kahn] Topological sort
 
 Assign something
----------------------------------------------------------------------------------
+=================================================================================
 #. Two pointers
 #. [Kuhn] Maximal bipartite matching
 
 Optimise something
----------------------------------------------------------------------------------
+=================================================================================
 #. DP - Classic problems
 
 	#. 0-1 knapsack
@@ -116,7 +113,7 @@ Optimise something
 	#. Lightest edge - MST [Prim][Kruskal]
 
 Check connectivity, grouping & cyclic dependencies
----------------------------------------------------------------------------------
+=================================================================================
 #. Tortoise & hare algorithm
 #. BFS for bipartite detection
 #. DFS with edge classification, union-find
@@ -127,25 +124,25 @@ Check connectivity, grouping & cyclic dependencies
 #. Eulerian circuit for cycle visiting all vertices
 
 Combinatorial problems 
----------------------------------------------------------------------------------
+=================================================================================
 #. Backtracking
 
 Design problems 
----------------------------------------------------------------------------------
+=================================================================================
 #. Mostly bookkeeping
 
 Validate/parse something
----------------------------------------------------------------------------------
+=================================================================================
 #. Stack
 
 Involves intervals
----------------------------------------------------------------------------------
+=================================================================================
 #. Sort them - overlap check left-end >= right-start
 #. Sort by start - benefit (???)
 #. Sort by end - benefit (???)
 
 Common Problems
----------------------------------------------------------------------------------
+=================================================================================
 #. Subarray Sum
 
 	#. Keep track of earlier seen prefix sums
@@ -184,7 +181,6 @@ Deep Dives
 	range
 	graph
 	dsasol
-
 *********************************************************************************
 Resources
 *********************************************************************************
@@ -203,17 +199,15 @@ Code Patterns
 	* [algo.monster] `Templates <https://algo.monster/templates>`_
 	* [github.io] `LC cheatsheet <https://jwl-7.github.io/leetcode-cheatsheet/>`_
 
-Problem Solving Patterns
-================================================================================
 Sliding Window
----------------------------------------------------------------------------------
+================================================================================
 .. important::
 	* [leetcode.com] `Sliding Window Technique: A Comprehensive Guide <https://leetcode.com/discuss/interview-question/3722472/mastering-sliding-window-technique-a-comprehensive-guide>`_
 	* [geeksforgeeks.org] `Sliding Window Technique <https://www.geeksforgeeks.org/window-sliding-technique/>`_
 	* [leetcode.com] `Sliding window with frequency counts <https://leetcode.com/problems/subarrays-with-k-different-integers/solutions/235002/one-code-template-to-solve-all-of-these-problems/>`_
 
 Two Pointers
----------------------------------------------------------------------------------
+================================================================================
 .. important::
 	* [leetcode.com] `Solved all two pointers problems in 100 days. <https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days>`_
 	* [reddit.com] `Two-Pointer Technique, an In-Depth Guide <https://www.reddit.com/r/leetcode/comments/18g9383/twopointer_technique_an_indepth_guide_concepts/?rdt=59240>`_
@@ -251,11 +245,11 @@ Might be Useful
 	* [geeksforgeeks.org] `Must Do Coding Questions for Companies <https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/>`_
 	* [geeksforgeeks.org] `Must Do Coding Questions Company-wise <https://www.geeksforgeeks.org/must-coding-questions-company-wise/>`_	
 	* [interview-prep-pro.vercel.app] `Interview Prep Pro <https://interview-prep-pro.vercel.app/>`_
-
-Base
-================================================================================
+*********************************************************************************
+Fundamental Questions
+*********************************************************************************
 1. Arrays and Strings
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: Sliding window, two pointers, prefix sum, Kadane’s algorithm, string manipulation.
 
 Problems to Practice:
@@ -267,7 +261,7 @@ Problems to Practice:
 * String pattern matching (e.g., KMP algorithm, Rabin-Karp)
 
 2. Hashing
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: Hash maps, sets, frequency counts, collision handling.
 
 Problems to Practice:
@@ -278,7 +272,7 @@ Problems to Practice:
 * Subarray with a given sum (hash map for prefix sums).
 
 3. Linked Lists
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: Fast and slow pointers, reversing, merging, detecting cycles.
 
 Problems to Practice:
@@ -290,7 +284,7 @@ Problems to Practice:
 * Flatten a multilevel doubly linked list.
 
 4. Trees and Graphs
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts:
 
 * Trees: Traversals (DFS, BFS), recursion, binary search tree properties.
@@ -306,7 +300,7 @@ Problems to Practice:
 * Detect cycle in an undirected graph (union-find).
 	
 5. Recursion and Backtracking
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: Base case, recursive stack, pruning.
 
 Problems to Practice:
@@ -318,7 +312,7 @@ Problems to Practice:
 * Word search in a grid.
 
 6. Dynamic Programming
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: Memoization, tabulation, state definition, transitions.
 
 Problems to Practice:
@@ -330,7 +324,7 @@ Problems to Practice:
 * Edit distance (Levenshtein distance).
 
 7. Sorting and Searching
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: Merge sort, quicksort, binary search (with variations).
 
 Problems to Practice:
@@ -341,7 +335,7 @@ Problems to Practice:
 * Closest pair of points.
 
 8. Stacks and Queues
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: Monotonic stack, deque (double-ended queue), LRU cache.
 
 Problems to Practice:
@@ -352,7 +346,7 @@ Problems to Practice:
 * Implement a queue using two stacks.
 
 9. Bit Manipulation
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: XOR, bit shifts, masking, counting set bits.
 
 Problems to Practice:
@@ -363,7 +357,7 @@ Problems to Practice:
 * Count the number of 1 bits (Hamming weight).
 
 10. Math and Geometry
----------------------------------------------------------------------------------
+================================================================================
 Key Concepts: GCD, LCM, modular arithmetic, Euclidean algorithm.
 
 Problems to Practice:
