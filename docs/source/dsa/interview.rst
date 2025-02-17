@@ -75,7 +75,7 @@ Prior to the interview: Remember
 #. Take care of yourself
 
 	#. Maintain motivation, confidence and mental health
-	#. Ensure to have other things going in life - not getting this job is good but isn't the end goal
+	#. Ensure to have other things going in life - getting this job is good but isn't the end goal
 #. What kind of problems to solve?
 
 	#. 2-3 days leading up to the interview
