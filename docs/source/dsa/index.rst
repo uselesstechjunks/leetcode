@@ -150,6 +150,7 @@ Common Problems
 	#. If monotonic, VLW
 #. LCA
 #. RSQ/RMQ
+#. EMQ
 #. MEX
 #. LCS
 #. Order stat
