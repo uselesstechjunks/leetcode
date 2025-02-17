@@ -411,6 +411,12 @@ Interview Problems
 	
 		- Problem: Given an array of heights, calculate the total water trapped after rain. 
 		- Hints: Use two-pointer technique or monotonic stack to find bounds for water levels.
+		
+			.. collapse:: 
+		
+			   .. literalinclude:: ../code/trap.py
+			      :language: python
+			      :linenos:
 	
 	#. Dynamic Updates 
 	
