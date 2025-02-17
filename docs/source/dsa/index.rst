@@ -9,20 +9,6 @@ Data Structures & Algorithms
 *********************************************************************************
 Interview Prep
 *********************************************************************************
-During Interview
-=================================================================================
-.. attention::
-	#. Evaluate trade-offs.  
-	#. Ask clarifying questions before coding.  
-	#. Write the core logic.  
-	#. Check boundary conditions.  
-	#. Create test cases before dry running.  
-	#. Ensure a smooth implementation.  
-	#. Solve 3-4 follow-ups.  
-	#. Optimize time and space complexity.  
-	#. Use clear variable names and correct syntax.  
-	#. Wrap up efficiently.
-
 Topics
 =================================================================================
 .. attention::
