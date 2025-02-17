@@ -62,14 +62,20 @@ Find something
 
 		#. Before appending, all larger (smaller) values than curr are popped
 		#. After appending, top is range min (max) of [S[-2] + 1, top], S[-2] is range min of [S[-2], top]
-		#. Corresponds to the rightmost branch of a Cartesian tree
+		#. During build, simulates Cartesian tree.
+		#. At finish, corresponds to the rightmost branch of a Cartesian tree
 		#. Bot is range min (max) for [0, top] (i.e., root of the Cartesian tree)
+		#. Each value gets to be at the stack at some point.
+		#. Everything that has ever been on the stack is the min of some range. This covers all possible range mins.
 	#. Monotonic queue - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
 
 		#. Before appending, all larger (smaller) values than curr are removed from back
 		#. After appending, back is range min (max) of [Q[-2] + 1, back], Q[-2] is range min of [S[-2], back]
-		#. Corresponds to the rightmost branch of a Cartesian tree
+		#. During build, simulates Cartesian tree.
+		#. At finish, corresponds to the rightmost branch of a Cartesian tree
 		#. Front is range min (max) for [0, back] (i.e., root of the Cartesian tree)
+		#. Each value gets to be at the queue at some point.
+		#. Everything that has ever been on the queue is the min of some range. This covers all possible range mins.
 	#. Min (max) stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
 	#. Min (max) queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
 	#. Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
