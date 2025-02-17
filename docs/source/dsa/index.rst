@@ -73,6 +73,7 @@ Find something
 	#. Min (max) queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
 	#. Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
 	#. Interval tree (find value in range)
+	#. Multidimensional - KD tree
 	#. Binary indexed tree (???) - mutable
 	#. Sparse table (RMQ)	
 	#. Union find (equivalence classes)
