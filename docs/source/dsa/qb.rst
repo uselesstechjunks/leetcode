@@ -65,11 +65,12 @@ Arrays
 	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
 	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
 	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
-- Find Optimal Range - Max Sum/Product/Average Query
+- Find Optimal Score Range - Max Sum/Product/Average/Score Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
 	- [Medium] `Find Submatrix with Max Sum <https://www.geeksforgeeks.org/maximum-sum-submatrix/>`_
 	- [Medium] `Find Subarray with Max Sum of Len At Least K <https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/>`_
+	- [Hard] `Find Max Sum Rectangle With Sum <= k <https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/>`_
 	- [Medium] `Find Subarray with Max Product <https://leetcode.com/problems/maximum-product-subarray/description/>`_
 	- [Easy] `Find Subarray of Fixed Size with Max Average <https://leetcode.com/problems/maximum-average-subarray-i/description/>`_
 	- [Hard] `Find Subarray of Size >= K with Max Average <https://leetcode.com/problems/maximum-average-subarray-ii/description/>`_
@@ -79,7 +80,7 @@ Arrays
 	- [Hard] `Find Subarray with Max Score = MinVal * Len (Largest Rectangle in Histogram) <https://leetcode.com/problems/largest-rectangle-in-histogram/description/>`_
 	- [Hard] `Find Subarray with Max Score = MinVal * Len Covering One Given Point <https://leetcode.com/problems/maximum-score-of-a-good-subarray/>`_	
 	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
-- Find Shortest/Longest Range/Count - Contrained Subarray Sum/Product Query
+- Find Optimal Length Range - Contrained Subarray Sum/Product Query
 
 	- [Medium] `(Positives) Shortest Subarray with Sum >= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
 	- [Medium] `(Positives) Shortest Rotated Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
@@ -87,7 +88,10 @@ Arrays
 	- [Hard] `Shortest Subarray with Sum >= k <https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/>`_	
 	- [Medium] `(NonNeg) Shortet Subarray with Bitwise OR = k <https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/>`_
 	- [Medium] `Longest Subarray With Sum = k <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>`_	
-	- [Medium] `Largest Submatrix with Sum = 0 <https://www.geeksforgeeks.org/largest-rectangular-sub-matrix-whose-sum-0/>`_
+	- [Medium] `Largest Submatrix with Sum = 0 <https://www.geeksforgeeks.org/largest-rectangular-sub-matrix-whose-sum-0/>`_	
+	- [Medium] `(Positives) Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_	
+- Find Range Count - Constrinted Aggregate Query
+
 	- [Medium] `(Binary) Count Subarrays with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 	- [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
 	- [Medium] `Count Submatrices with Sum = k <https://www.geeksforgeeks.org/count-of-submatrix-with-sum-x-in-a-given-matrix/>`_
@@ -96,8 +100,6 @@ Arrays
 	- [Hard] `(Positives) Count Subarrays with Sum*Len <= k <https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/>`_
 	- [Medium] `(NonNeg) Exists NonTrivial Subarray with k | Sum <https://leetcode.com/problems/continuous-subarray-sum/description/>`_
 	- [Medium] `Count Subarrays with k | Sum <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>`_
-	- [Medium] `(Positives) Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_
-	- [Hard] `Find Rectangle With Sum <= k <https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/>`_
 - Find Range Count - Constrained Value Query
 
 	- [Medium] `Count Subarrays Containing k Odd Numbers <https://leetcode.com/problems/count-number-of-nice-subarrays/description/>`_
@@ -108,13 +110,15 @@ Arrays
 	- [Hard] `Count Subarrays with All Values in Given Range <https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/>`_
 	- [Hard] `Count Subarrays Bounded by Max on Either End <https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/>`_
 	- [Medium] `2D - Adjacent Values within K <https://leetcode.com/problems/find-the-grid-of-region-average/description/>`_
-- Find Shortest/Longest Range/Count - Constrainted Frequency Query
+- Find Optimal Length Range - Constrainted Frequency Query
 
 	- [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 	- [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
-	- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
+	- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_	
+	- [Medium] `Longest Subarray with Equal 1s and 0s <https://leetcode.com/problems/contiguous-array/description/>`_	
+- Find Range Count - Constrainted Frequency Query
+
 	- [Medium] `Count Subarrays with More 1s Than 0s <https://leetcode.com/problems/count-subarrays-with-more-ones-than-zeros/>`_
-	- [Medium] `Longest Subarray with Equal 1s and 0s <https://leetcode.com/problems/contiguous-array/description/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
 - Find Shortest/Longest Range/Count - Constrainted Order Query
 
