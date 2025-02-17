@@ -299,10 +299,16 @@ Problems Using Monotonic Stack
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/largestareahist.py
+		   .. literalinclude:: ../code/maxhist.py
 		      :language: python
 		      :linenos:
+	- Related: Maximum rectangle in binary matrix. Can be reduced to above.
 
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../code/maxrect.py
+		      :language: python
+		      :linenos:
 #. Trapping Rain Water
 
 	- Problem: Given an array representing heights, calculate how much water can be trapped after it rains.
