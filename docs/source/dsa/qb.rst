@@ -20,6 +20,7 @@ Arrays
 
 	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
 	- [Hard] `Count Inversions <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
+	- [Medium] `Shortest Unsorted Continuous Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
 - Order Statistics
 
 	- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
@@ -143,6 +144,7 @@ Arrays
 	- [Hard] `Query Median for All Subarrays of Fixed Size K <https://leetcode.com/problems/sliding-window-median/description/>`_
 	- [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
+	- [Hard] `Trapping Rain Water <https://leetcode.com/problems/trapping-rain-water/description/>`_
 - Given Range - Binary Search
 
 	- [Hard] `Optimal Placement With Penalty <https://leetcode.com/problems/minimize-max-distance-to-gas-station/>`_
