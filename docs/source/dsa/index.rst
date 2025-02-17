@@ -20,55 +20,53 @@ Count something
 
 Find something
 =================================================================================
-#. Ordered?
+Ordered
+---------------------------------------------------------------------------------
+#. Values explicit - vanilla Binary search.
+#. Values NOT explicit 
 
-	#. Values explicit - vanilla Binary search.
-	#. Values NOT explicit 
+	#. Values bounded? Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
+	#. Bounded either above/below? One way binary search from one end - move from i -> 2i or i -> i/2
+	#. Target forms a convex function? Optimal exists at root? 
 
-		#. Values bounded? Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
-		#. Bounded either above/below? One way binary search from one end - move from i -> 2i or i -> i/2
-		#. Target forms a convex function? Optimal exists at root? 
-	
-			#. Can compute gradient? GD.
-			#. Can compute Hessian? Newton.
-#. Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques.
+		#. Can compute gradient? GD.
+		#. Can compute Hessian? Newton.
+Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques
+---------------------------------------------------------------------------------
+#. Hashmap known key - freq count, detect earlier occurance, obtain earliest/latest occurance
+#. Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
+#. Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
+#. Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
+#. BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq) - sortedcontainers.SortedList
+#. Order statistics tree (???)
+#. Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
+#. Cartesian tree (RMQ tasks) - heap with insert seq: range min at root O(1). Constructive requires stack. Unbalanced.
+#. Monotonic stack - 2 types 
 
-	#. Hashmap (freq count, detect earlier occurance, obtain earliest/latest occurance)
-	#. Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
-	#. Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
-	#. Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
-	#. BST (all earlier values searchable in O(lg n) - doesn't maintain insert seq)
-	#. Order statistics tree (???)
-	#. Heap (smallest/largest values from earlier range in O(1) + can maintain k smallest/largest - doesn't maintain insert seq)
-	#. Cartesian tree (RMQ tasks) - size extendable, range min at root O(1). Constructive requires stack. Unbalanced.
-	#. Monotonic stack - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
+	#. Type I: RMQ (Range Min/Max Query): Simulates Cartesian tree.
 
-		#. Before appending, all larger (smaller) values than curr are popped
-		#. After appending, top is range min (max) of [S[-2] + 1, top], S[-2] is range min of [S[-2], top]
-		#. During build, simulates Cartesian tree.
-		#. At finish, corresponds to the rightmost branch of a Cartesian tree
+		#. Maintains longest monotonic subsequence from min (max) (including curr) ending at curr.
+		#. At finish, corresponds to the rightmost branch of a Cartesian tree.
+		#. Everything that has ever been on the stack is the min of some range. This covers all possible range mins.
+		#. For every curr, all larger (smaller) values are popped - curr is RM of everything since popped.
+		#. Once pushed, top is range min (max) of [S[-2]+1, top]. S[-2] is range min of [S[-3]+1, top]		
 		#. Bot is range min (max) for [0, top] (i.e., root of the Cartesian tree)
 		#. Each value gets to be at the stack at some point.
-		#. Everything that has ever been on the stack is the min of some range. This covers all possible range mins.
-	#. Monotonic queue - maintains longest monotonic subsequence from min (max) (including curr) ending at curr
+	#. Type II: EMQ (Earliest Min/Max Query)
 
-		#. Before appending, all larger (smaller) values than curr are removed from back
-		#. After appending, back is range min (max) of [Q[-2] + 1, back], Q[-2] is range min of [S[-2], back]
-		#. During build, simulates Cartesian tree.
-		#. At finish, corresponds to the rightmost branch of a Cartesian tree
-		#. Front is range min (max) for [0, back] (i.e., root of the Cartesian tree)
-		#. Each value gets to be at the queue at some point.
-		#. Everything that has ever been on the queue is the min of some range. This covers all possible range mins.
-	#. Min (max) stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
-	#. Min (max) queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
-	#. Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
-	#. Interval tree (find value in range)
-	#. Multidimensional - KD tree
-	#. Binary indexed tree (???) - mutable
-	#. Sparse table (RMQ)	
-	#. Union find (equivalence classes)
-	#. Trie (prefix matching)
-	#. String hashing - Rabin Karp
+		#. Maintains longest monotonic subsequence from first element.
+		#. Everything that comes after, only pushed onto the stack if it's larger (smaller)
+#. Monotonic queue - Same as monotonic stack except it works for sliding window as we can skip ranges by popping root (at front).
+#. Min (max) stack (maintains range min (max) for [0, curr] at top + keeps all elements + obtain in O(1))
+#. Min (max) queue (maintains range min (max) for [0, curr] at back + keeps all elements + obtain in O(1))
+#. Segment tree (RSQ/RMQ, all subarray sums with prefix/suffix/sum in tree) - mutable, extends to 2d
+#. Interval tree (find value in range)
+#. Multidimensional - KD tree
+#. Binary indexed tree (???) - mutable
+#. Sparse table (RMQ)	
+#. Union find (equivalence classes)
+#. Trie (prefix matching)
+#. String hashing - Rabin Karp
 #. Make bookkeeping faster - sqrt decomposition
 
 Modify something
@@ -152,6 +150,7 @@ Common Problems
 	#. If monotonic, VLW
 #. LCA
 #. RSQ/RMQ
+#. EMQ
 #. MEX
 #. LCS
 #. Order stat

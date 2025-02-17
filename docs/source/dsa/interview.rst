@@ -7,7 +7,7 @@ Interview Day and Prior
 Checklist
 **********************************************************************
 #. Evaluate trade-offs.  
-#. Ask clarifying questions before coding.  
+#. Ask clarifying questions before coding - range, sorted, streaming.
 #. Write the core logic.  
 #. Check boundary conditions.  
 #. Create test cases before dry running.  
