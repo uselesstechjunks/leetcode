@@ -1,5 +1,5 @@
 ######################################################################
-During Interview
+Interview Day and Prior
 ######################################################################
 .. attention::
 	* [youtube.com] `Chris Jereza <https://www.youtube.com/watch?v=ksZ2wFRZ3gM>`_
@@ -16,8 +16,9 @@ Checklist
 #. Optimize time and space complexity.  
 #. Use clear variable names and correct syntax.  
 #. Wrap up efficiently.
+
 **********************************************************************
-Remember
+During the interview: Remember
 **********************************************************************
 #. Take your time - way longer than you think you need to.
 
@@ -63,3 +64,25 @@ Remember
 			- We can either modify the algorithm to fit the data structure or modify the data structure to fit the algorithm. Latter is better.
 
 #. Writing code
+
+	#. Fill out the outline first - fill in details later
+	#. Follow single responsibility principles (SRP)
+	#. Keep in mind of variable naming and readability.
+
+**********************************************************************
+Prior to the interview: Remember
+**********************************************************************
+#. Take care of yourself
+
+	#. Maintain motivation, confidence and mental health
+	#. Ensure to have other things going in life - not getting this job is good but isn't the end goal
+#. What kind of problems to solve?
+
+	#. 2-3 days leading up to the interview
+
+		#. Don't try to solve any new ridiculuously hard problem
+		#. Don't want to walk into the interview on a losing streak
+		#. Understand what makes you confident. Big picture? Grasp on the bag of tricks? Having the process reharsed and clear inside your head.
+	#. 24 hours leading up to the interview
+
+		#. Avoid cramming
