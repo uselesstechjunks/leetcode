@@ -4,6 +4,19 @@ During Interview
 .. attention::
 	* [youtube.com] `Chris Jereza <https://www.youtube.com/watch?v=ksZ2wFRZ3gM>`_
 **********************************************************************
+Checklist
+**********************************************************************
+#. Evaluate trade-offs.  
+#. Ask clarifying questions before coding.  
+#. Write the core logic.  
+#. Check boundary conditions.  
+#. Create test cases before dry running.  
+#. Ensure a smooth implementation.  
+#. Solve 3-4 follow-ups.  
+#. Optimize time and space complexity.  
+#. Use clear variable names and correct syntax.  
+#. Wrap up efficiently.
+**********************************************************************
 Remember
 **********************************************************************
 #. Take your time - way longer than you think you need to.
