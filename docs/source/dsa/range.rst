@@ -31,6 +31,13 @@ Data Structures
 		   .. literalinclude:: ../code/bit.py
 		      :language: python
 		      :linenos:
+	- 2D: Sample implementation
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../code/bit2d.py
+		      :language: python
+		      :linenos:
 #. Sparse Table:
 
 	- Efficient for immutable data (static range queries like min, max, or GCD).
