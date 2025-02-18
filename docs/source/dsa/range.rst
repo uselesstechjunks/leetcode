@@ -94,6 +94,14 @@ Algorithms
 
 Fundamental Problems
 --------------------------------------------------------------------------------
+MEX - Minimum Excluded Element
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Index gymnastics - `First missing positive in range [1,n] <https://leetcode.com/problems/first-missing-positive/>`_
+#. `Design data structure that pops smallest available numbers in infiite set with addback <https://leetcode.com/problems/smallest-number-in-infinite-set/>`_
+#. `MEX on array with updates <https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/description/>`_
+#. TODO: https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/description/
+#. TODO: https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-ii/
+
 Binary Search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. `Minimum Number of Days to Make m Bouquets <https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/>`_
