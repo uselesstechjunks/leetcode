@@ -24,6 +24,13 @@ Data Structures
 
 	- Point updates and prefix/range queries.
 	- Multidimensional Fenwick Trees.
+	- Sample implementation
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../code/bit.py
+		      :language: python
+		      :linenos:
 #. Sparse Table:
 
 	- Efficient for immutable data (static range queries like min, max, or GCD).
