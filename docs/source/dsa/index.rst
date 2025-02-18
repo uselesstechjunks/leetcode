@@ -14,6 +14,8 @@ Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Alg
 *********************************************************************************
 Bag of Tricks
 *********************************************************************************
+Goal: Map the problem to known tasks.
+
 Find something
 =================================================================================
 Types of Queries
@@ -23,6 +25,7 @@ Types of Queries
 #. RMQ - Range Min Query: Min(l,r): [unordered] monotonic stack, monotonic queue (VLW), Cartesian tree, segment tree, [ordered] binary search, BST (VLW)
 #. RFQ - Range Frequency Query: Count(l,r,key): Dict, segment tree
 #. TKQ - Top K Query: heap
+#. EEQ - Earlier Existance Query: set, dict, bitmap
 #. ESQ - Earliest Smaller Query: min(idx(l<r) | v(l)<v(r)): Monotonic stack (v2), (???) inversions?
 #. LSQ - Latest Smaller Query: max(idx(l<r) | v(l)<v(r)): Monotonic stack (v1), (???) inversions?
 #. PUQ - Point Update Query: (???)
@@ -33,6 +36,7 @@ Types of Queries
 #. ECQ - Equivalence Class Query: Whether (x,y) belonds to the same group - union find
 #. OGQ - Optimal Goal Query: VLW - variable length window (monotonic goal), FLW - fixed length window (works for nonmonotone)
 #. MEX - Minimum Excluded Element: (???)
+#. LCS - Longest common/increasing/palindromic subsequence: DP
 
 General Techniques
 ---------------------------------------------------------------------------------
@@ -147,17 +151,18 @@ Check connectivity, grouping & cyclic dependencies
 #. [Kosaraju] Strongly connected components
 #. Eulerian circuit for cycle visiting all vertices
 
-Combinatorial problems 
+Combine something
 =================================================================================
 #. Backtracking
 
-Design problems 
+Design something 
 =================================================================================
 #. Mostly bookkeeping
 
-Validate/parse something
+Validate something
 =================================================================================
-#. Stack
+#. Paring problems - Stack
+#. Regex problems - DP
 
 Involves intervals
 =================================================================================
@@ -165,21 +170,16 @@ Involves intervals
 #. Sort by start - benefit (???)
 #. Sort by end - benefit (???)
 
+*********************************************************************************
 Common Problems
-=================================================================================
-#. Subarray Sum
+*********************************************************************************
+#. Maximum Sum Query: [0,n)->max(Sum(l,r))
 
 	#. Keep track of earlier seen prefix sums
 	#. [Kadane] Keep prefix or drop prefix (DP) when processing current
 	#. Divide and conquer with (a) max prefix/suffix and (b) sum
 	#. If mutable, Segment Tree, Binary Indexed Tree
 	#. If monotonic, VLW
-#. LCA
-#. RSQ/RMQ
-#. EMQ
-#. MEX
-#. LCS
-#. Order stat
 
 *********************************************************************************
 Revision Deck
