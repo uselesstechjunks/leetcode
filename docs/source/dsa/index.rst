@@ -14,14 +14,30 @@ Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Alg
 *********************************************************************************
 Bag of Tricks
 *********************************************************************************
-Count something
-=================================================================================
-#. Can we count compliment instead?
-
 Find something
 =================================================================================
-Ordered
+Types of Queries
 ---------------------------------------------------------------------------------
+#. MSQ - Maximum Sum Query: [0,n)->max(Sum(l,r)): Prefix sum->BIT, Kadane, divide and conquer->segment tree
+#. RSQ - Range Sum Query: Sum(l,r): Prefix sum, BIT, segment tree
+#. RMQ - Range Min Query: Min(l,r): [unordered] monotonic stack, monotonic queue (VLW), Cartesian tree, segment tree, [ordered] binary search, BST (VLW)
+#. RFQ - Range Frequency Query: Count(l,r,key): Dict, segment tree
+#. TKQ - Top K Query: heap
+#. ESQ - Earliest Smaller Query: min(idx(l<r) | v(l)<v(r)): Monotonic stack (v2), (???) inversions?
+#. LSQ - Latest Smaller Query: max(idx(l<r) | v(l)<v(r)): Monotonic stack (v1), (???) inversions?
+#. PUQ - Point Update Query: (???)
+#. LUQ - Length Update Query: Streaming: (???)
+#. RUQ - Range Update Query: Prefix sum->BIT, segment tree
+#. RIQ - Range Intersect Query: Given point, find ranges that contains it: Interval tree
+#. ROQ - Range Overlap Query: Find intervals that overlaps with given range: Sorting + binary search, sorting + stack
+#. ECQ - Equivalence Class Query: Whether (x,y) belonds to the same group - union find
+#. OGQ - Optimal Goal Query: VLW - variable length window (monotonic goal), FLW - fixed length window (works for nonmonotone)
+#. MEX - Minimum Excluded Element: (???)
+
+General Techniques
+---------------------------------------------------------------------------------
+Ordered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Values explicit - vanilla Binary search.
 #. Values NOT explicit 
 
@@ -31,7 +47,13 @@ Ordered
 
 		#. Can compute gradient? GD.
 		#. Can compute Hessian? Newton.
-Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques
+Unordered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Linear search
+#. Divide & conquer 
+#. Use bookkeeping techniques
+
+Bookkeeping
 ---------------------------------------------------------------------------------
 #. Hashmap known key - freq count, detect earlier occurance, obtain earliest/latest occurance
 #. Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
@@ -52,7 +74,7 @@ Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques
 		#. Once pushed, top is range min (max) of [S[-2]+1, top]. S[-2] is range min of [S[-3]+1, top]		
 		#. Bot is range min (max) for [0, top] (i.e., root of the Cartesian tree)
 		#. Each value gets to be at the stack at some point.
-	#. Type II: EMQ (Earliest Min/Max Query)
+	#. Type II: ESQ (Earliest Smaller/Larger Query)
 
 		#. Maintains longest monotonic subsequence from first element.
 		#. Everything that comes after, only pushed onto the stack if it's larger (smaller)
@@ -68,6 +90,10 @@ Unordered? (a) Linear search (b) divide & conquer (c) use bookkeeping techniques
 #. Trie (prefix matching)
 #. String hashing - Rabin Karp
 #. Make bookkeeping faster - sqrt decomposition
+
+Count something
+=================================================================================
+#. Can we count compliment instead?
 
 Modify something
 =================================================================================
