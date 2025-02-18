@@ -139,6 +139,13 @@ Binary Search
 
 Order Statistics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. [Inversions] `Shortest Unsorted Continuous Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
+
+	.. collapse:: Sample BST implementation
+
+	   .. literalinclude:: ../code/shortestUnsortedSubarray.py
+	      :language: python
+	      :linenos:
 #. `Kth Largest/Smallest Element in a Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/>`_
 
 	- Maintain the top k elements in a stream of data.
