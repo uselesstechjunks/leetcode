@@ -66,6 +66,11 @@ Arrays
 	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
 	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
 	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
+- Find Minimum - Rotated Sorted
+
+	- https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+	- https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+	- https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 - Find Optimal Score Range - Max Sum/Product/Average/Score Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
@@ -123,10 +128,33 @@ Arrays
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
 - Find Shortest/Longest Range/Count - Constrainted Order Query
 
-	- [Medium] `Find Shortest Unsorted Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
-	- [Medium] `Shortest Subarray to Remove to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
-	- [Hard] `Count Subarrays to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_
+	- [Easy] `Find Longest Strictly Increasing Subarray <https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/>`_
+	- [Easy] `Find Longest Strict Monotonic Subarray <https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/description/>`_
+	- [Medium] `Find Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
+	- [Medium] `Find Minimum Removals to Make Rest Sorted <https://www.geeksforgeeks.org/minimum-number-deletions-make-sorted-sequence/>`_
+	- [Medium] `Find Shortest Chunk to Sort to Make Entire Array Sorted <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_	
+	- [Medium] `Find Shortest Chunk Removal to Make Remaining Array Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
+	- [Hard] `Count Chunks to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_
+	- [Medium] `Find LIS <https://leetcode.com/problems/longest-increasing-subsequence/description/>`_
+	- [Medium] `Find Longest NonDecreasing Subarray Formed By Merging 2 Unsorted Arrays <https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays/description/>`_
+	- [Medium] `Find Number of LIS <https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/>`_
+	- [Hard] `Find LIS With Consecutive Diff <= k <https://leetcode.com/problems/longest-increasing-subsequence-ii/description/>`_
 	- [Hard] `Find Range With Given Array as a Subsequence <https://leetcode.com/problems/minimum-window-subsequence/description/>`_
+- Find Global Minimum - Mountain Structure
+
+	- [Easy] https://leetcode.com/problems/valid-mountain-array/
+	- [Medium] https://leetcode.com/problems/squares-of-a-sorted-array/
+	- [Medium] https://leetcode.com/problems/longest-mountain-in-array/
+	- [Medium] https://leetcode.com/problems/find-in-mountain-array/
+	- [Medium] https://leetcode.com/problems/peak-index-in-a-mountain-array/
+	- https://leetcode.com/problems/beautiful-towers-i/description/
+	- https://leetcode.com/problems/beautiful-towers-ii/description/
+	- https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/description/
+- Find Local Optima - Unsorted
+
+	- [Medium] `Find Any Local Maximum <https://leetcode.com/problems/find-peak-element/description/>`_
+	- [Medium] `Find All Local Maxima <https://leetcode.com/problems/find-the-peaks/>`_
+	- [Medium] `Find Any Local Maximum - 2d <https://leetcode.com/problems/find-a-peak-element-ii/description/>`_
 - Given Range - Sum Query
 
 	- [Easy] `Immutable - 1D <https://leetcode.com/problems/range-sum-query-immutable/description/>`_
