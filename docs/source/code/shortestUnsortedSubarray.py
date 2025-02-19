@@ -1,4 +1,4 @@
-def findUnsortedSubarray(self, nums: List[int]) -> int:
+def twoPointersTwoPass(self, nums: List[int]) -> int:
 	"""
 	Note:
 	if we sort the numbers, then it is easy to find the solution
@@ -44,4 +44,26 @@ def findUnsortedSubarray(self, nums: List[int]) -> int:
 		else:
 			# found something larger on the left
 			leftmostInverted = index
+	return rightmostInverted - leftmostInverted + 1
+
+def monotonicStackSinglePass(self, nums: List[int]) -> int:
+	"""
+	Keep track of the index of the leftmost element popped
+	and the largest value of the popped elements so that we
+	can find the rightmost element that's inverted
+	"""
+	n = len(nums)
+	maxLeftIndex = 0
+	leftmostInverted, rightmostInverted = n, n-1
+	stack = []
+	for index in range(n):
+		while stack and nums[stack[-1]] > nums[index]:
+			# found something larger on the left
+			leftmostInverted = min(leftmostInverted, stack.pop())
+		if nums[maxLeftIndex] <= nums[index]:
+			maxLeftIndex = index
+		else:
+			# found something smaller on the right
+			rightmostInverted = index
+		stack.append(index)
 	return rightmostInverted - leftmostInverted + 1
