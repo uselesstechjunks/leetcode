@@ -331,7 +331,7 @@ LCA
 Path Constraints
 ---------------------------------------------------------------------
 - https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/
-
+- https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/description/
 Graphs
 =====================================================================
 Traversal
