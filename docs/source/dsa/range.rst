@@ -98,9 +98,25 @@ MEX - Minimum Excluded Element
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Index gymnastics - `First missing positive in range [1,n] <https://leetcode.com/problems/first-missing-positive/>`_
 #. `Design data structure that pops smallest available numbers in infiite set with addback <https://leetcode.com/problems/smallest-number-in-infinite-set/>`_
+
+	.. collapse:: Implicit MEX
+
+	   .. literalinclude:: ../code/mex_implicit.py
+	      :language: python
+	      :linenos:
 #. `MEX on array with updates <https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/description/>`_
 #. TODO: https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/description/
 #. TODO: https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-ii/
+
+Pointer Gynmastics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Rotate array
+
+	.. collapse:: Rotate array left/right
+
+	   .. literalinclude:: ../code/rotatearr.py
+	      :language: python
+	      :linenos:
 
 Binary Search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -163,7 +179,7 @@ Order Statistics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. [Inversions] `Shortest Unsorted Continuous Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
 
-	.. collapse:: Sample BST implementation
+	.. collapse:: Two approaches
 
 	   .. literalinclude:: ../code/shortestUnsortedSubarray.py
 	      :language: python
