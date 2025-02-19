@@ -130,8 +130,9 @@ Arrays
 
 	- [Medium] `Find Longest Strictly Increasing Subarray <https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/>`_
 	- [Easy] `Find Longest Strict Monotonic Subarray <https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/description/>`_
-	- [Medium] `Find Shortest Unsorted Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
-	- [Medium] `Find Shortest Subarray to Remove to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
+	- [Medium] `Find Longest Unsorted Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
+	- [Medium] `Find Minimum Removals to Make Rest Sorted <https://www.geeksforgeeks.org/minimum-number-deletions-make-sorted-sequence/>`_
+	- [Medium] `Find Shortest Chunk Removal to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
 	- [Medium] `Find Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
 	- [Medium] `Find LIS <https://leetcode.com/problems/longest-increasing-subsequence/description/>`_
 	- [Medium] `Find Longest NonDecreasing Subarray Formed By Merging 2 Unsorted Arrays <https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays/description/>`_
