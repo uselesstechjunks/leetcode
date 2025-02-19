@@ -16,33 +16,37 @@ Revision Questions
 
 Arrays
 =====================================================================
-- Inversions
+- Explicit Range - Binary Search
 
-	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
-	- [Hard] `Count Inversions <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
-	- [Medium] `Shortest Unsorted Continuous Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
-- Order Statistics
+	- https://leetcode.com/problems/binary-search/
+	- https://leetcode.com/problems/search-insert-position/description/
+	- https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+	- https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+	- https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+	- https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
+	- https://leetcode.com/problems/time-based-key-value-store/
+	- [Hard] `Optimal Placement With Penalty <https://leetcode.com/problems/minimize-max-distance-to-gas-station/>`_
+- Implicit Range - Binary Search
 
-	- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
-	- [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
-	- [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
-	- [Easy] `Kth Largest Element in Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/description/>`_
-	- [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
-	- [Hard] `Median in Stream <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
-	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
-	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
-- MEX (Minimal Excluded Element)
+	- https://leetcode.com/problems/arranging-coins/
+	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
+	- https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
+	- https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
+- Find Global Minimum - Mountain Structure
 
-	- [Hard] `Find First Missing Positive <https://leetcode.com/problems/first-missing-positive/description/>`_
-	- [Hard] `Find Kth Missing Positive <https://leetcode.com/problems/kth-missing-positive-number/description/>`_
-	- [Medium] `Find All Missing Positives <https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/>`_
-	- [Medium] `Add First K Missing Positives <https://leetcode.com/problems/append-k-integers-with-minimal-sum/description/>`_
-	- [Medium] `Design Streamer with PopSmallest & AddBack <https://leetcode.com/problems/smallest-number-in-infinite-set/description/>`_
-	- [Medium] `MEX After Add/Sub Value Any Number of Times <https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/description/>`_
-- Range Missing
+	- [Easy] https://leetcode.com/problems/valid-mountain-array/
+	- [Medium] https://leetcode.com/problems/squares-of-a-sorted-array/
+	- [Medium] https://leetcode.com/problems/longest-mountain-in-array/
+	- [Medium] https://leetcode.com/problems/find-in-mountain-array/
+	- [Medium] https://leetcode.com/problems/peak-index-in-a-mountain-array/
+	- https://leetcode.com/problems/beautiful-towers-i/description/
+	- https://leetcode.com/problems/beautiful-towers-ii/description/
+	- https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/description/
+- Find Local Optima - Unsorted
 
-	- [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
-	- [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
+	- [Medium] `Find Any Local Maximum <https://leetcode.com/problems/find-peak-element/description/>`_
+	- [Medium] `Find All Local Maxima <https://leetcode.com/problems/find-the-peaks/>`_
+	- [Medium] `Find Any Local Maximum - 2d <https://leetcode.com/problems/find-a-peak-element-ii/description/>`_
 - Consecutive Values
 
 	- [Medium] `If Entire Array Made of Consecutive Numbers <https://leetcode.com/problems/check-if-an-array-is-consecutive/description/>`_
@@ -66,12 +70,50 @@ Arrays
 	- [Hard] `Minimum Adjacent Swaps for K Consecutive Ones <https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones/description/>`_
 	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else K Times <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
 	- [Medium] `Maximum Number of Consecutive Value If We Can Replace Any with Anything Else within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
-- Find Minimum - Rotated Sorted
+- Inversions
 
-	- https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
-	- https://leetcode.com/problems/search-in-rotated-sorted-array/description/
-	- https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
-- Find Optimal Score Range - Max Sum/Product/Average/Score Query
+	- [Medium] `Count Adjacent Swaps To Move Min Left Max Right <https://leetcode.com/problems/minimum-adjacent-swaps-to-make-a-valid-array/description/>`_
+	- [Hard] `Count Inversions <https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/>`_
+- Order Statistics
+
+	- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
+	- [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
+	- [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
+	- [Easy] `Kth Largest Element in Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/description/>`_
+	- [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
+	- [Hard] `Median in Stream <https://leetcode.com/problems/find-median-from-data-stream/description/>`_
+	- [Hard] `K-th Maximum for K-th Query <https://leetcode.com/problems/sequentially-ordinal-rank-tracker/description/>`_
+	- [Hard] `Mean of Last m excluding smallest & largest k of them <https://leetcode.com/problems/finding-mk-average/description/>`_
+- MEX (Minimal Excluded Element)
+
+	- [Hard] `Find First Missing Positive <https://leetcode.com/problems/first-missing-positive/description/>`_
+	- [Hard] `Find Kth Missing Positive <https://leetcode.com/problems/kth-missing-positive-number/description/>`_
+	- [Medium] `Find All Missing Positives <https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/>`_
+	- [Medium] `Add First K Missing Positives <https://leetcode.com/problems/append-k-integers-with-minimal-sum/description/>`_
+	- [Medium] `Design Streamer with PopSmallest & AddBack <https://leetcode.com/problems/smallest-number-in-infinite-set/description/>`_
+	- [Medium] `MEX After Add/Sub Value Any Number of Times <https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/description/>`_
+- Range Missing
+
+	- [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
+	- [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
+- Find Optimal Range/Count - Constrainted Order/Bound Query
+
+	- [Easy] `Find Longest Strictly Increasing Subarray <https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/>`_
+	- [Easy] `Find Longest Strict Monotonic Subarray <https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/description/>`_
+	- [Medium] `Find Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
+	- [Medium] `Find Minimum Removals to Make Rest Sorted <https://www.geeksforgeeks.org/minimum-number-deletions-make-sorted-sequence/>`_
+	- [Medium] `Find Shortest Chunk to Sort to Make Entire Array Sorted <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_	
+	- [Medium] `Find Shortest Chunk Removal to Make Remaining Array Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
+	- [Hard] `Count Chunks to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_	
+	- [Medium] `Find Longest NonDecreasing Subarray Formed By Merging 2 Unsorted Arrays <https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays/description/>`_
+	- [Medium] `Find LIS <https://leetcode.com/problems/longest-increasing-subsequence/description/>`_
+	- [Medium] `Find Number of LIS <https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/>`_
+	- [Hard] `Find LIS With Consecutive Diff <= k <https://leetcode.com/problems/longest-increasing-subsequence-ii/description/>`_
+	- [Hard] `Find Range With Given Array as a Subsequence <https://leetcode.com/problems/minimum-window-subsequence/description/>`_
+	- [Medium] `Container with Most Water <https://leetcode.com/problems/container-with-most-water/description/>`_
+	- [Hard] `Trapping Rain Water <https://leetcode.com/problems/trapping-rain-water/description/>`_
+	- [Hard] `Trapping Rain Water 2d <https://leetcode.com/problems/trapping-rain-water-ii/>`_
+- Find Optimal Score Range - Max Aggregate Query
 
 	- [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
 	- [Medium] `Find Submatrix with Max Sum <https://www.geeksforgeeks.org/maximum-sum-submatrix/>`_
@@ -86,7 +128,7 @@ Arrays
 	- [Hard] `Find Subarray with Max Score = MinVal * Len (Largest Rectangle in Histogram) <https://leetcode.com/problems/largest-rectangle-in-histogram/description/>`_
 	- [Hard] `Find Subarray with Max Score = MinVal * Len Covering One Given Point <https://leetcode.com/problems/maximum-score-of-a-good-subarray/>`_	
 	- [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
-- Find Optimal Length Range - Contrained Subarray Sum/Product Query
+- Find Optimal Length Range - Contrained Aggregate Query
 
 	- [Medium] `(Positives) Shortest Subarray with Sum >= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
 	- [Medium] `(Positives) Shortest Rotated Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
@@ -126,35 +168,6 @@ Arrays
 
 	- [Medium] `Count Subarrays with More 1s Than 0s <https://leetcode.com/problems/count-subarrays-with-more-ones-than-zeros/>`_
 	- [Hard] `Count Subarrays with K Distinct Values <https://leetcode.com/problems/subarrays-with-k-different-integers/>`_
-- Find Shortest/Longest Range/Count - Constrainted Order Query
-
-	- [Easy] `Find Longest Strictly Increasing Subarray <https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/>`_
-	- [Easy] `Find Longest Strict Monotonic Subarray <https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/description/>`_
-	- [Medium] `Find Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
-	- [Medium] `Find Minimum Removals to Make Rest Sorted <https://www.geeksforgeeks.org/minimum-number-deletions-make-sorted-sequence/>`_
-	- [Medium] `Find Shortest Chunk to Sort to Make Entire Array Sorted <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_	
-	- [Medium] `Find Shortest Chunk Removal to Make Remaining Array Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
-	- [Hard] `Count Chunks to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_
-	- [Medium] `Find LIS <https://leetcode.com/problems/longest-increasing-subsequence/description/>`_
-	- [Medium] `Find Longest NonDecreasing Subarray Formed By Merging 2 Unsorted Arrays <https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays/description/>`_
-	- [Medium] `Find Number of LIS <https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/>`_
-	- [Hard] `Find LIS With Consecutive Diff <= k <https://leetcode.com/problems/longest-increasing-subsequence-ii/description/>`_
-	- [Hard] `Find Range With Given Array as a Subsequence <https://leetcode.com/problems/minimum-window-subsequence/description/>`_
-- Find Global Minimum - Mountain Structure
-
-	- [Easy] https://leetcode.com/problems/valid-mountain-array/
-	- [Medium] https://leetcode.com/problems/squares-of-a-sorted-array/
-	- [Medium] https://leetcode.com/problems/longest-mountain-in-array/
-	- [Medium] https://leetcode.com/problems/find-in-mountain-array/
-	- [Medium] https://leetcode.com/problems/peak-index-in-a-mountain-array/
-	- https://leetcode.com/problems/beautiful-towers-i/description/
-	- https://leetcode.com/problems/beautiful-towers-ii/description/
-	- https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/description/
-- Find Local Optima - Unsorted
-
-	- [Medium] `Find Any Local Maximum <https://leetcode.com/problems/find-peak-element/description/>`_
-	- [Medium] `Find All Local Maxima <https://leetcode.com/problems/find-the-peaks/>`_
-	- [Medium] `Find Any Local Maximum - 2d <https://leetcode.com/problems/find-a-peak-element-ii/description/>`_
 - Given Range - Sum Query
 
 	- [Easy] `Immutable - 1D <https://leetcode.com/problems/range-sum-query-immutable/description/>`_
@@ -172,13 +185,6 @@ Arrays
 	- [Hard] `Query Median for All Subarrays of Fixed Size K <https://leetcode.com/problems/sliding-window-median/description/>`_
 	- [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 	- [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
-	- [Hard] `Trapping Rain Water <https://leetcode.com/problems/trapping-rain-water/description/>`_
-- Given Range - Binary Search
-
-	- [Hard] `Optimal Placement With Penalty <https://leetcode.com/problems/minimize-max-distance-to-gas-station/>`_
-- Assume Range - Binary Search
-
-	- [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
 - Optimal Partitioning
 
 	- [Hard] `Partition Array into K Parts Minimising Largest Subarray Sum <https://leetcode.com/problems/split-array-largest-sum/description/>`_
