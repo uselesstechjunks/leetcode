@@ -185,7 +185,7 @@ Find Range Count - Constrained Value Query
 - [Medium] `Count Subarrays with p | Value for at most k of them <https://leetcode.com/problems/k-divisible-elements-subarrays/>`_
 - [Medium] `Count Subarrays with Values at max K Apart <https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/>`_
 - [Medium] `Count Subarrays with Max Value in Given Range <https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/>`_
-- [Hard] `Count Subarrays with All Values in Given Range <https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/>`_
+- [Hard] `Count Subarrays with Given Fixed Bound <https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/>`_
 - [Hard] `Count Subarrays Bounded by Max on Either End <https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/>`_
 - [Medium] `2D - Adjacent Values within K <https://leetcode.com/problems/find-the-grid-of-region-average/description/>`_
 
