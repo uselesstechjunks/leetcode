@@ -134,11 +134,11 @@ Arrays
 	- [Medium] `Find Minimum Removals to Make Rest Sorted <https://www.geeksforgeeks.org/minimum-number-deletions-make-sorted-sequence/>`_
 	- [Medium] `Find Shortest Chunk Removal to Make Rest Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
 	- [Medium] `Find Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
+	- [Hard] `Count Chunks to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_
 	- [Medium] `Find LIS <https://leetcode.com/problems/longest-increasing-subsequence/description/>`_
 	- [Medium] `Find Longest NonDecreasing Subarray Formed By Merging 2 Unsorted Arrays <https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays/description/>`_
 	- [Medium] `Find Number of LIS <https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/>`_
 	- [Hard] `Find LIS With Consecutive Diff <= k <https://leetcode.com/problems/longest-increasing-subsequence-ii/description/>`_
-	- [Hard] `Count Subarrays to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_
 	- [Hard] `Find Range With Given Array as a Subsequence <https://leetcode.com/problems/minimum-window-subsequence/description/>`_
 - Find Global Minimum - Mountain Structure
 
