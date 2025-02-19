@@ -175,15 +175,25 @@ Binary Search
 	- Problem: Given points on a line and a fixed number of segments, maximize the minimum distance between the segment boundaries.
 	- Hints: Binary search on the answer.
 
-Order Statistics
+Inversions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. [Inversions] `Shortest Unsorted Continuous Subarray <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
+#. `Shortest Unsorted Continuous Subarray to Sort <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_
 
-	.. collapse:: Two approaches
+	.. collapse:: Two approaches - Two pointers, monotonic stack
 
 	   .. literalinclude:: ../code/shortestUnsortedSubarray.py
 	      :language: python
 	      :linenos:
+#. `Shortest Unsorted Continuous Subarray to Reove <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/>`_
+
+	.. collapse:: Two pointers
+
+	   .. literalinclude:: ../code/shortestUnsortedRemove.py
+	      :language: python
+	      :linenos:
+
+Order Statistics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. `Kth Largest/Smallest Element in a Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/>`_
 
 	- Maintain the top k elements in a stream of data.

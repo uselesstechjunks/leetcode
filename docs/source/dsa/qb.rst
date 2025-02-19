@@ -122,7 +122,7 @@ Range Missing
 - [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
 - [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
 
-Find Optimal Range/Count - Constrainted Order/Bound Query
+Find Optimal Range/Count - Constrainted Order/Span Query
 ---------------------------------------------------------------------
 - [Easy] `Find Longest Strictly Increasing Subarray <https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/>`_
 - [Easy] `Find Longest Strict Monotonic Subarray <https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/description/>`_
@@ -136,11 +136,13 @@ Find Optimal Range/Count - Constrainted Order/Bound Query
 - [Medium] `Find Number of LIS <https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/>`_
 - [Hard] `Find LIS With Consecutive Diff <= k <https://leetcode.com/problems/longest-increasing-subsequence-ii/description/>`_
 - [Hard] `Find Range With Given Array as a Subsequence <https://leetcode.com/problems/minimum-window-subsequence/description/>`_
+- [Medium] `Next Greater Element <https://leetcode.com/problems/next-greater-element-ii/description/>`_
+- [Medium] `Next Greater Element Streaming <https://leetcode.com/problems/online-stock-span/description/>`_
 - [Medium] `Container with Most Water <https://leetcode.com/problems/container-with-most-water/description/>`_
 - [Hard] `Trapping Rain Water <https://leetcode.com/problems/trapping-rain-water/description/>`_
 - [Hard] `Trapping Rain Water 2d <https://leetcode.com/problems/trapping-rain-water-ii/>`_
 
-Find Optimal Score Range - Max Aggregate Query
+Find Optimal Range - Max Aggregate Query
 ---------------------------------------------------------------------
 - [Medium] `Find Subarray with Max Sum <https://leetcode.com/problems/maximum-subarray/description/>`_
 - [Medium] `Find Submatrix with Max Sum <https://www.geeksforgeeks.org/maximum-sum-submatrix/>`_
@@ -156,7 +158,7 @@ Find Optimal Score Range - Max Aggregate Query
 - [Hard] `Find Subarray with Max Score = MinVal * Len Covering One Given Point <https://leetcode.com/problems/maximum-score-of-a-good-subarray/>`_	
 - [Medium] `Find Maximal Submatrix With Columns Reordering Allowed <https://leetcode.com/problems/largest-submatrix-with-rearrangements/description/>`_	
 
-Find Optimal Length Range - Contrained Aggregate Query
+Find Optimal Length Range - Constrained Aggregate Query
 ---------------------------------------------------------------------
 - [Medium] `(Positives) Shortest Subarray with Sum >= k <https://leetcode.com/problems/minimum-size-subarray-sum/description/>`_
 - [Medium] `(Positives) Shortest Rotated Subarray (Positives) with Sum >= k <https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/>`_
@@ -167,7 +169,7 @@ Find Optimal Length Range - Contrained Aggregate Query
 - [Medium] `Largest Submatrix with Sum = 0 <https://www.geeksforgeeks.org/largest-rectangular-sub-matrix-whose-sum-0/>`_	
 - [Medium] `(Positives) Smallest Subarray To Remove to Make k | Sum <https://leetcode.com/problems/make-sum-divisible-by-p/description/>`_	
 
-Find Range Count - Constrinted Aggregate Query
+Find Range Count - Constrained Aggregate Query
 ---------------------------------------------------------------------
 - [Medium] `(Binary) Count Subarrays with Sum = k <https://leetcode.com/problems/binary-subarrays-with-sum/description/>`_
 - [Medium] `Count Subarrays with Sum = k <https://leetcode.com/problems/subarray-sum-equals-k/description/>`_
@@ -185,7 +187,7 @@ Find Range Count - Constrained Value Query
 - [Medium] `Count Subarrays with p | Value for at most k of them <https://leetcode.com/problems/k-divisible-elements-subarrays/>`_
 - [Medium] `Count Subarrays with Values at max K Apart <https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/>`_
 - [Medium] `Count Subarrays with Max Value in Given Range <https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/>`_
-- [Hard] `Count Subarrays with All Values in Given Range <https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/>`_
+- [Hard] `Count Subarrays with Given Fixed Bound <https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/>`_
 - [Hard] `Count Subarrays Bounded by Max on Either End <https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/>`_
 - [Medium] `2D - Adjacent Values within K <https://leetcode.com/problems/find-the-grid-of-region-average/description/>`_
 
@@ -268,6 +270,7 @@ Job Scheduling
 - [Medium] `Ordered Single CPU Scheduler with Repeat Constraint  <https://leetcode.com/problems/task-scheduler-ii/description/>`_
 - [Medium] `Optimal Job Allocation with Fixed Burst Time <https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/description/>`_
 - [Hard] `Optimal Job Allocation Among K Workers <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/description/>`_
+- [Hard] `Optimal Job Allocation With Neighbourhood Contraint (Candy) <https://leetcode.com/problems/candy/description/>`_
 - [Medium] `Optimal Job Allocation Among K Workers of Varying Capability <https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs-ii/description/>`_
 - [Medium] `Max Utilized Resource for Flexi Schedule Jobs <https://leetcode.com/problems/meeting-rooms-iii/description/>`_
 
@@ -325,6 +328,10 @@ Construction
 ---------------------------------------------------------------------
 LCA
 ---------------------------------------------------------------------
+Path Constraints
+---------------------------------------------------------------------
+- https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/
+- https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/description/
 Graphs
 =====================================================================
 Traversal
@@ -348,4 +355,6 @@ Streaming
 Frequency
 ---------------------------------------------------------------------
 Temporal
+---------------------------------------------------------------------
+Order Statistics
 ---------------------------------------------------------------------
