@@ -1,27 +1,6 @@
 *********************************************************************
 Questions for Learning
 *********************************************************************
-Core Algorithms
-=====================================================================
-.. attention::
-	- Binary Search
-	- Prefix Sum
-	- Two Pointers
-	- Sliding Window
-	- Divide & Conquer
-	- DP
-	- Scheduling
-	- DFS/BFS
-
-Thought Process
-=====================================================================
-.. note::
-	#. Does it form a group, chain, tree, graph? - union find, parent-child hashmap.
-	#. What bookkeeping is required? What involves recomputation? What else can we track to avoid it? - hashmap, bst, stack, queue, heap.
-	#. Does it have monotonic property? - binary search/VLW.
-	#. Can we solve it in parts and combine the results? - divide and conquer, recursion, DP.
-	#. What choices can be greedily eliminated? - two pointers, greedy.
-
 .. contents:: Table of Contents
    :depth: 2
    :local:
