@@ -193,7 +193,7 @@ Find Optimal Length Range - Constrainted Frequency Query
 - [Medium] `Longest Subarray with Equal 1s and 0s <https://leetcode.com/problems/contiguous-array/description/>`_	
 - [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 - [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
-- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
+- [Medium] `[Fixed Vocab] Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
 - [Medium] `Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
 - [Medium] `Longest Equal Subarray After <=k Replacements <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
 - [Medium] `Longest Equal Subarray If We Can Replace Value within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
