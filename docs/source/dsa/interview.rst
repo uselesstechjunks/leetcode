@@ -20,7 +20,7 @@ Checklist
 **********************************************************************
 During the interview: Remember
 **********************************************************************
-#. Take your time - way longer than you think you need to.
+#. Take your time - longer than you think you should.
 
 	Spend more time collaborating with the interviewer - planning, writing comments, discussing approach, brainstorming
 
@@ -35,32 +35,33 @@ During the interview: Remember
 #. Write pseudocode
 
 	#. Think out loud in comments and in pseudocode.
-	#. During actual coding, swap all comments with actual code.
-	#. If the approach itself is not clear, it's totally okay to say: I am not sure about this. Need a min to think about it.
+	#. During actual coding, swap comments with actual code.
+	#. If the approach itself is not clear, it's okay to say: I am not sure about this. Need a min to think about it.
 
 #. Approaching a solution
 	
-	#. Get a brute force to work - verifies that we're solving the right problem and at least one approach works.
+	#. Get a brute force to work - verifies that we're solving the right problem.
 	
 		If an optimization on this isn't immediately clear, ask if it's okay to code this approach.
 
 	#. Think and talk about runtime and memory constantly
 	
-		Interviewer needs to know that you're thinking about efficiency. Might give points even if we don't get to an optimal one.
+		Interviewer needs to know that you're thinking about efficiency. Might give points.
 
 	#. Whenever stuck, think about this:
 	
-		#. What do we actually want?
-		#. Is there anything that needs to happen for us to get there?
-		#. What are all the things that could affect it?
-		#. What are all the possible cases of things that could happen?
+		#. Can we map it to something that we know how to solve?
+		#. What exactly is required?
+		#. What's the easiest way to get us there?
+		#. What's the bottleneck? What do we need to keep track of?
+		#. What other ways we can get there?
 
 	#. Getting to an optimal solution
 	
 		#. One way to think about this - analyze current runtime. Check for data structures/approaches which are next better. Can any of them work?
-		#. Think if stuck because the input isn't structured well for the task at hand?
+		#. Think if stuck because the input isn't structured well for the task at hand.
 
-			#. How can I preprocess the input so that the task gets done faster?
+			#. Can I preprocess the input so that the task gets done faster?
 			#. We can either modify the algorithm to fit the data structure or modify the data structure to fit the algorithm. Latter is better.
 
 #. Writing code
