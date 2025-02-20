@@ -196,7 +196,8 @@ Important Questions
 .. toctree::
 	:maxdepth: 1
 
-	qb
+	ql
+	qr
 
 Deep Dives
 =================================================================================
