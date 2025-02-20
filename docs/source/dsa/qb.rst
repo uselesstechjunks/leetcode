@@ -126,7 +126,6 @@ Find Optimal Range/Count - Constrainted Order/Span Query
 ---------------------------------------------------------------------
 - [Easy] `Find Longest Strictly Increasing Subarray <https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/>`_
 - [Easy] `Find Longest Strict Monotonic Subarray <https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/description/>`_
-- [Medium] `Find Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
 - [Medium] `Find Minimum Removals to Make Rest Sorted <https://www.geeksforgeeks.org/minimum-number-deletions-make-sorted-sequence/>`_
 - [Medium] `Find Shortest Chunk to Sort to Make Entire Array Sorted <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_	
 - [Medium] `Find Shortest Chunk Removal to Make Remaining Array Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
@@ -193,10 +192,11 @@ Find Range Count - Constrained Value Query
 
 Find Optimal Length Range - Constrainted Frequency Query
 ---------------------------------------------------------------------
+- [Medium] `Longest Subarray with Equal 1s and 0s <https://leetcode.com/problems/contiguous-array/description/>`_	
 - [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 - [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
-- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_	
-- [Medium] `Longest Subarray with Equal 1s and 0s <https://leetcode.com/problems/contiguous-array/description/>`_	
+- [Medium] `Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
+- [Medium] `Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
 
 Find Range Count - Constrainted Frequency Query
 ---------------------------------------------------------------------
