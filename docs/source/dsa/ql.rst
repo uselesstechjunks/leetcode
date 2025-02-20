@@ -1,14 +1,6 @@
 *********************************************************************
 Questions for Learning
 *********************************************************************
-.. attention::
-	- Binary Search
-	- Divide & Conquer
-	- DP
-	- Scheduling
-	- Two Pointers
-	- Sliding Window
-
 .. contents:: Table of Contents
    :depth: 2
    :local:
@@ -45,10 +37,13 @@ Ordered Explicit Range - Binary Search
 
 Ordered Implicit Range - Binary Search
 ---------------------------------------------------------------------
-- https://leetcode.com/problems/arranging-coins/
+- [Easy] `Arranging Coins <https://leetcode.com/problems/arranging-coins/>`_
 - [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
-- https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
-- https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
+- [Medium] `Capacity To Ship Packages Within D Days <https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/>`_
+- [Medium] `Minimum Number of Days to Make m Bouquets <https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/>`_
+- [Medium] `Minimize Constrained Sum (House Robber IV) <https://leetcode.com/problems/house-robber-iv/>`_
+- [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
+- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
 
 Find Global Optima - Convex/Mountain Structure
 ---------------------------------------------------------------------
@@ -97,8 +92,6 @@ Inversions
 
 Order Statistics
 ---------------------------------------------------------------------
-- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
-- [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
 - [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
 - [Easy] `Kth Largest Element in Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/description/>`_
 - [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
@@ -126,7 +119,11 @@ Find Optimal Range/Count - Constrainted Order/Span Query
 - [Easy] `Find Longest Strict Monotonic Subarray <https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/description/>`_
 - [Medium] `Find Minimum Removals to Make Rest Sorted <https://www.geeksforgeeks.org/minimum-number-deletions-make-sorted-sequence/>`_
 - [Medium] `Find Shortest Chunk to Sort to Make Entire Array Sorted <https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/>`_	
+
+	- Note: Cannot be removed. Have to keep in the Cartesian tree. Two pointers to find span of largest inverted range.
 - [Medium] `Find Shortest Chunk Removal to Make Remaining Array Sorted <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/>`_
+
+	- Note: Can be removed. Cartesian tree building dynamics would change. Two pointers to simulate.
 - [Hard] `Count Chunks to Remove to Make Rest Monotonic Sorted <https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/>`_	
 - [Medium] `Find Longest NonDecreasing Subarray Formed By Merging 2 Unsorted Arrays <https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays/description/>`_
 - [Medium] `Find LIS <https://leetcode.com/problems/longest-increasing-subsequence/description/>`_
@@ -193,9 +190,21 @@ Find Optimal Length Range - Constrainted Frequency Query
 - [Medium] `Longest Subarray with Equal 1s and 0s <https://leetcode.com/problems/contiguous-array/description/>`_	
 - [Medium] `Longest Subarray with All Distinct <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>`_
 - [Medium] `Longest Subarray with At Most K Distinct <https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/>`_
-- [Medium] `[Fixed Vocab] Longest Subarray with At Least K Repeating <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
-- [Medium] `Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
-- [Medium] `Longest Equal Subarray After <=k Replacements <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
+- [Hard] `[Fixed Vocab] Longest Subarray with Each Repeating >= k times <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/>`_
+
+	- Note: Cannot be solved directly. Map it to 'at most m distinct with each repeating >= k times', vary over all possible m.
+- [Hard] `Longest Equal Subarray After <=k Replacements <https://leetcode.com/problems/longest-repeating-character-replacement/description/>`_
+
+	- Let's consider a window from the start which contains some character n times (max_freq). 
+	- For longest valid window, at most k other characters can be added. 
+	- Once such a condition is breached, we can MOVE THE WINDOW BY 1 TO THE RIGHT and keep track of frequencies. 
+	- IT'S NOT NECESSARY UPDATE n TO MATCH THE MAX FREQUENCY OF THE CURRENT WINDOW. 
+	- The ans would only change if another window is found with some character with > n frequency. 
+	- Since the increment happens by 1, the length comparison `r-l+1 - max_freq == k+1: works once a larger frequency is found even though left has moved.
+	- Decreasing count from the left ensures that we won't be increasing max_freq incorrectly.
+- [Hard] `Longest Equal Subarray After <=k Removals <https://leetcode.com/problems/find-the-longest-equal-subarray/description/>`_
+
+	- SAME AS ABOVE, EXCEPT THE ANSWER IS THE MAX FREQUENCY ITSELF.
 - [Medium] `Longest Equal Subarray If We Can Replace Value within K <https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/description/>`_
 
 Find Range Count - Constrainted Frequency Query
@@ -222,6 +231,14 @@ Given Range - Min/Max/Avg/Median Query
 - [Hard] `Query Median for All Subarrays of Fixed Size K <https://leetcode.com/problems/sliding-window-median/description/>`_
 - [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 - [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
+
+QuickSort Partitioning
+---------------------------------------------------------------------
+- [Easy] `Sort Binary Array <https://www.geeksforgeeks.org/sort-binary-array-using-one-traversal/>`_
+- [Medium] `Dutch National Flag <https://leetcode.com/problems/sort-colors/description/>`_
+- [Hard] `First Missing Positive <https://leetcode.com/problems/first-missing-positive/>`_ [<= 0, > 0 partitioning]
+- [Medium] `Even Odd Partitioning <https://leetcode.com/problems/sort-array-by-parity/>`_
+- [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
 
 Optimal Partitioning
 ---------------------------------------------------------------------
