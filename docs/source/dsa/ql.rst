@@ -45,10 +45,12 @@ Ordered Explicit Range - Binary Search
 
 Ordered Implicit Range - Binary Search
 ---------------------------------------------------------------------
-- https://leetcode.com/problems/arranging-coins/
+- [Easy] `Arranging Coins <https://leetcode.com/problems/arranging-coins/>`_
 - [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
-- https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
-- https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
+- [Medium] `Capacity To Ship Packages Within D Days <https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/>`_
+- [Medium] `Minimum Number of Days to Make m Bouquets <https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/>`_
+- [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
+- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
 
 Find Global Optima - Convex/Mountain Structure
 ---------------------------------------------------------------------
@@ -97,8 +99,6 @@ Inversions
 
 Order Statistics
 ---------------------------------------------------------------------
-- [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
-- [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
 - [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
 - [Easy] `Kth Largest Element in Stream <https://leetcode.com/problems/kth-largest-element-in-a-stream/description/>`_
 - [Hard] `Max in Fixed Range <https://leetcode.com/problems/sliding-window-maximum/description/>`_
