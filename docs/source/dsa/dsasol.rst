@@ -1,4 +1,4 @@
-Solution to Data Structures & Algorithms
+Solutions
 ========================================
 
 .. _solutions:
@@ -8,6 +8,13 @@ Easy
 
 Medium
 -------------
+#. `Longest Substring with At Least K Repeating Characters <https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/description/>`_
+
+   .. collapse:: Solution
+   
+      .. literalinclude:: code/longest-substring-with-at-least-k-repeating-characters.py
+         :language: python
+         :linenos:
 #. `Surrounded Regions <https://leetcode.com/problems/surrounded-regions/>`_
 #. `Clone Graph <https://leetcode.com/problems/clone-graph/>`_
    
