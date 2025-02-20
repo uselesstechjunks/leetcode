@@ -41,6 +41,7 @@ Ordered Implicit Range - Binary Search
 - [Medium] `Koko Eating Bananas <https://leetcode.com/problems/koko-eating-bananas/>`_
 - [Medium] `Capacity To Ship Packages Within D Days <https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/>`_
 - [Medium] `Minimum Number of Days to Make m Bouquets <https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/>`_
+- [Medium] `Minimize Constrained Sum (House Robber IV) <https://leetcode.com/problems/house-robber-iv/>`_
 - [Medium] `Median of Row Wise Sorted Matrix <https://leetcode.com/problems/median-of-a-row-wise-sorted-matrix/>`_
 - [Hard] `Median of 2 Sorted Arrays <https://leetcode.com/problems/median-of-two-sorted-arrays/description/?envType=problem-list-v2&envId=divide-and-conquer>`_
 
@@ -230,6 +231,14 @@ Given Range - Min/Max/Avg/Median Query
 - [Hard] `Query Median for All Subarrays of Fixed Size K <https://leetcode.com/problems/sliding-window-median/description/>`_
 - [Hard] `Exists Max-Min-Max Partition So that Max=Min=Max <https://codeforces.com/contest/1454/problem/F>`_
 - [Hard] `Count Subarrays with Median = K <https://leetcode.com/problems/count-subarrays-with-median-k/>`_
+
+QuickSort Partitioning
+---------------------------------------------------------------------
+- [Easy] `Sort Binary Array <https://www.geeksforgeeks.org/sort-binary-array-using-one-traversal/>`_
+- [Medium] `Dutch National Flag <https://leetcode.com/problems/sort-colors/description/>`_
+- [Hard] `First Missing Positive <https://leetcode.com/problems/first-missing-positive/>`_ [<= 0, > 0 partitioning]
+- [Medium] `Even Odd Partitioning <https://leetcode.com/problems/sort-array-by-parity/>`_
+- [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
 
 Optimal Partitioning
 ---------------------------------------------------------------------
