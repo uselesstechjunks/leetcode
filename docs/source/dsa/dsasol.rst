@@ -13,7 +13,7 @@ Medium
    .. collapse:: Solution
    
       .. literalinclude:: code/longest-substring-with-at-least-k-repeating-characters.py
-         :language: c++
+         :language: python
          :linenos:
 #. `Surrounded Regions <https://leetcode.com/problems/surrounded-regions/>`_
 #. `Clone Graph <https://leetcode.com/problems/clone-graph/>`_
