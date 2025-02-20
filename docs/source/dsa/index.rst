@@ -227,6 +227,19 @@ Code Patterns
 
 Sliding Window
 ================================================================================
+.. note::
+	- fixed length
+
+		- fixed sum with constant extra bookkeeping
+		- fixed sum with auxiliary data structures
+	- variable length
+
+		- fixed sum with constant extra bookkeeping - aggregate >= value
+		- fixed sum with auxiliary data structures - frequency, prefix sums -> dict, monotonic queue, bst
+.. attention::
+	- sequential grouping
+	- sequential criteria - longest, smallest, contained, largest, smallest
+
 .. important::
 	* [youtube.com] `Sliding Window Mental Model <https://www.youtube.com/watch?v=MK-NZ4hN7rs>`_
 	* [leetcode.com] `Sliding Window Technique: A Comprehensive Guide <https://leetcode.com/discuss/interview-question/3722472/mastering-sliding-window-technique-a-comprehensive-guide>`_
