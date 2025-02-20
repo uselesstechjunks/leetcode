@@ -230,6 +230,7 @@ Sliding Window
 	* [leetcode.com] `Sliding Window Technique: A Comprehensive Guide <https://leetcode.com/discuss/interview-question/3722472/mastering-sliding-window-technique-a-comprehensive-guide>`_
 	* [geeksforgeeks.org] `Sliding Window Technique <https://www.geeksforgeeks.org/window-sliding-technique/>`_
 	* [leetcode.com] `Sliding window with frequency counts <https://leetcode.com/problems/subarrays-with-k-different-integers/solutions/235002/one-code-template-to-solve-all-of-these-problems/>`_
+	* [leetcode.com] `Lee's solutions for sliding window <https://leetcode.com/problems/find-the-longest-equal-subarray/solutions/3934172/java-c-python-one-pass-sliding-window-o-n>`_
 
 Two Pointers
 ================================================================================
