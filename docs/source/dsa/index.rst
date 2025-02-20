@@ -11,32 +11,53 @@ Topics
 *********************************************************************************
 Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
 
+Core Algorithms
+=====================================================================
+.. attention::
+	- Binary Search
+	- Prefix Sum
+	- Two Pointers
+	- Sliding Window
+	- Divide & Conquer
+	- DP
+	- Scheduling
+	- DFS/BFS
+
 *********************************************************************************
 Bag of Tricks
 *********************************************************************************
 Goal: Map the problem to known tasks.
 
+Thought Process
+=====================================================================
+.. note::
+	#. Does it form a group, chain, tree, graph? - union find, parent-child hashmap.
+	#. Does it have a range? - binary search.
+	#. Does it have monotonic property? - binary search/VLW.
+	#. What bookkeeping is required? What involves recomputation? What else can we track to avoid it? - hashmap, bst, stack, queue, heap.
+	#. Can we solve it in parts and combine the results? - divide and conquer, recursion, DP.
+	#. What choices can be greedily eliminated? - two pointers, greedy.
+
 Find something
 =================================================================================
 Types of Queries
 ---------------------------------------------------------------------------------
-#. MSQ - Maximum Sum Query: [0,n)->max(Sum(l,r)): Prefix sum->BIT, Kadane, divide and conquer->segment tree
-#. RSQ - Range Sum Query: Sum(l,r): Prefix sum, BIT, segment tree
-#. RMQ - Range Min Query: Min(l,r): [unordered] monotonic stack, monotonic queue (VLW), Cartesian tree, segment tree, [ordered] binary search, BST (VLW)
-#. RFQ - Range Frequency Query: Count(l,r,key): Dict, segment tree
-#. TKQ - Top K Query: heap
+#. OGQ - Optimal Goal Query: VLW - variable length window + aux bookkeeping (monotonic goal), FLW - fixed length window (works for non-monotone)
+#. RSQ - Range Sum Query: :math:`\sum(l,r)`: Prefix sum, BIT, segment tree
+#. MSQ - Maximum Sum Query: :math:`[0,n)->\max(\sum(l,r))`: Prefix sum->BIT, VLW->Kadane, divide and conquer->segment tree
+#. RMQ - Range Min Query: :math:`\min(l,r)`: [unordered] monotonic stack, monotonic queue (VLW), Cartesian tree, segment tree, [ordered] binary search, BST (VLW)
+#. RFQ - Range Frequency Query: :math:`c(l,r,key)`: Dict, segment tree
 #. EEQ - Earlier Existance Query: set, dict, bitmap
-#. ESQ - Earliest Smaller Query: min(idx(l<r) | v(l)<v(r)): Monotonic stack (v2), (???) inversions?
-#. LSQ - Latest Smaller Query: max(idx(l<r) | v(l)<v(r)): Monotonic stack (v1), (???) inversions?
-#. PUQ - Point Update Query: (???)
-#. LUQ - Length Update Query: Streaming: (???)
-#. RUQ - Range Update Query: Prefix sum->BIT, segment tree
+#. LSQ - Latest Smaller Query: :math:`\max(l | l<r, v(l)<v(r))`: Monotonic stack (v1), Cartesian tree
+#. ESQ - Earliest Smaller Query: :math:`\min(l | l<r, v(l)<v(r))`: Monotonic stack (v2), (???) inversions/pointers?
+#. SEQ - Smallest Earlier Query: :math:`\min(v(l) | l<r, v(l)<v(r))`: pointer, bst, heap
+#. TKQ - Top K Query: heap
 #. RIQ - Range Intersect Query: Given point, find ranges that contains it: Interval tree
 #. ROQ - Range Overlap Query: Find intervals that overlaps with given range: Sorting + binary search, sorting + stack
-#. ECQ - Equivalence Class Query: Whether (x,y) belonds to the same group - union find
-#. OGQ - Optimal Goal Query: VLW - variable length window (monotonic goal), FLW - fixed length window (works for nonmonotone)
+#. ECQ - Equivalence Class Query: Whether (x,y) belonds to the same group: Union find, dict for parent-child
 #. MEX - Minimum Excluded Element: (???)
-#. LCS - Longest common/increasing/palindromic subsequence: DP
+#. LCS - Longest common/increasing/palindromic subsequence: VLW, DP
+#. RUQ - Range Update Query: Prefix sum->BIT (+delta at begin, -delta at end), segment tree
 
 General Techniques
 ---------------------------------------------------------------------------------
