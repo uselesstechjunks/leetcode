@@ -59,7 +59,11 @@ Unordered
 
 Bookkeeping
 ---------------------------------------------------------------------------------
-#. Hashmap known key - freq count, detect earlier occurance, obtain earliest/latest occurance
+#. KV map - multiple O(1) use-cases
+
+	- freq counts - histogram delta >= 0, distinct count >=k, min freq count >= k, majority-non majority count (max freq - sum V)
+	- detect earlier occurance, obtain earliest/latest occurance with paired value
+	- parent-child relation (stores parent/child pointer), alternative to union-find
 #. Stack (maintains insert seq in rev + can maintain first k inserted + latest in O(1))
 #. Queue (maintains insert seq + can maintain last k inserted + earliest/latest in O(1))
 #. Dequeue (maintains insert seq + can maintain first+last k inserted + earliest/latest in O(1))
