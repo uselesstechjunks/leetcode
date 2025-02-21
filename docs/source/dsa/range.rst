@@ -101,7 +101,7 @@ MEX - Minimum Excluded Element
 
 	.. collapse:: Implicit MEX
 
-	   .. literalinclude:: ../code/mex_implicit.py
+	   .. literalinclude:: ../code/smallest_infinite.py
 	      :language: python
 	      :linenos:
 #. `MEX on array with updates <https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/description/>`_
