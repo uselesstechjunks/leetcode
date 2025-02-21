@@ -62,7 +62,7 @@ class RangeMin(SegmentTree):
     def __init__(self, arr):
         super().__init__(arr=arr, combine=lambda x,y: min(x, y))
 
-class RangeFrequence(SegmentTree):
+class RangeFrequency(SegmentTree):
     def __init__(self, arr):
         counts = [(x,1) for x in arr]
         def combine(x, y):
