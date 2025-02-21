@@ -105,7 +105,12 @@ MEX (Minimal Excluded Element)
 - [Hard] `Find Kth Missing Positive <https://leetcode.com/problems/kth-missing-positive-number/description/>`_
 - [Medium] `Find All Missing Positives <https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/>`_
 - [Medium] `Add First K Missing Positives <https://leetcode.com/problems/append-k-integers-with-minimal-sum/description/>`_
-- [Medium] `Design Streamer with PopSmallest & AddBack <https://leetcode.com/problems/smallest-number-in-infinite-set/description/>`_
+- [Medium] [MEX without duplicates] `Design Streamer with PopSmallest & AddBack <https://leetcode.com/problems/smallest-number-in-infinite-set/description/>`_
+
+	- Think of it as if we're creating an array by calling the streamer.
+	- In absence of an addback feature, we'd just need to keep track of last streamed element.
+	- Streamed numbers form a contiguous region. Addback feature creates holes in that region.
+	- If holes are kept in a sorted container, we can find MEX easily.
 - [Medium] `MEX After Add/Sub Value Any Number of Times <https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/description/>`_
 
 Range Missing
