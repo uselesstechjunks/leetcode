@@ -10,17 +10,21 @@ Large Language Models
 Evaluation
 *****************************************************************************************
 Practical
------------------------------------------------------------------------------------------
-* [arize.com] `The Definitive Guide to LLM App Evaluation <https://arize.com/llm-evaluation/overview/>`_
-* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
+=========================================================================================
+* [huggingface.co] `Let's talk about LLM evaluation <https://huggingface.co/blog/clefourrier/llm-evaluation>`_
+* [github.com] `The LLM Evaluation guidebook <https://github.com/huggingface/evaluation-guidebook>`_
+* [confident-ai.com] `How to Evaluate LLM Applications: The Complete Guide <https://www.confident-ai.com/blog/how-to-evaluate-llm-applications>`_
 * [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
+* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
+* [arize.com] `The Definitive Guide to LLM App Evaluation <https://arize.com/llm-evaluation/overview/>`_
 * [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
-* [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
 
 Academic
------------------------------------------------------------------------------------------
+=========================================================================================
 * [arxiv.org] MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
 * [arxiv.org] OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
+* [acm.org] `A Survey on Evaluation of Large Language Models <https://dl.acm.org/doi/pdf/10.1145/3641289>_
+* [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
 
 *****************************************************************************************
 Training
