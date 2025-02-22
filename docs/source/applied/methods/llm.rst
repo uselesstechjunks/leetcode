@@ -7,9 +7,19 @@ Large Language Models
    :backlinks: none
 
 *****************************************************************************************
+Evaluation
+*****************************************************************************************
+* [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
+* [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
+* [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
+* [arxiv.org] MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
+* [arxiv.org] OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
+* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
+
+*****************************************************************************************
 Training
 *****************************************************************************************
-Practical
+Engineering
 =========================================================================================
 Scaling Large Models
 -----------------------------------------------------------------------------------------
@@ -49,57 +59,34 @@ Tools
 	* [spaCy] `Library for NLU/IE Tasks <https://spacy.io/usage/spacy-101>`_, `LLM-variants <https://spacy.io/usage/large-language-models>`_
 	* [tinkerd.net] `Distributed Training and DeepSpeed <https://tinkerd.net/blog/machine-learning/distributed-training/>`_
 
-Evaluation
------------------------------------------------------------------------------------------
-.. important::
-	* [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
-	* [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
-	* [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
-
-Pretraining
+Objectives
 =========================================================================================
-.. note::
-	* Improving Language Understanding by Generative Pre-Training
-	* Universal Language Model Fine-tuning for Text Classification
+Pretraining
+-----------------------------------------------------------------------------------------
+* Improving Language Understanding by Generative Pre-Training
+* Universal Language Model Fine-tuning for Text Classification
 
 Domain-Adaptation
-=========================================================================================
-.. note::
-	* SoDA
-	* [arxiv.org] `LIMO: Less is More for Reasoning <https://arxiv.org/abs/2502.03387>`_
+-----------------------------------------------------------------------------------------
+* SoDA
+* [arxiv.org] `LIMO: Less is More for Reasoning <https://arxiv.org/abs/2502.03387>`_
 
 Supervised Fine-Tuning (SFT)
-=========================================================================================
+-----------------------------------------------------------------------------------------
 Reinforcement Learning with Human Feedback (RLHF)/Proximal Policy Optimisation (PPO)
-========================================================================================
-.. note::
-	* [github.io] `The 37 Implementation Details of Proximal Policy Optimization <https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/>`_
-	* [arxiv.org] `SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training <https://arxiv.org/abs/2501.17161v1>`_
+-----------------------------------------------------------------------------------------
+* [github.io] `The 37 Implementation Details of Proximal Policy Optimization <https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/>`_
+* [arxiv.org] `SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training <https://arxiv.org/abs/2501.17161v1>`_
 
 Direct Preference Optimisation (DPO)
-=========================================================================================
+-----------------------------------------------------------------------------------------
 Reinforcement Fine-Tuning (RFT)
-=========================================================================================
-.. note::
-	* [philschmid.de] `Bite: How Deepseek R1 was trained <https://www.philschmid.de/deepseek-r1>`_
-	* [arxiv.org] `DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models <https://arxiv.org/abs/2402.03300>`_
-	* [predibase.com] `How Reinforcement Learning Beats Supervised Fine-Tuning When Data is Scarce <https://predibase.com/blog/how-reinforcement-learning-beats-supervised-fine-tuning-when-data-is-scarce>`_
+-----------------------------------------------------------------------------------------
+* [philschmid.de] `Bite: How Deepseek R1 was trained <https://www.philschmid.de/deepseek-r1>`_
+* [arxiv.org] `DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models <https://arxiv.org/abs/2402.03300>`_
+* [predibase.com] `How Reinforcement Learning Beats Supervised Fine-Tuning When Data is Scarce <https://predibase.com/blog/how-reinforcement-learning-beats-supervised-fine-tuning-when-data-is-scarce>`_
 
-*****************************************************************************************
-Special Techniques
-*****************************************************************************************
-Low-Rank Approximations (LoRA)
-=========================================================================================
-.. note::
-	* [tinkerd.net] `Language Model Fine-Tuning with LoRA <https://tinkerd.net/blog/machine-learning/lora/>`_
-
-MoE
-=========================================================================================
-.. note::
-	* [tinkerd.net] `Mixture of Experts Pattern for Transformer Models <https://tinkerd.net/blog/machine-learning/mixture-of-experts/>`_
-	* Mixtral
-
-Long Context
+Long Context LLMs
 =========================================================================================
 .. csv-table:: 
 	:header: "Category","Model","Max sequence length"
@@ -149,65 +136,68 @@ Pruning
 -----------------------------------------------------------------------------------------
 * LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference
 
+Special Techniques
+=========================================================================================
+Low-Rank Approximations (LoRA)
+-----------------------------------------------------------------------------------------
+* [tinkerd.net] `Language Model Fine-Tuning with LoRA <https://tinkerd.net/blog/machine-learning/lora/>`_
+
+Mixture of Experts
+-----------------------------------------------------------------------------------------
+* [tinkerd.net] `Mixture of Experts Pattern for Transformer Models <https://tinkerd.net/blog/machine-learning/mixture-of-experts/>`_
+* Mixtral
+
 Resources
 =========================================================================================
-.. note::
-	* `OpenAI Docs <https://platform.openai.com/docs/overview>`_
-	* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
-	* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
-	* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
+* `OpenAI Docs <https://platform.openai.com/docs/overview>`_
+* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
+* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
+* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
 
-		* `[magazine.sebastianraschka.com] Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
-	* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
+	* `[magazine.sebastianraschka.com] Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
+* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
 
 *****************************************************************************************
 Applied LLMs
 *****************************************************************************************
 In Context Learning (ICL)
 =========================================================================================
-.. note::
-	* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
-
-Embeddings for Search and Retrieval
-=========================================================================================
-.. note::
-	* [arxiv.org] SPLADE: `SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval <https://arxiv.org/pdf/2109.10086>`_
-	* [arxiv.org][Meta] DRAGON: `How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval <https://arxiv.org/pdf/2302.07452>`_
-	* [huggingface.co] `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
-
-Embedding Generation and Eval
+Example Selection
 -----------------------------------------------------------------------------------------
-.. note::
-	* [techtarget.com] `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_	
-	* Evaluation Metrics:
+* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
 
-		* [openreview.net] `BEIR <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
-		* [arxiv.org] `MTEB <https://arxiv.org/pdf/2210.07316>`_
-		* For speech and vision, refer to the guide above from TechTarget.
+Embeddings for Retrieval
+=========================================================================================
+* [techtarget.com] `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_
+
+Evaluation for Retrieval
+-----------------------------------------------------------------------------------------
+* [openreview.net] `BEIR <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
+* [arxiv.org] `MTEB <https://arxiv.org/pdf/2210.07316>`_
+* For speech and vision, refer to the guide above from TechTarget.
 
 Model Architecture
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [Huggingface] `SBERT <https://sbert.net/docs/sentence_transformer/pretrained_models.html>`_
-	* [Google GTR - T5 Based] `Large Dual Encoders Are Generalizable Retrievers <https://arxiv.org/pdf/2112.07899>`_
-	* [`Microsoft E5 <https://github.com/microsoft/unilm/tree/master/e5>`_] `Improving Text Embeddings with Large Language Models <https://arxiv.org/pdf/2401.00368>`_
-	* [Cohere - Better Perf on RAG] `Embed v3 <https://cohere.com/blog/introducing-embed-v3>`_
+-----------------------------------------------------------------------------------------
+* [sbert.net] `SBERT <https://sbert.net/docs/sentence_transformer/pretrained_models.html>`_
+* [arxiv.org][Google GTR - T5 Based] `Large Dual Encoders Are Generalizable Retrievers <https://arxiv.org/pdf/2112.07899>`_
+* [arxiv.org][`Microsoft E5 <https://github.com/microsoft/unilm/tree/master/e5>`_] `Improving Text Embeddings with Large Language Models <https://arxiv.org/pdf/2401.00368>`_
+* [cohere.com][Cohere - Better Perf on RAG] `Embed v3 <https://cohere.com/blog/introducing-embed-v3>`_
+* [arxiv.org] SPLADE: `SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval <https://arxiv.org/pdf/2109.10086>`_
+* [arxiv.org][Meta] DRAGON: `How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval <https://arxiv.org/pdf/2302.07452>`_
+* [huggingface.co] `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
 
-Embedding Retrieval
+Retrieval Tech
 -----------------------------------------------------------------------------------------
 Vector DB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [youtube.com] `Pinecone: YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
-	* Chroma, Weaviate
+* [youtube.com] `Pinecone: YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
+* Chroma, Weaviate
 
 RAG Focused
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [youtube.com] `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
-	* [llamaindex.ai] `[LlamaIndex] Structured Hierarchical Retrieval <https://docs.llamaindex.ai/en/stable/examples/query_engine/multi_doc_auto_retrieval/multi_doc_auto_retrieval/#structured-hierarchical-retrieval>`_
-	* [llamaindex.ai] `Child-Parent Recursive Retriever <https://docs.llamaindex.ai/en/stable/examples/retrievers/recursive_retriever_nodes/>`_
-	* [medium.com] `Optimizing Retrieval for RAG Applications: Enhancing Contextual Knowledge in LLMs <https://dxiaochuan.medium.com/optimizing-retrieval-for-rag-applications-enhancing-contextual-knowledge-in-llms-79ebcafe5f6e>`_
+* [youtube.com] `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
+* [llamaindex.ai] `[LlamaIndex] Structured Hierarchical Retrieval <https://docs.llamaindex.ai/en/stable/examples/query_engine/multi_doc_auto_retrieval/multi_doc_auto_retrieval/#structured-hierarchical-retrieval>`_
+* [llamaindex.ai] `Child-Parent Recursive Retriever <https://docs.llamaindex.ai/en/stable/examples/retrievers/recursive_retriever_nodes/>`_	
 
 Retrieval Augmented Generation (RAG)
 =========================================================================================
@@ -215,24 +205,42 @@ Retrieval Augmented Generation (RAG)
 	* [youtube.com][Stanford] `Stanford CS25: V3 I Retrieval Augmented Language Models <https://www.youtube.com/watch?v=mE7IDf2SmJg>`_
 	* [arxiv.org] `Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG <https://arxiv.org/abs/2501.09136>`_
 
-.. note::
-	* [Huggingface] `RAG paper - RAG Doc <https://huggingface.co/docs/transformers/main/en/model_doc/rag#rag>`_
-	* [nvidia.com] `RAG 101: Demystifying Retrieval-Augmented Generation Pipelines <https://resources.nvidia.com/en-us-ai-large-language-models/demystifying-rag-blog>`_
-	* [nvidia.com] `RAG 101: Retrieval-Augmented Generation Questions Answered <https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/>`_
-	* [arxiv.org][MSR] `From Local to Global: A Graph RAG Approach to Query-Focused Summarization <https://arxiv.org/pdf/2404.16130>`_
-	* [neo4j.com] `The GraphRAG Manifesto: Adding Knowledge to GenAI <https://neo4j.com/blog/graphrag-manifesto/>`_
+Fundamentals
+-----------------------------------------------------------------------------------------
+* [huggingface.co] `RAG paper - RAG Doc <https://huggingface.co/docs/transformers/main/en/model_doc/rag#rag>`_
+* [nvidia.com] `RAG 101: Demystifying Retrieval-Augmented Generation Pipelines <https://resources.nvidia.com/en-us-ai-large-language-models/demystifying-rag-blog>`_
+* [nvidia.com] `RAG 101: Retrieval-Augmented Generation Questions Answered <https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/>`_
+* [arxiv.org][MSR] `From Local to Global: A Graph RAG Approach to Query-Focused Summarization <https://arxiv.org/pdf/2404.16130>`_
+* [neo4j.com] `The GraphRAG Manifesto: Adding Knowledge to GenAI <https://neo4j.com/blog/graphrag-manifesto/>`_
 
 Resources
 -----------------------------------------------------------------------------------------
-Frozen RAG
+RAG Eval
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
+* [arxiv.org] RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
+* [arxiv.org] RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
+
+Practical RAG
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [arxiv.org] `Improving Retrieval for RAG based Question Answering Models on Financial Documents <https://arxiv.org/pdf/2404.07221>`_
+* [community.aws] `Techniques to Enhance Retrieval Augmented Generation (RAG) <https://community.aws/content/2gp2m3BJcl9mSMWT6njCIQNiz0e/techniques-to-enhance-retrieval-augmented-generation-rag?lang=en>`_	
+* [medium.com] `Optimizing Retrieval for RAG Applications: Enhancing Contextual Knowledge in LLMs <https://dxiaochuan.medium.com/optimizing-retrieval-for-rag-applications-enhancing-contextual-knowledge-in-llms-79ebcafe5f6e>`_
+* [arxiv.org] `Accelerating Inference of Retrieval-Augmented Generation via Sparse Context Selection <https://arxiv.org/abs/2405.16178>`_
+* [stackoverflow.blog] `Practical tips for retrieval-augmented generation (RAG) <https://stackoverflow.blog/2024/08/15/practical-tips-for-retrieval-augmented-generation-rag/>`_
+
+Agents & Tools
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [arxiv.org] `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
+
+Modeling Choices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Frozen RAG
+
 	* [arxiv.org][FAIR] `REPLUG: Retrieval-Augmented Black-Box Language Models <https://arxiv.org/pdf/2301.12652>`_
 	* [arxiv.org] RALM: `In-Context Retrieval-Augmented Language Models <https://arxiv.org/pdf/2302.00083>`_
 
-Trained RAG
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
+#. Trained RAG
+
 	* [arxiv.org][FAIR] RAG: `Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks <https://arxiv.org/pdf/2005.11401>`_
 	* [arxiv.org][FAIR] FiD: `Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering <https://arxiv.org/pdf/2007.01282>`_
 	* [arxiv.org][FAIR] Atlas: `Few-shot Learning with Retrieval Augmented Language Models <https://arxiv.org/pdf/2208.03299>`_	
@@ -254,17 +262,15 @@ Trained RAG
 		* [arxiv.org] `Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering <https://arxiv.org/pdf/2210.02627v1>`_
 		* [arxiv.org] `FINE-TUNE THE ENTIRE RAG ARCHITECTURE (INCLUDING DPR RETRIEVER) FOR QUESTION-ANSWERING <https://arxiv.org/pdf/2106.11517v1>`_
 
-Tech Stack
+RAG Pipelines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [arxiv.org] `Accelerating Inference of Retrieval-Augmented Generation via Sparse Context Selection <https://arxiv.org/abs/2405.16178>`_
-	* [llamaindex.ai] `RAG pipeline with Llama3 <https://docs.llamaindex.ai/en/stable/examples/cookbooks/llama3_cookbook/#lets-build-rag-pipeline-with-llama3>`_
-	* [huggingface.co] `Simple RAG for GitHub issues using Hugging Face Zephyr and LangChain <https://huggingface.co/learn/cookbook/en/rag_zephyr_langchain>`_
-	* [huggingface.co] `Advanced RAG on Hugging Face documentation using LangChain <https://huggingface.co/learn/cookbook/en/advanced_rag>`_
-	* [huggingface.co] `RAG Evaluation <https://huggingface.co/learn/cookbook/en/rag_evaluation>`_
-	* [huggingface.co] `Building A RAG Ebook “Librarian” Using LlamaIndex <https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian>`_
+* [llamaindex.ai] `RAG pipeline with Llama3 <https://docs.llamaindex.ai/en/stable/examples/cookbooks/llama3_cookbook/#lets-build-rag-pipeline-with-llama3>`_
+* [huggingface.co] `Simple RAG for GitHub issues using Hugging Face Zephyr and LangChain <https://huggingface.co/learn/cookbook/en/rag_zephyr_langchain>`_
+* [huggingface.co] `Advanced RAG on Hugging Face documentation using LangChain <https://huggingface.co/learn/cookbook/en/advanced_rag>`_
+* [huggingface.co] `RAG Evaluation <https://huggingface.co/learn/cookbook/en/rag_evaluation>`_
+* [huggingface.co] `Building A RAG Ebook “Librarian” Using LlamaIndex <https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian>`_
 
-RAG Key Paper Summary
+Notes: Modeling
 =========================================================================================
 .. note::
 	* x = query
@@ -343,6 +349,8 @@ Seq2Seq
 		- Training:
 		- Issues:
 
+Notes: Index Choice
+=========================================================================================
 Graph RAG
 -----------------------------------------------------------------------------------------
 .. important::
@@ -388,42 +396,29 @@ Graph RAG
 			- Diversity (provision of differing viewpoints or angles on the question posed)
 			- Selfcheckgpt
 
-LLM vs LC
------------------------------------------------------------------------------------------
-.. important::
-	- RAG FTW: Xu et al (NVDA): RETRIEVAL MEETS LONG CONTEXT LARGE LANGUAGE MODELS (Jan 2024)
+Notes: RAG vs Long Context
+=========================================================================================
+- RAG FTW: Xu et al (NVDA): RETRIEVAL MEETS LONG CONTEXT LARGE LANGUAGE MODELS (Jan 2024)
 
-		- Compares between 4k+RAG and 16k/32k LC finetuned with rope trick with 40B+ models
-		- Scroll and long bench
-	- LC FTW: Li et al (DM): Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach (Jul 2024)
+	- Compares between 4k+RAG and 16k/32k LC finetuned with rope trick with 40B+ models
+	- Scroll and long bench
+- LC FTW: Li et al (DM): Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach (Jul 2024)
 
-		- Systematized the eval framework using infty-bench EN.QA (~150k) and EN.MC (~142k) and 7 datasets from long-bench (<20k)
-		- 60% of the cases RAG and LC agrees (even makes the same mistakes)
-		- Cases where RAG fails 
+	- Systematized the eval framework using infty-bench EN.QA (~150k) and EN.MC (~142k) and 7 datasets from long-bench (<20k)
+	- 60% of the cases RAG and LC agrees (even makes the same mistakes)
+	- Cases where RAG fails 
 
-			(a) multi-hop retrieval 
-			(b) general query where semantic similarity doesn't make sense 
-			(c) long and complex query 
-			(d) implicit query requiring a holistic view of the context
-		- Key contribution: Proposes self-reflectory approach with RAG first with an option to respond "unanswerable", then LC
-	- RAG FTW: Wu et al (NVDA): In Defense of RAG in the Era of Long-Context Language Models (Sep 2024)
+		(a) multi-hop retrieval 
+		(b) general query where semantic similarity doesn't make sense 
+		(c) long and complex query 
+		(d) implicit query requiring a holistic view of the context
+	- Key contribution: Proposes self-reflectory approach with RAG first with an option to respond "unanswerable", then LC
+- RAG FTW: Wu et al (NVDA): In Defense of RAG in the Era of Long-Context Language Models (Sep 2024)
 
-		- Same eval method as the above
-		- Key contribution: keep the chunks in the same order as they appear in the original text instead of ordering them based on sim measure
+	- Same eval method as the above
+	- Key contribution: keep the chunks in the same order as they appear in the original text instead of ordering them based on sim measure
 
-LM Eval
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [arxiv.org] MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
-	* [arxiv.org] OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
-	* [arxiv.org] RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
-	* [arxiv.org] RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
-	* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
-
-.. seealso::
-	* [arxiv.org] `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
-
-LLM and KG
+Notes: LLM and KG
 =========================================================================================
 .. seealso::
 	* Unifying Large Language Models and Knowledge Graphs: A Roadmap
@@ -457,7 +452,7 @@ Synergized KG LLM
 - RecSys: Is chatgpt a good recommender? a preliminary study
 - AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
 
-[TODO: Classify Later] Other Topics
+Notes: Other Topics
 =========================================================================================
 * Prompt Engineering
 
