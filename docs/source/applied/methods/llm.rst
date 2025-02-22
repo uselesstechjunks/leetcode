@@ -330,18 +330,18 @@ Techniques
 #. [prompthub.us] `Prompt Chaining Guide <https://www.prompthub.us/blog/prompt-chaining-guide>`_
 #. [prompthub.us] `Fine-Tuning vs Prompt Engineering <https://www.prompthub.us/blog/fine-tuning-vs-prompt-engineering>`_
 
-Best Practices
------------------------------------------------------------------------------------------
-#. [prompthub.us] `10 Best Practices for Prompt Engineering with Any Model <https://www.prompthub.us/blog/10-best-practices-for-prompt-engineering-with-any-model>`_
-#. [prompthub.us] `Prompt Engineering Principles for 2024 <https://www.prompthub.us/blog/prompt-engineering-principles-for-2024>`_
-#. [prompthub.us] `One Size Does Not Fit All: An Analaysis of Model Specific Prompting Strategies <https://www.prompthub.us/blog/one-size-does-not-fit-all-an-analaysis-of-model-specific-prompting-strategies>`_
-
 Optimisation
 -----------------------------------------------------------------------------------------
 #. [prompthub.us] `Prompt Caching with OpenAI, Anthropic, and Google Models <https://www.prompthub.us/blog/prompt-caching-with-openai-anthropic-and-google-models>`_
 #. [prompthub.us] `Using LLMs to Optimize Your Prompts <https://www.prompthub.us/blog/using-llms-to-optimize-your-prompts>`_
 #. [prompthub.us] `How to Optimize Long Prompts <https://www.prompthub.us/blog/how-to-optimize-long-prompts>`_
 #. [prompthub.us] `Using Reinforcement Learning and LLMs to Optimize Prompts <https://www.prompthub.us/blog/using-reinforcement-learning-and-llms-to-optimize-prompts>`_
+
+Best Practices
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `10 Best Practices for Prompt Engineering with Any Model <https://www.prompthub.us/blog/10-best-practices-for-prompt-engineering-with-any-model>`_
+#. [prompthub.us] `Prompt Engineering Principles for 2024 <https://www.prompthub.us/blog/prompt-engineering-principles-for-2024>`_
+#. [prompthub.us] `One Size Does Not Fit All: An Analaysis of Model Specific Prompting Strategies <https://www.prompthub.us/blog/one-size-does-not-fit-all-an-analaysis-of-model-specific-prompting-strategies>`_
 
 Application Specific
 -----------------------------------------------------------------------------------------
