@@ -131,6 +131,7 @@ Recurrence
 Non Transformer
 -----------------------------------------------------------------------------------------
 * State SpaceModels: Mamba, Jamba
+
 	.. note::
 		* [Mamba] `Linear-Time Sequence Modeling with Selective State Spaces <https://arxiv.org/abs/2312.00752>`_
 		* `Understanding State Space Models <https://tinkerd.net/blog/machine-learning/state-space-models/>`_
@@ -147,183 +148,6 @@ Retrieval Augmented
 Pruning
 -----------------------------------------------------------------------------------------
 * LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference
-
-[TODO: Classify Later] Other Topics
-=========================================================================================
-* Prompt Engineering
-	* https://www.prompthub.us/blog
-	* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
-* Prompt Tuning
-* Dataset search tool by google: https://datasetsearch.research.google.com
-* Instruction Finetuning datasets
-
-	* NaturalInstructions: https://github.com/allenai/natural-instructions/
-* Supervised Finetuning datasets
-
-	* UltraChat: https://github.com/thunlp/UltraChat
-* RLHF/DPO datasets
-
-	* Ultrafeedback: https://huggingface.co/datasets/argilla/ultrafeedback-curated
-* Evaluation of instruction tuned/pre-trained models
-	* MMLU
-
-		* Paper: `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
-		* Dataset: https://huggingface.co/datasets/cais/mmlu
-	* Big-Bench
-
-		* Paper: `Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models <https://arxiv.org/pdf/2206.04615>`_
-		* Dataset: https://github.com/google/BIG-bench
-* RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
-* `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
-* `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
-
-Prompt best guide
------------------------------------------------------------------------------------------
-Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
-
-	- Zero-shot
-	- Random few-shot
-	- Random few-shot, chain-of-thought
-	- kNN, few-shot, chain-of-though
-	- Ensemble w/ choice shuffle
-
-Logit Bias
------------------------------------------------------------------------------------------
-A logit bias can be used to influence the output probabilities of a language model (LLM) to steer it towards a desired output, such as a "yes" or "no" answer. Here's how it works:
-
-What is Logit Bias?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In the context of language models, logits are the raw, unnormalized scores that a model outputs before applying the softmax function to obtain probabilities. Logit bias refers to the adjustment of these logits to favor or disfavor certain tokens.
-
-How Logit Bias Works
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Logit Adjustment:
-   - Each token in the vocabulary has an associated logit value.
-   - By adding a bias to the logits of specific tokens, you can increase or decrease the likelihood that those tokens will be selected when the model generates text.
-
-2. Softmax Function:
-   - After adjusting the logits, the softmax function is applied to convert these logits into probabilities.
-   - Tokens with higher logits will have higher probabilities of being selected.
-
-Forcing a Yes/No Answer with Logit Bias
-
-To force an LLM into a yes/no answer, you can adjust the logits for the "yes" and "no" tokens.
-
-Steps to Apply Logit Bias
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Identify Token IDs:
-
-   - Determine the token IDs for "yes" and "no" in the model's vocabulary. For instance, suppose "yes" is token ID 345 and "no" is token ID 678.
-
-2. Apply Bias:
-
-   - Adjust the logits for these tokens. Typically, you would add a positive bias to both "yes" and "no" tokens to increase their probabilities and/or subtract a bias from all other tokens to decrease their probabilities.
-
-3. Implementing the Bias:
-
-   - If using an API or library that supports logit bias (e.g., OpenAI GPT-3), you can specify the bias directly in the request.
-
-Example
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Here's an example of how you might apply a logit bias in a request using a hypothetical API:
-
-.. code-block:: json
-
-	{
-	  "prompt": "Is the sky blue?",
-	  "logit_bias": {
-		"345": 10,  // Bias for "yes"
-		"678": 10   // Bias for "no"
-	  }
-	}
-
-Practical Considerations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Magnitude of Bias:
-
-   - The magnitude of the bias determines how strongly the model will favor "yes" or "no." A larger bias will make the model more likely to choose these tokens.
-
-2. Context Sensitivity:
-
-   - The model may still consider the context of the prompt. If the context strongly indicates one answer over the other, the model may lean towards that answer even with a bias.
-
-3. Balanced Bias:
-
-   - If you want the model to have an equal chance of saying "yes" or "no," you can apply equal positive biases to both tokens. If you want to skew the response towards one answer, apply a larger bias to that token.
-
-Example in Practice
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Consider a scenario where you want the model to respond with "yes" or "no" to the question "Is the sky blue?"
-
-.. code-block:: text
-
-	- Prompt: "Is the sky blue?"
-	- Logit Bias:
-	  - Yes token (ID 345): +10
-	  - No token (ID 678): +10
-
-This setup ensures that the model will highly favor "yes" and "no" as possible outputs. The prompt and biases are designed so that "yes" or "no" are the most likely completions.
-
-API Implementation Example (Pseudo-Code)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Here's a pseudo-code example of how you might implement this with an API:
-
-.. code-block:: python
-
-	import openai
-
-	response = openai.Completion.create(
-	  engine="text-davinci-003",
-	  prompt="Is the sky blue?",
-	  max_tokens=1,
-	  logit_bias={"345": 10, "678": 10}
-	)
-
-	print(response.choices[0].text.strip())
-
-In this example:
-- The `prompt` is set to "Is the sky blue?"
-- The `logit_bias` dictionary adjusts the logits for the "yes" and "no" tokens to be higher.
-- The `max_tokens` is set to 1 to ensure only one word is generated.
-- By using logit bias in this way, you can guide the LLM to produce a "yes" or "no" answer more reliably.
-
-Issues with LLMs
------------------------------------------------------------------------------------------
-	- hallucination 
-		- detection and mitigation
-		- supervised: translation, summarization, image captioning
-			- n-gram (bleu/rouge, meteor)
-				- issues:
-					- reference dependent, usually only one reference
-					- often coarse or granular
-					- unable to capture semantics: fail to adapt to stylistic changes in the reference
-			- ask gpt (selfcheckgpt, g-eval)
-				- evaluate on (a) adherence (b) correctness
-				- issues:
-					- blackbox, unexplainable
-					- expensive
-		- unsupervised:
-			- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
-				- issues:
-					- too granular, represents confusion - not hallucination in particular, often red herring
-					- not always available
-	
-	- sycophany
-	- monosemanticity
-		- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
-		- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
-		- towards monosemanticity:
-			(1) creating models without superposition, perhaps by encouraging activation sparsity; 
-			(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
-			(3) hybrid approaches relying on a combination of the two.
-		- developed counterexamples which persuaded us that the 
-			- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
-			- standard dictionary learning methods (approach 2) had significant issues with overfitting.
-		- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
-	- alignment and preference
-		- rlhf
-		- dpo
-		- reflexion
 
 Resources
 =========================================================================================
@@ -633,3 +457,183 @@ Synergized KG LLM
 - RecSys: Is chatgpt a good recommender? a preliminary study
 - AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
 
+[TODO: Classify Later] Other Topics
+=========================================================================================
+* Prompt Engineering
+
+	* https://www.prompthub.us/blog
+	* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
+* Prompt Tuning
+* Dataset search tool by google: https://datasetsearch.research.google.com
+* Instruction Finetuning datasets
+
+	* NaturalInstructions: https://github.com/allenai/natural-instructions/
+* Supervised Finetuning datasets
+
+	* UltraChat: https://github.com/thunlp/UltraChat
+* RLHF/DPO datasets
+
+	* Ultrafeedback: https://huggingface.co/datasets/argilla/ultrafeedback-curated
+* Evaluation of instruction tuned/pre-trained models
+
+	* MMLU
+
+		* Paper: `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
+		* Dataset: https://huggingface.co/datasets/cais/mmlu
+	* Big-Bench
+
+		* Paper: `Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models <https://arxiv.org/pdf/2206.04615>`_
+		* Dataset: https://github.com/google/BIG-bench
+* RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
+* `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
+* `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
+
+Prompt best guide
+-----------------------------------------------------------------------------------------
+Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
+
+	- Zero-shot
+	- Random few-shot
+	- Random few-shot, chain-of-thought
+	- kNN, few-shot, chain-of-though
+	- Ensemble w/ choice shuffle
+
+Logit Bias
+-----------------------------------------------------------------------------------------
+A logit bias can be used to influence the output probabilities of a language model (LLM) to steer it towards a desired output, such as a "yes" or "no" answer. Here's how it works:
+
+What is Logit Bias?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In the context of language models, logits are the raw, unnormalized scores that a model outputs before applying the softmax function to obtain probabilities. Logit bias refers to the adjustment of these logits to favor or disfavor certain tokens.
+
+How Logit Bias Works
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Logit Adjustment:
+
+   - Each token in the vocabulary has an associated logit value.
+   - By adding a bias to the logits of specific tokens, you can increase or decrease the likelihood that those tokens will be selected when the model generates text.
+
+2. Softmax Function:
+
+   - After adjusting the logits, the softmax function is applied to convert these logits into probabilities.
+   - Tokens with higher logits will have higher probabilities of being selected.
+
+Forcing a Yes/No Answer with Logit Bias
+
+To force an LLM into a yes/no answer, you can adjust the logits for the "yes" and "no" tokens.
+
+Steps to Apply Logit Bias
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Identify Token IDs:
+
+   - Determine the token IDs for "yes" and "no" in the model's vocabulary. For instance, suppose "yes" is token ID 345 and "no" is token ID 678.
+
+2. Apply Bias:
+
+   - Adjust the logits for these tokens. Typically, you would add a positive bias to both "yes" and "no" tokens to increase their probabilities and/or subtract a bias from all other tokens to decrease their probabilities.
+
+3. Implementing the Bias:
+
+   - If using an API or library that supports logit bias (e.g., OpenAI GPT-3), you can specify the bias directly in the request.
+
+Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Here's an example of how you might apply a logit bias in a request using a hypothetical API:
+
+.. code-block:: json
+
+	{
+	  "prompt": "Is the sky blue?",
+	  "logit_bias": {
+		"345": 10,  // Bias for "yes"
+		"678": 10   // Bias for "no"
+	  }
+	}
+
+Practical Considerations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Magnitude of Bias:
+
+   - The magnitude of the bias determines how strongly the model will favor "yes" or "no." A larger bias will make the model more likely to choose these tokens.
+
+2. Context Sensitivity:
+
+   - The model may still consider the context of the prompt. If the context strongly indicates one answer over the other, the model may lean towards that answer even with a bias.
+
+3. Balanced Bias:
+
+   - If you want the model to have an equal chance of saying "yes" or "no," you can apply equal positive biases to both tokens. If you want to skew the response towards one answer, apply a larger bias to that token.
+
+Example in Practice
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Consider a scenario where you want the model to respond with "yes" or "no" to the question "Is the sky blue?"
+
+.. code-block:: text
+
+	- Prompt: "Is the sky blue?"
+	- Logit Bias:
+	  - Yes token (ID 345): +10
+	  - No token (ID 678): +10
+
+This setup ensures that the model will highly favor "yes" and "no" as possible outputs. The prompt and biases are designed so that "yes" or "no" are the most likely completions.
+
+API Implementation Example (Pseudo-Code)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Here's a pseudo-code example of how you might implement this with an API:
+
+.. code-block:: python
+
+	import openai
+
+	response = openai.Completion.create(
+	  engine="text-davinci-003",
+	  prompt="Is the sky blue?",
+	  max_tokens=1,
+	  logit_bias={"345": 10, "678": 10}
+	)
+
+	print(response.choices[0].text.strip())
+
+In this example:
+- The `prompt` is set to "Is the sky blue?"
+- The `logit_bias` dictionary adjusts the logits for the "yes" and "no" tokens to be higher.
+- The `max_tokens` is set to 1 to ensure only one word is generated.
+- By using logit bias in this way, you can guide the LLM to produce a "yes" or "no" answer more reliably.
+
+Issues with LLMs
+-----------------------------------------------------------------------------------------
+	- hallucination 
+		- detection and mitigation
+		- supervised: translation, summarization, image captioning
+			- n-gram (bleu/rouge, meteor)
+				- issues:
+					- reference dependent, usually only one reference
+					- often coarse or granular
+					- unable to capture semantics: fail to adapt to stylistic changes in the reference
+			- ask gpt (selfcheckgpt, g-eval)
+				- evaluate on (a) adherence (b) correctness
+				- issues:
+					- blackbox, unexplainable
+					- expensive
+		- unsupervised:
+			- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
+				- issues:
+					- too granular, represents confusion - not hallucination in particular, often red herring
+					- not always available
+	
+	- sycophany
+	- monosemanticity
+		- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
+		- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
+		- towards monosemanticity:
+			(1) creating models without superposition, perhaps by encouraging activation sparsity; 
+			(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
+			(3) hybrid approaches relying on a combination of the two.
+		- developed counterexamples which persuaded us that the 
+			- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
+			- standard dictionary learning methods (approach 2) had significant issues with overfitting.
+		- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
+	- alignment and preference
+		- rlhf
+		- dpo
+		- reflexion
