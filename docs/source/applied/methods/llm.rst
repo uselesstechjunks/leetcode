@@ -23,16 +23,16 @@ Academic
 =========================================================================================
 * [acm.org] `A Survey on Evaluation of Large Language Models <https://dl.acm.org/doi/pdf/10.1145/3641289>`_
 * [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
-* [arxiv.org] OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
+* [arxiv.org] `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
 * Evaluation of instruction tuned/pre-trained models
 
 	* MMLU
 
-		* Paper: [arxiv.org] MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
+		* [arxiv.org] `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
 		* Dataset: https://huggingface.co/datasets/cais/mmlu
 	* Big-Bench
 
-		* Paper: `Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models <https://arxiv.org/pdf/2206.04615>`_
+		* [arxiv.org] `Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models <https://arxiv.org/pdf/2206.04615>`_
 		* Dataset: https://github.com/google/BIG-bench
 
 *****************************************************************************************
@@ -280,15 +280,7 @@ Example in Practice
 * Consider a scenario where you want the model to respond with "yes" or "no" to the question "Is the sky blue?"
 * This setup ensures that the model will highly favor "yes" and "no" as possible outputs. The prompt and biases are designed so that "yes" or "no" are the most likely completions.
 
-.. collapse:: Expand Code
-	.. code-block:: text
-	
-		- Prompt: "Is the sky blue?"
-		- Logit Bias:
-			- Yes token (ID 345): +10
-			- No token (ID 678): +10
-
-.. collapse:: API Implementation Example (Pseudo-Code)
+.. collapse:: API Implementation Example
 	Here's a pseudo-code example of how you might implement this with an API:
 	
 	.. code-block:: python
@@ -312,25 +304,65 @@ Example in Practice
 	
 Resources
 =========================================================================================
-* `OpenAI Docs <https://platform.openai.com/docs/overview>`_
-* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
-* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
-* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
-* `[magazine.sebastianraschka.com] Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
-* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
+* [openai.com] `OpenAI Docs <https://platform.openai.com/docs/overview>`_
+* [HN] `You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
+* [Ask HN] `Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
+* [HN] `Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
+* [magazine.sebastianraschka.com] `Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
+* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
 
 *****************************************************************************************
 Applied LLMs
 *****************************************************************************************
 Prompt Engineering
 =========================================================================================
+Practical
+-----------------------------------------------------------------------------------------
+* [prompthub.us] `PromptHub Blog <https://www.prompthub.us/blog>`_
+* [youtube.com] Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
+
+Techniques
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `The Difference Between System Messages and User Messages in Prompt Engineering <https://www.prompthub.us/blog/the-difference-between-system-messages-and-user-messages-in-prompt-engineering>`_
+#. [prompthub.us] `Role-Prompting: Does Adding Personas to Your Prompts Really Make a Difference? <https://www.prompthub.us/blog/role-prompting-does-adding-personas-to-your-prompts-really-make-a-difference>`_
+#. [prompthub.us] `Chain of Thought Prompting Guide <https://www.prompthub.us/blog/chain-of-thought-prompting-guide>`_
+#. [prompthub.us] `Least-to-Most Prompting Guide <https://www.prompthub.us/blog/least-to-most-prompting-guide>`_
+#. [prompthub.us] `Prompt Chaining Guide <https://www.prompthub.us/blog/prompt-chaining-guide>`_
+#. [prompthub.us] `Fine-Tuning vs Prompt Engineering <https://www.prompthub.us/blog/fine-tuning-vs-prompt-engineering>`_
+
+In Context Learning (ICL)
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `The Few Shot Prompting Guide <https://www.prompthub.us/blog/the-few-shot-prompting-guide>`_
+#. [prompthub.us] `In Context Learning Guide <https://www.prompthub.us/blog/in-context-learning-guide>`_
+
+Optimisation
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `Prompt Caching with OpenAI, Anthropic, and Google Models <https://www.prompthub.us/blog/prompt-caching-with-openai-anthropic-and-google-models>`_
+#. [prompthub.us] `Using LLMs to Optimize Your Prompts <https://www.prompthub.us/blog/using-llms-to-optimize-your-prompts>`_
+#. [prompthub.us] `How to Optimize Long Prompts <https://www.prompthub.us/blog/how-to-optimize-long-prompts>`_
+#. [prompthub.us] `Using Reinforcement Learning and LLMs to Optimize Prompts <https://www.prompthub.us/blog/using-reinforcement-learning-and-llms-to-optimize-prompts>`_
+
+Best Practices
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `10 Best Practices for Prompt Engineering with Any Model <https://www.prompthub.us/blog/10-best-practices-for-prompt-engineering-with-any-model>`_
+#. [prompthub.us] `Prompt Engineering Principles for 2024 <https://www.prompthub.us/blog/prompt-engineering-principles-for-2024>`_
+#. [prompthub.us] `One Size Does Not Fit All: An Analaysis of Model Specific Prompting Strategies <https://www.prompthub.us/blog/one-size-does-not-fit-all-an-analaysis-of-model-specific-prompting-strategies>`_
+
+Application Specific
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `Better Summarization with Chain of Density Prompting <https://www.prompthub.us/blog/better-summarization-with-chain-of-density-prompting>`_
+#. [prompthub.us] `Prompt Engineering for Content Creation <https://www.prompthub.us/blog/prompt-engineering-for-content-creation>`_
+#. [prompthub.us] `RecPrompt: A Prompt Engineering Framework for LLM Recommendations <https://www.prompthub.us/blog/recprompt-a-prompt-engineering-framework-for-llm-recommendations>`_
+#. [prompthub.us] `Prompt Engineering for AI Agents <https://www.prompthub.us/blog/prompt-engineering-for-ai-agents>`_
+
+Academic
+-----------------------------------------------------------------------------------------
 * [arxiv.org][CMU] `Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing <https://arxiv.org/abs/2107.13586>`_
 * [arxiv.org] `Reflexion: Language Agents with Verbal Reinforcement Learning <https://arxiv.org/abs/2303.11366>`_
 * [arxiv.org] `Chain-of-Thought Prompting Elicits Reasoning in Large Language Models <https://arxiv.org/abs/2201.11903>`_
+* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
 * [arxiv.org] `A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications <https://arxiv.org/abs/2402.07927>`_
 * [arxiv.org] `The Prompt Report: A Systematic Survey of Prompting Techniques <https://arxiv.org/abs/2406.06608>`_
-* https://www.prompthub.us/blog
-* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
 * [arxiv.org] `Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine <https://arxiv.org/abs/2311.16452>`_
 
 	- Zero-shot
@@ -338,10 +370,15 @@ Prompt Engineering
 	- Random few-shot, chain-of-thought
 	- kNN, few-shot, chain-of-though
 	- Ensemble w/ choice shuffle
+* Key techniques/papers
 
-In Context Learning (ICL)
-=========================================================================================
-* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
+	- FewShot
+	- CoT
+	- ReAct: Synergizing Reasoning and Acting in Language Models
+	- Reflextion
+	- Self-instruct: Aligning Language Models with Self-Generated Instructions
+	- PiVe: Prompting with Iterative Verification Improving Graph-based Generative Capability of LLMs
+	- Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning
 
 Embeddings for Retrieval
 =========================================================================================
