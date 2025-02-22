@@ -325,11 +325,15 @@ Techniques
 -----------------------------------------------------------------------------------------
 #. [prompthub.us] `The Difference Between System Messages and User Messages in Prompt Engineering <https://www.prompthub.us/blog/the-difference-between-system-messages-and-user-messages-in-prompt-engineering>`_
 #. [prompthub.us] `Role-Prompting: Does Adding Personas to Your Prompts Really Make a Difference? <https://www.prompthub.us/blog/role-prompting-does-adding-personas-to-your-prompts-really-make-a-difference>`_
-#. [prompthub.us] `The Few Shot Prompting Guide <https://www.prompthub.us/blog/the-few-shot-prompting-guide>`_
 #. [prompthub.us] `Chain of Thought Prompting Guide <https://www.prompthub.us/blog/chain-of-thought-prompting-guide>`_
 #. [prompthub.us] `Least-to-Most Prompting Guide <https://www.prompthub.us/blog/least-to-most-prompting-guide>`_
 #. [prompthub.us] `Prompt Chaining Guide <https://www.prompthub.us/blog/prompt-chaining-guide>`_
 #. [prompthub.us] `Fine-Tuning vs Prompt Engineering <https://www.prompthub.us/blog/fine-tuning-vs-prompt-engineering>`_
+
+In Context Learning (ICL)
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `The Few Shot Prompting Guide <https://www.prompthub.us/blog/the-few-shot-prompting-guide>`_
+#. [prompthub.us] `In Context Learning Guide <https://www.prompthub.us/blog/in-context-learning-guide>`_
 
 Optimisation
 -----------------------------------------------------------------------------------------
@@ -356,6 +360,7 @@ Academic
 * [arxiv.org][CMU] `Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing <https://arxiv.org/abs/2107.13586>`_
 * [arxiv.org] `Reflexion: Language Agents with Verbal Reinforcement Learning <https://arxiv.org/abs/2303.11366>`_
 * [arxiv.org] `Chain-of-Thought Prompting Elicits Reasoning in Large Language Models <https://arxiv.org/abs/2201.11903>`_
+* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
 * [arxiv.org] `A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications <https://arxiv.org/abs/2402.07927>`_
 * [arxiv.org] `The Prompt Report: A Systematic Survey of Prompting Techniques <https://arxiv.org/abs/2406.06608>`_
 * [arxiv.org] `Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine <https://arxiv.org/abs/2311.16452>`_
@@ -374,16 +379,6 @@ Academic
 	- Self-instruct: Aligning Language Models with Self-Generated Instructions
 	- PiVe: Prompting with Iterative Verification Improving Graph-based Generative Capability of LLMs
 	- Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning
-
-In Context Learning (ICL)
-=========================================================================================
-Reading List
------------------------------------------------------------------------------------------
-* [prompthub.us] `In Context Learning Guide <https://www.prompthub.us/blog/in-context-learning-guide>`_
-
-Academic
------------------------------------------------------------------------------------------
-* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
 
 Embeddings for Retrieval
 =========================================================================================
