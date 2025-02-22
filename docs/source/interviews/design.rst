@@ -7,6 +7,38 @@ ML Application
    :backlinks: none
 
 ********************************************************************************
+Framework
+********************************************************************************
+#. What is the task? 
+
+	.. collapse:: Details
+		- Understanding requirements. Split into subtasks if applicable.
+#. What is ideal? What is good enough? How long do I have?
+
+	.. collapse:: Details
+		- Business objectives
+#. How do I know if I am getting better?
+
+	.. collapse:: Details
+		- Define metrics: primary, secondary
+#. How do I solve it?
+
+	.. collapse:: Details
+		- Discuss 3 approaches for solving primary
+		- First 2 options - pros and cons, 1 chosen with better trade-off
+		- Trade off types: (1) Modeling (2) Scaling
+		- Repeat for secondaries if time permits
+#. How do I know how it's doing in practice?
+
+	.. collapse:: Details
+		- Discuss observability, maintainibility
+#. How do I improve iteratively?
+
+	.. collapse:: Details
+		- Discuss common pitfalls - measure, address.
+#. How do I plan the roadmap?
+
+********************************************************************************
 Resources
 ********************************************************************************
 #. Interview Guide
@@ -26,17 +58,17 @@ Resources
 ********************************************************************************
 General System Design interview Tips 
 ********************************************************************************
-	#. Start with documenting your summary/overview in Google docs/Excalidraw or Zoom whiteboard. Even if the company hasn’t provided a link and interviewer insists on the conversation to be purely verbal - Document key bullet points. 
-	#. Present your interview systematically; lead the conversation and don't wait for the interviewer to ask questions. At the beginning of the interview, present the discussion's structure and ask the interviewer about their main areas of interest. 
-	#. Show your understanding of the business implications by sharing insights on metrics. Understand what the product truly expects from you. 
-	#. Actively listen to the interviewer. At the start, ask: "What are you primarily looking for?". Address the whole process, from collecting and labeling data to defining metrics. 
-	#. Assess the importance of the modeling process. 
-	#. Familiarize yourself with the nuances of ML-Ops, such as: At the start of the interview, get a feel for if the interviewer seems interested in ML-Ops. You'll mostly get a clear signal on whether or not they are interested. 
+#. Start with documenting your summary/overview in Google docs/Excalidraw or Zoom whiteboard. Even if the company hasn’t provided a link and interviewer insists on the conversation to be purely verbal - Document key bullet points. 
+#. Present your interview systematically; lead the conversation and don't wait for the interviewer to ask questions. At the beginning of the interview, present the discussion's structure and ask the interviewer about their main areas of interest. 
+#. Show your understanding of the business implications by sharing insights on metrics. Understand what the product truly expects from you. 
+#. Actively listen to the interviewer. At the start, ask: "What are you primarily looking for?". Address the whole process, from collecting and labeling data to defining metrics. 
+#. Assess the importance of the modeling process. 
+#. Familiarize yourself with the nuances of ML-Ops, such as: At the start of the interview, get a feel for if the interviewer seems interested in ML-Ops. You'll mostly get a clear signal on whether or not they are interested. 
 
-		#. Managing model versions 
-		#. Training models 
-		#. Using model execution engines 
-	#. Keep your resume at hand and review it before starting the interview.
+	#. Managing model versions 
+	#. Training models 
+	#. Using model execution engines 
+#. Keep your resume at hand and review it before starting the interview.
 
 ********************************************************************************
 Recommendation System
