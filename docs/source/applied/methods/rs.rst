@@ -248,6 +248,8 @@ Key Papers
 	:header: "Tag", "Title"
 	:align: center
 
+		QU,`Better search through query understanding <https://queryunderstanding.com/>`_
+		IR;QU,`Using Query Contexts in Information Retrieval <http://www-rali.iro.umontreal.ca/rali/sites/default/files/publis/10.1.1.409.2630.pdf>`_
 		IR;Course;Stanford,`CS 276 / LING 286 Information Retrieval and Web Search <https://web.stanford.edu/class/cs276/>`_
 		IR;Book,`Introduction to Information Retrieval <https://nlp.stanford.edu/IR-book/information-retrieval-book.html>`_
 		Retrieval;Survey,`A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
