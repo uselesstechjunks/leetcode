@@ -36,52 +36,11 @@ Academic
 		* Dataset: https://github.com/google/BIG-bench
 
 *****************************************************************************************
-Known Issues
-*****************************************************************************************
-Hallucination 
-=========================================================================================
-Detection & Mitigation
------------------------------------------------------------------------------------------
-Supervised
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Applicable: translation, summarization, image captioning
-
-	- n-gram (bleu/rouge, meteor)
-
-		- reference dependent, usually only one reference
-		- often coarse or granular
-		- unable to capture semantics: fail to adapt to stylistic changes in the reference
-	- ask gpt (selfcheckgpt, g-eval)
-
-		- evaluate on (a) adherence (b) correctness
-		- blackbox, unexplainable
-		- expensive
-Unsupervised
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
-- too granular, represents confusion - not hallucination in particular, often red herring
-- not always available
-
-Sycophany
-=========================================================================================
-Monosemanticity
-=========================================================================================
-- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
-- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
-- towards monosemanticity:
-
-	(1) creating models without superposition, perhaps by encouraging activation sparsity; 
-	(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
-	(3) hybrid approaches relying on a combination of the two.
-- developed counterexamples which persuaded us that the 
-
-	- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
-	- standard dictionary learning methods (approach 2) had significant issues with overfitting.
-- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
-
-*****************************************************************************************
 Training
 *****************************************************************************************
+* Training: `DeepSpeed <https://www.deepspeed.ai/training/>`_
+* Inference: `DeepSpeed <https://www.deepspeed.ai/inference/>`_, `vLLM <https://docs.vllm.ai/en/latest/index.html>`_
+
 Engineering
 =========================================================================================
 Scaling Large Models
@@ -92,6 +51,10 @@ Scaling Large Models
 Quantization
 -----------------------------------------------------------------------------------------
 * [huggingface.co] `Bits and bytes <https://huggingface.co/docs/bitsandbytes/index>`_
+
+Caching
+-----------------------------------------------------------------------------------------
+* [arxiv.org] `Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs <https://arxiv.org/html/2310.01801v4>`_
 
 Data Engineering
 -----------------------------------------------------------------------------------------
@@ -666,3 +629,47 @@ Synergized KG LLM
 - Search: LaMDA: Language Models for Dialog Applications
 - RecSys: Is chatgpt a good recommender? a preliminary study
 - AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
+
+*****************************************************************************************
+Known Issues
+*****************************************************************************************
+Hallucination 
+=========================================================================================
+Detection & Mitigation
+-----------------------------------------------------------------------------------------
+Supervised
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Applicable: translation, summarization, image captioning
+
+	- n-gram (bleu/rouge, meteor)
+
+		- reference dependent, usually only one reference
+		- often coarse or granular
+		- unable to capture semantics: fail to adapt to stylistic changes in the reference
+	- ask gpt (selfcheckgpt, g-eval)
+
+		- evaluate on (a) adherence (b) correctness
+		- blackbox, unexplainable
+		- expensive
+Unsupervised
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
+- too granular, represents confusion - not hallucination in particular, often red herring
+- not always available
+
+Sycophany
+=========================================================================================
+Monosemanticity
+=========================================================================================
+- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
+- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
+- towards monosemanticity:
+
+	(1) creating models without superposition, perhaps by encouraging activation sparsity; 
+	(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
+	(3) hybrid approaches relying on a combination of the two.
+- developed counterexamples which persuaded us that the 
+
+	- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
+	- standard dictionary learning methods (approach 2) had significant issues with overfitting.
+- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
