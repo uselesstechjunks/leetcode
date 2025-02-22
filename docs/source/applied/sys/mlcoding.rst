@@ -46,6 +46,11 @@ PyTorch
 	* [Book] `Learn PyTorch for Deep Learning: Zero to Mastery <https://www.learnpytorch.io/>`_
 	* [github.com] `The Incredible PyTorch <https://github.com/ritchieng/the-incredible-pytorch>`_
 
+CUDA
+===============================================================================
+.. important::
+	* [pyspur.dev] `Introduction to CUDA Programming for Python Developers <https://www.pyspur.dev/blog/introduction_cuda_programming>`_
+
 Hugging Face
 ===============================================================================
 .. important::

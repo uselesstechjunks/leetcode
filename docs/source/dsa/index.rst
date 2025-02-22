@@ -239,9 +239,18 @@ Fundamentals
 ================================================================================
 .. attention::
 
-	* [neetcode.io] `Neetcode <https://neetcode.io/practice>`_ 
-	* [bigocheatsheet.com] `Know Thy Complexities! <http://bigocheatsheet.com/>`_
+	* [thealgorists.com] `Data Structures & Algorithms <https://www.thealgorists.com/Algo>`_
 	* [cp-algorithms.com] `Algorithms for Competitive Programming <https://cp-algorithms.com/>`_
+	* [neetcode.io] `Neetcode <https://neetcode.io/practice>`_ 
+	* [bigocheatsheet.com] `Know Thy Complexities! <http://bigocheatsheet.com/>`_	
+
+Problem Patterns
+================================================================================
+.. note::
+
+	* [leetcode.com] `Master DSA Patterns <https://leetcode.com/discuss/study-guide/6364043/Master-DSA-Patterns/>`_
+	* [hellointerview.com] `Data Structures and Algorithms <https://www.hellointerview.com/learn/code>`_
+	* [deriveit.org] `DeriveIt <https://deriveit.org/coding>`_
 
 Code Patterns
 ================================================================================
@@ -295,10 +304,8 @@ Might be Useful
 .. note::
 	* [leetcode.com] `Lessons from My Google L5 Interview Experience: Tips and suggestion <https://leetcode.com/discuss/interview-question/6147892/Lessons-from-My-Google-L5-Interview-Experience%3A-Tips-and-suggestion>`_
 	* [leetcode.com] `Google Onsite <https://leetcode.com/discuss/interview-question/849947/google-onsite>`_
-	* [docs.google] `Leetcode Questions - public - solved by Siddhesh <https://docs.google.com/spreadsheets/d/1KkCeOIBwUFfKrHGGZe_6EJRCIqaM6MJBo0uSIMSD9bs/edit?gid=782922309#gid=782922309>`_
-	* [hellointerview.com] `Data Structures and Algorithms <https://www.hellointerview.com/learn/code>`_
-	* [leetcodethehardway.com] `LeetCode The Hard Way <https://leetcodethehardway.com/tutorials/category/basic-topics>`_
-	* [deriveit.org] `DeriveIt <https://deriveit.org/coding>`_	
+	* [docs.google] `Leetcode Questions - public - solved by Siddhesh <https://docs.google.com/spreadsheets/d/1KkCeOIBwUFfKrHGGZe_6EJRCIqaM6MJBo0uSIMSD9bs/edit?gid=782922309#gid=782922309>`_	
+	* [leetcodethehardway.com] `LeetCode The Hard Way <https://leetcodethehardway.com/tutorials/category/basic-topics>`_	
 	* [docs.google] `DSA Resource Problem Set <https://docs.google.com/spreadsheets/d/1hwvHbRargzmbErRYGU2cjxf4PR8GTOI-e1R9VqOVQgY/edit?gid=481396158#gid=481396158>`_
 	* [leetcode.com] `14 Patterns to Ace Any Coding Interview Question <https://leetcode.com/discuss/study-guide/4039411/14-Patterns-to-Ace-Any-Coding-Interview-Question>`_
 	* [educative.io] `Grokking the Coding Interview Patterns <https://www.educative.io/courses/grokking-coding-interview>`_
