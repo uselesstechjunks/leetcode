@@ -280,16 +280,7 @@ Example in Practice
 * Consider a scenario where you want the model to respond with "yes" or "no" to the question "Is the sky blue?"
 * This setup ensures that the model will highly favor "yes" and "no" as possible outputs. The prompt and biases are designed so that "yes" or "no" are the most likely completions.
 
-.. collapse:: Expand Code
-
-	.. code-block:: text
-	
-		- Prompt: "Is the sky blue?"
-		- Logit Bias:
-			- Yes token (ID 345): +10
-			- No token (ID 678): +10
-
-.. collapse:: API Implementation Example (Pseudo-Code)
+.. collapse:: API Implementation Example
 	Here's a pseudo-code example of how you might implement this with an API:
 	
 	.. code-block:: python
