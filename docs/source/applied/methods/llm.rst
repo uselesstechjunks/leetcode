@@ -324,6 +324,7 @@ Practical
 Techniques
 -----------------------------------------------------------------------------------------
 #. [prompthub.us] `The Difference Between System Messages and User Messages in Prompt Engineering <https://www.prompthub.us/blog/the-difference-between-system-messages-and-user-messages-in-prompt-engineering>`_
+#. [prompthub.us] `Role-Prompting: Does Adding Personas to Your Prompts Really Make a Difference? <https://www.prompthub.us/blog/role-prompting-does-adding-personas-to-your-prompts-really-make-a-difference>`_
 #. [prompthub.us] `The Few Shot Prompting Guide <https://www.prompthub.us/blog/the-few-shot-prompting-guide>`_
 #. [prompthub.us] `Chain of Thought Prompting Guide <https://www.prompthub.us/blog/chain-of-thought-prompting-guide>`_
 #. [prompthub.us] `Least-to-Most Prompting Guide <https://www.prompthub.us/blog/least-to-most-prompting-guide>`_
