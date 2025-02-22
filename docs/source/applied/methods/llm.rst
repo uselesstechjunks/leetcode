@@ -170,14 +170,15 @@ Embeddings for Retrieval
 =========================================================================================
 * [techtarget.com] `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_
 
-Evaluation for Retrieval
+Evaluation
 -----------------------------------------------------------------------------------------
 * [openreview.net] `BEIR <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
 * [arxiv.org] `MTEB <https://arxiv.org/pdf/2210.07316>`_
 * For speech and vision, refer to the guide above from TechTarget.
 
-Model Architecture
+Modeling
 -----------------------------------------------------------------------------------------
+* [arxiv.org] `Dense Passage Retrieval for Open-Domain Question Answering <https://arxiv.org/abs/2004.04906>`_
 * [sbert.net] `SBERT <https://sbert.net/docs/sentence_transformer/pretrained_models.html>`_
 * [arxiv.org][Google GTR - T5 Based] `Large Dual Encoders Are Generalizable Retrievers <https://arxiv.org/pdf/2112.07899>`_
 * [arxiv.org][`Microsoft E5 <https://github.com/microsoft/unilm/tree/master/e5>`_] `Improving Text Embeddings with Large Language Models <https://arxiv.org/pdf/2401.00368>`_
@@ -186,7 +187,7 @@ Model Architecture
 * [arxiv.org][Meta] DRAGON: `How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval <https://arxiv.org/pdf/2302.07452>`_
 * [huggingface.co] `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
 
-Retrieval Tech
+Tech
 -----------------------------------------------------------------------------------------
 Vector DB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
