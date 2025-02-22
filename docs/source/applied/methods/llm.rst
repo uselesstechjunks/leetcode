@@ -281,6 +281,7 @@ Example in Practice
 * This setup ensures that the model will highly favor "yes" and "no" as possible outputs. The prompt and biases are designed so that "yes" or "no" are the most likely completions.
 
 .. collapse:: Expand Code
+
 	.. code-block:: text
 	
 		- Prompt: "Is the sky blue?"
@@ -312,25 +313,30 @@ Example in Practice
 	
 Resources
 =========================================================================================
-* `OpenAI Docs <https://platform.openai.com/docs/overview>`_
-* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
-* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
-* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
-* `[magazine.sebastianraschka.com] Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
-* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
+* [openai.com] `OpenAI Docs <https://platform.openai.com/docs/overview>`_
+* [HN] `You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
+* [Ask HN] `Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
+* [HN] `Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
+* [magazine.sebastianraschka.com] `Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
+* [Github] `LLM Course <https://github.com/mlabonne/llm-course>`_
 
 *****************************************************************************************
 Applied LLMs
 *****************************************************************************************
 Prompt Engineering
 =========================================================================================
+Practical
+-----------------------------------------------------------------------------------------
+* [prompthub.us] `PromptHub Blog <https://www.prompthub.us/blog>`_
+* [youtube.com] Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
+
+Academic
+-----------------------------------------------------------------------------------------
 * [arxiv.org][CMU] `Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing <https://arxiv.org/abs/2107.13586>`_
 * [arxiv.org] `Reflexion: Language Agents with Verbal Reinforcement Learning <https://arxiv.org/abs/2303.11366>`_
 * [arxiv.org] `Chain-of-Thought Prompting Elicits Reasoning in Large Language Models <https://arxiv.org/abs/2201.11903>`_
 * [arxiv.org] `A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications <https://arxiv.org/abs/2402.07927>`_
 * [arxiv.org] `The Prompt Report: A Systematic Survey of Prompting Techniques <https://arxiv.org/abs/2406.06608>`_
-* https://www.prompthub.us/blog
-* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
 * [arxiv.org] `Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine <https://arxiv.org/abs/2311.16452>`_
 
 	- Zero-shot
@@ -338,6 +344,15 @@ Prompt Engineering
 	- Random few-shot, chain-of-thought
 	- kNN, few-shot, chain-of-though
 	- Ensemble w/ choice shuffle
+* Key techniques/papers
+
+	- FewShot
+	- CoT
+	- ReAct: Synergizing Reasoning and Acting in Language Models
+	- Reflextion
+	- Self-instruct: Aligning Language Models with Self-Generated Instructions
+	- PiVe: Prompting with Iterative Verification Improving Graph-based Generative Capability of LLMs
+	- Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning
 
 In Context Learning (ICL)
 =========================================================================================
