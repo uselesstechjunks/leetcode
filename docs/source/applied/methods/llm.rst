@@ -319,6 +319,7 @@ Prompt Engineering
 Practical
 -----------------------------------------------------------------------------------------
 * [prompthub.us] `PromptHub Blog <https://www.prompthub.us/blog>`_
+* [promptingguide.ai] `Prompt Engineering Guide <https://www.promptingguide.ai/>`_
 * [youtube.com] Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
 
 Techniques
@@ -326,6 +327,7 @@ Techniques
 #. [prompthub.us] `The Difference Between System Messages and User Messages in Prompt Engineering <https://www.prompthub.us/blog/the-difference-between-system-messages-and-user-messages-in-prompt-engineering>`_
 #. [prompthub.us] `Role-Prompting: Does Adding Personas to Your Prompts Really Make a Difference? <https://www.prompthub.us/blog/role-prompting-does-adding-personas-to-your-prompts-really-make-a-difference>`_
 #. [prompthub.us] `Chain of Thought Prompting Guide <https://www.prompthub.us/blog/chain-of-thought-prompting-guide>`_
+#. [promptingguide.ai] `Reflexion <https://www.promptingguide.ai/techniques/reflexion>`_
 #. [prompthub.us] `Least-to-Most Prompting Guide <https://www.prompthub.us/blog/least-to-most-prompting-guide>`_
 #. [prompthub.us] `Prompt Chaining Guide <https://www.prompthub.us/blog/prompt-chaining-guide>`_
 #. [prompthub.us] `Fine-Tuning vs Prompt Engineering <https://www.prompthub.us/blog/fine-tuning-vs-prompt-engineering>`_
