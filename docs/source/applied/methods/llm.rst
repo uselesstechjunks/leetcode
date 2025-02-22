@@ -7,39 +7,112 @@ Large Language Models
    :backlinks: none
 
 *****************************************************************************************
-Training
+Evaluation
 *****************************************************************************************
 Practical
 =========================================================================================
+* [huggingface.co] `Let's talk about LLM evaluation <https://huggingface.co/blog/clefourrier/llm-evaluation>`_
+* [github.com] `The LLM Evaluation guidebook <https://github.com/huggingface/evaluation-guidebook>`_
+* [confident-ai.com] `How to Evaluate LLM Applications: The Complete Guide <https://www.confident-ai.com/blog/how-to-evaluate-llm-applications>`_
+* [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
+* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
+* [arize.com] `The Definitive Guide to LLM App Evaluation <https://arize.com/llm-evaluation/overview/>`_
+* [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
+
+Academic
+=========================================================================================
+* [acm.org] `A Survey on Evaluation of Large Language Models <https://dl.acm.org/doi/pdf/10.1145/3641289>`_
+* [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
+* [arxiv.org] OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
+* Evaluation of instruction tuned/pre-trained models
+
+	* MMLU
+
+		* Paper: [arxiv.org] MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
+		* Dataset: https://huggingface.co/datasets/cais/mmlu
+	* Big-Bench
+
+		* Paper: `Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models <https://arxiv.org/pdf/2206.04615>`_
+		* Dataset: https://github.com/google/BIG-bench
+
+*****************************************************************************************
+Known Issues
+*****************************************************************************************
+Hallucination 
+=========================================================================================
+Detection & Mitigation
+-----------------------------------------------------------------------------------------
+Supervised
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Applicable: translation, summarization, image captioning
+
+	- n-gram (bleu/rouge, meteor)
+
+		- reference dependent, usually only one reference
+		- often coarse or granular
+		- unable to capture semantics: fail to adapt to stylistic changes in the reference
+	- ask gpt (selfcheckgpt, g-eval)
+
+		- evaluate on (a) adherence (b) correctness
+		- blackbox, unexplainable
+		- expensive
+Unsupervised
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
+- too granular, represents confusion - not hallucination in particular, often red herring
+- not always available
+
+Sycophany
+=========================================================================================
+Monosemanticity
+=========================================================================================
+- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
+- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
+- towards monosemanticity:
+
+	(1) creating models without superposition, perhaps by encouraging activation sparsity; 
+	(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
+	(3) hybrid approaches relying on a combination of the two.
+- developed counterexamples which persuaded us that the 
+
+	- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
+	- standard dictionary learning methods (approach 2) had significant issues with overfitting.
+- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
+
+*****************************************************************************************
+Training
+*****************************************************************************************
+Engineering
+=========================================================================================
 Scaling Large Models
 -----------------------------------------------------------------------------------------
-.. important::
-	* [github.io] `How To Scale Your Model <https://jax-ml.github.io/scaling-book/index>`_
-	* [mlsyscourse.org] `CMU: 15-442/15-642: Machine Learning Systems <https://mlsyscourse.org/>`_
+* [github.io] `How To Scale Your Model <https://jax-ml.github.io/scaling-book/index>`_
+* [mlsyscourse.org] `CMU: 15-442/15-642: Machine Learning Systems <https://mlsyscourse.org/>`_
+
+Quantization
+-----------------------------------------------------------------------------------------
+* [huggingface.co] `Bits and bytes <https://huggingface.co/docs/bitsandbytes/index>`_
 
 Data Engineering
 -----------------------------------------------------------------------------------------
-.. important::
-	* [github.com] `LLMDataHub: Awesome Datasets for LLM Training <https://github.com/Zjh-819/LLMDataHub>`_
-	* [arxiv.org] `The Pile: An 800GB Dataset of Diverse Text for Language Modeling <https://arxiv.org/abs/2101.00027>`_	
+* [github.com] `LLMDataHub: Awesome Datasets for LLM Training <https://github.com/Zjh-819/LLMDataHub>`_
+* [arxiv.org] `The Pile: An 800GB Dataset of Diverse Text for Language Modeling <https://arxiv.org/abs/2101.00027>`_	
 
 Hardware Utilisation
 -----------------------------------------------------------------------------------------
-.. important::
-	* [horace.io] `Making Deep Learning Go Brrrr From First Principles <https://horace.io/brrr_intro.html>`_
-	* [newsletter.maartengrootendorst.com] `A Visual Guide to Quantization <https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization>`_
-	* [nvidia.com] `Profiling PyTorch Models for NVIDIA GPUs <https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31644/>`_
-	* [pytorch.org] `What Every User Should Know About Mixed Precision Training in PyTorch <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/>`_
-	* [pytorch.org] `Performance Tuning Guide <https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html>`_
-	* [arxiv.org] `Hardware Acceleration of LLMs: A comprehensive survey and comparison <https://arxiv.org/pdf/2409.03384>`_
+* [horace.io] `Making Deep Learning Go Brrrr From First Principles <https://horace.io/brrr_intro.html>`_
+* [newsletter.maartengrootendorst.com] `A Visual Guide to Quantization <https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization>`_
+* [nvidia.com] `Profiling PyTorch Models for NVIDIA GPUs <https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31644/>`_
+* [pytorch.org] `What Every User Should Know About Mixed Precision Training in PyTorch <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/>`_
+* [pytorch.org] `Performance Tuning Guide <https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html>`_
+* [arxiv.org] `Hardware Acceleration of LLMs: A comprehensive survey and comparison <https://arxiv.org/pdf/2409.03384>`_
 
 Pipelines
 -----------------------------------------------------------------------------------------
-.. important::
-	* [huggingface] `LLM Inference at scale with TGI <https://huggingface.co/blog/martinigoyanes/llm-inference-at-scale-with-tgi>`_
-	* [vLLM] `Easy, Fast, and Cheap LLM Serving with PagedAttention <https://blog.vllm.ai/2023/06/20/vllm.html>`_
-	* [HuggingFace Blog] `Fine-tuning LLMs to 1.58bit: extreme quantization made easy <https://huggingface.co/blog/1_58_llm_extreme_quantization>`_
-	* [Paper] `Data Movement Is All You Need: A Case Study on Optimizing Transformers <https://arxiv.org/abs/2007.00072>`_
+* [huggingface] `LLM Inference at scale with TGI <https://huggingface.co/blog/martinigoyanes/llm-inference-at-scale-with-tgi>`_
+* [vLLM] `Easy, Fast, and Cheap LLM Serving with PagedAttention <https://blog.vllm.ai/2023/06/20/vllm.html>`_
+* [HuggingFace Blog] `Fine-tuning LLMs to 1.58bit: extreme quantization made easy <https://huggingface.co/blog/1_58_llm_extreme_quantization>`_
+* [Paper] `Data Movement Is All You Need: A Case Study on Optimizing Transformers <https://arxiv.org/abs/2007.00072>`_
 
 Tools
 -----------------------------------------------------------------------------------------
@@ -49,57 +122,45 @@ Tools
 	* [spaCy] `Library for NLU/IE Tasks <https://spacy.io/usage/spacy-101>`_, `LLM-variants <https://spacy.io/usage/large-language-models>`_
 	* [tinkerd.net] `Distributed Training and DeepSpeed <https://tinkerd.net/blog/machine-learning/distributed-training/>`_
 
-Evaluation
------------------------------------------------------------------------------------------
-.. important::
-	* [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
-	* [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
-	* [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
-
-Pretraining
+Objectives
 =========================================================================================
-.. note::
-	* Improving Language Understanding by Generative Pre-Training
-	* Universal Language Model Fine-tuning for Text Classification
+Pretraining
+-----------------------------------------------------------------------------------------
+* Improving Language Understanding by Generative Pre-Training
+* Universal Language Model Fine-tuning for Text Classification
 
 Domain-Adaptation
-=========================================================================================
-.. note::
-	* SoDA
-	* [arxiv.org] `LIMO: Less is More for Reasoning <https://arxiv.org/abs/2502.03387>`_
+-----------------------------------------------------------------------------------------
+* SoDA
+* [arxiv.org] `LIMO: Less is More for Reasoning <https://arxiv.org/abs/2502.03387>`_
+
+Instruction Fine-Tuning (IFT)
+-----------------------------------------------------------------------------------------
+Datasets: NaturalInstructions: https://github.com/allenai/natural-instructions/
 
 Supervised Fine-Tuning (SFT)
-=========================================================================================
+-----------------------------------------------------------------------------------------
+Datasets: UltraChat: https://github.com/thunlp/UltraChat
+
+Preference Optimisation (PO)
+-----------------------------------------------------------------------------------------
+* Datasets: Ultrafeedback: https://huggingface.co/datasets/argilla/ultrafeedback-curated
+* [huggingface.co] `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
+
 Reinforcement Learning with Human Feedback (RLHF)/Proximal Policy Optimisation (PPO)
-========================================================================================
-.. note::
-	* [github.io] `The 37 Implementation Details of Proximal Policy Optimization <https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/>`_
-	* [arxiv.org] `SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training <https://arxiv.org/abs/2501.17161v1>`_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [github.io] `The 37 Implementation Details of Proximal Policy Optimization <https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/>`_
+* [arxiv.org] `SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training <https://arxiv.org/abs/2501.17161v1>`_
 
 Direct Preference Optimisation (DPO)
-=========================================================================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Reinforcement Fine-Tuning (RFT)
-=========================================================================================
-.. note::
-	* [philschmid.de] `Bite: How Deepseek R1 was trained <https://www.philschmid.de/deepseek-r1>`_
-	* [arxiv.org] `DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models <https://arxiv.org/abs/2402.03300>`_
-	* [predibase.com] `How Reinforcement Learning Beats Supervised Fine-Tuning When Data is Scarce <https://predibase.com/blog/how-reinforcement-learning-beats-supervised-fine-tuning-when-data-is-scarce>`_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [philschmid.de] `Bite: How Deepseek R1 was trained <https://www.philschmid.de/deepseek-r1>`_
+* [arxiv.org] `DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models <https://arxiv.org/abs/2402.03300>`_
+* [predibase.com] `How Reinforcement Learning Beats Supervised Fine-Tuning When Data is Scarce <https://predibase.com/blog/how-reinforcement-learning-beats-supervised-fine-tuning-when-data-is-scarce>`_
 
-*****************************************************************************************
-Special Techniques
-*****************************************************************************************
-Low-Rank Approximations (LoRA)
-=========================================================================================
-.. note::
-	* [tinkerd.net] `Language Model Fine-Tuning with LoRA <https://tinkerd.net/blog/machine-learning/lora/>`_
-
-MoE
-=========================================================================================
-.. note::
-	* [tinkerd.net] `Mixture of Experts Pattern for Transformer Models <https://tinkerd.net/blog/machine-learning/mixture-of-experts/>`_
-	* Mixtral
-
-Long Context
+Long Context LLMs
 =========================================================================================
 .. csv-table:: 
 	:header: "Category","Model","Max sequence length"
@@ -131,6 +192,7 @@ Recurrence
 Non Transformer
 -----------------------------------------------------------------------------------------
 * State SpaceModels: Mamba, Jamba
+
 	.. note::
 		* [Mamba] `Linear-Time Sequence Modeling with Selective State Spaces <https://arxiv.org/abs/2312.00752>`_
 		* `Understanding State Space Models <https://tinkerd.net/blog/machine-learning/state-space-models/>`_
@@ -148,85 +210,46 @@ Pruning
 -----------------------------------------------------------------------------------------
 * LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference
 
-[TODO: Classify Later] Other Topics
+Special Techniques
 =========================================================================================
-* Prompt Engineering
-	* https://www.prompthub.us/blog
-	* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
-* Prompt Tuning
-* Dataset search tool by google: https://datasetsearch.research.google.com
-* Instruction Finetuning datasets
-
-	* NaturalInstructions: https://github.com/allenai/natural-instructions/
-* Supervised Finetuning datasets
-
-	* UltraChat: https://github.com/thunlp/UltraChat
-* RLHF/DPO datasets
-
-	* Ultrafeedback: https://huggingface.co/datasets/argilla/ultrafeedback-curated
-* Evaluation of instruction tuned/pre-trained models
-	* MMLU
-
-		* Paper: `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
-		* Dataset: https://huggingface.co/datasets/cais/mmlu
-	* Big-Bench
-
-		* Paper: `Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models <https://arxiv.org/pdf/2206.04615>`_
-		* Dataset: https://github.com/google/BIG-bench
-* RLHF/DPO: `Huggingface TRL <https://huggingface.co/docs/trl/index>`_
-* `[PEFT] <https://huggingface.co/docs/peft/index>`_ - Performance Efficient Fine-Tuning
-* `[BitsAndBytes] <https://huggingface.co/docs/bitsandbytes/index>`_ - Quantization
-
-Prompt best guide
+Low-Rank Approximations (LoRA)
 -----------------------------------------------------------------------------------------
-Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine
+* [huggingface.co] `Performance Efficient Fine-Tuning <https://huggingface.co/docs/peft/index>`_
+* [tinkerd.net] `Language Model Fine-Tuning with LoRA <https://tinkerd.net/blog/machine-learning/lora/>`_
 
-	- Zero-shot
-	- Random few-shot
-	- Random few-shot, chain-of-thought
-	- kNN, few-shot, chain-of-though
-	- Ensemble w/ choice shuffle
+Mixture of Experts
+-----------------------------------------------------------------------------------------
+* [tinkerd.net] `Mixture of Experts Pattern for Transformer Models <https://tinkerd.net/blog/machine-learning/mixture-of-experts/>`_
+* Mixtral
 
 Logit Bias
 -----------------------------------------------------------------------------------------
-A logit bias can be used to influence the output probabilities of a language model (LLM) to steer it towards a desired output, such as a "yes" or "no" answer. Here's how it works:
+Goal: Influence the output probabilities of a language model (LLM) to steer it towards a desired output, such as a "yes" or "no" answer.
 
-What is Logit Bias?
+	#. Logit Adjustment
+	
+		- Each token in the vocabulary has an associated logit value.
+		- By adding a bias to the logits of specific tokens, you can increase or decrease the likelihood that those tokens will be selected when the model generates text.
+	
+	#. Softmax Function
+	
+		- After adjusting the logits, the softmax function is applied to convert these logits into probabilities.
+		- Tokens with higher logits will have higher probabilities of being selected.
+
+Steps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In the context of language models, logits are the raw, unnormalized scores that a model outputs before applying the softmax function to obtain probabilities. Logit bias refers to the adjustment of these logits to favor or disfavor certain tokens.
+#. Identify Token IDs
 
-How Logit Bias Works
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Logit Adjustment:
-   - Each token in the vocabulary has an associated logit value.
-   - By adding a bias to the logits of specific tokens, you can increase or decrease the likelihood that those tokens will be selected when the model generates text.
+- Determine the token IDs for "yes" and "no" in the model's vocabulary. For instance, suppose "yes" is token ID 345 and "no" is token ID 678.
+#. Apply Bias
 
-2. Softmax Function:
-   - After adjusting the logits, the softmax function is applied to convert these logits into probabilities.
-   - Tokens with higher logits will have higher probabilities of being selected.
+	- Adjust the logits for these tokens. Typically, you would add a positive bias to both "yes" and "no" tokens to increase their probabilities and/or subtract a bias from all other tokens to decrease their probabilities.
+#. Implementing the Bias
 
-Forcing a Yes/No Answer with Logit Bias
-
-To force an LLM into a yes/no answer, you can adjust the logits for the "yes" and "no" tokens.
-
-Steps to Apply Logit Bias
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Identify Token IDs:
-
-   - Determine the token IDs for "yes" and "no" in the model's vocabulary. For instance, suppose "yes" is token ID 345 and "no" is token ID 678.
-
-2. Apply Bias:
-
-   - Adjust the logits for these tokens. Typically, you would add a positive bias to both "yes" and "no" tokens to increase their probabilities and/or subtract a bias from all other tokens to decrease their probabilities.
-
-3. Implementing the Bias:
-
-   - If using an API or library that supports logit bias (e.g., OpenAI GPT-3), you can specify the bias directly in the request.
+	- If using an API or library that supports logit bias (e.g., OpenAI GPT-3), you can specify the bias directly in the request.
 
 Example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Here's an example of how you might apply a logit bias in a request using a hypothetical API:
-
 .. code-block:: json
 
 	{
@@ -239,254 +262,193 @@ Here's an example of how you might apply a logit bias in a request using a hypot
 
 Practical Considerations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Magnitude of Bias:
+#. Magnitude of Bias
 
-   - The magnitude of the bias determines how strongly the model will favor "yes" or "no." A larger bias will make the model more likely to choose these tokens.
+	- The magnitude of the bias determines how strongly the model will favor "yes" or "no." 
+	- A larger bias will make the model more likely to choose these tokens.
 
-2. Context Sensitivity:
+#. Context Sensitivity
 
-   - The model may still consider the context of the prompt. If the context strongly indicates one answer over the other, the model may lean towards that answer even with a bias.
+	- The model may still consider the context of the prompt. If the context strongly indicates one answer over the other, the model may lean towards that answer even with a bias.
 
-3. Balanced Bias:
+3. Balanced Bias
 
-   - If you want the model to have an equal chance of saying "yes" or "no," you can apply equal positive biases to both tokens. If you want to skew the response towards one answer, apply a larger bias to that token.
+	- If you want the model to have an equal chance of saying "yes" or "no," you can apply equal positive biases to both tokens. If you want to skew the response towards one answer, apply a larger bias to that token.
 
 Example in Practice
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Consider a scenario where you want the model to respond with "yes" or "no" to the question "Is the sky blue?"
+* Consider a scenario where you want the model to respond with "yes" or "no" to the question "Is the sky blue?"
+* This setup ensures that the model will highly favor "yes" and "no" as possible outputs. The prompt and biases are designed so that "yes" or "no" are the most likely completions.
 
-.. code-block:: text
-
-	- Prompt: "Is the sky blue?"
-	- Logit Bias:
-	  - Yes token (ID 345): +10
-	  - No token (ID 678): +10
-
-This setup ensures that the model will highly favor "yes" and "no" as possible outputs. The prompt and biases are designed so that "yes" or "no" are the most likely completions.
-
-API Implementation Example (Pseudo-Code)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Here's a pseudo-code example of how you might implement this with an API:
-
-.. code-block:: python
-
-	import openai
-
-	response = openai.Completion.create(
-	  engine="text-davinci-003",
-	  prompt="Is the sky blue?",
-	  max_tokens=1,
-	  logit_bias={"345": 10, "678": 10}
-	)
-
-	print(response.choices[0].text.strip())
-
-In this example:
-- The `prompt` is set to "Is the sky blue?"
-- The `logit_bias` dictionary adjusts the logits for the "yes" and "no" tokens to be higher.
-- The `max_tokens` is set to 1 to ensure only one word is generated.
-- By using logit bias in this way, you can guide the LLM to produce a "yes" or "no" answer more reliably.
-
-Issues with LLMs
------------------------------------------------------------------------------------------
-	- hallucination 
-		- detection and mitigation
-		- supervised: translation, summarization, image captioning
-			- n-gram (bleu/rouge, meteor)
-				- issues:
-					- reference dependent, usually only one reference
-					- often coarse or granular
-					- unable to capture semantics: fail to adapt to stylistic changes in the reference
-			- ask gpt (selfcheckgpt, g-eval)
-				- evaluate on (a) adherence (b) correctness
-				- issues:
-					- blackbox, unexplainable
-					- expensive
-		- unsupervised:
-			- perplexity-based (gpt-score, entropy, token confidence) - good second order metric to check
-				- issues:
-					- too granular, represents confusion - not hallucination in particular, often red herring
-					- not always available
+.. collapse:: Expand Code
+	.. code-block:: text
 	
-	- sycophany
-	- monosemanticity
-		- many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs.
-		- neural network represents more independent "features" of the data than it has neurons by assigning each feature its own linear combination of neurons. If we view each feature as a vector over the neurons, then the set of features form an overcomplete linear basis for the activations of the network neurons.
-		- towards monosemanticity:
-			(1) creating models without superposition, perhaps by encouraging activation sparsity; 
-			(2) using dictionary learning to find an overcomplete feature basis in a model exhibiting superposition; and 
-			(3) hybrid approaches relying on a combination of the two.
-		- developed counterexamples which persuaded us that the 
-			- sparse architectural approach (approach 1) was insufficient to prevent polysemanticity, and that 
-			- standard dictionary learning methods (approach 2) had significant issues with overfitting.
-		- use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves.
-	- alignment and preference
-		- rlhf
-		- dpo
-		- reflexion
+		- Prompt: "Is the sky blue?"
+		- Logit Bias:
+			- Yes token (ID 345): +10
+			- No token (ID 678): +10
 
-TODO
------------------------------------------------------------------------------------------
-- constitutional ai
-- guardrails
-- https://github.com/microsoft/unilm
-- eval for ie tasks - open vs supervised
-- llm evals: https://github.com/openai/evals
-- multimodal ie
-- multimodal: text + image
-
-	- classification: 
-		- clip: https://github.com/openai/CLIP
-
-			Learning Transferable Visual Models From Natural Language Supervision
-		- cnn
-	- generation: 
-		- dall-e: https://github.com/openai/dall-e
-
-			Zero-Shot Text-to-Image Generation
-		- latent-diffusion: https://github.com/CompVis/latent-diffusion
-
-			- High-Resolution Image Synthesis with Latent Diffusion Models
-			- Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models
-		- stable diffusion: https://github.com/CompVis/stable-diffusion
-
-			- Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
-		- vision transformers and diffusion models 
-	- eval
-- cnn:
-	- image classification
-	- object detection (bounding box): 
-
-		https://paperswithcode.com/task/object-detection
-		YOLOv4: Optimal Speed and Accuracy of Object Detection
-	- image segmentation:
-
-		- GeminiFusion: Efficient Pixel-wise Multimodal Fusion for Vision Transformer
-- recsys - context based (in session rec - llm), interaction based (collaborative filtering - mf, gcn)
-- nlp downstream tasks
-- hardware p40, v100, a100 - arch, cost
-- training: domain adaptation (mlm/rtd/ssl-kl/clm), finetuning (sft/it), alignment and preference optim (rhlf/dpo)
-- domain understanding
-- design e2e: integrate user feedback
-
+.. collapse:: API Implementation Example (Pseudo-Code)
+	Here's a pseudo-code example of how you might implement this with an API:
+	
+	.. code-block:: python
+	
+		import openai
+		
+		response = openai.Completion.create(
+			engine="text-davinci-003",
+			prompt="Is the sky blue?",
+			max_tokens=1,
+			logit_bias={"345": 10, "678": 10}
+		)
+		
+		print(response.choices[0].text.strip())
+	
+	In this example:
+	- The `prompt` is set to "Is the sky blue?"
+	- The `logit_bias` dictionary adjusts the logits for the "yes" and "no" tokens to be higher.
+	- The `max_tokens` is set to 1 to ensure only one word is generated.
+	- By using logit bias in this way, you can guide the LLM to produce a "yes" or "no" answer more reliably.
+	
 Resources
 =========================================================================================
-.. note::
-	* `OpenAI Docs <https://platform.openai.com/docs/overview>`_
-	* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
-	* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
-	* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
-
-		* `[magazine.sebastianraschka.com] Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
-	* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
+* `OpenAI Docs <https://platform.openai.com/docs/overview>`_
+* `[HN] You probably don’t need to fine-tune an LLM <https://news.ycombinator.com/item?id=37174850>`_
+* `[Ask HN] Most efficient way to fine-tune an LLM in 2024? <https://news.ycombinator.com/item?id=39934480>`_
+* `[HN] Finetuning Large Language Models <https://news.ycombinator.com/item?id=35666201>`_
+* `[magazine.sebastianraschka.com] Finetuning Large Language Models <https://magazine.sebastianraschka.com/p/finetuning-large-language-models>`_
+* `[Github] LLM Course <https://github.com/mlabonne/llm-course>`_
 
 *****************************************************************************************
 Applied LLMs
 *****************************************************************************************
+Prompt Engineering
+=========================================================================================
+* [arxiv.org][CMU] `Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing <https://arxiv.org/abs/2107.13586>`_
+* [arxiv.org] `Reflexion: Language Agents with Verbal Reinforcement Learning <https://arxiv.org/abs/2303.11366>`_
+* [arxiv.org] `Chain-of-Thought Prompting Elicits Reasoning in Large Language Models <https://arxiv.org/abs/2201.11903>`_
+* [arxiv.org] `A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications <https://arxiv.org/abs/2402.07927>`_
+* [arxiv.org] `The Prompt Report: A Systematic Survey of Prompting Techniques <https://arxiv.org/abs/2406.06608>`_
+* https://www.prompthub.us/blog
+* Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
+* [arxiv.org] `Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine <https://arxiv.org/abs/2311.16452>`_
+
+	- Zero-shot
+	- Random few-shot
+	- Random few-shot, chain-of-thought
+	- kNN, few-shot, chain-of-though
+	- Ensemble w/ choice shuffle
+
 In Context Learning (ICL)
 =========================================================================================
-.. note::
-	* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
+* [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
 
-Embeddings for Search and Retrieval
+Embeddings for Retrieval
 =========================================================================================
-.. note::
-	* SPLADE: `SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval <https://arxiv.org/pdf/2109.10086>`_
-	* [Meta] DRAGON: `How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval <https://arxiv.org/pdf/2302.07452>`_
+* [techtarget.com] `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_
 
-Embedding Generation and Eval
+Evaluation
 -----------------------------------------------------------------------------------------
-.. note::
-	* [TechTarget] `Embedding models for semantic search: A guide <https://www.techtarget.com/searchenterpriseai/tip/Embedding-models-for-semantic-search-A-guide>`_	
-	* Evaluation Metrics:
+* [openreview.net] `BEIR <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
+* [arxiv.org] `MTEB <https://arxiv.org/pdf/2210.07316>`_
+* For speech and vision, refer to the guide above from TechTarget.
 
-		* `BEIR <https://openreview.net/pdf?id=wCu6T5xFjeJ>`_
-		* `MTEB <https://arxiv.org/pdf/2210.07316>`_
-		* For speech and vision, refer to the guide above from TechTarget.
+Modeling
+-----------------------------------------------------------------------------------------
+* [arxiv.org] `Dense Passage Retrieval for Open-Domain Question Answering <https://arxiv.org/abs/2004.04906>`_
+* [sbert.net] `SBERT <https://sbert.net/docs/sentence_transformer/pretrained_models.html>`_
+* [arxiv.org][Google GTR - T5 Based] `Large Dual Encoders Are Generalizable Retrievers <https://arxiv.org/pdf/2112.07899>`_
+* [arxiv.org][`Microsoft E5 <https://github.com/microsoft/unilm/tree/master/e5>`_] `Improving Text Embeddings with Large Language Models <https://arxiv.org/pdf/2401.00368>`_
+* [cohere.com][Cohere - Better Perf on RAG] `Embed v3 <https://cohere.com/blog/introducing-embed-v3>`_
+* [arxiv.org] SPLADE: `SPLADE v2: Sparse Lexical and Expansion Model for Information Retrieval <https://arxiv.org/pdf/2109.10086>`_
+* [arxiv.org][Meta] DRAGON: `How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval <https://arxiv.org/pdf/2302.07452>`_
+* [huggingface.co] `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
 
-Model Architecture
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [Huggingface] `SBERT <https://sbert.net/docs/sentence_transformer/pretrained_models.html>`_
-	* [Google GTR - T5 Based] `Large Dual Encoders Are Generalizable Retrievers <https://arxiv.org/pdf/2112.07899>`_
-	* [`Microsoft E5 <https://github.com/microsoft/unilm/tree/master/e5>`_] `Improving Text Embeddings with Large Language Models <https://arxiv.org/pdf/2401.00368>`_
-	* [Cohere - Better Perf on RAG] `Embed v3 <https://cohere.com/blog/introducing-embed-v3>`_
-
-Resources
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* `Matryoshka (Russian Doll) Embeddings <https://huggingface.co/blog/matryoshka>`_ - learning embeddings of different dimensions
-
-Embedding Retrieval
+Tech
 -----------------------------------------------------------------------------------------
 Vector DB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* Pinecone `YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
-	* Chroma, Weaviate
+* [youtube.com] `Pinecone: YouTube Playlist <https://youtube.com/playlist?list=PLRLVhGQeJDTLiw-ZJpgUtZW-bseS2gq9-&si=UBRFgChTmNnddLAt>`_
+* Chroma, Weaviate
 
 RAG Focused
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
-	* `[LlamaIndex] Structured Hierarchical Retrieval <https://docs.llamaindex.ai/en/stable/examples/query_engine/multi_doc_auto_retrieval/multi_doc_auto_retrieval/#structured-hierarchical-retrieval>`_
-	* `Child-Parent Recursive Retriever <https://docs.llamaindex.ai/en/stable/examples/retrievers/recursive_retriever_nodes/>`_
+* [youtube.com] `LlamaIndex <https://www.llamaindex.ai/>`_: `YouTube Channel <https://www.youtube.com/@LlamaIndex>`_
+* [llamaindex.ai] `[LlamaIndex] Structured Hierarchical Retrieval <https://docs.llamaindex.ai/en/stable/examples/query_engine/multi_doc_auto_retrieval/multi_doc_auto_retrieval/#structured-hierarchical-retrieval>`_
+* [llamaindex.ai] `Child-Parent Recursive Retriever <https://docs.llamaindex.ai/en/stable/examples/retrievers/recursive_retriever_nodes/>`_	
 
 Retrieval Augmented Generation (RAG)
 =========================================================================================
 .. attention::
-	* [Stanford Lecture] `Stanford CS25: V3 I Retrieval Augmented Language Models <https://www.youtube.com/watch?v=mE7IDf2SmJg>`_
+	* [youtube.com][Stanford] `Stanford CS25: V3 I Retrieval Augmented Language Models <https://www.youtube.com/watch?v=mE7IDf2SmJg>`_
 	* [arxiv.org] `Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG <https://arxiv.org/abs/2501.09136>`_
 
-.. note::
-	* [Huggingface] `RAG paper - RAG Doc <https://huggingface.co/docs/transformers/main/en/model_doc/rag#rag>`_
-	* [Nvidia] `RAG 101: Demystifying Retrieval-Augmented Generation Pipelines <https://resources.nvidia.com/en-us-ai-large-language-models/demystifying-rag-blog>`_
-	* [Nvidia] `RAG 101: Retrieval-Augmented Generation Questions Answered <https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/>`_
-	* [MSR] `From Local to Global: A Graph RAG Approach to Query-Focused Summarization <https://arxiv.org/pdf/2404.16130>`_
-	* [Neo4j] `The GraphRAG Manifesto: Adding Knowledge to GenAI <https://neo4j.com/blog/graphrag-manifesto/>`_
+Fundamentals
+-----------------------------------------------------------------------------------------
+* [huggingface.co] `RAG paper - RAG Doc <https://huggingface.co/docs/transformers/main/en/model_doc/rag#rag>`_
+* [nvidia.com] `RAG 101: Demystifying Retrieval-Augmented Generation Pipelines <https://resources.nvidia.com/en-us-ai-large-language-models/demystifying-rag-blog>`_
+* [nvidia.com] `RAG 101: Retrieval-Augmented Generation Questions Answered <https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/>`_
+* [arxiv.org][MSR] `From Local to Global: A Graph RAG Approach to Query-Focused Summarization <https://arxiv.org/pdf/2404.16130>`_
+* [neo4j.com] `The GraphRAG Manifesto: Adding Knowledge to GenAI <https://neo4j.com/blog/graphrag-manifesto/>`_
 
 Resources
 -----------------------------------------------------------------------------------------
-Frozen RAG
+RAG Eval
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [FAIR] `REPLUG: Retrieval-Augmented Black-Box Language Models <https://arxiv.org/pdf/2301.12652>`_
-	* RALM: `In-Context Retrieval-Augmented Language Models <https://arxiv.org/pdf/2302.00083>`_
+* [arxiv.org] RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
+* [arxiv.org] RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
 
-Trained RAG
+Practical RAG
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [FAIR] RAG: `Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks <https://arxiv.org/pdf/2005.11401>`_
-	* [FAIR] FiD: `Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering <https://arxiv.org/pdf/2007.01282>`_
-	* [FAIR] Atlas: `Few-shot Learning with Retrieval Augmented Language Models <https://arxiv.org/pdf/2208.03299>`_	
-	* [FAIR] kNN-LM: `Generalization through Memorization: Nearest Neighbor Language Models <https://arxiv.org/pdf/1911.00172>`_
-	* [Goog] REALM: `Retrieval-Augmented Language Model Pre-Training <https://arxiv.org/pdf/2002.08909>`_
-	* [FAIR] FLARE: `Active Retrieval Augmented Generation <https://arxiv.org/pdf/2305.06983>`_
-	* [FAIR] Toolformer: `Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
-	* `Improving Retrieval-Augmented Generation through Multi-Agent Reinforcement Learning <https://arxiv.org/abs/2501.15228>`_
-	* `SILO Language Models: Isolating Legal Risk In a Nonparametric Datastore <https://arxiv.org/pdf/2308.04430>`_
-	* `Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection <https://arxiv.org/pdf/2310.11511>`_
-	* [FAIR] RA-DIT: `Retrieval-Augmented Dual Instruction Tuning <https://arxiv.org/pdf/2310.01352>`_	
+* [arxiv.org] `Improving Retrieval for RAG based Question Answering Models on Financial Documents <https://arxiv.org/pdf/2404.07221>`_
+* [community.aws] `Techniques to Enhance Retrieval Augmented Generation (RAG) <https://community.aws/content/2gp2m3BJcl9mSMWT6njCIQNiz0e/techniques-to-enhance-retrieval-augmented-generation-rag?lang=en>`_	
+* [medium.com] `Optimizing Retrieval for RAG Applications: Enhancing Contextual Knowledge in LLMs <https://dxiaochuan.medium.com/optimizing-retrieval-for-rag-applications-enhancing-contextual-knowledge-in-llms-79ebcafe5f6e>`_
+* [arxiv.org] `Accelerating Inference of Retrieval-Augmented Generation via Sparse Context Selection <https://arxiv.org/abs/2405.16178>`_
+* [stackoverflow.blog] `Practical tips for retrieval-augmented generation (RAG) <https://stackoverflow.blog/2024/08/15/practical-tips-for-retrieval-augmented-generation-rag/>`_
+
+Agents & Tools
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [arxiv.org] `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
+
+Modeling Choices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Frozen RAG
+
+	* [arxiv.org][FAIR] `REPLUG: Retrieval-Augmented Black-Box Language Models <https://arxiv.org/pdf/2301.12652>`_
+	* [arxiv.org] RALM: `In-Context Retrieval-Augmented Language Models <https://arxiv.org/pdf/2302.00083>`_
+
+#. Trained RAG
+
+	* [arxiv.org][FAIR] RAG: `Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks <https://arxiv.org/pdf/2005.11401>`_
+	* [arxiv.org][FAIR] FiD: `Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering <https://arxiv.org/pdf/2007.01282>`_
+	* [arxiv.org][FAIR] Atlas: `Few-shot Learning with Retrieval Augmented Language Models <https://arxiv.org/pdf/2208.03299>`_	
+	* [arxiv.org][FAIR] kNN-LM: `Generalization through Memorization: Nearest Neighbor Language Models <https://arxiv.org/pdf/1911.00172>`_
+	* [arxiv.org][Goog] REALM: `Retrieval-Augmented Language Model Pre-Training <https://arxiv.org/pdf/2002.08909>`_
+	* [arxiv.org][FAIR] FLARE: `Active Retrieval Augmented Generation <https://arxiv.org/pdf/2305.06983>`_
+	* [arxiv.org][FAIR] Toolformer: `Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
+	* [arxiv.org] `Improving Retrieval-Augmented Generation through Multi-Agent Reinforcement Learning <https://arxiv.org/abs/2501.15228>`_
+	* [arxiv.org] `SILO Language Models: Isolating Legal Risk In a Nonparametric Datastore <https://arxiv.org/pdf/2308.04430>`_
+	* [arxiv.org] `Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection <https://arxiv.org/pdf/2310.11511>`_
+	* [arxiv.org][FAIR] RA-DIT: `Retrieval-Augmented Dual Instruction Tuning <https://arxiv.org/pdf/2310.01352>`_	
 	* Might not work well in practice:
 
-		* [DeepMind] Retro: `Improving language models by retrieving from trillions of tokens <https://arxiv.org/pdf/2112.04426>`_
-		* [Nvidia] Retro++: `InstructRetro: Instruction Tuning post Retrieval-Augmented Pretraining <https://arxiv.org/pdf/2310.07713v2>`_
+		* [arxiv.org][DeepMind] Retro: `Improving language models by retrieving from trillions of tokens <https://arxiv.org/pdf/2112.04426>`_
+		* [arxiv.org][Nvidia] Retro++: `InstructRetro: Instruction Tuning post Retrieval-Augmented Pretraining <https://arxiv.org/pdf/2310.07713v2>`_
 	* Other stuff:
 
-		* Issue with Frozen RAG: `Lost in the Middle: How Language Models Use Long Contexts <https://arxiv.org/pdf/2307.03172>`_
-		* `Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering <https://arxiv.org/pdf/2210.02627v1>`_
-		* `FINE-TUNE THE ENTIRE RAG ARCHITECTURE (INCLUDING DPR RETRIEVER) FOR QUESTION-ANSWERING <https://arxiv.org/pdf/2106.11517v1>`_
+		* [arxiv.org] Issue with Frozen RAG: `Lost in the Middle: How Language Models Use Long Contexts <https://arxiv.org/pdf/2307.03172>`_
+		* [arxiv.org] `Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering <https://arxiv.org/pdf/2210.02627v1>`_
+		* [arxiv.org] `FINE-TUNE THE ENTIRE RAG ARCHITECTURE (INCLUDING DPR RETRIEVER) FOR QUESTION-ANSWERING <https://arxiv.org/pdf/2106.11517v1>`_
 
-Tech Stack
+RAG Pipelines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* [LlamaIndex] `RAG pipeline with Llama3 <https://docs.llamaindex.ai/en/stable/examples/cookbooks/llama3_cookbook/#lets-build-rag-pipeline-with-llama3>`_
-	* [Huggingface] `Simple RAG for GitHub issues using Hugging Face Zephyr and LangChain <https://huggingface.co/learn/cookbook/en/rag_zephyr_langchain>`_
-	* [Huggingface] `Advanced RAG on Hugging Face documentation using LangChain <https://huggingface.co/learn/cookbook/en/advanced_rag>`_
-	* [Huggingface] `RAG Evaluation <https://huggingface.co/learn/cookbook/en/rag_evaluation>`_
-	* [Huggingface] `Building A RAG Ebook “Librarian” Using LlamaIndex <https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian>`_
+* [llamaindex.ai] `RAG pipeline with Llama3 <https://docs.llamaindex.ai/en/stable/examples/cookbooks/llama3_cookbook/#lets-build-rag-pipeline-with-llama3>`_
+* [huggingface.co] `Simple RAG for GitHub issues using Hugging Face Zephyr and LangChain <https://huggingface.co/learn/cookbook/en/rag_zephyr_langchain>`_
+* [huggingface.co] `Advanced RAG on Hugging Face documentation using LangChain <https://huggingface.co/learn/cookbook/en/advanced_rag>`_
+* [huggingface.co] `RAG Evaluation <https://huggingface.co/learn/cookbook/en/rag_evaluation>`_
+* [huggingface.co] `Building A RAG Ebook “Librarian” Using LlamaIndex <https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian>`_
 
-RAG Key Paper Summary
+Notes: Modeling
 =========================================================================================
 .. note::
 	* x = query
@@ -565,6 +527,8 @@ Seq2Seq
 		- Training:
 		- Issues:
 
+Notes: Index Choice
+=========================================================================================
 Graph RAG
 -----------------------------------------------------------------------------------------
 .. important::
@@ -610,42 +574,29 @@ Graph RAG
 			- Diversity (provision of differing viewpoints or angles on the question posed)
 			- Selfcheckgpt
 
-LLM vs LC
------------------------------------------------------------------------------------------
-.. important::
-	- RAG FTW: Xu et al (NVDA): RETRIEVAL MEETS LONG CONTEXT LARGE LANGUAGE MODELS (Jan 2024)
+Notes: RAG vs Long Context
+=========================================================================================
+- RAG FTW: Xu et al (NVDA): RETRIEVAL MEETS LONG CONTEXT LARGE LANGUAGE MODELS (Jan 2024)
 
-		- Compares between 4k+RAG and 16k/32k LC finetuned with rope trick with 40B+ models
-		- Scroll and long bench
-	- LC FTW: Li et al (DM): Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach (Jul 2024)
+	- Compares between 4k+RAG and 16k/32k LC finetuned with rope trick with 40B+ models
+	- Scroll and long bench
+- LC FTW: Li et al (DM): Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach (Jul 2024)
 
-		- Systematized the eval framework using infty-bench EN.QA (~150k) and EN.MC (~142k) and 7 datasets from long-bench (<20k)
-		- 60% of the cases RAG and LC agrees (even makes the same mistakes)
-		- Cases where RAG fails 
+	- Systematized the eval framework using infty-bench EN.QA (~150k) and EN.MC (~142k) and 7 datasets from long-bench (<20k)
+	- 60% of the cases RAG and LC agrees (even makes the same mistakes)
+	- Cases where RAG fails 
 
-			(a) multi-hop retrieval 
-			(b) general query where semantic similarity doesn't make sense 
-			(c) long and complex query 
-			(d) implicit query requiring a holistic view of the context
-		- Key contribution: Proposes self-reflectory approach with RAG first with an option to respond "unanswerable", then LC
-	- RAG FTW: Wu et al (NVDA): In Defense of RAG in the Era of Long-Context Language Models (Sep 2024)
+		(a) multi-hop retrieval 
+		(b) general query where semantic similarity doesn't make sense 
+		(c) long and complex query 
+		(d) implicit query requiring a holistic view of the context
+	- Key contribution: Proposes self-reflectory approach with RAG first with an option to respond "unanswerable", then LC
+- RAG FTW: Wu et al (NVDA): In Defense of RAG in the Era of Long-Context Language Models (Sep 2024)
 
-		- Same eval method as the above
-		- Key contribution: keep the chunks in the same order as they appear in the original text instead of ordering them based on sim measure
+	- Same eval method as the above
+	- Key contribution: keep the chunks in the same order as they appear in the original text instead of ordering them based on sim measure
 
-LM Eval
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. note::
-	* MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
-	* OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
-	* RAGAS: `Automated Evaluation of Retrieval Augmented Generation <https://arxiv.org/abs/2309.15217>`_
-	* RAGChecker: `A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <https://arxiv.org/abs/2408.08067>`_
-	* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
-
-.. seealso::
-	* `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
-
-LLM and KG
+Notes: LLM and KG
 =========================================================================================
 .. seealso::
 	* Unifying Large Language Models and Knowledge Graphs: A Roadmap
@@ -678,4 +629,3 @@ Synergized KG LLM
 - Search: LaMDA: Language Models for Dialog Applications
 - RecSys: Is chatgpt a good recommender? a preliminary study
 - AI Assistant: ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation
-
