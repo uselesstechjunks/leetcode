@@ -1,5 +1,5 @@
 *****************************************************************************************
-Natural Language Processing Tasks
+Natural Language Processing
 *****************************************************************************************
 .. contents:: Table of Contents
    :depth: 2
@@ -8,123 +8,129 @@ Natural Language Processing Tasks
 
 Notes from Common NLP Tasks
 =========================================================================================
-Using In-Context Capability:
+Using In-Context Capability
 -----------------------------------------------------------------------------------------
 - Language Models as Knowledge Bases
 - Language Models are Open Knowledge Graphs
 
-NER:
+NER
 -----------------------------------------------------------------------------------------
-.. important::
-	- Fixed NER: 
+- Fixed NER: 
 
-		- classification + chunking - encoder based (NER/POS)
+	- classification + chunking - encoder based (NER/POS)
 
-			- token classification:
+		- token classification:
 
-				- attributing a label to each token by having one class per entity and one class for “no entity.”
-				- ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC', 'B-MISC', 'I-MISC']
-				- AutoModelForTokenClassification 
-			- chunking: 
+			- attributing a label to each token by having one class per entity and one class for “no entity.”
+			- ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC', 'B-MISC', 'I-MISC']
+			- AutoModelForTokenClassification 
+		- chunking: 
 
-				- attributing one label (usually B-) to any tokens that are at the beginning of a chunk, 
-				- another label (usually I-) to tokens that are inside a chunk, and 
-				- a third label (usually O) to tokens that don’t belong to any chunk.
-		- The traditional framework used to evaluate token classification prediction is seqeval - classwise p/r/f1/accuracy, overall p/r/f1/accuracy
-	- Free NER:
+			- attributing one label (usually B-) to any tokens that are at the beginning of a chunk, 
+			- another label (usually I-) to tokens that are inside a chunk, and 
+			- a third label (usually O) to tokens that don’t belong to any chunk.
+	- The traditional framework used to evaluate token classification prediction is seqeval - classwise p/r/f1/accuracy, overall p/r/f1/accuracy
+- Free NER:
 
-		- extract - s2s, decoder
-		- Autoregressive Entity Retrieval
-		- GPT-NER
-		- Universal NER
+	- extract - s2s, decoder
+	- Autoregressive Entity Retrieval
+	- GPT-NER
+	- Universal NER
 	
 Disambiguation 
 -----------------------------------------------------------------------------------------
-.. important::
-	- Clustering based approach - 
-	- End to end neural coreference method - all O(n^2) pairs
+- Clustering based approach - 
+- End to end neural coreference method - all O(n^2) pairs
 
-		- https://huggingface.co/models?other=coreference-resolution
-		- https://explosion.ai/blog/coref
+	- https://huggingface.co/models?other=coreference-resolution
+	- https://explosion.ai/blog/coref
 
-Entity Linking:
+Entity Linking
 -----------------------------------------------------------------------------------------
-.. important::
-	- Text-based approaches - tfidf, statistical	
-	- Graph-based approaches to existing knowledge-base - https://huggingface.co/models?other=named-entity-linking
+- Text-based approaches - tfidf, statistical	
+- Graph-based approaches to existing knowledge-base - https://huggingface.co/models?other=named-entity-linking
 
-		- Autoregressive Entity Retrieval - was trained on the full training set of BLINK (i.e., 9M datapoints for entity-disambiguation grounded on Wikipedia).	
-		- Blink - Scalable Zero-shot Entity Linking with Dense Entity Retrieval
-		- Refined - https://github.com/alexa/ReFinED	
+	- Autoregressive Entity Retrieval - was trained on the full training set of BLINK (i.e., 9M datapoints for entity-disambiguation grounded on Wikipedia).	
+	- Blink - Scalable Zero-shot Entity Linking with Dense Entity Retrieval
+	- Refined - https://github.com/alexa/ReFinED	
 
-RE:
+Relation Extraction
 -----------------------------------------------------------------------------------------
 - SentenceRE
 - DocRE
 
-Link Prediction: 
+Link Prediction
 -----------------------------------------------------------------------------------------
 Knowledge Graph Large Language Model (KG-LLM) for Link Prediction
 
-Graph Completion:
+Graph Completion
 -----------------------------------------------------------------------------------------
 SimKGC: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models
 
-Prompting:
------------------------------------------------------------------------------------------
-.. important::
-	- FewShot:
-	- CoT:
-	- ReAct: Synergizing Reasoning and Acting in Language Models	
-	- Reflextion: 
-	- Self-instruct: Aligning Language Models with Self-Generated Instructions
-	- PiVe: Prompting with Iterative Verification Improving Graph-based Generative Capability of LLMs
-	- Prompt Tuning: The Power of Scale for Parameter-Efficient Prompt Tuning
-
-Question Answering:
+Question Answering
 -----------------------------------------------------------------------------------------
 QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering
 
-GraphRAG: 
+GraphRAG
 -----------------------------------------------------------------------------------------
-MultiModal:
+MultiModal
 -----------------------------------------------------------------------------------------
 Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey
 
-Other NLP Tasks:
+Other NLP Tasks
 -----------------------------------------------------------------------------------------
 Large Language Models Meet NLP: A Survey
 
-Classification Tasks
+Information Retrieval (IR)
 =========================================================================================
-1. Sentiment Analysis
+0. Language Models in IR
 -----------------------------------------------------------------------------------------
-Description:
-Sentiment analysis involves determining the sentiment or emotional tone behind a piece of text, typically classified as positive, negative, or neutral.
+- MLM based: BERT, T5
+- RTD based: Electra
+- Contrastive Learning based:
+	- image: OG image and distorted image form pos-pairs
+	- text: contriever
+		- contrastive learning based embeddings
+		- infonce loss: softmax over 1 positive and K negative
+		- getting positive: 
+			(a) Inverse Cloze Task (contiguous segment as query, rest as doc) - relates with closure of a query
+			(b) Independent cropping - sample two independent contiguous pieces of text
+		- getting negatives:
+			(a) in-batch negatives
+			(b) negs from previous batch docs - called keys. either not updated or updated slowly with different parameterization including momentum (moco)
+	- text: e5
+- Long Context
+	- "lost in the middle" using longer context (primacy bias, recency bias) - U-shaped curve
+		-> if using only a decoder model, due to masked attention, put the question at the end 
+		-> instruction tuned is much better
+		-> relevance order of the retriever matters a lot
+	
+	- extending context length
+		- needle in a haystack
+		- l-eval, novelqa, infty-bench
+		- nocha (fictional, unseen books with true/false q/a pairs 
+			- performs better when fact is present in the book at sentence level
+			- performs worse if requires global reasoning or if contains extensive world building
+		- position embeddings 
+			- change the angle hyperparameter in RoPE to deal with longer sequences
+		- efficient attention 
+			- full attention with hardware-aware algorithm design - flash attention
+			- sparse attention techniques: sliding window attention, block attention
+		- data engineering - replicate larger model perf using 7b/13b llama
+			- continuous pretraining
+				- 1-5B new tokens for 
+				- upsampling longer sequences
+				- same #tokens per batch (adjusted as per sequence length and batch size)
+				- 2e-5 lr cosine schedule
+				- 2x8 a100 gpu, 7 day training, flashattention (3x time for 80k vs 4k, majority time goes in cpu<->gpu, gpu<->gpu, and hbm<->sm)
+			- instruction tuning: rlhf data + self instruct
+				- (a) chunk long doc (b) from long doc formulate q/a (c) use OG doc and q/a pair as training
+				- 1e-5 lr constant
+				- lora/qlora
+		- incorporating some form of recurrance relation - transformer-xl, longformer, rmt
 
-Example:
+- chain-of-agents
 
-- Input: "I love this product!"
-- Output: "Positive"
-
-Evaluation Metrics:
-
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-
-Benchmark Datasets:
-
-- IMDb Movie Reviews
-- Sentiment140
-- SST (Stanford Sentiment Treebank)
-
-Example Prompt:
-"Determine the sentiment of the following text: 'I love this product!'"
-
-Information Retrieval (IR) Tasks
-=========================================================================================
 1. Document Retrieval
 -----------------------------------------------------------------------------------------
 Description:
@@ -224,6 +230,25 @@ Example Prompt:
 
 Information Extraction (IE) Tasks
 =========================================================================================
+0. Language Models in IE
+-----------------------------------------------------------------------------------------
+- NER: named entity recognition, entity-linking
+	- predefined entity-classes: location (LOC), organizations (ORG), person (PER) and Miscellaneous (MISC). 
+		- https://huggingface.co/dslim/bert-base-NER
+		- https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english			
+	- open entity-classes: 
+		- UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
+		- GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
+		- GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
+	- Open IE eval: Preserving Knowledge Invariance: Rethinking Robustness Evaluation of Open Information Extraction (https://github.com/qijimrc/ROBUST/tree/master)		
+	- LLMaAA: Making Large Language Models as Active Annotators https://github.com/ridiculouz/LLMaAA/tree/main
+	- A Deep Learning Based Knowledge Extraction Toolkit for Knowledge Graph Construction (https://github.com/zjunlp/DeepKE)
+- RE: relationship extraction
+	- QA4RE: Aligning Instruction Tasks Unlocks Large Language Models as Zero-Shot Relation Extractors (ZS Pr) https://github.com/OSU-NLP-Group/QA4RE
+	- DocGNRE: Semi-automatic Data Enhancement for Document-Level Relation Extraction with Distant Supervision from Large Language Models (https://github.com/bigai-nlco/DocGNRE)
+- EE: event extraction
+- Papers to read: UniversalNER, GLiNER
+
 1. Named Entity Recognition (NER)
 -----------------------------------------------------------------------------------------
 Description:
@@ -323,6 +348,34 @@ Benchmark Datasets:
 Example Prompt:
 "Identify coreferences in the following text: 'Jane went to the market. She bought apples.'"
 
+Classification Tasks
+=========================================================================================
+1. Sentiment Analysis
+-----------------------------------------------------------------------------------------
+Description:
+Sentiment analysis involves determining the sentiment or emotional tone behind a piece of text, typically classified as positive, negative, or neutral.
+
+Example:
+
+- Input: "I love this product!"
+- Output: "Positive"
+
+Evaluation Metrics:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+
+Benchmark Datasets:
+
+- IMDb Movie Reviews
+- Sentiment140
+- SST (Stanford Sentiment Treebank)
+
+Example Prompt:
+"Determine the sentiment of the following text: 'I love this product!'"
+
 Sequence to Sequence Tasks
 =========================================================================================
 1. Machine Translation
@@ -397,73 +450,6 @@ Benchmark Datasets:
 
 Example Prompt:
 "Generate a continuation for the following text: 'Once upon a time, in a small village, there lived a brave young girl named Ella.'"
-
-4. Information Retrieval
------------------------------------------------------------------------------------------
-	- MLM based: BERT, T5
-	- RTD based: Electra
-	- Contrastive Learning based:
-		- image: OG image and distorted image form pos-pairs
-		- text: contriever
-			- contrastive learning based embeddings
-			- infonce loss: softmax over 1 positive and K negative
-			- getting positive: 
-				(a) Inverse Cloze Task (contiguous segment as query, rest as doc) - relates with closure of a query
-				(b) Independent cropping - sample two independent contiguous pieces of text
-			- getting negatives:
-				(a) in-batch negatives
-				(b) negs from previous batch docs - called keys. either not updated or updated slowly with different parameterization including momentum (moco)
-		- text: e5
-	- Long Context
-		- "lost in the middle" using longer context (primacy bias, recency bias) - U-shaped curve
-			-> if using only a decoder model, due to masked attention, put the question at the end 
-			-> instruction tuned is much better
-			-> relevance order of the retriever matters a lot
-		
-		- extending context length
-			- needle in a haystack
-			- l-eval, novelqa, infty-bench
-			- nocha (fictional, unseen books with true/false q/a pairs 
-				- performs better when fact is present in the book at sentence level
-				- performs worse if requires global reasoning or if contains extensive world building
-			- position embeddings 
-				- change the angle hyperparameter in RoPE to deal with longer sequences
-			- efficient attention 
-				- full attention with hardware-aware algorithm design - flash attention
-				- sparse attention techniques: sliding window attention, block attention
-			- data engineering - replicate larger model perf using 7b/13b llama
-				- continuous pretraining
-					- 1-5B new tokens for 
-					- upsampling longer sequences
-					- same #tokens per batch (adjusted as per sequence length and batch size)
-					- 2e-5 lr cosine schedule
-					- 2x8 a100 gpu, 7 day training, flashattention (3x time for 80k vs 4k, majority time goes in cpu<->gpu, gpu<->gpu, and hbm<->sm)
-				- instruction tuning: rlhf data + self instruct
-					- (a) chunk long doc (b) from long doc formulate q/a (c) use OG doc and q/a pair as training
-					- 1e-5 lr constant
-					- lora/qlora
-			- incorporating some form of recurrance relation - transformer-xl, longformer, rmt
-	
-	- chain-of-agents
-
-5. Information Extraction
------------------------------------------------------------------------------------------
-	- NER: named entity recognition, entity-linking
-		- predefined entity-classes: location (LOC), organizations (ORG), person (PER) and Miscellaneous (MISC). 
-			- https://huggingface.co/dslim/bert-base-NER
-			- https://huggingface.co/FacebookAI/xlm-roberta-large-finetuned-conll03-english			
-		- open entity-classes: 
-			- UniversalNER: https://universal-ner.github.io/, https://huggingface.co/Universal-NER
-			- GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer https://huggingface.co/urchade/gliner_large-v2
-			- GLiNER - Multitask: https://www.knowledgator.com/ -> https://huggingface.co/knowledgator/gliner-multitask-large-v0.5
-		- Open IE eval: Preserving Knowledge Invariance: Rethinking Robustness Evaluation of Open Information Extraction (https://github.com/qijimrc/ROBUST/tree/master)		
-		- LLMaAA: Making Large Language Models as Active Annotators https://github.com/ridiculouz/LLMaAA/tree/main
-		- A Deep Learning Based Knowledge Extraction Toolkit for Knowledge Graph Construction (https://github.com/zjunlp/DeepKE)
-	- RE: relationship extraction
-		- QA4RE: Aligning Instruction Tasks Unlocks Large Language Models as Zero-Shot Relation Extractors (ZS Pr) https://github.com/OSU-NLP-Group/QA4RE
-		- DocGNRE: Semi-automatic Data Enhancement for Document-Level Relation Extraction with Distant Supervision from Large Language Models (https://github.com/bigai-nlco/DocGNRE)
-	- EE: event extraction
-	- Papers to read: UniversalNER, GLiNER
 
 Multimodal Tasks
 =========================================================================================
@@ -567,7 +553,7 @@ Extending Vocab for Domain-Adaptation or Fine-Tuning
 	* model.transformer.wte.weight[:tokenizer.vocab_size]: Extracts the original embeddings up to the size of the original vocabulary.
 	* torch.cat([original_embeddings, new_token_embeddings], dim=0): Concatenates the original embeddings with the new token embeddings.
 
-Notes:
+Notes
 -----------------------------------------------------------------------------------------
 * Tokenizer Vocabulary: Ensure that after extending the tokenizer vocabulary, you save it or use it consistently across your tasks.
 * Embedding Adjustment: The approach here adds new tokens and initializes their embeddings separately from the pre-trained embeddings. This keeps the original embeddings intact while allowing new tokens to have their embeddings learned during fine-tuning.
