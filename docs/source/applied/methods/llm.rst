@@ -321,6 +321,28 @@ Practical
 * [prompthub.us] `PromptHub Blog <https://www.prompthub.us/blog>`_
 * [youtube.com] Nice video from OpenAi - https://youtu.be/ahnGLM-RC1Y?si=irFR4SoEfrEzyPh9
 
+Techniques
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `Prompt Engineering Principles for 2024 <https://www.prompthub.us/blog/prompt-engineering-principles-for-2024>`_
+#. [prompthub.us] `The Difference Between System Messages and User Messages in Prompt Engineering <https://www.prompthub.us/blog/the-difference-between-system-messages-and-user-messages-in-prompt-engineering>`_
+#. [prompthub.us] `Chain of Thought Prompting Guide <https://www.prompthub.us/blog/chain-of-thought-prompting-guide>`_
+#. [prompthub.us] `The Few Shot Prompting Guide <https://www.prompthub.us/blog/the-few-shot-prompting-guide>`_
+#. [prompthub.us] `Fine-Tuning vs Prompt Engineering <https://www.prompthub.us/blog/fine-tuning-vs-prompt-engineering>`_
+#. [prompthub.us] `One Size Does Not Fit All: An Analaysis of Model Specific Prompting Strategies <https://www.prompthub.us/blog/one-size-does-not-fit-all-an-analaysis-of-model-specific-prompting-strategies>`_
+
+Optimisation
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `Prompt Caching with OpenAI, Anthropic, and Google Models <https://www.prompthub.us/blog/prompt-caching-with-openai-anthropic-and-google-models>`_
+#. [prompthub.us] `Using LLMs to Optimize Your Prompts <https://www.prompthub.us/blog/using-llms-to-optimize-your-prompts>`_
+#. [prompthub.us] `How to Optimize Long Prompts <https://www.prompthub.us/blog/how-to-optimize-long-prompts>`_
+#. [prompthub.us] `Using Reinforcement Learning and LLMs to Optimize Prompts <https://www.prompthub.us/blog/using-reinforcement-learning-and-llms-to-optimize-prompts>`_
+
+Application Specific
+-----------------------------------------------------------------------------------------
+#. [prompthub.us] `Prompt Engineering for Content Creation <https://www.prompthub.us/blog/prompt-engineering-for-content-creation>`_
+#. [prompthub.us] `RecPrompt: A Prompt Engineering Framework for LLM Recommendations <https://www.prompthub.us/blog/recprompt-a-prompt-engineering-framework-for-llm-recommendations>`_
+#. [prompthub.us] `Prompt Engineering for AI Agents <https://www.prompthub.us/blog/prompt-engineering-for-ai-agents>`_
+
 Academic
 -----------------------------------------------------------------------------------------
 * [arxiv.org][CMU] `Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing <https://arxiv.org/abs/2107.13586>`_
@@ -347,6 +369,12 @@ Academic
 
 In Context Learning (ICL)
 =========================================================================================
+Reading List
+-----------------------------------------------------------------------------------------
+* [prompthub.us] `In Context Learning Guide <https://www.prompthub.us/blog/in-context-learning-guide>`_
+
+Academic
+-----------------------------------------------------------------------------------------
 * [aclanthology.org] `Diverse Demonstrations Improve In-context Compositional Generalization <https://aclanthology.org/2023.acl-long.78.pdf>`_
 
 Embeddings for Retrieval
