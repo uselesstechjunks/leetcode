@@ -9,12 +9,18 @@ Large Language Models
 *****************************************************************************************
 Evaluation
 *****************************************************************************************
+Practical
+-----------------------------------------------------------------------------------------
+* [arize.com] `The Definitive Guide to LLM App Evaluation <https://arize.com/llm-evaluation/overview/>`_
+* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
 * [confident.ai] `LLM Evaluation Metrics: The Ultimate LLM Evaluation Guide <https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation>`_
 * [guardrailsai.com] `Guardrails AI Docs <https://www.guardrailsai.com/docs>`_
 * [arxiv.org] `The Responsible Foundation Model Development Cheatsheet: A Review of Tools & Resources <https://arxiv.org/abs/2406.16746>`_
+
+Academic
+-----------------------------------------------------------------------------------------
 * [arxiv.org] MMLU - `Measuring Massive Multitask Language Understanding <https://arxiv.org/pdf/2009.03300>`_
 * [arxiv.org] OpenQA - `Retrieving and Reading: A Comprehensive Survey on Open-domain Question Answering <https://arxiv.org/pdf/2101.00774>`_
-* [confident.ai] `DeepEval <https://docs.confident-ai.com/docs/getting-started>`_
 
 *****************************************************************************************
 Training
