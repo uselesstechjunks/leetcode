@@ -7,6 +7,13 @@ Search & Recommendation
    :backlinks: none
 
 ************************************************************************************
+Survey Papers
+************************************************************************************
+* [le-wu.com][Ranking] `A Survey on Accuracy-Oriented Neural Recommendation <https://le-wu.com/files/Publications/JOURNAL/A_Survey_of_Neural_Recommender_Systems.pdf>`_
+* [arxiv.org][Retrieval] `A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
+* [arxiv.org][CTR] `Deep Learning for Click-Through Rate Estimation <https://arxiv.org/abs/2104.10584>`_
+
+************************************************************************************
 Overview
 ************************************************************************************
 .. warning::
