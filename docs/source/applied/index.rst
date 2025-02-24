@@ -8,5 +8,4 @@ Applied Machine Learning
 	sys/mlcoding
 	sys/sysdes
 	methods/index	
-	eval/dcai
-	eval/eval
+	practical/index
