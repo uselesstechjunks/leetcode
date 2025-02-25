@@ -63,9 +63,10 @@ ML Theory/Design
 		- Given a dataset of 1M examples, how would you design a sampling mechanism to select 10k samples?
 		- What is the probability that :math:`x_i` and :math:`x_j` are both part of that selected set?
 		- How can you convince a non-technical person that each example is equally likely to be selected?
-#. Design
+#. Transformers
 
 	- Explain the difference between encoder, decoder and encoder-decoder architecture.
+	- What is the context width of BERT?
 	- How would you solve the SQuAD task using a transformer architecture? How would you model the problem and which architecture would you choose?
 #. Initialisation
 
