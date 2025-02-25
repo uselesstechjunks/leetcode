@@ -12,7 +12,7 @@ ML Depth/Practicals
 #. Experience with LLMs
 #. ML Ops
 	
-		- Experience with different parts of the stack - analysis, feature design, feature pipelines, experimentation, deployment, feature logging, monitoring
+		- Experience with different parts of the stack - analysis, feature design, feature pipelines, experimentation, registry/versioning, deployment, feature logging, monitoring
 		- How would you measure latency increase?
 #. Model evaluation
 	
