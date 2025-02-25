@@ -41,7 +41,7 @@ ML Depth/Practicals
 		- Experience with map reduce
 
 **************************************************************************
-ML Bredth/Theory
+ML Bredth/Design
 **************************************************************************
 #. Master's Thesis
 
