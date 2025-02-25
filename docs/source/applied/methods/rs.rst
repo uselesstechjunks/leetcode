@@ -12,6 +12,8 @@ Survey Papers
 * [le-wu.com][Ranking] `A Survey on Accuracy-Oriented Neural Recommendation <https://le-wu.com/files/Publications/JOURNAL/A_Survey_of_Neural_Recommender_Systems.pdf>`_
 * [arxiv.org][Retrieval] `A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
 * [arxiv.org][CTR] `Deep Learning for Click-Through Rate Estimation <https://arxiv.org/abs/2104.10584>`_
+* [mdpi.com] `A Comprehensive Survey of Recommender Systems Based on Deep Learning <https://www.mdpi.com/2076-3417/13/20/11378/pdf?version=1697524018>`_
+* [arxiv.org][SSL] `Self-Supervised Learning for Recommender Systems: A Survey <https://arxiv.org/abs/2203.15876>`_
 
 ************************************************************************************
 Overview
