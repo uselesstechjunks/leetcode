@@ -14,6 +14,7 @@ ML Practicals
 	
 		- Experience with different parts of the stack - analysis, feature design, feature pipelines, experimentation, registry/versioning, deployment, feature logging, monitoring
 		- How would you measure latency increase?
+#. Project discussion - Model boundary
 #. Model evaluation
 	
 	- Metrics
