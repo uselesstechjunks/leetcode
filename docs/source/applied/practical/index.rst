@@ -171,6 +171,8 @@ How to detect informative unlabelled data points?
 	#. Variety/Diversity : select samples that are as diverse as possible to best cover the entire input space.
 	#. Model Improvement : select the samples that will improve the performance of the model (lower loss function).
 
+Incorrect/Uninformative Labels
+-----------------------------------------------------------------------
 Weak Supervision
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * [medium.com] `Weak Supervision — Learn From Less Information <https://npogeant.medium.com/weak-supervision-learn-from-less-information-dcc8fe54e2a5>`_
