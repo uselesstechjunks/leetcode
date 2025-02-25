@@ -7,7 +7,7 @@ Practical ML
    :backlinks: none
 
 ***********************************************************************
-Training
+Data
 ***********************************************************************
 Dataset Creation and Curation
 =======================================================================
@@ -65,6 +65,11 @@ Handling Missing Values
 
 Label Design
 =======================================================================
+[TODO] Classify the techniques later
+1. Incomplete Labels
+2. Inexact Labels
+3. Inaccurate Labels
+
 Label Transformation
 -----------------------------------------------------------------------
 Label Encoding
@@ -218,6 +223,9 @@ No Labels
 - Dealing with Class Imbalance: SMOTE, focal loss, balanced batch sampling.
 - Bias and Fairness: Bias detection, de-biasing strategies, fairness-aware training.
 
+***********************************************************************
+Training
+***********************************************************************
 Large-Scale ML & Distributed Training
 =======================================================================
 - Parallelization: Data parallelism vs model parallelism.
