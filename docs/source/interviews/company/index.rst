@@ -38,8 +38,9 @@ Tier 3 Companies (Well-funded startups or specialized domains):
 .. toctree::
 	:maxdepth: 3
 
+	adobe
 	amzn
 	atlassian
 	goog
-	netapp
 	meesho
+	netapp
