@@ -42,7 +42,7 @@ ML Practicals
 		- Experience with map reduce
 
 **************************************************************************
-ML Bredth/Design
+ML Theory/Design
 **************************************************************************
 #. Master's Thesis
 
