@@ -13,6 +13,47 @@ Dataset Creation and Curation
 =======================================================================
 - [mit.edu] `Dataset Creation and Curation <https://dcai.csail.mit.edu/2024/dataset-creation-curation/>`_
 - [mit.edu] `Data Curation for LLMs <https://dcai.csail.mit.edu/2024/data-curation-llms/>`_
+- Data curation for LLM pretraining
+
+	- https://medium.com/@zolayola/public-data-sets-in-the-era-of-llms-0a4e89bda658
+	- [https://arxiv.org/pdf/2309.05463] Textbooks Are All You Need II: phi-1.5 technical report
+	- [https://arxiv.org/abs/2305.13169] A Pretrainer’s Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, & Toxicity
+
+LLMs for data curation
+-----------------------------------------------------------------------
+#. Evaluating llm output data - hallucination, toxicity, bias
+
+	- use a more powerful llm to evaluate
+
+		- effectiveness
+		- challenges
+	- ** uncertainty quantification
+
+		- [https://arxiv.org/abs/2308.16175] Quantifying Uncertainty in Answers from any Language Model and Enhancing their Trustworthiness
+
+#. Data curation for llm applications
+
+	- zero shot
+	- few shot - [https://aclanthology.org/2023.acl-long.452.pdf] Data Curation Alone Can Stabilize In-context Learning
+	- rag
+	- sft
+
+		- Humans provide gold input-output pairs
+		- Common paradigm: use LLM to generate synthetic data for fine-tuning
+
+			- Goal: train smaller/cheaper LLM to match performance of larger LLM, for specific task
+			
+		- Generate synthetic data using powerful LLM
+
+			- Using uncertainty quantification, keeping only high-confidence results
+			- Filter out bad synthetic data
+
+				- Separately, for inputs and outputs, train a real vs synthetic classifier
+				- use classifier scores to toss out unrealistic examples
+
+			- Clean whole dataset (original + synthetic)
+			- Fine-tune the LLM on the full dataset
+	- Reinforcement learning from human feedback
 
 Data and Feature Engineering
 =======================================================================
