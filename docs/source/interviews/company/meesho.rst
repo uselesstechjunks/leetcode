@@ -6,6 +6,18 @@ Meesho
    :local:
    :backlinks: none
 
+#. Round 2: Practical ML Applications
+
+	- Position bias
+	- Popularity bias
+	- Diversity in home page recommendation
+#. Round 3: Practical ML Applications
+
+	- How would you design user embeddings that would be useful for downstream tasks?
+	- Explain your architecture choice, why do you think this is better than alternatives?
+	- How would you integrate this user embedding in downstream task?
+	- How would you take user history into account if your task was to predict clicks? Would you still create embedding?
+
 ******************************************************************************************
 ChatGPT
 ******************************************************************************************
