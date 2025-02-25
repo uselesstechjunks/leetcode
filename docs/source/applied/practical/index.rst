@@ -178,6 +178,31 @@ Weak Supervision
 * [medium.com] `Weak Supervision — Learn From Less Information <https://npogeant.medium.com/weak-supervision-learn-from-less-information-dcc8fe54e2a5>`_
 * [stanford.edu] `Weak Supervision: A New Programming Paradigm for Machine Learning <https://ai.stanford.edu/blog/weak-supervision/>`_
 
+Objective
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- weak supervision is a technique where a machine learning algorithm is given very little information to learn from
+- it can be used to learn from data that is difficult or impossible to obtain in traditional supervised learning
+- may be difficult or impossible to obtain the correct answer for a data point, because the answer is not known
+
+Data Centric AI
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- aims to re work the labels and have models that better understand the data rather than simply relying on pure labels from the dataset.
+- new labels are called Weak Labels because they have additional information that does not directly indicate what we want to predict
+- also considered as noisy because their distribution has a margin of error.
+
+different types and technique of weak supervision
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+#. Incomplete Supervision
+
+	- Semi Supervised Learning, Active Learning and Transfer Learning
+	- Data Programming - creating labelling functions to get more labels for the training instance of the model.
+#. Inexact Supervision
+
+	- Multi Instance Learning
+#. Inaccurate Supervision
+
+	- bad labels are grouped together and corrected with Data Engineering or a better crowdsourcing process.
+
 No Labels
 -----------------------------------------------------------------------
 * [TODO] Self Supervised Learning
