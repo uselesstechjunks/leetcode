@@ -9,6 +9,11 @@ Practical ML
 ***********************************************************************
 Training
 ***********************************************************************
+Dataset Creation and Curation
+=======================================================================
+- [mit.edu] `Dataset Creation and Curation <https://dcai.csail.mit.edu/2024/dataset-creation-curation/>`_
+- [mit.edu] `Data Curation for LLMs <https://dcai.csail.mit.edu/2024/data-curation-llms/>`_
+
 Data and Feature Engineering
 =======================================================================
 Feature Transformation
