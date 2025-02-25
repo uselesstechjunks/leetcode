@@ -111,6 +111,71 @@ Semi Supervised Learning
 * [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
 * [ovgu.de][SSL] `Semi-supervised Learning for Stream Recommender Systems <https://kmd.cs.ovgu.de/pub/matuszyk/Semi-supervised-Learning-for-Stream-Recommender-Systems.pdf>`_
 
+Notes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Assumptions
+
+.. important::
+   1. The Smoothness Assumption : Two close samples x1 and x2 on an input should have the same output (y).
+   2. The Low-Density Assumption : Decision boundaries between classes are characterized by low density areas in the input space.
+   3. The Manifold Assumption : Data points on the same low-dimensional manifold (lower-dimensional substructures) should have the same label.
+
+Objective
+
+.. note::
+   - the algorithms should be able to classify unlabeled data points based on those already labeled. 
+   - if and only if the different problem classes are well represented among the labeled data points
+   - important to partition the dataset between labeled and unlabeled data in order to get the most accurate and efficient model.
+
+#. Inductive methods 
+
+   #. Build a classification model with the aim of getting predictions from unlabelled data points.
+   #. Wrapper Methods
+   
+   	- training step where a classifier learns from the labelled data points
+   	- pseudo-labelling step where the previous classifier is used to get predictions from unlabelled data
+   	- veracity of the new labels (predictions) is verified
+   	- most accurate ones (based on confidence levels) are added to the training dataset
+   	- steps are repeated until the model is the most performant
+   	- Self Training, Co Training, ensemble learning
+   
+   #. Unsupervised preprocessing
+   
+   	- unsupervised techniques and algorithms to extract information from all data to improve the future training of a classifier
+   	- feature extraction or even clustering
+   
+   #. Intrinsically semi-supervised methods
+   
+   	- low-density separation - Maximum-margin methods
+   	- Manifolds - Manifold regularization and Manifold approximation
+   	- Generative Models - tries to understand how the data was generated
+
+#. Transductive methods
+
+      #. making predictions directly, without trying to have a classifier
+      #. using all the dataset (train and test) to predict the labels.
+      #. Graph-Based Methods
+   
+         #. Transductive methods typically define a graph over all data points, both labelled and unlabelled, encoding the pairwise similarity of data points with possibly weighted edges
+   	   #. an objective function is optimized by looking if labelled data are correctly classify and 
+   	   #. if similar data points are in the right place.
+
+Active Learning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [burrsettles.com] `Active Learning Literature Survey <https://burrsettles.com/pub/settles.activelearning.pdf>`_
+
+Notes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- extension of semi-supervised learning
+- determining and choosing high potential unlabelled data that would make the model more efficient
+- these data points are labelled and the classifier gains accuracy.
+
+How to detect informative unlabelled data points?
+
+	#. Uncertainty : label the samples for which the model is least confident in its predictions.
+	#. Variety/Diversity : select samples that are as diverse as possible to best cover the entire input space.
+	#. Model Improvement : select the samples that will improve the performance of the model (lower loss function).
+
 No Labels
 -----------------------------------------------------------------------
 * [TODO] Self Supervised Learning
