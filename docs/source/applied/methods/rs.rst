@@ -14,6 +14,7 @@ Survey Papers
 * [arxiv.org][CTR] `Deep Learning for Click-Through Rate Estimation <https://arxiv.org/abs/2104.10584>`_
 * [mdpi.com] `A Comprehensive Survey of Recommender Systems Based on Deep Learning <https://www.mdpi.com/2076-3417/13/20/11378/pdf?version=1697524018>`_
 * [arxiv.org][SSL] `Self-Supervised Learning for Recommender Systems: A Survey <https://arxiv.org/abs/2203.15876>`_
+* [arxiv.org] `Embedding in Recommender Systems: A Survey <https://arxiv.org/abs/2310.18608v2>`_
 
 ************************************************************************************
 Overview
