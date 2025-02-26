@@ -16,6 +16,9 @@ Survey
 * [arxiv.org][SSL] `Self-Supervised Learning for Recommender Systems: A Survey <https://arxiv.org/abs/2203.15876>`_
 * [arxiv.org] `Embedding in Recommender Systems: A Survey <https://arxiv.org/abs/2310.18608v2>`_
 * [youtube.com] `TUTORIAL: Neural Contextual Bandits for Personalized Recommendation <https://www.youtube.com/watch?v=esOd-tsdEco>`_ (`arxiv <https://arxiv.org/pdf/2312.14037>`_)
+* [youtube.com] `TUTORIAL: Privacy in Web Advertising: Analytics and Modeling <https://www.youtube.com/watch?v=qaiDxriCEmQ>`_
+* [youtube.com] `TUTORIAL: Multimodal Pretraining and Generation for Recommendation <https://www.youtube.com/watch?v=Pw1eW0rMzSU>`_
+* [youtube.com] `TUTORIAL: Large Language Models for Recommendation Progresses and Future Directions <https://www.youtube.com/watch?v=zcuOrWxJ2k8>`_
 
 ************************************************************************************
 Overview
