@@ -7,8 +7,54 @@ Practical ML
    :backlinks: none
 
 ***********************************************************************
-Training
+Data
 ***********************************************************************
+Dataset Creation and Curation
+=======================================================================
+- [mit.edu] `Dataset Creation and Curation <https://dcai.csail.mit.edu/2024/dataset-creation-curation/>`_
+- [mit.edu] `Data Curation for LLMs <https://dcai.csail.mit.edu/2024/data-curation-llms/>`_
+- Data curation for LLM pretraining
+
+	- https://medium.com/@zolayola/public-data-sets-in-the-era-of-llms-0a4e89bda658
+	- [https://arxiv.org/pdf/2309.05463] Textbooks Are All You Need II: phi-1.5 technical report
+	- [https://arxiv.org/abs/2305.13169] A Pretrainer’s Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, & Toxicity
+
+LLMs for data curation
+-----------------------------------------------------------------------
+#. Evaluating llm output data - hallucination, toxicity, bias
+
+	- use a more powerful llm to evaluate
+
+		- effectiveness
+		- challenges
+	- ** uncertainty quantification
+
+		- [https://arxiv.org/abs/2308.16175] Quantifying Uncertainty in Answers from any Language Model and Enhancing their Trustworthiness
+
+#. Data curation for llm applications
+
+	- zero shot
+	- few shot - [https://aclanthology.org/2023.acl-long.452.pdf] Data Curation Alone Can Stabilize In-context Learning
+	- rag
+	- sft
+
+		- Humans provide gold input-output pairs
+		- Common paradigm: use LLM to generate synthetic data for fine-tuning
+
+			- Goal: train smaller/cheaper LLM to match performance of larger LLM, for specific task
+			
+		- Generate synthetic data using powerful LLM
+
+			- Using uncertainty quantification, keeping only high-confidence results
+			- Filter out bad synthetic data
+
+				- Separately, for inputs and outputs, train a real vs synthetic classifier
+				- use classifier scores to toss out unrealistic examples
+
+			- Clean whole dataset (original + synthetic)
+			- Fine-tune the LLM on the full dataset
+	- Reinforcement learning from human feedback
+
 Data and Feature Engineering
 =======================================================================
 Feature Transformation
@@ -59,6 +105,13 @@ Handling Missing Values
 - Applicable to: Any type of variable with missing data (both continuous and categorical).
 
 Label Design
+=======================================================================
+[TODO] Classify the techniques later
+1. Incomplete Labels
+2. Inexact Labels
+3. Inaccurate Labels
+
+Label Transformation
 -----------------------------------------------------------------------
 Label Encoding
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -75,18 +128,6 @@ Binarization
 - Convert continuous labels into binary values (e.g., thresholding for classification).
 - Applicable to: Continuous labels for binary classification.
 
-Less Labels
------------------------------------------------------------------------
-Weak Supervision
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* [medium.com] `Weak Supervision — Learn From Less Information <https://npogeant.medium.com/weak-supervision-learn-from-less-information-dcc8fe54e2a5>`_
-* [stanford.edu] `Weak Supervision: A New Programming Paradigm for Machine Learning <https://ai.stanford.edu/blog/weak-supervision/>`_
-
-Semi Supervised Learning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* [maddevs.io] `Semi-Supervised Learning Explained: Techniques and Real-World Applications <https://maddevs.io/blog/semi-supervised-learning-explained/>`_
-* [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
-
 Noisy Labels
 -----------------------------------------------------------------------
 Label Smoothing 
@@ -102,12 +143,130 @@ Outlier Detection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Apply algorithms (e.g., Isolation Forest, Z-score method) to detect outliers in the dataset and remove instances with highly suspicious labels.
 
+Imbalanced Class
+-----------------------------------------------------------------------
+Choosing Negatives
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- [TODO]
+
+Sparse Labels
+-----------------------------------------------------------------------
+Semi Supervised Learning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [maddevs.io] `Semi-Supervised Learning Explained: Techniques and Real-World Applications <https://maddevs.io/blog/semi-supervised-learning-explained/>`_
+* [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
+* [ovgu.de][SSL] `Semi-supervised Learning for Stream Recommender Systems <https://kmd.cs.ovgu.de/pub/matuszyk/Semi-supervised-Learning-for-Stream-Recommender-Systems.pdf>`_
+
+Notes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Assumptions
+
+.. important::
+   1. The Smoothness Assumption : Two close samples x1 and x2 on an input should have the same output (y).
+   2. The Low-Density Assumption : Decision boundaries between classes are characterized by low density areas in the input space.
+   3. The Manifold Assumption : Data points on the same low-dimensional manifold (lower-dimensional substructures) should have the same label.
+
+Objective
+
+.. note::
+   - the algorithms should be able to classify unlabeled data points based on those already labeled. 
+   - if and only if the different problem classes are well represented among the labeled data points
+   - important to partition the dataset between labeled and unlabeled data in order to get the most accurate and efficient model.
+
+#. Inductive methods 
+
+   #. Build a classification model with the aim of getting predictions from unlabelled data points.
+   #. Wrapper Methods
+   
+   	- training step where a classifier learns from the labelled data points
+   	- pseudo-labelling step where the previous classifier is used to get predictions from unlabelled data
+   	- veracity of the new labels (predictions) is verified
+   	- most accurate ones (based on confidence levels) are added to the training dataset
+   	- steps are repeated until the model is the most performant
+   	- Self Training, Co Training, ensemble learning
+   
+   #. Unsupervised preprocessing
+   
+   	- unsupervised techniques and algorithms to extract information from all data to improve the future training of a classifier
+   	- feature extraction or even clustering
+   
+   #. Intrinsically semi-supervised methods
+   
+   	- low-density separation - Maximum-margin methods
+   	- Manifolds - Manifold regularization and Manifold approximation
+   	- Generative Models - tries to understand how the data was generated
+
+#. Transductive methods
+
+      #. making predictions directly, without trying to have a classifier
+      #. using all the dataset (train and test) to predict the labels.
+      #. Graph-Based Methods
+   
+         #. Transductive methods typically define a graph over all data points, both labelled and unlabelled, encoding the pairwise similarity of data points with possibly weighted edges
+   	   #. an objective function is optimized by looking if labelled data are correctly classify and 
+   	   #. if similar data points are in the right place.
+
+Active Learning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [burrsettles.com] `Active Learning Literature Survey <https://burrsettles.com/pub/settles.activelearning.pdf>`_
+
+Notes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- extension of semi-supervised learning
+- determining and choosing high potential unlabelled data that would make the model more efficient
+- these data points are labelled and the classifier gains accuracy.
+
+How to detect informative unlabelled data points?
+
+	#. Uncertainty : label the samples for which the model is least confident in its predictions.
+	#. Variety/Diversity : select samples that are as diverse as possible to best cover the entire input space.
+	#. Model Improvement : select the samples that will improve the performance of the model (lower loss function).
+
+Incorrect/Uninformative Labels
+-----------------------------------------------------------------------
+Weak Supervision
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [medium.com] `Weak Supervision — Learn From Less Information <https://npogeant.medium.com/weak-supervision-learn-from-less-information-dcc8fe54e2a5>`_
+* [stanford.edu] `Weak Supervision: A New Programming Paradigm for Machine Learning <https://ai.stanford.edu/blog/weak-supervision/>`_
+
+Objective
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- weak supervision is a technique where a machine learning algorithm is given very little information to learn from
+- it can be used to learn from data that is difficult or impossible to obtain in traditional supervised learning
+- may be difficult or impossible to obtain the correct answer for a data point, because the answer is not known
+
+Data Centric AI
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- aims to re work the labels and have models that better understand the data rather than simply relying on pure labels from the dataset.
+- new labels are called Weak Labels because they have additional information that does not directly indicate what we want to predict
+- also considered as noisy because their distribution has a margin of error.
+
+different types and technique of weak supervision
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+#. Incomplete Supervision
+
+	- Semi Supervised Learning, Active Learning and Transfer Learning
+	- Data Programming - creating labelling functions to get more labels for the training instance of the model.
+#. Inexact Supervision
+
+	- Multi Instance Learning
+#. Inaccurate Supervision
+
+	- bad labels are grouped together and corrected with Data Engineering or a better crowdsourcing process.
+
+No Labels
+-----------------------------------------------------------------------
+* [TODO] Self Supervised Learning
+
 [TODO]
 -----------------------------------------------------------------------
 - Feature Selection: Mutual information, SHAP, correlation-based selection.
 - Dealing with Class Imbalance: SMOTE, focal loss, balanced batch sampling.
 - Bias and Fairness: Bias detection, de-biasing strategies, fairness-aware training.
 
+***********************************************************************
+Training
+***********************************************************************
 Large-Scale ML & Distributed Training
 =======================================================================
 - Parallelization: Data parallelism vs model parallelism.

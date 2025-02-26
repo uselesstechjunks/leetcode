@@ -11,6 +11,7 @@ Training
 *****************************************************************************************
 * Training: `DeepSpeed <https://www.deepspeed.ai/training/>`_
 * Inference: `DeepSpeed <https://www.deepspeed.ai/inference/>`_, `vLLM <https://docs.vllm.ai/en/latest/index.html>`_
+* `The Ultra-Scale Playbook: Training LLMs on GPU Clusters <https://huggingface.co/spaces/nanotron/ultrascale-playbook>`_
 
 Engineering
 =========================================================================================
@@ -380,6 +381,7 @@ Practical RAG
 Agents & Tools
 -----------------------------------------------------------------------------------------
 * [arxiv.org] `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
+* [youtube.com] `TUTORIAL: Large Language Model Powered Agents in the Web <https://www.youtube.com/watch?v=QpXsnd3W7E4>`_
 
 Modeling Choices
 -----------------------------------------------------------------------------------------

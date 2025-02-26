@@ -27,7 +27,7 @@ Design Resources
 	- [fennel.ai] `Feature Engineering for Recommendation System Series <https://fennel.ai/blog/tag/feature-engineering-recommendation-system-series/>`_
 	- [fennel.ai] `Feature Logging <https://fennel.ai/blog/feature-engineering-for-recommendation-031/>`_
 	- [fennel.ai] `Information Leakage <https://www.fennel.ai/blog/two-types-of-information-leakage/>`_
-	- [towardsdatascience] `What's WRONG with Metrics? <https://towardsdatascience.com/choosing-the-right-metric-is-a-huge-issue-99ccbe73de61>`_	
+	- [towardsdatascience] `What's WRONG with Metrics? <https://medium.com/towards-data-science/choosing-the-right-metric-is-a-huge-issue-99ccbe73de61>`_	
 	- [elastic.co] `Practical BM25 — Part 2: The BM25 Algorithm and its variables <https://www.elastic.co/blog/practical-bm25-part-2-the-bm25-algorithm-and-its-variables/>`_
 2. Collection of Topics:
 
