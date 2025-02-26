@@ -1,13 +1,8 @@
 #####################################################################################
-Applied Machine Learning
+End-to-end Design
 #####################################################################################
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 
-	sys/mlcoding
-	sys/sysdes
-	data/index
-	methods/index	
-	practical/index
-	e2e/index
+	search
