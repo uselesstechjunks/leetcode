@@ -7,5 +7,6 @@ Applied Machine Learning
 
 	sys/mlcoding
 	sys/sysdes
+	data/index
 	methods/index	
 	practical/index
