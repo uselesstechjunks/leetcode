@@ -7,7 +7,7 @@ Search & Recommendation
    :backlinks: none
 
 ************************************************************************************
-Survey Papers
+Survey
 ************************************************************************************
 * [le-wu.com][Ranking] `A Survey on Accuracy-Oriented Neural Recommendation <https://le-wu.com/files/Publications/JOURNAL/A_Survey_of_Neural_Recommender_Systems.pdf>`_
 * [arxiv.org][Retrieval] `A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
@@ -15,6 +15,7 @@ Survey Papers
 * [mdpi.com] `A Comprehensive Survey of Recommender Systems Based on Deep Learning <https://www.mdpi.com/2076-3417/13/20/11378/pdf?version=1697524018>`_
 * [arxiv.org][SSL] `Self-Supervised Learning for Recommender Systems: A Survey <https://arxiv.org/abs/2203.15876>`_
 * [arxiv.org] `Embedding in Recommender Systems: A Survey <https://arxiv.org/abs/2310.18608v2>`_
+* [youtube.com] `TUTORIAL: Neural Contextual Bandits for Personalized Recommendation <https://www.youtube.com/watch?v=esOd-tsdEco>`_ (`arxiv <https://arxiv.org/pdf/2312.14037>`_)
 
 ************************************************************************************
 Overview
