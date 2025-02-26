@@ -380,6 +380,7 @@ Practical RAG
 Agents & Tools
 -----------------------------------------------------------------------------------------
 * [arxiv.org] `Toolformer: Language Models Can Teach Themselves to Use Tools <https://arxiv.org/pdf/2302.04761>`_
+* [youtube.com] `TUTORIAL: Large Language Model Powered Agents in the Web <https://www.youtube.com/watch?v=QpXsnd3W7E4>`_
 
 Modeling Choices
 -----------------------------------------------------------------------------------------
