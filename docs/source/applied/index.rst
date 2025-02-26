@@ -10,3 +10,4 @@ Applied Machine Learning
 	data/index
 	methods/index	
 	practical/index
+	e2e/index
