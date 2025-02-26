@@ -11,6 +11,7 @@ Training
 *****************************************************************************************
 * Training: `DeepSpeed <https://www.deepspeed.ai/training/>`_
 * Inference: `DeepSpeed <https://www.deepspeed.ai/inference/>`_, `vLLM <https://docs.vllm.ai/en/latest/index.html>`_
+* `The Ultra-Scale Playbook: Training LLMs on GPU Clusters <https://huggingface.co/spaces/nanotron/ultrascale-playbook>`_
 
 Engineering
 =========================================================================================
