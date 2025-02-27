@@ -2,13 +2,13 @@
 Machine Learning Applications
 ###############################################################################
 .. toctree::
-	:maxdepth: 3
+	:maxdepth: 2
 
 	lm
 	llm
 	nlp
 	multimodal
-	rs
+	rs/index
 	obsv
 *******************************************************************************
 Design Resources

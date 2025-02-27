@@ -118,6 +118,13 @@ Range Missing
 - [Medium] `Find Missing from Array Size n in Range [0,n] <https://leetcode.com/problems/missing-number/description/>`_
 - [Medium] `Find Repeated from Array Size n+1 in Range [1,n] <https://leetcode.com/problems/find-the-duplicate-number/description/>`_
 
+Missing Ranges
+---------------------------------------------------------------------
+- [Easy] `Given array, find shortest list of missing ranges <https://leetcode.com/problems/summary-ranges/description/>`_
+- [Easy] `Given range, find all missing sub ranges <https://leetcode.com/problems/missing-ranges/description/>`_
+- [Medium] `Given list of sub ranges, find missing ranges between [0,n-1] <https://leetcode.com/problems/find-maximal-uncovered-ranges/description/>`_
+- [Hard] `Data stream as disjointed intervals <https://leetcode.com/problems/data-stream-as-disjoint-intervals/description/>`_
+
 Find Optimal Range/Count - Constrainted Order/Span Query
 ---------------------------------------------------------------------
 - [Easy] `Find Longest Strictly Increasing Subarray <https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/>`_
