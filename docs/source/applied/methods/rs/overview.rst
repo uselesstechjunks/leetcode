@@ -151,3 +151,32 @@ Summary
 	- Hybrid models combine multiple signals to balance personalization with exploration.
 	- Content integration (using BERT, CLIP, VideoBERT, etc.) further enriches these embeddings, especially in addressing new items or complex content semantics.
 - Integrating domain-specific content features (via pretrained embeddings) can further address cold-start issues and enhance the semantic richness of both user and item representations.
+
+***********************************************************************************************
+Table
+***********************************************************************************************
+.. csv-table::
+	:header: "Modeling Approach", "Captures Long-Term Interests", "Captures Short-Term Interests", "Handles Cold-Start/Content Diversity", "Pros", "Cons", "Key Papers"
+	:align: center
+	
+	Feedback-Based Latent Models (MF; NCF), High, Moderate, Low (needs augmentation), Effective at modeling long-term preferences; efficient ANN retrieval, Cold-start issues; risk of filter bubbles, Koren et al. (2009); He et al. (2017)
+	Unsupervised/Autoencoder Models, Moderate, Low, Moderate (with content features), Learns unsupervised representations; good for pretraining, May need additional strategies to aggregate user profiles; retrieval not optimized, Sedhain et al. (2015)
+	CBOW/Item2Vec Models, Moderate, High, Low (pure co-occurrence), Excellent for short-term; context-based similarity; effective for retrieval, May require fine-tuning for ranking; limited long-term signals, Barkan & Koenigstein (2016)
+	Sequence-Based Models (Transformers/RNNs), Low-Moderate, Very High, Low (unless fused with content), Excels in session-based recommendations; captures sequential dependencies, May underrepresent long-term interests; needs extra tuning for fast retrieval, Kang & McAuley (2018); Sun et al. (2019)
+	Graph Neural Networks, High, Moderate, Moderate (with side-information), Captures complex multi-hop relationships; promotes exploration and diversity, Computationally expensive; may miss temporal dynamics, Ying et al. (2018); Berg et al. (2017)
+	Hybrid/Ensemble Approaches, High (if well-combined), High (if including sequential models), High (leverages content-based features), Balances multiple facets of user behavior; increased robustness, Higher system complexity; tuning challenges; more computational cost, Zhang et al. (2019) (for hybrid approaches)
+
+***********************************************************************************************
+Real World Applications
+***********************************************************************************************
+.. csv-table::
+	:header: "Modeling Method", "Real-World Application", "Source / Link"
+	:align: center
+
+	Feedback-Based Latent Models (MF; Neural CF), Netflix: Uses matrix factorization techniques to capture long-term movie preferences for recommendations, Amazon: Employs item-to-item collaborative filtering (a variant of MF) for product suggestions; `Netflix Tech Blog: Beyond the 5 Stars <https://netflixtechblog.com/netflix-recommendations-beyond-the-5-stars-12ea2c9a1b26>`_
+	Unsupervised/Autoencoder Models, AutoRec-based Approaches: Academic studies (influencing industrial systems like those at LinkedIn or Alibaba) use autoencoders to learn latent representations from sparse interaction data; which can be fine-tuned later for ranking., `AutoRec: Autoencoders Meet Collaborative Filtering (Sedhain et al.; 2015) <https://dl.acm.org/doi/10.1145/2783258.2783304>`_
+	CBOW/Item2Vec Models, Pinterest: Leverages item2vec–like models to learn visual item embeddings for pin recommendations.Spotify: Utilizes similar co-occurrence based embeddings for song similarity and retrieval., `Item2vec: Neural Item Embedding for Collaborative Filtering (Barkan & Koenigstein; 2016) <https://arxiv.org/abs/1602.03410>`_
+	Sequence-Based Models (Transformers/RNNs), YouTube: Employs sequence models (e.g.; SASRec; Transformers) to capture session context for video recommendations, TikTok: Uses RNN/Transformer architectures to model short-term user behavior on its “For You” page.; `YouTube Recommendations (Covington et al.; 2016) <https://www.youtube.com/watch?v=2U9U7ThBzI8>`_; `TikTok Business Blog <https://newsroom.tiktok.com/en-us/>`_
+	Graph Neural Network-Based Models, Pinterest’s PinSage: Uses GNNs to generate high-quality image embeddings from a large-scale pin-interaction graph.Alibaba: Applies GNN-based methods to incorporate user–item interaction graphs for product recommendations., `PinSage: Graph Convolutional Neural Networks for Web-Scale Recommender Systems (Ying et al.; 2018) <https://arxiv.org/abs/1806.01973>`_
+	Hybrid/Ensemble Approaches, Spotify: Combines collaborative filtering with deep audio content features (extracted via CNNs or pretrained models) to produce diverse; personalized playlists, Google News: Fuses collaborative signals with content understanding (e.g.; BERT embeddings) to tailor news recommendations.; `Spotify Engineering Blog <https://engineering.atspotify.com/2015/11/spotify-recommendation-engineering/>`_; `Google News Blog <https://blog.google/products/google-news/>`_
+	Utilizing Domain-Specific Content Features, Amazon: Augments collaborative signals with text embeddings from models like BERT on product descriptions and reviews to address cold-start and enrich similarity measures; YouTube: Uses video embeddings from models such as VideoBERT to capture rich visual and temporal semantics for video retrieval and ranking., `VideoBERT: A Joint Model for Video and Language Representation Learning <https://arxiv.org/abs/1904.01766>`_
