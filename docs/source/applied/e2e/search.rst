@@ -137,12 +137,13 @@ What Can I Extract?
 
 	- Bag of words features for query
 	- Tf-idf features for query
-	- Question: Can we form hypothetical documents by merging all words from queries associated with clicked links?
+	- Check `sklearn feature extractors <https://scikit-learn.org/stable/api/sklearn.feature_extraction.html>`_ for details.
+	- Question: Can we form hypothetical documents associated with links by merging words from all queries that resulted in a click?
 
 .. note::
 	- We can estimate out_of_vocabularity words by analyzing training data (:math:`x\%`). Plot new out of vocab words that comes every single day. That number should be diminishing as we consider longer seen windows.
 	- Use robust training (forcefully masking :math:`x\%` words during training time)
-	
+
 What Can I Hash?
 ----------------------------------------------------------------------------------------
 - Direct embedding table for 5B users or 30B links is impractical
