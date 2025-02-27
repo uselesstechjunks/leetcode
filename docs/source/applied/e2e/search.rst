@@ -55,12 +55,13 @@ What Matters?
 	- Last active (age)
 #. Quantities of interest:
 
-	- User's serch activity, click propensity, time since last query/click
-	- Query's popularity, click propensity, time since last seen/click
+	- User's search activity, click propensity, time since last query/click
+	- Query's popularity, click propensity, time since last searched/clicked
 	- Link's popularity, click propensity, time since last click
 	- User's affinity towards certain queries
 	- User's affinity towards certain links
 	- Link's click propensity with certain queries
+	- User's activity at certain time, query's popularity at a certain time, links popularity at a certain time
 ========================================================================================
 How Do I Design Features?
 ========================================================================================
@@ -97,11 +98,9 @@ Counts
 		:header: Count, Measure, Pivot
 		:align: center
 	
-			query, popularity, <user_id; all_time>; <user_id; since_last_year>
-			query, trending, <user_id; since_last_month>; <user_id; since_last_week>; <user_id; since_last_day>; <user_id; since_last_hour>; <user_id; since_last_10_mins>
+			query, activity, <user_id; all_time>; <user_id; since_last_year>; <user_id; since_last_month>; <user_id; since_last_week>; <user_id; since_last_day>; <user_id; since_last_hour>; <user_id; since_last_10_mins>
 			query, seasonality, <user_id; month_of_year>; <user_id; day_of_month>; <user_id; day_of_week>; <user_id; time_of_day>
-			click, popularity, <user_id; all_time>; <user_id; since_last_year>
-			click, trending, <user_id; since_last_month>; <user_id; since_last_week>; <user_id; since_last_day>; <user_id; since_last_hour>; <user_id; since_last_10_mins>
+			click, activity, <user_id; all_time>; <user_id; since_last_year>; <user_id; since_last_month>; <user_id; since_last_week>; <user_id; since_last_day>; <user_id; since_last_hour>; <user_id; since_last_10_mins>
 			click, seasonality, <user_id; month_of_year>; <user_id; day_of_month>; <user_id; day_of_week>; <user_id; time_of_day>
 			user, popularity, <search_query; all_time>; <search_query; since_last_year>
 			user, trending, <search_query; since_last_month>; <search_query; since_last_week>; <search_query; since_last_day>; <search_query; since_last_hour>; <search_query; since_last_10_mins>
@@ -130,12 +129,20 @@ Counts
 
 What Can I Extract?
 ----------------------------------------------------------------------------------------
-#. We can set up count based encoding from extracted attributes from the log
+#. We can extract these from the search_query and link attributes
 
-	- search_query: normalized_search_query, words -> bag of words
+	- search_query: normalized_search_query -> wordbreaker -> words
 	- link: domain
-#. We can construct bag of words features for users and links/domains
+#. We can a form a vocabulary of words with an out_of_vocabulary word for accomodating unseen words during inference time. Then we can construct
 
+	- Bag of words features for query
+	- Tf-idf features for query
+	- Question: Can we form hypothetical documents by merging all words from queries associated with clicked links?
+
+.. note::
+	- We can estimate out_of_vocabularity words by analyzing training data (:math:`x\%`). Plot new out of vocab words that comes every single day. That number should be diminishing as we consider longer seen windows.
+	- Use robust training (forcefully masking :math:`x\%` words during training time)
+	
 What Can I Hash?
 ----------------------------------------------------------------------------------------
 - Direct embedding table for 5B users or 30B links is impractical
