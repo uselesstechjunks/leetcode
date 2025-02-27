@@ -7,7 +7,34 @@ ML Application
    :backlinks: none
 
 ********************************************************************************
-Framework
+Study Framework
+********************************************************************************
+#. ML Science
+
+	#. What signals do I have? 
+	#. What if we have all the data we want - what's the best we can do? Deep dive into approaches.
+	#. What if we have very limited data - what is the best we can do? Deep dive into feature design.
+	#. Which approach should work in theory? Why? Shall we take one approach or a hybrid one? Why?
+	#. What does the loss encourage the model to learn? How to tackle label majority bias? Deep dive into training algorithm. Code.
+
+#. ML Engineering
+
+	#. Does the solution scale at serving time? How would serving work in a distributed env within latency limits? How much resource would we need?
+	#. How do I train all the models at scale? How much compute would we need? 
+	#. How much data we need to ensure that model learned something? 
+	#. How much storage & memory would we need? 
+	#. How can we reduce data & compute requirements without hurting the performance much?
+
+#. ML Ops
+
+	#. How do we monitor and adjust to be able to serve the model for a long time? What offline analysis can we do to determine how the model would perform in problematic scenarios?
+
+#. ML Roadmap
+
+	#. Where might this fail? What can we do next to improve the model?
+
+********************************************************************************
+Presentation Framework
 ********************************************************************************
 #. What is the task? 
 
