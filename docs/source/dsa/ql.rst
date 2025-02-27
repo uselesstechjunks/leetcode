@@ -123,6 +123,7 @@ Missing Ranges
 - [Easy] `Given array, find shortest list of missing ranges <https://leetcode.com/problems/summary-ranges/description/>`_
 - [Easy] `Given range, find all missing sub ranges <https://leetcode.com/problems/missing-ranges/description/>`_
 - [Medium] `Given list of sub ranges, find missing ranges between [0,n-1] <https://leetcode.com/problems/find-maximal-uncovered-ranges/description/>`_
+- [Hard] `Data stream as disjointed intervals <https://leetcode.com/problems/data-stream-as-disjoint-intervals/description/>`_
 
 Find Optimal Range/Count - Constrainted Order/Span Query
 ---------------------------------------------------------------------
