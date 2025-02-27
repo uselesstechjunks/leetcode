@@ -1,6 +1,11 @@
 ###############################################################################################
 Overview of Modeling Aspects
 ###############################################################################################
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
+
 In designing recommendation systems, the quality of user and item embeddings is critical for both retrieval (finding a manageable candidate set) and ranking (ordering items for relevance). Our modeling choices often aim to capture three interrelated aspects:
 
 1. Long-Term Interests: The enduring tastes and preferences of a user, learned over a long history.
