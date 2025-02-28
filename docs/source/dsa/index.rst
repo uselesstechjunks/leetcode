@@ -6,6 +6,8 @@ Data Structures & Algorithms
    :local:
    :backlinks: none
 
+Don't recall. You won't remember it. Reason. Then you might.
+
 *********************************************************************************
 Topics
 *********************************************************************************
