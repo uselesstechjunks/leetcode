@@ -7,8 +7,8 @@ Thought Process
 =====================================================================
 .. note::
 	#. Does it form a group, chain, tree, graph? - union find, parent-child hashmap (set if parent-child is implicit).
-	#. Does it have a range? - binary search.
-	#. Does it have monotonic property? - binary search/VLW.
+	#. Does it have a search space? Is the problem about finding the smallest value for which a condition satisfies? - binary search.
+	#. Does the quantity grow monotonically with number of elements? - VLW.
 	#. What bookkeeping is required? What involves recomputation? What else can we track to avoid it? - hashmap, bst, stack, queue, heap.
 	#. Can we solve it in parts and combine the results? - divide and conquer, recursion, DP.
 	#. What choices can be greedily eliminated? - two pointers, greedy, quicksort partitioning.
