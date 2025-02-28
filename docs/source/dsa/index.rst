@@ -196,17 +196,6 @@ Involves intervals
 #. Sort by end - benefit (???)
 
 *********************************************************************************
-Common Problems
-*********************************************************************************
-#. Maximum Sum Query: [0,n)->max(Sum(l,r))
-
-	#. Keep track of earlier seen prefix sums
-	#. [Kadane] Keep prefix or drop prefix (DP) when processing current
-	#. Divide and conquer with (a) max prefix/suffix and (b) sum
-	#. If mutable, Segment Tree, Binary Indexed Tree
-	#. If monotonic, VLW
-
-*********************************************************************************
 Revision Deck
 *********************************************************************************
 Keep in Mind
@@ -221,9 +210,9 @@ Important Questions
 .. toctree::
 	:maxdepth: 1
 
-	ql
-	qf
-	qr
+	qb/ql
+	qb/qf
+	qb/qr
 
 Deep Dives
 =================================================================================
@@ -256,24 +245,8 @@ Problem Patterns
 Code Patterns
 ================================================================================
 .. note::
-
 	* [algo.monster] `Templates <https://algo.monster/templates>`_
 	* [github.io] `LC cheatsheet <https://jwl-7.github.io/leetcode-cheatsheet/>`_
-
-Sliding Window
-================================================================================
-.. note::
-	- fixed length
-
-		- fixed sum with constant extra bookkeeping
-		- fixed sum with auxiliary data structures
-	- variable length
-
-		- fixed sum with constant extra bookkeeping - aggregate >= value
-		- fixed sum with auxiliary data structures - frequency, prefix sums -> dict, monotonic queue, bst
-.. attention::
-	- sequential grouping
-	- sequential criteria - longest, smallest, contained, largest, smallest
 
 .. important::
 	* [youtube.com] `Sliding Window Mental Model <https://www.youtube.com/watch?v=MK-NZ4hN7rs>`_
