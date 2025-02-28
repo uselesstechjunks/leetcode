@@ -89,6 +89,20 @@ Algorithms
 --------------------------------------------------------------------------------
 #. Divide-and-Conquer approaches (e.g., inversion count with merge sort).
 #. Sliding window techniques (efficient for specific range problems).
+
+	.. note::
+		- fixed length
+	
+			- fixed sum with constant extra bookkeeping
+			- fixed sum with auxiliary data structures
+		- variable length
+	
+			- fixed sum with constant extra bookkeeping - aggregate >= value
+			- fixed sum with auxiliary data structures - frequency, prefix sums -> dict, monotonic queue, bst
+	.. attention::
+		- sequential grouping
+		- sequential criteria - longest, smallest, contained, largest, smallest
+
 #. Two-pointer methods for range problems in sorted data.
 #. Offline processing for batch queries using Mo's Algorithm or persistent data structures.
 
