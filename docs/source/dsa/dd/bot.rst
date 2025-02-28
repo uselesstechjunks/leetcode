@@ -7,7 +7,7 @@ Thought Process
 =====================================================================
 .. note::
 	#. Does it form a group, chain, tree, graph? - union find, parent-child hashmap (set if parent-child is implicit).
-	#. Does it have a search space? Is the problem about finding the smallest value for which a condition satisfies? - binary search.
+	#. Does it have a search space? Is the problem about finding the smallest/largest value for which a condition satisfies? - binary search.
 	#. Does the quantity grow monotonically with number of elements? - VLW.
 	#. What bookkeeping is required? What involves recomputation? What else can we track to avoid it? - hashmap, bst, stack, queue, heap.
 	#. Can we solve it in parts and combine the results? - divide and conquer, recursion, DP.
@@ -39,6 +39,10 @@ General Techniques
 Ordered
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Values explicit - vanilla Binary search.
+
+	#. Directly finding key
+	#. Find smallest in search space which satisfies a condition
+	#. Find largest in search space which satisfies a condition
 #. Values NOT explicit 
 
 	#. Values bounded? Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
