@@ -27,7 +27,7 @@ Core Porblem Solving Tricks
 
 Core Algorithms & Data Structures
 =====================================================================
-#. Binary Search - `Find Key <https://leetcode.com/problems/binary-search/description/>`_, `Bisect Left <https://leetcode.com/problems/search-insert-position/description/>`_, `Bisect Right <https://leetcode.com/problems/sqrtx/>`_
+#. Binary Search - `Find Key <https://leetcode.com/problems/binary-search/description/>`_, `Bisect Left <https://leetcode.com/problems/search-insert-position/description/>`_, `Bisect Right <https://leetcode.com/problems/sqrtx/>`_, `Both Ends <https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/>`_
 #. Sort - `Heap Sort <https://leetcode.com/problems/sort-an-array/description/>`_, `Merge Sort <https://leetcode.com/problems/merge-sorted-array/description/>`_, `Quicksort <https://leetcode.com/problems/partition-array-according-to-given-pivot/description/>`_
 #. Dutch National Flag - `3 way partition <https://leetcode.com/problems/sort-colors/description/>`_
 #. Stack - `Using Queue <https://leetcode.com/problems/implement-stack-using-queues/>`_
