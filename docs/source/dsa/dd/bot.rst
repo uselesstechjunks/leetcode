@@ -7,7 +7,7 @@ Thought Process
 =====================================================================
 .. note::
 	#. Does it form a group, chain, tree, graph? - union find, parent-child hashmap (set if parent-child is implicit).
-	#. Does it have a search space? Is there a contiguous segment within this search space for which a condition satisfies? Is the problem about finding the boundaries of that region? - binary search.
+	#. Does it have a search space? Is there a contiguous segment within this search space for which a condition satisfies? Is the problem about finding the boundaries of that segment? - binary search.
 	#. Does the quantity grow monotonically with number of elements? - VLW.
 	#. What bookkeeping is required? What involves recomputation? What else can we track to avoid it? - hashmap, bst, stack, queue, heap.
 	#. Can we solve it in parts and combine the results? - divide and conquer, recursion, DP.
