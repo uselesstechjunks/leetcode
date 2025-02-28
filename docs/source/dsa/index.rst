@@ -64,15 +64,15 @@ Fundamentals
 ================================================================================
 .. attention::
 
-	* [thealgorists.com] `Data Structures & Algorithms <https://www.thealgorists.com/Algo>`_
-	* [cp-algorithms.com] `Algorithms for Competitive Programming <https://cp-algorithms.com/>`_
-	* [neetcode.io] `Neetcode <https://neetcode.io/practice>`_ 
+	* [cp-algorithms.com] `Algorithms for Competitive Programming <https://cp-algorithms.com/>`_	 
 	* [bigocheatsheet.com] `Know Thy Complexities! <http://bigocheatsheet.com/>`_	
 
 Problem Patterns
 ================================================================================
 .. note::
 
+	* [thealgorists.com] `Data Structures & Algorithms <https://www.thealgorists.com/Algo>`_
+	* [neetcode.io] `Neetcode <https://neetcode.io/practice>`_
 	* [leetcode.com] `Master DSA Patterns <https://leetcode.com/discuss/study-guide/6364043/Master-DSA-Patterns/>`_
 	* [hellointerview.com] `Data Structures and Algorithms <https://www.hellointerview.com/learn/code>`_
 	* [deriveit.org] `DeriveIt <https://deriveit.org/coding>`_
@@ -82,19 +82,6 @@ Code Patterns
 .. note::
 	* [algo.monster] `Templates <https://algo.monster/templates>`_
 	* [github.io] `LC cheatsheet <https://jwl-7.github.io/leetcode-cheatsheet/>`_
-
-.. important::
-	* [youtube.com] `Sliding Window Mental Model <https://www.youtube.com/watch?v=MK-NZ4hN7rs>`_
-	* [leetcode.com] `Sliding Window Technique: A Comprehensive Guide <https://leetcode.com/discuss/interview-question/3722472/mastering-sliding-window-technique-a-comprehensive-guide>`_
-	* [geeksforgeeks.org] `Sliding Window Technique <https://www.geeksforgeeks.org/window-sliding-technique/>`_
-	* [leetcode.com] `Sliding window with frequency counts <https://leetcode.com/problems/subarrays-with-k-different-integers/solutions/235002/one-code-template-to-solve-all-of-these-problems/>`_
-	* [leetcode.com] `Lee's solutions for sliding window <https://leetcode.com/problems/find-the-longest-equal-subarray/solutions/3934172/java-c-python-one-pass-sliding-window-o-n>`_
-
-Two Pointers
-================================================================================
-.. important::
-	* [leetcode.com] `Solved all two pointers problems in 100 days. <https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days>`_
-	* [reddit.com] `Two-Pointer Technique, an In-Depth Guide <https://www.reddit.com/r/leetcode/comments/18g9383/twopointer_technique_an_indepth_guide_concepts/?rdt=59240>`_
 
 Mostly Useful
 ================================================================================
