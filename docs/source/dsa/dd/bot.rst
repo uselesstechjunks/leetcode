@@ -40,9 +40,9 @@ Ordered
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Values explicit - vanilla Binary search.
 
-	#. Range that satisfies the condition is on the left of the search space
-	#. Range that satisfies the condition is on the right of the search space
-	#. Range that satisfies the condition is in the middle of the search space
+	#. Range that satisfies the condition is on the left of the search space. Pruned range might move past it. Need to allow right to move past left.
+	#. Range that satisfies the condition is on the right of the search space. Pruned range always contains it. Always reduces to size 1.
+	#. Range that satisfies the condition is in the middle of the search space.
 #. Values NOT explicit 
 
 	#. Values bounded? Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
