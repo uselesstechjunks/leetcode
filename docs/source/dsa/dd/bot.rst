@@ -40,9 +40,9 @@ Ordered
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Values explicit - vanilla Binary search.
 
-	#. Directly finding key
-	#. Find smallest in search space which satisfies a condition
-	#. Find largest in search space which satisfies a condition
+	#. Range that satisfies the condition is on the left of the search space
+	#. Range that satisfies the condition is on the right of the search space
+	#. Range that satisfies the condition is in the middle of the search space
 #. Values NOT explicit 
 
 	#. Values bounded? Binary search on range. Condition check O(T(n)) -> total T(n)lg(W), W=precision
