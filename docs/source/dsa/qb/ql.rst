@@ -28,6 +28,7 @@ Ordered Explicit Range - Binary Search
 - https://leetcode.com/problems/binary-search/
 - https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 - https://leetcode.com/problems/search-insert-position/description/
+- https://leetcode.com/problems/sqrtx/
 - https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 - https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 - https://leetcode.com/problems/search-in-rotated-sorted-array/description/
