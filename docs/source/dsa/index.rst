@@ -33,24 +33,16 @@ Core Algorithms & Data Structures
 #. Stack: `Using Queue <https://leetcode.com/problems/implement-stack-using-queues/>`_
 #. Queue: `Circular <https://leetcode.com/problems/design-circular-queue/description/>`_, `Using Stack <https://leetcode.com/problems/implement-queue-using-stacks/description/>`_, `Circular Deque <https://leetcode.com/problems/design-circular-deque/description/>`_
 #. Linked List: `Cycle Detection <https://leetcode.com/problems/linked-list-cycle/description/>`_, `Reverse <https://leetcode.com/problems/reverse-linked-list/>`_, `Design <https://leetcode.com/problems/design-linked-list/description/>`_
-#. Binary Search Tree: `Search <https://leetcode.com/problems/search-in-a-binary-search-tree/>`_, `Insert <https://leetcode.com/problems/insert-into-a-binary-search-tree/>`_, `Delete <https://leetcode.com/problems/delete-node-in-a-bst/description/>`_
+#. Tree: Iterator, LCA, Path Sum, Level Order Traversal, Serialization
+#. Binary Search Tree: `Search <https://leetcode.com/problems/search-in-a-binary-search-tree/>`_, `Insert <https://leetcode.com/problems/insert-into-a-binary-search-tree/>`_, `Delete <https://leetcode.com/problems/delete-node-in-a-bst/description/>`_, Threaded Binary Tree, LCA, Serialization
 #. Range Query Trees: `Binary Indexed Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Segment Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Cartesian Tree <https://leetcode.com/problems/maximum-binary-tree/description/>`_, `Interval Tree <https://leetcode.com/problems/data-stream-as-disjoint-intervals/>`_
 #. Monotonic Stack: Next Greater, Previous Greater, Both Ends (Rectangle in Histogram)
-#. Tree Iterator
-#. Tree LCA
-#. Graph BFS
-#. Graph DFS
-#. Graph Edge Classification
-#. Graph MST
-#. Graph SSSP
-#. Graph APSP
-#. Graph TSort
-#. Graph SCC
-#. Graph Articulation Vertices
-#. Graph BCC
+#. Graph: BFS, DFS, Edge Classification, MST, SSSP, APSP, TSort, SCC, Articulation Vertices, BCC
 #. DP - Sequence: LCS, LIS, LPS
 #. DP - Knapsack: 0-1 Bounded, 0-1 Unbounded
 #. DP - Edit Distance:
+#. Backtracking: Permutations, Combinations, Paranthesis
+#. String: Hashing, Rolling Hash, `Trie <https://leetcode.com/problems/word-search-ii/description/>`_
 
 *********************************************************************************
 Learning
