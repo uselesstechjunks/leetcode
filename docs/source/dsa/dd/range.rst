@@ -87,6 +87,19 @@ Data Structures
 
 Algorithms
 --------------------------------------------------------------------------------
+#. Binary search
+
+	#. Define search space
+	#. Define condition which specifies a contiguous range in that search space touching either ends.
+	#. Decide whether to find the left boundary of that space or right.
+	#. Choose whether to search for max from left or min from right.
+
+	.. collapse:: Binary Search Variants
+
+	   .. literalinclude:: ../code/binsearch.py
+	      :language: python
+	      :linenos:
+
 #. Divide-and-Conquer approaches (e.g., inversion count with merge sort).
 #. Sliding window techniques (efficient for specific range problems).
 
