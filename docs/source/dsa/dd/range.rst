@@ -19,6 +19,7 @@ Data Structures
 	
 		   .. literalinclude:: ../../code/segtree.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 #. Fenwick Tree (Binary Indexed Tree):
 
@@ -30,6 +31,7 @@ Data Structures
 	
 		   .. literalinclude:: ../../code/bit.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 	- 2D: Sample implementation
 
@@ -37,6 +39,7 @@ Data Structures
 	
 		   .. literalinclude:: ../../code/bit2d.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 #. Sparse Table:
 
@@ -51,6 +54,7 @@ Data Structures
 	
 		   .. literalinclude:: ../../code/bst.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 	- Check if a tree is a valid BST
 
@@ -58,6 +62,7 @@ Data Structures
 	
 		   .. literalinclude:: ../../code/validbst.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 	- Tree traversals with stack
 
@@ -65,6 +70,7 @@ Data Structures
 	
 		   .. literalinclude:: ../../code/inorder.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 #. RMQ (Range Minimum Query):
 
@@ -98,6 +104,7 @@ Algorithms
 	
 		   .. literalinclude:: ../../code/binsearch.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 #. Binary Search Rotated
 
@@ -107,6 +114,7 @@ Algorithms
 	
 		   .. literalinclude:: ../../code/findmin_rot.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 	#. Search in rotated
 
@@ -114,6 +122,7 @@ Algorithms
 	
 		   .. literalinclude:: ../../code/binsearch_rot.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 #. Divide-and-Conquer approaches (e.g., inversion count with merge sort).
 #. Sliding window techniques (efficient for specific range problems).
@@ -145,6 +154,7 @@ MEX - Minimum Excluded Element
 
 	   .. literalinclude:: ../../code/smallest_infinite.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 #. `MEX on array with updates <https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/description/>`_
 #. TODO: https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/description/
@@ -158,6 +168,7 @@ Pointer Gynmastics
 
 	   .. literalinclude:: ../../code/rotatearr.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 
 Binary Search
@@ -225,6 +236,7 @@ Inversions
 
 	   .. literalinclude:: ../../code/shortestUnsortedSubarray.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 #. `Shortest Unsorted Continuous Subarray to Reove <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/>`_
 
@@ -232,6 +244,7 @@ Inversions
 
 	   .. literalinclude:: ../../code/shortestUnsortedRemove.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 
 Order Statistics
@@ -398,6 +411,7 @@ Problems Using Monotonic Stack
 	
 		   .. literalinclude:: ../../code/maxhist.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 	- Related: Maximum rectangle in binary matrix. Can be reduced to above.
 
@@ -405,6 +419,7 @@ Problems Using Monotonic Stack
 	
 		   .. literalinclude:: ../../code/maxrect.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 #. Trapping Rain Water
 
@@ -457,6 +472,7 @@ Problems Using Monotonic Queue
 	
 		   .. literalinclude:: ../../code/shortestsubarrsumk.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 	- This can also be solved using segment tree but it's suboptimal
 
@@ -464,6 +480,7 @@ Problems Using Monotonic Queue
 	
 		   .. literalinclude:: ../../code/minlencumsum.py
 		      :language: python
+		      :tab-width: 2
 		      :linenos:
 
 Interview Problems
@@ -513,6 +530,7 @@ Interview Problems
 		
 			   .. literalinclude:: ../../code/trap.py
 			      :language: python
+			      :tab-width: 2
 			      :linenos:
 	
 	#. Dynamic Updates 
