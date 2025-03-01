@@ -14,6 +14,7 @@ Advanced Graph Topics
 
 	   .. literalinclude:: ../../code/sssp.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 
 * Why important: Many problems in real-world applications (e.g., routing, network optimization) rely on shortest paths.
@@ -50,6 +51,7 @@ Advanced Graph Topics
 
 	   .. literalinclude:: ../../code/mst.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 
 * Why important: MSTs are useful in optimization problems, especially those involving connectivity.
@@ -88,6 +90,7 @@ Advanced Graph Topics
 
 	   .. literalinclude:: ../../code/tsort.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 * Why important: Crucial for dependency resolution and scheduling problems.
 * Key Techniques:
@@ -133,6 +136,7 @@ Advanced Graph Topics
 
 	   .. literalinclude:: ../../code/graph.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 
 * Why important: Breadth-first and depth-first searches are foundational for exploring graphs.
