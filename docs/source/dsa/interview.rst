@@ -3,6 +3,7 @@ Interview Day and Prior
 ######################################################################
 .. attention::
 	* [youtube.com] `Chris Jereza <https://www.youtube.com/watch?v=ksZ2wFRZ3gM>`_
+	* [thatgirlcoder.com] `DSA Approach Format During Interviews <https://thatgirlcoder.com/>`_
 **********************************************************************
 Checklist
 **********************************************************************
