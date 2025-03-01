@@ -246,10 +246,13 @@ Given Range - Min/Max/Avg/Median Query
 
 QuickSort Partitioning
 ---------------------------------------------------------------------
-- [Easy] `Sort Binary Array <https://www.geeksforgeeks.org/sort-binary-array-using-one-traversal/>`_
+- [Medium] `Sort Binary Array <https://www.geeksforgeeks.org/sort-binary-array-using-one-traversal/>`_
 - [Medium] `Dutch National Flag <https://leetcode.com/problems/sort-colors/description/>`_
-- [Hard] `First Missing Positive <https://leetcode.com/problems/first-missing-positive/>`_ [<= 0, > 0 partitioning]
+- [Medium] `Alternate Positive Negative Partition <https://leetcode.com/problems/rearrange-array-elements-by-sign/description/>`_
 - [Medium] `Even Odd Partitioning <https://leetcode.com/problems/sort-array-by-parity/>`_
+- [Medium] `Odd Even Index Paritioning <https://leetcode.com/problems/sort-array-by-parity-ii/description/>`_
+- [Medium] `List Partitioning <https://leetcode.com/problems/partition-list/description/>`_
+- [Medium] `Partition with External Key <https://leetcode.com/problems/partition-array-according-to-given-pivot/description/>`_
 - [Medium] `Kth Largest Element in Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
 
 Optimal Partitioning
