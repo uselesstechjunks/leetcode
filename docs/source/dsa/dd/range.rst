@@ -99,7 +99,13 @@ Algorithms
 	   .. literalinclude:: ../code/binsearch.py
 	      :language: python
 	      :linenos:
+#. Binary Search Rotated
 
+	.. collapse:: Binary Search Rotated Variants
+
+	   .. literalinclude:: ../code/binsearch_rot.py
+	      :language: python
+	      :linenos:
 #. Divide-and-Conquer approaches (e.g., inversion count with merge sort).
 #. Sliding window techniques (efficient for specific range problems).
 
