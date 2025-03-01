@@ -17,7 +17,7 @@ Data Structures
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/segtree.py
+		   .. literalinclude:: ../../code/segtree.py
 		      :language: python
 		      :linenos:
 #. Fenwick Tree (Binary Indexed Tree):
@@ -28,14 +28,14 @@ Data Structures
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/bit.py
+		   .. literalinclude:: ../../code/bit.py
 		      :language: python
 		      :linenos:
 	- 2D: Sample implementation
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/bit2d.py
+		   .. literalinclude:: ../../code/bit2d.py
 		      :language: python
 		      :linenos:
 #. Sparse Table:
@@ -49,21 +49,21 @@ Data Structures
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/bst.py
+		   .. literalinclude:: ../../code/bst.py
 		      :language: python
 		      :linenos:
 	- Check if a tree is a valid BST
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/validbst.py
+		   .. literalinclude:: ../../code/validbst.py
 		      :language: python
 		      :linenos:
 	- Tree traversals with stack
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/inorder.py
+		   .. literalinclude:: ../../code/inorder.py
 		      :language: python
 		      :linenos:
 #. RMQ (Range Minimum Query):
@@ -96,7 +96,7 @@ Algorithms
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/binsearch.py
+		   .. literalinclude:: ../../code/binsearch.py
 		      :language: python
 		      :linenos:
 #. Binary Search Rotated
@@ -105,14 +105,14 @@ Algorithms
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/findmin_rot.py
+		   .. literalinclude:: ../../code/findmin_rot.py
 		      :language: python
 		      :linenos:
 	#. Search in rotated
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/binsearch_rot.py
+		   .. literalinclude:: ../../code/binsearch_rot.py
 		      :language: python
 		      :linenos:
 #. Divide-and-Conquer approaches (e.g., inversion count with merge sort).
@@ -143,7 +143,7 @@ MEX - Minimum Excluded Element
 
 	.. collapse:: Implicit MEX
 
-	   .. literalinclude:: ../code/smallest_infinite.py
+	   .. literalinclude:: ../../code/smallest_infinite.py
 	      :language: python
 	      :linenos:
 #. `MEX on array with updates <https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/description/>`_
@@ -156,7 +156,7 @@ Pointer Gynmastics
 
 	.. collapse:: Expand Code
 
-	   .. literalinclude:: ../code/rotatearr.py
+	   .. literalinclude:: ../../code/rotatearr.py
 	      :language: python
 	      :linenos:
 
@@ -223,14 +223,14 @@ Inversions
 
 	.. collapse:: Two approaches - Two pointers, monotonic stack
 
-	   .. literalinclude:: ../code/shortestUnsortedSubarray.py
+	   .. literalinclude:: ../../code/shortestUnsortedSubarray.py
 	      :language: python
 	      :linenos:
 #. `Shortest Unsorted Continuous Subarray to Reove <https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/>`_
 
 	.. collapse:: Two pointers
 
-	   .. literalinclude:: ../code/shortestUnsortedRemove.py
+	   .. literalinclude:: ../../code/shortestUnsortedRemove.py
 	      :language: python
 	      :linenos:
 
@@ -396,14 +396,14 @@ Problems Using Monotonic Stack
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/maxhist.py
+		   .. literalinclude:: ../../code/maxhist.py
 		      :language: python
 		      :linenos:
 	- Related: Maximum rectangle in binary matrix. Can be reduced to above.
 
 		.. collapse:: Expand Code
 	
-		   .. literalinclude:: ../code/maxrect.py
+		   .. literalinclude:: ../../code/maxrect.py
 		      :language: python
 		      :linenos:
 #. Trapping Rain Water
@@ -455,14 +455,14 @@ Problems Using Monotonic Queue
 
 		.. collapse:: Monotonic queue for rightmost left index
 	
-		   .. literalinclude:: ../code/shortestsubarrsumk.py
+		   .. literalinclude:: ../../code/shortestsubarrsumk.py
 		      :language: python
 		      :linenos:
 	- This can also be solved using segment tree but it's suboptimal
 
 		.. collapse:: Shortest Subarray with Sum at Least K
 	
-		   .. literalinclude:: ../code/minlencumsum.py
+		   .. literalinclude:: ../../code/minlencumsum.py
 		      :language: python
 		      :linenos:
 
@@ -511,7 +511,7 @@ Interview Problems
 		
 			.. collapse:: 
 		
-			   .. literalinclude:: ../code/trap.py
+			   .. literalinclude:: ../../code/trap.py
 			      :language: python
 			      :linenos:
 	
