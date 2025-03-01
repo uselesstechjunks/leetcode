@@ -47,21 +47,21 @@ Data Structures
 	- Count of elements less than or greater than a given value.
 	- Fundamental tree algorithms
 
-		.. collapse:: Sample BST implementation
+		.. collapse:: Expand Code
 	
 		   .. literalinclude:: ../code/bst.py
 		      :language: python
 		      :linenos:
 	- Check if a tree is a valid BST
 
-		.. collapse:: Validate BST
+		.. collapse:: Expand Code
 	
 		   .. literalinclude:: ../code/validbst.py
 		      :language: python
 		      :linenos:
 	- Tree traversals with stack
 
-		.. collapse:: Inorder traversal with stack
+		.. collapse:: Expand Code
 	
 		   .. literalinclude:: ../code/inorder.py
 		      :language: python
@@ -94,18 +94,27 @@ Algorithms
 	#. Decide whether to find the left boundary of that space or right.
 	#. Choose whether to search for max from left or min from right.
 
-	.. collapse:: Binary Search Variants
-
-	   .. literalinclude:: ../code/binsearch.py
-	      :language: python
-	      :linenos:
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../code/binsearch.py
+		      :language: python
+		      :linenos:
 #. Binary Search Rotated
 
-	.. collapse:: Binary Search Rotated Variants
+	#. Find Pivot
 
-	   .. literalinclude:: ../code/binsearch_rot.py
-	      :language: python
-	      :linenos:
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../code/findmin_rot.py
+		      :language: python
+		      :linenos:
+	#. Search in rotated
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../code/binsearch_rot.py
+		      :language: python
+		      :linenos:
 #. Divide-and-Conquer approaches (e.g., inversion count with merge sort).
 #. Sliding window techniques (efficient for specific range problems).
 
@@ -145,7 +154,7 @@ Pointer Gynmastics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Rotate array
 
-	.. collapse:: Rotate array left/right
+	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../code/rotatearr.py
 	      :language: python
