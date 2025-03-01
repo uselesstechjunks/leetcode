@@ -12,7 +12,7 @@ Advanced Graph Topics
 
 	.. collapse:: Single source shortest path
 
-	   .. literalinclude:: ../code/sssp.py
+	   .. literalinclude:: ../../code/sssp.py
 	      :language: python
 	      :linenos:
 
@@ -48,7 +48,7 @@ Advanced Graph Topics
 * Sample implementation
 	.. collapse:: MST algorithms
 
-	   .. literalinclude:: ../code/mst.py
+	   .. literalinclude:: ../../code/mst.py
 	      :language: python
 	      :linenos:
 
@@ -86,7 +86,7 @@ Advanced Graph Topics
 
 	.. collapse:: Single source shortest path
 
-	   .. literalinclude:: ../code/tsort.py
+	   .. literalinclude:: ../../code/tsort.py
 	      :language: python
 	      :linenos:
 * Why important: Crucial for dependency resolution and scheduling problems.
@@ -131,7 +131,7 @@ Advanced Graph Topics
 * Sample implementation
 	.. collapse:: A collection of traversal algorithms and applications
 
-	   .. literalinclude:: ../code/graph.py
+	   .. literalinclude:: ../../code/graph.py
 	      :language: python
 	      :linenos:
 
