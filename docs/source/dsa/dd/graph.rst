@@ -12,8 +12,9 @@ Advanced Graph Topics
 
 	.. collapse:: Single source shortest path
 
-	   .. literalinclude:: ../code/sssp.py
+	   .. literalinclude:: ../../code/sssp.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 
 * Why important: Many problems in real-world applications (e.g., routing, network optimization) rely on shortest paths.
@@ -48,8 +49,9 @@ Advanced Graph Topics
 * Sample implementation
 	.. collapse:: MST algorithms
 
-	   .. literalinclude:: ../code/mst.py
+	   .. literalinclude:: ../../code/mst.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 
 * Why important: MSTs are useful in optimization problems, especially those involving connectivity.
@@ -86,8 +88,9 @@ Advanced Graph Topics
 
 	.. collapse:: Single source shortest path
 
-	   .. literalinclude:: ../code/tsort.py
+	   .. literalinclude:: ../../code/tsort.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 * Why important: Crucial for dependency resolution and scheduling problems.
 * Key Techniques:
@@ -131,8 +134,9 @@ Advanced Graph Topics
 * Sample implementation
 	.. collapse:: A collection of traversal algorithms and applications
 
-	   .. literalinclude:: ../code/graph.py
+	   .. literalinclude:: ../../code/graph.py
 	      :language: python
+	      :tab-width: 2
 	      :linenos:
 
 * Why important: Breadth-first and depth-first searches are foundational for exploring graphs.
