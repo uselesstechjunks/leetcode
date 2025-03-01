@@ -27,16 +27,17 @@ Core Porblem Solving Tricks
 
 Core Algorithms & Data Structures
 =====================================================================
-#. Binary Search - `Find Key <https://leetcode.com/problems/binary-search/description/>`_, `Bisect Left <https://leetcode.com/problems/search-insert-position/description/>`_, `Bisect Right <https://leetcode.com/problems/sqrtx/>`_, `Both Ends <https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/>`_, 
-#. Binary Search in Rotated - `Find Min (distinct) <https://leetcode.com/problems/search-in-rotated-sorted-array/>`_, `Find Key (distinct) <https://leetcode.com/problems/search-in-rotated-sorted-array/>`_, `Find Key (not distinct) <https://leetcode.com/problems/search-in-rotated-sorted-array-ii/>`_
-#. Linear Search with Pointers & Bookkeeping - `Two Sum <https://leetcode.com/problems/two-sum/>`_, `Two Sum Sorted <https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/>`_, `Three Sum <https://leetcode.com/problems/3sum/>`_
-#. Partition - `2 Way Partition <https://leetcode.com/problems/partition-array-according-to-given-pivot/>`_, `3 Way Partition <https://leetcode.com/problems/sort-colors/>`_
-#. Sort - `Heap Sort <https://leetcode.com/problems/sort-an-array/description/>`_, `Merge Sort <https://leetcode.com/problems/merge-sorted-array/description/>`_
-#. Stack - `Using Queue <https://leetcode.com/problems/implement-stack-using-queues/>`_
-#. Queue - `Circular <https://leetcode.com/problems/design-circular-queue/description/>`_, `Using Stack <https://leetcode.com/problems/implement-queue-using-stacks/description/>`_, `Circular Deque <https://leetcode.com/problems/design-circular-deque/description/>`_
-#. Linked List - `Cycle Detection <https://leetcode.com/problems/linked-list-cycle/description/>`_, `Reverse <https://leetcode.com/problems/reverse-linked-list/>`_, `Design <https://leetcode.com/problems/design-linked-list/description/>`_
-#. Binary Search Tree - `Search <https://leetcode.com/problems/search-in-a-binary-search-tree/>`_, `Insert <https://leetcode.com/problems/insert-into-a-binary-search-tree/>`_, `Delete <https://leetcode.com/problems/delete-node-in-a-bst/description/>`_
-#. Range Query Trees - `Binary Indexed Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Segment Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Cartesian Tree <https://leetcode.com/problems/maximum-binary-tree/description/>`_, `Interval Tree <https://leetcode.com/problems/data-stream-as-disjoint-intervals/>`_
+#. Binary Search: `Find Key <https://leetcode.com/problems/binary-search/description/>`_, `Bisect Left <https://leetcode.com/problems/search-insert-position/description/>`_, `Bisect Right <https://leetcode.com/problems/sqrtx/>`_, `Both Ends <https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/>`_, 
+#. Binary Search in Rotated: `Find Min (distinct) <https://leetcode.com/problems/search-in-rotated-sorted-array/>`_, `Find Key (distinct) <https://leetcode.com/problems/search-in-rotated-sorted-array/>`_, `Find Key (not distinct) <https://leetcode.com/problems/search-in-rotated-sorted-array-ii/>`_
+#. Linear Search with Pointers & Bookkeeping: `Two Sum <https://leetcode.com/problems/two-sum/>`_, `Two Sum Sorted <https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/>`_, `Three Sum <https://leetcode.com/problems/3sum/>`_
+#. Partition: `2 Way Partition <https://leetcode.com/problems/partition-array-according-to-given-pivot/>`_, `3 Way Partition <https://leetcode.com/problems/sort-colors/>`_
+#. Sort: `Heap Sort <https://leetcode.com/problems/sort-an-array/description/>`_, `Merge Sort <https://leetcode.com/problems/merge-sorted-array/description/>`_
+#. Stack: `Using Queue <https://leetcode.com/problems/implement-stack-using-queues/>`_
+#. Queue: `Circular <https://leetcode.com/problems/design-circular-queue/description/>`_, `Using Stack <https://leetcode.com/problems/implement-queue-using-stacks/description/>`_, `Circular Deque <https://leetcode.com/problems/design-circular-deque/description/>`_
+#. Linked List: `Cycle Detection <https://leetcode.com/problems/linked-list-cycle/description/>`_, `Reverse <https://leetcode.com/problems/reverse-linked-list/>`_, `Design <https://leetcode.com/problems/design-linked-list/description/>`_
+#. Binary Search Tree: `Search <https://leetcode.com/problems/search-in-a-binary-search-tree/>`_, `Insert <https://leetcode.com/problems/insert-into-a-binary-search-tree/>`_, `Delete <https://leetcode.com/problems/delete-node-in-a-bst/description/>`_
+#. Range Query Trees: `Binary Indexed Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Segment Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Cartesian Tree <https://leetcode.com/problems/maximum-binary-tree/description/>`_, `Interval Tree <https://leetcode.com/problems/data-stream-as-disjoint-intervals/>`_
+#. Monotonic Stack: Next Greater, Previous Greater, Both Ends (Rectangle in Histogram)
 #. Tree Iterator
 #. Tree LCA
 #. Graph BFS
@@ -49,6 +50,9 @@ Core Algorithms & Data Structures
 #. Graph SCC
 #. Graph Articulation Vertices
 #. Graph BCC
+#. DP - Sequence: LCS, LIS, LPS
+#. DP - Knapsack: 0-1 Bounded, 0-1 Unbounded
+#. DP - Edit Distance:
 
 *********************************************************************************
 Learning
