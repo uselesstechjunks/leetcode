@@ -6,16 +6,19 @@ Interview Day and Prior
 	* [thatgirlcoder.com] `DSA Approach Format During Interviews <https://thatgirlcoder.com/>`_
 
 **********************************************************************
-Format
+Remember
 **********************************************************************
-#. Reminder: 
+#. Acting smart is VERY risky. Especially when you know how to solve the first version of the problem.
+#. You DON'T need to remember how you solved it earlier. You CAN FIGURE IT OUT NOW.
+#. NOT GIVING UP is what would help. Just follow the PROCESS.
+#. If you mention alternate approaches, talk about the time/space complexity TRADE-OFF.
+#. EVERY question is valid. It's also okay to NOT know something.
+#. It's OKAY to screw up. Just follow the PROCESS.
 
-	#. Acting smart is very risky.
-	#. Acting annoyed is red flag. Every question is valid. It's also okay to NOT know something.
-	#. Not giving up is what would help. Follow the process.
-	#. If you mention alternate approaches, talk about the time/space complexity trade-offs.
-	#. It's OKAY to screw up.
-#. Start with examples:
+**********************************************************************
+The Process
+**********************************************************************
+#. Start with examples
 
 	- Start with one small example. Specify input and output.
 	- Confirm if the understanding of the problem is correct.
@@ -23,18 +26,20 @@ Format
 	- Identify corner cases.
 	- Usually 3 examples are good - one for algorithm understanding, and 2 for corner cases.
 
-#. Note down obversations and approach:
+#. Start noting down obversations and approach in comments
 
 	- Lay out the algorithm in words.
 	- Mention time complexity in the notes.
 
-#. Code:
+#. Code
 
-	- Keep comments.
+	- Keep comments. Add code after it.
 
-#. Test:
+#. Test
 
 	- Dry run on examples and debug.
+#. Be prepared for follow ups.
+
 **********************************************************************
 Checklist
 **********************************************************************
