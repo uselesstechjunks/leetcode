@@ -9,6 +9,13 @@ Optimisation: Dynamic Programming and Greedy
 Dynamic Programming
 --------------------------------------------------------------------------------
 #. Longset Common Subsequence
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../../code/lcs.py
+		      :language: python
+		      :tab-width: 2
+		      :linenos:
 #. Longest Increasing Subsequence
 #. Longest Palindromic Subsequence
 
