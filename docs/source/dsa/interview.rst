@@ -8,6 +8,7 @@ Interview Day and Prior
 **********************************************************************
 Format
 **********************************************************************
+#. Reminder: Do NOT act smart.
 #. Start with examples:
 
 	- Start with one small example. Specify input and output.
