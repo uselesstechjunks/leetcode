@@ -87,7 +87,8 @@ Fundamentals
 .. attention::
 
 	* [cp-algorithms.com] `Algorithms for Competitive Programming <https://cp-algorithms.com/>`_	 
-	* [bigocheatsheet.com] `Know Thy Complexities! <http://bigocheatsheet.com/>`_	
+	* [bigocheatsheet.com] `Know Thy Complexities! <http://bigocheatsheet.com/>`_
+	* [walkccc.me] `Solutions to Introduction to Algorithms Third Edition <https://walkccc.me/CLRS/>`_
 
 Problem Patterns
 ================================================================================
