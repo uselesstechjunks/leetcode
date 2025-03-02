@@ -129,7 +129,7 @@ Prior to the interview: Remember
 
 		#. Don't try to solve any new ridiculuously hard problem. Don't want to walk into the interview on a losing streak.
 		#. Understand what makes you confident. Big picture, grasp on the bag of tricks, having the process reharsed and clear inside your head.
-		#. It's okay if you cannot recall something. Read the exact approach from book and understand space & time complexity.
+		#. It's okay if you cannot recall something. Read/watch the exact approach from book/video and understand space & time complexity.
 	#. 24 hours leading up to the interview
 
 		#. Clear up your mind from everything. Hit the gym. Listen to music and watch something. 
