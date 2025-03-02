@@ -4,6 +4,30 @@ Interview Day and Prior
 .. attention::
 	* [youtube.com] `Chris Jereza <https://www.youtube.com/watch?v=ksZ2wFRZ3gM>`_
 	* [thatgirlcoder.com] `DSA Approach Format During Interviews <https://thatgirlcoder.com/>`_
+
+**********************************************************************
+Format
+**********************************************************************
+#. Start with examples:
+
+	- Start with one small example. Specify input and output.
+	- Confirm if the understanding of the problem is correct.
+	- Confirm about the input range.
+	- Identify corner cases.
+	- Usually 3 examples are good - one for algorithm understanding, and 2 for corner cases.
+
+#. Note down obversations and approach:
+
+	- Lay out the algorithm in words.
+	- Mention time complexity in the notes.
+
+#. Code:
+
+	- Keep comments.
+
+#. Test:
+
+	- Dry run on examples and debug.
 **********************************************************************
 Checklist
 **********************************************************************
