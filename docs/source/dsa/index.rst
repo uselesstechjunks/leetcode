@@ -77,6 +77,7 @@ Deep Dives
 
 	dd/range
 	dd/graph
+	dd/optim
 	dsasol
 *********************************************************************************
 Resources
