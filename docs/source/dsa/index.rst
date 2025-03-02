@@ -36,9 +36,9 @@ Core Algorithms & Data Structures
 #. Tree: Iterator, LCA, Path Sum, Level Order Traversal
 #. Binary Search Tree: `Search <https://leetcode.com/problems/search-in-a-binary-search-tree/>`_, `Insert <https://leetcode.com/problems/insert-into-a-binary-search-tree/>`_, `Delete <https://leetcode.com/problems/delete-node-in-a-bst/description/>`_, Threaded Binary Tree, LCA
 #. Range Query Trees: `Binary Indexed Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Segment Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Cartesian Tree <https://leetcode.com/problems/maximum-binary-tree/description/>`_, `Interval Tree <https://leetcode.com/problems/data-stream-as-disjoint-intervals/>`_
-#. Monotonic Stack: Next Greater, Previous Greater, Both Ends (Rectangle in Histogram)
+#. Monotonic Stack: `Next Greater <https://leetcode.com/problems/next-greater-node-in-linked-list/description/>`_, `Previous Greater <https://leetcode.com/problems/online-stock-span/description/>`_, Both Ends (`Rectangle in Histogram <https://leetcode.com/problems/largest-rectangle-in-histogram/>`_)
 #. Graph: `BFS <https://leetcode.com/problems/course-schedule-ii/description/>`_, `DFS <https://leetcode.com/problems/course-schedule-ii/description/>`_, Cycle Detection (`Undirected <https://leetcode.com/problems/redundant-connection/description/>`_, `Directed <https://leetcode.com/problems/course-schedule-ii/description/>`_) Edge Classification, `MST <https://leetcode.com/problems/connecting-cities-with-minimum-cost/description/>`_, `SSSP <https://leetcode.com/problems/network-delay-time/description/>`_, `TSort <https://leetcode.com/problems/course-schedule-ii/description/>`_, `Articulation Vertices & Bridges <https://leetcode.com/problems/critical-connections-in-a-network/description/>`_, SCC
-#. DP - Sequence: LCS, LIS, LPS
+#. DP - Sequence: `LCS <https://leetcode.com/problems/longest-common-subsequence/description/>`_, `LIS <https://leetcode.com/problems/longest-increasing-subsequence/description/>`_, `LPS <https://leetcode.com/problems/longest-palindromic-subsequence/description/>`_
 #. DP - Knapsack: 0-1 Bounded, 0-1 Unbounded
 #. DP - Edit Distance:
 #. Backtracking: Permutations, Combinations, Paranthesis
@@ -77,6 +77,7 @@ Deep Dives
 
 	dd/range
 	dd/graph
+	dd/optim
 	dsasol
 *********************************************************************************
 Resources
@@ -86,7 +87,8 @@ Fundamentals
 .. attention::
 
 	* [cp-algorithms.com] `Algorithms for Competitive Programming <https://cp-algorithms.com/>`_	 
-	* [bigocheatsheet.com] `Know Thy Complexities! <http://bigocheatsheet.com/>`_	
+	* [bigocheatsheet.com] `Know Thy Complexities! <http://bigocheatsheet.com/>`_
+	* [walkccc.me] `Solutions to Introduction to Algorithms Third Edition <https://walkccc.me/CLRS/>`_
 
 Problem Patterns
 ================================================================================
