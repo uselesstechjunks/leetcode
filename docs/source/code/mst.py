@@ -1,152 +1,91 @@
-import heapq
-
+""" Kruskal """
 class UnionFind:
-    def __init__(self, n):
-        self.parents = list(range(n))
-        self.size = [1] * n
-        self.n = n
-    def find(self, x):
-        if self.parents[x] != x:
-            self.parents[x] = self.find(self.parents[x])
-        return self.parents[x]
-    def union(self, x, y):
-        parent_x = self.find(x)
-        parent_y = self.find(y)
-        if self.size[parent_x] > self.size[parent_y]:
-            self.parents[parent_y] = parent_x
-            self.size[parent_x] += self.size[parent_y]
-            parent = parent_x
-        else:
-            self.parents[parent_x] = parent_y
-            self.size[parent_y] += self.size[parent_x]
-            parent = parent_y
-        return parent
+	def __init__(self, n):
+		# every node is its own parent
+		self.parents = list(range(n))
+		self.counts = [1] * n
+	
+	# returns the root of the set that x belongs to
+	def find(self, x):
+		if self.parents[x] != x:
+			# resetting the parent pointers to all members of the set to reduce amortized cost
+			self.parents[x] = self.find(self.parents[x])
+		return self.parents[x]
+	
+	def union(self, x, y):
+		parent_x = self.find(x)
+		parent_y = self.find(y)
+		# whichever set is larger, that should be the root of the unioned set to reduce amortized cost
+		if self.counts[parent_x] > self.counts[parent_y]:
+			self.parents[parent_y] = parent_x
+			self.counts[parent_x] += self.counts[parent_y]
+		else:
+			self.parents[parent_x] = parent_y
+			self.counts[parent_y] += self.counts[parent_x]
 
-class MST:
-    def prim(self, n, m, edges):
-        tree = []
-        weight = 0
-        adj = [[] for _ in range(n)]
-        for u, v, w in edges:
-            adj[u-1].append((v-1, w))
-            adj[v-1].append((u-1, w))
-        explored = [False] * n
-        explored[0] = True
-        minheap = [(w, 0, v) for v, w in adj[0]]
-        heapq.heapify(minheap)
-        while minheap:            
-            w, u, v = heapq.heappop(minheap)
-            if explored[v]:
-                continue
-            explored[v] = True
-            weight += w
-            tree.append((u+1, v+1))
-            for y, w in adj[v]:
-                if not explored[y]:
-                    heapq.heappush(minheap, (w, v, y))
-        if len(tree) == n-1:
-            return weight, tree
-        return -1, []
+def kruskal():
+	# sort the edges
+	# take each edge in sorted order
+	# add it to the tree if the other end doesn't already belong to the same group
+	# why do I need union find? why cannot we use a visited array?
+	# the way the algorithm works is because it forms a disjointed set of trees and then connecting them
+	# when connecting two disjointed sets, we need to ensure that we're not connecting within the same set
+	# that would form a cycle
+	disjoint_set = UnionFind(n + 1)
+	total_cost = 0
+	num_tree_edges = 0
 
-    def kruskal(self, n, m, edges):
-        tree = []
-        weight = 0
-        uf = UnionFind(n+1)
-        for u, v, w in sorted(edges, key=lambda x:x[2]):
-            if uf.find(u) != uf.find(v):
-                uf.union(u, v)
-                tree.append((u, v))
-                weight += w
-        if len(tree) == n-1:
-            return weight, tree
-        return -1, []
+	for u, v, cost in sorted(connections, key=lambda x:x[2]):
+		if disjoint_set.find(u) != disjoint_set.find(v):
+			disjoint_set.union(u, v)
+			total_cost += cost
+			num_tree_edges += 1
+	
+	return total_cost if num_tree_edges == n-1 else -1
 
-def test1():
-    mst = MST()
-    n = 4
-    m = 5
-    edges = [
-        [1, 2, 3],
-        [1, 3, 4],
-        [4, 2, 6],
-        [3, 4, 5],
-        [1, 4, 1]
-    ]
-    w, tree = mst.prim(n, m, edges)
-    print(w)
-    print(tree)
-    w, tree = mst.kruskal(n, m, edges)
-    print(w)
-    print(tree)
+def build(n, connections):
+	adj = [[] for _ in range(n+1)]
+	for u, v, cost in connections:
+		adj[u].append((cost, v))
+		adj[v].append((cost, u))
+	return adj
 
-def test2():
-    mst = MST()
-    n = 3
-    m = 1
-    edges = [
-        [1, 2, 1]
-    ]
-    w, tree = mst.prim(n, m, edges)
-    print(w)
-    print(tree)
-    w, tree = mst.kruskal(n, m, edges)
-    print(w)
-    print(tree)
+""" Prim """
+def prim():
+	adj = build(n, connections)
+	total_cost = 0
+	num_tree_edges = 0
+	# find all incident edges and mark them as candidates
+	# find the candidate with minimum weight
+	# go through the candidates from min weight to max one by one
+	# if the edge doesn't lead to another node which is visited, use the edge
+	# mark the vertex on the other end as visited so that we don't form circles
 
-def test3():
-    mst = MST()
-    n = 2
-    m = 3
-    edges = [
-        [1, 2, 2],
-        [1, 2, 1],
-        [1, 2, 3]
-    ]
-    w, tree = mst.prim(n, m, edges)
-    print(w)
-    print(tree)
-    w, tree = mst.kruskal(n, m, edges)
-    print(w)
-    print(tree)
+	# need a visited array to avoid cycles
+	visited = [False] * (n + 1)
 
-def test4():
-    mst = MST()
-    n = 5
-    m = 6
-    connections = [
-        [1, 2, 4],
-        [2, 3, 3],
-        [3, 4, 2],
-        [4, 5, 6],
-        [1, 5, 7],
-        [2, 5, 1]
-    ]
-    w, tree = mst.prim(n, m, connections)
-    print(w)
-    print(tree)
-    w, tree = mst.kruskal(n, m, connections)
-    print(w)
-    print(tree)
-    
-def test5():
-    mst = MST()
-    n = 4
-    m = 3
-    connections = [
-        [1, 2, 5],
-        [2, 3, 6],
-        [3, 4, 2]
-    ]
-    w, tree = mst.prim(n, m, connections)
-    print(w)
-    print(tree)
-    w, tree = mst.kruskal(n, m, connections)
-    print(w)
-    print(tree)
+	# need a minheap for storing the candidate edges
+	# need to store (cost, u, v) in the heap so that the mean is ordered by cost
+	minheap = []
 
-if __name__ == '__main__':
-    test1()
-    test2()
-    test3()
-    test4()
-    test5()
+	# start from node 1
+	visited[1] = True
+
+	for cost, v in adj[1]:
+		heapq.heappush(minheap, (cost, 1, v))
+
+	# u should always be the one which is visited
+	# if v is also visited, then we remove this edge
+	while minheap:
+		# pop because the minimum edge is always removed
+		# either it forms part of the tree, or it is thrown away because adding it would form a cycle
+		cost, u, v = heapq.heappop(minheap)
+		if not visited[v]:
+			total_cost += cost
+			visited[v] = True
+			num_tree_edges += 1
+
+			for cost, w in adj[v]:
+				heapq.heappush(minheap, (cost, v, w))
+
+	return total_cost if num_tree_edges == n-1 else -1

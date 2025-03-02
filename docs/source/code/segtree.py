@@ -1,8 +1,94 @@
 from random import randint
 from collections import Counter
 
-class SegmentTree:
+class RangeSumTree:
+	def __init__(self, nums: List[int]):
+		def build():
+			for i, val in enumerate(nums):
+				self.update_impl(1, 0, self.n-1, i, val)
 
+		self.n = len(nums)
+		self.tree = [0] * 4 * self.n
+		build()
+
+	def update_impl(self, root, t_left, t_right, index, val):
+		"""
+		Updates the leaf value at index and then subsequently intermeidate tree values.
+
+		Params:
+			root: root index of the tree
+			t_left: left index in the original array spanned by the current subtree
+      t_right: right index in the original array spanned by the current subtree
+			index: index in the array for update
+			val: value to be updated at index
+		Returns:
+			None
+		"""
+		if t_left > t_right:
+			return
+
+		if t_left == t_right:
+			self.tree[root] = val
+			return
+
+		t_mid = (t_left + t_right) // 2
+		
+		left_child = self.left_child_index(root)
+		right_child = self.right_child_index(root)
+
+		if index <= t_mid:
+			self.update_impl(left_child, t_left, t_mid, index, val)
+		else:
+			self.update_impl(right_child, t_mid + 1, t_right, index, val)
+		
+		self.tree[root] = self.tree[left_child] + self.tree[right_child]
+
+	def left_child_index(self, root):
+		return root * 2
+
+	def right_child_index(self, root):
+		return root * 2 + 1
+
+	def update(self, index: int, val: int) -> None:
+		self.update_impl(1, 0, self.n-1, index, val)
+
+	def query(self, root, t_left, t_right, left, right):
+		"""
+		Returns the range sum in the original array between left and right indices (both included)
+
+		Params:
+			root: root index of the tree
+   		t_left: left index in the original array spanned by the current subtree
+      t_right: right index in the original array spanned by the current subtree
+			left: left index of the range in the array
+			right: right index of the range in the array
+		Returns:
+			Sum of the numbers within range [left, right]
+		"""
+		if t_left > right or t_right < left:
+			return 0
+		
+		if t_left == left and t_right == right:
+			return self.tree[root]
+		
+		t_mid = (t_left + t_right) // 2
+		left_child = self.left_child_index(root)
+		right_child = self.right_child_index(root)
+
+		if right <= t_mid:
+			return self.query(left_child, t_left, t_mid, left, right)
+		if t_mid < left:
+			return self.query(right_child, t_mid + 1, t_right, left, right)
+		else:
+			return self.query(left_child, t_left, t_mid, left, t_mid) + self.query(right_child, t_mid + 1, t_right, t_mid + 1, right)
+
+	def sumRange(self, left: int, right: int) -> int:
+		return self.query(1, 0, self.n-1, left, right)
+
+"""
+The following is a more generic version of segment tree to be used for multiple range query tasks.
+"""
+class SegmentTree:
 	def __init__(self, nums, combine):
 		def build(root_index, range_left, range_right):
 			nonlocal nums
