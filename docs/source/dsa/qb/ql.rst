@@ -143,6 +143,7 @@ Find Optimal Range/Count - Constrainted Order/Span Query
 - [Hard] `Find LIS With Consecutive Diff <= k <https://leetcode.com/problems/longest-increasing-subsequence-ii/description/>`_
 - [Hard] `Find Range With Given Array as a Subsequence <https://leetcode.com/problems/minimum-window-subsequence/description/>`_
 - [Medium] `Next Greater Element <https://leetcode.com/problems/next-greater-element-ii/description/>`_
+- [Medium] `Next Greater Element in a Linked List <https://leetcode.com/problems/next-greater-node-in-linked-list/>`_
 - [Medium] `Next Greater Element Streaming <https://leetcode.com/problems/online-stock-span/description/>`_
 - [Medium] `Container with Most Water <https://leetcode.com/problems/container-with-most-water/description/>`_
 - [Hard] `Trapping Rain Water <https://leetcode.com/problems/trapping-rain-water/description/>`_
