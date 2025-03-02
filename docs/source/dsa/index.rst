@@ -37,7 +37,7 @@ Core Algorithms & Data Structures
 #. Binary Search Tree: `Search <https://leetcode.com/problems/search-in-a-binary-search-tree/>`_, `Insert <https://leetcode.com/problems/insert-into-a-binary-search-tree/>`_, `Delete <https://leetcode.com/problems/delete-node-in-a-bst/description/>`_, Threaded Binary Tree, LCA
 #. Range Query Trees: `Binary Indexed Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Segment Tree <https://leetcode.com/problems/range-sum-query-mutable/description/>`_, `Cartesian Tree <https://leetcode.com/problems/maximum-binary-tree/description/>`_, `Interval Tree <https://leetcode.com/problems/data-stream-as-disjoint-intervals/>`_
 #. Monotonic Stack: Next Greater, Previous Greater, Both Ends (Rectangle in Histogram)
-#. Graph: BFS, DFS, Edge Classification, MST, SSSP, APSP, TSort, SCC, Articulation Vertices, BCC
+#. Graph: BFS, DFS, Edge Classification, `MST <https://leetcode.com/problems/connecting-cities-with-minimum-cost/description/>`_, SSSP, APSP, TSort, SCC, Articulation Vertices, BCC
 #. DP - Sequence: LCS, LIS, LPS
 #. DP - Knapsack: 0-1 Bounded, 0-1 Unbounded
 #. DP - Edit Distance:
