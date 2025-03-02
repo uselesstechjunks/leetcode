@@ -8,7 +8,13 @@ Interview Day and Prior
 **********************************************************************
 Format
 **********************************************************************
-#. Reminder: Do NOT act smart.
+#. Reminder: 
+
+	#. Acting smart is very risky.
+	#. Acting annoyed is red flag. Every question is valid. It's also okay to NOT know something.
+	#. Not giving up is what would help. Follow the process.
+	#. If you mention alternate approaches, talk about the time/space complexity trade-offs.
+	#. It's OKAY to screw up.
 #. Start with examples:
 
 	- Start with one small example. Specify input and output.
