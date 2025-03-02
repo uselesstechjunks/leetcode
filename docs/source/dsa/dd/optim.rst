@@ -16,8 +16,16 @@ Dynamic Programming
 		      :language: python
 		      :tab-width: 2
 		      :linenos:
-#. Longest Increasing Subsequence
-#. Longest Palindromic Subsequence
+#. `Longest Increasing Subsequence <https://leetcode.com/problems/longest-increasing-subsequence/description/>`_
+#. `Longest Palindromic Subsequence <https://leetcode.com/problems/longest-palindromic-subsequence/description/>`_
+#. 0-1 Bounded Knapsack
+#. 0-1 Unbounded Knapsack
+#. Edit distance
+#. Assembly Line Scheduling
+#. Matrix Chain Multiplication
+#. Optimal BST
+#. `Viterbi Algorithm <https://leetcode.com/problems/filling-bookcase-shelves/description/>`_
+#. Scheduling to Maximise Profit
 
 Greedy
 --------------------------------------------------------------------------------
