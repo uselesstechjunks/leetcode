@@ -415,7 +415,9 @@ Search
 - [Medium] `Search Suggestion System <https://leetcode.com/problems/search-suggestions-system/description/>`_
 - [Hard] `Stream of Characters <https://leetcode.com/problems/stream-of-characters/description/>`_
 
-Order Statistics
+Misc
 ---------------------------------------------------------------------
+- [Medium] `Range Frequency Queries <https://leetcode.com/problems/range-frequency-queries/description/>`_
 - [Medium] `Find Consecutive Integers from a Data Stream <https://leetcode.com/problems/find-consecutive-integers-from-a-data-stream/description/>`_
+- [Hard] `Range Module <https://leetcode.com/problems/range-module/description/>`_
 - [Hard] `Design Statistics Tracker <https://leetcode.com/problems/design-an-array-statistics-tracker/description/>`_
