@@ -42,7 +42,7 @@ Core Algorithms & Data Structures
 #. DP - Knapsack: 0-1 Bounded, 0-1 Unbounded
 #. DP - Edit Distance:
 #. Backtracking: Permutations, Combinations, Paranthesis
-#. String: Hashing, Rolling Hash, `Trie <https://leetcode.com/problems/search-suggestions-system/description/>`_
+#. String: Hashing, Rolling Hash, `Trie <https://leetcode.com/problems/implement-trie-prefix-tree/>`_, `Trie DFS <https://leetcode.com/problems/design-add-and-search-words-data-structure/description/>`_, `Trie Application <https://leetcode.com/problems/search-suggestions-system/description/>`_
 
 *********************************************************************************
 Learning

@@ -106,6 +106,14 @@ Algorithms
 		      :language: python
 		      :tab-width: 2
 		      :linenos:
+	#. Application: `Search Suggestions System <https://leetcode.com/problems/search-suggestions-system/description/>`_
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../../code/searchsuggestion.py
+		      :language: python
+		      :tab-width: 2
+		      :linenos:
 #. Binary Search Rotated
 
 	#. Find Pivot
