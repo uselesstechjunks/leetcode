@@ -385,9 +385,36 @@ Eulerian Tour
 ---------------------------------------------------------------------
 Streaming
 =====================================================================
-Frequency
+States
 ---------------------------------------------------------------------
-Temporal
+- `Insert Delete GetRandom in O(1) `<https://leetcode.com/problems/insert-delete-getrandom-o1/description/>`_
+- `Design Parking System <https://leetcode.com/problems/design-parking-system/description/>`_
+- `Design Ordered Stream <https://leetcode.com/problems/design-an-ordered-stream/description/>`_
+- `Design Browser History <https://leetcode.com/problems/design-browser-history/description/>`_
+- `LRU Cache <https://leetcode.com/problems/lru-cache/description/>`_
+- `LFU Cache <https://leetcode.com/problems/lfu-cache/description/>`_
+- `Data Stream as Disjointed Intervals <https://leetcode.com/problems/data-stream-as-disjoint-intervals/description/>`_
+- `Design File System <https://leetcode.com/problems/design-file-system/description/>`_
+- `In Memory File System <https://leetcode.com/problems/design-in-memory-file-system/description/>`_
+- `File Sharing System <https://leetcode.com/problems/design-a-file-sharing-system/description/>`_
+- `Log Storage System <https://leetcode.com/problems/design-log-storage-system/description/>`_
+
+Search
 ---------------------------------------------------------------------
+- `Two Sum Streaming <https://leetcode.com/problems/two-sum-iii-data-structure-design/description/>`_
+- `Online Majority Element In Subarray <https://leetcode.com/problems/online-majority-element-in-subarray/description/>`_
+- `Add and Search Words <https://leetcode.com/problems/design-add-and-search-words-data-structure/description/>`_
+- `Search Autocomplete System <https://leetcode.com/problems/design-search-autocomplete-system/description/>`_
+- `Search Suggestion System <https://leetcode.com/problems/search-suggestions-system/description/>`_
+- `Stream of Characters <https://leetcode.com/problems/stream-of-characters/description/>`_
+
+Counts
+---------------------------------------------------------------------
+- `Number of Recent Calls <https://leetcode.com/problems/number-of-recent-calls/description/>`_
+- `Logger Rate Limiter <https://leetcode.com/problems/logger-rate-limiter/description/>`_
+- `Hit Counter <https://leetcode.com/problems/design-hit-counter/description/>`_
+
 Order Statistics
 ---------------------------------------------------------------------
+- `Find Consecutive Integers from a Data Stream <https://leetcode.com/problems/find-consecutive-integers-from-a-data-stream/description/>`_
+- `Design Statistics Tracker <https://leetcode.com/problems/design-an-array-statistics-tracker/description/>`_
