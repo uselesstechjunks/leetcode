@@ -390,6 +390,7 @@ Counts
 - [Easy] `Number of Recent Calls <https://leetcode.com/problems/number-of-recent-calls/description/>`_
 - [Easy] `Logger Rate Limiter <https://leetcode.com/problems/logger-rate-limiter/description/>`_
 - [Medium] `Hit Counter <https://leetcode.com/problems/design-hit-counter/description/>`_
+- [Hard] `API Rate Limiter <https://leetcode.com/discuss/interview-question/object-oriented-design/1713795/API-Rate-Limiter>`_
 
 States
 ---------------------------------------------------------------------
