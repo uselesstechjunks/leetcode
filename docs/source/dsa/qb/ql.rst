@@ -411,8 +411,8 @@ Search
 - [Easy] `Two Sum Streaming <https://leetcode.com/problems/two-sum-iii-data-structure-design/description/>`_
 - [Hard] `Online Majority Element In Subarray <https://leetcode.com/problems/online-majority-element-in-subarray/description/>`_
 - [Medium] `Add and Search Words <https://leetcode.com/problems/design-add-and-search-words-data-structure/description/>`_
-- [Medium] `Search Suggestion System <https://leetcode.com/problems/search-suggestions-system/description/>`_
-- [Hard] `Search Autocomplete System <https://leetcode.com/problems/design-search-autocomplete-system/description/>`_
+- [Medium] `Search Autocomplete System Lexicographical <https://leetcode.com/problems/search-suggestions-system/description/>`_
+- [Hard] `Search Autocomplete System Hitcount + Lexicographical <https://leetcode.com/problems/design-search-autocomplete-system/description/>`_
 - [Hard] `Stream of Characters <https://leetcode.com/problems/stream-of-characters/description/>`_
 
 Misc
