@@ -90,6 +90,17 @@ Data Structures
 #. Monotonic Stack/Queue:
 
 	- Span porblems in static data.
+#. Augmented Trie:
+
+	- For string search.
+	- Example Problem: Design Search Autocomplete System with HitCount
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../../code/searchautocomplete.py
+		      :language: python
+		      :tab-width: 2
+		      :linenos:
 
 Algorithms
 --------------------------------------------------------------------------------
