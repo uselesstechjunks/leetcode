@@ -273,6 +273,15 @@ Order Statistics
 	- Maintain the top k elements in a stream of data.
 	- Hints: Leverage min-heaps or order statistics trees.
 
+#. `Kth Largest/Smallest Element in an Array <https://leetcode.com/problems/kth-largest-element-in-an-array/description/>`_
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/quickselect.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
+
 #. `Find the Median of a Running Stream <https://leetcode.com/problems/find-median-from-data-stream/>`_
 
 	- Use two heaps (max-heap and min-heap) for efficiency.
