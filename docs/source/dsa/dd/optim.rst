@@ -36,5 +36,12 @@ Dynamic Programming
 
 Greedy
 --------------------------------------------------------------------------------
-#. Single CPU Scheduling
+#. Single CPU Scheduling (Unordered With Delay Restrictions)
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/taskscheduler.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 #. Activity Selection
