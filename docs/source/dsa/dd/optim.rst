@@ -45,3 +45,11 @@ Greedy
 	      :tab-width: 2
 	      :linenos:
 #. Activity Selection
+#. Resource Estimation
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/meetingroomsii.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
