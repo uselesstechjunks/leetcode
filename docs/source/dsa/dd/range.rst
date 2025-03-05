@@ -117,6 +117,14 @@ Algorithms
 		      :language: python
 		      :tab-width: 2
 		      :linenos:
+	#. Application: Unsorted Array - `Finding Peak Element <https://leetcode.com/problems/find-peak-element/description/>`_
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../../code/peak.py
+		      :language: python
+		      :tab-width: 2
+		      :linenos:
 	#. Application: `Search Suggestions System <https://leetcode.com/problems/search-suggestions-system/description/>`_
 
 		.. collapse:: Expand Code

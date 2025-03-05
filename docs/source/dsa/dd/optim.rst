@@ -25,8 +25,10 @@ Dynamic Programming
 	      :tab-width: 2
 	      :linenos:
 #. `Longest Palindromic Subsequence <https://leetcode.com/problems/longest-palindromic-subsequence/description/>`_
-#. 0-1 Bounded Knapsack
-#. 0-1 Unbounded Knapsack
+#. Knapsack
+
+	- [leetcode.com] `LC Discuss Post <https://leetcode.com/discuss/post/1669535/bounded-01-knapsack-guide-by-hieroglyphs-oyzg/>`_
+	- [cp-algorithms.com] `Knapsack Problem <https://cp-algorithms.com/dynamic_programming/knapsack.html>`_
 #. Edit distance
 #. Assembly Line Scheduling
 #. Matrix Chain Multiplication
