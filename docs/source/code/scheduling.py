@@ -136,3 +136,56 @@ def mostBooked(self, n: int, meetings: List[List[int]]) -> int:
 	# this can be achieved by traversing the key list in counts in sorted
 	# order. lucky for us, dict already has keys in sorted order
 	return [x for x in counts if counts[x] == max_meetings][0]
+
+def busiestServers(self, k: int, arrival: List[int], load: List[int]) -> List[int]:
+	# similar to meeting roms 3, here also we need to maintain
+	# two lists for free resources and occupied resources
+	# but unlike meeting rooms 3, where we were to wait until a room was free
+	# and our preference was to allocate rooms to the lowest id possible,
+	# here, we have a fixed allocation rule according to round robin.
+	# if there are no free rooms at the time of arrival, request is dropped.
+	# the round robin works on sorted room id sequences.
+	# example:
+	# at any given time, free rooms [0,1,5], and we have 8 resources [0-7]
+	# request 12 comes. 12 % 8 = 4
+	# if server 4 was available, we would have used it. but since it's not,
+	# the next best we can do is 5. note that this is the insert position of 4
+	# in the sorted free rooms list
+	# does this hold for everything?
+	# any incoming requests would be mapped to [0, 7] due to modulo division.
+	# say, request 16 comes. server index = 16 % 8 = 0
+	# since 0 is already there, we allocate it.
+
+	# arrivals are already sorted
+	occupied = [] # stores the finish time and room_id
+	free = SortedList(list(range(k))) # stores room ids in sorted order
+	# SortedList is a balanced BST
+	# we could have used SortedSet since rooms are unique
+	# but SortedList provides us with bisect_left which is what we need
+
+	# bookkeeping for counts
+	counts = defaultdict(int)
+
+	for i, start_time in enumerate(arrival):
+		end_time = start_time + load[i]
+
+		while occupied and occupied[0][0] <= start_time:
+			_, server_id = heapq.heappop(occupied)
+			free.add(server_id)
+		
+		if free:
+			# key point to observe here is that as long as we
+			# have free servers, we can ALWAYS allocate resource
+			# in a round robin fashion
+			server_id = i % k
+			index = free.bisect_left(server_id)
+			# there is a server which can serve the request
+			server_id = free[index] if index < len(free) else free[0]
+			free.remove(server_id)
+			heapq.heappush(occupied, (end_time, server_id))
+			counts[server_id] += 1
+	
+	max_count = max(counts.values())
+	# since keys in dict are in sorted order, this returns
+	# the list of server ids in sorted order
+	return [x for x in counts if counts[x] == max_count]

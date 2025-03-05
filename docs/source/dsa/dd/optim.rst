@@ -44,12 +44,11 @@ Greedy
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
-#. Activity Selection
-#. Resource Estimation
+#. Resource Allocation
 
 	.. collapse:: Expand Code
 
-	   .. literalinclude:: ../../code/meetingroomsii.py
+	   .. literalinclude:: ../../code/scheduling.py
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
