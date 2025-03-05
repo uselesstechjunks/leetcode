@@ -35,6 +35,13 @@ Dynamic Programming
 #. Optimal BST
 #. `Viterbi Algorithm <https://leetcode.com/problems/filling-bookcase-shelves/description/>`_
 #. Scheduling to Maximise Profit
+#. Maximal Square, Maximal Rectangle
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/maxrect.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 
 Greedy
 --------------------------------------------------------------------------------
