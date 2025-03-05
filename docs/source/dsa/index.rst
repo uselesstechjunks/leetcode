@@ -135,3 +135,18 @@ Might be Useful
 	* [geeksforgeeks.org] `Must Do Coding Questions for Companies <https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/>`_
 	* [geeksforgeeks.org] `Must Do Coding Questions Company-wise <https://www.geeksforgeeks.org/must-coding-questions-company-wise/>`_	
 	* [interview-prep-pro.vercel.app] `Interview Prep Pro <https://interview-prep-pro.vercel.app/>`_
+
+Sliding Window
+================================================================================
+.. important::
+	* [youtube.com] `Sliding Window Mental Model <https://www.youtube.com/watch?v=MK-NZ4hN7rs>`_
+	* [leetcode.com] `Sliding Window Technique: A Comprehensive Guide <https://leetcode.com/discuss/interview-question/3722472/mastering-sliding-window-technique-a-comprehensive-guide>`_
+	* [geeksforgeeks.org] `Sliding Window Technique <https://www.geeksforgeeks.org/window-sliding-technique/>`_
+	* [leetcode.com] `Sliding window with frequency counts <https://leetcode.com/problems/subarrays-with-k-different-integers/solutions/235002/one-code-template-to-solve-all-of-these-problems/>`_
+	* [leetcode.com] `Lee's solutions for sliding window <https://leetcode.com/problems/find-the-longest-equal-subarray/solutions/3934172/java-c-python-one-pass-sliding-window-o-n>`_
+
+Two Pointers
+================================================================================
+.. important::
+	* [leetcode.com] `Solved all two pointers problems in 100 days. <https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days>`_
+	* [reddit.com] `Two-Pointer Technique, an In-Depth Guide <https://www.reddit.com/r/leetcode/comments/18g9383/twopointer_technique_an_indepth_guide_concepts/?rdt=59240>`_
