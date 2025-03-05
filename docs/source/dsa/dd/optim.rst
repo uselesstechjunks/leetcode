@@ -36,6 +36,7 @@ Dynamic Programming
 #. `Viterbi Algorithm <https://leetcode.com/problems/filling-bookcase-shelves/description/>`_
 #. Scheduling to Maximise Profit
 #. Maximal Square, Maximal Rectangle
+
 	.. collapse:: Expand Code
 
 	   .. literalinclude:: ../../code/maxrect.py
