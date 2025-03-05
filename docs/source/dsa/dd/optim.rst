@@ -25,6 +25,13 @@ Dynamic Programming
 	      :tab-width: 2
 	      :linenos:
 #. `Longest Palindromic Subsequence <https://leetcode.com/problems/longest-palindromic-subsequence/description/>`_
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/lps.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 #. Knapsack
 
 	- [leetcode.com] `LC Discuss Post <https://leetcode.com/discuss/post/1669535/bounded-01-knapsack-guide-by-hieroglyphs-oyzg/>`_
