@@ -64,3 +64,14 @@ def coinChange(self, coins: List[int], amount: int) -> int:
 						visited.add(remaining_amount)
 			steps += 1
 		return -1
+
+def coinChangeCountWays(self, amount: int, coins: List[int]) -> int:
+	""" Note: f(i,j) = f(i-1,j) + f(i,j-coins[i]) """
+	# f(i-1,j) := don't use j-th coin
+	# f(i,j-coins[i]) := use j-th coin
+	dp = [0] * (amount + 1)
+	for coin in coins:
+		dp[0] = 1
+		for j in range(coin, amount + 1):
+			dp[j] += dp[j-coin]
+	return dp[-1]
