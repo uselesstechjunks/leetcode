@@ -258,7 +258,8 @@ QuickSort Partitioning
 
 Optimal Partitioning
 ---------------------------------------------------------------------
-- [Medium] `Partition Array into Equal Sum Parts <https://leetcode.com/problems/partition-equal-subset-sum/description/>`_
+- [Medium] `Partition Array into 2 Equal Sum Subsets <https://leetcode.com/problems/partition-equal-subset-sum/description/>`_
+- [Medium] `Partition to K Equal Sum Subsets <https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/>`_
 - [Hard] `Partition Array into K Parts Minimising Largest Subarray Sum <https://leetcode.com/problems/split-array-largest-sum/description/>`_
 
 Optimal Cost - DP
