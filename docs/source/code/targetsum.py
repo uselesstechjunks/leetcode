@@ -1,4 +1,31 @@
 def findTargetSumWays(self, nums: List[int], target: int) -> int:
+	"""
+	IMPORTANT!! NEED TO KEEP IN MIND THAT RUNNING SUM HAS TO BE IN THE STATE.
+	WE CANNOT MEMOIZE/USE DP IF WE KEEP THE RECURSIVE CALL STRUCTURE REDUCING
+	TARGET. THAT METHOD IS NOT STATELESS AS COUNT CHANGES ACROSS CALLS.
+	"""
+	def dp(self, nums: List[int], target: int) -> int:
+		""" Note: This still fails a few testcases but it's kept here to convey they key idea """
+		n = len(nums)
+		# f(i, j) = number of ways to obtain target j after seeing i nums
+		# f(0, 0) = 1
+		# f(i+1, j) = f(i, j-nums[i]) + f(i, j+nums[i])
+		# range for j: [-sum(abs(nums)), sum(abs(nums))]
+		# range for i: 0...n-1
+		# gotta be careful with offset
+		max_sum = sum([abs(num) for num in nums])
+		max_index = 2 * max_sum + 1
+
+		dp = [[0] * (max_index + 1) for _ in range(n + 1)]
+		# dp[-][max_sum] actually represents curr sum = 0
+		dp[0][max_sum] = 1
+
+		for i in range(n):
+			for j in range(nums[i], max_index - nums[i] + 1):
+				dp[i+1][j] = dp[i][j-nums[i]] + dp[i][j+nums[i]]
+
+		return dp[n][target + max_sum]
+	
 	def memoized():
 		# the idea is - every time we reach target 0 after seeing n numbers, we increase the count
 		# memo dimension: index X target
