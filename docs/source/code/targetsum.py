@@ -6,6 +6,7 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
 	"""
 	def dp(self, nums: List[int], target: int) -> int:
 		""" Note: This still fails a few testcases but it's kept here to convey they key idea """
+		""" Note: This can be further optimized removing the first dimension as it only depends on the previous """
 		n = len(nums)
 		# f(i, j) = number of ways to obtain target j after seeing i nums
 		# f(0, 0) = 1
