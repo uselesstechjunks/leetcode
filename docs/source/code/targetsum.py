@@ -11,6 +11,7 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
 		# f(i, j) = number of ways to obtain target j after seeing i nums
 		# f(0, 0) = 1
 		# f(i+1, j) = f(i, j-nums[i]) + f(i, j+nums[i])
+		""" Note: THIS STRUCTURE IS SIMILAR TO 0-1 BOUNDED KNAPSACK """
 		# range for j: [-sum(abs(nums)), sum(abs(nums))]
 		# range for i: 0...n-1
 		# gotta be careful with offset
