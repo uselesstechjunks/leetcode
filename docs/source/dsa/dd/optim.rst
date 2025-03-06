@@ -53,6 +53,13 @@ Dynamic Programming
 	      :tab-width: 2
 	      :linenos:
 #. Edit distance
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/editdistance.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 #. Assembly Line Scheduling
 #. Matrix Chain Multiplication
 #. Optimal BST
