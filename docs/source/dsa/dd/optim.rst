@@ -8,6 +8,14 @@ Optimisation: Dynamic Programming and Greedy
 
 Dynamic Programming
 --------------------------------------------------------------------------------
+#. Unique Paths
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/uniquepaths.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 #. Longset Common Subsequence
 
 	.. collapse:: Expand Code
