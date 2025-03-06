@@ -260,6 +260,19 @@ Optimal Partitioning
 ---------------------------------------------------------------------
 - [Hard] `Partition Array into K Parts Minimising Largest Subarray Sum <https://leetcode.com/problems/split-array-largest-sum/description/>`_
 
+Optimisation - DP
+---------------------------------------------------------------------
+- [Medium] `Paint House <https://leetcode.com/problems/paint-house/description/>`_
+- [Medium] `Minimum Path Sum <https://leetcode.com/problems/minimum-path-sum/description/>`_
+- [Medium] `Rod Cutting <https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/>`_
+
+Counting - DP
+---------------------------------------------------------------------
+- [Medium] `Unique Paths <https://leetcode.com/problems/unique-paths/description/>`_
+- [Medium] `Unique Paths with Obstacles <https://leetcode.com/problems/unique-paths-ii/description/>`_
+- [Hard] `Unique Paths with Obstacles and Arbitrary Start/End <https://leetcode.com/problems/unique-paths-iii/description/>`_
+- [Medium] `Number of Ways to Reach a Position After Exactly k Steps <https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/description/>`_
+
 Permutation
 ---------------------------------------------------------------------
 - [Medium] `Find Next Permutation <https://leetcode.com/problems/next-permutation/>`_
