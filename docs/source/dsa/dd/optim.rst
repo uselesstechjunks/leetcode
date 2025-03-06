@@ -44,6 +44,14 @@ Dynamic Programming
 
 	- [leetcode.com] `LC Discuss Post <https://leetcode.com/discuss/post/1669535/bounded-01-knapsack-guide-by-hieroglyphs-oyzg/>`_
 	- [cp-algorithms.com] `Knapsack Problem <https://cp-algorithms.com/dynamic_programming/knapsack.html>`_
+#. Count Ways to Target Sum
+	
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/targetsum.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 #. Edit distance
 #. Assembly Line Scheduling
 #. Matrix Chain Multiplication
