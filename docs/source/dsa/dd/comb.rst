@@ -9,6 +9,7 @@ Combinatorics
 Backtracking
 --------------------------------------------------------------------------------
 #. Permutation, Combinations, Paranthesis, Subsets
+
 	.. collapse:: Expand Code
 	
 		.. literalinclude:: ../../code/backtrack.py
