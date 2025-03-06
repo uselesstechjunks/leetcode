@@ -8,7 +8,7 @@ Optimisation: Dynamic Programming and Greedy
 
 Dynamic Programming
 --------------------------------------------------------------------------------
-#. Unique Paths
+#. `Unique Paths <https://leetcode.com/problems/unique-paths/>`_
 
 	.. collapse:: Expand Code
 
@@ -16,7 +16,7 @@ Dynamic Programming
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
-#. Longset Common Subsequence
+#. `Longset Common Subsequence <https://leetcode.com/problems/longest-common-subsequence/description/>`_
 
 	.. collapse:: Expand Code
 
@@ -44,15 +44,17 @@ Dynamic Programming
 
 	- [leetcode.com] `LC Discuss Post <https://leetcode.com/discuss/post/1669535/bounded-01-knapsack-guide-by-hieroglyphs-oyzg/>`_
 	- [cp-algorithms.com] `Knapsack Problem <https://cp-algorithms.com/dynamic_programming/knapsack.html>`_
-#. Count Ways to Target Sum
+	- [Similar to Bounded Knapsack] `Count Ways to Target Sum <https://leetcode.com/problems/target-sum/description/>`_
+		
+		.. collapse:: Expand Code
 	
-	.. collapse:: Expand Code
-
-	   .. literalinclude:: ../../code/targetsum.py
-	      :language: python
-	      :tab-width: 2
-	      :linenos:
-#. Edit distance
+		   .. literalinclude:: ../../code/targetsum.py
+		      :language: python
+		      :tab-width: 2
+		      :linenos:
+	- `Unbounded Fixed Target Sum <https://leetcode.com/problems/combination-sum/description/>`_ [Backtracking]
+	- [Similar to Unbounded Knapsack] `Coin Change <https://leetcode.com/problems/coin-change/description/>`_
+#. `Edit distance <https://leetcode.com/problems/edit-distance/description/>`_
 
 	.. collapse:: Expand Code
 
