@@ -258,13 +258,20 @@ QuickSort Partitioning
 
 Optimal Partitioning
 ---------------------------------------------------------------------
+- [Medium] `Partition Array into Equal Sum Parts <https://leetcode.com/problems/partition-equal-subset-sum/description/>`_
 - [Hard] `Partition Array into K Parts Minimising Largest Subarray Sum <https://leetcode.com/problems/split-array-largest-sum/description/>`_
 
-Optimisation - DP
+Optimal Cost - DP
 ---------------------------------------------------------------------
 - [Medium] `Paint House <https://leetcode.com/problems/paint-house/description/>`_
 - [Medium] `Minimum Path Sum <https://leetcode.com/problems/minimum-path-sum/description/>`_
 - [Medium] `Rod Cutting <https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/>`_
+
+Optimal Choice (0-1 Knapsack) - DP
+---------------------------------------------------------------------
+- [Medium] `Bounded <https://leetcode.com/problems/partition-equal-subset-sum/description/>`_
+- [Medium] `Unbounded <https://leetcode.com/problems/coin-change-ii/>`
+- [Medium] `Maximal Square <https://leetcode.com/problems/maximal-square/description/>`_
 
 Counting - DP
 ---------------------------------------------------------------------
