@@ -53,19 +53,40 @@ def generateParenthesis(self, n: int) -> List[str]:
 	return res
 	
 def subsets(self, nums: List[int]) -> List[List[int]]:
-	# [1,2,3]
-	# []
-	# [3],[]
-	# [2,3],[2],[3],[]
-	# [1,2,3],[1,2],[1,3],[1],[2,3],[2],[3],[]
-	def backtrack(index):
-		if index == len(nums):
-			return [[]]
-		res = backtrack(index + 1)
-		n = len(res)
-		for i in range(n):
-			curr = copy.deepcopy(res[i])
+	def forward():
+		# [1,2,3]
+		# []
+		# [1],[2],[3]
+		# [1,2],[1,3],[2,3]
+		# [1,2,3]
+		def backtrack(curr, index):
+			nonlocal res
+			if index == len(nums):
+				res.append(curr[:])
+				return
+			# without nums[index]
+			backtrack(curr, index + 1)
+			# with nums[index]
 			curr.append(nums[index])
-			res.append(curr)
+			backtrack(curr, index + 1)
+			curr.pop()
+		res = []
+		backtrack([], 0)
 		return res
-	return backtrack(0)
+	def backward():
+		# [1,2,3]
+		# []
+		# [3],[]
+		# [2,3],[2],[3],[]
+		# [1,2,3],[1,2],[1,3],[1],[2,3],[2],[3],[]
+		def backtrack(index):
+			if index == len(nums):
+				return [[]]
+			res = backtrack(index + 1)
+			n = len(res)
+			for i in range(n):
+				curr = copy.deepcopy(res[i])
+				curr.append(nums[index])
+				res.append(curr)
+			return res
+		return backtrack(0)
