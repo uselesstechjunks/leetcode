@@ -271,7 +271,7 @@ Optimal Cost - DP
 Optimal Choice (0-1 Knapsack) - DP
 ---------------------------------------------------------------------
 - [Medium] `Bounded <https://leetcode.com/problems/partition-equal-subset-sum/description/>`_
-- [Medium] `Unbounded <https://leetcode.com/problems/coin-change-ii/>`
+- [Medium] `Unbounded <https://leetcode.com/problems/coin-change-ii/>`_
 - [Medium] `Maximal Square <https://leetcode.com/problems/maximal-square/description/>`_
 
 Counting - DP

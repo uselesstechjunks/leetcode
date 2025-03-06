@@ -8,7 +8,7 @@ Optimisation: Dynamic Programming and Greedy
 
 Dynamic Programming
 --------------------------------------------------------------------------------
-#. Unique Paths
+#. `Unique Paths <https://leetcode.com/problems/unique-paths/>`_
 
 	.. collapse:: Expand Code
 
@@ -16,7 +16,7 @@ Dynamic Programming
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
-#. Longset Common Subsequence
+#. `Longset Common Subsequence <https://leetcode.com/problems/longest-common-subsequence/description/>`_
 
 	.. collapse:: Expand Code
 
@@ -44,13 +44,30 @@ Dynamic Programming
 
 	- [leetcode.com] `LC Discuss Post <https://leetcode.com/discuss/post/1669535/bounded-01-knapsack-guide-by-hieroglyphs-oyzg/>`_
 	- [cp-algorithms.com] `Knapsack Problem <https://cp-algorithms.com/dynamic_programming/knapsack.html>`_
-#. Edit distance
-#. Assembly Line Scheduling
-#. Matrix Chain Multiplication
-#. Optimal BST
+	- [Similar to Bounded Knapsack] `Count Ways to Target Sum <https://leetcode.com/problems/target-sum/description/>`_
+		
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../../code/targetsum.py
+		      :language: python
+		      :tab-width: 2
+		      :linenos:
+	- `Unbounded Fixed Target Sum <https://leetcode.com/problems/combination-sum/description/>`_ [Backtracking]
+	- [Similar to Unbounded Knapsack] `Coin Change <https://leetcode.com/problems/coin-change/description/>`_
+#. `Edit distance <https://leetcode.com/problems/edit-distance/description/>`_
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/editdistance.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
+#. `Assembly Line Scheduling <https://www.geeksforgeeks.org/problems/assembly-line-scheduling/1>`_
+#. `Matrix Chain Multiplication/Burst Baloons <https://leetcode.com/problems/burst-balloons/editorial/>`_
+#. `Optimal BST <https://www.geeksforgeeks.org/problems/optimal-binary-search-tree2214/1>`_
 #. `Viterbi Algorithm <https://leetcode.com/problems/filling-bookcase-shelves/description/>`_
-#. Scheduling to Maximise Profit
-#. Maximal Square, Maximal Rectangle
+#. `Scheduling to Maximise Profit <https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/>`_
+#. `Maximal Square <https://leetcode.com/problems/maximal-square/>`_, `Maximal Rectangle <https://leetcode.com/problems/maximal-rectangle/>`_
 
 	.. collapse:: Expand Code
 
