@@ -53,7 +53,14 @@ Dynamic Programming
 		      :tab-width: 2
 		      :linenos:
 	- `Unbounded Fixed Target Sum <https://leetcode.com/problems/combination-sum/description/>`_ [Backtracking]
-	- [Similar to Unbounded Knapsack] `Coin Change <https://leetcode.com/problems/coin-change/description/>`_
+	- Unbounded Knapsack: `Coin Change <https://leetcode.com/problems/coin-change/description/>`_
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../../code/coinchange.py
+		      :language: python
+		      :tab-width: 2
+		      :linenos:
 #. `Edit distance <https://leetcode.com/problems/edit-distance/description/>`_
 
 	.. collapse:: Expand Code
