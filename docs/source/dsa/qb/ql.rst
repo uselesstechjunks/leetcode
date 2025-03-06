@@ -258,7 +258,28 @@ QuickSort Partitioning
 
 Optimal Partitioning
 ---------------------------------------------------------------------
+- [Medium] `Partition Array into 2 Equal Sum Subsets <https://leetcode.com/problems/partition-equal-subset-sum/description/>`_
+- [Medium] `Partition to K Equal Sum Subsets <https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/>`_
 - [Hard] `Partition Array into K Parts Minimising Largest Subarray Sum <https://leetcode.com/problems/split-array-largest-sum/description/>`_
+
+Optimal Cost - DP
+---------------------------------------------------------------------
+- [Medium] `Paint House <https://leetcode.com/problems/paint-house/description/>`_
+- [Medium] `Minimum Path Sum <https://leetcode.com/problems/minimum-path-sum/description/>`_
+- [Medium] `Rod Cutting <https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/>`_
+
+Optimal Choice (0-1 Knapsack) - DP
+---------------------------------------------------------------------
+- [Medium] `Bounded <https://leetcode.com/problems/partition-equal-subset-sum/description/>`_
+- [Medium] `Unbounded <https://leetcode.com/problems/coin-change-ii/>`
+- [Medium] `Maximal Square <https://leetcode.com/problems/maximal-square/description/>`_
+
+Counting - DP
+---------------------------------------------------------------------
+- [Medium] `Unique Paths <https://leetcode.com/problems/unique-paths/description/>`_
+- [Medium] `Unique Paths with Obstacles <https://leetcode.com/problems/unique-paths-ii/description/>`_
+- [Hard] `Unique Paths with Obstacles and Arbitrary Start/End <https://leetcode.com/problems/unique-paths-iii/description/>`_
+- [Medium] `Number of Ways to Reach a Position After Exactly k Steps <https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/description/>`_
 
 Permutation
 ---------------------------------------------------------------------

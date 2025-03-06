@@ -8,6 +8,14 @@ Optimisation: Dynamic Programming and Greedy
 
 Dynamic Programming
 --------------------------------------------------------------------------------
+#. Unique Paths
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/uniquepaths.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 #. Longset Common Subsequence
 
 	.. collapse:: Expand Code
@@ -25,6 +33,13 @@ Dynamic Programming
 	      :tab-width: 2
 	      :linenos:
 #. `Longest Palindromic Subsequence <https://leetcode.com/problems/longest-palindromic-subsequence/description/>`_
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/lps.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 #. Knapsack
 
 	- [leetcode.com] `LC Discuss Post <https://leetcode.com/discuss/post/1669535/bounded-01-knapsack-guide-by-hieroglyphs-oyzg/>`_
@@ -35,6 +50,14 @@ Dynamic Programming
 #. Optimal BST
 #. `Viterbi Algorithm <https://leetcode.com/problems/filling-bookcase-shelves/description/>`_
 #. Scheduling to Maximise Profit
+#. Maximal Square, Maximal Rectangle
+
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/maxrect.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 
 Greedy
 --------------------------------------------------------------------------------
