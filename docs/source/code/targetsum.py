@@ -5,7 +5,7 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
 	TARGET. THAT METHOD IS NOT STATELESS AS COUNT CHANGES ACROSS CALLS.
 	"""
 	def dp(self, nums: List[int], target: int) -> int:
-		""" Note: This still fails a few testcases but it's kept here to convey they key idea """
+		""" Note: This still fails a few testcases but it's kept here for the key idea """
 		n = len(nums)
 		# f(i, j) = number of ways to obtain target j after seeing i nums
 		# f(0, 0) = 1
