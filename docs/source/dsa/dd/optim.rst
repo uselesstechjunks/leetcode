@@ -62,12 +62,12 @@ Dynamic Programming
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
-#. Assembly Line Scheduling
-#. Matrix Chain Multiplication
-#. Optimal BST
+#. `Assembly Line Scheduling <>`_
+#. `Matrix Chain Multiplication/Burst Baloons <https://leetcode.com/problems/burst-balloons/editorial/>`_
+#. `Optimal BST <https://www.geeksforgeeks.org/problems/optimal-binary-search-tree2214/1>`_
 #. `Viterbi Algorithm <https://leetcode.com/problems/filling-bookcase-shelves/description/>`_
-#. Scheduling to Maximise Profit
-#. Maximal Square, Maximal Rectangle
+#. `Scheduling to Maximise Profit <https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/>`_
+#. `Maximal Square <https://leetcode.com/problems/maximal-square/>`_, `Maximal Rectangle <https://leetcode.com/problems/maximal-rectangle/>`_
 
 	.. collapse:: Expand Code
 
