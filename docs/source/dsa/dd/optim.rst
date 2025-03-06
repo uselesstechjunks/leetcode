@@ -62,7 +62,7 @@ Dynamic Programming
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
-#. `Assembly Line Scheduling <>`_
+#. `Assembly Line Scheduling <https://www.geeksforgeeks.org/problems/assembly-line-scheduling/1>`_
 #. `Matrix Chain Multiplication/Burst Baloons <https://leetcode.com/problems/burst-balloons/editorial/>`_
 #. `Optimal BST <https://www.geeksforgeeks.org/problems/optimal-binary-search-tree2214/1>`_
 #. `Viterbi Algorithm <https://leetcode.com/problems/filling-bookcase-shelves/description/>`_
