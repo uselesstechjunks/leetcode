@@ -58,22 +58,30 @@ def generateParenthesis(self, n: int) -> List[str]:
 	# ((,      ()           1      1
 	# (((,((), ()(          2      1
 	# (((,(()(,()((,()()
-	res, stack = [], []
-	def backtrack(stack, n, left_count, right_count):
+	""" 
+	key idea:
+	(1) when to add ( => whenever there are still left paranthesis left to add
+	(2) when to add ) => whenever left count is greater than right count
+	"""
+	def backtrack(curr, left_count, right_count):
+		nonlocal res
 		if right_count == n:
-			res.append(''.join(stack))
+			res.append(''.join(curr))
 			return
+		# add ( if applicable
 		if left_count < n:
-			stack.append('(')
-			backtrack(stack, n, left_count + 1, right_count)
-			stack.pop()
-		if left_count > right_count:
-			stack.append(')') # why is this always valid?
-			backtrack(stack, n, left_count, right_count + 1)
-			stack.pop()
-	backtrack(stack, n, 0, 0)
+			curr.append('(')
+			backtrack(curr, left_count + 1, right_count)
+			curr.pop()
+		# add ) if applicable
+		if right_count < left_count:
+			curr.append(')')
+			backtrack(curr, left_count, right_count + 1)
+			curr.pop()
+	res = []
+	backtrack([], 0, 0)
 	return res
-	
+
 def subsets(self, nums: List[int]) -> List[List[int]]:
 	def choice():
 		""" Best approach """
