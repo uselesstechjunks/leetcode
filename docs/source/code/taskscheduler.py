@@ -1,3 +1,4 @@
+""" WHEN TASKS HAS TO BE EXECUTED IN ANY ORDER """
 def taskScheduler(self, tasks: List[str], n: int) -> int:
 	def heap_queue():
 		# greedy:
@@ -14,30 +15,38 @@ def taskScheduler(self, tasks: List[str], n: int) -> int:
 		# we can totally maintain the states using the two data structures we have
 		# since we don't are about the type of the task, we don't need to keep
 		# the task name as well
-		processing = [-count for count in counts.values()] # no need to store task name
-		# to hit home the point that we won't be needing counts anymore
-		counts = None
-		heapq.heapify(processing)
-		queue = deque() # here we need to store the count and the available time after delay
-
-		time = 0
-
-		while processing or queue:
-			time += 1
-
-			if processing:
-				count = 1 + heapq.heappop(processing)
+		# ready: priority queue -> counts
+		# queued: counts, start_time
+		ready = [-count for count in counts.values()]
+		heapq.heapify(ready)
+		queued = deque()
+		curr_time = 0
+		while ready or queued:
+			if queued and queued[0][1] < curr_time:
+				count, _ = queued.popleft()
+				heapq.heappush(ready, count)
+			if ready:
+				count = 1 + heapq.heappop(ready)
 				if count:
-					queue.append((count, time + n))
-			
-			if queue and queue[0][1] <= time:
-				count, _ = queue.popleft()
-				heapq.heappush(processing, count)
-
-		return time
+					queued.append((count, curr_time + n))
+			curr_time += 1
+		return curr_time
 
 	def idle_counting():
 		# visualisation:
 		# 
 	
 	return heap_queue()
+
+""" WHEN TASKS HAS TO BE EXECUTED IN GIVEN ORDER """
+def taskSchedulerII(self, tasks: List[int], space: int) -> int:
+	available_from = {}
+	curr_day = 0
+	for task in tasks:
+		if task in available_from:
+			""" IMPORTANT """
+			# while doing timejump remember that we don't go back in past
+			curr_day = max(curr_day, available_from[task]) # time jump
+		curr_day += 1 # execute task
+		available_from[task] = curr_day + space
+	return curr_day
