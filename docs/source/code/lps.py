@@ -49,28 +49,34 @@ def longestPalindromeSubseq(self, s: str) -> int:
 		return dp[-1]
 
 def longestPalindromeSubstr(self, s: str) -> int:
-	# dp[i][j] = length of longest palindromic subsequence considering s[i...j]
-	# s[i]s[i+1...j-1]s[j]
-	# dp[i][j] = dp[i+1][j-1] + 2 if s[i] == s[j] and s[i+1...j-1] is a palindrome => dp[i+1][j-1] == j-i-1
-	# dp[i][j] = max(dp[i+1][j], dp[i][j-1])
-	# we need to know later rows and earlier columns. 
-	# need to fill from bottom to top, left to right
-	# optim: only need one extra row
-	n = len(s)
-	next_row, curr_row = [0] * n, [0] * n
-	left, right = 0, 0
-	max_len = 1
-	for i in range(n-1, -1, -1):
-		curr_row[i] = 1 # important because every s[i...i] is a palindrome
-		for j in range(i+1, n):
-			if s[i] == s[j] and next_row[j-1] == j-i-1:
-				curr_row[j] = next_row[j-1] + 2
-				if curr_row[j] > max_len:
-					max_len = curr_row[j]
-					left, right = i, j
-			else:
-				curr_row[j] = max(next_row[j], curr_row[j-1])
-		for k in range(n):
-			next_row[k] = curr_row[k]
-			curr_row[k] = 0
-	return s[left:right + 1]
+	def lps(s):
+		# f(i,j) = length of lps after seeing s[i+1...j-1]
+		# need to compute f(i-1,j+1) after seeing s[i] and s[j]
+		# transition rule:
+		# f(i-1,j+1) = f(i,j) + 2 if s[i] == s[j] and f(i,j) = len(s[i+1...j-1])
+		# f(i-1,j+1) = max(f(i-1,j), f(i,j+1)) otherwise
+		# normalized equations
+		# f(i,j) = f(i+1,j-1) + 2 if s[i] == s[j]
+		# f(i,j) = max(f(i,j-1), f(i+1,j)) otherwise
+		# need to fill rows from bottom to top
+		# cannot remove dimension i
+		# when state (i,j) is updated, we need to know
+		#   j-1 from next row
+		#   j-1 from current row and j from next row
+		# so we need to keep track of the previous row
+		n = len(s)
+		dp_prev, dp = [0] * n, [0] * n
+		start, size = 0, 1
+		for i in range(n-1, -1, -1):
+			dp[i] = 1
+			for j in range(i+1, n):
+				if s[i] == s[j] and dp_prev[j-1] == j-1-i:
+					dp[j] = dp_prev[j-1] + 2
+					if dp[j] > size:
+						start = i
+						size = dp[j]
+				else:
+					dp[j] = max(dp[j-1], dp_prev[j])
+			dp_prev = dp[:]
+		return s[start:start + size]
+	return lps(s)
