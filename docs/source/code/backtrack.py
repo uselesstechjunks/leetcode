@@ -75,7 +75,7 @@ def generateParenthesis(self, n: int) -> List[str]:
 	return res
 	
 def subsets(self, nums: List[int]) -> List[List[int]]:
-	def forward():
+	def choice():
 		# [1,2,3]
 		# []
 		# [1],[2],[3]
@@ -95,6 +95,21 @@ def subsets(self, nums: List[int]) -> List[List[int]]:
 		res = []
 		backtrack([], 0)
 		return res
+        
+	def forward():
+		# []
+		# [],[1]
+		# [],[1],[2],[1,2]
+		# [],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]
+		def backtrack(curr, index):
+			if index == len(nums):
+				return curr
+			prev = copy.deepcopy(curr)
+			for ans in curr:
+				ans.append(nums[index])
+			return backtrack(prev + curr, index + 1)
+		return backtrack([[]], 0)
+
 	def backward():
 		# [1,2,3]
 		# []
