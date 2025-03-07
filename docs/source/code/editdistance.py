@@ -1,23 +1,21 @@
 def minEditDistance(self, word1: str, word2: str) -> int:
+	# f(i,j) = edit distance after seeing s[0...i-1] and t[0...j-1]
+	# f(i+1, j+1) = f(i, j) if s[i] == t[j]
+	# else
 	""" 
-	Key idea: While designing transition rule for the three operations
-	keep in mind about the next character that we'd check after each of them
+	Trick: 
+		(1) Think of the next character we'd look after each operation.
+		(2) Normalize the equations afterwards
 	"""
-	# f(i, j) = edit distance after reading i characters from
-	# word1 and j characters from word2
-	# transition rule:
-	# f(i, j) = f(i-1, j-1) if word1[i] == word2[j] -> no edit
-	#
-	# insert: f(i, j) = f(i-1, j) + 1 
-	# because after insert, ith character would move to the next pos
-	# and word1[i] (inserted char) == word2[j].
-	# next character to check: word1[i], word2[j+1]
-	#
-	# delete: f(i, j) = f(i, j-1) + 1
-	# next character to check: word1[i+1], word2[j]
-	#
-	# replace: f(i, j) = f(i-1, j-1) + 1
-	# next character to check: word1[i+1], word2[j+1]
+	# replace: f(i+1,j+1) = f(i,j) + 1
+	# delete:  f(i+1,j) = f(i,j) + 1 => f(i+1,j+1) = f(i,j+1) + 1
+	# insert:  f(i, j+1) = f(i,j) + 1 => f(i+1,j+1) = f(i+1,j) + 1
+	"""
+	Final equations:
+		f(i+1,j+1) = f(i,j) if s[i] == s[j] else (min(f(i,j),f(i,j+1),f(i+1,j))) + 1
+	
+	Cannot be reduced to lower dimensions - need both (i,j) and (i+1,j) at the same time
+	"""
 	m, n = len(word1), len(word2)
 	dp = [[0] * (n+1) for _ in range(m+1)]
 	""" Key: IMPORTANT TO INITIALIZE PROPERLY """
