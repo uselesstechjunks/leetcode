@@ -20,21 +20,25 @@ def lcs():
 	return lcs[m][n]
 
 def lcs_memory_optimized():
-	m, n = len(text1), len(text2)
-	# since we only need to keep previous row, we don't need to store the entire 2d table
-	prev_row, curr_row = [0] * (n+1), [0] * (n+1)
+	# f(i,j) = length of lcs from s[0..i-1] and t[0...j-1]
+	# transition rule:
+	# f(i+1,j+1) = f(i,j) + 1 if s[i] = t[j]
+	# f(i+1,j+1) = max(f(i+1,j), f(i,j+1))
+	""" IMPORTANT THIS """
+	# cannot be reduced to one dimension
+	# f(j+1) = f(j) + 1 if s[i] == t[j] (need f(j) from previous iteration)
+	# f(j+1) = f(j) (current iteration) + f(j+1) (previous iteration)
+	# need to keep track of the previous row
+	m, n = len(s), len(t)
+	dp_prev, dp = [0] * (n + 1), [0] * (n + 1)
 	for i in range(m):
 		for j in range(n):
-			if text1[i] == text2[j]:
-				curr_row[j+1] = prev_row[j] + 1
+			if s[i] == t[j]:
+				dp[j+1] = dp_prev[j] + 1
 			else:
-				curr_row[j+1] = max(prev_row[j+1], curr_row[j])
-
-		# copy current row to previous
-		for k in range(len(curr_row)):
-			prev_row[k] = curr_row[k]
-
-	return curr_row[n]
+				dp[j+1] = max(dp[j], dp_prev[j+1])
+		dp_prev = dp[:]
+	return dp[-1]
 
 def construct(stack, indicators, i, j):
 	if i == 0 or j == 0:
