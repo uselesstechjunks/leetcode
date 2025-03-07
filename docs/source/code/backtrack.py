@@ -13,22 +13,44 @@ def permute(self, nums: List[int]) -> List[List[int]]:
 	return res
 
 def combine(self, n: int, k: int) -> List[List[int]]:
-	# n = 4, k = 2
-	# []
-	# [1] [2] [3] ?? till n-k+1
-	# [[1,2],[1,3],[1,4]],[[2,3],[2,4]],[[3,4]]
-	def backtrack(curr, start, k):
-		nonlocal res
-		if k == 0:
-			res.append(curr[:])
-			return
-		for i in range(start, n-k+2):
-			curr.append(i)
-			backtrack(curr, i+1, k-1)
-			curr.pop()
-	res, curr = [], []
-	backtrack(curr, 1, k)
-	return res
+	def optimized():
+		""" prevents wasteful subset formation with additional state information """
+		# [1,2,3]      curr                start   range 
+		# remaining=2, []                      1-> [1,2]
+		# remaining=1, [1],        [2]         2-> [2,3], 3 -> [3]
+		# remaining=0, [1,2],[1,3],[2,3]
+		def backtrack(curr, start, remaining):
+			nonlocal res
+			if remaining == 0:
+				res.append(curr[:])
+				return
+			for num in range(start, n - remaining + 2):
+				curr.append(num)
+				backtrack(curr, num + 1, remaining - 1)
+				curr.pop()
+		res = []
+		backtrack([], 1, k)
+		return res
+
+	def simple():
+		""" In this formulation, subsets get wasted, e.g. [3] """
+		# [1,2,3]                    start    range 
+		# k=0, []                      1-> [1,2,3]
+		# k=1, [1],        [2], [3]    2-> [2,3], 3->[3]
+		# k=2, [1,2],[1,3],[2,3]
+		def backtrack(curr, start):
+			nonlocal res
+			if len(curr) == k:
+				res.append(curr[:])
+				return
+			for num in range(start, n + 1):
+				curr.append(num)
+				""" NOTE: NOT START + 1"""
+				backtrack(curr, num + 1)
+				curr.pop()
+		res = []
+		backtrack([], 1)
+		return res
 
 def generateParenthesis(self, n: int) -> List[str]:
 	# n = 3               left   right
