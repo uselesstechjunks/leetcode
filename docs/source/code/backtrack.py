@@ -19,18 +19,36 @@ def combine(self, n: int, k: int) -> List[List[int]]:
 		# remaining=2, []                      1-> [1,2]
 		# remaining=1, [1],        [2]         2-> [2,3], 3 -> [3]
 		# remaining=0, [1,2],[1,3],[2,3]
-		def backtrack(curr, start, remaining):
+		def backtrack(curr, start):
 			nonlocal res
-			if remaining == 0:
+			remaining = k - len(curr)
+			if not remaining:
 				res.append(curr[:])
 				return
 			for num in range(start, n - remaining + 2):
 				curr.append(num)
-				backtrack(curr, num + 1, remaining - 1)
+				backtrack(curr, num + 1)
 				curr.pop()
 		res = []
-		backtrack([], 1, k)
+		backtrack([], 1)
 		return res
+		"""
+  		with indices
+    		def backtrack(curr, start_index):
+			nonlocal nums, res
+			remaining = k - len(curr)
+			if not remaining:
+				res.append(curr[:])
+				return
+			for index in range(start_index, len(nums) - remaining + 1):
+				curr.append(nums[index])
+				backtrack(curr, index + 1)
+				curr.pop()		
+		res = []
+		nums = list(range(1, n+1))
+		backtrack([], 0)
+		return res
+  		"""
 
 	def simple():
 		""" In this formulation, subsets get wasted, e.g. [3] """
