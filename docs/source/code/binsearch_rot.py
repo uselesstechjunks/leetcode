@@ -1,3 +1,44 @@
+"""
+def search_without_duplicates(self, nums: List[int], target: int) -> int:
+	left, right = 0, len(nums) - 1
+	while left <= right:
+		mid = (left + right) // 2
+		if nums[mid] == target:
+			return mid
+		if nums[left] <= nums[mid]:
+			if nums[left] <= target and target < nums[mid]:
+				right = mid - 1
+			else:
+				left = mid + 1
+		else: #if nums[left] > nums[mid]:
+			if nums[mid] < target and target <= nums[right]:
+				left = mid + 1
+			else:
+				right = mid - 1
+		# else:
+		#     left += 1
+	return -1
+def search_with_duplicates(self, nums: List[int], target: int) -> bool:
+	left, right = 0, len(nums) - 1
+	while left <= right:
+		mid = (left + right) // 2
+		if nums[mid] == target:
+			return True
+		if nums[left] < nums[mid]:
+			if nums[left] <= target and target < nums[mid]:
+				right = mid - 1
+			else:
+				left = mid + 1
+		elif nums[left] > nums[mid]:
+			if nums[mid] < target and target <= nums[right]:
+				left = mid + 1
+			else:
+				right = mid - 1
+		else:
+			left += 1
+	return False
+"""
+
 def search(self, nums: List[int], target: int) -> int:
 	def direct_search():
 		# search range: 0, n-1
