@@ -47,6 +47,7 @@ Advanced Graph Topics
 2. Minimum Spanning Tree (MST)
 --------------------------------------------------------------------------------
 * Sample implementation
+
 	.. collapse:: MST algorithms
 
 	   .. literalinclude:: ../../code/mst.py
@@ -132,13 +133,23 @@ Advanced Graph Topics
 6. Graph Traversals
 --------------------------------------------------------------------------------
 * Sample implementation
+
 	.. collapse:: A collection of traversal algorithms and applications
 
 	   .. literalinclude:: ../../code/graph.py
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
+* Bidirectional BFS
 
+	.. collapse:: Word Ladder
+
+	   .. literalinclude:: ../../code/wordladder.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
+
+* Multi Source BFS
 * Why important: Breadth-first and depth-first searches are foundational for exploring graphs.
 * Key Techniques:
 
