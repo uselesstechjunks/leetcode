@@ -46,6 +46,15 @@ Tree Topics
 			:language: python
 			:tab-width: 2
 			:linenos:
+- Serialize and Deserialize BST
+
+	.. collapse:: Example Code
+
+		.. literalinclude:: ../../code/serializebst.py
+			:language: python
+			:tab-width: 2
+			:linenos:
+
 3. Misc
 --------------------------------------------------------------------------------
 - [stack] https://leetcode.com/problems/binary-tree-preorder-traversal/
