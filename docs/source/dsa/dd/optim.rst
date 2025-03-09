@@ -82,7 +82,14 @@ Dynamic Programming
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
+#. `Word Break <https://leetcode.com/problems/word-break/>`_, `Word Break 2 <https://leetcode.com/problems/word-break-ii/description/>`_
 
+	.. collapse:: Expand Code
+
+	   .. literalinclude:: ../../code/wordbreak.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 Greedy
 --------------------------------------------------------------------------------
 #. Single CPU Scheduling (Unordered With Delay Restrictions)
