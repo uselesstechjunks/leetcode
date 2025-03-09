@@ -28,6 +28,18 @@ Tree Topics
 			:tab-width: 2
 			:linenos:
 
+3. Validity
+--------------------------------------------------------------------------------
+- Is valid BST
+
+	.. collapse:: Example Code
+
+		.. literalinclude:: ../../code/isvalidbst.py
+			:language: python
+			:tab-width: 2
+			:linenos:
+- Is valid preorder
+
 3. Misc
 --------------------------------------------------------------------------------
 - [stack] https://leetcode.com/problems/binary-tree-preorder-traversal/
