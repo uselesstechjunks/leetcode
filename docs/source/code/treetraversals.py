@@ -50,8 +50,7 @@ def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 		while stack:
 			node = stack.pop()
 			result.append(node.val)
-			node = node.right
-			push_left(stack, node)
+			push_left(stack, node.right)
 
 	result = []
 	iter(root)
