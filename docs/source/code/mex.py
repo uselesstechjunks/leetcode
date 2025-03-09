@@ -1,11 +1,11 @@
-def withoutExtraSpace(self, nums) -> int:
-	def withExtraSpace(self, nums) -> int:
-		nums = set(nums)
-		mex = 1
-		while mex in nums:
-			mex += 1
-		return mex
+def withExtraSpace(self, nums) -> int:
+	nums = set(nums)
+	mex = 1
+	while mex in nums:
+		mex += 1
+	return mex
 	
+def withoutExtraSpace(self, nums) -> int:
 	# use the array index itself as the set using index as lookup key
 	# traverse from left to right
 	# when we see a negative number, ignore
