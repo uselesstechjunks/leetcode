@@ -148,8 +148,14 @@ Advanced Graph Topics
 	      :language: python
 	      :tab-width: 2
 	      :linenos:
-
 * Multi Source BFS
+
+	.. collapse:: Rotting Oranges
+
+	   .. literalinclude:: ../../code/rottingoranges.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 * Why important: Breadth-first and depth-first searches are foundational for exploring graphs.
 * Key Techniques:
 
