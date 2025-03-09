@@ -120,6 +120,14 @@ Advanced Graph Topics
 5. Bipartite Graphs
 --------------------------------------------------------------------------------
 * Why important: Common in matching and coloring problems.
+* Sample implementation
+
+	.. collapse:: Using BFS and DFS
+
+	   .. literalinclude:: ../../code/bipartite.py
+	      :language: python
+	      :tab-width: 2
+	      :linenos:
 * Key Techniques:
 
 	* BFS/DFS to test bipartiteness.
