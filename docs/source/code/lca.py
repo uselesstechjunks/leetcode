@@ -1,3 +1,56 @@
+# binary tree
+""" unique nodes, p, q guaranteed to exist in tree """
+def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+	# three possible cases
+	# if root = p and any of the subtrees contain q, then p is the lca
+	# if root = q and any of the subtrees contain p, then q is the lca
+	# if one of the subtrees contains p and the other contains q, then root is the lca
+	def lca(root, p, q):
+		if not root:
+			return root
+		# if any of the nodes are found first, they are returned
+		# case 1: the other node is one of the subtrees - in this case, root is lca
+		# case 2: the other node is in another part, then it would help upstream
+		# level root to figure it out
+		if root == p or root == q:
+			return root
+
+		left = lca(root.left, p, q)
+		right = lca(root.right, p, q)
+
+		if left is not None and right is not None:
+			return root
+		if left is not None:
+			return left
+		if right is not None:
+			return right
+		return None
+	
+	return lca(root, p, q)
+
+# binary search tree
+""" unique nodes, p, q guaranteed to exist in tree """
+def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+	def lca(root, p, q):
+		# we can assume that p.val < q.val
+		if not root:
+			return root
+		# here we effectively prune the search space using bst property
+		if q.val < root.val:
+			return lca(root.left, p, q)
+		if root.val < p.val:
+			return lca(root.right, p, q)
+		# we can confidently return root if p.val < root.val < q.val
+		# since it is guaranteed that the nodes are going to be present
+		# in the binary search tree
+		return root
+	
+	if p.val > q.val:
+		p, q = q, p
+	return lca(root, p, q)
+
+"""
+Older code
 # Binary tree structure
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -96,3 +149,4 @@ if __name__ == '__main__':
     root, p, q = test1()
     res = solution.lca2(root, p, q)
     print(res.val)
+"""
