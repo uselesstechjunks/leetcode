@@ -39,40 +39,40 @@ def withoutExtraSpace(self, nums) -> int:
 		index += 1
 	return length+1
 
-	""" a dumber way of doing the above """
-	def constant_space():
-		"""
-		idea: use index as a proxy for the set above
-		"""
-		# NOTE
-		# 1. anyting that's negative doesn't matter
-		# 2. anything that's larger than the max index doesn't matter
-		# we need to ensure that we don't overwrite anything
-		# [0,3,4,-1,1]
-		# [0,3,4,-1,1] i = 1
-		# [0,0,4,3,1] i = 2
-		# [0,0,1,3,4] i = 2
-		numbers = [0] + nums
-		index = 1
-		while index < len(numbers):
-			if numbers[index] <= 0 or numbers[index] > len(nums):
-				numbers[index] = 0
-				index += 1
-			elif numbers[index] == index:
-				index += 1
-			elif numbers[numbers[index]] == numbers[index]:
-				numbers[index] = 0
-				index += 1
-			else:
-				tmp = numbers[numbers[index]]
-				numbers[numbers[index]] = numbers[index]
-				numbers[index] = tmp
-		
-		print(numbers)
-		curr = 1
-		while curr <= len(nums) and numbers[curr]:
-			curr += 1
-		return curr
+""" a dumber way of doing the above """
+def constant_space():
+	"""
+	idea: use index as a proxy for the set above
+	"""
+	# NOTE
+	# 1. anyting that's negative doesn't matter
+	# 2. anything that's larger than the max index doesn't matter
+	# we need to ensure that we don't overwrite anything
+	# [0,3,4,-1,1]
+	# [0,3,4,-1,1] i = 1
+	# [0,0,4,3,1] i = 2
+	# [0,0,1,3,4] i = 2
+	numbers = [0] + nums
+	index = 1
+
+	while index < len(numbers):
+		if numbers[index] <= 0 or numbers[index] > len(nums):
+			numbers[index] = 0
+			index += 1
+		elif numbers[index] == index:
+			index += 1
+		elif numbers[numbers[index]] == numbers[index]: # this takes care of duplicates
+			numbers[index] = 0
+			index += 1
+		else:
+			tmp = numbers[numbers[index]]
+			numbers[numbers[index]] = numbers[index]
+			numbers[index] = tmp
+
+	curr = 1
+	while curr <= len(nums) and numbers[curr]:
+		curr += 1
+	return curr
 
 def firstMissingPositive(self, nums: List[int]) -> int:
 	return self.withoutExtraSpace(nums)
