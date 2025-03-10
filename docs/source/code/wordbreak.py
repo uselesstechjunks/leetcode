@@ -34,3 +34,37 @@ def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 		return dp[-1]
 	
 	return good_approach()
+
+def wordBreakII(self, s: str, wordDict: List[str]) -> List[str]:
+	def backtrack(curr, start_index):
+		nonlocal result
+		n = len(s)
+		if start_index >= n:
+			ans = ' '.join(curr)
+			result.append(ans)
+			return
+		
+		for j in range(start_index, n):
+			if is_word(start_index, j):
+				size = j - start_index + 1
+				word = s[start_index: start_index + size]
+				curr.append(word)
+				backtrack(curr, start_index + size)
+				curr.pop()
+	
+	def is_word(i, j):
+		nonlocal words
+		# curr = s[i:j+1]
+		# return curr in words
+	
+
+	words = set(wordDict)
+	n = len(s)
+	# if dp[i][j] = True => s[i...j] is a valid word in the dict
+	dp = [[False] * n for _ in range(n)]
+
+	# TODO implement using trie
+	print(dp)
+	result = []
+	backtrack([], 0)
+	return result
