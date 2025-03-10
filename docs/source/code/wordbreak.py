@@ -1,22 +1,36 @@
-""" bad approach - needs fixing """
 def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-	def dp():
-		# f(j) = whether the string s[0...j] is valid or not
-		# transition rule:
-		# f(j) = f(j-k) and s[k+1..j] is a word in dict for any k
-		n = len(s)
+	def good_approach():
+		""" O(n*m*k) """
+		# f(i) := s[0...i] can be segmented or not
+		# f(i) = true of any f(j-1, j <= i) and s[j,i] in in dict
 		words = set(wordDict)
+		n = len(s)
 		dp = [False] * n
-		for last in range(n): # s[0...last]
-			first = last # s[first.last]
-			while first >= 0:
-				word = s[first:last+1]
-				if word in words and (first == 0 or dp[first-1]):
-					dp[last] = True
+
+		for i in range(n):
+			for word in words:
+				size = len(word)
+				j = i-size+1
+				if (j == 0 or (j > 0 and dp[j-1])) and (j >= 0 and s[j:i+1] == word):
+					dp[i] = True
 					break
-				first -= 1
+
 		return dp[-1]
 
-	def trie():
-		pass
-	return dp()
+	def bad_approach():
+		""" O(n^2) """
+		# f(i) := s[0...i] can be segmented or not
+		# f(i) = true of any f(j-1, j <= i) and s[j,i] in in dict
+		words = set(wordDict)
+		n = len(s)
+		dp = [False] * n
+
+		for i in range(n):
+			for j in range(i+1):
+				if (j == 0 or dp[j-1]) and s[j:i+1] in words:
+					dp[i] = True
+					break
+		
+		return dp[-1]
+	
+	return good_approach()
