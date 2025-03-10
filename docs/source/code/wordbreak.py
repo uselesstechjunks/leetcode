@@ -1,3 +1,4 @@
+""" bad approach - needs fixing """
 def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 	def dp():
 		# f(j) = whether the string s[0...j] is valid or not
