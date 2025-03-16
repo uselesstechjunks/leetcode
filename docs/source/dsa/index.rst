@@ -123,6 +123,7 @@ Might be Useful
 .. note::
 	* [leetcode.com] `Lessons from My Google L5 Interview Experience: Tips and suggestion <https://leetcode.com/discuss/interview-question/6147892/Lessons-from-My-Google-L5-Interview-Experience%3A-Tips-and-suggestion>`_
 	* [leetcode.com] `Google Onsite <https://leetcode.com/discuss/interview-question/849947/google-onsite>`_
+	* [medium.com] `META’s Most Asked Coding Interview Questions: The Complete List of 73 LeetCode Problems. <https://medium.com/@johnadjanohoun/metas-most-asked-coding-interview-questions-the-complete-list-of-73-leetcode-problems-47e96767adc7>`_
 	* [docs.google] `Leetcode Questions - public - solved by Siddhesh <https://docs.google.com/spreadsheets/d/1KkCeOIBwUFfKrHGGZe_6EJRCIqaM6MJBo0uSIMSD9bs/edit?gid=782922309#gid=782922309>`_	
 	* [leetcodethehardway.com] `LeetCode The Hard Way <https://leetcodethehardway.com/tutorials/category/basic-topics>`_	
 	* [docs.google] `DSA Resource Problem Set <https://docs.google.com/spreadsheets/d/1hwvHbRargzmbErRYGU2cjxf4PR8GTOI-e1R9VqOVQgY/edit?gid=481396158#gid=481396158>`_
