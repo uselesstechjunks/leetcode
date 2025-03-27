@@ -70,6 +70,7 @@ Resources
 ********************************************************************************
 #. Interview Guide
 
+	#. [trybackprop.com] `FAANG Interview – Machine Learning System Design <https://www.trybackprop.com/blog/ml_system_design_interview>`_
 	#. [patrickhalina.com] `ML Systems Design Interview Guide <http://patrickhalina.com/posts/ml-systems-design-interview-guide/>`_
 	#. [leetcode.com] `Machine Learning System Design : A framework for the interview day <https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day>`_
 	#. [medium.com] `How to Crack Machine learning Interviews at FAANG! <https://medium.com/@reachpriyaa/how-to-crack-machine-learning-interviews-at-faang-78a2882a05c5>`_
