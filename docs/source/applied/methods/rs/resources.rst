@@ -4,12 +4,13 @@ Resources
 ************************************************************************************
 Survey
 ************************************************************************************
-* [le-wu.com][Ranking] `A Survey on Accuracy-Oriented Neural Recommendation <https://le-wu.com/files/Publications/JOURNAL/A_Survey_of_Neural_Recommender_Systems.pdf>`_
 * [arxiv.org][Retrieval] `A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
+* [arxiv.org][CTR] `Click-Through Rate Prediction in Online Advertising: A Literature Review <https://arxiv.org/abs/2202.10462>`_
 * [arxiv.org][CTR] `Deep Learning for Click-Through Rate Estimation <https://arxiv.org/abs/2104.10584>`_
-* [mdpi.com] `A Comprehensive Survey of Recommender Systems Based on Deep Learning <https://www.mdpi.com/2076-3417/13/20/11378/pdf?version=1697524018>`_
 * [arxiv.org][SSL] `Self-Supervised Learning for Recommender Systems: A Survey <https://arxiv.org/abs/2203.15876>`_
-* [arxiv.org] `Embedding in Recommender Systems: A Survey <https://arxiv.org/abs/2310.18608v2>`_
+* [arxiv.org][Embedding] `Embedding in Recommender Systems: A Survey <https://arxiv.org/abs/2310.18608v2>`_
+* [le-wu.com][Ranking] `A Survey on Accuracy-Oriented Neural Recommendation <https://le-wu.com/files/Publications/JOURNAL/A_Survey_of_Neural_Recommender_Systems.pdf>`_
+* [mdpi.com] `A Comprehensive Survey of Recommender Systems Based on Deep Learning <https://www.mdpi.com/2076-3417/13/20/11378/pdf?version=1697524018>`_
 * [youtube.com] `TUTORIAL: Neural Contextual Bandits for Personalized Recommendation <https://www.youtube.com/watch?v=esOd-tsdEco>`_ (`arxiv <https://arxiv.org/pdf/2312.14037>`_)
 * [youtube.com] `TUTORIAL: Privacy in Web Advertising: Analytics and Modeling <https://www.youtube.com/watch?v=qaiDxriCEmQ>`_
 * [youtube.com] `TUTORIAL: Multimodal Pretraining and Generation for Recommendation <https://www.youtube.com/watch?v=Pw1eW0rMzSU>`_
@@ -55,6 +56,25 @@ Videos
 ************************************************************************************
 Course, Books & Papers
 ************************************************************************************
+CTR Prediction Papers
+====================================================================================
+- [paperswithcode.com] `CTR Prediction <https://paperswithcode.com/task/click-through-rate-prediction>`_
+
+.. csv-table::
+	:header: "Technique", "Resource"
+	:align: center
+
+		LR, `Distributed training of Large-scale Logistic models <https://proceedings.mlr.press/v28/gopal13.pdf>`_		
+		Embed + MLP, `Deep Neural Networks for YouTube Recommendations <https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf>`_
+		Embed + MLP, `Real-time Personalization using Embeddings for Search Ranking at Airbnb <https://dl.acm.org/doi/pdf/10.1145/3219819.3219885>`_
+		Wide & Deep, `Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
+		DeepFM, `DeepFM: A Factorization-Machine based Neural Network for CTR Prediction <https://arxiv.org/abs/1703.04247>`_
+		xDeepFM, `xDeepFM: Combining Explicit and Implicit Feature Interactions for Recommender Systems <https://arxiv.org/abs/1803.05170>`_
+		DCN, `Deep & Cross Network for Ad Click Predictions <https://arxiv.org/abs/1708.05123>`_
+		DCNv2, `DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
+		DIN, `Deep Interest Network for Click-Through Rate Prediction <https://arxiv.org/abs/1706.06978>`_
+		BST, `Behavior Sequence Transformer for E-commerce Recommendation in Alibaba <https://arxiv.org/abs/1905.06874>`_
+
 Key Papers
 ====================================================================================
 	- BOF = Bag of features
@@ -65,18 +85,14 @@ Key Papers
 	:header: "Tag", "Title"
 	:align: center
 
-		QU,`Better search through query understanding <https://queryunderstanding.com/>`_
-		IR;QU,`Using Query Contexts in Information Retrieval <http://www-rali.iro.umontreal.ca/rali/sites/default/files/publis/10.1.1.409.2630.pdf>`_
+		QU;Search,`Better search through query understanding <https://queryunderstanding.com/>`_
+		IR;QU;Search,`Using Query Contexts in Information Retrieval <http://www-rali.iro.umontreal.ca/rali/sites/default/files/publis/10.1.1.409.2630.pdf>`_
 		IR;Course;Stanford,`CS 276 / LING 286 Information Retrieval and Web Search <https://web.stanford.edu/class/cs276/>`_
 		IR;Book,`Introduction to Information Retrieval <https://nlp.stanford.edu/IR-book/information-retrieval-book.html>`_
-		Retrieval;Survey,`A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
-		DL;RS;Survey,`Deep Learning based Recommender System A Survey and New Perspectives <https://arxiv.org/pdf/1707.07435>`_
 		Retrival;RS,`Simple but Efficient A Multi-Scenario Nearline Retrieval Framework for Recommendation on Taobao <https://arxiv.org/pdf/2408.00247v1>`_
 		Retrival;Ranking;Embed+MLP,`Neural Collaborative Filtering <https://arxiv.org/abs/1708.05031>`_
 		Retrival;Two Tower;BOF,`StarSpace Embed All The Things! <https://arxiv.org/abs/1709.03856>`_
-		Retrival;Ranking;Two Tower;NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_
-		Ranking;WDN,`Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
-		Ranking;DCN,`DCN V2 Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
+		Retrival;Ranking;Two Tower;NG+BOF,`Embedding-based Retrieval in Facebook Search <https://arxiv.org/abs/2006.11632>`_		
 		Ranking;L2R,`DeepRank: Learning to rank with neural networks for recommendation <http://zhouxiuze.com/pub/DeepRank.pdf>`_
 		GCN,`Graph Convolutional Neural Networks for Web-Scale Recommender Systems <https://arxiv.org/abs/1806.01973>`_
 		GCN,`LightGCN - Simplifying and Powering Graph Convolution Network for Recommendation <https://arxiv.org/abs/2002.02126>`_
@@ -94,26 +110,6 @@ Key Papers
 		LLM,`A Review of Modern Recommender Systems Using Generative Models (Gen-RecSys) <https://arxiv.org/abs/2404.00579>`_
 		LLM,`Collaborative Large Language Model for Recommender Systems <https://arxiv.org/abs/2311.01343>`_
 		LLM,`Recommendation as Instruction Following A Large Language Model Empowered Recommendation Approach <https://arxiv.org/abs/2305.07001>`_
-
-CTR Prediction Papers
-====================================================================================
-- [paperswithcode.com] `CTR Prediction <https://paperswithcode.com/task/click-through-rate-prediction>`_
-
-.. csv-table::
-	:header: "Technique", "Resource"
-	:align: center
-
-		LR, `Distributed training of Large-scale Logistic models <https://proceedings.mlr.press/v28/gopal13.pdf>`_
-		Survey, `Click-Through Rate Prediction in Online Advertising: A Literature Review <https://arxiv.org/abs/2202.10462>`_
-		Embed + MLP, `Deep Neural Networks for YouTube Recommendations <https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf>`_
-		Embed + MLP, `Real-time Personalization using Embeddings for Search Ranking at Airbnb <https://dl.acm.org/doi/pdf/10.1145/3219819.3219885>`_
-		Wide & Deep, `Wide & Deep Learning for Recommender Systems <https://arxiv.org/abs/1606.07792>`_
-		DeepFM, `DeepFM: A Factorization-Machine based Neural Network for CTR Prediction <https://arxiv.org/abs/1703.04247>`_
-		xDeepFM, `xDeepFM: Combining Explicit and Implicit Feature Interactions for Recommender Systems <https://arxiv.org/abs/1803.05170>`_
-		DCN, `Deep & Cross Network for Ad Click Predictions <https://arxiv.org/abs/1708.05123>`_
-		DCNv2, `DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems <https://arxiv.org/abs/2008.13535>`_
-		DIN, `Deep Interest Network for Click-Through Rate Prediction <https://arxiv.org/abs/1706.06978>`_
-		BST, `Behavior Sequence Transformer for E-commerce Recommendation in Alibaba <https://arxiv.org/abs/1905.06874>`_
 
 More Papers
 ====================================================================================
