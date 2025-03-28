@@ -8,3 +8,5 @@ Practical ML
 	logs
 	dcai
 	eval
+	resources
+	topics
