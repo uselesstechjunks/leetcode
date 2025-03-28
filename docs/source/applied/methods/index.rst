@@ -4,11 +4,11 @@ Machine Learning Applications
 .. toctree::
 	:maxdepth: 2
 
+	rs/index
 	lm
 	llm
 	nlp
 	multimodal
-	rs/index
 	obsv
 *******************************************************************************
 Design Resources
