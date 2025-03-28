@@ -5,4 +5,5 @@ Search & Recommendation
 	:maxdepth: 3
 
 	overview
+	resources
 	notes
