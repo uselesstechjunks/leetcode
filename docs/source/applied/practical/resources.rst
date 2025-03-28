@@ -31,9 +31,10 @@ Practical Resources
 4. Tech Blogs
 	
 	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
+	* [medium.com] `AirBnB: AI & Machine Learning <https://medium.com/airbnb-engineering/ai/home>`_
+	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_
 	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [blog.google] `AI <https://blog.google/technology/ai/>`_
-	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_
 	* [engineering.atspotify.com] `Spotify Engineering <https://engineering.atspotify.com/>`_
 	* [ngineering.atspotify.com] `Spotify Machine Learning <https://engineering.atspotify.com/category/maching-learning/>`_
 	* [medium.com] `Pinterest Engineering <https://medium.com/pinterest-engineering>`_
