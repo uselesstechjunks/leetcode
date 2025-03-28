@@ -5,5 +5,6 @@ Search & Recommendation
 	:maxdepth: 3
 
 	overview
+	domain
 	resources
 	notes
