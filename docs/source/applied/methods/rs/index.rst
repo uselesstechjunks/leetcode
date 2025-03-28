@@ -4,7 +4,8 @@ Search & Recommendation
 .. toctree::
 	:maxdepth: 3
 
-	overview
+	data
 	domain
+	overview
 	resources
 	notes
