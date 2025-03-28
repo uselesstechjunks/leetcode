@@ -47,6 +47,7 @@ Practical Resources
 		:header: "Year", "Company", "Product", "Article Link"
 		:align: center
 
+			2019, Social, Twitter, Feedback, `Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction <https://arxiv.org/pdf/1907.06558>`_
 			2023, Social, Meta, Logging, `Logarithm: A logging engine for AI training workflows and services <https://engineering.fb.com/2024/03/18/data-infrastructure/logarithm-logging-engine-ai-training-workflows-services-meta/>`_
 			2023, Social, Meta, Instagram, `Scaling the Instagram Explore recommendations system <https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/>`_
 			2022, Social, Meta, Causal Inference, `Improving Instagram notification management with machine learning and causal inference <Improving Instagram notification management with machine learning and causal inference>`_
