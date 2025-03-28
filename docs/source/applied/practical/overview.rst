@@ -16,8 +16,8 @@ Dataset Creation and Curation
 - Data curation for LLM pretraining
 
 	- https://medium.com/@zolayola/public-data-sets-in-the-era-of-llms-0a4e89bda658
-	- [https://arxiv.org/pdf/2309.05463] Textbooks Are All You Need II: phi-1.5 technical report
-	- [https://arxiv.org/abs/2305.13169] A Pretrainer’s Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, & Toxicity
+	- [arxiv.org] `Textbooks Are All You Need II: phi-1.5 technical report <https://arxiv.org/pdf/2309.05463>`_
+	- [arxiv.org] `A Pretrainer’s Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, & Toxicity <https://arxiv.org/abs/2305.13169>`_
 
 LLMs for data curation
 -----------------------------------------------------------------------
