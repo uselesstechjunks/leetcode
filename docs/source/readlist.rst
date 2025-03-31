@@ -70,6 +70,27 @@ University courses
 * `aman.ai <https://aman.ai/>`_
 
 ******************************************************************************************
+Search and Recommender Systems
+******************************************************************************************
+.. csv-table:: 
+	:header: "Tag", "Title"
+	:align: center
+	
+		Survey; CTR, Deep Learning for Click-Through Rate Estimation
+		Survey; Embedding, Embedding in Recommender Systems: A Survey
+		Survey; Ranking, A Survey on Accuracy-Oriented Neural Recommendation: From Collaborative Filtering to Information-Rich Recommendation 
+		Survey; Retrieval, A Comprehensive Survey on Retrieval Methods in Recommender Systems
+		Survey; Objective, Self-Supervised Learning for Recommender Systems: A Survey
+		Method; CTR, Factorization Machines
+		Method; CTR, Wide & Deep Learning for Recommender Systems
+		Method; CTR, DeepFM: A Factorization-Machine based Neural Network for CTR Predictio
+		Method; CTR, xDeepFM: Combining Explicit and Implicit Feature Interactions for Recommender Systems
+		Method; CTR, Deep & Cross Network for Ad Click Predictions
+		Method; CTR, DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems
+		Method; CTR, Deep Interest Network for Click-Through Rate Prediction
+		Method; Feedback Delay, Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction
+
+******************************************************************************************
 LLMs
 ******************************************************************************************
 .. note::
