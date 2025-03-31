@@ -58,15 +58,15 @@ Study Framework
 
 #. ML Engineering
 
-	#. Does the solution scale at serving time? How would serving work in a distributed env within latency limits? How much resource would we need?
-	#. How do I train all the models at scale? How much compute would we need? 
 	#. How much data we need to ensure that model learned something? 
-	#. How much storage & memory would we need? 
 	#. How can we reduce data & compute requirements without hurting the performance much?
+	#. How do I train the models at scale? How much compute, storage & memory would we need? 
+	#. Does the solution scale at serving time? How would serving work in a distributed env within latency limits? How much resource would we need?
 
 #. ML Ops
 
-	#. How do we monitor and adjust to be able to serve the model for a long time? What offline analysis can we do to determine how the model would perform in problematic scenarios?
+	#. How do we monitor and adjust to be able to serve the model for a long time? 
+	#. What offline analysis can we do to determine how the model would perform in problematic scenarios?
 
 #. ML Roadmap
 
@@ -78,18 +78,22 @@ Presentation Framework
 #. What is the task? 
 
 	.. collapse:: Details
+
 		- Understanding requirements. Split into subtasks if applicable.
 #. What is ideal? What is good enough? How long do I have?
 
 	.. collapse:: Details
+
 		- Business objectives
 #. How do I know if I am getting better?
 
 	.. collapse:: Details
+
 		- Define metrics: primary, secondary
 #. How do I solve it?
 
 	.. collapse:: Details
+
 		- Discuss 3 approaches for solving primary
 		- First 2 options - pros and cons, 1 chosen with better trade-off
 		- Trade off types: (1) Modeling (2) Scaling
@@ -97,10 +101,12 @@ Presentation Framework
 #. How do I know how it's doing in practice?
 
 	.. collapse:: Details
+
 		- Discuss observability, maintainibility
 #. How do I improve iteratively?
 
 	.. collapse:: Details
+
 		- Discuss common pitfalls - measure, address.
 #. How do I plan the roadmap?
 
