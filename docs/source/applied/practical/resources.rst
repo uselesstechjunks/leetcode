@@ -48,11 +48,15 @@ Practical Resources
 		:header: "Year", "Company", "Product", "Article Link"
 		:align: center
 
+			2019, Social, Meta, Content Recommendation, `Powered by AI: Instagram’s Explore recommender system <https://ai.meta.com/blog/powered-by-ai-instagrams-explore-recommender-system/>`_
+			2023, Social, Meta, Scaling, `Scaling the Instagram Explore recommendations system <https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/>`_
+			2021, Social, Meta, Content Recommendation, `How machine learning powers Facebook’s News Feed ranking algorithm <https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/>`_
+			2024, Social, Meta, Robustness, `Meta’s approach to machine learning prediction robustness <https://engineering.fb.com/2024/07/10/data-infrastructure/machine-learning-ml-prediction-robustness-meta/>`_
 			2023, Social, Meta, Content Recommendation, `The AI behind unconnected content recommendations on Facebook and Instagram <https://ai.meta.com/blog/ai-unconnected-content-recommendations-facebook-instagram/>`_
 			2023, Social, Meta, Ranking, `Our approach to explaining ranking <https://transparency.meta.com/features/explaining-ranking>`_
 			2023, Social, Meta, Ecosystem, `How Meta measures the management of its AI ecosystem <https://ai.meta.com/blog/meta-ai-ecosystem-management-metrics/>`_
 			2022, Social, Meta, Content Recommendation, `The new AI-powered feature designed to improve Feed for everyone <https://ai.meta.com/blog/facebook-feed-improvements-ai-show-more-less/>`_
-			2022, Social, Meta, Ads, New AI advancements drive Meta’s ads system performance and efficiency <https://ai.meta.com/blog/ai-ads-performance-efficiency-meta-lattice/>`_
+			2022, Social, Meta, Ads, `New AI advancements drive Meta’s ads system performance and efficiency <https://ai.meta.com/blog/ai-ads-performance-efficiency-meta-lattice/>`_
 			2021, Social, Meta, Integrity, `Harmful content can evolve quickly. Our new AI system adapts to tackle it <https://ai.meta.com/blog/harmful-content-can-evolve-quickly-our-new-ai-system-adapts-to-tackle-it/>`_
 			2020, Social, Meta, Integrity, `Here's how we're using AI to help detect misinformation <https://ai.meta.com/blog/heres-how-were-using-ai-to-help-detect-misinformation/>`_
 			2020, Social, Meta, Integrity, `Training AI to detect hate speech in the real world <https://ai.meta.com/blog/training-ai-to-detect-hate-speech-in-the-real-world/>`_
