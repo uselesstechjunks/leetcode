@@ -6,6 +6,6 @@ Search & Recommendation
 
 	data
 	domain
-	overview
+	embed
 	resources
 	notes
