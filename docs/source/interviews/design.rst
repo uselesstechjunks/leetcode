@@ -10,6 +10,7 @@ ML Application
 ML Design Round Framework
 ********************************************************************************
 - [aayushmnit.com] `Meta MLE Interview Preparation Guide <https://aayushmnit.com/posts/2024-12-15-MLInterviewPrep/MLInterviewPrep.html>`_
+- [onedrive.live.com] `MLE Interview Prep Template <https://onedrive.live.com/edit?id=52D2FC816A40F7EB!37560&resid=52D2FC816A40F7EB!37560&ithint=file%2Cxlsx&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvcyFBdXYzUUdxQl9OSlNncVU0TGhPVUp0VGNWNDRXalE&migratedtospo=true&wdo=2&cid=52d2fc816a40f7eb>`_
 - https://www.youtube.com/watch?v=jkKAeIx7F8c
 
 Basic Structure
