@@ -29,7 +29,7 @@ Practical Resources
 	- [youtube.com] `Upcoming Book: "Machine Learning System Design" by Alex Xu <https://youtube.com/playlist?list=PLlvnxKilk3aKx0oFua-HTtFf-d_inQ8Qn>`_
 	- [youtube.com] `Machine Learning (ML) System Design Interview Questions <https://www.youtube.com/playlist?list=PLlvnxKilk3aIbyEp3MFlTkYItrLmjS-T3>`_
 4. Tech Blogs
-	
+
 	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
 	* [medium.com] `AirBnB: AI & Machine Learning <https://medium.com/airbnb-engineering/ai/home>`_
 	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_
@@ -48,7 +48,16 @@ Practical Resources
 		:header: "Year", "Company", "Product", "Article Link"
 		:align: center
 
-			2019, Social, Twitter, Feedback, `Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction <https://arxiv.org/pdf/1907.06558>`_
+			2023, Social, Meta, Content Recommendation, `The AI behind unconnected content recommendations on Facebook and Instagram <https://ai.meta.com/blog/ai-unconnected-content-recommendations-facebook-instagram/>`_
+			2023, Social, Meta, Ranking, `Our approach to explaining ranking <https://transparency.meta.com/features/explaining-ranking>`_
+			2023, Social, Meta, Ecosystem, `How Meta measures the management of its AI ecosystem <https://ai.meta.com/blog/meta-ai-ecosystem-management-metrics/>`_
+			2022, Social, Meta, Content Recommendation, `The new AI-powered feature designed to improve Feed for everyone <https://ai.meta.com/blog/facebook-feed-improvements-ai-show-more-less/>`_
+			2022, Social, Meta, Ads, New AI advancements drive Meta’s ads system performance and efficiency <https://ai.meta.com/blog/ai-ads-performance-efficiency-meta-lattice/>`_
+			2021, Social, Meta, Integrity, `Harmful content can evolve quickly. Our new AI system adapts to tackle it <https://ai.meta.com/blog/harmful-content-can-evolve-quickly-our-new-ai-system-adapts-to-tackle-it/>`_
+			2020, Social, Meta, Integrity, `Here's how we're using AI to help detect misinformation <https://ai.meta.com/blog/heres-how-were-using-ai-to-help-detect-misinformation/>`_
+			2020, Social, Meta, Integrity, `Training AI to detect hate speech in the real world <https://ai.meta.com/blog/training-ai-to-detect-hate-speech-in-the-real-world/>`_
+			2020, Social, Meta, Integrity, `How Facebook uses super-efficient AI models to detect hate speech <https://ai.meta.com/blog/how-facebook-uses-super-efficient-ai-models-to-detect-hate-speech/>`_
+			2020, Social, Meta, Integrity, `How AI is getting better at detecting hate speech <https://ai.meta.com/blog/how-ai-is-getting-better-at-detecting-hate-speech/>`_
 			2023, Social, Meta, Logging, `Logarithm: A logging engine for AI training workflows and services <https://engineering.fb.com/2024/03/18/data-infrastructure/logarithm-logging-engine-ai-training-workflows-services-meta/>`_
 			2023, Social, Meta, Instagram, `Scaling the Instagram Explore recommendations system <https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/>`_
 			2022, Social, Meta, Causal Inference, `Improving Instagram notification management with machine learning and causal inference <Improving Instagram notification management with machine learning and causal inference>`_
@@ -57,6 +66,7 @@ Practical Resources
 			2021, Social, Meta, Newsfeed Ranking, `How machine learning powers Facebook’s News Feed ranking algorithm <https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/>`_
 			2021, Social, Meta, Video, `How Facebook encodes your videos <https://engineering.fb.com/2021/04/05/video-engineering/how-facebook-encodes-your-videos/>`_
 			2020, Social, Meta, Diversity, `On the value of diversified recommendations <https://engineering.fb.com/2020/12/17/ml-applications/diversified-recommendations/>`_
+			2019, Social, Twitter, Feedback, `Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction <https://arxiv.org/pdf/1907.06558>`_
 			2023, Chat, Snapchat, Retrieval, `Embedding-based Retrieval with Two-Tower Models in Spotlight <https://eng.snap.com/embedding-based-retrieval>`_
 			2022, Chat, Snapchat, Privacy, `Differential Privacy at Snapchat <https://eng.snap.com/differential-privacy-at-snap>`_
 			2022, Chat, Snapchat, Feature Engineering, `Synthetic Data for Machine Learning (ML) <https://eng.snap.com/synthetic-data-for-machine-learning>`_
