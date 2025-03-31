@@ -11,7 +11,8 @@ User Engagement-Based Labels
 ====================================================================================
 .. csv-table::
 	:header: "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
-	:align: center
+	:align: left
+	:widths: 16, 16, 24
 
 		Clicks, Count clicks on an item.,  Simple; scalable.  Clicking  liking (accidental clicks).
 		Watch Time / Dwell Time, Measure time spent on videos/articles.,  Captures engagement depth.  Long duration  satisfaction (e.g.; passive watching).
@@ -24,7 +25,8 @@ Social & Community-Based Signals
 ====================================================================================
 .. csv-table::
 	:header: "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
-	:align: center
+	:align: left
+	:widths: 16, 16, 24
 
 		Likes / Upvotes, Count "likes" on posts; videos; or comments.,  Clear positive feedback.  Some users never like items.
 		Shares / Retweets, Count how often users share content.,  Strong endorsement.  May share for controversy.
@@ -34,7 +36,8 @@ Negative Feedback & Implicit Dislikes
 ====================================================================================
 .. csv-table::
 	:header: "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
-	:align: center
+	:align: left
+	:widths: 16, 16, 24
 
 		Skip / Bounce Rate, Detect when a user skips a song/video quickly.,  Identifies disinterest.  May skip for reasons unrelated to content.
 		Negative Actions, "Not Interested" clicks; downvotes; blocking content.,  Explicit dislike signal.  Only a subset of users take these actions.
@@ -50,7 +53,8 @@ Session-Based & Short-Term Context Labels
 ====================================================================================
 .. csv-table::
 	:header: "Implicit Label", "Collection Method", "Assumptions & Trade-offs"
-	:align: center
+	:align: left
+	:widths: 16, 16, 24
 
 		Recent Search Context, Track evolving search terms.,  Captures short-term needs.  Trends change quickly.
 		Location-Based Preferences, Match user location with nearby content.,  Useful for local recommendations.  Privacy-sensitive.
