@@ -47,6 +47,7 @@ Practical Resources
 	.. csv-table:: 
 		:header: "Year", "Company", "Product", "Article Link"
 		:align: center
+		:widths: 8, 16, 24
 
 			2019, Social, Meta, Content Recommendation, `Powered by AI: Instagram’s Explore recommender system <https://ai.meta.com/blog/powered-by-ai-instagrams-explore-recommender-system/>`_
 			2023, Social, Meta, Scaling, `Scaling the Instagram Explore recommendations system <https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/>`_
