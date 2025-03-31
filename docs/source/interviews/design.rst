@@ -7,6 +7,45 @@ ML Application
    :backlinks: none
 
 ********************************************************************************
+Machine Learning Design (ML Model Design)
+********************************************************************************
+- Scope: Focuses on designing the core machine learning model for a specific task.
+- ML Design questions are common in research-focused or model-building roles.
+- Key Questions
+
+	- What type of model should we use (e.g., linear regression, decision trees, deep learning, transformer-based models, etc.)?
+	- What features should we select or engineer?
+	- What kind of loss function should we optimize?
+	- How do we handle data preprocessing (e.g., normalization, missing values, imbalanced data)?
+	- What metrics should we optimize (e.g., accuracy, precision, recall, NDCG)?
+	- How do we train and fine-tune the model (hyperparameter tuning, regularization)?
+	- How do we validate and evaluate the model (cross-validation, test splits, A/B testing)?
+	- How do we deal with biases, fairness, and explainability in the model?
+
+********************************************************************************
+Machine Learning System Design (MLSD)
+********************************************************************************
+- Scope: Focuses on building the entire system around the ML model, ensuring it runs efficiently at scale in production.
+- ML System Design questions are crucial for senior ML engineers, applied scientists, and ML architects who work on large-scale ML deployments.
+- Key Questions
+
+	- How do we serve the model in production (batch vs. real-time inference)?
+	- How do we scale the system (distributed training, model sharding, caching, retrieval optimizations)?
+	- What infrastructure should we use (on-prem vs. cloud, GPU vs. CPU deployment)?
+	- How do we handle data pipelines (streaming vs. batch processing, feature stores)?
+	- How do we handle model updates (versioning, retraining, continuous learning)?
+	- How do we ensure low-latency and high-availability (caching strategies, model distillation, quantization)?
+	- How do we monitor model performance and drift in production?
+	- How do we handle logging, debugging, and failure recovery?
+	- How do we ensure security, compliance, and privacy (differential privacy, federated learning)?
+- Expectations
+
+	#. Define the problem clearly (e.g., how does TikTok rank videos?).
+	#. Break down the system (retrieval, ranking, re-ranking, personalization).
+	#. Discuss infrastructure trade-offs (real-time vs. batch, model updates, caching strategies).
+	#. Consider monitoring & reliability (A/B testing, detecting drift, rollback strategies).
+
+********************************************************************************
 Study Framework
 ********************************************************************************
 #. ML Science
