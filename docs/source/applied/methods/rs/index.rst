@@ -7,5 +7,6 @@ Search & Recommendation
 	data
 	domain
 	embed
+	scale
 	resources
 	notes
