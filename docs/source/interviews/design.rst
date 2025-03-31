@@ -6,6 +6,15 @@ ML Application
    :local:
    :backlinks: none
 
+.. csv-table:: 
+	:header: Feature, Machine Learning Design, Machine Learning System Design
+	:align: left
+	
+		Focus, Designing the ML model itself, Deploying; scaling; and maintaining the model in a real-world system
+		Key Concerns, Algorithm choice; feature engineering; loss function; evaluation metrics, Infrastructure; scalability; latency; monitoring; retraining pipelines
+		Primary Goal, Model accuracy and effectiveness, Efficient; reliable; and scalable deployment
+		Output, A trained ML model, A full ML-powered system that runs at scale
+		Example, Choosing between a CNN and a Transformer for image classification, Building a scalable real-time image recognition system that serves millions of requests per second
 ********************************************************************************
 Machine Learning Design (ML Model Design)
 ********************************************************************************
