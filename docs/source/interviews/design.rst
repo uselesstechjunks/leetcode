@@ -49,10 +49,16 @@ Machine Learning System Design (MLSD)
 	- How do we ensure security, compliance, and privacy (differential privacy, federated learning)?
 - Expectations
 
-	#. Define the problem clearly (e.g., how does TikTok rank videos?).
-	#. Break down the system (retrieval, ranking, re-ranking, personalization).
-	#. Discuss infrastructure trade-offs (real-time vs. batch, model updates, caching strategies).
-	#. Consider monitoring & reliability (A/B testing, detecting drift, rollback strategies).
+	- Define the problem clearly (e.g., how does TikTok rank videos?).
+	- Break down the system (retrieval, ranking, re-ranking, personalization).
+	- Discuss infrastructure trade-offs (real-time vs. batch, model updates, caching strategies).
+	- Consider monitoring & reliability (A/B testing, detecting drift, rollback strategies).
+- During Interview
+
+	- Integrate Business Context: Always start by clarifying the business problem and how ML can address it.
+	- Show End-to-End Thinking: From data collection through feature engineering, modeling, evaluation, and deployment.
+	- Discuss Trade-offs: Highlight how your choices affect scalability, accuracy, and user experience.
+	- Use Real-World Examples: Cite examples like Netflix for homepage recommendations, YouTube for next-item prediction, and Google for search ranking to demonstrate practical understanding.
 
 ********************************************************************************
 Study Framework
