@@ -30,10 +30,11 @@ Practical Resources
 	- [youtube.com] `Machine Learning (ML) System Design Interview Questions <https://www.youtube.com/playlist?list=PLlvnxKilk3aIbyEp3MFlTkYItrLmjS-T3>`_
 4. Tech Blogs
 
-	* [engineering.fb] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
+	* [engineering.fb.com] `ML Applications <https://engineering.fb.com/category/ml-applications/>`_
+	* [ai.meta.com] `The latest AI news from Meta <https://ai.meta.com/blog/>`_
+	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [medium.com] `AirBnB: AI & Machine Learning <https://medium.com/airbnb-engineering/ai/home>`_
 	* [netflixtechblog.com] `Netflix TechBlog <https://netflixtechblog.com/>`_
-	* [engineering.fb] `Core Infra <https://engineering.fb.com/category/core-data/>`_
 	* [blog.google] `AI <https://blog.google/technology/ai/>`_
 	* [engineering.atspotify.com] `Spotify Engineering <https://engineering.atspotify.com/>`_
 	* [ngineering.atspotify.com] `Spotify Machine Learning <https://engineering.atspotify.com/category/maching-learning/>`_
@@ -50,6 +51,7 @@ Practical Resources
 		:widths: 8, 16, 16, 32, 64
 
 			2024, Social, Meta, Personalisation, `Sequence learning: A paradigm shift for personalized ads recommendations <https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/>`_
+			2024, Social, Meta, Infrastructure, `Meta's approach to machine learning prediction robustness <https://engineering.fb.com/2024/07/10/data-infrastructure/machine-learning-ml-prediction-robustness-meta/>`_
 			2019, Social, Meta, Content Recommendation, `Powered by AI: Instagram’s Explore recommender system <https://ai.meta.com/blog/powered-by-ai-instagrams-explore-recommender-system/>`_
 			2023, Social, Meta, Scaling, `Scaling the Instagram Explore recommendations system <https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/>`_
 			2021, Social, Meta, Content Recommendation, `How machine learning powers Facebook’s News Feed ranking algorithm <https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/>`_
@@ -69,6 +71,7 @@ Practical Resources
 			2022, Social, Meta, Causal Inference, `Improving Instagram notification management with machine learning and causal inference <Improving Instagram notification management with machine learning and causal inference>`_
 			2022, Social, Meta, Privacy, `Applying federated learning to protect data on mobile devices <https://engineering.fb.com/2022/06/14/production-engineering/federated-learning-differential-privacy/>`_
 			2022, Social, Meta, Data Engineering, `Scaling data ingestion for machine learning training at Meta <https://engineering.fb.com/2022/09/19/ml-applications/data-ingestion-machine-learning-training-meta/>`_
+			2024, Social, Meta, Inference Framework, `Taming the tail utilization of ads inference at Meta scale <https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/>`_
 			2021, Social, Meta, Newsfeed Ranking, `How machine learning powers Facebook’s News Feed ranking algorithm <https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/>`_
 			2021, Social, Meta, Video, `How Facebook encodes your videos <https://engineering.fb.com/2021/04/05/video-engineering/how-facebook-encodes-your-videos/>`_
 			2020, Social, Meta, Diversity, `On the value of diversified recommendations <https://engineering.fb.com/2020/12/17/ml-applications/diversified-recommendations/>`_
