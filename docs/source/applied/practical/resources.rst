@@ -49,6 +49,7 @@ Practical Resources
 		:align: center
 		:widths: 8, 16, 16, 32, 64
 
+			2024, Social, Meta, Personalisation, `Sequence learning: A paradigm shift for personalized ads recommendations <https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/>`_
 			2019, Social, Meta, Content Recommendation, `Powered by AI: Instagram’s Explore recommender system <https://ai.meta.com/blog/powered-by-ai-instagrams-explore-recommender-system/>`_
 			2023, Social, Meta, Scaling, `Scaling the Instagram Explore recommendations system <https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/>`_
 			2021, Social, Meta, Content Recommendation, `How machine learning powers Facebook’s News Feed ranking algorithm <https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/>`_
