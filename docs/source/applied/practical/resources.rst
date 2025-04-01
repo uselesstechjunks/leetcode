@@ -51,6 +51,7 @@ Practical Resources
 		:widths: 8, 16, 16, 32, 64
 
 			2024, Social, Meta, Personalisation, `Sequence learning: A paradigm shift for personalized ads recommendations <https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/>`_
+			2024, Social, Meta, Infrastructure, `Meta Andromeda: Supercharging Advantage+ automation with the next-gen personalized ads retrieval engine <https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/>`_
 			2024, Social, Meta, Infrastructure, `Meta's approach to machine learning prediction robustness <https://engineering.fb.com/2024/07/10/data-infrastructure/machine-learning-ml-prediction-robustness-meta/>`_
 			2019, Social, Meta, Content Recommendation, `Powered by AI: Instagram’s Explore recommender system <https://ai.meta.com/blog/powered-by-ai-instagrams-explore-recommender-system/>`_
 			2023, Social, Meta, Scaling, `Scaling the Instagram Explore recommendations system <https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/>`_
