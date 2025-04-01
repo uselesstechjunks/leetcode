@@ -76,7 +76,17 @@ CTR Prediction Papers
 		DIN, `Deep Interest Network for Click-Through Rate Prediction <https://arxiv.org/abs/1706.06978>`_
 		BST, `Behavior Sequence Transformer for E-commerce Recommendation in Alibaba <https://arxiv.org/abs/1905.06874>`_
 
-Key Papers
+Embeddings Papers
+====================================================================================
+.. csv-table::
+	:header: "Technique", "Resource"
+	:align: center
+
+		Hash, `Hash Embeddings for EfficientWord Representations <https://arxiv.org/abs/1709.03933>`_
+		Deep Hash, `Learning to Embed Categorical Features without Embedding Tables for Recommendation <https://arxiv.org/abs/2010.10784>`_
+		Survey, `Embedding in Recommender Systems: A Survey <https://arxiv.org/abs/2310.18608v2>`_
+
+Modeling Methods Papers
 ====================================================================================
 	- BOF = Bag of features
 	- NG = N-Gram
