@@ -5,10 +5,11 @@ Resources
 Survey
 ************************************************************************************
 * [arxiv.org][Retrieval] `A Comprehensive Survey on Retrieval Methods in Recommender Systems <https://arxiv.org/pdf/2407.21022>`_
-* [arxiv.org][CTR] `Click-Through Rate Prediction in Online Advertising: A Literature Review <https://arxiv.org/abs/2202.10462>`_
+* [ijcai.org][UBM] `A Survey on User Behavior Modeling in Recommender Systems <https://www.ijcai.org/proceedings/2023/0746.pdf>`_
 * [arxiv.org][CTR] `Deep Learning for Click-Through Rate Estimation <https://arxiv.org/abs/2104.10584>`_
 * [arxiv.org][SSL] `Self-Supervised Learning for Recommender Systems: A Survey <https://arxiv.org/abs/2203.15876>`_
 * [arxiv.org][Embedding] `Embedding in Recommender Systems: A Survey <https://arxiv.org/abs/2310.18608v2>`_
+* [arxiv.org][CTR] `Click-Through Rate Prediction in Online Advertising: A Literature Review <https://arxiv.org/abs/2202.10462>`_
 * [le-wu.com][Ranking] `A Survey on Accuracy-Oriented Neural Recommendation <https://le-wu.com/files/Publications/JOURNAL/A_Survey_of_Neural_Recommender_Systems.pdf>`_
 * [mdpi.com] `A Comprehensive Survey of Recommender Systems Based on Deep Learning <https://www.mdpi.com/2076-3417/13/20/11378/pdf?version=1697524018>`_
 * [youtube.com] `TUTORIAL: Neural Contextual Bandits for Personalized Recommendation <https://www.youtube.com/watch?v=esOd-tsdEco>`_ (`arxiv <https://arxiv.org/pdf/2312.14037>`_)
