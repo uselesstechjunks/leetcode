@@ -4,9 +4,10 @@ Practical ML
 .. toctree::
 	:maxdepth: 2
 
-	overview
 	logs
+	data
 	dcai
+	overview
 	eval
 	resources
 	topics
