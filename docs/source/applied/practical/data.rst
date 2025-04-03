@@ -33,9 +33,116 @@ Binarization
 
 Imbalanced Class
 =======================================================================
-Choosing Negatives
+The right strategy depends on:
+
+	- Scale: Is the imbalance 10:1 or 1,000,000:1?  
+	- Latency constraints: Can we afford multiple ranking stages?  
+	- Business goals: Are we optimizing short-term CTR or long-term engagement?  
+ 
+1. Data Reweighting & Resampling
 -----------------------------------------------------------------------
-- [TODO]
+Adjusting the data distribution during training.
+
+- Positive Class Upsampling:  
+
+	- Duplicate or synthetically generate more instances of rare positive labels.  
+	- Example: YouTube recommendation may upsample watch-time-heavy interactions (longer views) to counteract the overwhelming number of skipped videos.  
+
+- Negative Class Downsampling:  
+
+	- Randomly remove excess negative samples to balance the dataset.  
+	- Example: Search ranking may downsample non-clicked results when training a click prediction model.  
+
+- Hard Negative Mining:  
+
+	- Instead of uniform downsampling, select high-confidence false negatives (items that nearly got engagement).  
+	- Example: For Amazon product recommendations, products that users hovered over but didn’t click could be treated as hard negatives instead of ignored.  
+
+- Inverse Propensity Weighting (IPW):  
+
+	- Assign different weights to samples based on their rarity.  
+	- Example: TikTok ads ranking models give more weight to rare ad clicks to ensure the model doesn’t ignore small but valuable engagements.  
+
+2. Cost-Sensitive Learning
+-----------------------------------------------------------------------
+Adjusting model loss function to focus more on the minority class.
+
+- Weighted Loss Functions:  
+
+	- Assign a higher loss weight to the minority class.  
+	- Example: Facebook News Feed might increase the loss for underrepresented engagement types like "shares" compared to "likes."  
+
+- Focal Loss (used in detection models but adapted for ranking/recsys):  
+
+	- Down-weighs easily classified negatives and focuses on hard examples.  
+	- Example: Google Search may use focal loss to prioritize rare but meaningful query-document relevance labels over common clicks.  
+
+3. Counterfactual & Debiasing Techniques
+-----------------------------------------------------------------------
+Addressing selection bias from user interactions.
+
+- Counterfactual Logging & Re-Ranking:  
+
+	- Simulate a different ranking to understand how items might have performed if exposure bias was removed.  
+	- Example: LinkedIn feed uses counterfactual inference to evaluate items that got less exposure due to position bias.  
+
+- Propensity Scoring:  
+
+	- Adjust predictions based on estimated probability of a sample being observed.  
+	- Example: Netflix uses propensity-scored training to reduce bias from popular shows being overrepresented in clicks.  
+
+- Causal Modeling Approaches:  
+
+	- Train models to distinguish between causal user interest and presentation bias (e.g., an item was clicked just because it was shown at the top).  
+	- Example: Spotify might use causal embeddings to identify whether a song got clicked because the user liked it, or just because it appeared in the top slot of a playlist.
+
+4. Alternative Label Definitions
+-----------------------------------------------------------------------
+Redefining what counts as a positive interaction to increase robustness  
+
+- Using Multiple Engagement Signals:  
+
+	- Instead of just clicks, also use dwell time, scroll depth, likes, comments, and shares.  
+	- Example: Twitter/X might train ranking models using both retweets and meaningful replies instead of just likes.  
+
+- Time-Windowed Engagement Labels:  
+
+	- Look at engagement over time instead of at one interaction snapshot.  
+	- Example: Google Discover might track whether users return to read a recommended article later, treating it as a positive implicit signal. 
+
+5. Specialized Model Architectures
+-----------------------------------------------------------------------
+Using architectures designed to handle imbalance
+
+- Two-Stage Models (Cascade Ranking)  
+
+	- First stage: A simple recall model that retrieves diverse candidates.  
+	- Second stage: A complex re-ranking model that corrects for label imbalance.  
+	- Example: Amazon Search first retrieves thousands of results and then re-ranks based on multiple engagement signals.  
+
+- Contrastive Learning  
+
+	- Learn embeddings that maximize the difference between positives and negatives instead of just predicting engagement.  
+	- Example: Pinterest uses contrastive learning to learn better pin embeddings, even when positive engagement data is scarce.  
+
+- GANs & Synthetic Data  
+
+	- Generate synthetic training data when positive signals are rare.  
+	- Example: TikTok might use GAN-based augmentation to create synthetic engagement samples for new videos that lack enough clicks. 
+
+6. Explore-Exploit Approaches
+-----------------------------------------------------------------------
+Balancing learning from existing data with discovering new patterns  
+
+- Multi-Armed Bandits (MAB)  
+
+	- Explore new recommendations even if they don’t have past clicks, balancing exploration and exploitation.  
+	- Example: Google Ads may intentionally show low-impression ads to collect new engagement signals.  
+
+- Reinforcement Learning (RL)  
+
+	- Train models to maximize long-term engagement instead of just immediate clicks.  
+	- Example: YouTube’s recommendation engine uses RL to balance fresh content vs. already popular videos.
 
 Noisy Labels
 =======================================================================
