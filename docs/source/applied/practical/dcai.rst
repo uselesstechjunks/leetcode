@@ -1,30 +1,11 @@
 ###################################################################################
-Data Centric AI
-###################################################################################
-.. note::
-	* [youtube.com] `MIT: Introduction to Data-Centric AI <https://www.youtube.com/watch?v=ayzOzZGHZy4&list=PLnSYPjg2dHQKdig0vVbN-ZnEU0yNJ1mo5>`_
-
-***********************************************************************************
-Class Imbalance
-***********************************************************************************
-***********************************************************************************
-Outliers
-***********************************************************************************
-***********************************************************************************
 Observability
+###################################################################################
 ***********************************************************************************
-.. note::
-
-	* [arize.com] `Courses on Observability <https://courses.arize.com/courses/>`_
-
 Distribution Shift
-====================================================================================
-.. note::
-	* [mit.edu] `Class Imbalance, Outliers, and Distribution Shift <https://dcai.csail.mit.edu/2024/imbalance-outliers-shift/>`_	
-	* [arize.com] `Drift Metrics: a Quickstart Guide <https://arize.com/blog-course/drift/>`_
-
+***********************************************************************************
 Defitions
--------------------------------------------------------------------------------------
+===================================================================================
 .. note::
 	* Distribution shift: :math:`p_{\text{train}}(\mathbf{x},y)\neq p_{\text{test}}(\mathbf{x},y)`
 	* Covariate shift: 
@@ -42,18 +23,24 @@ Defitions
 		* :math:`p_{\text{train}}(\mathbf{x}|y)=p_{\text{test}}(\mathbf{x}|y)`
 
 Identification 
--------------------------------------------------------------------------------------
-Statistical & Distance-Based Methods  
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===================================================================================
+Statistical & Distance-Based Methods
+-----------------------------------------------------------------------------------
 #. Population Stability Index (PSI) / Jensen-Shannon Divergence (JSD)  
 #. Kolmogorov-Smirnov (KS) Test 
 
 Model Performance Monitoring
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------------------------------------
 #. Live A/B Testing with Shadow Models  
 #. Error Analysis on Recent Queries  
 
 Embedding-Based Drift Detection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------------------------------------
 #. Measuring Drift in Learned Representations (e.g., PCA, t-SNE)  
 #. Contrastive Learning for Drift Detection  
+
+Resources
+===================================================================================
+- [mit.edu] `Class Imbalance, Outliers, and Distribution Shift <https://dcai.csail.mit.edu/2024/imbalance-outliers-shift/>`_	
+- [arize.com] `Drift Metrics: a Quickstart Guide <https://arize.com/blog-course/drift/>`_
+- [arize.com] `Courses on Observability <https://courses.arize.com/courses/>`_
