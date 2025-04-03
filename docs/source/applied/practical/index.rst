@@ -6,8 +6,8 @@ Practical ML
 
 	logs
 	data
-	dcai
 	overview
 	eval
+	obs
 	resources
 	topics
