@@ -8,5 +8,6 @@ Search & Recommendation
 	domain
 	embed
 	scale
+	issues
 	resources
 	notes
