@@ -26,53 +26,6 @@ Fine-Tuning & LLMs
 - Safety & Alignment: RLHF, constitutional AI, preference tuning.
 
 ***********************************************************************
-Offline Evaluation
-***********************************************************************
-Golden Set Curation
-=======================================================================
-- Criteria for selection
-
-    - Coverage: Includes all relevant feature distributions.
-    - Accuracy: Labels verified by experts.
-    - Diversity: Edge cases, rare conditions.
-- Update frequency?
-   
-   - Periodically (e.g., quarterly) or when drift is detected.
-- How to balance representation?
-
-   - Maintain real-world distribution while oversampling rare cases.
-
-Metric
-=======================================================================
-- ROC-AUC: Measures ability to distinguish classes across all thresholds; useful when class balance is not extreme.
-- PR-AUC: Focuses on positive class performance (precision vs recall); useful when positives are rare.
-- When to prefer ROC-AUC vs PR-AUC?
-
-   - ROC-AUC: When positives and negatives are balanced.
-   - PR-AUC: When positives are rare (e.g., fraud detection, rare disease prediction).
-
-Slice-based Performance Evaluation
-=======================================================================
-How to choose slices for evaluation?
-
-   - Numerical features: Quantile-based bins (e.g., age groups).
-   - Categorical features: Stratify by value distribution.
-   - Temporal features: Time-based slices (e.g., recent vs past).
-   - Edge cases: Identify rare but critical scenarios.
-
-When is a model ready for production?
-
-   - Stable performance across test & validation sets.
-   - Performs better than baseline (existing model or heuristic).
-   - Low failure rate in stress tests (edge cases, adversarial inputs).
-
-Model Evaluation Beyond AUC
-=======================================================================
-- Calibration: Platt scaling, isotonic regression.
-- Expected Calibration Error (ECE): Ensuring confidence scores are well-calibrated.
-- Robustness Testing: Adversarial robustness, stress testing with synthetic data.
-
-***********************************************************************
 Deployment
 ***********************************************************************
 Model Productionization & Scaling
