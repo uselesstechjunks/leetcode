@@ -1,5 +1,5 @@
 #######################################################################
-Overview of ML Design Choices
+Training & Deployment
 #######################################################################
 .. contents:: Table of Contents
    :depth: 3
