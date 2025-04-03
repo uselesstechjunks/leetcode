@@ -21,6 +21,7 @@ Practical Resources
 
 	- [github.io] `Lil’Log <https://lilianweng.github.io/>`_
 	- [ruder.io] `A blog about natural language processing and machine learning <https://www.ruder.io/>`_
+	* [youtube.com] `MIT: Introduction to Data-Centric AI <https://www.youtube.com/watch?v=ayzOzZGHZy4&list=PLnSYPjg2dHQKdig0vVbN-ZnEU0yNJ1mo5>`_
 	- [fennel.ai] `Fennel Blog <https://fennel.ai/blog/>`_
 	- [eugeneyan.com] `Tech Blog <https://eugeneyan.com/>`_
 	- [github.com] `A Guide for Machine Learning Technical Interviews (FAANG Companies) <https://github.com/alirezadir/machine-learning-interview-enlightener>`_
