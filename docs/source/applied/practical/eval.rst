@@ -1,6 +1,11 @@
 ######################################################################################
 Evaluation
 ######################################################################################
+.. contents:: Table of Contents
+	:depth: 3
+	:local:
+	:backlinks: none
+
 ***********************************************************************
 Offline Evaluation
 ***********************************************************************
@@ -47,6 +52,12 @@ Model Evaluation Beyond AUC
 - Calibration: Platt scaling, isotonic regression.
 - Expected Calibration Error (ECE): Ensuring confidence scores are well-calibrated.
 - Robustness Testing: Adversarial robustness, stress testing with synthetic data.
+
+***********************************************************************
+Online Evaluation
+***********************************************************************
+- A/B Testing
+- Interleaving vs non-interleaving
 
 **************************************************************************************
 LLM App Evaluation
