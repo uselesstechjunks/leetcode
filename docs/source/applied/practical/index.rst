@@ -6,7 +6,7 @@ Practical ML
 
 	logs
 	data
-	overview
+	traindeploy
 	eval
 	obs
 	resources
