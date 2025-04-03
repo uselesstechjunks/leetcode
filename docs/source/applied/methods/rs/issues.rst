@@ -6,6 +6,37 @@ Issues in Search & Recommendation Systems
 	:local:
 	:backlinks: none
 
+- Distribution Shift
+
+	.. csv-table::
+		:header: "Problem", "How to Detect", "How to Fix", "Trade-Offs"
+		:align: center 
+	
+			Model Degradation, Performance drop (CTR; engagement), Frequent model retraining, Computationally expensive
+			Popularity Mismatch, PSI; JSD; embeddings drift, Adaptive reweighting of historical data, Hard to balance long vs. short-term relevance
+			Bias Reinforcement, Disparity in exposure metrics, Fairness-aware ranking, May hurt engagement
+			Cold-Start for New Trends, Increase in unseen queries, Session-based personalization, Requires fast inference
+			Intent Drift in Search, Increase in irrelevant search rankings, Online learning models, Real-time training is costly
+- General
+
+	#. Cold-start
+	#. Diversity vs. personalization Trade-Off
+	#. Popularity bias & fairness
+	#. Short-term engagement vs. long-term user retention trade-off
+	#. Privacy concerns & compliance (GDPR, CCPA)
+	#. Distribution shift (data/input, concept/target)
+- Advanced
+
+	#. Multi-touch Attribution
+	#. Real-time personalization & latency trade-Offs
+	#. Cross-device and cross-session personalization
+	#. Multi-modality & cross-domain recommendation challenges
+- Domain-Specific
+
+	#. Search Query understanding & intent disambiguation
+	#. E-Commerce Balancing revenue & user satisfaction
+	#. Video & Music Streaming Content-length bias in recommendations
+
 ************************************************************************************
 General Issues
 ************************************************************************************
