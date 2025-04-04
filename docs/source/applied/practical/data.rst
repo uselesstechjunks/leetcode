@@ -155,7 +155,6 @@ Industry Reference:
 
 - `FAISS (Facebook AI Similarity Search) <https://github.com/facebookresearch/faiss>`_: While primarily for efficient ANN search, FAISS is an example of a system that supports scalable negative sampling in embedding-based retrieval.  
 
-
 2. Inaccurate Labels - Noisy Labels
 =======================================================================
 1. Label Smoothing 
@@ -303,6 +302,17 @@ Binarization
 
 Common Label Biases
 =======================================================================
+.. csv-table::
+	:header: "Bias", "Description", "Mitigation Strategy", "Trade-offs"
+	:align: left
+	:widths: 12, 16, 24, 24
+
+		Popularity Bias, Overexposure of already popular items, Re-weighting; downsampling; diversity re-ranking, May lower CTR on high-performing items
+		Position/Exposure Bias, Higher-ranked items get more clicks regardless of relevance, IPS; A/B testing; calibration, Requires accurate exposure estimation; added complexity
+		Selection Bias, Interactions are not random; users self-select what to see, Counterfactual reasoning; causal inference; multi-signal integration, Increased computational and modeling complexity
+		Feedback Loops, Model reinforces its own biases over time, Periodic re-training; re-ranking; diversity promotion, Can sacrifice short-term engagement for long-term diversity
+		Presentation Bias, UI design influences clicks, A/B testing; controlled experiments, May require continuous UI evaluation and adjustments
+
 #. Popularity Bias:
 
 	- Items that are already popular receive more exposure, leading to even higher engagement and reinforcing their popularity.
