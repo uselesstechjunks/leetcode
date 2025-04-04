@@ -9,12 +9,7 @@ Data
 ***********************************************************************
 Label Design
 ***********************************************************************
-[TODO] Classify the techniques later
-1. Incomplete Labels
-2. Inexact Labels
-3. Inaccurate Labels
-
-Imbalanced Class
+1. Insufficient Labels - Imbalanced Class
 =======================================================================
 The right strategy depends on:
 
@@ -127,44 +122,38 @@ Balancing learning from existing data with discovering new patterns
 	- Train models to maximize long-term engagement instead of just immediate clicks.  
 	- Example: YouTube’s recommendation engine uses RL to balance fresh content vs. already popular videos.
 
-Noisy Labels
+2. Inaccurate Labels - Noisy Labels
 =======================================================================
-Label Smoothing 
+1. Label Smoothing 
 -----------------------------------------------------------------------
 - Instead of using hard labels (e.g., 0 or 1), use smoothed labels (e.g., 0.9 and 0.1) to make the model more robust to noisy labels.
 
-Noise Filtering
+2. Noise Filtering
 -----------------------------------------------------------------------
 - Human-in-the-loop Use human feedback to verify or correct labels in the dataset.
 - Confidence-based Filtering Remove samples with low model confidence or high disagreement between multiple annotators.
 
-Outlier Detection
+3. Outlier Detection
 -----------------------------------------------------------------------
 - Apply algorithms (e.g., Isolation Forest, Z-score method) to detect outliers in the dataset and remove instances with highly suspicious labels.
 
-Sparse Labels
+3. Insufficient Labels - Sparse Labels
 =======================================================================
-Semi Supervised Learning
+1. Semi Supervised Learning
 -----------------------------------------------------------------------
-* [maddevs.io] `Semi-Supervised Learning Explained: Techniques and Real-World Applications <https://maddevs.io/blog/semi-supervised-learning-explained/>`_
-* [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
-* [ovgu.de][SSL] `Semi-supervised Learning for Stream Recommender Systems <https://kmd.cs.ovgu.de/pub/matuszyk/Semi-supervised-Learning-for-Stream-Recommender-Systems.pdf>`_
-
-Notes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Assumptions
+- Assumptions
 
 	1. The Smoothness Assumption : Two close samples x1 and x2 on an input should have the same output (y).
 	2. The Low-Density Assumption : Decision boundaries between classes are characterized by low density areas in the input space.
 	3. The Manifold Assumption : Data points on the same low-dimensional manifold (lower-dimensional substructures) should have the same label.
 
-#. Objective
+- Objective
 
 	- the algorithms should be able to classify unlabeled data points based on those already labeled. 
 	- if and only if the different problem classes are well represented among the labeled data points
 	- important to partition the dataset between labeled and unlabeled data in order to get the most accurate and efficient model.
 
-#. Inductive methods 
+- Inductive methods 
 
 	#. Build a classification model with the aim of getting predictions from unlabelled data points.
 	#. Wrapper Methods
@@ -187,7 +176,7 @@ Notes
 		- Manifolds - Manifold regularization and Manifold approximation
 		- Generative Models - tries to understand how the data was generated
 
-#. Transductive methods
+- Transductive methods
 
 	#. making predictions directly, without trying to have a classifier
 	#. using all the dataset (train and test) to predict the labels.
@@ -197,23 +186,29 @@ Notes
 		#. an objective function is optimized by looking if labelled data are correctly classify and 
 		#. if similar data points are in the right place.
 
-Active Learning
------------------------------------------------------------------------
-* [burrsettles.com] `Active Learning Literature Survey <https://burrsettles.com/pub/settles.activelearning.pdf>`_
-
-Notes
+Resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* [maddevs.io] `Semi-Supervised Learning Explained: Techniques and Real-World Applications <https://maddevs.io/blog/semi-supervised-learning-explained/>`_
+* [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
+* [ovgu.de][SSL] `Semi-supervised Learning for Stream Recommender Systems <https://kmd.cs.ovgu.de/pub/matuszyk/Semi-supervised-Learning-for-Stream-Recommender-Systems.pdf>`_
+
+2. Active Learning
+-----------------------------------------------------------------------
 - extension of semi-supervised learning
 - determining and choosing high potential unlabelled data that would make the model more efficient
 - these data points are labelled and the classifier gains accuracy.
 
 How to detect informative unlabelled data points?
 
-	#. Uncertainty : label the samples for which the model is least confident in its predictions.
-	#. Variety/Diversity : select samples that are as diverse as possible to best cover the entire input space.
-	#. Model Improvement : select the samples that will improve the performance of the model (lower loss function).
+	- Uncertainty : label the samples for which the model is least confident in its predictions.
+	- Variety/Diversity : select samples that are as diverse as possible to best cover the entire input space.
+	- Model Improvement : select the samples that will improve the performance of the model (lower loss function).
 
-Incorrect/Uninformative Labels
+Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- [burrsettles.com] `Active Learning Literature Survey <https://burrsettles.com/pub/settles.activelearning.pdf>`_
+
+4. Incorrect/Uninformative Labels
 =======================================================================
 Weak Supervision
 -----------------------------------------------------------------------
@@ -245,7 +240,7 @@ different types and technique of weak supervision
 
 	- bad labels are grouped together and corrected with Data Engineering or a better crowdsourcing process.
 
-No Labels
+5. No Labels
 =======================================================================
 * [TODO] Self Supervised Learning
 
