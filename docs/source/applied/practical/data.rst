@@ -275,7 +275,7 @@ different types and technique of weak supervision
 
 5. No Labels
 =======================================================================
-* [TODO] Self Supervised Learning
+* [paper] Self-Supervised Learning for Recommender Systems: A Survey
 
 [TODO]
 -----------------------------------------------------------------------
