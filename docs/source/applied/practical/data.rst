@@ -301,6 +301,70 @@ Binarization
 - Convert continuous labels into binary values (e.g., thresholding for classification).
 - Applicable to: Continuous labels for binary classification.
 
+Common Label Biases
+=======================================================================
+#. Popularity Bias:
+
+	- Items that are already popular receive more exposure, leading to even higher engagement and reinforcing their popularity.
+	- Can limit diversity and make it hard for niche or new items to be discovered.
+
+#. Position/Exposure Bias:
+
+	- Items shown at higher ranks or more prominent positions are more likely to be clicked, irrespective of their true relevance.
+	- Can skew click-based labels, as users may click simply because an item is highly visible.
+
+#. Selection Bias:
+
+	- The observed interactions (e.g., clicks, ratings) are not a random sample of all potential interactions. Users self-select what they see or engage with, leading to a biased view of user preferences.
+	- Results in models that overfit to popular or easily observable behaviors while neglecting latent interests.
+
+#. Feedback Loops:
+
+	- A model that is trained on biased data may perpetuate or exacerbate the bias in subsequent recommendations, creating a cycle that reinforces the existing bias.
+	- Can cause a narrowing of recommendations over time, reducing content diversity.
+
+#. Presentation Bias:
+
+	- The design of the user interface (e.g., ad layout, color schemes) can influence user interactions, introducing bias into the labels.
+	- May lead to inflated engagement metrics that are artifacts of UI design rather than true user preference.
+
+Industry Practices to Tackle Label Biases
+-----------------------------------------------------------------------
+#. Inverse Propensity Scoring (IPS):
+
+	- Adjust training samples by weighting them inversely proportional to the probability of an item being shown.
+	- Helps counteract exposure and position bias by compensating for items that are under-exposed.
+	- Requires an accurate estimation of exposure probabilities; if these are off, IPS can introduce its own errors.
+	- Improved fairness vs. potential instability if propensity scores are noisy.
+
+#. Counterfactual Reasoning and Causal Inference:
+
+	- Use causal modeling to distinguish between true user preference and effects caused by presentation bias.
+	- Provides a more principled way to correct for selection and exposure biases.
+	- Can be computationally complex and require more sophisticated data collection; often needs strong assumptions about the underlying causal structure.
+	- More robust correction vs. increased model complexity and data requirements.
+
+#. A/B Testing and Calibration:
+
+	- Regularly run experiments (A/B tests) to assess the effect of different presentation strategies on engagement metrics, and adjust models accordingly.
+	- Provides real-world validation and helps isolate bias effects.
+	- Can be expensive, time-consuming, and may not capture long-term effects.
+	- Empirical feedback vs. slower iteration speed.
+
+#. Re-Ranking and Diversity Promotion:
+
+	- Incorporate re-ranking strategies (e.g., determinantal point processes, diversity constraints) to ensure a mix of items, mitigating popularity and feedback loop biases.
+	- Increases content diversity and breaks echo chambers.
+	- May sacrifice some immediate relevance or CTR in favor of broader exposure.
+	- Higher long-term engagement and discovery vs. potential short-term drop in engagement metrics.
+
+#. Using Hybrid Signals:
+
+	- Combine explicit feedback (e.g., ratings) with implicit signals (e.g., dwell time, scroll depth) and external data (e.g., contextual signals) to reduce reliance on any single biased signal.
+	- Helps smooth out biases that might dominate one type of signal.
+	- More complex feature engineering and model design; risk of diluting strong signals if not weighted appropriately.
+	- Improved robustness vs. increased model complexity.
+
 ***********************************************************************
 Data and Feature Engineering
 ***********************************************************************
