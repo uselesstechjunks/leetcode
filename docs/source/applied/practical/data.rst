@@ -14,23 +14,6 @@ Label Design
 2. Inexact Labels
 3. Inaccurate Labels
 
-Label Transformation
-=======================================================================
-Label Encoding
------------------------------------------------------------------------
-- Convert categorical labels into numerical format (typically used in classification).
-- Applicable to: Categorical labels (nominal or ordinal).
-
-Log Transformation (for regression)
------------------------------------------------------------------------
-- Apply a log transformation to skewed labels for regression tasks (e.g., predicting income, house prices).
-- Applicable to: Continuous numerical labels.
-
-Binarization
------------------------------------------------------------------------
-- Convert continuous labels into binary values (e.g., thresholding for classification).
-- Applicable to: Continuous labels for binary classification.
-
 Imbalanced Class
 =======================================================================
 The right strategy depends on:
@@ -271,6 +254,24 @@ No Labels
 - Feature Selection: Mutual information, SHAP, correlation-based selection.
 - Dealing with Class Imbalance: SMOTE, focal loss, balanced batch sampling.
 - Bias and Fairness: Bias detection, de-biasing strategies, fairness-aware training.
+
+Label Transformation
+=======================================================================
+Label Encoding
+-----------------------------------------------------------------------
+- Convert categorical labels into numerical format (typically used in classification).
+- Applicable to: Categorical labels (nominal or ordinal).
+
+Log Transformation (for regression)
+-----------------------------------------------------------------------
+- Apply a log transformation to skewed labels for regression tasks (e.g., predicting income, house prices).
+- Applicable to: Continuous numerical labels.
+
+Binarization
+-----------------------------------------------------------------------
+- Convert continuous labels into binary values (e.g., thresholding for classification).
+- Applicable to: Continuous labels for binary classification.
+
 ***********************************************************************
 Data and Feature Engineering
 ***********************************************************************
