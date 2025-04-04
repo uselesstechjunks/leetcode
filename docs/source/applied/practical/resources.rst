@@ -8,6 +8,8 @@ Practical Resources
 	- [github.io] `The Multi-Armed Bandit Problem and Its Solutions  <https://lilianweng.github.io/posts/2018-01-23-multi-armed-bandit/>`_
 	- [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
 	- [mit.edu] `Data-Centric AI vs. Model-Centric AI <https://dcai.csail.mit.edu/2024/data-centric-model-centric/>`_
+	- [towardsdatascience.com] `Two-Tower Networks and Negative Sampling in Recommender Systems <https://towardsdatascience.com/two-tower-networks-and-negative-sampling-in-recommender-systems-fdc88411601b/>`_
+	- [towardsdatascience.com] `Focal Loss : A better alternative for Cross-Entropy <https://towardsdatascience.com/focal-loss-a-better-alternative-for-cross-entropy-1d073d92d075/>`_
 	- [fennel.ai] `Real World Recommendation System – Part 1 <https://fennel.ai/blog/real-world-recommendation-system/>`_
 	- [fennel.ai] `Real World Recommendation Systems – Part 2 (Training Data Generation) <https://fennel.ai/blog/real-world-recommendation-systems/>`_
 	- [fennel.ai] `Real World Recommendation Systems – Part 3 (Modeling) <https://fennel.ai/blog/real-world-recommendation-systems-21e/>`_
