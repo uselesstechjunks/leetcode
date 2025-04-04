@@ -122,6 +122,40 @@ Balancing learning from existing data with discovering new patterns
 	- Train models to maximize long-term engagement instead of just immediate clicks.  
 	- Example: YouTube’s recommendation engine uses RL to balance fresh content vs. already popular videos.
 
+7. Handling Imbalance in Continuous Training
+-----------------------------------------------------------------------
+#. Uniform Random Sampling with a Dynamic Candidate Pool:  
+
+   - Regularly sample a fixed, manageable subset of negatives from the entire candidate pool. This ensures that you have a diverse set of negatives over time and keeps computational costs predictable.
+   - Provides stability and prevents overfitting to a narrow set of negative examples. It's straightforward to implement in an online setting.
+   - Uniform negatives might be too easy for the ranker and not always challenge the model, potentially leading to slower improvements in discriminative power.
+
+#. Hard Negative Mining (Dynamic Hard Sampling):  
+
+   - Identify hard negatives (i.e., items that the model mistakenly ranks too high or that are very similar to positive examples) during training and focus on these in subsequent updates.
+   - Encourages the model to learn finer distinctions and improves ranking performance by pushing the decision boundary closer to the positive examples.
+   - Overemphasis on very hard negatives can sometimes introduce noise or instability if they're outliers. It also requires extra computation to identify these examples dynamically.
+
+#. In-Batch Negative Sampling:  
+
+   - Use the negatives from the same mini-batch as the positive examples. This is computationally efficient since you reuse already processed data.
+   - Works seamlessly with continuous training pipelines and ensures that negatives are current with the latest model updates.
+   - The diversity of negatives is limited to the mini-batch, so it might not capture the full spectrum of negative examples available in the entire dataset.
+
+Recommended Strategy for Continuous Training: 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	- Combine Uniform Random Sampling with Dynamic Hard Negative Mining:
+	- Start by uniformly sampling a pool of negatives periodically from the full candidate set. Then, within that pool (or even within each mini-batch), apply a hard negative mining step to select the most challenging negatives based on the current model's predictions.
+	- This combination provides a stable baseline (uniform sampling) while ensuring that the model is continually pushed to learn from the most informative negative examples (hard negatives). It adapts as the model evolves, which is crucial for continuous training environments.
+	- The strategy is computationally manageable since you're not processing all negatives at every update. Instead, you maintain a dynamic candidate pool and update it regularly, ensuring that the system scales to large datasets and adapts to changes over time.
+
+Industry Reference:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- `PinSage (Ying et al., 2018) <https://arxiv.org/abs/1806.01973>`_: Uses sampling techniques to handle billions of nodes in a graph for recommendation while dynamically updating the model, illustrating how to efficiently mine informative negatives in a large-scale system.
+
+- `FAISS (Facebook AI Similarity Search) <https://github.com/facebookresearch/faiss>`_: While primarily for efficient ANN search, FAISS is an example of a system that supports scalable negative sampling in embedding-based retrieval.  
+
+
 2. Inaccurate Labels - Noisy Labels
 =======================================================================
 1. Label Smoothing 
