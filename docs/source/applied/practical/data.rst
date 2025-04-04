@@ -26,7 +26,8 @@ Adjusting the data distribution during training.
 #. Hard Negative Mining
 
 	- Instead of uniform downsampling, select high-confidence false negatives (items that nearly got engagement).  
-	- Example: For Amazon product recommendations, products that users hovered over but didn’t click could be treated as hard negatives instead of ignored.  
+	- Example: For Amazon product recommendations, products that users hovered over but didn’t click could be treated as hard negatives instead of ignored.
+	- [towardsdatascience.com] `Two-Tower Networks and Negative Sampling in Recommender Systems <https://towardsdatascience.com/two-tower-networks-and-negative-sampling-in-recommender-systems-fdc88411601b/>`_
 	- Paper: On the Theories Behind Hard Negative Sampling for Recommendation
 	- Paper: Enhanced Bayesian Personalized Ranking for Robust Hard Negative Sampling in Recommender Systems
 #. Synthetic Data  
