@@ -48,7 +48,8 @@ Adjusting model loss function to focus more on the minority class.
 #. Focal Loss (used in detection models but adapted for ranking/recsys):  
 
 	- Down-weighs easily classified negatives and focuses on hard examples.  
-	- Example: Google Search may use focal loss to prioritize rare but meaningful query-document relevance labels over common clicks.  
+	- Example: Google Search may use focal loss to prioritize rare but meaningful query-document relevance labels over common clicks.
+	- [towardsdatascience.com] `Focal Loss : A better alternative for Cross-Entropy <https://towardsdatascience.com/focal-loss-a-better-alternative-for-cross-entropy-1d073d92d075/>`_
 
 3. Alternative Label Definitions
 -----------------------------------------------------------------------
