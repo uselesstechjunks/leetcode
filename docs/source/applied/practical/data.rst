@@ -208,7 +208,7 @@ Resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - [burrsettles.com] `Active Learning Literature Survey <https://burrsettles.com/pub/settles.activelearning.pdf>`_
 
-4. Incorrect/Uninformative Labels
+4. Inexact/Uninformative Labels
 =======================================================================
 Weak Supervision
 -----------------------------------------------------------------------
