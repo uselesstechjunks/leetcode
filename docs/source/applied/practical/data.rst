@@ -64,7 +64,7 @@ Redefining what counts as a positive interaction to increase robustness
 	- Example: Google Discover might track whether users return to read a recommended article later, treating it as a positive implicit signal. 
 #. [Related] How to address delayed feedback singals - paper
 
-4. Design for Future: Explore-Exploit Approaches
+4. Design for the Future: Explore-Exploit Approaches
 -----------------------------------------------------------------------
 Balancing learning from existing data with discovering new patterns  
 
