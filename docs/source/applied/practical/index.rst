@@ -9,5 +9,6 @@ Practical ML
 	traindeploy
 	eval
 	obs
+	infra
 	resources
 	topics
