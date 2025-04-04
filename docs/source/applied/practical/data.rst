@@ -17,7 +17,7 @@ Adjusting the data distribution during training.
 
 #. Positive Class Upsampling
 
-	- Duplicate or synthetically generate more instances of rare positive labels.  
+	- Duplicate instances of rare positive labels.  
 	- Example: YouTube recommendation may upsample watch-time-heavy interactions (longer views) to counteract the overwhelming number of skipped videos.  
 #. Negative Class Downsampling
 
