@@ -28,7 +28,7 @@ Adjusting the data distribution during training.
 	- Instead of uniform downsampling, select high-confidence false negatives (items that nearly got engagement).  
 	- Example: For Amazon product recommendations, products that users hovered over but didn’t click could be treated as hard negatives instead of ignored.  
 	- Paper: On the Theories Behind Hard Negative Sampling for Recommendation
-#. GANs & Synthetic Data  
+#. Synthetic Data  
 
 	- Generate synthetic training data when positive signals are rare.  
 	- Example: TikTok might use GAN-based augmentation to create synthetic engagement samples for new videos that lack enough clicks. 
