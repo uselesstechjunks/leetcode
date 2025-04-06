@@ -5,6 +5,7 @@ End-to-end Design
 .. toctree::
 	:maxdepth: 1
 
-	search
 	item
+	recsys
+	search	
 	issues
