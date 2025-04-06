@@ -7,3 +7,4 @@ End-to-end Design
 
 	search
 	item
+	issues
