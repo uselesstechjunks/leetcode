@@ -6,3 +6,4 @@ End-to-end Design
 	:maxdepth: 1
 
 	search
+	item
