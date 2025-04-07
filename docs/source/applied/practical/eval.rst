@@ -56,8 +56,11 @@ Model Evaluation Beyond AUC
 ***********************************************************************
 Online Evaluation
 ***********************************************************************
-- A/B Testing
-- Interleaving vs non-interleaving
+- A/B testing - Interleaving vs non-interleaving
+- Bayesian A/B testing
+- Metrics
+
+	- Resource: [transparency.meta.com] `How Meta improves <https://transparency.meta.com/en-gb/policies/improving/>`_
 
 **************************************************************************************
 LLM App Evaluation
