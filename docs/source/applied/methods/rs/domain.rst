@@ -1,7 +1,7 @@
 ####################################################################################
 Domain Knowledge
 ####################################################################################
-#. E-commerce (Amazon, Alibaba)
+#. E-commerce (`Amazon <https://www.amazon.science/publications?q=&f0=0000016e-2ff1-d205-a5ef-aff91fd60000&f1=0000017b-cb9b-d0be-affb-cbbf08e40000&s=0>`_, Alibaba)
 #. Music (Spotify)
 #. Image (Instagram)
 #. Video (Netflix, Firestick, YouTube)
