@@ -358,6 +358,13 @@ Log Transformation
 - Apply logarithmic transformation to reduce skewness in data with large values. 
 - Applicable to: Continuous numerical variables with positive skew (e.g., income, population).
 
+Exponential Decay
+-----------------------------------------------------------------------
+- Applicable to ggregation features
+- Assign more weights to recent events
+
+	.. math:: \text{score} = \sum_{i} w_i \cdot \text{event}_i, \quad \text{where } w_i = \exp\left(-\lambda \cdot (t_{\text{now}} - t_i)\right)
+
 Binning and Discretization
 -----------------------------------------------------------------------
 - Convert continuous variables into categorical bins (e.g., age groups). 
