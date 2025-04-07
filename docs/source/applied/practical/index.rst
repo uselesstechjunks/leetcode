@@ -5,7 +5,7 @@ Practical ML
 	:maxdepth: 2
 
 	rawdata
-	mldata
+	datatech
 	traindeploy
 	eval
 	obs
