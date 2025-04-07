@@ -19,20 +19,22 @@ Application
 **************************************************************************
 Resources
 **************************************************************************
-- Vision-encoder text-decoder:
+- Multi Modal models
 
-	- [amazon.science] `MMT4: Multi modality to text transfer transformer <https://www.amazon.science/publications/mmt4-multi-modality-to-text-transfer-transformer>`_
-	- [research.google] `MaMMUT: A simple vision-encoder text-decoder architecture for multimodal tasks <https://research.google/blog/mammut-a-simple-vision-encoder-text-decoder-architecture-for-multimodal-tasks/>`_
-	- [medium.com] `Understanding DeepMind’s Flamingo Visual Language Models <https://medium.com/@paluchasz/understanding-flamingo-visual-language-models-bea5eeb05268>`_
+	- [encord.com] `Top 10 Multimodal Models <https://encord.com/blog/top-multimodal-models/>`_
 - Vision-text encoder:
 
 	- [medium.com] `Understanding OpenAI’s CLIP model <https://medium.com/@paluchasz/understanding-openais-clip-model-6b52bade3fa3>`_
 	- [amazon.science] `KG-FLIP: Knowledge-guided Fashion-domain Language-Image Pre-training for E-commerce <https://assets.amazon.science/fb/63/9b81471c4b46bad6bd1cbcb591bc/kg-flip-knowledge-guided-fashion-domain-language-image-pre-training-for-e-commerce.pdf>`_
 	- [amazon.science] `Unsupervised multi-modal representation learning for high quality retrieval of similar products at e-commerce scale <https://www.amazon.science/publications/unsupervised-multi-modal-representation-learning-for-high-quality-retrieval-of-similar-products-at-e-commerce-scale>`_
+- Vision-encoder text-decoder:
+
+	- [amazon.science] `MMT4: Multi modality to text transfer transformer <https://www.amazon.science/publications/mmt4-multi-modality-to-text-transfer-transformer>`_
+	- [research.google] `MaMMUT: A simple vision-encoder text-decoder architecture for multimodal tasks <https://research.google/blog/mammut-a-simple-vision-encoder-text-decoder-architecture-for-multimodal-tasks/>`_
+	- [medium.com] `Understanding DeepMind’s Flamingo Visual Language Models <https://medium.com/@paluchasz/understanding-flamingo-visual-language-models-bea5eeb05268>`_
 - E-commerce publications
 
-	- `Amazon Science e-Commerce <https://www.amazon.science/publications?q=&f1=0000017b-cb9b-d0be-affb-cbbf08e40000&s=0>`_
-	- Alibaba
+	- [amazon.science] `Amazon Science e-Commerce <https://www.amazon.science/publications?q=&f1=0000017b-cb9b-d0be-affb-cbbf08e40000&s=0>`_
 
 **************************************************************************
 Task
