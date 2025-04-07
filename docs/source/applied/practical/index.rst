@@ -4,8 +4,8 @@ Practical ML
 .. toctree::
 	:maxdepth: 2
 
-	logs
-	data
+	rawdata
+	mldata
 	traindeploy
 	eval
 	obs
