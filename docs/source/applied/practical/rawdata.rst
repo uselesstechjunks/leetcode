@@ -1,6 +1,8 @@
 ###########################################################################################
-Understanding Logs
+Understanding Raw Data
 ###########################################################################################
+- Resource: [transparency.meta.com] `Our approach to Facebook Feed ranking <https://transparency.meta.com/en-gb/features/ranking-and-content/>`_
+
 *******************************************************************************************
 Search and Recommender Systems
 *******************************************************************************************
