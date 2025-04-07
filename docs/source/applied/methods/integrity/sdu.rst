@@ -39,6 +39,7 @@ Resources
 
 	- [arxiv.org] `A Large-Scale Semi-supervised Learning for Product Classification in e-Commerce <https://arxiv.org/abs/1901.07181>`_ (Alibaba)
 	- [arxiv.org] `CoLA: Large-Scale Classification of Products in eCommerce <https://arxiv.org/abs/2009.09745>`_
+	- [aaai.org] `Is a Picture Worth a Thousand Words? A Deep Multi-Modal Architecture for Product Classification in E-Commerce <https://ojs.aaai.org/index.php/AAAI/article/download/11419/11278>`_
 - Techniques:
 
 	- BERT/XLM-R based encoders over title + description
