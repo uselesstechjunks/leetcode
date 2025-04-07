@@ -56,7 +56,7 @@ Model Evaluation Beyond AUC
 ***********************************************************************
 Online Evaluation
 ***********************************************************************
-- A/B testing - Interleaving vs non-interleaving
+- A/B testing - `Interleaving <https://www.amazon.science/publications/interleaved-online-testing-in-large-scale-systems>`_ vs non-interleaving
 - Bayesian A/B testing
 - Metrics
 
