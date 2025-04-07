@@ -32,10 +32,10 @@ Resources
 - Goal: Categorize products, extract attributes like brand, color, material, condition, etc.
 - Papers:
 
-	- ["A Large-Scale Semi-supervised Learning for Product Classification in e-Commerce"](https://arxiv.org/abs/1901.07181) (Alibaba)
-	- ["CoLA: Large-Scale Classification of Products in eCommerce"](https://arxiv.org/abs/2009.09745)
+	- [arxiv.org] `A Large-Scale Semi-supervised Learning for Product Classification in e-Commerce <https://arxiv.org/abs/1901.07181>`_ (Alibaba)
+	- [arxiv.org] `CoLA: Large-Scale Classification of Products in eCommerce <https://arxiv.org/abs/2009.09745>`_
 - Techniques:
-																	
+
 	- BERT/XLM-R based encoders over title + description
 	- Sequence tagging (CRF, LSTM-CRF) or span extraction for attributes
 	- Denoising Autoencoder or MLM pretraining on titles + descriptions
@@ -44,11 +44,11 @@ Resources
 ==========================================================================
 - Goal: Fuse visual and textual signals to get high-quality item embeddings.
 - Papers:
-																	
-	- ["Multimodal Product Classification"](https://arxiv.org/abs/1809.02380)
-	- ["Unified Multimodal Pre-training for e-Commerce"](https://arxiv.org/abs/2106.09087)
+
+	- [arxiv.org] `Multimodal Product Classification <https://arxiv.org/abs/1809.02380>`_
+	- [arxiv.org] `Unified Multimodal Pre-training for e-Commerce <https://arxiv.org/abs/2106.09087>`_
 - Techniques:
-														 
+
 	- Image encoder (e.g., ResNet, CLIP) + text encoder (BERT)
 	- Multimodal Fusion: concatenation, attention-based fusion, co-attention networks
 	- Training objective: classification, contrastive learning (CLIP-style)
@@ -57,10 +57,11 @@ Resources
 ==========================================================================
 - Goal: Rewrite cluttered or inconsistent product titles for better standardization and retrieval.
 - Papers:
-														 
-	- ["Neural Product Title Generation with Encoder-Decoder Models"](https://arxiv.org/abs/1904.07661)
-	- Meta’s own: ["StructFormer: Joint Product Structure Modeling and Generation for e-Commerce"](https://arxiv.org/abs/2205.06882)
+
+	- [arxiv.org] `Neural Product Title Generation with Encoder-Decoder Models <https://arxiv.org/abs/1904.07661>`_
+	- [arxiv.org] `StructFormer: Joint Product Structure Modeling and Generation for e-Commerce <https://arxiv.org/abs/2205.06882>`_
 - Methods:
+
 	- Encoder-decoder (BART, T5)
 	- Post-processing with rule-based constraints
 
@@ -68,11 +69,11 @@ Resources
 ==========================================================================
 - Goal: Identify duplicate listings across users or platforms (e.g., same product uploaded multiple times).
 - Papers:
-																								   
-	- ["Deep Product Matching for E-commerce Search"](https://arxiv.org/abs/1806.06159)
-	- ["Multi-modal Product Retrieval in Large-scale E-commerce"](https://arxiv.org/abs/2011.09566)
+
+	- [arxiv.org] `Deep Product Matching for E-commerce Search <https://arxiv.org/abs/1806.06159>`_
+	- [arxiv.org] `Multi-modal Product Retrieval in Large-scale E-commerce <https://arxiv.org/abs/2011.09566>`_
 - Methods:
-																  
+
 	- Siamese Networks, contrastive learning
 	- Title+image fusion
 	- Use of embedding similarity or learned matching functions
@@ -81,10 +82,10 @@ Resources
 ==========================================================================
 - Goal: Map user-uploaded listings to structured product taxonomy or enhance weak labels.
 - Resources:
-																  
-	- ["Semantic Enrichment of E-commerce Taxonomies"](https://arxiv.org/abs/2102.05806)
-	- ["TaxoEmbed: Product Categorization with Taxonomy-Aware Label Embedding"](https://arxiv.org/abs/2010.12862)
+
+	- [arxiv.org] `Semantic Enrichment of E-commerce Taxonomies <https://arxiv.org/abs/2102.05806>`_
+	- [arxiv.org] `TaxoEmbed: Product Categorization with Taxonomy-Aware Label Embedding <https://arxiv.org/abs/2010.12862>`_
 - Methods:
-																				
+
 	- Label embedding
 	- Graph neural networks (if taxonomy structure is hierarchical)
