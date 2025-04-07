@@ -37,8 +37,6 @@ Resources
 - Goal: Categorize products, extract attributes like brand, color, material, condition, etc.
 - Papers:
 
-	- [arxiv.org] `A Large-Scale Semi-supervised Learning for Product Classification in e-Commerce <https://arxiv.org/abs/1901.07181>`_ (Alibaba)
-	- [arxiv.org] `CoLA: Large-Scale Classification of Products in eCommerce <https://arxiv.org/abs/2009.09745>`_
 	- [aaai.org] `Is a Picture Worth a Thousand Words? A Deep Multi-Modal Architecture for Product Classification in E-Commerce <https://ojs.aaai.org/index.php/AAAI/article/download/11419/11278>`_
 - Techniques:
 
@@ -51,8 +49,9 @@ Resources
 - Goal: Fuse visual and textual signals to get high-quality item embeddings.
 - Papers:
 
-	- [arxiv.org] `Multimodal Product Classification <https://arxiv.org/abs/1809.02380>`_
-	- [arxiv.org] `Unified Multimodal Pre-training for e-Commerce <https://arxiv.org/abs/2106.09087>`_
+	- [ieee.org] `Deep Multimodal Representation Learning: A Survey <https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8715409>`_
+	- [openaccess.thecvf.com] `Learning Instance-Level Representation for Large-Scale Multi-Modal Pretraining in E-commerce <https://openaccess.thecvf.com/content/CVPR2023/papers/Jin_Learning_Instance-Level_Representation_for_Large-Scale_Multi-Modal_Pretraining_in_E-Commerce_CVPR_2023_paper.pdf>`_
+	- [amazon.science] `Unsupervised Multi-Modal Representation Learning for High Quality Retrieval of Similar Products at E-commerce Scale <https://assets.amazon.science/54/5e/df0e19f94b26afb451dd2c156612/unsupervised-multi-modal-representation-learning-for-high-quality-retrieval-of-similar-products-at-e-commerce-scale.pdf>`_
 - Techniques:
 
 	- Image encoder (e.g., ResNet, CLIP) + text encoder (BERT)
@@ -64,8 +63,7 @@ Resources
 - Goal: Rewrite cluttered or inconsistent product titles for better standardization and retrieval.
 - Papers:
 
-	- [arxiv.org] `Neural Product Title Generation with Encoder-Decoder Models <https://arxiv.org/abs/1904.07661>`_
-	- [arxiv.org] `StructFormer: Joint Product Structure Modeling and Generation for e-Commerce <https://arxiv.org/abs/2205.06882>`_
+	- https://paperswithcode.com/task/attribute-value-extraction
 - Methods:
 
 	- Encoder-decoder (BART, T5)
