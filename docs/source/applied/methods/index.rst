@@ -6,7 +6,4 @@ Machine Learning Methods
 
 	rs/index
 	integrity/index
-	tech/lm
-	tech/llm
-	tech/nlp
-	tech/multimodal
+	tech/index
