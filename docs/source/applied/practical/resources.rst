@@ -24,7 +24,7 @@ Practical Resources
 	- [github.io] `Lil’Log <https://lilianweng.github.io/>`_
 	- [ruder.io] `A blog about natural language processing and machine learning <https://www.ruder.io/>`_
 	- [roizner.medium.com] `Michael Roizner <https://roizner.medium.com/>`_
-	- [amazon.science] `Amazon Science: Tag - e-Commerce <https://www.amazon.science/publications?q=&f0=0000016e-2ff1-d205-a5ef-aff91fd60000&f1=0000017b-cb9b-d0be-affb-cbbf08e40000&s=0>`_
+	- [amazon.science] `Amazon Science: E-Commerce <https://www.amazon.science/publications?q=&f1=0000017b-cb9b-d0be-affb-cbbf08e40000&s=0>`_
 	- [youtube.com] `MIT: Introduction to Data-Centric AI <https://www.youtube.com/watch?v=ayzOzZGHZy4&list=PLnSYPjg2dHQKdig0vVbN-ZnEU0yNJ1mo5>`_
 	- [fennel.ai] `Fennel Blog <https://fennel.ai/blog/>`_
 	- [eugeneyan.com] `Tech Blog <https://eugeneyan.com/>`_
