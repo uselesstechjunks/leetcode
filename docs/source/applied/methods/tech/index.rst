@@ -7,4 +7,5 @@ Machine Learning Tech
 		lm
 		llm
 		nlp
+		vision
 		multimodal
