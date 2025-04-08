@@ -16,6 +16,15 @@ Application
 - Title rewrites or suggestion systems
 - Policy enforcement models using understanding of item type + suspicious language
 
+TODO - fix later
+
+	- | Tool / Model | Use Case | Notes |
+	- | mT5 / BART / LLaMA | Text generation & rewriting | Use for product title/desc enhancement |
+	- | CLIP / BLIP / ResNet | Visual embeddings | Combine with title/desc in multimodal fusion |
+	- | XLM-R / DistilBERT | Multilingual title/desc encoding | Works well in low-resource or multilingual markets |
+	- | FAISS | Deduplication, similarity search | For embedding-based matching |
+	- | Spacy + Rule-based | Attribute extraction | Hybrid approach in noisy settings |
+
 **************************************************************************
 Resources
 **************************************************************************
