@@ -11,3 +11,11 @@ Resources
 - [arxiv.org] `YOLO: A Comprehensive Review of YOLO Architectures in Computer Vision <https://arxiv.org/abs/2304.00501>`_
 - [arxiv.org] `DETR: End-to-End Object Detection with Transformers <https://arxiv.org/abs/2005.12872>`_
 - [arxiv.org] `ImageGAN: Image-to-Image Translation with Conditional Adversarial Networks <https://arxiv.org/pdf/1611.07004>`_
+
+**********************************************************************************
+Industry Resources
+**********************************************************************************
+- [] `Visual Search at Pinterest <https://arxiv.org/abs/1505.07647>`_
+- [] `Learning a Unified Embedding for Visual Search at Pinterest <https://arxiv.org/abs/1908.01707>`_
+- [] `Unifying visual embeddings for visual search at Pinterest <https://medium.com/pinterest-engineering/unifying-visual-embeddings-for-visual-search-at-pinterest-74ea7ea103f0>`_
+- [] `SearchSage: Learning Search Query Representations at Pinterest <https://medium.com/pinterest-engineering/searchsage-learning-search-query-representations-at-pinterest-654f2bb887fc>`_
