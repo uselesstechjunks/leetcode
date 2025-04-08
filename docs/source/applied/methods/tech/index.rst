@@ -2,10 +2,10 @@
 Machine Learning Tech
 ###############################################################################
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 3
 	
-		lm
-		llm
-		nlp
-		vision
-		multimodal
+	lm
+	llm
+	nlp
+	vision
+	multimodal
