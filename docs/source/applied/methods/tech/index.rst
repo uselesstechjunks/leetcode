@@ -8,4 +8,5 @@ Machine Learning Tech
 	llm
 	nlp
 	vision
+	gnn
 	multimodal
