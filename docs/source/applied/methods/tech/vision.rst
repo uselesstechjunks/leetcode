@@ -10,3 +10,4 @@ Resources
 - [arxiv.org] `MoCo: Momentum Contrast for Unsupervised Visual Representation Learning <https://arxiv.org/abs/1911.05722>`_
 - [arxiv.org] `YOLO: A Comprehensive Review of YOLO Architectures in Computer Vision <https://arxiv.org/abs/2304.00501>`_
 - [arxiv.org] `DETR: End-to-End Object Detection with Transformers <https://arxiv.org/abs/2005.12872>`_
+- [arxiv.org] `ImageGAN: Image-to-Image Translation with Conditional Adversarial Networks <https://arxiv.org/pdf/1611.07004>`_
