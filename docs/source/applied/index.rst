@@ -9,4 +9,5 @@ Applied Machine Learning
 	sys/sysdes
 	practical/index
 	methods/index
+	problem
 	e2e/index
