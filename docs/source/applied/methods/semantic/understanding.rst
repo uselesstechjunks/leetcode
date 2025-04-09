@@ -230,11 +230,6 @@ Case 2: 200M unlabeled mobile images (no labels)
 
 Dynamic Tag Suggestion System (Image only)
 ==========================================================================
-- Use Cases
-	- Improves search and discovery by expanding query-match coverage
-	- Enables personalization (tags can be used as item/user features)
-	- Supports moderation/integrity (e.g., flag restricted content)
-	- Suggests tags to sellers during listing creation
 - Input:
 	- One or more images of a product listing (no text input in the basic setup)
 	- Tags are from a predefined vocabulary (e.g., 2,000 tags)
@@ -283,12 +278,6 @@ Dynamic Tag Suggestion System (Image only)
 
 Dynamic Tag Suggestion (text + images)
 ==========================================================================
-- Problem
-	- Suggest relevant tags (attributes, descriptors) for product listings to improve discovery, search, and categorization.
-- Use Cases
-	- Improves product discoverability.
-	- Drives tag-based browsing and filtering.
-	- Feeds into downstream categorization or moderation systems.
 - Input / Output
 	- Input: Product title, description, and optionally image.
 	- Output: Set of 3–10 relevant tags from a fixed tag vocabulary.
