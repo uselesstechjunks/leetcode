@@ -9,24 +9,51 @@ Multimodal Product Understanding
 **************************************************************************
 Topics
 **************************************************************************
-Techniques
+Key Concepts
 ==========================================================================
-- Supervised classification & multi-label learning: BCE loss, focal loss, hierarchical classification
-- Contrastive learning & representation learning: InfoNCE, SimCLR, domain adaptation, embedding-based retrieval
-- Text-based models: BERT, DistilBERT, dual encoders, cross encoders, seq2seq models (BART, T5)
-- Multimodal fusion: CLIP-style encoders, early/late fusion, text+image representation learning
-- Labeling strategies: human-curated labels, weak supervision, distant supervision, pseudo-labeling
-- Data imbalance + augmentation: oversampling, synthetic labels, domain shift mitigation
-- Retrieval systems: FAISS, vector stores, reranking pipelines, hybrid search
+- Supervised Learning Paradigms  
+	- Multi-class classification  
+	- Multi-label classification  
+	- Hierarchical classification  
+	- Multi-task learning  
+- Representation Learning & Retrieval  
+	- Metric learning / Contrastive learning (e.g. InfoNCE, SimCLR)  
+	- Embedding learning + Nearest Neighbor Search  
+	- Vector quantization / Product quantization  
+	- Dense vs Sparse retrieval models  
+- Labeling & Supervision Strategies  
+	- Weak supervision  
+	- Self-supervised learning  
+	- Positive-Unlabeled (PU) learning  
+	- Active learning  
+	- Hard negative mining / Semi-hard negative mining  
+- Model Architectures & Adaptation  
+	- Fine-tuning pre-trained encoders (CNNs, ViT, BERT, CLIP)  
+	- Freezing/unfreezing strategies  
+	- Lightweight fine-tuning (LoRA, adapters, prompt tuning)  
+	- Multimodal fusion (early vs late fusion)  
+- Search & Ranking Infrastructure  
+	- Similarity-based search (e.g., FAISS, ANN)  
+	- Hybrid retrieval (text + image)  
+	- Cross-encoder vs dual-encoder ranking models  
+- Data Handling & Preprocessing  
+	- Data cleaning and normalization (e.g., noisy title correction)  
+	- Image augmentations (crop, flip, blur, resize)  
+	- Text normalization and deduplication  
+	- Taxonomy mapping and vocabulary standardization  
 
-Tools and Models
+Models
 ==========================================================================
-- Tool / Model | Use Case | Notes |
-- mT5 / BART / LLaMA | Text generation & rewriting | Use for product title/desc enhancement |
-- CLIP / BLIP / ResNet | Visual embeddings | Combine with title/desc in multimodal fusion |
-- XLM-R / DistilBERT | Multilingual title/desc encoding | Works well in low-resource or multilingual markets |
-- FAISS | Deduplication, similarity search | For embedding-based matching |
-- Spacy + Rule-based | Attribute extraction | Hybrid approach in noisy settings |
+#. ResNet
+#. ViT/DeiT
+#. SimCLR
+#. Faster RCNN
+#. YOLO
+#. DETR
+#. CLIP/BLIP
+#. BERT/XLM-R, DistilBERT
+#. T5 / BART
+#. LLAMA
 
 **************************************************************************
 Application
