@@ -1,5 +1,5 @@
 ##########################################################################
-Semantic Understanding
+Multimodal Product Understanding
 ##########################################################################
 .. contents:: Table of Contents
 	:depth: 2
