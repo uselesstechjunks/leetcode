@@ -131,44 +131,79 @@ Examples
 Case A: 100k labeled examples + 1M unlabeled
 --------------------------------------------------------------------------
 1. Pretraining:
-
-   - Use pretrained ResNet or ViT (ImageNet) as base.
-   - Optionally run domain-adaptive pretraining on 1M unlabeled images using SimCLR/DINO.
+	- Use pretrained ResNet or ViT (ImageNet) as base.
+	- Optionally run domain-adaptive pretraining on 1M unlabeled images using SimCLR/DINO.
 
 2. Finetuning:
-
-   - Replace classification head with new head (1,000 classes).
-   - Finetune full model on 100k labeled samples with label smoothing, strong augmentation, and class balancing.
-   - Use early unfreezing strategy if pretrained on different domain.
+	- Replace classification head with new head (1,000 classes).
+	- Finetune full model on 100k labeled samples with label smoothing, strong augmentation, and class balancing.
+	- Use early unfreezing strategy if pretrained on different domain.
 
 3. Regularization:
-
-   - Mixup, CutMix, RandAugment.
-   - Confidence-based pseudo-labeling on 1M unlabeled to expand training data.
+	- Mixup, CutMix, RandAugment.
+	- Confidence-based pseudo-labeling on 1M unlabeled to expand training data.
 
 4. Evaluation:
-
-   - Accuracy@1, Accuracy@5.
-   - Confusion matrix to analyze inter-class errors.
+	- Accuracy@1, Accuracy@5.
+	- Confusion matrix to analyze inter-class errors.
 
 Case B: Only 10k labeled examples
 --------------------------------------------------------------------------
 1. Pretraining:
-
-   - Use stronger pretrained backbone (e.g., ViT MAE pretrained on ImageNet-21k or OpenImages).
-   - Optionally pretrain on 1M unlabeled data (SimCLR, SwAV, DINO).
+	- Use stronger pretrained backbone (e.g., ViT MAE pretrained on ImageNet-21k or OpenImages).
+	- Optionally pretrain on 1M unlabeled data (SimCLR, SwAV, DINO).
 
 2. Finetuning:
-
-   - Use **linear probing** first (freeze encoder, train classifier only).
-   - Then **gradually unfreeze** layers (e.g., using discriminative learning rates).
-   - Regularize with dropout, weight decay, and Mixup.
+	- Use **linear probing** first (freeze encoder, train classifier only).
+	- Then **gradually unfreeze** layers (e.g., using discriminative learning rates).
+	- Regularize with dropout, weight decay, and Mixup.
 
 3. Semi-supervised:
-
-   - Train pseudo-labeling pipeline on 1M unlabeled images using high-confidence predictions.
+	- Train pseudo-labeling pipeline on 1M unlabeled images using high-confidence predictions.
 
 4. Evaluation:
+	- Macro/micro F1-score (especially if classes are imbalanced).
 
-   - Macro/micro F1-score (especially if classes are imbalanced).
+1. Image Search - Mobile Image Query - Product Image
+==========================================================================
+Case A: 10k (query, matched product) labeled pairs
+--------------------------------------------------------------------------
+1. Pretraining:
+	- Pretrain ResNet/ViT using SimCLR or DINO on product images with augmentations.
+	- Learn product-invariant and view-invariant embeddings.
 
+2. Finetuning:
+	- Use InfoNCE contrastive loss on 10k query-product pairs.
+	- Use in-batch negatives and/or hard mined negatives.
+	- Augment with product image pairs to regularize.
+
+3. Embedding Aggregation:
+	- Per product: average of embeddings of its 5 images.
+	- Optional: trainable attention-based image pooling per product.
+
+4. Retrieval:
+	- Use Faiss or ScaNN for approximate nearest neighbor search.
+	- Index product embeddings offline; query embeddings at runtime.
+
+5. Evaluation:
+	- Recall@k, mean Average Precision (mAP), Precision@k.
+
+Case 2: 200M unlabeled mobile images (no labels)
+--------------------------------------------------------------------------
+1. Pretraining:
+	- Use DINO, MAE, or SimCLR on 200M mobile photos to learn domain-aligned embeddings.
+	- Incorporate augmentations reflecting phone capture artifacts (blur, shadow, exposure).
+
+2. Semi-Supervised Learning:
+	- Cluster mobile images; use nearest neighbors as pseudo-positives.
+	- Use self-training with high-confidence retrieval matches as additional positives.
+
+3. Hard Negatives:
+	- Select visually similar images that do *not* match (via clustering or retrieval) as hard negatives.
+
+4. Finetuning (optional):
+	- Finetune on the small labeled query-product dataset (10k), possibly using LoRA or head-only tuning.
+
+5. Retrieval + Evaluation:
+	- Same as Case 1.
+	- Test generalization on held-out queries and unseen product classes.
