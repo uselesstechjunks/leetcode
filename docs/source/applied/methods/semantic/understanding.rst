@@ -61,6 +61,50 @@ It involves extracting structured meaning from unstructured or semi-structured d
 **************************************************************************
 Examples
 **************************************************************************
+Text-Based Product Search (Metadata Only)
+==========================================================================
+- Problem  
+	- Allow users to search for products using a free-form text query. The system retrieves and ranks relevant products based on matching against product metadata (title, description).
+-  Use Cases  
+	- Search bar experience in marketplace  
+	- Assistive auto-complete or suggestions  
+	- Indexing new products with better retrieval capabilities
+-  Input / Output  
+	- Input: User text query (e.g., "red running shoes")  
+	- Output: Ranked list of product IDs with titles and images
+-  Problem Type  
+	- Semantic text-to-text retrieval (information retrieval / ranking)
+-  Model Choices  
+	- Sparse retrieval (baseline):  
+		- BM25 over title and description fields  
+	- Dense retrieval (modern):  
+		- Dual-encoder architecture:  
+			- Query encoder (e.g., BERT, DistilBERT)  
+			- Product encoder (e.g., same as query encoder)  
+		- Similarity via dot product or cosine similarity  
+	- Optional: Cross-encoder reranker (e.g., BERT) for top-k reranking
+- Labeling Scenarios  
+	- Supervised: Click logs or labeller-curated query-product matches  
+	- Weak supervision: Synthetic query generation from product text  
+	- Noisy signals: Search sessions or co-view logs
+- Training Setup  
+	- Contrastive learning using positive query-product pairs and in-batch negatives  
+	- Loss: InfoNCE or triplet loss  
+	- Optional hard negative mining using BM25  
+	- Pretraining on large query-product corpora or Wikipedia Q-A pairs
+- Evaluation Metrics  
+	- Recall@k, NDCG@k, Mean Reciprocal Rank (MRR)  
+	- Offline: manual relevance judgments or simulated clicks  
+	- Online: click-through rate (CTR), dwell time
+- Scaling Considerations  
+	- Precompute and index product embeddings using vector database (e.g., FAISS, ScaNN)  
+	- Real-time encoding of user query at search time  
+	- Efficient reranking within top-N retrieved candidates
+- Alternative Methods  
+	- Hybrid retrieval: combine BM25 and dense scores  
+	- Use knowledge distillation to compress dual encoder  
+	- Use entity linking to match structured taxonomy (optional)
+
 Product Taxonomy Mapping (Image-Only)
 ==========================================================================
 -  Problem  
