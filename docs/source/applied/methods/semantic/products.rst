@@ -1,5 +1,5 @@
 ##########################################################################
-Semantic Document Understanding
+Semantic Understanding
 ##########################################################################
 .. contents:: Table of Contents
 	:depth: 2
@@ -7,59 +7,80 @@ Semantic Document Understanding
 	:backlinks: none
 
 **************************************************************************
+Topics
+**************************************************************************
+Techniques
+==========================================================================
+- Supervised classification & multi-label learning: BCE loss, focal loss, hierarchical classification
+- Contrastive learning & representation learning: InfoNCE, SimCLR, domain adaptation, embedding-based retrieval
+- Text-based models: BERT, DistilBERT, dual encoders, cross encoders, seq2seq models (BART, T5)
+- Multimodal fusion: CLIP-style encoders, early/late fusion, text+image representation learning
+- Labeling strategies: human-curated labels, weak supervision, distant supervision, pseudo-labeling
+- Data imbalance + augmentation: oversampling, synthetic labels, domain shift mitigation
+- Retrieval systems: FAISS, vector stores, reranking pipelines, hybrid search
+
+Tools and Models
+==========================================================================
+- Tool / Model | Use Case | Notes |
+- mT5 / BART / LLaMA | Text generation & rewriting | Use for product title/desc enhancement |
+- CLIP / BLIP / ResNet | Visual embeddings | Combine with title/desc in multimodal fusion |
+- XLM-R / DistilBERT | Multilingual title/desc encoding | Works well in low-resource or multilingual markets |
+- FAISS | Deduplication, similarity search | For embedding-based matching |
+- Spacy + Rule-based | Attribute extraction | Hybrid approach in noisy settings |
+
+**************************************************************************
 Application
 **************************************************************************
-- Content enhancement using pretrained transformers + metadata
-- Multimodal fusion of user-uploaded image + free-text
-- Categorization using LLMs or BERT-classifiers
-- Cross-listing product linking across Facebook, Instagram shops, and Marketplace
-- Title rewrites or suggestion systems
-- Policy enforcement models using understanding of item type + suspicious language
+Priority 1 – Very High Value (Common + Foundational)
+==========================================================================
+#. Product Categorization (Classification)  
+	- Fixed taxonomy classification from image or metadata  
+	- Covers: image encoders (ResNet/ViT), fine-tuning, label scarcity, domain shift  
+	- Must know: supervised classification, hierarchical taxonomies, class imbalance, data augmentation, few-shot strategies
+#. Dynamic Tag Suggestion (Multi-label Prediction)  
+	- Open-ended multi-label prediction using metadata/image  
+	- Must know: BCEWithLogitsLoss, multi-label thresholds, label imbalance, tag vocab creation, weak supervision
+#. Product Taxonomy Mapping  
+	- Mapping noisy/seller-provided categories to structured taxonomy  
+	- Must know: text classification, category disambiguation, noisy inputs, hierarchical mappings
+Priority 2 – High Value (Used Across Systems)
+==========================================================================
+#. Attribute Extraction (NER or Slot-filling)  
+	- Extract structured attributes like brand, color, size from title/description  
+	- Must know: sequence labeling (BIO format), spaCy or BERT-based token classifiers, weak labeling, schema constraints
+#. Duplicate Listing Detection  
+	- Detect duplicate or near-duplicate listings posted by users  
+	- Must know: pairwise embedding similarity, clustering, contrastive learning, efficient retrieval, deduplication heuristics
+#. Image-Based Visual Search  
+	- Match query images to catalog using visual similarity  
+	- Must know: contrastive loss (InfoNCE), SimCLR, in-domain pretraining, feature indexing (FAISS), query augmentation
+#. Text-Based Search (Query → Product Metadata)  
+	- Users search with queries matched to product text fields  
+	- Must know: BM25, dense retrieval (dual encoder), cross-encoder reranking, FAISS, negative sampling
 
-TODO - fix later
+Priority 3 – Medium Value (Niche but insightful)
+==========================================================================
+#. Multimodal Entity Matching / Linking  
+	- Link a product to a known item in a catalog (e.g., brand DB) using both image and text  
+	- Must know: multimodal encoders (e.g., CLIP), late fusion vs early fusion, product resolution, text normalization
+#. Item Quality / Integrity Detection  
+	- Detect suspicious, poor quality, or policy-violating listings  
+	- Must know: content moderation, adversarial examples, cross-modal rules, abuse signals, self-supervised pretraining
 
-	- | Tool / Model | Use Case | Notes |
-	- | mT5 / BART / LLaMA | Text generation & rewriting | Use for product title/desc enhancement |
-	- | CLIP / BLIP / ResNet | Visual embeddings | Combine with title/desc in multimodal fusion |
-	- | XLM-R / DistilBERT | Multilingual title/desc encoding | Works well in low-resource or multilingual markets |
-	- | FAISS | Deduplication, similarity search | For embedding-based matching |
-	- | Spacy + Rule-based | Attribute extraction | Hybrid approach in noisy settings |
+Priority 4 – Lower Priority but Great for Bonus Points
+==========================================================================
+#. Product Title Generation  
+	- Rewrite or generate SEO-friendly titles from user-written titles/descriptions  
+	- Must know: text generation (seq2seq), BART/T5 models, summarization, input pre-processing
+#. Title/Description Normalization  
+	- Normalize noisy seller-written text for search/ads relevance  
+	- Must know: grammar correction, paraphrasing, rule-based + neural hybrid methods
+#. Visual Grounding / Region Tagging  
+	- Localize object regions corresponding to attributes or tags  
+	- Must know: object detection + vision-language grounding, attention maps, weak supervision
 
 **************************************************************************
-Resources
-**************************************************************************
-- Multi Modal models
-
-	- [encord.com] `Top 10 Multimodal Models <https://encord.com/blog/top-multimodal-models/>`_
-- Vision-text encoder:
-
-	- [medium.com] `Understanding OpenAI’s CLIP model <https://medium.com/@paluchasz/understanding-openais-clip-model-6b52bade3fa3>`_
-	- [amazon.science] `KG-FLIP: Knowledge-guided Fashion-domain Language-Image Pre-training for E-commerce <https://assets.amazon.science/fb/63/9b81471c4b46bad6bd1cbcb591bc/kg-flip-knowledge-guided-fashion-domain-language-image-pre-training-for-e-commerce.pdf>`_
-	- [amazon.science] `Unsupervised multi-modal representation learning for high quality retrieval of similar products at e-commerce scale <https://www.amazon.science/publications/unsupervised-multi-modal-representation-learning-for-high-quality-retrieval-of-similar-products-at-e-commerce-scale>`_
-- Vision-encoder text-decoder:
-
-	- [amazon.science] `MMT4: Multi modality to text transfer transformer <https://www.amazon.science/publications/mmt4-multi-modality-to-text-transfer-transformer>`_
-	- [research.google] `MaMMUT: A simple vision-encoder text-decoder architecture for multimodal tasks <https://research.google/blog/mammut-a-simple-vision-encoder-text-decoder-architecture-for-multimodal-tasks/>`_
-	- [medium.com] `Understanding DeepMind’s Flamingo Visual Language Models <https://medium.com/@paluchasz/understanding-flamingo-visual-language-models-bea5eeb05268>`_
-- E-commerce publications
-
-	- [amazon.science] `Amazon Science e-Commerce <https://www.amazon.science/publications?q=&f1=0000017b-cb9b-d0be-affb-cbbf08e40000&s=0>`_
-
-**************************************************************************
-Task
-**************************************************************************
-It involves extracting structured meaning from unstructured or semi-structured data like:
-
-	- Titles
-	- Descriptions
-	- Tags
-	- Images
-	- Videos
-	- Metadata (price, category, brand)
-	- Other multimodal cues (e.g., seller info, location, posting time)
-
-**************************************************************************
-Examples
+Problems
 **************************************************************************
 Text-Based Product Search (Metadata Only)
 ==========================================================================
@@ -425,6 +446,23 @@ Multimodal Visual Search System (Image + Text)
 **************************************************************************
 Resources
 **************************************************************************
+- Multi Modal models
+
+	- [encord.com] `Top 10 Multimodal Models <https://encord.com/blog/top-multimodal-models/>`_
+- Vision-text encoder:
+
+	- [medium.com] `Understanding OpenAI’s CLIP model <https://medium.com/@paluchasz/understanding-openais-clip-model-6b52bade3fa3>`_
+	- [amazon.science] `KG-FLIP: Knowledge-guided Fashion-domain Language-Image Pre-training for E-commerce <https://assets.amazon.science/fb/63/9b81471c4b46bad6bd1cbcb591bc/kg-flip-knowledge-guided-fashion-domain-language-image-pre-training-for-e-commerce.pdf>`_
+	- [amazon.science] `Unsupervised multi-modal representation learning for high quality retrieval of similar products at e-commerce scale <https://www.amazon.science/publications/unsupervised-multi-modal-representation-learning-for-high-quality-retrieval-of-similar-products-at-e-commerce-scale>`_
+- Vision-encoder text-decoder:
+
+	- [amazon.science] `MMT4: Multi modality to text transfer transformer <https://www.amazon.science/publications/mmt4-multi-modality-to-text-transfer-transformer>`_
+	- [research.google] `MaMMUT: A simple vision-encoder text-decoder architecture for multimodal tasks <https://research.google/blog/mammut-a-simple-vision-encoder-text-decoder-architecture-for-multimodal-tasks/>`_
+	- [medium.com] `Understanding DeepMind’s Flamingo Visual Language Models <https://medium.com/@paluchasz/understanding-flamingo-visual-language-models-bea5eeb05268>`_
+- E-commerce publications
+
+	- [amazon.science] `Amazon Science e-Commerce <https://www.amazon.science/publications?q=&f1=0000017b-cb9b-d0be-affb-cbbf08e40000&s=0>`_
+
 Product Categorisation
 ==========================================================================
 - Resources:
