@@ -122,3 +122,53 @@ Resources
 
 	- Label embedding
 	- Graph neural networks (if taxonomy structure is hierarchical)
+
+**************************************************************************
+Examples
+**************************************************************************
+1. Product Categorisation - Image only
+==========================================================================
+Case A: 100k labeled examples + 1M unlabeled
+--------------------------------------------------------------------------
+1. Pretraining:
+
+   - Use pretrained ResNet or ViT (ImageNet) as base.
+   - Optionally run domain-adaptive pretraining on 1M unlabeled images using SimCLR/DINO.
+
+2. Finetuning:
+
+   - Replace classification head with new head (1,000 classes).
+   - Finetune full model on 100k labeled samples with label smoothing, strong augmentation, and class balancing.
+   - Use early unfreezing strategy if pretrained on different domain.
+
+3. Regularization:
+
+   - Mixup, CutMix, RandAugment.
+   - Confidence-based pseudo-labeling on 1M unlabeled to expand training data.
+
+4. Evaluation:
+
+   - Accuracy@1, Accuracy@5.
+   - Confusion matrix to analyze inter-class errors.
+
+Case B: Only 10k labeled examples
+--------------------------------------------------------------------------
+1. Pretraining:
+
+   - Use stronger pretrained backbone (e.g., ViT MAE pretrained on ImageNet-21k or OpenImages).
+   - Optionally pretrain on 1M unlabeled data (SimCLR, SwAV, DINO).
+
+2. Finetuning:
+
+   - Use **linear probing** first (freeze encoder, train classifier only).
+   - Then **gradually unfreeze** layers (e.g., using discriminative learning rates).
+   - Regularize with dropout, weight decay, and Mixup.
+
+3. Semi-supervised:
+
+   - Train pseudo-labeling pipeline on 1M unlabeled images using high-confidence predictions.
+
+4. Evaluation:
+
+   - Macro/micro F1-score (especially if classes are imbalanced).
+
