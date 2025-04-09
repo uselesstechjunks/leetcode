@@ -227,3 +227,56 @@ Case 2: 200M unlabeled mobile images (no labels)
 5. Retrieval + Evaluation:
 	- Same as Case 1.
 	- Test generalization on held-out queries and unseen product classes.
+
+Dynamic Tag Suggestion System
+==========================================================================
+- Use Cases
+	- Improves search and discovery by expanding query-match coverage
+	- Enables personalization (tags can be used as item/user features)
+	- Supports moderation/integrity (e.g., flag restricted content)
+	- Suggests tags to sellers during listing creation
+- Input:
+	- One or more images of a product listing (no text input in the basic setup)
+	- Tags are from a predefined vocabulary (e.g., 2,000 tags)
+- Output:
+	- A ranked list or binary vector over the tag vocabulary (multi-label)
+- Problem Type
+	- Fixed tag vocabulary -> Multi-label classification -> Vector of 0/1 labels or scores per tag
+	- Open tag vocabulary -> Retrieval or generative -> Top-k retrieved tags using tag embeddings
+- Model Architecture Choices
+	- CNNs (e.g., ResNet): Strong baseline, efficient, works with BCE loss
+	- Vision Transformers (e.g., ViT): Better generalization, more data-hungry
+	- CLIP-style dual encoders: Enables retrieval/zero-shot tagging with tag embeddings
+	- Multi-modal models (future): Use image + title/description if available
+- Labeling Scenarios
+	- Case A: 100k labeled images with tags
+		- Finetune a CNN/ViT with BCEWithLogitsLoss
+	- Case B: 10k labeled + 1M unlabeled
+		- Use semi-supervised learning, self-training, pseudo-labeling
+		- Optional: Contrastive pretraining with SimCLR or BYOL
+	- Case C: Only curated positive tags, no known negatives
+		- Use positive-unlabeled (PU) learning or ranking loss
+- Training Setup
+	- Preprocessing:
+		- Resize, normalize (use dataset-specific mean/std), augmentations
+	- Pretraining (optional):
+		- Contrastive learning (SimCLR, BYOL) on unlabeled product image corpus
+	- Finetuning:
+		- Use BCEWithLogitsLoss (independent sigmoid heads)
+		- Do not use softmax
+		- Optional: Freeze base layers initially, then unfreeze gradually
+	- Thresholding:
+		- Use global threshold (e.g., 0.5) or tune per-tag thresholds
+- Evaluation Metrics
+	- Precision@K: How many of top-K predicted tags are correct
+	- Recall@K: How many true tags appear in the top-K predictions
+	- F1 score (macro and micro)
+	- AUC per tag (for threshold tuning)
+- Scaling Considerations
+	- Multi-GPU training for ViT or large datasets
+	- Factorized/tag-bottleneck heads for large vocabularies
+	- Index tag embeddings for fast retrieval or zero-shot inference
+- Alternative Methods
+	- CLIP zero-shot tagging: Embed image and tag descriptions in same space
+	- Image-to-tag retrieval: Learn tag embeddings, retrieve nearest
+	- Vision-to-text (captioning): Generate pseudo-descriptions, extract tags
