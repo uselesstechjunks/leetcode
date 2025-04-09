@@ -5,5 +5,5 @@ Machine Learning Methods
 	:maxdepth: 2
 
 	rs/index
-	integrity/index
+	semantic/index
 	tech/index
