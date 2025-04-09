@@ -61,19 +61,51 @@ It involves extracting structured meaning from unstructured or semi-structured d
 **************************************************************************
 Resources
 **************************************************************************
-1. Product Classification & Attribute Extraction
+Product Categorisation
 ==========================================================================
-- Goal: Categorize products, extract attributes like brand, color, material, condition, etc.
-- Papers:
+- Goal: Assign each product to one of a fixed set of predefined categories (e.g., "sofa", "headphones", "jacket").
+- Formulation:
 
-	- [aaai.org] `Is a Picture Worth a Thousand Words? A Deep Multi-Modal Architecture for Product Classification in E-Commerce <https://ojs.aaai.org/index.php/AAAI/article/download/11419/11278>`_
-- Techniques:
+	- Single-label classification
+	- Classes are mutually exclusive
+	- Typically ~10s to 1,000s of classes
+	- Output: a single class label
+	- Must map to structured taxonomy (e.g., for catalog consistency)
+- Use-case:
 
-	- BERT/XLM-R based encoders over title + description
-	- Sequence tagging (CRF, LSTM-CRF) or span extraction for attributes
-	- Denoising Autoencoder or MLM pretraining on titles + descriptions
+	- Structured Browsing & Filtering
+	- Search Relevance & Ranking
+	- Inventory Organization & Duplication Handling
+	- Recommendation Relevance
+	- Content Moderation Routing
+- Resources:
 
-2. Multimodal Product Representation
+	- [arxiv.org] `Semantic Enrichment of E-commerce Taxonomies <https://arxiv.org/abs/2102.05806>`_
+	- [arxiv.org] `TaxoEmbed: Product Categorization with Taxonomy-Aware Label Embedding <https://arxiv.org/abs/2010.12862>`_
+- Methods:
+
+	- Label embedding
+	- Graph neural networks (if taxonomy structure is hierarchical)
+
+Dynamic Product Tag Suggestion
+==========================================================================
+- Goal: Suggest a set of relevant tags (e.g., "leather", "portable", "Bluetooth", "red", "minimalist") to describe a product.
+- Formulation:
+
+	- Multi-label classification or tag ranking
+	- Tags are not mutually exclusive
+	- Tags can be from a dynamic or evolving vocabulary
+	- Output: list of top-k tags, optionally with confidence scores
+- Use-case:
+
+	- Search Recall Expansion
+	- Visual Attribute Search
+	- Recommendation Diversification
+	- Ad Targeting / Sponsored Listings
+	- Content Moderation & Policy Enforcement
+	- Seller Assistance / Listing Enhancement
+
+Multimodal Product Representation
 ==========================================================================
 - Goal: Fuse visual and textual signals to get high-quality item embeddings.
 - Papers:
@@ -87,7 +119,7 @@ Resources
 	- Multimodal Fusion: concatenation, attention-based fusion, co-attention networks
 	- Training objective: classification, contrastive learning (CLIP-style)
 
-3. Product Title Normalization & Rewriting
+Product Title Normalization & Rewriting
 ==========================================================================
 - Goal: Rewrite cluttered or inconsistent product titles for better standardization and retrieval.
 - Papers:
@@ -98,7 +130,7 @@ Resources
 	- Encoder-decoder (BART, T5)
 	- Post-processing with rule-based constraints
 
-4. Product Deduplication and Matching
+Product Deduplication and Matching
 ==========================================================================
 - Goal: Identify duplicate listings across users or platforms (e.g., same product uploaded multiple times).
 - Papers:
@@ -110,18 +142,6 @@ Resources
 	- Siamese Networks, contrastive learning
 	- Title+image fusion
 	- Use of embedding similarity or learned matching functions
-
-5. Taxonomy Mapping & Enhancement
-==========================================================================
-- Goal: Map user-uploaded listings to structured product taxonomy or enhance weak labels.
-- Resources:
-
-	- [arxiv.org] `Semantic Enrichment of E-commerce Taxonomies <https://arxiv.org/abs/2102.05806>`_
-	- [arxiv.org] `TaxoEmbed: Product Categorization with Taxonomy-Aware Label Embedding <https://arxiv.org/abs/2010.12862>`_
-- Methods:
-
-	- Label embedding
-	- Graph neural networks (if taxonomy structure is hierarchical)
 
 **************************************************************************
 Examples
