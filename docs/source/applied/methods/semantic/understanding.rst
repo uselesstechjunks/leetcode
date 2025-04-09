@@ -59,177 +59,235 @@ It involves extracting structured meaning from unstructured or semi-structured d
 	- Other multimodal cues (e.g., seller info, location, posting time)
 
 **************************************************************************
-Resources
-**************************************************************************
-Product Categorisation
-==========================================================================
-- Goal: Assign each product to one of a fixed set of predefined categories (e.g., "sofa", "headphones", "jacket").
-- Formulation:
-
-	- Single-label classification
-	- Classes are mutually exclusive
-	- Typically ~10s to 1,000s of classes
-	- Output: a single class label
-	- Must map to structured taxonomy (e.g., for catalog consistency)
-- Use-case:
-
-	- Structured Browsing & Filtering
-	- Search Relevance & Ranking
-	- Inventory Organization & Duplication Handling
-	- Recommendation Relevance
-	- Content Moderation Routing
-- Resources:
-
-	- [arxiv.org] `Semantic Enrichment of E-commerce Taxonomies <https://arxiv.org/abs/2102.05806>`_
-	- [arxiv.org] `TaxoEmbed: Product Categorization with Taxonomy-Aware Label Embedding <https://arxiv.org/abs/2010.12862>`_
-- Methods:
-
-	- Label embedding
-	- Graph neural networks (if taxonomy structure is hierarchical)
-
-Dynamic Product Tag Suggestion
-==========================================================================
-- Goal: Suggest a set of relevant tags (e.g., "leather", "portable", "Bluetooth", "red", "minimalist") to describe a product.
-- Formulation:
-
-	- Multi-label classification or tag ranking
-	- Tags are not mutually exclusive
-	- Tags can be from a dynamic or evolving vocabulary
-	- Output: list of top-k tags, optionally with confidence scores
-- Use-case:
-
-	- Search Recall Expansion
-	- Visual Attribute Search
-	- Recommendation Diversification
-	- Ad Targeting / Sponsored Listings
-	- Content Moderation & Policy Enforcement
-	- Seller Assistance / Listing Enhancement
-
-Multimodal Product Representation
-==========================================================================
-- Goal: Fuse visual and textual signals to get high-quality item embeddings.
-- Papers:
-
-	- [ieee.org] `Deep Multimodal Representation Learning: A Survey <https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8715409>`_
-	- [openaccess.thecvf.com] `Learning Instance-Level Representation for Large-Scale Multi-Modal Pretraining in E-commerce <https://openaccess.thecvf.com/content/CVPR2023/papers/Jin_Learning_Instance-Level_Representation_for_Large-Scale_Multi-Modal_Pretraining_in_E-Commerce_CVPR_2023_paper.pdf>`_
-	- [amazon.science] `Unsupervised Multi-Modal Representation Learning for High Quality Retrieval of Similar Products at E-commerce Scale <https://assets.amazon.science/54/5e/df0e19f94b26afb451dd2c156612/unsupervised-multi-modal-representation-learning-for-high-quality-retrieval-of-similar-products-at-e-commerce-scale.pdf>`_
-- Techniques:
-
-	- Image encoder (e.g., ResNet, CLIP) + text encoder (BERT)
-	- Multimodal Fusion: concatenation, attention-based fusion, co-attention networks
-	- Training objective: classification, contrastive learning (CLIP-style)
-
-Product Title Normalization & Rewriting
-==========================================================================
-- Goal: Rewrite cluttered or inconsistent product titles for better standardization and retrieval.
-- Papers:
-
-	- https://paperswithcode.com/task/attribute-value-extraction
-- Methods:
-
-	- Encoder-decoder (BART, T5)
-	- Post-processing with rule-based constraints
-
-Product Deduplication and Matching
-==========================================================================
-- Goal: Identify duplicate listings across users or platforms (e.g., same product uploaded multiple times).
-- Papers:
-
-	- [arxiv.org] `Deep Product Matching for E-commerce Search <https://arxiv.org/abs/1806.06159>`_
-	- [arxiv.org] `Multi-modal Product Retrieval in Large-scale E-commerce <https://arxiv.org/abs/2011.09566>`_
-- Methods:
-
-	- Siamese Networks, contrastive learning
-	- Title+image fusion
-	- Use of embedding similarity or learned matching functions
-
-**************************************************************************
 Examples
 **************************************************************************
-Product Categorisation - Image only
+Product Taxonomy Mapping (Image-Only)
 ==========================================================================
-Case A: 100k labeled examples + 1M unlabeled
---------------------------------------------------------------------------
-1. Pretraining:
-	- Use pretrained ResNet or ViT (ImageNet) as base.
-	- Optionally run domain-adaptive pretraining on 1M unlabeled images using SimCLR/DINO.
+-  Problem  
+	- Automatically assign a product to a node in a multi-level product taxonomy using only product images. The taxonomy is tree-structured (e.g., Fashion > Shoes > Sneakers).
+- Use Cases  
+	- Content organization for search and recommendation  
+	- Navigation UX (browse by category)  
+	- Catalog deduplication and quality control
+- Input / Output  
+	- Input: Product image  
+	- Output: Category ID (corresponding to a node in taxonomy tree)
+- Problem Type  
+	- Hierarchical classification (multi-class over taxonomy nodes, flat or structured)
+- Model Choices  
+	- CNN-based: ResNet, EfficientNet  
+	- Transformer-based: ViT, Swin Transformer  
+	- Classification head over leaf categories or internal nodes  
+	- Optional: train with label smoothing or hierarchy-aware loss (e.g., hierarchical cross-entropy)
+- Labeling Scenarios  
+	- Case A: Human-labeled image-to-category pairs  
+	- Case B: Semi-supervised learning using unlabeled product images and weak labels (e.g., mined from metadata)  
+	- Case C: Noisy user tags mapped to taxonomy nodes using heuristics or weak supervision
+- Training Setup  
+	- Pretrain on ImageNet or similar  
+	- Fine-tune with cross-entropy loss on labeled taxonomy categories  
+	- Data augmentation: crop, resize, brightness, rotation  
+	- Optional: curriculum learning from root to leaf categories
+- Evaluation Metrics  
+	- Top-1 and Top-5 accuracy on leaf nodes  
+	- Hierarchical precision/recall (distance in tree between predicted and true node)
 
-2. Finetuning:
-	- Replace classification head with new head (1,000 classes).
-	- Finetune full model on 100k labeled samples with label smoothing, strong augmentation, and class balancing.
-	- Use early unfreezing strategy if pretrained on different domain.
+- Scaling Considerations  
+	- Class imbalance (few-shot for some nodes)  
+	- Long-tail handling via label smoothing or data resampling  
+	- Frequent updates as taxonomy evolves  
+	- Efficient inference on mobile or web apps
+- Alternative Methods  
+	- Zero-shot classification using CLIP or BLIP with node descriptions  
+	- Retrieval-based: learn embeddings and match against category exemplars  
+	- Multistage: coarse classifier followed by fine-grained classifier
 
-3. Regularization:
-	- Mixup, CutMix, RandAugment.
-	- Confidence-based pseudo-labeling on 1M unlabeled to expand training data.
-
-4. Evaluation:
-	- Accuracy@1, Accuracy@5.
-	- Confusion matrix to analyze inter-class errors.
-
-Case B: Only 10k labeled examples
---------------------------------------------------------------------------
-1. Pretraining:
-	- Use stronger pretrained backbone (e.g., ViT MAE pretrained on ImageNet-21k or OpenImages).
-	- Optionally pretrain on 1M unlabeled data (SimCLR, SwAV, DINO).
-
-2. Finetuning:
-	- Use **linear probing** first (freeze encoder, train classifier only).
-	- Then **gradually unfreeze** layers (e.g., using discriminative learning rates).
-	- Regularize with dropout, weight decay, and Mixup.
-
-3. Semi-supervised:
-	- Train pseudo-labeling pipeline on 1M unlabeled images using high-confidence predictions.
-
-4. Evaluation:
-	- Macro/micro F1-score (especially if classes are imbalanced).
-
-Image Search - Mobile Image Query - Product Image
+Product Taxonomy Mapping (Image + Metadata)
 ==========================================================================
-Case A: 10k (query, matched product) labeled pairs
---------------------------------------------------------------------------
-1. Pretraining:
-	- Pretrain ResNet/ViT using SimCLR or DINO on product images with augmentations.
-	- Learn product-invariant and view-invariant embeddings.
+- Problem  
+	- Assign a product to a taxonomy node using both the image and product metadata (title and description).
+- Input / Output  
+	- Input: Product image, title, and description  
+	- Output: Category ID (taxonomy node)
+- Problem Type  
+	Multimodal hierarchical classification
+- Model Choices  
+	- Multimodal fusion models:  
+		- Early fusion: Concatenate image and text embeddings  
+		- Late fusion: Separate image and text towers with fusion at classifier level  
+	- Base encoders:  
+		- Image: ResNet, ViT  
+		- Text: BERT, DistilBERT, Sentence-BERT  
+	- Fusion techniques: MLP fusion, attention-based fusion, cross-modal transformer
+- Labeling Scenarios  
+	- Same as image-only, but optionally apply text-based weak supervision  
+	- Use keyword extraction to create noisy labels from metadata  
+	- Train with human-labeled examples, validate robustness to noisy text
+- Training Setup  
+	- Pretrain encoders separately or jointly  
+	- Finetune with labeled taxonomy classes  
+	- Text preprocessing: lowercasing, tokenization, stopword removal  
+	- Use dropout and regularization to avoid text overfitting
+- Evaluation Metrics  
+	- Same as image-only, plus ablations on image-only vs text-only vs multimodal  
+	- Optional: evaluate on tail classes separately
+- Use Cases  
+	- Improved classification performance in ambiguous or visually similar categories  
+	- Better coverage for long-tail or rare categories with descriptive text
+- Scaling Considerations  
+	- Long and noisy text: requires cleaning and truncation  
+	- Tradeoff between complexity and latency  
+	- Multilingual metadata (requires multilingual text encoder)
+- Alternative Methods  
+	- Use text-only or image-only when one modality is missing  
+	- Use CLIP-like models pretrained on image-text pairs  
+	- Train multitask models with auxiliary objectives (e.g., tag prediction)
+	
+Image-Only Visual Search System
+==========================================================================
+- Problem  
+	- Enable users to search for products using only an image (e.g., phone-captured photos), matching to semantically similar catalog images.
+- Use Cases  
+	- Image search via phone camera (e.g., “find similar items”).  
+	- Visual discovery experience (Pinterest-style browse).  
+	- Helps cold-start users with no typed query.
+- Input / Output  
+	- Input: Query image (optionally cropped).  
+	- Output: Ranked list of product images (or product IDs) from a fixed catalog.
+- Problem Type  
+	- Image retrieval based on visual similarity (semantic embedding space).  
+	- No class prediction, no metadata, no personalization.
+- Model Choices - Backbone:  
+	- CNN-based: ResNet, EfficientNet, MobileNet (fast inference).  
+	- Transformer-based: ViT, DINOv2, DeiT, SAM (better semantics, requires more data).  
+- Training Strategy:  
+	- Contrastive learning (SimCLR, MoCo, InfoNCE).  
+	- Triplet loss or arcface (optional).  
+	- Supervised fine-tuning with positive pairs (query ↔ matching catalog images).
+- Labeling Scenarios  
+	- Case A: 10k manually labeled query ↔ product pairs (positive matches).  
+	- Case B: 200M unlabeled mobile photos.  
+	- Use clustering, pseudo-labels, weak supervision, or pretraining.  
+	- Leverage augmentations on catalog images to synthesize training pairs.
+- Training Setup  
+	- Pretraining: Contrastive pretraining on product catalog (SimCLR-style) to adapt to product domain.  
+	- Finetuning:  
+		- On 10k labeled query-product pairs with InfoNCE loss.  
+		- Use product embedding = mean pooled embeddings of its multiple images.  
+	- Data Augmentations: Blur, crop, resize, grayscale, decolorization to simulate noisy inputs.  
+	- Embedding Head: Add projection head (e.g., 2-layer MLP) before retrieval embedding.
+- Evaluation Metrics  
+	- Recall@k, Precision@k, mAP@k (mean Average Precision).  
+	- Retrieval latency and embedding size (efficiency).  
+	- Offline: Mean cosine similarity with true match.  
+	- Online: Click-through rate (CTR), conversion rate (if measurable).
+- Scaling Considerations  
+	- Indexing: Use FAISS or ScaNN for approximate nearest neighbors (ANN).  
+	- Update index incrementally as new products are added.  
+	- Use quantization (PQ/IVF) or knowledge distillation to compress embeddings.  
+	- Optional: Use hierarchical retrieval (coarse-to-fine) for speed.
+- Alternative Methods  
+	- CLIP-style image encoders + product ID supervision (e.g., MIL-NCE).  
+	- Self-supervised ViT models (DINOv2) for generalizable embeddings.  
+	- Ensemble of CNN + transformer models.  
+	- Use DETR/SAM-based region embeddings if user crops objects in the query.
 
-2. Finetuning:
-	- Use InfoNCE contrastive loss on 10k query-product pairs.
-	- Use in-batch negatives and/or hard mined negatives.
-	- Augment with product image pairs to regularize.
+Localized Object Search System (Object-Centric Visual Search)
+==========================================================================
+- Problem  
+	- Users capture an image containing multiple objects and want to search for just one object in the image. 
+	- The system detects the region of interest (e.g., via cropping or object detection) and retrieves semantically similar products.
+- Use Cases  
+	- Tap-to-search on objects (like Google Lens)  
+	- Search specific item within a lifestyle image  
+	- Visual filters or product detection on seller-uploaded images
+- Input / Output  
+	- Input: Full image or cropped region from user  
+	- Output: Products visually similar to the detected/cropped object
+- Problem Type - Two-stage system:  
+	- Stage 1: Object detection/localization  
+	- Stage 2: Embedding-based retrieval
+- Model Choices  
+	- Stage 1:  
+		- DETR, Faster R-CNN, YOLOv8 (object localization)  
+		- SAM for user-assisted segmentation/cropping  
+	- Stage 2:  
+		- ResNet/ViT/DINOv2 embedding extractor  
+		- Projected to common embedding space  
+		- Product embedding: mean of region embeddings per product
+- Labeling Scenarios  
+	- Supervised: object bounding boxes + product match labels  
+	- Weakly supervised: click-through logs, cropped images  
+	- Self-supervised: augment product images as object crops
+- Training Setup  
+	- Stage 1: Pretrain detector on product dataset with boxes  
+	- Stage 2: Train image embedding model on matched object ↔ product pairs  
+	- Optionally fuse detection + embedding (jointly fine-tune)
+- Evaluation Metrics  
+	- Object localization accuracy (IoU, mAP)  
+	- Retrieval metrics: Recall@k, Precision@k for cropped objects  
+	- Overall latency (detection + search)
+- Scaling Considerations  
+	- Cache intermediate crops if common  
+	- Use lightweight detectors (YOLO-Nano, MobileSAM)  
+	- Optional: Joint detector-embedder model (faster inference)
+- Alternative Methods  
+	- SAM + embedding on segmented mask  
+	- One-stage detector with retrieval head (DELG-style)  
+	- Saliency-guided attention cropping without bounding boxes
 
-3. Embedding Aggregation:
-	- Per product: average of embeddings of its 5 images.
-	- Optional: trainable attention-based image pooling per product.
-
-4. Retrieval:
-	- Use Faiss or ScaNN for approximate nearest neighbor search.
-	- Index product embeddings offline; query embeddings at runtime.
-
-5. Evaluation:
-	- Recall@k, mean Average Precision (mAP), Precision@k.
-
-Case 2: 200M unlabeled mobile images (no labels)
---------------------------------------------------------------------------
-1. Pretraining:
-	- Use DINO, MAE, or SimCLR on 200M mobile photos to learn domain-aligned embeddings.
-	- Incorporate augmentations reflecting phone capture artifacts (blur, shadow, exposure).
-
-2. Semi-Supervised Learning:
-	- Cluster mobile images; use nearest neighbors as pseudo-positives.
-	- Use self-training with high-confidence retrieval matches as additional positives.
-
-3. Hard Negatives:
-	- Select visually similar images that do *not* match (via clustering or retrieval) as hard negatives.
-
-4. Finetuning (optional):
-	- Finetune on the small labeled query-product dataset (10k), possibly using LoRA or head-only tuning.
-
-5. Retrieval + Evaluation:
-	- Same as Case 1.
-	- Test generalization on held-out queries and unseen product classes.
+Multimodal Visual Search System (Image + Text)
+==========================================================================
+- Problem
+	- Enhance search relevance by combining user-provided images with optional free-text (e.g., “red sneakers”) to retrieve matching product entries from the catalog.
+- Use Cases
+	- “Search this + add description”
+	- More accurate queries (“dress like this but in blue”)  
+	- Shopping assistants, style filters
+- Input / Output  
+	- Input:  
+		- Query image (phone-captured, optionally cropped)  
+		- Optional text query (user-entered keywords)  
+	- Output: Ranked product list (by semantic similarity)
+- Problem Type  
+	- Multimodal retrieval (image + text to image)
+- Model Choices  
+	- Encoders:  
+		- Image: ViT, DINOv2, ResNet (contrastive pretrained)  
+		- Text: BERT, DistilBERT, CLIP-Text  
+	- Fusion Strategy:  
+		- Late fusion: Weighted sum of image/text embeddings  
+		- Cross-modal attention (e.g., ALBEF, BLIP)
+- Labeling Scenarios  
+	- Paired (image, text) examples from product catalog  
+	- Manually curated positive query ↔ product matches  
+	- Use weak supervision (e.g., co-occurring tags, titles)
+- Training Setup  
+	- Pretraining: Contrastive alignment of image and text (CLIP-style)  
+	- Fine-tuning: Triplet or InfoNCE loss using curated query ↔ product pairs  
+	- Fusion tuning: Train a cross-attention head if needed  
+	- Embed catalog products with both modalities (combine features)
+- Evaluation Metrics  
+	- Recall@k, NDCG@k  
+	- Multimodal retrieval accuracy  
+	- Ablation: image-only, text-only, fused vs. oracle relevance
+- Scaling Considerations  
+	- Pre-compute and index catalog embeddings  
+	- Online combine query embeddings and perform ANN search  
+	- Modality dropout during training to handle missing inputs
+- Alternative Methods  
+	- CLIP or FLAVA for joint image-text space  
+	- Late fusion heuristics (weighted linear combination)  
+	- Multimodal transformers (e.g., ViLT) for deeper cross-modal reasoning
 
 Dynamic Tag Suggestion System (image only)
 ==========================================================================
+- Problem
+	- Suggest relevant tags (attributes, descriptors) for product listings to improve discovery, search, and categorization.
+- Use Cases
+	- Improves product discoverability.
+	- Drives tag-based browsing and filtering.
+	- Feeds into downstream categorization or moderation systems.
 - Input:
 	- One or more images of a product listing (no text input in the basic setup)
 	- Tags are from a predefined vocabulary (e.g., 2,000 tags)
@@ -278,6 +336,12 @@ Dynamic Tag Suggestion System (image only)
 
 Dynamic Tag Suggestion (text + images)
 ==========================================================================
+- Problem
+	- Suggest relevant tags (attributes, descriptors) for product listings to improve discovery, search, and categorization.
+- Use Cases
+	- Improves product discoverability.
+	- Drives tag-based browsing and filtering.
+	- Feeds into downstream categorization or moderation systems.
 - Input / Output
 	- Input: Product title, description, and optionally image.
 	- Output: Set of 3–10 relevant tags from a fixed tag vocabulary.
@@ -313,3 +377,36 @@ Dynamic Tag Suggestion (text + images)
 	- Tag generation via seq2seq (T5, BART).
 	- Retrieval-based tagging (match to nearest products with known tags).
 	- Tag co-occurrence graph models.
+
+**************************************************************************
+Resources
+**************************************************************************
+Product Categorisation
+==========================================================================
+- Resources:
+
+	- [arxiv.org] `Semantic Enrichment of E-commerce Taxonomies <https://arxiv.org/abs/2102.05806>`_
+	- [arxiv.org] `TaxoEmbed: Product Categorization with Taxonomy-Aware Label Embedding <https://arxiv.org/abs/2010.12862>`_
+
+
+Multimodal Product Representation
+==========================================================================
+- Papers:
+
+	- [ieee.org] `Deep Multimodal Representation Learning: A Survey <https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8715409>`_
+	- [openaccess.thecvf.com] `Learning Instance-Level Representation for Large-Scale Multi-Modal Pretraining in E-commerce <https://openaccess.thecvf.com/content/CVPR2023/papers/Jin_Learning_Instance-Level_Representation_for_Large-Scale_Multi-Modal_Pretraining_in_E-Commerce_CVPR_2023_paper.pdf>`_
+	- [amazon.science] `Unsupervised Multi-Modal Representation Learning for High Quality Retrieval of Similar Products at E-commerce Scale <https://assets.amazon.science/54/5e/df0e19f94b26afb451dd2c156612/unsupervised-multi-modal-representation-learning-for-high-quality-retrieval-of-similar-products-at-e-commerce-scale.pdf>`_
+
+Product Title Normalization & Rewriting
+==========================================================================
+- Papers:
+
+	- https://paperswithcode.com/task/attribute-value-extraction
+
+Product Deduplication and Matching
+==========================================================================
+- Goal: Identify duplicate listings across users or platforms (e.g., same product uploaded multiple times).
+- Papers:
+
+	- [arxiv.org] `Deep Product Matching for E-commerce Search <https://arxiv.org/abs/1806.06159>`_
+	- [arxiv.org] `Multi-modal Product Retrieval in Large-scale E-commerce <https://arxiv.org/abs/2011.09566>`_
