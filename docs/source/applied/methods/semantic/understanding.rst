@@ -102,47 +102,60 @@ Product Taxonomy Mapping (Image-Only)
 	- Retrieval-based: learn embeddings and match against category exemplars  
 	- Multistage: coarse classifier followed by fine-grained classifier
 
-Product Taxonomy Mapping (Image + Metadata)
+Dynamic Tag Suggestion System (image only)
 ==========================================================================
-- Problem  
-	- Assign a product to a taxonomy node using both the image and product metadata (title and description).
-- Input / Output  
-	- Input: Product image, title, and description  
-	- Output: Category ID (taxonomy node)
-- Problem Type  
-	Multimodal hierarchical classification
-- Model Choices  
-	- Multimodal fusion models:  
-		- Early fusion: Concatenate image and text embeddings  
-		- Late fusion: Separate image and text towers with fusion at classifier level  
-	- Base encoders:  
-		- Image: ResNet, ViT  
-		- Text: BERT, DistilBERT, Sentence-BERT  
-	- Fusion techniques: MLP fusion, attention-based fusion, cross-modal transformer
-- Labeling Scenarios  
-	- Same as image-only, but optionally apply text-based weak supervision  
-	- Use keyword extraction to create noisy labels from metadata  
-	- Train with human-labeled examples, validate robustness to noisy text
-- Training Setup  
-	- Pretrain encoders separately or jointly  
-	- Finetune with labeled taxonomy classes  
-	- Text preprocessing: lowercasing, tokenization, stopword removal  
-	- Use dropout and regularization to avoid text overfitting
-- Evaluation Metrics  
-	- Same as image-only, plus ablations on image-only vs text-only vs multimodal  
-	- Optional: evaluate on tail classes separately
-- Use Cases  
-	- Improved classification performance in ambiguous or visually similar categories  
-	- Better coverage for long-tail or rare categories with descriptive text
-- Scaling Considerations  
-	- Long and noisy text: requires cleaning and truncation  
-	- Tradeoff between complexity and latency  
-	- Multilingual metadata (requires multilingual text encoder)
-- Alternative Methods  
-	- Use text-only or image-only when one modality is missing  
-	- Use CLIP-like models pretrained on image-text pairs  
-	- Train multitask models with auxiliary objectives (e.g., tag prediction)
-	
+- Problem
+	- Suggest relevant tags (attributes, descriptors) for product listings to improve discovery, search, and categorization.
+- Use Cases
+	- Improves product discoverability.
+	- Drives tag-based browsing and filtering.
+	- Feeds into downstream categorization or moderation systems.
+- Input:
+	- One or more images of a product listing (no text input in the basic setup)
+	- Tags are from a predefined vocabulary (e.g., 2,000 tags)
+- Output:
+	- A ranked list or binary vector over the tag vocabulary (multi-label)
+- Problem Type
+	- Fixed tag vocabulary -> Multi-label classification -> Vector of 0/1 labels or scores per tag
+	- Open tag vocabulary -> Retrieval or generative -> Top-k retrieved tags using tag embeddings
+- Model Architecture Choices
+	- CNNs (e.g., ResNet): Strong baseline, efficient, works with BCE loss
+	- Vision Transformers (e.g., ViT): Better generalization, more data-hungry
+	- CLIP-style dual encoders: Enables retrieval/zero-shot tagging with tag embeddings
+	- Multi-modal models (future): Use image + title/description if available
+- Labeling Scenarios
+	- Case A: 100k labeled images with tags
+		- Finetune a CNN/ViT with BCEWithLogitsLoss
+	- Case B: 10k labeled + 1M unlabeled
+		- Use semi-supervised learning, self-training, pseudo-labeling
+		- Optional: Contrastive pretraining with SimCLR or BYOL
+	- Case C: Only curated positive tags, no known negatives
+		- Use positive-unlabeled (PU) learning or ranking loss
+- Training Setup
+	- Preprocessing:
+		- Resize, normalize (use dataset-specific mean/std), augmentations
+	- Pretraining (optional):
+		- Contrastive learning (SimCLR, BYOL) on unlabeled product image corpus
+	- Finetuning:
+		- Use BCEWithLogitsLoss (independent sigmoid heads)
+		- Do not use softmax
+		- Optional: Freeze base layers initially, then unfreeze gradually
+	- Thresholding:
+		- Use global threshold (e.g., 0.5) or tune per-tag thresholds
+- Evaluation Metrics
+	- Precision@K: How many of top-K predicted tags are correct
+	- Recall@K: How many true tags appear in the top-K predictions
+	- F1 score (macro and micro)
+	- AUC per tag (for threshold tuning)
+- Scaling Considerations
+	- Multi-GPU training for ViT or large datasets
+	- Factorized/tag-bottleneck heads for large vocabularies
+	- Index tag embeddings for fast retrieval or zero-shot inference
+- Alternative Methods
+	- CLIP zero-shot tagging: Embed image and tag descriptions in same space
+	- Image-to-tag retrieval: Learn tag embeddings, retrieve nearest
+	- Vision-to-text (captioning): Generate pseudo-descriptions, extract tags
+
 Image-Only Visual Search System
 ==========================================================================
 - Problem  
@@ -236,6 +249,47 @@ Localized Object Search System (Object-Centric Visual Search)
 	- One-stage detector with retrieval head (DELG-style)  
 	- Saliency-guided attention cropping without bounding boxes
 
+Product Taxonomy Mapping (Image + Metadata)
+==========================================================================
+- Problem  
+	- Assign a product to a taxonomy node using both the image and product metadata (title and description).
+- Input / Output  
+	- Input: Product image, title, and description  
+	- Output: Category ID (taxonomy node)
+- Problem Type  
+	Multimodal hierarchical classification
+- Model Choices  
+	- Multimodal fusion models:  
+		- Early fusion: Concatenate image and text embeddings  
+		- Late fusion: Separate image and text towers with fusion at classifier level  
+	- Base encoders:  
+		- Image: ResNet, ViT  
+		- Text: BERT, DistilBERT, Sentence-BERT  
+	- Fusion techniques: MLP fusion, attention-based fusion, cross-modal transformer
+- Labeling Scenarios  
+	- Same as image-only, but optionally apply text-based weak supervision  
+	- Use keyword extraction to create noisy labels from metadata  
+	- Train with human-labeled examples, validate robustness to noisy text
+- Training Setup  
+	- Pretrain encoders separately or jointly  
+	- Finetune with labeled taxonomy classes  
+	- Text preprocessing: lowercasing, tokenization, stopword removal  
+	- Use dropout and regularization to avoid text overfitting
+- Evaluation Metrics  
+	- Same as image-only, plus ablations on image-only vs text-only vs multimodal  
+	- Optional: evaluate on tail classes separately
+- Use Cases  
+	- Improved classification performance in ambiguous or visually similar categories  
+	- Better coverage for long-tail or rare categories with descriptive text
+- Scaling Considerations  
+	- Long and noisy text: requires cleaning and truncation  
+	- Tradeoff between complexity and latency  
+	- Multilingual metadata (requires multilingual text encoder)
+- Alternative Methods  
+	- Use text-only or image-only when one modality is missing  
+	- Use CLIP-like models pretrained on image-text pairs  
+	- Train multitask models with auxiliary objectives (e.g., tag prediction)
+
 Multimodal Visual Search System (Image + Text)
 ==========================================================================
 - Problem
@@ -279,60 +333,6 @@ Multimodal Visual Search System (Image + Text)
 	- CLIP or FLAVA for joint image-text space  
 	- Late fusion heuristics (weighted linear combination)  
 	- Multimodal transformers (e.g., ViLT) for deeper cross-modal reasoning
-
-Dynamic Tag Suggestion System (image only)
-==========================================================================
-- Problem
-	- Suggest relevant tags (attributes, descriptors) for product listings to improve discovery, search, and categorization.
-- Use Cases
-	- Improves product discoverability.
-	- Drives tag-based browsing and filtering.
-	- Feeds into downstream categorization or moderation systems.
-- Input:
-	- One or more images of a product listing (no text input in the basic setup)
-	- Tags are from a predefined vocabulary (e.g., 2,000 tags)
-- Output:
-	- A ranked list or binary vector over the tag vocabulary (multi-label)
-- Problem Type
-	- Fixed tag vocabulary -> Multi-label classification -> Vector of 0/1 labels or scores per tag
-	- Open tag vocabulary -> Retrieval or generative -> Top-k retrieved tags using tag embeddings
-- Model Architecture Choices
-	- CNNs (e.g., ResNet): Strong baseline, efficient, works with BCE loss
-	- Vision Transformers (e.g., ViT): Better generalization, more data-hungry
-	- CLIP-style dual encoders: Enables retrieval/zero-shot tagging with tag embeddings
-	- Multi-modal models (future): Use image + title/description if available
-- Labeling Scenarios
-	- Case A: 100k labeled images with tags
-		- Finetune a CNN/ViT with BCEWithLogitsLoss
-	- Case B: 10k labeled + 1M unlabeled
-		- Use semi-supervised learning, self-training, pseudo-labeling
-		- Optional: Contrastive pretraining with SimCLR or BYOL
-	- Case C: Only curated positive tags, no known negatives
-		- Use positive-unlabeled (PU) learning or ranking loss
-- Training Setup
-	- Preprocessing:
-		- Resize, normalize (use dataset-specific mean/std), augmentations
-	- Pretraining (optional):
-		- Contrastive learning (SimCLR, BYOL) on unlabeled product image corpus
-	- Finetuning:
-		- Use BCEWithLogitsLoss (independent sigmoid heads)
-		- Do not use softmax
-		- Optional: Freeze base layers initially, then unfreeze gradually
-	- Thresholding:
-		- Use global threshold (e.g., 0.5) or tune per-tag thresholds
-- Evaluation Metrics
-	- Precision@K: How many of top-K predicted tags are correct
-	- Recall@K: How many true tags appear in the top-K predictions
-	- F1 score (macro and micro)
-	- AUC per tag (for threshold tuning)
-- Scaling Considerations
-	- Multi-GPU training for ViT or large datasets
-	- Factorized/tag-bottleneck heads for large vocabularies
-	- Index tag embeddings for fast retrieval or zero-shot inference
-- Alternative Methods
-	- CLIP zero-shot tagging: Embed image and tag descriptions in same space
-	- Image-to-tag retrieval: Learn tag embeddings, retrieve nearest
-	- Vision-to-text (captioning): Generate pseudo-descriptions, extract tags
 
 Dynamic Tag Suggestion (text + images)
 ==========================================================================
