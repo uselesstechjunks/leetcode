@@ -228,7 +228,7 @@ Case 2: 200M unlabeled mobile images (no labels)
 	- Same as Case 1.
 	- Test generalization on held-out queries and unseen product classes.
 
-Dynamic Tag Suggestion System (Image only)
+Dynamic Tag Suggestion System (image only)
 ==========================================================================
 - Input:
 	- One or more images of a product listing (no text input in the basic setup)
