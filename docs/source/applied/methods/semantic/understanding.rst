@@ -146,7 +146,7 @@ Product Deduplication and Matching
 **************************************************************************
 Examples
 **************************************************************************
-1. Product Categorisation - Image only
+Product Categorisation - Image only
 ==========================================================================
 Case A: 100k labeled examples + 1M unlabeled
 --------------------------------------------------------------------------
@@ -184,7 +184,7 @@ Case B: Only 10k labeled examples
 4. Evaluation:
 	- Macro/micro F1-score (especially if classes are imbalanced).
 
-1. Image Search - Mobile Image Query - Product Image
+Image Search - Mobile Image Query - Product Image
 ==========================================================================
 Case A: 10k (query, matched product) labeled pairs
 --------------------------------------------------------------------------
