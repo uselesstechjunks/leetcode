@@ -228,7 +228,7 @@ Case 2: 200M unlabeled mobile images (no labels)
 	- Same as Case 1.
 	- Test generalization on held-out queries and unseen product classes.
 
-Dynamic Tag Suggestion System
+Dynamic Tag Suggestion System (Image only)
 ==========================================================================
 - Use Cases
 	- Improves search and discovery by expanding query-match coverage
@@ -280,3 +280,47 @@ Dynamic Tag Suggestion System
 	- CLIP zero-shot tagging: Embed image and tag descriptions in same space
 	- Image-to-tag retrieval: Learn tag embeddings, retrieve nearest
 	- Vision-to-text (captioning): Generate pseudo-descriptions, extract tags
+
+Dynamic Tag Suggestion (text + images)
+==========================================================================
+- Problem
+	- Suggest relevant tags (attributes, descriptors) for product listings to improve discovery, search, and categorization.
+- Use Cases
+	- Improves product discoverability.
+	- Drives tag-based browsing and filtering.
+	- Feeds into downstream categorization or moderation systems.
+- Input / Output
+	- Input: Product title, description, and optionally image.
+	- Output: Set of 3–10 relevant tags from a fixed tag vocabulary.
+- Problem Type
+	- Multi-label classification (multiple tags can be correct).
+	- Optional: Sequence generation (if tags are open-vocabulary).
+- Model Choices
+	- Text-only: BERT, DistilBERT, RoBERTa with sigmoid output.
+	- Image-text: CLIP-style dual encoders for grounding.
+	- Multimodal fusion: Late fusion or cross-attention models.
+	- Lightweight: TextCNN or BiGRU + attention for mobile deployment.
+- Label Collection - No explicit tags -> weak supervision from seller text
+	- Rule-based keyword matching (exact, fuzzy).
+	- TF-IDF / RAKE / YAKE for unsupervised keyword extraction.
+	- Embedding similarity (BERT/CLIP).
+	- Phrase mining (NER, noun phrase chunking).
+	- LLM prompting for zero-/few-shot tag extraction.
+	- Human-in-the-loop to clean and validate extracted labels.
+- Training Setup
+	- Loss: Binary cross-entropy with logits.
+	- Data imbalance: Weighted sampling or focal loss.
+	- Data augmentation: Synonym replacement, dropout, back-translation.
+	- Initialization: Pretrained language/image models → fine-tune.
+- Evaluation Metrics
+	- Precision@k, Recall@k, F1@k.
+	- Coverage and diversity of tag suggestions.
+	- Manual quality assessment on a small sample.
+- Scaling Considerations
+	- Efficient inference via pre-computed embeddings.
+	- Use tag clustering to reduce vocabulary explosion.
+	- Incrementally refresh model with trending tag signals.
+- Alternative Methods
+	- Tag generation via seq2seq (T5, BART).
+	- Retrieval-based tagging (match to nearest products with known tags).
+	- Tag co-occurrence graph models.
