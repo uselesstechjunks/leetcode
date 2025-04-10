@@ -149,51 +149,6 @@ Industry Reference:
 =======================================================================
 1. Semi Supervised Learning
 -----------------------------------------------------------------------
-- Assumptions
-
-	1. The Smoothness Assumption : Two close samples x1 and x2 on an input should have the same output (y).
-	2. The Low-Density Assumption : Decision boundaries between classes are characterized by low density areas in the input space.
-	3. The Manifold Assumption : Data points on the same low-dimensional manifold (lower-dimensional substructures) should have the same label.
-
-- Objective
-
-	- the algorithms should be able to classify unlabeled data points based on those already labeled. 
-	- if and only if the different problem classes are well represented among the labeled data points
-	- important to partition the dataset between labeled and unlabeled data in order to get the most accurate and efficient model.
-
-- Inductive methods 
-
-	#. Build a classification model with the aim of getting predictions from unlabelled data points.
-	#. Wrapper Methods
-	
-		- training step where a classifier learns from the labelled data points
-		- pseudo-labelling step where the previous classifier is used to get predictions from unlabelled data
-		- veracity of the new labels (predictions) is verified
-		- most accurate ones (based on confidence levels) are added to the training dataset
-		- steps are repeated until the model is the most performant
-		- Self Training, Co Training, ensemble learning
-   
-	#. Unsupervised preprocessing
-	
-		- unsupervised techniques and algorithms to extract information from all data to improve the future training of a classifier
-		- feature extraction or even clustering
-	
-	#. Intrinsically semi-supervised methods
-	
-		- low-density separation - Maximum-margin methods
-		- Manifolds - Manifold regularization and Manifold approximation
-		- Generative Models - tries to understand how the data was generated
-
-- Transductive methods
-
-	#. making predictions directly, without trying to have a classifier
-	#. using all the dataset (train and test) to predict the labels.
-	#. Graph-Based Methods
-	
-		#. Transductive methods typically define a graph over all data points, both labelled and unlabelled, encoding the pairwise similarity of data points with possibly weighted edges
-		#. an objective function is optimized by looking if labelled data are correctly classify and 
-		#. if similar data points are in the right place.
-
 Resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * [maddevs.io] `Semi-Supervised Learning Explained: Techniques and Real-World Applications <https://maddevs.io/blog/semi-supervised-learning-explained/>`_
@@ -231,16 +186,25 @@ Objective
 
 Common Techniques
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Heuristic rules – Regex, keyword matches, or decision trees on metadata (e.g., "title contains 'free shipping' -> promotion tag").
-2. Distant supervision – Aligning data with external knowledge bases (e.g., map product name to Wikipedia category).
-3. User interaction signals – Clicks, views, likes, shares (e.g., clicked product likely relevant).
-4. Noisy annotations from other models – Use predictions from a different pretrained model as labels (e.g., object detector labels for image classifier).
-5. Data program outputs – Use Snorkel-style labeling functions with voting or confidence scoring.
-6. Content similarity – Use similarity to confidently labeled examples (e.g., cosine similarity in embedding space).
-7. Metadata fields – Use structured fields (e.g., "brand," "category") as proxy labels.
-8. Co-occurrence patterns – Use frequent tag or attribute co-occurrence (e.g., "iPhone" often co-occurs with "Apple").
-9. Crowd-sourced filters – Soft labels from upvotes/downvotes or flagging behavior.
-10. Weakly related tasks – Use labels from auxiliary tasks (e.g., sentiment -> relevance).
+1. Rule-based and Programmatic Supervision  
+	- Heuristic rules (e.g., regex, keyword matches)  
+	- Data program outputs (Snorkel-style labeling functions with voting)
+
+2. External Knowledge and Metadata-Based  
+	- Distant supervision (aligning with external knowledge bases)  
+	- Using structured metadata fields (e.g., brand, category)
+
+3. User Interaction and Crowd Signals  
+	- User interaction signals (clicks, views, likes, shares)  
+	- Crowd-sourced signals (upvotes/downvotes, flagging)
+
+4. Model-Derived or Proxy Labels  
+	- Noisy annotations from other pretrained models  
+	- Labels from weakly related tasks (transfer from a related task)
+
+5. Similarity and Co-occurrence Methods  
+	- Content similarity (using cosine similarity on embeddings)  
+	- Co-occurrence patterns (frequent tag/attribute co-occurrence)
 
 Data Centric AI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
