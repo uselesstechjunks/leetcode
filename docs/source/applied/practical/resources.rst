@@ -23,6 +23,7 @@ Practical Resources
 
 	- [github.io] `Lil’Log <https://lilianweng.github.io/>`_
 	- [ruder.io] `A blog about natural language processing and machine learning <https://www.ruder.io/>`_
+	- [reachsumit.com] `Sumit's Diary <https://blog.reachsumit.com/>`_
 	- [roizner.medium.com] `Michael Roizner <https://roizner.medium.com/>`_
 	- [amazon.science] `Amazon Science: E-Commerce <https://www.amazon.science/publications?q=&f1=0000017b-cb9b-d0be-affb-cbbf08e40000&s=0>`_
 	- [youtube.com] `MIT: Introduction to Data-Centric AI <https://www.youtube.com/watch?v=ayzOzZGHZy4&list=PLnSYPjg2dHQKdig0vVbN-ZnEU0yNJ1mo5>`_
