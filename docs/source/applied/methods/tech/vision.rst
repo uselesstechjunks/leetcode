@@ -4,6 +4,7 @@ Vision Models
 **********************************************************************************
 Resources
 **********************************************************************************
+- [lilianweng.github.io] `Object Detection for Dummies <https://lilianweng.github.io/posts/2017-10-29-object-recognition-part-1/>`_
 - [arxiv.org] `ResNet: Deep Residual Learning for Image Recognition <https://arxiv.org/abs/1512.03385>`_
 - [arxiv.org] `ViT: An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale <https://arxiv.org/abs/2010.11929>`_
 - [arxiv.org] `SimCLR: A Simple Framework for Contrastive Learning of Visual Representations <https://arxiv.org/abs/2002.05709>`_
