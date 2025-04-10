@@ -1,10 +1,19 @@
 #######################################################################
-Features and Labels
+Labeling and Learning Strategies
 #######################################################################
 .. contents:: Table of Contents
 	:depth: 3
 	:local:
 	:backlinks: none
+
+***********************************************************************
+Resources
+***********************************************************************
+- [lilianweng.github.io] `Learning with not Enough Data Part 1: Semi-Supervised Learning <https://lilianweng.github.io/posts/2021-12-05-semi-supervised/>`_
+- [lilianweng.github.io] `Learning with not Enough Data Part 2: Active Learning <https://lilianweng.github.io/posts/2022-02-20-active-learning/>`_
+- [lilianweng.github.io] `Learning with not Enough Data Part 3: Data Generation <https://lilianweng.github.io/posts/2022-04-15-data-gen/>`_ 
+- [lilianweng.github.io] `Thinking about High-Quality Human Data <https://lilianweng.github.io/posts/2024-02-05-human-data-quality/>`_
+- [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
 
 ***********************************************************************
 Label Design
