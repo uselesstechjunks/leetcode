@@ -178,38 +178,64 @@ Weak Supervision
 * [medium.com] `Weak Supervision — Learn From Less Information <https://npogeant.medium.com/weak-supervision-learn-from-less-information-dcc8fe54e2a5>`_
 * [stanford.edu] `Weak Supervision: A New Programming Paradigm for Machine Learning <https://ai.stanford.edu/blog/weak-supervision/>`_
 
-Objective
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- weak supervision is a technique where a machine learning algorithm is given very little information to learn from
-- it can be used to learn from data that is difficult or impossible to obtain in traditional supervised learning
-- may be difficult or impossible to obtain the correct answer for a data point, because the answer is not known
-
 Common Techniques
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. Rule-based and Programmatic Supervision  
+#. Rule-based and Programmatic Supervision  
+
 	- Use heuristic logic or rules to assign labels.  
 	- Heuristic rules: Label an image as “shoes” if the filename or product title contains “sneakers”, “boots”, etc.  
 	- Labeling functions (Snorkel-style): Write small scripts—e.g., if description contains "battery" and "voltage", label as electronics.
 
-2. External Knowledge and Metadata-Based  
+#. External Knowledge and Metadata-Based  
+
 	- Leverage structured knowledge or metadata fields.  
 	- Distant supervision: Use a knowledge base like Wikidata to map product names to categories.  
 	- Metadata-based: Use seller-provided category or brand fields as weak labels.
 
-3. User Interaction and Crowd Signals  
+#. User Interaction and Crowd Signals  
+
 	- Use engagement or crowd behavior as indirect supervision.  
 	- Interaction signals: Label clicked items as relevant in search results.  
 	- Crowd feedback: Use user reports or moderation flags to label content as inappropriate.
 
-4. Model-Derived or Proxy Labels  
+#. Model-Derived or Proxy Labels  
+
 	- Use model outputs or related tasks to generate pseudo-labels.  
 	- Pretrained model outputs: Use an off-the-shelf classifier trained on ImageNet to generate initial labels.  
 	- Related task transfer: Use a sentiment classifier trained on English tweets to label product reviews in another platform.
 
-5. Similarity and Co-occurrence Methods  
+#. Similarity and Co-occurrence Methods  
+
 	- Use embedding proximity or co-occurrence patterns.  
 	- Embedding similarity: Label an image as similar to another image with known label based on cosine similarity.  
 	- Co-occurrence: If products with tag "eco-friendly" often co-occur with “recycled”, assign “eco-friendly” when “recycled” appears.
+
+Learning Strategy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- In Supervised learning (clean labels), it's safe to use techniques like hard negative mining or adversarial training because the labels are (mostly) correct.
+
+	- These techniques help refine decision boundaries, especially useful when the dataset is large and well-labeled, and you want to maximize generalization.
+- In weak supervision, we need to avoid premature overfitting to uncertain signals. 
+
+	- Progressive learning, confidence estimation, and robust negative mining (with semantic distance) are safer than early use of sharp boundary techniques.
+	- Applying aggressive boundary-pushing techniques (like hard negative mining or adversarial examples) too early can amplify label noise and lead to overfitting on false signals.
+	- Instead, the strategy should emphasize:
+
+		- Confidence calibration
+		- Noise-robust loss functions
+		- Soft labeling and uncertainty modeling
+- Suitable learning strategies under weak supervision:
+
+	- Positives:
+
+		- Confidence-based sampling: Only use pseudo labels above a threshold.
+		- Agreement filtering: Use ensemble or co-training and pick examples where models agree.
+		- Embedding proximity: Treat nearby examples in the embedding space as positives (soft positives).
+	- Negatives:
+
+		- In-batch negatives (default in contrastive learning)
+		- Distance-aware sampling: Prefer sampling negatives far from the anchor in representation space to avoid false negatives.
+		- Curriculum learning: Start with random negatives, gradually move to harder ones only after early convergence.
 
 Data Centric AI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
