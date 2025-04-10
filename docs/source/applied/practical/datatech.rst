@@ -14,6 +14,10 @@ Resources
 - [lilianweng.github.io] `Learning with not Enough Data Part 3: Data Generation <https://lilianweng.github.io/posts/2022-04-15-data-gen/>`_ 
 - [lilianweng.github.io] `Thinking about High-Quality Human Data <https://lilianweng.github.io/posts/2024-02-05-human-data-quality/>`_
 - [ruder.io] `An overview of proxy-label approaches for semi-supervised learning <https://www.ruder.io/semi-supervised/>`_
+- [sh-tsang.medium.com] `Pseudo-Label: The Simple and Efficient Semi-Supervised Learning Method for Deep Neural Networks <https://sh-tsang.medium.com/review-pseudo-label-the-simple-and-efficient-semi-supervised-learning-method-for-deep-neural-aa11b424ac29>`_
+- [sh-tsang.medium.com] `Mean Teachers are Better Role Models: Weight-Averaged Consistency Targets Improve Semi-Supervised Deep Learning Results <https://sh-tsang.medium.com/review-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-b245d5efa5bf>`_
+- [sh-tsang.medium.com] `WSL: Exploring the Limits of Weakly Supervised Pretraining <https://sh-tsang.medium.com/review-wsl-exploring-the-limits-of-weakly-supervised-pretraining-565ff66e0922>`_
+- [sh-tsang.medium.com] `Billion-Scale Semi-Supervised Learning for Image Classification <https://sh-tsang.medium.com/review-billion-scale-semi-supervised-learning-for-image-classification-801bb2caa6ce>`_
 
 ***********************************************************************
 Label Design
