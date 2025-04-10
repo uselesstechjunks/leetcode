@@ -21,6 +21,7 @@ Resources
 - [sh-tsang.medium.com] `Billion-Scale Semi-Supervised Learning for Image Classification <https://sh-tsang.medium.com/review-billion-scale-semi-supervised-learning-for-image-classification-801bb2caa6ce>`_
 - [reachsumit.com] `Positive and Negative Sampling Strategies for Representation Learning in Semantic Search <https://blog.reachsumit.com/posts/2023/03/pairing-for-representation/>`_
 - [medium.com] `Hard Negative Mining in Nature Language Processing <https://medium.com/@dunnzhang0/hard-negative-mining-in-nature-language-processing-how-to-select-negative-examples-in-66f59da316a4>`_
+- [stanford.edu] `Weak Supervision: A New Programming Paradigm for Machine Learning <https://ai.stanford.edu/blog/weak-supervision/>`_
 
 ***********************************************************************
 Label Design
@@ -227,6 +228,19 @@ Objective
 - weak supervision is a technique where a machine learning algorithm is given very little information to learn from
 - it can be used to learn from data that is difficult or impossible to obtain in traditional supervised learning
 - may be difficult or impossible to obtain the correct answer for a data point, because the answer is not known
+
+Common Techniques
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Heuristic rules – Regex, keyword matches, or decision trees on metadata (e.g., "title contains 'free shipping' -> promotion tag").
+2. Distant supervision – Aligning data with external knowledge bases (e.g., map product name to Wikipedia category).
+3. User interaction signals – Clicks, views, likes, shares (e.g., clicked product likely relevant).
+4. Noisy annotations from other models – Use predictions from a different pretrained model as labels (e.g., object detector labels for image classifier).
+5. Data program outputs – Use Snorkel-style labeling functions with voting or confidence scoring.
+6. Content similarity – Use similarity to confidently labeled examples (e.g., cosine similarity in embedding space).
+7. Metadata fields – Use structured fields (e.g., "brand," "category") as proxy labels.
+8. Co-occurrence patterns – Use frequent tag or attribute co-occurrence (e.g., "iPhone" often co-occurs with "Apple").
+9. Crowd-sourced filters – Soft labels from upvotes/downvotes or flagging behavior.
+10. Weakly related tasks – Use labels from auxiliary tasks (e.g., sentiment -> relevance).
 
 Data Centric AI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
