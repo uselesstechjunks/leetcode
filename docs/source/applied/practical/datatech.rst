@@ -9,6 +9,7 @@ Labeling and Learning Strategies
 ***********************************************************************
 Resources
 ***********************************************************************
+- [lilianweng.github.io] `Generalized Language Models <https://lilianweng.github.io/posts/2019-01-31-lm/>`_
 - [lilianweng.github.io] `Learning with not Enough Data Part 1: Semi-Supervised Learning <https://lilianweng.github.io/posts/2021-12-05-semi-supervised/>`_
 - [lilianweng.github.io] `Learning with not Enough Data Part 2: Active Learning <https://lilianweng.github.io/posts/2022-02-20-active-learning/>`_
 - [lilianweng.github.io] `Learning with not Enough Data Part 3: Data Generation <https://lilianweng.github.io/posts/2022-04-15-data-gen/>`_ 
