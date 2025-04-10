@@ -18,6 +18,7 @@ Resources
 - [sh-tsang.medium.com] `Mean Teachers are Better Role Models: Weight-Averaged Consistency Targets Improve Semi-Supervised Deep Learning Results <https://sh-tsang.medium.com/review-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-b245d5efa5bf>`_
 - [sh-tsang.medium.com] `WSL: Exploring the Limits of Weakly Supervised Pretraining <https://sh-tsang.medium.com/review-wsl-exploring-the-limits-of-weakly-supervised-pretraining-565ff66e0922>`_
 - [sh-tsang.medium.com] `Billion-Scale Semi-Supervised Learning for Image Classification <https://sh-tsang.medium.com/review-billion-scale-semi-supervised-learning-for-image-classification-801bb2caa6ce>`_
+- reachsumit.com `Positive and Negative Sampling Strategies for Representation Learning in Semantic Search <https://blog.reachsumit.com/posts/2023/03/pairing-for-representation/>`_
 
 ***********************************************************************
 Label Design
