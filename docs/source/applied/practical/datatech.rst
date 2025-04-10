@@ -187,24 +187,29 @@ Objective
 Common Techniques
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Rule-based and Programmatic Supervision  
-	- Heuristic rules (e.g., regex, keyword matches)  
-	- Data program outputs (Snorkel-style labeling functions with voting)
+	- Use heuristic logic or rules to assign labels.  
+	- Heuristic rules: Label an image as “shoes” if the filename or product title contains “sneakers”, “boots”, etc.  
+	- Labeling functions (Snorkel-style): Write small scripts—e.g., if description contains "battery" and "voltage", label as electronics.
 
 2. External Knowledge and Metadata-Based  
-	- Distant supervision (aligning with external knowledge bases)  
-	- Using structured metadata fields (e.g., brand, category)
+	- Leverage structured knowledge or metadata fields.  
+	- Distant supervision: Use a knowledge base like Wikidata to map product names to categories.  
+	- Metadata-based: Use seller-provided category or brand fields as weak labels.
 
 3. User Interaction and Crowd Signals  
-	- User interaction signals (clicks, views, likes, shares)  
-	- Crowd-sourced signals (upvotes/downvotes, flagging)
+	- Use engagement or crowd behavior as indirect supervision.  
+	- Interaction signals: Label clicked items as relevant in search results.  
+	- Crowd feedback: Use user reports or moderation flags to label content as inappropriate.
 
 4. Model-Derived or Proxy Labels  
-	- Noisy annotations from other pretrained models  
-	- Labels from weakly related tasks (transfer from a related task)
+	- Use model outputs or related tasks to generate pseudo-labels.  
+	- Pretrained model outputs: Use an off-the-shelf classifier trained on ImageNet to generate initial labels.  
+	- Related task transfer: Use a sentiment classifier trained on English tweets to label product reviews in another platform.
 
 5. Similarity and Co-occurrence Methods  
-	- Content similarity (using cosine similarity on embeddings)  
-	- Co-occurrence patterns (frequent tag/attribute co-occurrence)
+	- Use embedding proximity or co-occurrence patterns.  
+	- Embedding similarity: Label an image as similar to another image with known label based on cosine similarity.  
+	- Co-occurrence: If products with tag "eco-friendly" often co-occur with “recycled”, assign “eco-friendly” when “recycled” appears.
 
 Data Centric AI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
