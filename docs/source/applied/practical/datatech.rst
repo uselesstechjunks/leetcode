@@ -22,6 +22,7 @@ Resources
 - [reachsumit.com] `Positive and Negative Sampling Strategies for Representation Learning in Semantic Search <https://blog.reachsumit.com/posts/2023/03/pairing-for-representation/>`_
 - [medium.com] `Hard Negative Mining in Nature Language Processing <https://medium.com/@dunnzhang0/hard-negative-mining-in-nature-language-processing-how-to-select-negative-examples-in-66f59da316a4>`_
 - [stanford.edu] `Weak Supervision: A New Programming Paradigm for Machine Learning <https://ai.stanford.edu/blog/weak-supervision/>`_
+- [ibm.com] `What is knowledge distillation? <https://www.ibm.com/think/topics/knowledge-distillation>`_
 
 ***********************************************************************
 Label Design
