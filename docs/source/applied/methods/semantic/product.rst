@@ -54,6 +54,10 @@ Models
 #. BERT/XLM-R, DistilBERT
 #. T5 / BART
 #. LLAMA
+#. VideoBERT
+#. VideoMoCo
+#. ViViT
+#. TimeSformer
 
 **************************************************************************
 Application
