@@ -81,3 +81,24 @@ Banned Item Sale
 	- Use domain pretrained encoders for different modalities (e.g., encoders for product search)
 	- Use proxy labels from LLMs
 	- Explore hard negative mining strategies
+
+***************************************************************************
+Banned Product Ads
+***************************************************************************
+#. Problem: Banned product ads sale on facebook news feed
+#. Assumptions:
+	- Scale 
+		- 10M advertisers, 100M/day ad creatives (text/image/video)
+		- 1B/day ad impression
+		- Banned rate: 0.01-0.05%, 10-50k/day
+	- Labels
+		- Expert labels - 10k/day label budget
+		- User flags - 100k/day flagged by users
+		- Policy matching
+	- System behaviour
+		- Submission time queue/block (if high confidence)
+		- real-time trigger based filter
+	- Business metrics
+		- Exposure to banned items
+		- Rejection cost
+		- Review cost
