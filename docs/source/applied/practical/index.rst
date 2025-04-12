@@ -4,8 +4,9 @@ Practical ML
 .. toctree::
 	:maxdepth: 2
 
+	frame
 	rawdata
-	datatech
+	datatech	
 	traindeploy
 	eval
 	obs
