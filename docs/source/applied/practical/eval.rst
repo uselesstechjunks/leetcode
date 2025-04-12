@@ -25,12 +25,71 @@ Golden Set Curation
 
 Metric
 =======================================================================
+- Basic Building Blocks
+
+	- TP = True Positives  
+	- FP = False Positives  
+	- FN = False Negatives  
+	- TN = True Negatives  
+- From these:
+
+	- Precision = TP / (TP + FP)  
+	- Recall = TP / (TP + FN)  
+	- F1-score = 2 × (Precision × Recall) / (Precision + Recall)
+
+Binary Classification
+----------------------------------------------------------------
 - ROC-AUC: Measures ability to distinguish classes across all thresholds; useful when class balance is not extreme.
 - PR-AUC: Focuses on positive class performance (precision vs recall); useful when positives are rare.
 - When to prefer ROC-AUC vs PR-AUC?
 
 	- ROC-AUC: When positives and negatives are balanced.
 	- PR-AUC: When positives are rare (e.g., fraud detection, rare disease prediction).
+
+Multi-class Classification (1 label/sample)
+----------------------------------------------------------------
+- :math:`n_i` is the number of true instances for class i, and :math:`N` is the total number of samples.
+- Accuracy = (Number of correct predictions) / (Total samples)
+- Macro Precision = average of per-class precision  
+
+	- .. math:: \text{MacroPrecision} = \frac{1}{C} \sum_{i=1}^{C} \frac{TP_i}{TP_i + FP_i}
+- Macro Recall = average of per-class recall  
+
+	- .. math:: \text{MacroRecall} = \frac{1}{C} \sum_{i=1}^{C} \frac{TP_i}{TP_i + FN_i}
+- Macro F1 = average of per-class F1  
+
+	- .. math:: \text{MacroF1} = \frac{1}{C} \sum_{i=1}^{C} \text{F1}_i
+- Weighted F1  
+
+	- .. math:: \text{WeightedF1} = \sum_{i=1}^{C} \frac{n_i}{N} \cdot \text{F1}_i
+
+Multi-label Classification (multiple labels/sample)
+----------------------------------------------------------------
+Let :math:`Y_i` be the true labels and :math:`\hat{Y}_i` the predicted labels for instance i.
+
+- Subset Accuracy (Exact Match)  
+
+	.. math:: \text{Accuracy} = \frac{1}{N} \sum_{i=1}^{N} \mathbf{1}(Y_i = \hat{Y}_i)
+- Micro Precision / Recall / F1 (aggregate TP/FP/FN across all labels)  
+  
+	- .. math:: \text{MicroPrecision} = \frac{\sum_{l} TP_l}{\sum_{l} (TP_l + FP_l)}
+	- .. math:: \text{MicroRecall} = \frac{\sum_{l} TP_l}{\sum_{l} (TP_l + FN_l)}
+	- .. math:: \text{MicroF1} = 2 \cdot \frac{\text{MicroPrecision} \cdot \text{MicroRecall}}{\text{MicroPrecision} + \text{MicroRecall}}
+- Macro F1 (average across labels)  
+
+	- .. math:: \text{MacroF1} = \frac{1}{L} \sum_{l=1}^{L} \text{F1}_l
+
+Multi-task Binary Classification (1 binary label per task)
+----------------------------------------------------------------
+Let there be T tasks. Each task is a binary classification problem.
+
+- For each task, compute:
+
+  - :math:`Accuracy\_t = (TP + TN) / (TP + FP + TN + FN)`
+  - :math:`AUC\_t`, :math:`F1\_t` (as per binary classification)
+- MacroAUC / MacroF1 (across tasks)  
+
+  .. math:: \text{MacroF1}_{\text{tasks}} = \frac{1}{T} \sum_{t=1}^{T} \text{F1}_t
 
 Slice-based Performance Evaluation
 =======================================================================
