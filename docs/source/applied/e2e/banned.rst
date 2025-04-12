@@ -10,6 +10,9 @@ Integrity Systems
 Banned Item Sale
 ***************************************************************************
 #. Problem: Prevent banned item sale on Marketplace
+	#. Actors - sellers (users), platform, users
+	#. Entities - listings
+	#. Interests - sellers, platform, users
 #. Assumptions
 	#. Scale
 		- 1M sellers, 50M listings
