@@ -31,3 +31,14 @@ These were some of the excellent resources I referred to in my areas of expertis
 2. Instacart Search system: https://tech.instacart.com/how-instacart-uses-embeddings-to-improve-search-relevance-e569839c3c36
 3. AirBnb Journey Ranker for Multi-stage ranking: https://arxiv.org/pdf/2305.18431
 4. Muti-task RecSys: https://blog.reachsumit.com/posts/2024/01/multi-task-learning-recsys/
+
+Behavioural
+- Tell me about yourself.
+- Why Meta?
+- How do you approach balancing multiple projects and deadlines?
+- Give me an example of a project where you used data and machine learning.
+- Describe a time you used data to influence a product or business decision.
+- Tell me about a time you faced an obstacle and how did you resolve it?
+- How do you solve a disagreement with a team member?
+
+
