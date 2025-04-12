@@ -6,6 +6,7 @@ End-to-end Design
 	:maxdepth: 1
 
 	item
+	banned
 	recsys
 	search	
 	issues
