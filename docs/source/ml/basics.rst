@@ -11,7 +11,7 @@ Entropy, Cross-Entropy, NLL, KL
 ************************************************************************************************
 - Categorical distribution with number of classes `C`.
 - Labels: :math:`y_i=\{0,1\}^{C}\in\mathbb{R}^C`, one-hot.
-- Entropy: :math:`H(p)=-\sum_{k=1}^C p\log(p)`
+- Entropy: :math:`H(p)=-p\log(p)=-\sum_{k=1}^C p_k\log(p_k)`
 - Empirical entropy:
 
 	.. math:: H(\hat{p})=-\sum_{k=1}^C \hat{p}\log(\hat{p})
