@@ -15,7 +15,7 @@ Entropy, Cross-Entropy, NLL, KL
 - Empirical entropy:
 
 	.. math:: H(\hat{p})=-\sum_{k=1}^C \hat{p}\log(\hat{p})
-	- :math:`\hat{p}_i=\frac{1}{N}\sum_{i=1}^N y_i\in\mathbb{R}^C`, :math:`\hat{p}_i(k)=\frac{1}{N}\sum_{i=1}^N\mathbb{1}(y_i(k)=1)\in\mathbb{R}`
+	- :math:`\hat{p}=\frac{1}{N}\sum_{i=1}^N y_i\in\mathbb{R}^C`, :math:`\hat{p}_(k)=\frac{1}{N}\sum_{i=1}^N\mathbb{1}(y_i(k)=1)\in\mathbb{R}`
 - Entropy of predicted probability:
 
 	.. math:: H(\pi)=-\frac{1}{N}\sum_{i=1}^N H(\pi_i)=-\frac{1}{N}\sum_{i=1}^N \sum_{k=1}^C \pi_i(k)\log(\pi_i(k))
