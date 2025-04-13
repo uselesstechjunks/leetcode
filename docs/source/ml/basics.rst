@@ -10,7 +10,7 @@ Fundamentals of Learning
 Entropy, Cross-Entropy, NLL, KL
 ************************************************************************************************
 - Categorical distribution with number of classes `C`.
-- Labels: :math:`y_i={0,1}^{C}\in\mathbb{R}^C`, one-hot.
+- Labels: :math:`y_i=\{0,1\}^{C}\in\mathbb{R}^C`, one-hot.
 - Entropy: :math:`H(p)=-\sum_{k=1}^C p\log(p)`
 - Empirical entropy:
 
