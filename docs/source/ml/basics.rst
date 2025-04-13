@@ -13,9 +13,13 @@ Entropy, Cross-Entropy, NLL, KL
 - Labels: :math:`y_i=\{0,1\}^{C}\in\mathbb{R}^C`, one-hot.
 - Predicted probability: 
 
-	- For sample :math:`i`: :math:`\pi_i\in\mathbb{R}^C`
+	- Density function learned: :math:`\pi`, :math:`\pi(k)` for each category.
+	- For sample :math:`i`: Sample from :math:`\pi`, :math:`\pi_i\in\mathbb{R}^C`
 	- For class :math:`k:`: :math:`\pi_i(k)\in\mathbb{R},k=1\dots C`
 	- For true class: :math:`\pi(y_i)\in\mathbb{R}=\pi_i^Ty_i`
+- Aggregate predictive probability:
+
+	.. math:: \bar{\pi}(k)=\frac{1}{N}\sum_{i=1}^N\pi_i(k)
 - Entropy: :math:`H(p)=-p\log(p)=-\sum_{k=1}^C p_k\log(p_k)`
 - Empirical entropy:
 
@@ -24,7 +28,7 @@ Entropy, Cross-Entropy, NLL, KL
 	- :math:`\hat{p}=\frac{1}{N}\sum_{i=1}^N y_i\in\mathbb{R}^C`
 - Entropy of predicted probability:
 
-	.. math:: H(\pi)=-\frac{1}{N}\sum_{i=1}^N H(\pi_i)=-\frac{1}{N}\sum_{i=1}^N \sum_{k=1}^C \pi_i(k)\log(\pi_i(k))
+	.. math:: H(\pi)\approx-\frac{1}{N}\sum_{i=1}^N H(\pi_i)=-\frac{1}{N}\sum_{i=1}^N \sum_{k=1}^C \pi_i(k)\log(\pi_i(k))
 - Cross-entropy:
 
 	.. math:: H(\hat{p},\pi)=-\frac{1}{N}\sum_{i=1}^N\mathbb{1}(y_i(k)=1)\log(\pi_i(k))=-\frac{1}{N}\sum_{i=1}^N y_i^T\log(\pi_i)=-\frac{1}{N}\sum_{i=1}^N \log(\pi(y_i))=NLL
