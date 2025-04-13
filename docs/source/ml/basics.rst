@@ -11,6 +11,11 @@ Entropy, Cross-Entropy, NLL, KL
 ************************************************************************************************
 - Categorical distribution with number of classes `C`.
 - Labels: :math:`y_i=\{0,1\}^{C}\in\mathbb{R}^C`, one-hot.
+- Predicted probability: 
+
+	- For sample :math:`i`: :math:`\pi_i\in\mathbb{R}^C`
+	- For class :math:`k:`: :math:`\pi_i(k)\in\mathbb{R},k=1\dots C`
+	- For true class: :math:`\pi(y_i)\in\mathbb{R}`
 - Entropy: :math:`H(p)=-p\log(p)=-\sum_{k=1}^C p_k\log(p_k)`
 - Empirical entropy:
 
@@ -22,7 +27,10 @@ Entropy, Cross-Entropy, NLL, KL
 	.. math:: H(\pi)=-\frac{1}{N}\sum_{i=1}^N H(\pi_i)=-\frac{1}{N}\sum_{i=1}^N \sum_{k=1}^C \pi_i(k)\log(\pi_i(k))
 - Cross-entropy:
 
-	.. math:: H(\hat{p},\pi)=-\frac{1}{N}\sum_{i=1}^N\mathbb{1}(y_i(k)=1)\log(\pi_i(k))=-\frac{1}{N}\sum_{i=1}^N y_i\log(\pi(y_i))=-\frac{1}{N}\sum_{i=1}^N \log(\pi(y_i))
+	.. math:: H(\hat{p},\pi)=-\frac{1}{N}\sum_{i=1}^N\mathbb{1}(y_i(k)=1)\log(\pi_i(k))=-\frac{1}{N}\sum_{i=1}^N y_i^T\log(\pi_i(k))=-\frac{1}{N}\sum_{i=1}^N \log(\pi(y_i))=NLL
+- KL
+
+	.. math:: KL(\hat{p}||\pi)=\hat{p}\log(\frac{\hat{p}}{\pi})=\sum_{k=1}^C \hat{p}(k)\log(\frac{\hat{p}(k)}{\pi(k)})=H(\hat{p},\pi)-H(\hat{p})
 
 ************************************************************************************************
 Defining the Objective
