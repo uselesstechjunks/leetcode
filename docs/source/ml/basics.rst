@@ -12,10 +12,14 @@ Entropy, Cross-Entropy, NLL, KL
 - Categorical distribution with number of classes `C`.
 - Labels: :math:`y_i={0,1}^{C}\in\mathbb{R}^C`, one-hot.
 - Entropy: :math:`H(p)=-\sum_{k=1}^C p\log(p)`
-- Empirical entropy: :math:`H(\hat{p})=-\sum_{k=1}^C \hat{p}\log(\hat{p})` 
+- Empirical entropy:
 
+	.. math:: H(\hat{p})=-\sum_{k=1}^C \hat{p}\log(\hat{p})
 	- :math:`\hat{p}_i(k)=\frac{1}{N}\sum_{i=1}^N\mathbb{1}(y_i(k))\in\mathbb{R}`
 	- :math:`\hat{p}_i=\frac{1}{N}\sum_{i=1}^N y_i\in\mathbb{R}^C`
+- Entropy of predicted probability:
+
+	.. math:: H(\pi)=\frac{1}{N}\sum_{i=1}^N H(\pi_i)=-\frac{1}{N}\sum_{i=1}^N \sum_{k=1}^C \pi_i(k)\log(\pi_i(k))
 
 ************************************************************************************************
 Defining the Objective
