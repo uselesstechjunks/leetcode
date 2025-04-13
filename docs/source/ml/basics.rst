@@ -21,7 +21,7 @@ Entropy, Cross-Entropy, NLL, KL
 	.. math:: H(\pi)=-\frac{1}{N}\sum_{i=1}^N H(\pi_i)=-\frac{1}{N}\sum_{i=1}^N \sum_{k=1}^C \pi_i(k)\log(\pi_i(k))
 - Cross-entropy:
 
-	.. math:: H(\hat{p},\pi)=-\frac{1}{N}\sum_{i=1}^N y_i\log(\pi(y_i))=-\frac{1}{N}\sum_{i=1}^N\mathbb{1}(y_i(k)=1)\log(\pi_i(k))
+	.. math:: H(\hat{p},\pi)=-\frac{1}{N}\sum_{i=1}^N\mathbb{1}(y_i(k)=1)\log(\pi_i(k))=-\frac{1}{N}\sum_{i=1}^N y_i\log(\pi(y_i))=-\frac{1}{N}\sum_{i=1}^N \log(\pi(y_i))
 
 ************************************************************************************************
 Defining the Objective
