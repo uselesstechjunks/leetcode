@@ -2,7 +2,7 @@
 End-to-end Design
 #####################################################################################
 
-.. image:: img/framework.png
+.. image:: ../../img/framework.png
 	:width: 600
 	:alt: Framework
 
