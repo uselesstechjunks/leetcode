@@ -15,7 +15,7 @@ Entropy, Cross-Entropy, NLL, KL
 
 	- For sample :math:`i`: :math:`\pi_i\in\mathbb{R}^C`
 	- For class :math:`k:`: :math:`\pi_i(k)\in\mathbb{R},k=1\dots C`
-	- For true class: :math:`\pi(y_i)\in\mathbb{R}`
+	- For true class: :math:`\pi(y_i)\in\mathbb{R}=\pi_i^Ty_i`
 - Entropy: :math:`H(p)=-p\log(p)=-\sum_{k=1}^C p_k\log(p_k)`
 - Empirical entropy:
 
