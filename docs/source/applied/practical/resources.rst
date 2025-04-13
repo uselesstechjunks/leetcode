@@ -21,6 +21,7 @@ Practical Resources
 	- [elastic.co] `Practical BM25 — Part 2: The BM25 Algorithm and its variables <https://www.elastic.co/blog/practical-bm25-part-2-the-bm25-algorithm-and-its-variables/>`_
 2. Collection of Topics:
 
+	- [docs.aws] `Building a Machine Learning Application <https://docs.aws.amazon.com/machine-learning/latest/dg/building-machine-learning.html>`_
 	- [github.io] `Lil’Log <https://lilianweng.github.io/>`_
 	- [ruder.io] `A blog about natural language processing and machine learning <https://www.ruder.io/>`_
 	- [reachsumit.com] `Sumit's Diary <https://blog.reachsumit.com/>`_
