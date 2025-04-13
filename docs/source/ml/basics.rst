@@ -18,7 +18,7 @@ Entropy, Cross-Entropy, NLL, KL
 
 	- Density function learned: :math:`\pi`, :math:`\pi(k)` for each category.
 	- For sample :math:`i`: Sample from :math:`\pi`, :math:`\pi_i\in\mathbb{R}^C`
-	- For class :math:`k:`: :math:`\pi_i(k)\in\mathbb{R},k=1\dots C`
+	- For class :math:`k`: :math:`\pi_i(k)\in\mathbb{R},k=1\dots C`
 	- For true class: :math:`\pi(y_i)\in\mathbb{R}=\pi_i^Ty_i`
 - Aggregate predictive probability:
 
