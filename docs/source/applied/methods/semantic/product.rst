@@ -155,46 +155,65 @@ Text-Based Product Search (Metadata Only)
 	- Use knowledge distillation to compress dual encoder  
 	- Use entity linking to match structured taxonomy (optional)
 
-Product Taxonomy Mapping (Image-Only)
+Product Taxonomy Mapping
 ==========================================================================
--  Problem  
-	- Automatically assign a product to a node in a multi-level product taxonomy using only product images. The taxonomy is tree-structured (e.g., Fashion > Shoes > Sneakers).
-- Use Cases  
-	- Content organization for search and recommendation  
-	- Navigation UX (browse by category)  
-	- Catalog deduplication and quality control
-- Input / Output  
-	- Input: Product image  
-	- Output: Category ID (corresponding to a node in taxonomy tree)
-- Problem Type  
-	- Hierarchical classification (multi-class over taxonomy nodes, flat or structured)
-- Model Choices  
-	- CNN-based: ResNet, EfficientNet  
-	- Transformer-based: ViT, Swin Transformer  
-	- Classification head over leaf categories or internal nodes  
-	- Optional: train with label smoothing or hierarchy-aware loss (e.g., hierarchical cross-entropy)
-- Labeling Scenarios  
-	- Case A: Human-labeled image-to-category pairs  
-	- Case B: Semi-supervised learning using unlabeled product images and weak labels (e.g., mined from metadata)  
-	- Case C: Noisy user tags mapped to taxonomy nodes using heuristics or weak supervision
-- Training Setup  
-	- Pretrain on ImageNet or similar  
-	- Fine-tune with cross-entropy loss on labeled taxonomy categories  
-	- Data augmentation: crop, resize, brightness, rotation  
-	- Optional: curriculum learning from root to leaf categories
-- Evaluation Metrics  
-	- Top-1 and Top-5 accuracy on leaf nodes  
-	- Hierarchical precision/recall (distance in tree between predicted and true node)
+Task: Design a product categorisation tool for facebook marketplace
 
-- Scaling Considerations  
-	- Class imbalance (few-shot for some nodes)  
-	- Long-tail handling via label smoothing or data resampling  
-	- Frequent updates as taxonomy evolves  
-	- Efficient inference on mobile or web apps
-- Alternative Methods  
-	- Zero-shot classification using CLIP or BLIP with node descriptions  
-	- Retrieval-based: learn embeddings and match against category exemplars  
-	- Multistage: coarse classifier followed by fine-grained classifier
+Problem
+--------------------------------------------------------------------------
+#. Use-case
+	#. System - multiple possible use-cases
+		#. >> Real time assist to the sellers during listing creation time
+		#. Post upload clean-up/taxonomy mapping (invisible to the seller)
+		#. Creation of category keyword index (invisible to the seller)
+		#. Reroute to the quality/compliance/integrity team
+	#. Actors - sellers, buyers, platform
+	#. Entities - listings, user profiles, history
+	#. Interests -
+		#. Seller - reduce manual work (selecting from suggested category list)
+		#. Buyers - find more relevant listings (search/recommendation)
+		#. Platform - increase transactions made on the platform, increase quality/compliance/integrity
+#. Scale
+	#. 1M sellers, 50M listings live, 1M/day new listings, listings lifespan - days-months
+	#. Listings are diverse, sellers are global - needs to generalise well on unseen data
+#. Signals
+	#. Product database 
+		#. Majority of the listings don't have taxonomy - 40M
+		#. 10M listings have noisy taxonomy assigned by users (may/may not be correct)
+		#. 20k listings with correct taxonomy assigned by human experts
+	#. Seller profile, reputation
+#. Business kpis
+	#. Successful session rate (#success sessions/#sessions)
+	#. MRR
+	#. CTR on search/recommendation
+	#. Taxonomy coverage
+#. Misc
+	#. Fixed set of categories - flat, 5k categories
+	#. Each listing belongs to 1 single leaf category
+
+Solution
+--------------------------------------------------------------------------
+#. Problem type
+	#. Learning to rank - listing as the query, category lists is the doc, pointwise learning to rank
+	#. Multi-class classification with fixed leaf labels from a predefined taxonomy list as target categories
+	#. Learning to rank is better for 
+#. Data
+	#. Listings
+		#. Content - title, description, images (multiple), metadata (product age, dimensions, colour)
+		#. Context - upload time, upload location
+	#. Seller 
+		#. User profile - demographics - agegroup, gender, geolocation, account age
+		#. Activity in communities/groups
+		#. Stats - past listings, current listings, reputation (might be useful to determine if user-assigned label is noisy)
+#. Feature
+#. Learning strategy
+#. Dataset curation
+#. Model
+#. Training
+#. Eval
+#. Deployment
+#. Monitoring
+#. Improvements
 
 Dynamic Tag Suggestion System (Image-Only)
 ==========================================================================
