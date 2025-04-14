@@ -1,5 +1,5 @@
 ##########################################################################
-Multimodal Product Understanding
+Domain Understanding
 ##########################################################################
 .. contents:: Table of Contents
 	:depth: 2
