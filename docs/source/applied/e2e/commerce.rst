@@ -13,38 +13,26 @@ Product Understanding, Integrity, Search, Recommendation
 *********************************************************************************
 Domain Understanding
 *********************************************************************************
-Entities
-=================================================================================
 Listings
----------------------------------------------------------------------------------
-#. title/desc
-#. images
-#. geolocation
-#. price
-#. category - taxonomy
-#. tags (category dependent)
-
-	#. metadata - attributes (colour, size)
-	#. condition - new, refurbished
-	#. style - minimalistic, vintage, casual
-	#. use-case - gift ideas, travel friendly
-	#. occasion - wedding, office, gym
-	#. catchphrases - open ended, clickbaity
-
-Characteristics
 =================================================================================
-Listings
----------------------------------------------------------------------------------
-#. title/desc - uninformative, misleading, spelling/grammar errors
-#. images - low quality
-#. price - incorrect
-#. category - mostly missing, incorrect
-#. tags - mostly missing, incorrect
-#. geolocation 
+.. csv-table::
+	:header: "Attribute", "Sub-attribute", "Examples", "Characteristics"
+	:align: center
 	
-	- user provided (incorrect)
-	- inferred by gps 
-	- upload location might be different than availability
+		Title/Description, , , uninformative; misleading; spelling/grammar errors
+		Images, , , low quality
+		Geo-location, , ,
+		, user provided, , incorrect
+		, gps inferred , , incorrect; upload location might be different than product availability
+		Price, , , incorrect; misleading/scam
+		Category, , , mostly missing; possibly incorrect
+		Tags, , , category dependent; mostly missing; possibly incorrect
+		, Attributes, colour; size,
+		, Condition, new; refurbished, 
+		, Style, minimalistic; vintage; casual,
+		, Use-case, gift-ideas; travel friendly,
+		, Occasion, wedding; office; gym,
+		, Catchphrases, huge discount, open-ended; clickbaity
 *********************************************************************************
 Product Understanding
 *********************************************************************************
