@@ -22,17 +22,17 @@ Listings
 		1. Title/Description, , , uninformative; misleading; spelling/grammar errors
 		2. Images, , , low quality
 		3. Geo-location, , ,
-		, , , user provided -> low coverage; incorrect
-		, , , gps inferred -> high coverage; incorrect; upload location might be different than product availability
+		, Postal, , user provided -> low coverage; incorrect
+		, Lat-Long, , gps inferred -> high coverage; incorrect; upload location might be different than product availability
 		4. Price, , , incorrect; misleading/scam
 		5. Category, , , mostly missing; possibly incorrect
 		6. Tags, , , category dependent; mostly missing; possibly incorrect
-		, Attributes, colour; size,
-		, Condition, new; refurbished, 
-		, Style, minimalistic; vintage; casual,
-		, Use-case, gift-ideas; travel friendly,
-		, Occasion, wedding; office; gym,
-		, Catchphrases, huge discount, open-ended; clickbaity
+		, 1. Attributes, colour; size,
+		, 2. Condition, new; refurbished, 
+		, 3. Style, minimalistic; vintage; casual,
+		, 4. Use-case, gift-ideas; travel friendly,
+		, 5. Occasion, wedding; office; gym,
+		, 6. Catchphrases, huge discount, open-ended; clickbaity
 *********************************************************************************
 Product Understanding
 *********************************************************************************
