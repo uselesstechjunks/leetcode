@@ -1,5 +1,5 @@
 #################################################################################
-Product Understanding, Search, Recommendation
+Product Understanding, Integrity, Search, Recommendation
 #################################################################################
 .. image:: ../../img/marketplace.png
 	:width: 600
