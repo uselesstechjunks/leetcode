@@ -10,6 +10,7 @@ End-to-end Design
 	:maxdepth: 1
 
 	item
+	product
 	banned
 	recsys
 	search	
