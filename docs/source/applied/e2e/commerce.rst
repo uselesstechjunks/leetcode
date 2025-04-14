@@ -17,11 +17,12 @@ Listings
 =================================================================================
 .. csv-table::
 	:header: "Attribute", "Sub-attribute", "Examples", "Characteristics"
+	:widths: 16 12 12 32
 	:align: center
 	
-		1. Title/Description, , , uninformative; misleading; spelling/grammar errors
+		1. Title/Desc, , , uninformative; misleading; spelling/grammar errors
 		2. Images, , , low quality
-		3. Geo-location, , ,
+		3. Location, , ,
 		, Postal, , user provided -> low coverage; incorrect
 		, Lat-Long, , gps inferred -> high coverage; incorrect; upload location might be different than product availability
 		4. Price, , , incorrect; misleading/scam
