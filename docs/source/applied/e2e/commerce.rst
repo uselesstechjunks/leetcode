@@ -22,8 +22,8 @@ Listings
 		1. Title/Description, , , uninformative; misleading; spelling/grammar errors
 		2. Images, , , low quality
 		3. Geo-location, , ,
-		, user provided, , incorrect
-		, gps inferred , , incorrect; upload location might be different than product availability
+		, , , user provided -> low coverage; incorrect
+		, , , gps inferred -> high coverage; incorrect; upload location might be different than product availability
 		4. Price, , , incorrect; misleading/scam
 		5. Category, , , mostly missing; possibly incorrect
 		6. Tags, , , category dependent; mostly missing; possibly incorrect
