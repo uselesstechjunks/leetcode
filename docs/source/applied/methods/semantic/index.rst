@@ -1,7 +1,8 @@
 ####################################################################################
-Semantic Understanding
+Multimodal Product Understanding
 ####################################################################################
 .. toctree::
 	:maxdepth: 3
 	
-	product
+	domain
+	listings
