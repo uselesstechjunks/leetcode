@@ -9,9 +9,7 @@ End-to-end Design
 .. toctree::
 	:maxdepth: 1
 
-	item
 	commerce
 	integrity
-	recsys
 	search	
 	issues
