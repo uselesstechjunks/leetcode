@@ -1,6 +1,10 @@
 #################################################################################
 Product Understanding, Search, Recommendation
 #################################################################################
+.. image:: ../../img/marketplace.png
+	:width: 600
+	:alt: Framework
+
 .. contents:: Table of Contents
 	:depth: 2
 	:local:
