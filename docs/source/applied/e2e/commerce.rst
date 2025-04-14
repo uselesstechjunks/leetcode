@@ -19,14 +19,14 @@ Listings
 	:header: "Attribute", "Sub-attribute", "Examples", "Characteristics"
 	:align: center
 	
-		Title/Description, , , uninformative; misleading; spelling/grammar errors
-		Images, , , low quality
-		Geo-location, , ,
+		1. Title/Description, , , uninformative; misleading; spelling/grammar errors
+		2. Images, , , low quality
+		3. Geo-location, , ,
 		, user provided, , incorrect
 		, gps inferred , , incorrect; upload location might be different than product availability
-		Price, , , incorrect; misleading/scam
-		Category, , , mostly missing; possibly incorrect
-		Tags, , , category dependent; mostly missing; possibly incorrect
+		4. Price, , , incorrect; misleading/scam
+		5. Category, , , mostly missing; possibly incorrect
+		6. Tags, , , category dependent; mostly missing; possibly incorrect
 		, Attributes, colour; size,
 		, Condition, new; refurbished, 
 		, Style, minimalistic; vintage; casual,
