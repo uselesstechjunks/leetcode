@@ -249,13 +249,12 @@ different types and technique of weak supervision
 
 5. No Labels
 =======================================================================
-* [paper] Self-Supervised Learning for Recommender Systems: A Survey
-
-[TODO]
+Self-Supervised Learning
 -----------------------------------------------------------------------
 - Feature Selection: Mutual information, SHAP, correlation-based selection.
 - Dealing with Class Imbalance: SMOTE, focal loss, balanced batch sampling.
 - Bias and Fairness: Bias detection, de-biasing strategies, fairness-aware training.
+- [paper] Self-Supervised Learning for Recommender Systems: A Survey
 
 Label Transformation
 =======================================================================
