@@ -1,5 +1,5 @@
 #########################################################################
-Search & Recommendation Systems
+Stages in Search & Recommendation Systems
 #########################################################################
 .. contents:: Table of Contents
 	:depth: 2
