@@ -27,20 +27,12 @@ Resources
 ***********************************************************************
 Label Design
 ***********************************************************************
-1. Insufficient Labels - Imbalanced Class
+1. Class imbalance
 =======================================================================
 1. Data Augmentation
 -----------------------------------------------------------------------
-Adjusting the data distribution during training.
-
 #. Positive Class Upsampling
-
-	- Duplicate instances of rare positive labels.  
-	- Example: YouTube recommendation may upsample watch-time-heavy interactions (longer views) to counteract the overwhelming number of skipped videos.  
 #. Negative Class Downsampling
-
-	- Randomly remove excess negative samples to balance the dataset.  
-	- Example: Search ranking may downsample non-clicked results when training a click prediction model.  
 #. Hard Negative Mining
 
 	- Instead of uniform downsampling, select high-confidence false negatives (items that nearly got engagement).  
@@ -53,10 +45,8 @@ Adjusting the data distribution during training.
 	- Generate synthetic training data when positive signals are rare.  
 	- Example: TikTok might use GAN-based augmentation to create synthetic engagement samples for new videos that lack enough clicks. 
 
-2. Weight Adjustment
+2. Loss weights
 -----------------------------------------------------------------------
-Adjusting model loss function to focus more on the minority class.
-
 #. Inverse Propensity Weighting (IPW):  
 
 	- Assign different weights to samples based on their rarity.  
@@ -131,7 +121,7 @@ Industry Reference:
 
 - `FAISS (Facebook AI Similarity Search) <https://github.com/facebookresearch/faiss>`_: While primarily for efficient ANN search, FAISS is an example of a system that supports scalable negative sampling in embedding-based retrieval.  
 
-2. Inaccurate Labels - Noisy Labels
+2. Noisy Labels
 =======================================================================
 1. Label Smoothing 
 -----------------------------------------------------------------------
@@ -139,14 +129,14 @@ Industry Reference:
 
 2. Noise Filtering
 -----------------------------------------------------------------------
-- Human-in-the-loop Use human feedback to verify or correct labels in the dataset.
-- Confidence-based Filtering Remove samples with low model confidence or high disagreement between multiple annotators.
+- Human-in-the-loop: Use human feedback to verify or correct labels in the dataset.
+- Confidence-based Filtering: Remove samples with low model confidence or high disagreement between multiple annotators.
 
 3. Outlier Detection
 -----------------------------------------------------------------------
 - Apply algorithms (e.g., Isolation Forest, Z-score method) to detect outliers in the dataset and remove instances with highly suspicious labels.
 
-3. Insufficient Labels - Sparse Labels
+3. Low Data Regime
 =======================================================================
 1. Semi Supervised Learning
 -----------------------------------------------------------------------
@@ -172,7 +162,7 @@ Resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - [burrsettles.com] `Active Learning Literature Survey <https://burrsettles.com/pub/settles.activelearning.pdf>`_
 
-4. Inexact/Uninformative Labels
+4. Proxy Labels
 =======================================================================
 Weak Supervision
 -----------------------------------------------------------------------
