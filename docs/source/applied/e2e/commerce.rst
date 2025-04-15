@@ -53,6 +53,43 @@ Moderation
 *********************************************************************************
 Product Search
 *********************************************************************************
+1. use-case
+	1. system: 
+		- text queries
+		- system returns a list of listings
+		- sorted in decreasing order of relevance
+		- filtered by geolocation
+		- [x] personalisation
+		- [x] contextualisation
+		- available across different surfaces
+	2. actions (users)
+		- click -> product details page -> contact seller
+		- scroll past
+	2. actors:
+		- users, sellers, platform
+	3. interests:
+		- users: find most relevant results
+		- sellers: increase coverage of their listings
+		- platform:
+			- [x] quality: results should not contain listings that violate policies
+			- user engagement: 
+2. business kpis
+	- CTR, coverage, QBR, DwellTime
+3. scale
+	- 1M sellers, 50M listings, 1M/day new listings
+	- 1B users, 95% on mobile device, low latency req
+4. signals
+	- search logs (noisy)
+	- baseline - kw search
+5. misc
+	- surrogate systems: 
+		- kw extraction
+		- taxonomy inference
+		- attribute extraction
+		- dynamic tag suggestion
+		- moderation
+		- query understanding
+
 Keyword search
 =================================================================================
 Semantic search
