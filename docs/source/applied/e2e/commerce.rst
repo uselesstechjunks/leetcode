@@ -53,17 +53,21 @@ Moderation
 *********************************************************************************
 Product Search
 *********************************************************************************
+Problem Understanding
+=================================================================================
 1. use-case
 	1. system: 
 		- text queries
 		- system returns a list of listings
-		- sorted in decreasing order of relevance
+		- sorted to maximise engagement
 		- filtered by geolocation
-		- [x] personalisation
-		- [x] contextualisation
+		- [*] personalisation
+		- [*] contextualisation
 		- available across different surfaces
 	2. actions (users)
-		- click -> product details page -> contact seller
+		- click -> product details page 
+			-> save to wishlist
+			-> contact seller
 		- scroll past
 	2. actors:
 		- users, sellers, platform
@@ -71,29 +75,48 @@ Product Search
 		- users: find most relevant results
 		- sellers: increase coverage of their listings
 		- platform:
-			- [x] quality: results should not contain listings that violate policies
+			- [out of scope] quality: results should not contain listings that violate policies
 			- user engagement: 
 2. business kpis
-	- CTR, coverage, QBR, DwellTime
+	- CTR, CVR, coverage, QBR, DwellTime
 3. scale
 	- 1M sellers, 50M listings, 1M/day new listings
-	- 1B users, 95% on mobile device, low latency req
+	- 1B users, 95% on mobile device
+	- low latency req (50ms for retrieval, 200ms for rerank)
 4. signals
-	- search logs (noisy)
+	- search logs
+		- events: click, dwell-time, contacted-seller, added-to-wishlist
+			- clicks: 10-20%, noisy (weak signal - curiosity, clickbaits)
+			- dwell-time: 
+			- added-to-wishlist: 1-3%, (stronger - intent to purchase later, sparse, niche/personalised)
+			- contacted-seller: 0.1-0.5% (strongest - intent to purchase now)
+		- depends on: 
+			- platform: surface, display-pos
+			- seller: listing-quality, seller reputation, previous engagement with seller
+			- user: user's click propensity overall/query-specific/category-specific/attribute-specific
 	- baseline - kw search
 5. misc
-	- surrogate systems: 
-		- kw extraction
-		- taxonomy inference
-		- attribute extraction
-		- dynamic tag suggestion
-		- moderation
-		- query understanding
+	- subsystems
+		- listings side
+			- kw extraction
+			- taxonomy classification
+			- attribute extraction
+		- query side
+			- query segmentation - 
+			- query intent - browse, buy, brand
+			- query rewrite/expansion
 
-Keyword search
+Sparse Retrieval
 =================================================================================
-Semantic search
+Dense Retrieval
 =================================================================================
+Fusion
+=================================================================================
+Re-ranking
+=================================================================================
+Personalised Search
+=================================================================================
+
 *********************************************************************************
 Product Recommendation
 *********************************************************************************
