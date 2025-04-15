@@ -66,8 +66,8 @@ Problem Understanding
 		- available across different surfaces
 	2. actions (users)
 		- click -> product details page 
-			-> save to wishlist
-			-> contact seller
+			- save to wishlist
+			- contact seller
 		- scroll past
 	2. actors:
 		- users, sellers, platform
