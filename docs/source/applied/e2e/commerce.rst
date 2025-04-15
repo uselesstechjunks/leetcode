@@ -88,8 +88,8 @@ Problem Understanding
 		- events: click, dwell-time, contacted-seller, added-to-wishlist
 			- clicks: 10-20%, noisy (weak signal - curiosity, clickbaits)
 			- dwell-time: 
-			- added-to-wishlist: 1-3%, (stronger - intent to purchase later, sparse, niche/personalised)
-			- contacted-seller: 0.1-0.5% (strongest - intent to purchase now)
+			- added-to-wishlist: 1-3%, (stronger - delayed feedback, sparse, niche/personalised)
+			- contacted-seller: 0.1-0.5% (delayed feedback)
 		- depends on: 
 			- platform: surface, display-pos
 			- seller: listing-quality, seller reputation, previous engagement with seller
