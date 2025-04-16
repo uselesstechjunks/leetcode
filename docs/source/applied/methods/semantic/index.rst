@@ -6,3 +6,4 @@ Multimodal Product Understanding
 	
 	domain
 	listings
+	query
