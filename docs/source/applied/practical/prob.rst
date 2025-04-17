@@ -132,3 +132,64 @@ Tail Query Recovery and Head Bias
 46. You pre-train your item tower on co-clicks and train your user tower on click logs. The model over-personalizes and fails to generalize on rare or new queries. How do you debug and fix it?
 
 47. You train a transformer reranker on full impression logs. For long-tail queries, it often gives irrelevant results even when candidates are fine. What could be going wrong?
+
+*************************************************************************
+Product Categorization in Marketplace
+*************************************************************************
+Problem:
+Given a noisy listing (title, description, image, maybe user tags), assign it to a category from a flat taxonomy of 300 classes, which are semantically related and possibly hierarchical (e.g., Electronics → Phones → Smartphones).
+
+*************************************************************************
+Ads Moderation: Modeling + System Design
+*************************************************************************
+Q1.
+You are building an ad moderation classifier that must detect multiple violations such as:
+- prohibited item (e.g., drugs, weapons)
+- misinformation
+- sensational claims
+- political content
+
+Ads often violate multiple policies at once.
+How would you frame this modeling task? What loss and evaluation metric would you use?
+
+Q2.
+Your ads moderation model is missing many violations in edge cases (e.g., subtle wording, region-specific political terms), even though precision is high.
+How would you improve recall without exploding false positives?
+
+Q3.
+Policy violations are reviewed by human moderators. Most examples labeled as “clean” are never manually reviewed. You suspect some positives are missed.
+How would you modify your training setup or model to handle this label noise?
+
+Q4.
+You train a binary classifier for each violation type using shared encoders. During training, you observe that some heads overfit (training AUC > 0.99, val AUC < 0.7), while others underperform.
+What’s the likely cause, and how would you fix it?
+
+Q5.
+You need to moderate ads across 20 countries. Certain violation types (e.g., political content) vary by region.
+Would you use one model or multiple? How would you share information across regions without hurting precision?
+
+*************************************************************************
+Content Understanding: Taxonomy + Semantics
+*************************************************************************
+Q6.
+You are building a content classifier that tags posts into topics:
+- parenting, dating, career, mental health, etc.
+Each post can belong to multiple overlapping topics.
+
+What modeling and loss design would you use? How would you deal with overlapping labels?
+
+Q7.
+Your topic classifier performs poorly on long posts. Investigation shows that key topics are mentioned late in the text.
+What architectural changes would you consider?
+
+Q8.
+You’re tagging posts using a 4-level topic hierarchy. You only have partial labels for most training examples (e.g., only level-1 or level-2).
+How would you design the model and loss to train on this partially labeled data?
+
+Q9.
+You use a flat softmax over 500 topics. Most errors are near-misses (e.g., “career coaching” vs. “job hunting”).
+What can you change in the architecture or loss to make the model confusion-aware?
+
+Q10.
+Your content classifier is used for downstream moderation (e.g., escalation to reviewers). Reviewers complain that the top-k predictions often skip low-frequency but critical categories.
+How would you redesign the loss, training data, or post-processing to account for this?
