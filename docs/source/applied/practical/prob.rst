@@ -96,7 +96,7 @@ Section 5: Debugging and Failure Diagnosis — More Questions
 34. Your reranker performs poorly on longer product descriptions. Top-5 retrieval recall is good. What could be going wrong, and where would you fix it?
 
 *************************************************************************
-Cross-Modal Retrieval, Ranking, and Personalization
+Section 6: Cross-Modal Retrieval, Ranking, and Personalization
 *************************************************************************
 35. You're training a dual-encoder for multimodal product listings (title + image). In deployment, only text is available for user queries. How do you ensure your model still learns strong cross-modal alignment?
 
@@ -107,7 +107,7 @@ Cross-Modal Retrieval, Ranking, and Personalization
 38. You want to personalize fashion search results using both listing images and user preferences (past clicks, style). What architecture would let you combine static image features and dynamic user embeddings efficiently?
 
 *************************************************************************
-Latency Constraints and Inference Optimizations
+Section 7: Latency Constraints and Inference Optimizations
 *************************************************************************
 39. You deploy a ranking model with 3 heads (click, save, purchase). Latency increases non-linearly with each head. What architecture changes could reduce inference time while preserving multi-objective performance?
 
@@ -116,7 +116,7 @@ Latency Constraints and Inference Optimizations
 41. A production image tower is bottlenecking your feed ranking system. What methods could you use to cache or partially precompute features to stay within latency budget?
 
 *************************************************************************
-ANN-Specific Retrieval Challenges
+Section 8: ANN-Specific Retrieval Challenges
 *************************************************************************
 42. You fine-tune your user-item towers with InfoNCE and ANN recall@100 improves. But downstream ranking quality degrades. You suspect ANN misalignment. What are the most likely failure points?
 
@@ -125,7 +125,7 @@ ANN-Specific Retrieval Challenges
 44. Your ANN index has high recall, but retrieved items are dominated by a few popular clusters. How would you fix embedding drift or improve diversity?
 
 *************************************************************************
-Tail Query Recovery and Head Bias
+Section 9: Tail Query Recovery and Head Bias
 *************************************************************************
 45. You train a dense retriever on search queries. Head queries dominate logs. During eval, recall@100 for tail queries is low. What model and sampling strategies would help?
 
@@ -134,13 +134,13 @@ Tail Query Recovery and Head Bias
 47. You train a transformer reranker on full impression logs. For long-tail queries, it often gives irrelevant results even when candidates are fine. What could be going wrong?
 
 *************************************************************************
-Product Categorization in Marketplace
+Section 10: Product Categorization in Marketplace
 *************************************************************************
 Problem:
 Given a noisy listing (title, description, image, maybe user tags), assign it to a category from a flat taxonomy of 300 classes, which are semantically related and possibly hierarchical (e.g., Electronics → Phones → Smartphones).
 
 *************************************************************************
-Ads Moderation: Modeling + System Design
+Section 11: Ads Moderation: Modeling + System Design
 *************************************************************************
 Q1.
 You are building an ad moderation classifier that must detect multiple violations such as:
@@ -169,7 +169,7 @@ You need to moderate ads across 20 countries. Certain violation types (e.g., pol
 Would you use one model or multiple? How would you share information across regions without hurting precision?
 
 *************************************************************************
-Content Understanding: Taxonomy + Semantics
+Section 12: Content Understanding: Taxonomy + Semantics
 *************************************************************************
 Q6.
 You are building a content classifier that tags posts into topics:
