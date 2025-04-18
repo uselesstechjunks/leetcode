@@ -171,25 +171,75 @@ Would you use one model or multiple? How would you share information across regi
 *************************************************************************
 Section 12: Content Understanding: Taxonomy + Semantics
 *************************************************************************
-Q6.
-You are building a content classifier that tags posts into topics:
+Q6. You are building a content classifier that tags posts into topics:
 - parenting, dating, career, mental health, etc.
 Each post can belong to multiple overlapping topics.
 
 What modeling and loss design would you use? How would you deal with overlapping labels?
 
-Q7.
-Your topic classifier performs poorly on long posts. Investigation shows that key topics are mentioned late in the text.
+Q7. Your topic classifier performs poorly on long posts. Investigation shows that key topics are mentioned late in the text.
 What architectural changes would you consider?
 
-Q8.
-You’re tagging posts using a 4-level topic hierarchy. You only have partial labels for most training examples (e.g., only level-1 or level-2).
+Q8. You’re tagging posts using a 4-level topic hierarchy. You only have partial labels for most training examples (e.g., only level-1 or level-2).
 How would you design the model and loss to train on this partially labeled data?
 
-Q9.
-You use a flat softmax over 500 topics. Most errors are near-misses (e.g., “career coaching” vs. “job hunting”).
+Q9. You use a flat softmax over 500 topics. Most errors are near-misses (e.g., “career coaching” vs. “job hunting”).
 What can you change in the architecture or loss to make the model confusion-aware?
 
-Q10.
-Your content classifier is used for downstream moderation (e.g., escalation to reviewers). Reviewers complain that the top-k predictions often skip low-frequency but critical categories.
+Q10. Your content classifier is used for downstream moderation (e.g., escalation to reviewers). Reviewers complain that the top-k predictions often skip low-frequency but critical categories.
 How would you redesign the loss, training data, or post-processing to account for this?
+
+*************************************************************************
+Section 13: Difficult Data Regimes
+*************************************************************************
+Q1. You’re training a product quality classifier. You have:
+
+- 1% manually reviewed “high-quality” items (positive)
+- 50% of data labeled via heuristics (e.g., co-view count, description length)
+- 49% unlabeled
+
+You want to train a binary classifier. What’s the best strategy?
+
+A. Filter the heuristic labels using a threshold and train with BCE  
+B. Train with positive+unlabeled (PU learning) using reviewed items as positives  
+C. Use the heuristic as soft labels and apply BCE with label smoothing  
+D. Train contrastive loss using co-view pairs as positives
+
+Q2. In a region-specific moderation task, the “hate speech” class is:
+
+- Rare
+- Labeled inconsistently
+- Shows severe overfitting after only a few epochs
+
+What’s the best modeling strategy?
+
+A. Upweight the loss and add task-specific dropout  
+B. Use BPR-style ranking loss  
+C. Downsample negatives to rebalance  
+D. Freeze shared layers and adapt via low-rank adapter layers + gradual unfreezing
+
+Q3. You’re training a co-purchase product similarity model:
+
+- Use co-purchase pairs as positives
+- Use in-batch negatives
+- Some pairs include unrelated items due to bulk-buying by bots
+
+What helps most?
+
+A. Dropout in input projection layer  
+B. Weighted InfoNCE with confidence score per positive  
+C. Increase temperature in softmax  
+D. Add domain classifier to detect bot-bought patterns
+
+Q4. You’re fine-tuning a text encoder on a noisy tagging task where tags come from user-generated hashtags:
+
+- Some tags are correct
+- Some are ambiguous
+- Many are missing entirely
+
+Which architecture choice helps the most?
+
+A. Add per-tag loss weights  
+B. Use mean pooled CLS + sigmoid layer  
+C. Add a contrastive head alongside tag prediction  
+D. Use temperature-scaled softmax and top-1 supervision
