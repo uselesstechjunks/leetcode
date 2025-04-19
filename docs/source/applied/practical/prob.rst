@@ -50,20 +50,6 @@ Section 4: Architecture and Scalability Trade-offs
 
 16. For a social feed, you're using a BST-style session transformer for ranking. Latency becomes a problem. What trade-offs and simplifications would you consider?
 
-*************************************************************************
-Section 5: Debugging and Failure Mode Diagnosis
-*************************************************************************
-17. You observe that your item embeddings collapse near origin after triplet training. What might be the issue?
-
-18. Your reranker, trained with listwise loss, is overfitting to top popular items. How would you debug this and improve diversity?
-
-19. Your cold-start user model retrieves the same popular jobs for everyone. Where would you intervene: model, data, loss?
-
-20. You're training with a noisy click signal. Precision@k looks good, but users complain about irrelevant content. What could be wrong and how would you fix it?
-
-*************************************************************************
-Section 4: Architecture and Scalability — More Questions
-*************************************************************************
 21. You serve search results using a dual-tower model with 100M product embeddings. ANN recall@100 is good, but users complain about repetitive results. What architectural changes would you explore to inject more diversity?
 
 22. You're asked to migrate a BERT-based query encoder to a production search system with <10ms latency budget. What architectural simplifications and trade-offs would you make?
@@ -77,8 +63,16 @@ Section 4: Architecture and Scalability — More Questions
 26. You've pre-trained your item tower using self-supervised contrastive learning. When used in a ranking model, it underperforms compared to a CE-trained model. What architectural alignment issues could be at play?
 
 *************************************************************************
-Section 5: Debugging and Failure Diagnosis — More Questions
+Section 5: Debugging and Failure Mode Diagnosis
 *************************************************************************
+17. You observe that your item embeddings collapse near origin after triplet training. What might be the issue?
+
+18. Your reranker, trained with listwise loss, is overfitting to top popular items. How would you debug this and improve diversity?
+
+19. Your cold-start user model retrieves the same popular jobs for everyone. Where would you intervene: model, data, loss?
+
+20. You're training with a noisy click signal. Precision@k looks good, but users complain about irrelevant content. What could be wrong and how would you fix it?
+
 27. Your pairwise LTR model performs well offline, but online CTR drops. You suspect false positives in the training negatives. How do you trace and fix this?
 
 28. A product recommendation model starts surfacing out-of-stock or policy-violating items. You already have a quality filter. What part of the pipeline might be causing this and how do you fix it?
