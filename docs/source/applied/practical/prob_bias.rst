@@ -7,20 +7,13 @@ Feature addition
 - Fatigue: time_since_last_impressed, time_since_last_click, item_impression_count
 - Freshness: item_age, average_age, item_impression_count
 - Exposure: item_impression_count + avg_impression_count, item_age + time_since_last_impressed, category_id
+- Leakage: temporal gating, cohort average
 *****************************************************************************
 Feedback correction
 *****************************************************************************
 - Rank based exposure: loss weights: IPW via 1/click-curve @ position (static, model-based)
 - Content based exposure:
 - Imbalance: inverse sampling factor as loss weight
-
-*****************************************************************************
-Freshness and Fatigue Bias
-*****************************************************************************
-#. You notice that your model consistently overpredicts CTR for a set of items that are all under 6 hours old and were launched during a holiday sale. How do you determine if this is a freshness spike or user-level fatigue not being captured correctly?
-#. A user has seen a product ad 20 times over 5 days. Your CTR model is under-predicting its click probability, yet the ad gets clicked again after a gap. What bias might be causing this, and how would you fix it without retraining the model?
-#. You deploy a Thompson Sampling strategy to promote new ads. Over a week, you observe that many of them dominate top slots and burn out quickly—CTR drops but rank persists. What went wrong in the TS configuration or data?
-#. Your calibration plot shows that for impressions 1–3, predicted CTR aligns well with actual CTR, but for impressions 8+, the model becomes overconfident. Is this more likely due to freshness or fatigue bias, and what’s the mitigation strategy?
 
 *****************************************************************************
 Feedback Loop
@@ -31,3 +24,19 @@ Feedback Loop
 #. You’re training a ranking model on click labels. Over time, CTR@10 looks strong, but CTR@50 keeps deteriorating. You suspect a feedback loop is starving the tail. How do you modify your training or sampling pipeline to mitigate this exposure bias without adding exploration traffic?
 #. Your system boosts CTR by ranking long-form videos higher, but user dwell time per session is going down. Stakeholders ask for a fix that preserves CTR while improving watch quality. What changes would you make to break the watch-ratio feedback loop?
 #. Your CTR model is trained on observed clicks but deployed for value-based bidding (CTR × CVR × value). Over time, the system over-optimizes for CTR but fails to deliver high-value conversions. What do you change in model training, serving, or calibration to align with end value?
+
+*****************************************************************************
+Label Leakage
+*****************************************************************************
+#. You're training a re-ranking model for feed items. The input includes a `video_watch_ratio_bucket` (updated every 6 hours from prod traffic), and your label is "clicked or viewed >10s". Is this leakage? Why or why not? How would you fix it?
+#. You’ve deployed a CTR model trained with impression logs. You now want to train a CVR model using only clicked samples, and you plan to use the previous model’s CTR prediction as a feature. Is this a safe setup? Why or why not? Propose an alternative that reduces bias but preserves signal.
+#. A course recommendation model uses `conversion_rate_last_24h` at the course level as an input. The model predicts "will enroll". This feature is joined from a daily aggregation pipeline that runs after labels are collected. Is there leakage? If yes, when and how would you apply a fix?
+#. A CVR model uses a feature called `post_click_time_spent_avg` (average time users spend after clicking the item). This is a 7-day rolling average computed offline nightly. Is this a form of leakage or feedback loop? Justify your answer and suggest a mitigation.
+
+*****************************************************************************
+Freshness and Fatigue Bias
+*****************************************************************************
+#. You notice that your model consistently overpredicts CTR for a set of items that are all under 6 hours old and were launched during a holiday sale. How do you determine if this is a freshness spike or user-level fatigue not being captured correctly?
+#. A user has seen a product ad 20 times over 5 days. Your CTR model is under-predicting its click probability, yet the ad gets clicked again after a gap. What bias might be causing this, and how would you fix it without retraining the model?
+#. You deploy a Thompson Sampling strategy to promote new ads. Over a week, you observe that many of them dominate top slots and burn out quickly—CTR drops but rank persists. What went wrong in the TS configuration or data?
+#. Your calibration plot shows that for impressions 1–3, predicted CTR aligns well with actual CTR, but for impressions 8+, the model becomes overconfident. Is this more likely due to freshness or fatigue bias, and what’s the mitigation strategy?
