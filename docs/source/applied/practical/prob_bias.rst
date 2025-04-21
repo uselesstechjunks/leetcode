@@ -12,3 +12,6 @@ Freshness and Fatigue Bias
 *****************************************************************************
 Feedback Loop
 *****************************************************************************
+#. Your model predicts high CTR for a set of job ads. They are shown more, clicked more, and then retrained on that data. Over the next few weeks, model diversity drops, and new job ads struggle to gain traction. What is the feedback loop at play here, and which parts of your pipeline are reinforcing it?
+#. In your marketplace recommender, tail sellers consistently receive low predicted CVR and thus low exposure. There is no hard cap, but they rarely show up. What metrics would you track to detect a feedback loop affecting tail sellers, and what signals would confirm it?
+#. Your team adds a new "engagement score" feature derived from click count and dwell time. Within one week, CTR increases short-term, but system engagement quality drops. How can this new feature contribute to a feedback loop, and how would you check whether it’s hurting long-term utility?
