@@ -6,7 +6,8 @@ Features
 *****************************************************************************
 - Fatigue: time_since_last_impressed, impression_count
 - Freshness: item_age, item_impression_count, item_click_count
-- Starvation:
+- Popularity exposure: use loss weights: IPW (wrt random exploration) or 1/click-curve @ position (estimation)
+- Tail exposure:
 
 *****************************************************************************
 Freshness and Fatigue Bias
