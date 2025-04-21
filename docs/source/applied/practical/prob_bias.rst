@@ -2,6 +2,13 @@
 Problems: Bias
 #############################################################################
 *****************************************************************************
+Features
+*****************************************************************************
+- Fatigue: time_since_last_impressed, impression_count
+- Freshness: item_age, item_impression_count, item_click_count
+- Starvation:
+
+*****************************************************************************
 Freshness and Fatigue Bias
 *****************************************************************************
 #. You notice that your model consistently overpredicts CTR for a set of items that are all under 6 hours old and were launched during a holiday sale. How do you determine if this is a freshness spike or user-level fatigue not being captured correctly?
