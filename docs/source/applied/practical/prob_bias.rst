@@ -2,18 +2,32 @@
 Problems: Bias
 #############################################################################
 *****************************************************************************
-Feature addition
+Cheat Sheet
 *****************************************************************************
-- Fatigue: time_since_last_impressed, time_since_last_click, item_impression_count
-- Freshness: item_age, average_age, item_impression_count
-- Exposure: item_impression_count + avg_impression_count, item_age + time_since_last_impressed, category_id
-- Leakage: temporal gating, cohort average
-*****************************************************************************
-Feedback correction
-*****************************************************************************
-- Rank based exposure: loss weights: IPW via 1/click-curve @ position (static, model-based)
-- Content based exposure:
-- Imbalance: inverse sampling factor as loss weight
+#. Calibration Drift  
+  - Predicted scores diverge from actual CTR/CVR over time or across cohorts  
+  - Fix: Post-hoc calibration (Platt/Isotonic), stratify by freq, position, session length
+#. Sparse Personalization  
+  - Flat predictions across users; same top-k items repeatedly  
+  - Fix: Richer user embeddings, user-age gating, context-based fallback, TS-based exploration
+#. Exposure Bias  
+  - Tail items never get clicked → never learned  
+  - Fix: Inverse Propensity Weighting (IPW), exploration slice, rank-position masking
+#. Popularity Bias  
+  - Top items dominate regardless of relevance  
+  - Fix: Diversity-aware reranking, regularization on popularity, stochastic scoring
+#. Feedback Loop  
+  - Model boosts items → more exposure → model retrains on them  
+  - Fix: Exploration data, counterfactual loss, restrict self-feeding features (e.g., watch_ratio)
+#. Fatigue Bias  
+  - CTR drops on repeated exposure but model doesn’t downrank  
+  - Fix: Add impression count, recency features, learn decay gates, diversify at surface level
+#. Freshness Bias  
+  - New items are overpredicted due to cold-start novelty spike  
+  - Fix: Gated freshness towers, stat masking, smoothing CTR with item-age
+#. Label Leakage  
+  - Offline metrics great, online fails hard; model uses future or target-proxy features  
+  - Fix: Temporal audit, freeze-time enforcement, use lagged or cohort-level proxies
 
 *****************************************************************************
 Feedback Loop
