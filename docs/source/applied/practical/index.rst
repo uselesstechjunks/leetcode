@@ -13,4 +13,5 @@ Practical ML
 	infra
 	resources
 	topics
-	prob
+	prob_bias
+	prob_mlsd
