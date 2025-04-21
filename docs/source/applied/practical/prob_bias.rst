@@ -2,12 +2,16 @@
 Problems: Bias
 #############################################################################
 *****************************************************************************
-Features and Loss Weights
+Feature addition
 *****************************************************************************
 - Fatigue: time_since_last_impressed, time_since_last_click, item_impression_count, item_click_count
 - Freshness: item_age, average_age, item_impression_count, item_click_count
-- Head exposure: loss weights: IPW (wrt random exploration) or 1/click-curve @ position (estimation)
-- Tail exposure: item_impression_count + avg_impression_count, item_age + time_since_last_impressed
+- Exposure: item_impression_count + avg_impression_count, item_age + time_since_last_impressed, category_id
+*****************************************************************************
+Feedback correction
+*****************************************************************************
+- Rank based exposure: loss weights: IPW via 1/click-curve @ position (static, model-based)
+- Content based exposure:
 - Imbalance: inverse sampling factor as loss weight
 
 *****************************************************************************
