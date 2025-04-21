@@ -4,8 +4,8 @@ Problems: Bias
 *****************************************************************************
 Feature addition
 *****************************************************************************
-- Fatigue: time_since_last_impressed, time_since_last_click, item_impression_count, item_click_count
-- Freshness: item_age, average_age, item_impression_count, item_click_count
+- Fatigue: time_since_last_impressed, time_since_last_click, item_impression_count
+- Freshness: item_age, average_age, item_impression_count
 - Exposure: item_impression_count + avg_impression_count, item_age + time_since_last_impressed, category_id
 *****************************************************************************
 Feedback correction
