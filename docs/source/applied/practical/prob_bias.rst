@@ -2,12 +2,13 @@
 Problems: Bias
 #############################################################################
 *****************************************************************************
-Features
+Features and Loss Weights
 *****************************************************************************
-- Fatigue: time_since_last_impressed, impression_count
-- Freshness: item_age, item_impression_count, item_click_count
-- Popularity exposure: use loss weights: IPW (wrt random exploration) or 1/click-curve @ position (estimation)
-- Tail exposure:
+- Fatigue: time_since_last_impressed, time_since_last_click, item_impression_count, item_click_count
+- Freshness: item_age, average_age, item_impression_count, item_click_count
+- Popularity: loss weights: IPW (wrt random exploration) or 1/click-curve @ position (estimation)
+- Tail exposure: item_impression_count + avg_impression_count, item_age + time_since_last_impressed
+- Imbalance: inverse sampling factor as loss weight
 
 *****************************************************************************
 Freshness and Fatigue Bias
