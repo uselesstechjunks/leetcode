@@ -51,17 +51,32 @@ Architecture Design
 
 PHASE 3: Data Pipeline Decisions
 ---------------------------------------------------------------------------
-Label Characteristics
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Sampling Strategy
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- Label Uncertainty Weighting
+- Sampling Strategies
+
 PHASE 4: Learning Dynamics and Stabilization
 ---------------------------------------------------------------------------
 Loss Balancing Strategies
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- GradNorm
+	#. If a task has a very small loss, but its gradient norm w.r.t shared parameters is very large, what will GradNorm do to its weight?
+	#. You noticed your training is unstable after enabling GradNorm. Upon inspection: Some task gradient norms are nearly zero. Others are >100. GradNorm loss explodes periodically. What’s going wrong? How do you fix it?
+	#. Your model has already task-specific towers. Shared layers are shallow (1–2 layers). Loss curves for all tasks are stable, but task A converges slower. Would you still use GradNorm? Why or why not?
+- Manual Gating / Scheduling / Curriculum sampling
+	#. You’re training click, like, and purchase in a shared-bottom model. click is dense, purchase is sparse and noisy. You don’t want to use GradNorm. Which two strategies would you combine to stabilize training? Why?
+	#. You’re seeing high variance in share and comment task loss. You suspect feedback quality is inconsistent. What can you do to prevent these tasks from hurting shared layers?
+
 PHASE 5: Debugging and Failure Modes
 ---------------------------------------------------------------------------
-Symptoms and Diagnoses
+Per-Task Metric Drift
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Shared Representation Collapse
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Gate Starvation / Expert Drift
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Calibration Breakdown (Task or Label-wise)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Silent Feature Shift (Task-Specific)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 PHASE 6: Domain-Specific Considerations
 ---------------------------------------------------------------------------
