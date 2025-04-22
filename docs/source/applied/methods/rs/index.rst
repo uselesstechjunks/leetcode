@@ -7,6 +7,7 @@ Search & Recommendation
 	stages
 	problems
 	data
+	mtl
 	domain
 	embed
 	scale
