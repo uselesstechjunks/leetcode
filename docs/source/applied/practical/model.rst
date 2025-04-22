@@ -9,6 +9,7 @@ Model
 ***************************************************************************
 Resources
 ***************************************************************************
+- [github.com] `RecSysPapers <https://github.com/tangxyw/RecSysPapers/tree/main/Multi-Task>`_
 - [readthedocs.io] `DeepCTR Models API <https://deepctr-doc.readthedocs.io/en/latest/Models.html>`_
 
 ***************************************************************************
