@@ -84,7 +84,19 @@ PHASE 5: Debugging and Failure Modes
 #. Your 2-layer PLE model’s logs show: Layer 1 gate usage: evenly distributed. Layer 2 gate usage: over 90% of all tasks route to Expert 1. Tasks share, comment, and purchase have degraded 2–3% in offline metrics. What’s likely happening? What actions would you take?
 #. You run a shadow evaluation on purchase. You find that: Precision@top-1k is up 2%. But calibrated probability bucket (0.9–1.0) only converts ~10% of the time. Historical value was ~40%. What’s the likely issue? How would you fix it without retraining?
 
-PHASE 6: Domain-Specific Considerations
+PHASE 6: Scaling, Shadow Evaluation & Monitoring Infra
 ---------------------------------------------------------------------------
+Shadow Evaluation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Task Drift Detection
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Expert Usage Logs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Task-Specific A/B Surfacing
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Serving Time Routing Checks
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Scheduled Refresh / Fine-Tune Strategy
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 BST
 ===========================================================================
