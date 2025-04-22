@@ -45,6 +45,12 @@ Architecture Design
 	#. Your gates produce near-uniform outputs across all experts — for all tasks. There’s no clear differentiation between expert usage. What does this suggest about your gating input or network? What architectural changes would you explore?
 	#. Your setup has 5 related tasks (click, like, view, hover, share). When trained with MMoE: All gates collapse to one expert. All tasks converge, but show slight overfitting. Expert activations are indistinguishable across tasks. What’s your diagnosis? What would you change in the architecture or task grouping?
 - Progressive Layered Extraction (PLE)
+	#. You’re modeling click, like, comment, and share for a social video feed. Initial experiments with shared-bottom and MMoE show: High offline CTR, but unstable comment/share training loss, like and click dominate expert usage. Gradient traces reveal interference in early shared layers. You decide to switch to PLE. How would you structure the first PLE layer to prevent early-stage interference while maintaining representation sharing? Be explicit about expert counts, sharing logic, and gate behavior.
+	#. After deploying a 2-layer PLE model, you see the following patterns in logs: Shared experts are heavily used in both layers by all tasks Task-specific experts are barely used click and like are improving, comment and share plateau PCA of task expert outputs shows strong overlap with shared expert space What might be happening? How would you adjust the architecture or training to fix it?
+	#. You're scaling a PLE model from 4 tasks to 12 tasks (some sparse, some dense). Your infra supports deeper models but limits total parameter count. What architectural trade-offs would you make in PLE design to scale effectively? Mention expert sharing, gate complexity, and head strategy.
+
+Task Balancing & Loss Shaping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 PHASE 3: Data Pipeline Decisions
 ---------------------------------------------------------------------------
 Label Characteristics
