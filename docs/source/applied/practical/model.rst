@@ -49,8 +49,6 @@ Architecture Design
 	#. After deploying a 2-layer PLE model, you see the following patterns in logs: Shared experts are heavily used in both layers by all tasks Task-specific experts are barely used click and like are improving, comment and share plateau PCA of task expert outputs shows strong overlap with shared expert space What might be happening? How would you adjust the architecture or training to fix it?
 	#. You're scaling a PLE model from 4 tasks to 12 tasks (some sparse, some dense). Your infra supports deeper models but limits total parameter count. What architectural trade-offs would you make in PLE design to scale effectively? Mention expert sharing, gate complexity, and head strategy.
 
-Task Balancing & Loss Shaping
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 PHASE 3: Data Pipeline Decisions
 ---------------------------------------------------------------------------
 Label Characteristics
