@@ -6,7 +6,8 @@ Practical ML
 
 	frame
 	rawdata
-	datatech	
+	datatech
+	model
 	traindeploy
 	eval
 	obs
