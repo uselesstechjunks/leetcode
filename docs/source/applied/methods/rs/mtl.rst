@@ -27,6 +27,7 @@ Multi-Task Learning
 	- Architecture: AITM (Adaptive Information Transfer Multi-task Learning)
 	- Reference: "`Modeling the Sequential Dependence among Audience Multi-step Conversions with Multi-task Learning <https://arxiv.org/abs/2105.08489>`_"
 - Multi-Domain Recommendation
+
 	- Use Case: Handling recommendations across multiple domains and tasks simultaneously.
 	- Architecture: M3oE (Multi-Domain Multi-Task Mixture-of-Experts)
 	- Reference: Zhang et al., "`M3oE: Multi-Domain Multi-Task Mixture-of-Experts Recommendation Framework <https://arxiv.org/abs/2404.18465>`_"
