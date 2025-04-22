@@ -44,7 +44,7 @@ Architecture Design
 	#. You’re training MMoE with 4 experts for 6 tasks. After training: One expert is never used by any task (mean gate weight ≈ 0). Two experts are heavily used by all tasks. Performance gains are marginal compared to shared-bottom. What’s going wrong? How would you fix it?
 	#. Your gates produce near-uniform outputs across all experts — for all tasks. There’s no clear differentiation between expert usage. What does this suggest about your gating input or network? What architectural changes would you explore?
 	#. Your setup has 5 related tasks (click, like, view, hover, share). When trained with MMoE: All gates collapse to one expert. All tasks converge, but show slight overfitting. Expert activations are indistinguishable across tasks. What’s your diagnosis? What would you change in the architecture or task grouping?
-
+- Progressive Layered Extraction (PLE)
 PHASE 3: Data Pipeline Decisions
 ---------------------------------------------------------------------------
 Label Characteristics
