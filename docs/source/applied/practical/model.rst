@@ -86,17 +86,17 @@ PHASE 5: Debugging and Failure Modes
 
 PHASE 6: Scaling, Shadow Evaluation & Monitoring Infra
 ---------------------------------------------------------------------------
-Shadow Evaluation
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Task Drift Detection
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Expert Usage Logs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Task-Specific A/B Surfacing
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Serving Time Routing Checks
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Scheduled Refresh / Fine-Tune Strategy
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+- Shadow Evaluation
+
+	#. Your shadow logs show that for task share: Logit distribution is highly peaked near 1.0 (many predictions > 0.9). Actual share rate in top-1k scored items is only ~5%. This task was not recently retrained. Other tasks show no drift. What’s going wrong? How do you fix it?
+	#. In your MMoE shadow logs: Expert 3 receives ~70% of the gate weight across all tasks. Previously in training, expert usage was balanced. CTR is unchanged, but CVR degraded. What’s your diagnosis and next action?
+	#. In your PLE shadow setup: Task comment logits are stuck near 0.5 (low confidence). Gate logs show gating still routes to correct experts. Feedback volume is high, but precision/AUC degraded. No code change in model. What specific logging or feature traces would you inspect next?
+
+- Task Drift Detection
+- Expert Usage Logs
+- Task-Specific A/B Surfacing
+- Serving Time Routing Checks
+- Scheduled Refresh / Fine-Tune Strategy
+
 BST
 ===========================================================================
