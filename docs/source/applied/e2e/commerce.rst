@@ -11,6 +11,39 @@ Commerce
 	:backlinks: none
 
 *********************************************************************************
+Features
+*********************************************************************************
+Item Embedding
+=================================================================================
+Ranker
+=================================================================================
+1. User features
+---------------------------------------------------------------------------------
+2. Item features
+---------------------------------------------------------------------------------
+3. Context features
+---------------------------------------------------------------------------------
+4. Statistical features
+---------------------------------------------------------------------------------
+5. Fusion features
+---------------------------------------------------------------------------------
+.. csv-table::
+	:header: "Index", "Feature Type", "Description"
+	:widths: 4 12 32
+	:align: center
+	
+		1, dense_score, Cosine or dot similarity with query embedding
+		2, bm25_score, Raw or normalized BM25 score
+		3, query_term_match_ratio, # query tokens matched / total query tokens
+		4, category_match, 1 if same category; 0 otherwise
+		5, brand_match, 1 if same brand; 0 otherwise
+		6, image_sim_score, Optional: if query is image
+		7, retrieval_source, One-hot: [dense only; sparse only; both]
+		8, retrieved_rank_dense, Position in dense top-k list
+		9, retrieved_rank_sparse, Position in sparse top-k list
+		10, dense_to_sparse_rank_gap, Sparse rank - Dense rank
+
+*********************************************************************************
 Domain Understanding
 *********************************************************************************
 Listings
