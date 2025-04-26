@@ -1,6 +1,27 @@
 ####################################################################################
 Domain Knowledge
 ####################################################################################
+.. csv-table::
+	:header: "SNo", "Domain", "Company", "Retrieval Methodology", "Class"
+	:align: left
+	:widths: 2, 16, 8, 48, 16
+
+		a, Commerce, Amazon, Item-to-item CF, Item-based
+		b, UGC, Facebook, Embedding-based retrieval; multiple user-centric sources, User-based
+		b, UGC, Instagram, Multi-source retrieval; Two-Tower: user and item embeddings, User-item
+		c, Short video, TikTok, Deep retrieval; user-video interaction, User-item
+		c, Short video, YouTube Shorts, Deep learning-based candidate generation; user-video, User-item
+		d, Long video, YouTube, Deep learning-based candidate generation; user-video, User-item
+		e, Published media, Netflix, Specialized ML personalization models, User-item
+		e, Published media, Prime Video, Matrix factorization; content-based, User-item
+		e, Published media, Spotify, Generative retrieval; content + user-item interaction, User-item
+		f, Inventory retail, Walmart, Hybrid retrieval; traditional + embedding, Item-based
+		f, Inventory retail, Target, Contextual multi-arm bandits; personalization focus, User-based
+		g, Travel, Airbnb, Embedding-based retrieval; item2vec-style, Item-based
+		h, Food delivery, Uber Eats, Two-Tower embeddings; graph learning; user-food, User-item
+		i, News, Google News, CF on click behavior; user-article, User-item
+		j, Search engine, Google, Traditional IR; query-document matching; evolving toward user-item based ranking, User-item
+
 ************************************************************************************
 Item CBF + CF
 ************************************************************************************
