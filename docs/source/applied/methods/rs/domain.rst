@@ -1,6 +1,9 @@
 ####################################################################################
 Domain Knowledge
 ####################################################################################
+************************************************************************************
+Industry Practice
+************************************************************************************
 .. csv-table::
 	:header: "SNo", "Domain", "Company", "Retrieval Methodology", "Class"
 	:align: left
@@ -23,53 +26,22 @@ Domain Knowledge
 		j, Search engine, Google, Traditional IR; query-document matching; evolving toward user-item based ranking, User-item
 
 ************************************************************************************
-Item CBF + CF
+Design Consideration
 ************************************************************************************
-.. csv-table::
-	:header: "Rank", "Domain", "Why"
-	:align: left
-	:widths: 3, 24, 32
-
-		1, Commerce (Amazon; Walmart; Target), SKU-driven; stable catalogs; high co-purchase patterns.
-		2, Food delivery (Uber Eats), Cuisine/restaurant affinities dominate; users often reorder.
-		3, Travel (Airbnb), Listings behave like products; strong item similarity via embeddings.
-************************************************************************************
-User-Item CBF + CF
-************************************************************************************
-.. csv-table::
-	:header: "Rank", "Domain", "Why"
-	:align: left
-	:widths: 3, 24, 32
-
-		4, Published media (Netflix; Prime Video; Spotify), Some stable catalog (e.g.; classic movies); but heavy personalization needs based on evolving tastes.
-		5, News aggregator (Google News), Content freshness and user interest both critical.
-		6, Long video (YouTube), Stable creators (channels) + evolving user-specific interests.
-************************************************************************************
-User-Item CF
-************************************************************************************
-.. csv-table::
-	:header: "Rank", "Domain", "Why"
-	:align: left
-	:widths: 3, 24, 32
-
-		7, Short video (TikTok; YouTube Shorts), Extreme content churn; hyper-personalized; real-time feedback loops.
-		8, UGC (Facebook; Instagram), Content is perishable; highly user-contextual (friends; social graph).
-		9, Search engine (Google; Bing), Intent is query-specific; highly dynamic; retrieval depends on real-time user-query-document signals.
-
 - Item-based is more robust; scalable; and explainable under uncertainty.
 - User-item is more powerful and fine-grained when you have dense; high-quality user interaction data.
 
 .. csv-table::
-	:header: "Situation", "Why Item-Based Wins", "Practical Examples"
+	:header: "SNo", "Situation", "Why Item-Based Wins", "Practical Examples"
 	:align: left
-	:widths: 16, 32, 24
+	:widths: 2, 16, 32, 24
 
-		Sparse user history, If users interact very little; you can't learn good user embeddings. But item similarity can still be robust., New users on Amazon: recommend similar products without needing deep profiles.
-		Stable; low-churn catalogs, If item properties don't change rapidly; item-item relationships stay valid for a long time., Retail (Walmart; Target); long-tail marketplaces.
-		Cold-start users, New or infrequent users have no behavioral data. Item-item similarity avoids the need for personalization., Food delivery (e.g.; recommend "popular in your area" restaurants).
-		Explainability requirements, Item-based recommendations ("users who bought X also bought Y") are easier to justify to users and auditors., E-commerce and B2B sales platforms.
-		Heavy multi-user devices, If multiple people use the same device/account; user profiles become noisy. Item-based CF is safer and more accurate., Shared smart TVs; public kiosks; family shopping accounts.
-		Highly diverse user base, When user behavior varies too much (by region; culture; device); item-based models generalize better., Global apps with fragmented user bases (e.g.; Spotify in different countries).
+		1, Stable; low-churn catalogs, If item properties don't change rapidly; item-item relationships stay valid for a long time., Retail (Walmart; Target); long-tail marketplaces.
+		2, Cold-start users, New or infrequent users have no behavioral data. Item-item similarity avoids the need for personalization., Food delivery (e.g.; recommend "popular in your area" restaurants).
+		3, Sparse user history, If users interact very little; you can't learn good user embeddings. But item similarity can still be robust., New users on Amazon: recommend similar products without needing deep profiles.
+		4, Highly diverse user base, When user behavior varies too much (by region; culture; device); item-based models generalize better., Global apps with fragmented user bases (e.g.; Spotify in different countries).
+		5, Heavy multi-user devices, If multiple people use the same device/account; user profiles become noisy. Item-based CF is safer and more accurate., Shared smart TVs; public kiosks; family shopping accounts.
+		6, Explainability, Item-based recommendations ("users who bought X also bought Y") are easier to justify to users and auditors., E-commerce and B2B sales platforms.
 ************************************************************************************
 Search
 ************************************************************************************
