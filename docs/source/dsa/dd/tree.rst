@@ -55,7 +55,36 @@ Tree Topics
 			:tab-width: 2
 			:linenos:
 
-3. Misc
+3. Segment Tree
+--------------------------------------------------------------------------------
+- Basics
+	- Sum queries
+	- Update queries
+	- Memory efficient implementation
+- Advanced Topics
+	- Finding the maximum
+	- Finding the maximum and the number of times it appears
+	- Compute the greatest common divisor / least common multiple
+	- Counting the number of zeros, searching for the $k$ -th zero
+	- Searching for an array prefix with a given amount
+	- Searching for the first element greater than a given amount
+	- Finding subsegments with the maximal sum
+- Saving the entire subarrays in each vertex
+	- Find the smallest number greater or equal to a specified number. No modification queries.
+	- Find the smallest number greater or equal to a specified number. With modification queries.
+	- Find the smallest number greater or equal to a specified number. Acceleration with "fractional cascading".
+- Range updates (Lazy Propagation)
+	- Addition on segments
+	- Assignment on segments
+	- Adding on segments, querying for maximum
+- Generalization to higher dimensions
+	- Simple 2D Segment Tree
+	- Compression of 2D Segment Tree
+- Preserving the history of its values (Persistent Segment Tree)
+	- Finding the $k$ -th smallest number in a range
+- Dynamic segment tree
+
+4. Misc
 --------------------------------------------------------------------------------
 - [stack] https://leetcode.com/problems/binary-tree-preorder-traversal/
 - https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/description/
