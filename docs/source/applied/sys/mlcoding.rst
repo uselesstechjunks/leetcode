@@ -44,7 +44,8 @@ PyTorch
 	* [rush-nlp] `Tensor Puzzles <https://github.com/srush/Tensor-Puzzles>`_
 	* [cs230.stanford.edu] `Introduction to Pytorch Code Examples <https://cs230.stanford.edu/blog/pytorch/>`_
 	* [Book] `Learn PyTorch for Deep Learning: Zero to Mastery <https://www.learnpytorch.io/>`_
-	* [github.com] `The Incredible PyTorch <https://github.com/ritchieng/the-incredible-pytorch>`_
+	* [github.com] `The Incredible PyTorch <https://github.com/ritchieng/the-incredible-pytorch>`_\
+	* [blog.ezyang.com] `PyTorch internals <https://blog.ezyang.com/2019/05/pytorch-internals/>`_
 
 CUDA
 ===============================================================================
