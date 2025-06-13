@@ -12,6 +12,7 @@ Resources
 ===============================================================================
 AutoGrad Engine
 ===============================================================================
+- [cs231n.stanford.edu] `Lecture 6: Hardware and Software <https://cs231n.stanford.edu/slides/2021/lecture_6.pdf>`_
 - [github.com] `karpathy/micrograd <https://github.com/karpathy/micrograd/>`_
 - [pytorch.org] `Overview of PyTorch Autograd Engine <https://pytorch.org/blog/overview-of-pytorch-autograd-engine/>`_
 - [pytorch.org] `How Computational Graphs are Constructed in PyTorch <https://pytorch.org/blog/computational-graphs-constructed-in-pytorch/>`_
