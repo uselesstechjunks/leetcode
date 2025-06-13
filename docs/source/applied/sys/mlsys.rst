@@ -10,6 +10,11 @@ Resources
 - [huggingface.co] `The Ultra-Scale Playbook: Training LLMs on GPU Clusters <https://huggingface.co/spaces/nanotron/ultrascale-playbook>`_
 
 ===============================================================================
+Parallel Computing
+===============================================================================
+- [Stanford] `CS149 Parallel Computing <https://gfxcourses.stanford.edu/cs149/fall24>`_
+
+===============================================================================
 AutoGrad Engine
 ===============================================================================
 - [cs231n.stanford.edu] `Lecture 6: Hardware and Software <https://cs231n.stanford.edu/slides/2021/lecture_6.pdf>`_
