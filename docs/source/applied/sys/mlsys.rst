@@ -15,3 +15,9 @@ AutoGrad Engine in PyTorch
 - [pytorch.org] `Overview of PyTorch Autograd Engine <https://pytorch.org/blog/overview-of-pytorch-autograd-engine/>`_
 - [pytorch.org] `How Computational Graphs are Constructed in PyTorch <https://pytorch.org/blog/computational-graphs-constructed-in-pytorch/>`_
 - [pytorch.org] `How Computational Graphs are Executed in PyTorch <https://pytorch.org/blog/how-computational-graphs-are-executed-in-pytorch/>`_
+
+===============================================================================
+PyTorch Internals
+===============================================================================
+- [blog.ezyang.com] `PyTorch internals <https://blog.ezyang.com/2019/05/pytorch-internals/>`_
+- [medium.com] `A Trip to Kernels: Understanding PyTorch’s Internal Architecture <https://medium.com/@hxu296/a-trip-to-kernels-understanding-pytorchs-internal-architecture-fc955aafd54c>`_
