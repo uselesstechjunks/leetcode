@@ -66,3 +66,8 @@ Tensors
 ===============================================================================
 .. important::
 	* [einsum.joelburget.com] `Einsum in Depth <https://einsum.joelburget.com/>`_
+
+*******************************************************************************
+Implementation
+*******************************************************************************
+- [dev.to] `Implementing DeekSeek-R1 GRPO in Apple MLX framework <https://dev.to/lewis_won/implementing-deekseek-r1-grpo-in-apple-mlx-framework-3n97>`_
