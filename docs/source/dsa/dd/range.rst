@@ -133,6 +133,14 @@ Algorithms
 		      :language: python
 		      :tab-width: 2
 		      :linenos:
+	#. Find max by checking condition on solution space (`Social Distancing <https://usaco.org/index.php?page=viewproblem2&cpid=1038>`_)
+
+		.. collapse:: Expand Code
+	
+		   .. literalinclude:: ../../code/socdist.py
+		      :language: python
+		      :tab-width: 2
+		      :linenos:
 #. Binary Search Rotated
 
 	#. Find Pivot
