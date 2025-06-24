@@ -15,6 +15,12 @@ Parallel Computing
 - [Stanford] `CS149 Parallel Computing <https://gfxcourses.stanford.edu/cs149/fall24>`_
 
 ===============================================================================
+GPU Programming
+===============================================================================
+- [news.ycombinator.com] `Ask HN: Best way to learn GPU programming? <https://news.ycombinator.com/item?id=38835813>`_
+- [reddit.com] `Reddit Comment on Learning CUDA for Graphics <https://old.reddit.com/r/GraphicsProgramming/comments/1fpi2cv/learning_cuda_for_graphics/loz9sm3/>`_
+
+===============================================================================
 AutoGrad Engine
 ===============================================================================
 - [cs231n.stanford.edu] `Lecture 6: Hardware and Software <https://cs231n.stanford.edu/slides/2021/lecture_6.pdf>`_
