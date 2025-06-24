@@ -2,14 +2,14 @@
 Data Structures & Algorithms
 #################################################################################
 .. contents:: Table of Contents
-   :depth: 2
+   :depth: 3
    :local:
    :backlinks: none
 
 Don't recall. You won't remember it. Reason. Then you might.
 
 *********************************************************************************
-Topics
+Focus Areas
 *********************************************************************************
 Linked-List, Bit-Manipulation, Stacks & Queues, Binary Search, Heaps, Greedy Algorithms, Dynamic Programming, Vectors/ArrayLists, Big O Time and Space, Sorting, Two Pointers, Sliding Window, Union-Find, String Manipulations, Trees and Graphs, BFS/DFS, Recursion, Back-Tracking, Hashing, Trie, Segment Trees & Binary Indexed Trees.
 
@@ -140,6 +140,13 @@ Might be Useful
 	* [geeksforgeeks.org] `Must Do Coding Questions for Companies <https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/>`_
 	* [geeksforgeeks.org] `Must Do Coding Questions Company-wise <https://www.geeksforgeeks.org/must-coding-questions-company-wise/>`_	
 	* [interview-prep-pro.vercel.app] `Interview Prep Pro <https://interview-prep-pro.vercel.app/>`_
+
+********************************************************************************
+Topics
+********************************************************************************
+Binary Search
+================================================================================
+- [leetcode.com] `Powerful Ultimate Binary Search Template <https://leetcode.com/discuss/post/786126/python-powerful-ultimate-binary-search-t-rwv8/>`_
 
 Sliding Window
 ================================================================================
