@@ -21,6 +21,11 @@ GPU Programming
 - [reddit.com] `Reddit Comment on Learning CUDA for Graphics <https://old.reddit.com/r/GraphicsProgramming/comments/1fpi2cv/learning_cuda_for_graphics/loz9sm3/>`_
 
 ===============================================================================
+TPU Programming
+===============================================================================
+- [henryhmko.github.io] `TPU Deep Dive <https://henryhmko.github.io/posts/tpu/tpu.html>`_
+
+===============================================================================
 AutoGrad Engine
 ===============================================================================
 - [cs231n.stanford.edu] `Lecture 6: Hardware and Software <https://cs231n.stanford.edu/slides/2021/lecture_6.pdf>`_
