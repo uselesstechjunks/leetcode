@@ -20,6 +20,7 @@ GPU Programming
 ===============================================================================
 - [news.ycombinator.com] `Ask HN: Best way to learn GPU programming? <https://news.ycombinator.com/item?id=38835813>`_
 - [reddit.com] `Reddit Comment on Learning CUDA for Graphics <https://old.reddit.com/r/GraphicsProgramming/comments/1fpi2cv/learning_cuda_for_graphics/loz9sm3/>`_
+- [pyspur.dev] `Introduction to CUDA Programming for Python Developers <https://www.pyspur.dev/blog/introduction_cuda_programming>`_
 
 ===============================================================================
 TPU Programming
