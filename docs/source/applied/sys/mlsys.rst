@@ -13,6 +13,7 @@ Resources
 Parallel Computing
 ===============================================================================
 - [Stanford] `CS149 Parallel Computing <https://gfxcourses.stanford.edu/cs149/fall24>`_
+- [OpenAI] `Introducing Triton: Open-source GPU programming for neural networks <https://openai.com/index/triton/>`_
 
 ===============================================================================
 GPU Programming
