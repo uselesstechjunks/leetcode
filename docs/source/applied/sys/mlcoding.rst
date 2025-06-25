@@ -47,11 +47,6 @@ PyTorch
 	* [github.com] `The Incredible PyTorch <https://github.com/ritchieng/the-incredible-pytorch>`_\
 	* [blog.ezyang.com] `PyTorch internals <https://blog.ezyang.com/2019/05/pytorch-internals/>`_
 
-CUDA
-===============================================================================
-.. important::
-	* [pyspur.dev] `Introduction to CUDA Programming for Python Developers <https://www.pyspur.dev/blog/introduction_cuda_programming>`_
-
 Hugging Face
 ===============================================================================
 .. important::
