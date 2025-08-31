@@ -1,11 +1,10 @@
 #####################################################################################
-Applied Machine Learning
+Engineering Systems
 #####################################################################################
 
 .. toctree::
 	:maxdepth: 2
 
-	practical/index
-	methods/index
-	problem
-	e2e/index
+	sys/mlcoding
+	sys/mlsys
+	sys/sysdes
