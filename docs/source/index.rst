@@ -3,7 +3,7 @@
 Machine Learning Interviews!
 #############################################################################################
 
-**Machine Learning Interviews** is an interview preparation guide for SDE, AS/AMLS/DS, MLE roles.
+Interview guide for staff level SWE, AS/AMLS/DS, MLE roles at FAANG.
 
 .. note::
 
