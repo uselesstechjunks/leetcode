@@ -5,6 +5,6 @@ Engineering Systems
 .. toctree::
 	:maxdepth: 2
 
-	sys/mlcoding
-	sys/mlsys
-	sys/sysdes
+	mlcoding
+	mlsys
+	sysdes
